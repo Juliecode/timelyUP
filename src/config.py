@@ -32,7 +32,8 @@ def load_config() -> dict:
     # 环境变量（GitHub Actions 注入 / 本地手动设置）
     cfg["env"] = {
         "gemini_api_key": os.environ.get("GEMINI_API_KEY", ""),
-        "gemini_model": os.environ.get("GEMINI_MODEL", cfg.get("ai", {}).get("model", "gemini-2.5-flash")),
+        # 用 `or`：环境变量未设或为空字符串时都回退到默认（GitHub 未设变量会注入空串）
+        "gemini_model": os.environ.get("GEMINI_MODEL") or cfg.get("ai", {}).get("model") or "gemini-2.5-flash",
         # 播客对外访问的根地址，例如 https://用户名.github.io/timelyUP
         "base_url": os.environ.get("PAGES_BASE_URL", "").rstrip("/"),
     }
