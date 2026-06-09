@@ -101,7 +101,12 @@ def _write_feed(eps: list[dict], cfg: dict, base_url: str) -> None:
         fe.enclosure(f"{base_url}/episodes/{e['file']}", str(e.get("bytes", 0)), "audio/mpeg")
         fe.pubDate(datetime.fromisoformat(e["pub"]))
 
-    fg.rss_file(str(DOCS / "feed.xml"), pretty=True)
+    # feedgen 只能输出 deprecated 的 <itunes:explicit>no</itunes:explicit>，
+    # 现行规范要求 true/false，这里生成后替换，保证完全合规
+    xml = fg.rss_str(pretty=True).decode("utf-8")
+    xml = xml.replace("<itunes:explicit>no</itunes:explicit>",
+                      "<itunes:explicit>false</itunes:explicit>")
+    (DOCS / "feed.xml").write_text(xml, encoding="utf-8")
 
 
 def _write_index(eps: list[dict], cfg: dict, base_url: str) -> None:
