@@ -49,6 +49,11 @@ def publish(episode: dict, audio_path: Path, size_bytes: int, cfg: dict,
     ep_id = f"{date_str}-{slot}"  # 晨报/晚报各一集；同一时段重跑才覆盖
     base_title = episode.get("episode_title") or "科技研发早报"
 
+    # 保存完整口播文稿（纯文本），供网页阅读 / 下载
+    script_text = episode.get("spoken_script", "")
+    transcript_name = audio_path.stem + ".txt"
+    (EPISODES_DIR / transcript_name).write_text(script_text, encoding="utf-8")
+
     eps = _load_manifest()
     eps = [e for e in eps if e.get("id") != ep_id]
     eps.append({
@@ -57,18 +62,20 @@ def publish(episode: dict, audio_path: Path, size_bytes: int, cfg: dict,
         "slot": slot,
         "title": f"{slot_label} · {base_title}",
         "notes": _build_show_notes(episode),
+        "script": script_text,
         "file": audio_path.name,
+        "transcript": transcript_name,
         "bytes": size_bytes,
         "pub": now.isoformat(),
     })
     eps.sort(key=lambda e: e.get("pub", ""), reverse=True)  # 按发布时间，最新在前
 
-    # 清理超量旧集（含音频文件）
+    # 清理超量旧集（含音频与文稿文件）
     keep = cfg.get("keep_episodes", 30)
     for old in eps[keep:]:
-        f = EPISODES_DIR / old["file"]
-        if f.exists():
-            f.unlink()
+        for fname in (old.get("file"), old.get("transcript")):
+            if fname and (EPISODES_DIR / fname).exists():
+                (EPISODES_DIR / fname).unlink()
     eps = eps[:keep]
     _save_manifest(eps)
 
@@ -111,15 +118,26 @@ def _write_feed(eps: list[dict], cfg: dict, base_url: str) -> None:
 
 def _write_index(eps: list[dict], cfg: dict, base_url: str) -> None:
     pod = cfg.get("podcast", {})
+    def esc(s):
+        return (s or "").replace("&", "&amp;").replace("<", "&lt;").replace("\n", "<br>")
+
     rows = []
     for e in eps:
-        notes_html = (e.get("notes", "") or "").replace("&", "&amp;").replace("<", "&lt;").replace("\n", "<br>")
+        notes_html = esc(e.get("notes", ""))
+        script_html = esc(e.get("script", ""))
+        tx = e.get("transcript")
+        tx_link = f' &nbsp;·&nbsp; <a href="{base_url}/episodes/{tx}" target="_blank">下载 .txt</a>' if tx else ""
+        script_block = (
+            f'<details><summary>完整口播文稿{tx_link}</summary><p>{script_html}</p></details>'
+            if script_html else ""
+        )
         rows.append(f"""
     <div class="ep">
       <h3>{e['title']}</h3>
       <div class="date">{e['date']}</div>
       <audio controls preload="none" src="{base_url}/episodes/{e['file']}"></audio>
       <details><summary>节目内容 / 应用分析</summary><p>{notes_html}</p></details>
+      {script_block}
     </div>""")
     html = f"""<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
