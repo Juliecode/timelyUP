@@ -1,0 +1,44 @@
+name: Daily Briefing
+
+on:
+  schedule:
+    - cron: "0 23 * * *"   # UTC 23:00 = 北京 07:00（晨报，通勤前）
+    - cron: "0 10 * * *"   # UTC 10:00 = 北京 18:00（晚报，下班前）
+  workflow_dispatch: {}   # 也支持在 Actions 页面手动触发
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-briefing
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Generate episode
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          PAGES_BASE_URL: ${{ vars.PAGES_BASE_URL }}
+          WORK_PROFILE: ${{ secrets.WORK_PROFILE }}   # 你的真实工作背景（保密，不进代码）
+        run: python -m src.pipeline
+
+      - name: Commit & push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git diff --staged --quiet || git commit -m "Daily briefing $(date -u +%Y-%m-%d)"
+          git push

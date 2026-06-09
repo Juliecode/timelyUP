@@ -1,0 +1,88 @@
+# ============================================================
+# timelyUP 配置文件
+# 改这里就能调整：抓什么、用什么声音、保留多少集
+# ============================================================
+
+podcast:
+  title: "TimelyUP · 科技研发早报"
+  author: "TimelyUP"
+  description: "每天为研发工程师精选 AI、汽车与机器人领域的前沿进展，并分析如何应用到实际工作中。"
+  language: "zh-cn"
+  email: "iiszhuying@gmail.com"
+  category: "Technology"
+
+# 语音设置（edge-tts 中文音色）
+# 备选: zh-CN-YunxiNeural(阳光男声) / zh-CN-XiaoxiaoNeural(亲和女声)
+#       zh-CN-YunjianNeural(沉稳男声) / zh-CN-YunyangNeural(新闻播音男声)
+voice:
+  name: "zh-CN-YunyangNeural"
+  rate: "+8%"     # 语速，正数更快
+  volume: "+0%"
+
+# AI 模型（用你已有的 Gemini key；以后换模型改这里）
+ai:
+  provider: "gemini"
+  model: "gemini-2.5-flash"
+  # 一期节目里最多精选几条资讯
+  max_items: 7
+  # 口播稿目标时长（分钟），影响详略
+  target_minutes: 7
+
+fetch:
+  # 只保留最近 N 小时内发布的内容
+  max_age_hours: 30
+  # 每个源最多取几条进入候选池
+  per_feed_limit: 12
+
+# 保留最近多少集音频（旧的自动清理，避免仓库膨胀）
+keep_episodes: 30
+
+# 通用新闻源要命中的关键词才入选（arXiv 等专业源已按主题，无需过滤）
+keywords:
+  - AI
+  - artificial intelligence
+  - LLM
+  - machine learning
+  - 大模型
+  - 人工智能
+  - robot
+  - robotics
+  - humanoid
+  - 机器人
+  - autonomous
+  - self-driving
+  - EV
+  - electric vehicle
+  - 自动驾驶
+  - 智能驾驶
+  - 汽车
+
+# 信息源。always=true 表示该源本身就是目标主题，跳过关键词过滤
+sources:
+  # ---- AI / 机器学习（arXiv 每日新论文）----
+  - name: "arXiv cs.AI"
+    url: "http://export.arxiv.org/rss/cs.AI"
+    always: true
+  - name: "arXiv cs.LG"
+    url: "http://export.arxiv.org/rss/cs.LG"
+    always: true
+  # ---- 机器人（arXiv Robotics）----
+  - name: "arXiv cs.RO"
+    url: "http://export.arxiv.org/rss/cs.RO"
+    always: true
+  # ---- 行业新闻（命中关键词才入选）----
+  - name: "Hacker News"
+    url: "https://hnrss.org/frontpage"
+    always: false
+  - name: "IEEE Spectrum"
+    url: "https://spectrum.ieee.org/feeds/feed.rss"
+    always: false
+  - name: "TechCrunch"
+    url: "https://techcrunch.com/feed/"
+    always: false
+  - name: "The Verge"
+    url: "https://www.theverge.com/rss/index.xml"
+    always: false
+  - name: "Ars Technica"
+    url: "https://feeds.arstechnica.com/arstechnica/index"
+    always: false

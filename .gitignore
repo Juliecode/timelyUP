@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.DS_Store
+
+# 真实工作背景（私有，不公开到仓库）
+profile.local.md
+
+# 本地测试生成的音频不入库（线上由 Actions 生成并提交）
+# 如需把测试音频也提交，删掉下面一行
+docs/episodes/*.mp3
