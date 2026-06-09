@@ -83,6 +83,7 @@ def _write_feed(eps: list[dict], cfg: dict, base_url: str) -> None:
     fg.load_extension("podcast")
     fg.title(pod.get("title", "TimelyUP"))
     fg.link(href=base_url, rel="alternate")
+    fg.link(href=f"{base_url}/feed.xml", rel="self")  # atom:self 自引用
     fg.description(pod.get("description", ""))
     fg.language(pod.get("language", "zh-cn"))
     fg.author({"name": pod.get("author", "TimelyUP"), "email": pod.get("email", "")})
