@@ -49,10 +49,12 @@ def publish(episode: dict, audio_path: Path, size_bytes: int, cfg: dict,
     ep_id = f"{date_str}-{slot}"  # 晨报/晚报各一集；同一时段重跑才覆盖
     base_title = episode.get("episode_title") or "科技研发早报"
 
-    # 保存完整口播文稿（纯文本），供网页阅读 / 下载
+    # 完整口播文稿(.txt，供网页阅读/下载)；VTT 字幕由 tts 生成(供 App 显示)
     script_text = episode.get("spoken_script", "")
     transcript_name = audio_path.stem + ".txt"
     (EPISODES_DIR / transcript_name).write_text(script_text, encoding="utf-8")
+    vtt_name = audio_path.stem + ".vtt"
+    has_vtt = (EPISODES_DIR / vtt_name).exists()
 
     eps = _load_manifest()
     eps = [e for e in eps if e.get("id") != ep_id]
@@ -65,6 +67,7 @@ def publish(episode: dict, audio_path: Path, size_bytes: int, cfg: dict,
         "script": script_text,
         "file": audio_path.name,
         "transcript": transcript_name,
+        "vtt": vtt_name if has_vtt else "",
         "bytes": size_bytes,
         "pub": now.isoformat(),
     })
@@ -73,7 +76,7 @@ def publish(episode: dict, audio_path: Path, size_bytes: int, cfg: dict,
     # 清理超量旧集（含音频与文稿文件）
     keep = cfg.get("keep_episodes", 30)
     for old in eps[keep:]:
-        for fname in (old.get("file"), old.get("transcript")):
+        for fname in (old.get("file"), old.get("transcript"), old.get("vtt")):
             if fname and (EPISODES_DIR / fname).exists():
                 (EPISODES_DIR / fname).unlink()
     eps = eps[:keep]
@@ -122,12 +125,12 @@ def _write_feed(eps: list[dict], cfg: dict, base_url: str) -> None:
         1,
     )
     for e in eps:
-        tx = e.get("transcript")
-        if not tx:
+        vtt = e.get("vtt")
+        if not vtt:
             continue
         guid_tag = f'<guid isPermaLink="false">{base_url}/episodes/{e["file"]}</guid>'
         if guid_tag in xml:
-            tr = f'<podcast:transcript url="{base_url}/episodes/{tx}" type="text/plain"/>'
+            tr = f'<podcast:transcript url="{base_url}/episodes/{vtt}" type="text/vtt"/>'
             xml = xml.replace(guid_tag, f"{guid_tag}\n      {tr}", 1)
 
     (DOCS / "feed.xml").write_text(xml, encoding="utf-8")
