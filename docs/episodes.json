@@ -1,5 +1,15 @@
 [
   {
+    "id": "2026-06-10-am",
+    "date": "2026-06-10",
+    "slot": "am",
+    "title": "晨报 · 科技研发早报",
+    "notes": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n\n1. PathoSage: Towards Multi-Source Evidence Adjudication in Pathology via Experience-Aware Agentic Workflow（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2606.07549\n\n2. OmniMem: Perturbation-aware Memory Compression for Streaming Audio-Visual LLMs（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2606.07577\n\n3. Syll: Open-Source Personal Automation with Cross-Surface Execution（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2606.07594\n\n4. A case study of evaluating AI agents on a neuroscience data-to-discovery pipeline（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2606.07718\n\n5. Why Limit the Residual Stream to Layers and Not Tokens? Persistent Memory for Continuous Latent Reasoning（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2606.07720\n\n6. Automatic Extraction of Structured Information from Brain MRI Reports Using an Open-Weight Large Language Model（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2606.07721\n\n7. Some hypotheses on how chatbots work in problem-solving-driven conversations. Large Language Models as confirmation of the Innovation Illusion（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2606.07722",
+    "file": "episode-20260610-am.mp3",
+    "bytes": 1008720,
+    "pub": "2026-06-09T18:37:38.852239+00:00"
+  },
+  {
     "id": "2026-06-09-pm",
     "date": "2026-06-09",
     "slot": "pm",

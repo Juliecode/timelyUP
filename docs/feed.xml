@@ -12,7 +12,7 @@
       <link>https://Juliecode.github.io/timelyUP</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 09 Jun 2026 12:39:52 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 18:37:38 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -44,6 +44,34 @@
       <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260609-pm.mp3</guid>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260609-pm.mp3" length="1008720" type="audio/mpeg"/>
       <pubDate>Tue, 09 Jun 2026 12:39:52 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. PathoSage: Towards Multi-Source Evidence Adjudication in Pathology via Experience-Aware Agentic Workflow（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2606.07549
+
+2. OmniMem: Perturbation-aware Memory Compression for Streaming Audio-Visual LLMs（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2606.07577
+
+3. Syll: Open-Source Personal Automation with Cross-Surface Execution（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2606.07594
+
+4. A case study of evaluating AI agents on a neuroscience data-to-discovery pipeline（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2606.07718
+
+5. Why Limit the Residual Stream to Layers and Not Tokens? Persistent Memory for Continuous Latent Reasoning（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2606.07720
+
+6. Automatic Extraction of Structured Information from Brain MRI Reports Using an Open-Weight Large Language Model（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2606.07721
+
+7. Some hypotheses on how chatbots work in problem-solving-driven conversations. Large Language Models as confirmation of the Innovation Illusion（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2606.07722</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260610-am.mp3</guid>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-am.mp3" length="1008720" type="audio/mpeg"/>
+      <pubDate>Tue, 09 Jun 2026 18:37:38 +0000</pubDate>
     </item>
   </channel>
 </rss>
