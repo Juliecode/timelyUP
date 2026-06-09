@@ -113,6 +113,23 @@ def _write_feed(eps: list[dict], cfg: dict, base_url: str) -> None:
     xml = fg.rss_str(pretty=True).decode("utf-8")
     xml = xml.replace("<itunes:explicit>no</itunes:explicit>",
                       "<itunes:explicit>false</itunes:explicit>")
+
+    # Podcasting 2.0：声明命名空间 + 给每集插入 <podcast:transcript>，
+    # 支持的 App（如 Pocket Casts）可在播放界面直接显示文稿
+    xml = xml.replace(
+        "<rss ",
+        '<rss xmlns:podcast="https://podcastindex.org/namespace/1.0" ',
+        1,
+    )
+    for e in eps:
+        tx = e.get("transcript")
+        if not tx:
+            continue
+        guid_tag = f'<guid isPermaLink="false">{base_url}/episodes/{e["file"]}</guid>'
+        if guid_tag in xml:
+            tr = f'<podcast:transcript url="{base_url}/episodes/{tx}" type="text/plain"/>'
+            xml = xml.replace(guid_tag, f"{guid_tag}\n      {tr}", 1)
+
     (DOCS / "feed.xml").write_text(xml, encoding="utf-8")
 
 
