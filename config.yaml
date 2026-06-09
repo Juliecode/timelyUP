@@ -56,6 +56,31 @@ keywords:
   - 自动驾驶
   - 智能驾驶
   - 汽车
+  # 电机 / 电力电子 / 转向 / 控制（贴合 EPS 研发）
+  - motor
+  - BLDC
+  - PMSM
+  - inverter
+  - field-oriented
+  - FOC
+  - power electronics
+  - SiC
+  - GaN
+  - actuator
+  - servo
+  - steering
+  - steer-by-wire
+  - torque
+  - functional safety
+  - ISO 26262
+  - 电机
+  - 电驱
+  - 逆变器
+  - 转向
+  - 线控
+  - 执行器
+  - 伺服
+  - 功能安全
 
 # 信息源。always=true 表示该源本身就是目标主题，跳过关键词过滤
 sources:
@@ -85,4 +110,27 @@ sources:
     always: false
   - name: "Ars Technica"
     url: "https://feeds.arstechnica.com/arstechnica/index"
+    always: false
+  # ---- 控制系统 / 电机控制（arXiv，核心相关）----
+  - name: "arXiv eess.SY 控制系统"
+    url: "http://export.arxiv.org/rss/eess.SY"
+    always: true
+  # ---- 电驱 / 电力电子 / 电机驱动（工程向，高信号）----
+  - name: "Charged EVs"
+    url: "https://chargedevs.com/feed/"
+    always: true
+  - name: "Power Electronics News"
+    url: "https://www.powerelectronicsnews.com/feed/"
+    always: true
+  # ---- 机器人执行器 / 行业 ----
+  - name: "The Robot Report"
+    url: "https://www.therobotreport.com/feed/"
+    always: false
+  # ---- 电子 / 半导体 / 嵌入式（命中关键词才入选）----
+  - name: "EE Times"
+    url: "https://www.eetimes.com/feed/"
+    always: false
+  # ---- 中国电动车产业动态 ----
+  - name: "CnEVPost"
+    url: "https://cnevpost.com/feed/"
     always: false
