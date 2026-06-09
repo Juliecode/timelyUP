@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>TimelyUP · 科技研发早报</title>
+    <link>https://Juliecode.github.io/timelyUP</link>
+    <description>每天为研发工程师精选 AI、汽车与机器人领域的前沿进展，并分析如何应用到实际工作中。</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <image>
+      <url>https://Juliecode.github.io/timelyUP/cover.png</url>
+      <title>TimelyUP · 科技研发早报</title>
+      <link>https://Juliecode.github.io/timelyUP</link>
+    </image>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 09 Jun 2026 10:46:28 +0000</lastBuildDate>
+    <itunes:author>TimelyUP</itunes:author>
+    <itunes:category text="Technology"/>
+    <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
+    <itunes:explicit>no</itunes:explicit>
+    <item>
+      <title>晚报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. PathoSage: Towards Multi-Source Evidence Adjudication in Pathology via Experience-Aware Agentic Workflow（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2606.07549
+
+2. OmniMem: Perturbation-aware Memory Compression for Streaming Audio-Visual LLMs（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2606.07577
+
+3. Syll: Open-Source Personal Automation with Cross-Surface Execution（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2606.07594
+
+4. A case study of evaluating AI agents on a neuroscience data-to-discovery pipeline（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2606.07718
+
+5. Why Limit the Residual Stream to Layers and Not Tokens? Persistent Memory for Continuous Latent Reasoning（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2606.07720
+
+6. Automatic Extraction of Structured Information from Brain MRI Reports Using an Open-Weight Large Language Model（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2606.07721
+
+7. Some hypotheses on how chatbots work in problem-solving-driven conversations. Large Language Models as confirmation of the Innovation Illusion（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2606.07722</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260609-pm.mp3</guid>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260609-pm.mp3" length="1008720" type="audio/mpeg"/>
+      <pubDate>Tue, 09 Jun 2026 10:46:28 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
