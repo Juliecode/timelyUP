@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+<rss xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>TimelyUP · 科技研发早报</title>
     <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 09 Jun 2026 19:47:08 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 23:48:59 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -97,8 +97,29 @@
 
 6. AI大模型是研发工程师的强大助手，而非替代者，赋能工程师聚焦创新和解决核心工程难题。（来源：专题讲解）</description>
       <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-034642.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-034642.txt" type="text/plain"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-034642.mp3" length="2235456" type="audio/mpeg"/>
       <pubDate>Tue, 09 Jun 2026 19:47:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>专题 · AI时代的量化交易：从电机控制到金融市场的智能决策</title>
+      <description>本期专题：生成关于当前AI背景下量化交易的介绍，介绍时候忽略我的工作背景
+
+1. AI通过机器学习、深度学习和强化学习等技术，提升量化交易在数据分析、模式识别和策略优化上的能力。（来源：专题讲解）
+
+2. AI量化交易的核心价值在于高效率、深度洞察和自动化规模化，但也面临模型鲁棒性、数据质量和可解释性等挑战。（来源：专题讲解）
+
+3. EPS工程师与AI量化交易在底层技术思维上高度关联，均涉及复杂系统的控制、数据驱动决策和对鲁棒性的追求。（来源：专题讲解）
+
+4. EPS控制算法（如MPC、状态观测器）与AI量化交易策略有共通之处，可应用于金融市场的预测和优化。（来源：专题讲解）
+
+5. EPS工程师关注的AI应用（强化学习、自动标定、异常检测）在量化交易中是核心技术，用于策略优化、参数调整和风险管理。（来源：专题讲解）
+
+6. EPS的功能安全（ISO 26262）理念，在量化交易中可映射为对系统可靠性、风险管理和故障预警的严格要求。（来源：专题讲解）</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-074811.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-074811.txt" type="text/plain"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-074811.mp3" length="2211120" type="audio/mpeg"/>
+      <pubDate>Tue, 09 Jun 2026 23:48:59 +0000</pubDate>
     </item>
   </channel>
 </rss>
