@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 10 Jun 2026 21:58:32 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 22:01:13 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -273,6 +273,26 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260611-topic-055800.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260611-topic-055800.mp3" length="1784592" type="audio/mpeg"/>
       <pubDate>Wed, 10 Jun 2026 21:58:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>专题 · 电机电流采样：单电阻与三电阻方案的攻防战</title>
+      <description>本期专题：电机单电阻采样方案和三电阻采样主要攻克难点的不同，后者提升占空比和电压利用率方面，前者是什么
+
+1. FOC矢量控制依赖精确的电机电流反馈，这是电机控制的核心。（来源：专题讲解）
+
+2. 三电阻采样方案通过独立测量各相电流，能实现接近0%到100%的全占空比范围，从而最大化电压利用率。（来源：专题讲解）
+
+3. 单电阻采样方案通过单个电阻重构各相电流，成本低但面临挑战，尤其是在极端占空比（接近0%或100%）时难以准确采样，形成“盲区”。（来源：专题讲解）
+
+4. 单电阻方案的“盲区”限制了有效占空比范围，导致其在极端工况下牺牲一部分电压利用率，影响低速精度和高速弱磁性能。（来源：专题讲解）
+
+5. EPS工程师需在成本与性能间权衡，通过先进算法（如电流重构、优化PWM、状态观测器）克服单电阻方案的局限，提升转矩脉动、NVH、弱磁控制及功能安全。（来源：专题讲解）
+
+6. 选择何种方案是工程上的权衡，单电阻方案要求更精巧的软件算法来弥补硬件劣势，以实现精准控制。（来源：专题讲解）</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260611-topic-060043.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260611-topic-060043.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260611-topic-060043.mp3" length="2603376" type="audio/mpeg"/>
+      <pubDate>Wed, 10 Jun 2026 22:01:13 +0000</pubDate>
     </item>
   </channel>
 </rss>
