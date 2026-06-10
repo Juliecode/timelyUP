@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 10 Jun 2026 13:00:42 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 13:45:06 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -213,6 +213,26 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-pm.mp3" length="4687776" type="audio/mpeg"/>
       <pubDate>Wed, 10 Jun 2026 13:00:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>专题 · 解读Claude系列：从Fable的猜想到最新进展</title>
+      <description>本期专题：我想了解下Claude Fable
+
+1. “Claude Fable”通常指代对Anthropic公司先进AI模型，特别是其Claude系列最新进展的关注和期待，而非一个已发布的具体产品名称。（来源：专题讲解）
+
+2. Anthropic的Claude系列模型是大型语言模型，其核心理念是“负责任的AI”和“宪法式AI”，强调安全、可控性及与人类价值观的对齐。（来源：专题讲解）
+
+3. Claude模型具备强大的多模态能力，能处理文本和视觉信息，并通过深度学习实现复杂推理、代码生成和多语言理解。（来源：专题讲解）
+
+4. 最新的Claude 3.5 Sonnet模型在性能、速度和成本效益上达到平衡，推动了AI技术前沿，提升了AI的实用性和可访问性。（来源：专题讲解）
+
+5. Anthropic对AI安全和伦理的持续关注，为行业树立了负责任AI发展的榜样。（来源：专题讲解）
+
+6. Claude系列代表了AI发展趋势：更强的多模态理解、精细推理、高效运行以及对AI安全伦理的持续重视。（来源：专题讲解）</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-214431.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-214431.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-214431.mp3" length="1390176" type="audio/mpeg"/>
+      <pubDate>Wed, 10 Jun 2026 13:45:06 +0000</pubDate>
     </item>
   </channel>
 </rss>
