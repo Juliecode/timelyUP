@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 10 Jun 2026 00:04:49 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 00:10:08 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -45,41 +45,6 @@
       <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260609-pm.mp3</guid>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260609-pm.mp3" length="1008720" type="audio/mpeg"/>
       <pubDate>Tue, 09 Jun 2026 12:39:52 +0000</pubDate>
-    </item>
-    <item>
-      <title>晨报 · AI赋能转向，机器人触觉与下一代汽车安全：研发工程师早报</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门方向，精选出七条对我们工作最有启发性的资讯。从永磁同步电机的谐波抑制，到线控转向的安全挑战，再到机器人领域的接触智能和端到端控制，相信今天的节目会给大家带来不少思考和灵感。话不多说，让我们立刻进入今天的早报时间。
-
-1. 离线强化学习在核聚变等高风险物理系统控制中的应用（来源：arXiv cs.LG）
-   应用分析：在我们的EPS系统研发中，在线路试和台架测试中积累了大量的运行数据。我们可以尝试将这些宝贵数据用于离线强化学习，来训练和优化电机控制策略，比如FOC矢量控制、无传感器控制，甚至弱磁控制等。比如，针对不同路况、不同驾驶风格下的手感调校，我们就可以通过离线强化学习，从历史数据中学习到最佳的助力曲线和阻尼补偿。这比我们传统基于模型的PID或者MPC控制，在适应性和鲁棒性上可能更有优势。我认为这是一个值得中长期投入的方向，有望提升我们的标定效率和系统性能。
-   https://arxiv.org/abs/2606.07550
-
-2. 基于极值搜索控制的永磁同步电机位置传感器谐波自适应补偿（来源：arXiv eess.SY 控制系统）
-   应用分析：我们EPS系统广泛使用永磁同步电机，而位置传感器，无论是旋转变压器还是磁编码器，其安装误差或非线性特性都可能引入谐波。这项技术可以直接用于提升我们FOC控制的精度，减少转矩纹波和抖动，从而改善转向手感和降低NVH。它完全可以作为一个补充模块，集成到我们现有的电机控制软件中。这项研究的投入产出比非常高，我认为是值得我们立即研究和进行试验验证的，因为它能直接解决我们现在最想解决的问题之一。
-   https://arxiv.org/abs/2606.07906
-
-3. 代理网络物理系统中的增益操纵攻击：稳定性与安全性的权衡（来源：arXiv eess.SY 控制系统）
-   应用分析：在我们的EPS系统向线控转向演进的过程中，网络安全和功能安全是生命线。AI或数据驱动的自适应控制策略，未来很可能涉及动态调整控制增益，这无疑会成为潜在的攻击点。我们需要设计更鲁棒的增益管理机制，例如，引入多层级的异常检测、增益范围约束，以及冗余验证机制，确保即使在增益被篡改的情况下，系统也能安全降级或保持基本功能。这应该在线控转向的架构设计阶段和ISO 26262功能安全流程中，作为高优先级问题进行深入分析和解决。
-   https://arxiv.org/abs/2606.07803
-
-4. 超越灵巧：接触智能如何定义机器人技术的下一个时代（来源：IEEE Spectrum）
-   应用分析：我们可以借鉴机器人领域在“接触智能”上的前沿研究，来改进EPS的助力策略和手感调校。例如，通过更精密的力矩传感器，或者基于模型的状态观测器，我们能否更准确、更实时地感知驾驶员和路面之间微小的交互力？这将有助于我们实现更真实、更细腻的阻尼、回正和摩擦补偿，从而大幅提升路感还原能力。对于线控转向系统而言，由于完全没有机械连接，如何模拟最真实的物理反馈，接触智能更是其成功的关键。这是一个值得我们持续关注和探索的交叉点。
-   https://spectrum.ieee.org/agilink-contact-intelligence-robot-manipulation
-
-5. 端到端控制的动力膝踝假肢：实现统一、免调校的辅助（来源：arXiv cs.RO）
-   应用分析：目前，EPS的助力策略调校仍然高度依赖大量人工经验和反复的路试，耗时耗力。借鉴这种端到端、免调校的思想，我们可以探索使用深度学习模型，直接从车辆状态、驾驶员输入、路面信息等多元传感器数据，输出最优的电机控制指令。这有望大幅提升我们的标定效率，并实现更智能、更个性化的助力手感。虽然这需要大量的驾驶数据和不同场景的覆盖，前期投入会比较大，但从长期来看，它能带来巨大的研发效率提升和用户体验优化，是值得我们深入研究和投入的。
-   https://arxiv.org/abs/2606.07902
-
-6. EPC推出新型GaN基无刷直流电机逆变器板（来源：Power Electronics News）
-   应用分析：我们EPS的控制器功率级目前多采用硅基MOSFET或IGBT。GaN器件可以显著提高逆变器的效率，减小体积和重量，同时降低散热需求。这对于提升EPS的整体性能、在电动汽车中延长续航里程，以及实现更紧凑的系统设计至关重要。我们可以积极评估GaN器件在下一代EPS功率级中的应用潜力，从原型开发开始，验证其在汽车严苛环境下的可靠性和成本效益。这是我们关注的“功率级”和“芯片（功率器件）动态”的直接体现，值得我们投入资源进行前期研究和技术储备。
-   https://www.powerelectronicsnews.com/epc-launches-new-gan-based-bldc-inverter-boards/
-
-7. 端到端AI在物理应用中未经充分审查的崛起令人担忧（来源：EE Times）
-   应用分析：在探索AI驱动的控制系统改进时，尤其是涉及线控转向等安全关键系统，我们必须警惕盲目采用端到端AI的风险。我们应该优先考虑结合传统控制理论和AI的混合架构，确保AI模块的可解释性、可验证性，并设计完善的故障诊断和降级方案。例如，AI可以用于辅助决策或优化参数，但最终的控制指令仍由经过严格验证的传统控制器生成。这需要我们投入大量精力在AI安全验证、形式化方法和功能安全标准制定上，确保AI的引入不会以牺牲安全性为代价。这是我们“用AI / 数据驱动方法改进控制”时必须面对和解决的核心问题。
-   https://www.eetimes.com/the-concerning-unchecked-rise-of-e2e-ai-in-physical-applications/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260610-am.mp3</guid>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-am.mp3" length="3538368" type="audio/mpeg"/>
-      <pubDate>Tue, 09 Jun 2026 19:07:31 +0000</pubDate>
     </item>
     <item>
       <title>专题 · Claude与Codex：AI赋能EPS研发的新引擎</title>
@@ -138,6 +103,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-080435.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-080435.mp3" length="1297728" type="audio/mpeg"/>
       <pubDate>Wed, 10 Jun 2026 00:04:49 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾风向标：AI控制、线控转向与机器人执行器前沿</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天咱们聚焦AI前沿、汽车智能化和机器人三大领域，一共精选了七条重磅资讯，希望能为你在日常研发工作中带来一些新视角和启发。今天的头条，我们先从AI控制的最新进展说起。
+
+1. 核聚变离线强化学习：数据驱动鲁棒控制新范式（来源：arXiv cs.LG）
+   应用分析：对于EPS系统，我们可以借鉴这种离线强化学习方法来优化电机控制策略，如处理转矩脉动、NVH、温漂等问题。通过收集大量的台架测试和整车运行数据，训练更优的FOC、弱磁控制或转矩脉动抑制策略，减少传统调参的经验依赖，提升性能和效率。这需要投入数据平台和强化学习算法的学习，但长期来看，有望大幅提升控制性能和开发效率，降低实车调校成本。
+   https://arxiv.org/abs/2606.07550
+
+2. KANs在FPGA上实现超快机器学习，加速嵌入式AI部署（来源：Hacker News）
+   应用分析：对于EPS系统，我们正在探索用AI方法改进控制、标定和故障诊断。将KANs部署到FPGA上，能为我们提供高性能硬件平台。例如，可构建更精确、鲁棒的无传感器位置观测器或参数辨识网络，甚至智能标定算法。FPGA的并行计算和低功耗满足车规需求。结合MATLAB/Simulink的模型化设计与代码生成工具链，值得投入预研，提升电机控制性能。
+   https://aarushgupta.io/posts/kan-fpga/
+
+3. 赛力斯Aiva品牌发布，剑指AI定义电动车未来（来源：CnEVPost）
+   应用分析：AI定义电动车对EPS意味着更多软件定义功能和更强的协同能力。未来的EPS将不仅仅是执行转向指令，更可能成为智能节点，与整车AI深度交互，提供精细路感、智能助力，甚至线控转向冗余。我们需要思考如何将AI技术融入EPS控制器，例如用AI改进助力手感调校效率和个性化，或更精准的故障诊断。线控转向的架构、冗余和功能安全设计，也将是AI定义电动车时代EPS研发的重中之重。这需要我们从系统层面积极与整车厂合作，共同定义未来EPS的软硬件接口和AI能力边界，这是必须投入的方向。
+   https://cnevpost.com/2026/06/09/seres-saidou-launches-new-brand-aiva-ai-defined-evs/
+
+4. 多千兆车载以太网验证指南：线控转向与自动驾驶的通信基石（来源：Charged EVs）
+   应用分析：线控转向是我目前正在做的重要方向，多千兆车载以太网是其实现的关键基础设施。这份验证指南非常实用，特别提到的MEMS故障注入技术，对于我们验证线控转向系统的通信鲁棒性和功能安全至关重要。我们可以将这种故障注入方法集成到MIL/SIL/HIL测试环境中，模拟各种极端通信故障场景，以验证EPS控制器在这些情况下的故障诊断、降级和安全响应能力。这能大大提升测试效率，发现潜在的系统弱点，并满足ISO 26262对通信安全的严格要求。这是线控转向研发中必不可少的一环，需要积极学习和应用。
+   https://chargedevs.com/whitepapers/download-the-guide-to-multi-gig-automotive-ethernet-validation/
+
+5. 端到端控制助力假肢：实现统一、免调校的自适应辅助（来源：arXiv cs.RO）
+   应用分析：这个研究对于EPS的助力策略与手感调校非常有启发。我们一直在寻求减少手动标定、提升系统自适应性的方法。借鉴这种端到端、免调校的思路，可以尝试用深度学习或强化学习直接从驾驶员操作和路况数据中学习助力输出，而不是依赖复杂的物理模型和经验曲线。这将大大简化助力曲线、阻尼补偿等参数的调校过程，并有可能实现更精细、个性化的手感。虽然在车规级功能安全上仍有挑战，但作为前沿研究方向，非常值得投入预研，探索其在自动标定、自适应控制、以及线控转向手感模拟上的潜力。
+   https://arxiv.org/abs/2606.07902
+
+6. 机器人“接触智能”将定义机器人技术新时代（来源：IEEE Spectrum）
+   应用分析：EPS的核心就是提供良好的手感和路感还原。这个“接触智能”的概念，对我们理解和优化助力策略、阻尼/回正/摩擦补偿，以及线控转向的路感模拟至关重要。我们可以借鉴机器人领域在力/触觉传感器、高带宽力矩控制方面的进展，提升EPS的感知精度和电机控制的响应速度。例如，研究更先进的力矩传感器和更精密的FOC算法，以更准确地模拟路面反馈和驾驶员意图，减少转矩脉动和抖动，提供更平滑、更线性的转向手感。这需要我们关注机器人关节执行器、伺服电机控制的前沿技术，并探索如何将其迁移到EPS中，提升产品竞争力。这是我们长期关注的交叉点，值得持续投入。
+   https://spectrum.ieee.org/agilink-contact-intelligence-robot-manipulation
+
+7. 智能体网络物理系统安全隐患：增益操控攻击，引发稳定与安全之争（来源：arXiv eess.SY 控制系统）
+   应用分析：这篇论文对线控转向和AI辅助EPS的功能安全和网络安全设计敲响了警钟。在未来的线控转向架构中，AI智能体可能会动态调整助力曲线、阻尼系数等“增益”参数以适应不同驾驶场景。恶意篡改这些参数，即使系统在数学上保持“稳定”，也可能导致车辆转向特性急剧变化，引发危险。我们需要在ISO 26262功能安全框架下，加强对AI控制模块的输入验证、输出监控和参数完整性保护。例如，引入更严格的运行时参数范围检查、冗余计算和异常检测机制，并设计安全的降级策略。同时，需要深入研究如何防止对控制器参数的远程攻击，确保EPS控制器的安全性和鲁棒性。这是一个高优先级的问题，必须投入资源进行防御性设计和验证。
+   https://arxiv.org/abs/2606.07803</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260610-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-am.mp3" length="4513248" type="audio/mpeg"/>
+      <pubDate>Wed, 10 Jun 2026 00:10:08 +0000</pubDate>
     </item>
   </channel>
 </rss>
