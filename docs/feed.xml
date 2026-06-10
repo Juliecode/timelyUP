@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 10 Jun 2026 00:10:08 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 04:30:54 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -139,6 +139,24 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-am.mp3" length="4513248" type="audio/mpeg"/>
       <pubDate>Wed, 10 Jun 2026 00:10:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>专题 · EPS单电阻采样功能安全评估：挑战与创新方案</title>
+      <description>本期专题：单电阻采样的功能安全评估：讨论单电阻方案的可行性，功能安全方案未知。 安全分析： 1. A/B两路单路控制的扭矩输出，shunt只有一路母线电流监控，无法实施校验。对执行端冗余（6相电机）系统来说，单边相电流需要达到ASILD，如无法实施校验，无法满足要求。 2. 思路：是否有其他硬件可以独立采样出相电流，评估下来用mos内阻满足精度要求，9189耐压无法承受高压，硬件可以通过分压方案，采样方案。   1. ——硬件提供基于9189分压方案的样件，测试精度是否能否满足要求。   2. ——采样的比较机制：mos采样U,W两相；母线的采样电阻（UV,VW,UW）     1. 问题1：采样时刻如何保持统一     2. 问题2：采样诊断的方案     3. 问题3：采样是否有无法覆盖的场景
+
+1. 单电阻采样在ASIL D等级EPS系统中面临功能安全挑战，尤其在冗余执行端无法独立校验相电流。（来源：专题讲解）
+
+2. 探索替代硬件方案，如利用MOSFET内阻进行相电流采样，并解决耐压与精度问题（如通过9189分压方案）。（来源：专题讲解）
+
+3. 设计多源采样比较机制，结合MOSFET采样与母线采样，提升诊断能力。（来源：专题讲解）
+
+4. 解决多源采样中的关键挑战：采样时刻统一、故障诊断方案设计、以及确保高诊断覆盖率避免无法覆盖的场景。（来源：专题讲解）
+
+5. 这些解决方案直接关联EPS的功能安全、成本优化，并为线控转向等未来架构奠定基础。（来源：专题讲解）</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-123024.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-123024.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-123024.mp3" length="1943712" type="audio/mpeg"/>
+      <pubDate>Wed, 10 Jun 2026 04:30:54 +0000</pubDate>
     </item>
   </channel>
 </rss>
