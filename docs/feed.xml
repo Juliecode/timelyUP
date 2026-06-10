@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 10 Jun 2026 04:30:54 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 11:16:03 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -157,6 +157,26 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-123024.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-123024.mp3" length="1943712" type="audio/mpeg"/>
       <pubDate>Wed, 10 Jun 2026 04:30:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>专题 · EPS工程师必听：CIPOS传感器如何驱动未来转向</title>
+      <description>本期专题：我想深入了解下CIPOS扭矩和角度传感器
+
+1. CIPOS：CMOS集成位置传感器，高集成度、数字输出，简化设计并抗干扰。（来源：专题讲解）
+
+2. 基于磁阻效应，高精度感知扭矩和角度，为EPS提供核心输入。（来源：专题讲解）
+
+3. 提升FOC电机控制精度，优化转矩密度、效率和NVH。（来源：专题讲解）
+
+4. 全面支持ISO 26262功能安全，自带诊断功能，简化系统安全设计。（来源：专题讲解）
+
+5. 是线控转向和无传感器/冗余传感方案的关键使能技术。（来源：专题讲解）
+
+6. 助力EPS系统实现小型化、高性能化、高可靠性及手感调校优化。（来源：专题讲解）</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-191543.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-191543.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-191543.mp3" length="1898208" type="audio/mpeg"/>
+      <pubDate>Wed, 10 Jun 2026 11:16:03 +0000</pubDate>
     </item>
   </channel>
 </rss>
