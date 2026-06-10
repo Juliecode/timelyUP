@@ -8,6 +8,11 @@ on:
         description: "想生成讲解的主题（例：SiC 在 EPS 逆变器中的应用 / 无传感器 FOC 最新进展）"
         required: true
         type: string
+      use_profile:
+        description: "结合我的工作背景(EPS)来讲解？不勾选则做通用讲解"
+        required: false
+        default: true
+        type: boolean
 
 permissions:
   contents: write
@@ -37,6 +42,7 @@ jobs:
           PAGES_BASE_URL: ${{ vars.PAGES_BASE_URL }}
           WORK_PROFILE: ${{ secrets.WORK_PROFILE }}
           TOPIC: ${{ inputs.topic }}      # 经环境变量传入，避免命令注入
+          USE_PROFILE: ${{ inputs.use_profile }}
         run: python -m src.topic
 
       - name: Commit & push
