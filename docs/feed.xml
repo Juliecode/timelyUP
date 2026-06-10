@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 09 Jun 2026 23:48:59 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 00:04:49 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -97,7 +97,6 @@
 
 6. AI大模型是研发工程师的强大助手，而非替代者，赋能工程师聚焦创新和解决核心工程难题。（来源：专题讲解）</description>
       <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-034642.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-034642.txt" type="text/plain"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-034642.mp3" length="2235456" type="audio/mpeg"/>
       <pubDate>Tue, 09 Jun 2026 19:47:08 +0000</pubDate>
     </item>
@@ -117,9 +116,28 @@
 
 6. EPS的功能安全（ISO 26262）理念，在量化交易中可映射为对系统可靠性、风险管理和故障预警的严格要求。（来源：专题讲解）</description>
       <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-074811.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-074811.txt" type="text/plain"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-074811.mp3" length="2211120" type="audio/mpeg"/>
       <pubDate>Tue, 09 Jun 2026 23:48:59 +0000</pubDate>
+    </item>
+    <item>
+      <title>专题 · AI赋能：透视当前量化交易新格局</title>
+      <description>本期专题：生成关于当前AI背景下量化交易的介绍，介绍时候忽略我的工作背景
+
+1. 量化交易是利用数学模型和计算能力分析市场并自动交易，AI的融入极大地拓展了其能力。（来源：专题讲解）
+
+2. AI赋能量化交易，能够处理海量多维数据，识别传统方法难以发现的市场模式和趋势。（来源：专题讲解）
+
+3. AI技术如强化学习能自动生成和优化交易策略，提高其适应性和盈利能力。（来源：专题讲解）
+
+4. AI提升了风险管理能力，能更精准预测风险，并优化交易执行效率，降低成本。（来源：专题讲解）
+
+5. AI量化交易面临数据质量、模型“黑箱”、过拟合以及对计算资源和人才的高要求等挑战。（来源：专题讲解）
+
+6. AI是量化交易未来发展的重要驱动力，但需持续关注其带来的机遇与挑战。（来源：专题讲解）</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-080435.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-080435.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-080435.mp3" length="1297728" type="audio/mpeg"/>
+      <pubDate>Wed, 10 Jun 2026 00:04:49 +0000</pubDate>
     </item>
   </channel>
 </rss>
