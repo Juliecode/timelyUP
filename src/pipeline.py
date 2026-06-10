@@ -19,7 +19,7 @@ from .config import load_config, EPISODES_DIR
 from .fetch import fetch_items
 from .analyze import analyze
 from .tts import synthesize
-from .publish import publish
+from .publish import publish, episode_exists
 
 
 def main() -> None:
@@ -29,16 +29,23 @@ def main() -> None:
 
     cfg = load_config()
 
+    # 北京时间 = UTC+8。据此判断晨报/晚报，并作为节目日期
+    now_bj = datetime.now(timezone.utc) + timedelta(hours=8)
+    slot = os.environ.get("FORCE_SLOT") or ("am" if now_bj.hour < 12 else "pm")
+    slot_label = "晨报" if slot == "am" else "晚报"
+    date_str = now_bj.strftime("%Y-%m-%d")
+
+    # 兜底 cron 判重：定时触发时，若当天该时段已生成就跳过，避免重复出集、浪费 AI 调用。
+    # 手动触发(workflow_dispatch)或本地运行不判重，方便强制重生成。
+    if os.environ.get("GITHUB_EVENT_NAME") == "schedule" and episode_exists(date_str, slot):
+        print(f"\n[跳过] 今天的{slot_label}（{date_str}-{slot}）已生成，兜底 cron 无需重复。")
+        return
+
     print("\n[1/4] 抓取信息源 ...")
     items = fetch_items(cfg)
 
     print("\n[2/4] AI 精选与应用分析 ...")
     episode = analyze(items, cfg)
-
-    # 北京时间 = UTC+8。据此判断晨报/晚报，并作为节目日期
-    now_bj = datetime.now(timezone.utc) + timedelta(hours=8)
-    slot = os.environ.get("FORCE_SLOT") or ("am" if now_bj.hour < 12 else "pm")
-    slot_label = "晨报" if slot == "am" else "晚报"
 
     print(f"\n[3/4] 文字转语音 ...（{slot_label}）")
     audio_path = EPISODES_DIR / f"episode-{now_bj.strftime('%Y%m%d')}-{slot}.mp3"

@@ -21,6 +21,12 @@ def _save_manifest(eps: list[dict]) -> None:
     )
 
 
+def episode_exists(date_str: str, slot: str) -> bool:
+    """当天该时段(晨报/晚报)是否已生成。供兜底 cron 判重，避免重复出集。"""
+    ep_id = f"{date_str}-{slot}"
+    return any(e.get("id") == ep_id for e in _load_manifest())
+
+
 def _build_show_notes(episode: dict) -> str:
     parts = []
     if episode.get("intro"):
