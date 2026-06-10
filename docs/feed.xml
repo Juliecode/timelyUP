@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 10 Jun 2026 14:54:04 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 21:58:32 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -253,6 +253,26 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-225342.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-225342.mp3" length="1336176" type="audio/mpeg"/>
       <pubDate>Wed, 10 Jun 2026 14:54:04 +0000</pubDate>
+    </item>
+    <item>
+      <title>专题 · Anthropic新模型展望：Claude 3系列与未来趋势</title>
+      <description>本期专题：今天凌晨，Anthropic 发布新模型 Claude Fable 5 和 Mythos 5，请介绍下具体特性以及应用场景
+
+1. Anthropic官方尚未公布名为Fable 5和Mythos 5的新模型，但我们可以结合其最新Claude 3系列模型展望未来趋势。（来源：专题讲解）
+
+2. Claude 3系列（Opus、Sonnet、Haiku）核心是“宪法式AI”，旨在确保模型安全、有用且无害。（来源：专题讲解）
+
+3. Claude 3系列模型具备强大的多模态能力，可处理文本、图像和图表，大幅提升推理和理解能力。（来源：专题讲解）
+
+4. 不同层级的Claude 3模型在速度和成本效益上有所优化，适应不同规模和需求的应用场景。（来源：专题讲解）
+
+5. 未来AI模型将在企业级应用、内容创作、教育、科学研究、医疗健康以及人机交互等领域发挥更大作用。（来源：专题讲解）
+
+6. Anthropic正通过其技术创新和伦理探索，引领AI走向一个更强大、更负责任的未来。（来源：专题讲解）</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260611-topic-055800.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260611-topic-055800.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260611-topic-055800.mp3" length="1784592" type="audio/mpeg"/>
+      <pubDate>Wed, 10 Jun 2026 21:58:32 +0000</pubDate>
     </item>
   </channel>
 </rss>
