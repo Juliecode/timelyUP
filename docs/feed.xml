@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 11 Jun 2026 00:15:29 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 09:43:11 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -358,6 +358,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260611-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260611-am.mp3" length="5523120" type="audio/mpeg"/>
       <pubDate>Thu, 11 Jun 2026 00:15:29 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 智驾之锚：AI与机器人的硬核突破，如何赋能汽车转向系统？</title>
+      <description>各位研发工程师朋友们，大家早上好！我是你们的中文科技早报主播兼技术分析师。今天是二零二六年六月十一日，星期四。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条最具信息量的硬核资讯。从强化学习的最新进展，到物理约束下的AI设计，再到电动汽车SiC功率器件的革新，以及具身智能和机器人落地实践的深刻洞察。这些前沿技术，都将与我们汽车EPS，也就是电动助力转向系统的未来发展息息相关。话不多说，让我们立刻进入今天的早报时间！
+
+1. HERO: Hindsight-Enhanced Reflection from Environment Observations for Agentic Self-Distillation（来源：arXiv cs.AI）
+   应用分析：HERO框架能用于EPS电机控制策略学习，例如优化FOC参数或引入非线性补偿，尤其在处理转矩脉动、NVH抑制等问题时。通过在MIL/SIL/HIL仿真中进行离线训练和策略优化，加速迭代。这绝对值得投入，有望在现有FOC难以解决的复杂问题上带来突破。
+   https://arxiv.org/abs/2606.11559
+
+2. Physics-informed generative AI for semiconductor manufacturing: Enforcing hard physical constraints in generative models by construction（来源：arXiv cs.LG）
+   应用分析：这是必须遵循的原则。当我们用AI辅助EPS系统架构设计、电机选型或优化控制参数时，必须将物理约束和功能安全要求内建到AI模型中，作为损失函数或通过特定网络层强制执行。例如，AI生成的助力曲线必须符合驾驶手感特性，并满足ISO 26262的安全限制。这能从根本上提升AI方案的工程可行性和安全性，避免大量无效或危险的尝试，因此必须投入。
+   https://arxiv.org/abs/2606.11247
+
+3. Large Language Models in Process Systems Engineering: Opportunities, Architectures, and Industrial Deployment Challenges（来源：arXiv eess.SY 控制系统）
+   应用分析：部分场景能用，但需谨慎。LLMs在辅助研发、知识管理和故障诊断等非实时、非安全关键场景有价值，如文档问答、故障诊断辅助、报告生成。但不适合直接用于实时控制策略。对于核心控制算法，LLMs更多是提供参数调优建议。值得适度投入，主要集中在提高研发效率和知识管理方面。
+   https://arxiv.org/abs/2606.11589
+
+4. Mitsubishi Electric Unveils New SiC MOSFETs for EV Powertrains（来源：Power Electronics News）
+   应用分析：能用，且是必然趋势。我们需要评估第五代SiC MOSFET在EPS功率级中的应用潜力，优化散热设计，并利用SiC器件允许的更高开关频率，提升FOC控制精度和NVH性能。同时，需全面评估其成本效益和长期可靠性。绝对值得投入，是EPS系统实现高性能、小型化、轻量化的关键技术之一。
+   https://www.powerelectronicsnews.com/mitsubishi-electric-unveils-new-sic-mosfets-for-ev-powertrains/
+
+5. ConsistencyPlanner: Real-time Planning with Fast-Sampling Consistency Models（来源：arXiv cs.RO）
+   应用分析：直接用于EPS控制层不行，但其技术发展对EPS未来规划有重要影响。我们需要为线控转向系统提前布局，提升EPS在转矩响应速度、精度、NVH和手感一致性等方面的性能指标，以匹配自动驾驶更激进或精细的轨迹规划。同时，在MIL/SIL/HIL测试中，可将Consistency Planner生成的轨迹作为输入，验证EPS的鲁棒性。值得重点关注和间接投入，以确保产品竞争力。
+   https://arxiv.org/abs/2606.11569
+
+6. Embodied-R1.5: Evolving Physical Intelligence via Embodied Foundation Models（来源：arXiv cs.RO）
+   应用分析：能用，且具有高度迁移价值。我们可以借鉴Embodied-R1.5的“具身认知”和“纠错”能力，设计更智能的EPS电机控制策略，实现自适应参数调整，优化助力手感和NVH。同时，其感知能力可启发无传感器控制中的状态观测器设计，并通过AI提升自动标定的效率和自我纠错能力。非常值得投入，为解决EPS电机控制策略性能、鲁棒性及无传感器方案等核心问题提供新思路。
+   https://arxiv.org/abs/2606.11324
+
+7. Robotics will not have a clean Llama moment（来源：The Robot Report）
+   应用分析：这不是具体技术，而是重要工程指导原则，必须采纳。在用AI改进EPS控制、标定和故障诊断时，必须将“可解释性”、“可调试性”和“可追溯性”作为关键设计要求。这意味着不能仅依赖黑盒模型，需结合传统控制理论，或开发AI解释工具。同时，要设计全面的验证测试策略，并建立完善的日志回溯机制。这是确保AI技术在EPS等安全关键领域可靠应用的基础，值得优先投入“软投入”以降低落地风险和维护成本。
+   https://www.therobotreport.com/robotics-will-not-have-a-clean-llama-moment/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260611-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260611-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260611-pm.mp3" length="4074336" type="audio/mpeg"/>
+      <pubDate>Thu, 11 Jun 2026 09:43:11 +0000</pubDate>
     </item>
   </channel>
 </rss>
