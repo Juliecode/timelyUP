@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 11 Jun 2026 09:43:11 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 22:43:06 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -394,6 +394,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260611-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260611-pm.mp3" length="4074336" type="audio/mpeg"/>
       <pubDate>Thu, 11 Jun 2026 09:43:11 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技早报：AI赋能智能驾驶安全，奔驰量产轴向磁通电机，机器人具身智能突破</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能前沿、汽车智能化和机器人三大领域，从最新的科研进展到产业动态，为您精选出7条重磅资讯，并结合我们汽车EPS产品研发工程师的工作背景，深入分析这些技术对我们日常工作的影响和潜在应用价值。希望这些信息能为您带来新的启发和思考。
+
+1. Physics-informed generative AI for semiconductor manufacturing: Enforcing hard physical constraints in generative models by construction（来源：arXiv cs.LG）
+   应用分析：这项技术对我们EPS研发非常有用，且值得深入研究和投入。我们可以利用物理信息生成式AI来构建更精确、更鲁棒的电机模型，尤其是在参数不确定或故障情况下。例如，我们可以用它生成符合电机物理特性，比如电磁场分布、热力学、机械结构等的虚拟传感器数据，用于训练和验证无传感器控制算法，或者进行故障模式的模拟和诊断。这能显著提升模型精度和鲁棒性，加速故障诊断和预测性维护，还能优化控制策略，甚至降低我们MIL、SIL、HIL测试的成本。
+   https://arxiv.org/abs/2606.11247
+
+2. Seeing Before Colliding: Anticipatory Safe RL with Frozen Vision-Language Models（来源：arXiv cs.LG）
+   应用分析：这项技术在线控转向的演进方向上，具有极高的应用价值，投入价值也极高。在线控转向系统中，如果转向执行器EPS的控制策略能够结合车辆周围环境信息，比如通过摄像头、雷达等传感器，利用VLM或类似机制预测潜在的转向失灵风险，比如由于路面湿滑导致转向力矩不足或传感器故障，提前触发冗余系统或降级模式，这将极大提升功能安全等级。此外，它还能辅助助力策略，结合车辆感知数据和驾驶员意图，EPS可以预测驾驶员可能采取的紧急避障动作，并提前调整助力曲线，提供更及时、更符合安全需求的转向手感。
+   https://arxiv.org/abs/2606.11266
+
+3. Mercedes-Benz begins volume production of axial flux electric motor（来源：Charged EVs）
+   应用分析：这项技术对我们EPS电机选型和架构升级来说，是非常能用且投入价值高的重要方向。目前EPS多使用径向磁通永磁同步电机，而轴向磁通电机提供了一个全新的选择。其紧凑的轴向尺寸可能使EPS系统在布置上更加灵活，尤其对于R-EPS和未来的线控转向系统，可以实现更小巧、更集成化的转向执行单元。轴向磁通电机通常能提供更高的转矩密度和效率，这意味着在相同助力需求下，我们可以使用更小的电机，从而降低系统重量和能耗。我们还需要深入研究其NVH特性，以及随着量产规模扩大后的成本与可靠性，以评估其在EPS系统中的长期应用潜力。
+   https://chargedevs.com/newswire/mercedes-benz-begins-volume-production-of-axial-flux-electric-motor/
+
+4. JEDEC Publishes New SiC Evaluation and Reliability Guidelines（来源：Power Electronics News）
+   应用分析：这项资讯与我们EPS控制器功率级设计直接相关，是必须关注和采纳的行业标准，投入价值高。目前EPS功率级多采用IGBT或硅基MOSFET，但随着八百伏高压平台和更高效率的需求，碳化硅MOSFET将是必然趋势。JEDEC的指南直接影响我们对SiC器件的选型、验证和功能安全设计。它提供了统一的短路评估方法，对ISO 26262功能安全中对故障模式、诊断和降级策略的制定有直接指导意义。遵循这些指南，可以确保所选器件满足汽车级可靠性要求，降低潜在的早期故障风险，从而延长EPS系统的使用寿命。
+   https://www.powerelectronicsnews.com/jedec-publishes-new-sic-evaluation-and-reliability-guidelines/
+
+5. CBF-based Driving Assistance for Traffic Flow Stabilization（来源：arXiv eess.SY 控制系统）
+   应用分析：这项技术非常能用，CBF在汽车功能安全和线控转向控制中具有直接应用潜力，投入价值极高，是未来线控转向和L3及以上自动驾驶功能安全的基石之一。在线控转向系统中，EPS执行器必须在任何情况下保证转向的安全性。我们可以利用CBF来设计EPS的底层控制，确保转向动作在满足驾驶员意图的同时，不会超出车辆的物理极限或导致不安全状态。当整车级控制系统发出转向指令时，CBF可以作为一个安全过滤器，确保该指令在EPS执行时始终保持在安全边界内。此外，CBF还可以用于定义和强制执行助力策略的安全边界，结合AI和数据驱动方法，可以动态调整CBF的参数，使其更好地适应不同的路况、车速和驾驶员偏好。
+   https://arxiv.org/abs/2606.11883
+
+6. Embodied-R1.5: Evolving Physical Intelligence via Embodied Foundation Models（来源：arXiv cs.RO）
+   应用分析：这项技术对未来EPS系统向更高级智能控制演进，是非常能用且投入价值高的重要参考和技术储备方向。在线控转向系统中，方向盘与车轮之间不再有机械连接，EPS执行器需要更智能地理解驾驶员意图、车辆状态和环境信息，并生成合适的转向指令。Embodied-R1.5的具身认知和任务规划能力，可以为线控转向系统提供更高级的决策支持，例如在复杂路况下自主规划转向路径和力矩输出，实现更流畅、安全的转向。此外，具身模型的纠错能力，可以启发EPS系统在检测到自身故障或性能下降时，进行智能化的降级操作或尝试“自修复”，确保系统仍能提供基本助力。这与我们关注的机器人关节执行器控制技术高度相关，可以互相迁移。
+   https://arxiv.org/abs/2606.11324
+
+7. PLUME: Probabilistic Latent Unified World Modeling and Parameter Estimation for Multi-Finger Manipulation（来源：arXiv cs.RO）
+   应用分析：这项技术与EPS电机控制中参数辨识、无传感器控制、鲁棒性提升等核心问题高度相关，非常能用且投入价值高。EPS电机控制面临电机参数温漂、老化等问题。PLUME的参数估计能力可以启发我们开发更先进的在线参数辨识算法，实时更新FOC、无传感器控制等策略中的电机参数，从而显著提升控制的精度和鲁棒性，减少转矩脉动和抖动。对于无传感器控制，PLUME通过学习参数信念和系统动态，在缺乏直接测量的情况下处理不确定性，可以帮助我们构建更鲁棒的状态观测器，甚至在部分传感器失效时，通过对系统参数的概率性估计来维持基本功能，提升冗余性和功能安全。通过对电机和机械系统参数的持续估计和异常检测，PLUME的框架还能帮助我们更早地发现参数异常变化，从而预测潜在的硬件故障。
+   https://arxiv.org/abs/2606.11396</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260612-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260612-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260612-am.mp3" length="4011984" type="audio/mpeg"/>
+      <pubDate>Thu, 11 Jun 2026 22:43:06 +0000</pubDate>
     </item>
   </channel>
 </rss>
