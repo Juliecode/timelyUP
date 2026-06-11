@@ -13,21 +13,22 @@
 
 订阅地址：`https://juliecode.github.io/timelyUP/feed.xml` · 站点：`https://juliecode.github.io/timelyUP/`
 
-## 🔜 下一步：交互式「对话追问」功能（待开发）
+## 🚧 交互式「对话追问」功能（代码已完成，待部署）
 
-目标：**对手机说/打一个话题 → AI 实时讲解（文字+语音）→ 可在对话里继续追问**，带上下文、结合（可选）EPS 背景。
+目标：**对手机说/打一个话题 → AI 实时讲解（文字+语音）→ 可在对话里继续追问**，带上下文、结合 EPS 背景。
 
-已定方向（2026-06）：
-- **形态：Telegram 机器人**。发文字/语音消息 → Gemini（复用现有 key + profile）讲解 → 回文字 + edge-tts 语音 → 多轮对话天然带上下文。
-- **托管：免费云主机**（Railway / Render / Fly 免费档，7×24，不依赖本地电脑）。
-- 复用现有 `src/` 里的 Gemini 调用、profile 读取、edge-tts。
+已实现（2026-06-11）：
+- **`src/bot.py`**：Telegram webhook 机器人（FastAPI）。文字/语音提问（语音直接喂 Gemini 多模态转写+回答）→ 回文字 + edge-tts 语音；多轮上下文（每会话留 24 条，`/reset` 清空）；`/voice` 开关语音回复；`ALLOWED_CHAT_IDS` 白名单防陌生人烧 key（留空时只回显 chat_id 供配置）。
+- **`render.yaml`**：Render 免费 Web 服务一键蓝图（`requirements-bot.txt` 装依赖）。
+- **`tools/setup_telegram.py`**：一键注册 webhook + 在 cron-job.org 建每 10 分钟保活任务（防 Render 免费档休眠，实现免费 7×24）。
 
-> 关键认知：现有「Actions 定时 + 静态 Pages」是**单向批量**，做不了交互。交互功能需要**常驻/serverless 后端**持有 key 并维持对话状态——这是新增的一层，不影响现有播客。
+### 部署步骤（一次性，约 10 分钟）
+1. Telegram 里找 @BotFather `/newbot` 拿 token。
+2. render.com 用 GitHub 登录 → New → Blueprint → 选本仓库 → 填 TELEGRAM_BOT_TOKEN / GEMINI_API_KEY / WORK_PROFILE → 部署，记下服务地址。
+3. 把 token、服务地址填进 `.secrets.local.json`（telegram_bot_token / bot_url），跑 `python tools/setup_telegram.py`。
+4. 给机器人发条消息 → 它回 chat_id → 填进 Render 环境变量 ALLOWED_CHAT_IDS → 完成。
 
-### 重启开发时的第一步
-1. 选定并注册一个免费云主机 + 申请 Telegram BotFather token。
-2. 在 `src/` 下新建 bot 服务（webhook 或 long-polling），接消息 → 调 Gemini → 回复（文字/语音）。
-3. 复用 `config.load_config()` 的 profile 与 key 读取；语音用 `tts.synthesize` 或直接 edge-tts。
+> 关键认知：现有「Actions 定时 + 静态 Pages」是**单向批量**，做不了交互。交互功能是**常驻后端**这一新增层，不影响现有播客。
 
 ## 配置速查
 - 内容源/音色/数量/时长：`config.yaml`

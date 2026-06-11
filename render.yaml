@@ -1,0 +1,22 @@
+# Render 一键蓝图：交互机器人（Telegram webhook 模式）
+# 部署：render.com → New → Blueprint → 选本仓库 → 按提示填环境变量
+services:
+  - type: web
+    name: timelyup-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements-bot.txt
+    startCommand: uvicorn src.bot:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false          # BotFather 发的 token，创建时在面板里填
+      - key: GEMINI_API_KEY
+        sync: false          # 与播客同一个 AIzaSy 开头的持久 key
+      - key: WORK_PROFILE
+        sync: false          # 真实工作背景（同 GitHub Secret 内容）
+      - key: ALLOWED_CHAT_IDS
+        value: ""            # 先留空；给机器人发条消息拿到 chat_id 后回来填
+      - key: GEMINI_MODEL
+        value: ""            # 留空用 config.yaml 默认（gemini-2.5-flash）
