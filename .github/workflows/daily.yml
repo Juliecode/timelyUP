@@ -10,7 +10,19 @@ on:
     - cron: "33 8 * * *"    # UTC 08:33 = 北京 16:33（晚报第一拍，延迟 1.5h 落在 ~18:00）
     - cron: "23 9 * * *"    # UTC 09:23 = 北京 17:23（晚报兜底1）
     - cron: "13 10 * * *"   # UTC 10:13 = 北京 18:13（晚报兜底2）
-  workflow_dispatch: {}   # 也支持在 Actions 页面手动触发
+  # 方案 B：cron-job.org 在北京 06:40/17:40 定点调本 API（tools/setup_cronjob.py 一键配置），
+  # 上面的 schedule 三拍降级为兜底。判重保证两路只出一集。
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "强制时段（auto=按北京时间自动判断）"
+        type: choice
+        options: [auto, am, pm]
+        default: auto
+      force:
+        description: "当天该时段已生成也强制重新生成（手动重生成时勾选）"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -43,8 +55,14 @@ jobs:
             *) echo "FORCE_SLOT=pm" >> "$GITHUB_ENV" ;;
           esac
 
+      - name: Pin slot from dispatch input
+        if: github.event_name == 'workflow_dispatch' && inputs.slot != 'auto'
+        run: echo "FORCE_SLOT=${{ inputs.slot }}" >> "$GITHUB_ENV"
+
       - name: Generate episode
         env:
+          # schedule 与未勾选 force 的 dispatch 都判重；勾选 force 强制重生成
+          DEDUP: ${{ (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.force != true)) && '1' || '' }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
           PAGES_BASE_URL: ${{ vars.PAGES_BASE_URL }}

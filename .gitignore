@@ -7,3 +7,6 @@ venv/
 
 # 真实工作背景（私有，不公开到仓库）
 profile.local.md
+
+# 方案 B 本地凭据（PAT / cron-job.org API key，绝不入库）
+.secrets.local.json

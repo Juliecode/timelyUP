@@ -35,9 +35,9 @@ def main() -> None:
     slot_label = "晨报" if slot == "am" else "晚报"
     date_str = now_bj.strftime("%Y-%m-%d")
 
-    # 兜底 cron 判重：定时触发时，若当天该时段已生成就跳过，避免重复出集、浪费 AI 调用。
-    # 手动触发(workflow_dispatch)或本地运行不判重，方便强制重生成。
-    if os.environ.get("GITHUB_EVENT_NAME") == "schedule" and episode_exists(date_str, slot):
+    # 判重：当天该时段已生成就跳过，避免兜底 cron 与外部定时(workflow_dispatch)重复出集。
+    # workflow 对 schedule 及未勾选 force 的 dispatch 设 DEDUP=1；本地运行不设，方便调试重生成。
+    if os.environ.get("DEDUP") == "1" and episode_exists(date_str, slot):
         print(f"\n[跳过] 今天的{slot_label}（{date_str}-{slot}）已生成，兜底 cron 无需重复。")
         return
 
