@@ -1,11 +1,15 @@
 name: Daily Briefing
 
+# GitHub 免费版 schedule 实测常态延迟 1~3 小时（见 06-09~06-11 触发记录），
+# 故第一拍刻意提前、三拍间隔 50 分钟拉开，避开整点（整点队列最挤）。判重保证只出一集。
 on:
   schedule:
-    - cron: "0 23 * * *"    # UTC 23:00 = 北京 07:00（晨报，通勤前）
-    - cron: "30 23 * * *"   # UTC 23:30 = 北京 07:30（晨报兜底，已生成则自动跳过）
-    - cron: "0 10 * * *"    # UTC 10:00 = 北京 18:00（晚报，下班前）
-    - cron: "30 10 * * *"   # UTC 10:30 = 北京 18:30（晚报兜底，已生成则自动跳过）
+    - cron: "33 21 * * *"   # UTC 21:33 = 北京 05:33（晨报第一拍，延迟 1.5h 落在 ~07:00）
+    - cron: "23 22 * * *"   # UTC 22:23 = 北京 06:23（晨报兜底1）
+    - cron: "13 23 * * *"   # UTC 23:13 = 北京 07:13（晨报兜底2）
+    - cron: "33 8 * * *"    # UTC 08:33 = 北京 16:33（晚报第一拍，延迟 1.5h 落在 ~18:00）
+    - cron: "23 9 * * *"    # UTC 09:23 = 北京 17:23（晚报兜底1）
+    - cron: "13 10 * * *"   # UTC 10:13 = 北京 18:13（晚报兜底2）
   workflow_dispatch: {}   # 也支持在 Actions 页面手动触发
 
 permissions:
@@ -28,6 +32,16 @@ jobs:
 
       - name: Install deps
         run: pip install -r requirements.txt
+
+      # 定时触发时按「是哪条 cron」锁定早/晚报，而不是按实际触发时刻的小时数判断——
+      # 否则晨报兜底若被 GitHub 拖过北京 12 点，会被误判成晚报提前生成，把真晚报判重挤掉。
+      - name: Pin slot by triggering cron
+        if: github.event_name == 'schedule'
+        run: |
+          case "${{ github.event.schedule }}" in
+            "33 21 * * *"|"23 22 * * *"|"13 23 * * *") echo "FORCE_SLOT=am" >> "$GITHUB_ENV" ;;
+            *) echo "FORCE_SLOT=pm" >> "$GITHUB_ENV" ;;
+          esac
 
       - name: Generate episode
         env:
