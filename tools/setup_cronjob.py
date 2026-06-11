@@ -21,6 +21,13 @@ import urllib.request
 import urllib.error
 from pathlib import Path
 
+# Windows 控制台默认 GBK，强制 UTF-8 输出
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8")
+    except Exception:  # noqa: BLE001
+        pass
+
 REPO = "Juliecode/timelyUP"
 WORKFLOW = "daily.yml"
 CRONJOB_API = "https://api.cron-job.org"
@@ -37,7 +44,7 @@ def _http(method: str, url: str, headers: dict, body: dict | None = None) -> tup
     data = json.dumps(body).encode() if body is not None else None
     req = urllib.request.Request(url, data=data, method=method, headers=headers)
     try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
+        with urllib.request.urlopen(req, timeout=90) as resp:
             raw = resp.read().decode()
             return resp.status, (json.loads(raw) if raw.strip().startswith("{") else raw)
     except urllib.error.HTTPError as e:
