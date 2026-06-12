@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 12 Jun 2026 09:42:37 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 21:57:56 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -466,6 +466,26 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260612-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260612-pm.mp3" length="3577824" type="audio/mpeg"/>
       <pubDate>Fri, 12 Jun 2026 09:42:37 +0000</pubDate>
+    </item>
+    <item>
+      <title>专题 · 深入浅出：探秘“Harness”在技术中的应用</title>
+      <description>本期专题：讲解下harness的应用
+
+1. 技术领域的Harness是一种控制性、辅助性的环境或框架，用于为特定组件提供受控的运行舞台。（来源：专题讲解）
+
+2. 其核心原理是隔离目标组件，通过驱动器、桩、模拟对象和适配器，模拟外部依赖，提供输入并验证输出。（来源：专题讲解）
+
+3. Harness是各种软件测试（如单元测试、集成测试、系统测试）的基石，确保代码和系统功能的正确性。（来源：专题讲解）
+
+4. 它能显著加速开发和调试过程，支持并行开发，并高效复现和解决问题。（来源：专题讲解）
+
+5. 在系统集成与现代化改造中，Harness可作为桥梁或适配层，促进新老系统的平滑过渡。（来源：专题讲解）
+
+6. Harness在航空、工业控制等高风险领域用于复杂系统的仿真与训练，降低成本和风险。（来源：专题讲解）</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260613-topic-055736.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260613-topic-055736.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260613-topic-055736.mp3" length="1682064" type="audio/mpeg"/>
+      <pubDate>Fri, 12 Jun 2026 21:57:56 +0000</pubDate>
     </item>
   </channel>
 </rss>
