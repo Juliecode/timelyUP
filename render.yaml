@@ -1,17 +1,22 @@
-# Render 一键蓝图：交互机器人（Telegram webhook 模式）
+# Render 一键蓝图：交互机器人（飞书事件订阅模式）
 # 部署：render.com → New → Blueprint → 选本仓库 → 按提示填环境变量
+# （Telegram 版 src/bot.py 保留未启用；切回时把 startCommand 改为 src.bot:app 并换环境变量）
 services:
   - type: web
     name: timelyup-bot
     runtime: python
     plan: free
     buildCommand: pip install -r requirements-bot.txt
-    startCommand: uvicorn src.bot:app --host 0.0.0.0 --port $PORT
+    startCommand: uvicorn src.feishu_bot:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
         value: "3.11.9"
-      - key: TELEGRAM_BOT_TOKEN
-        sync: false          # BotFather 发的 token，创建时在面板里填
+      - key: FEISHU_APP_ID
+        sync: false          # 飞书开发者后台 → 凭证与基础信息 → App ID
+      - key: FEISHU_APP_SECRET
+        sync: false          # 同上 → App Secret
+      - key: FEISHU_VERIFICATION_TOKEN
+        sync: false          # 事件订阅页 → Verification Token（Encrypt Key 留空不启用）
       - key: GEMINI_API_KEY
         sync: false          # 与播客同一个 AIzaSy 开头的持久 key
       - key: WORK_PROFILE
