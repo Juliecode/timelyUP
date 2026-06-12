@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 11 Jun 2026 22:43:06 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 09:42:37 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -430,6 +430,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260612-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260612-am.mp3" length="4011984" type="audio/mpeg"/>
       <pubDate>Thu, 11 Jun 2026 22:43:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI赋能转向，智驾安全前瞻：研发工程师早报</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最值得关注的重磅资讯。从AI如何提升自动驾驶的预判安全性，到大型语言模型如何重塑控制系统，再到电动汽车核心部件的最新技术进展，以及机器人领域对我们EPS电机控制的启发，内容非常丰富。希望今天的早报能为您一天的工作带来新的思考和灵感。
+
+1. Seeing Before Colliding: Anticipatory Safe RL with Frozen Vision-Language Models（来源：arXiv cs.LG）
+   应用分析：这项研究对我们EPS工程师来说非常重要，尤其是在线控转向（Steer-by-Wire, SBW）系统的安全设计上。我们可以考虑将VLM-Safe-RL的理念引入车辆的路径规划和避障决策层。比如，训练一个VLM来实时分析复杂的路况信息，像识别前方施工区域、突然出现的行人，并预测这些情况对车辆轨迹的潜在影响。这些预测可以转化为EPS控制器的高级安全约束，动态调整助力策略或在紧急情况下触发更保守的转向干预。这有助于提升SBW系统的整体功能安全等级和用户信任度。投入预研是非常值得的，这能帮助我们了解如何将AI的前瞻性安全能力融入到EPS控制链中，与上层决策团队协同，共同提升系统鲁棒性。
+   https://arxiv.org/abs/2606.11266
+
+2. Agentic MPC for Semantic Control System Resynthesis（来源：arXiv eess.SY 控制系统）
+   应用分析：这项技术在EPS系统中具有巨大潜力，尤其是在手感调校和助力策略的个性化、自适应方面。设想一下，驾驶员可以通过自然语言指令表达“今天我想转向更轻柔一些”或者“高速行驶时希望转向更稳重”，LLM代理可以解析这些语义，并将其转化为MPC的动态约束或目标函数调整，实时优化转向比、阻尼感和回正力矩等参数。对于未来的线控转向系统，这能实现高度个性化且安全可靠的转向体验。虽然实时性、鲁棒性和可解释性是挑战，但其带来的自适应控制能力是未来汽车智能化竞争力的核心。建议先从离线模拟或半实物仿真进行概念验证，逐步探索落地可能性，长期投入非常有价值。
+   https://arxiv.org/abs/2606.12774
+
+3. Physics-informed generative AI for semiconductor manufacturing: Enforcing hard physical constraints in generative models by construction（来源：arXiv cs.LG）
+   应用分析：这是未来将AI引入EPS控制算法设计和优化的重要指导原则。在开发FOC参数优化、转矩脉动抑制算法或无传感器控制状态观测器时，我们可以借鉴物理信息生成式AI的理念。这意味着在构建AI模型时，不仅要考虑数据驱动的优化，更要将电机的电气方程、机械约束、电流电压限制等硬性物理约束作为先验知识或硬约束嵌入到AI模型的架构或训练过程中。例如，在生成新的控制参数组合时，确保它们不会导致电机过载或系统失稳。这项投入非常值得，它能解决将AI引入安全攸关控制系统时人们对其“黑箱”特性和物理不一致性的担忧，从而加速AI控制算法的工程化落地。
+   https://arxiv.org/abs/2606.11247
+
+4. Mercedes-Benz begins volume production of axial flux electric motor（来源：Charged EVs）
+   应用分析：这项技术虽然主要用于电动汽车的驱动电机，但对我们EPS电机研发同样具有间接但重要的参考价值。目前EPS电机以径向磁通为主，但轴向磁通电机在功率密度、紧凑性、NVH和效率上的优势，可能会促使其未来在EPS领域得到应用，尤其是在线控转向（SBW）系统需要更小、更集成、更高性能的执行器时。我们可以深入研究轴向磁通电机的设计原理、制造工艺、控制特性（如FOC控制、转矩脉动抑制）与传统径向磁通电机的异同，了解其NVH特性和热管理挑战。这项投入值得进行预研和技术跟踪，为未来EPS电机选型和设计提供新的思路。
+   https://chargedevs.com/newswire/mercedes-benz-begins-volume-production-of-axial-flux-electric-motor/
+
+5. JEDEC Publishes New SiC Evaluation and Reliability Guidelines（来源：Power Electronics News）
+   应用分析：这些JEDEC指南对我们EPS控制器硬件设计和功能安全认证具有直接的指导意义。EPS控制器中的功率级（H桥）是电机驱动的核心，随着电压平台向800V演进，以及对效率、紧凑性的更高要求，SiC器件在EPS功率级中的应用将越来越普遍。我们必须依据这些指南，重新审视和优化SiC器件的可靠性测试方案、短路保护策略、热管理设计，并将其纳入ISO 26262功能安全分析（如FMEA、FTA）中，确保功率级在各种工况和故障模式下的安全性和鲁棒性。与供应商沟通SiC器件的质量和可靠性时，这些标准化的语言也至关重要。这项投入是必须的，它是功能安全和产品质量的基石。
+   https://www.powerelectronicsnews.com/jedec-publishes-new-sic-evaluation-and-reliability-guidelines/
+
+6. Stubborn: A Streamlined and Unified Reinforcement Learning Framework for Robust Motion Tracking and Fall Recovery for Humanoids（来源：arXiv cs.RO）
+   应用分析：这项研究对我们EPS电机控制，特别是线控转向的鲁棒控制，具有很强的借鉴意义。EPS电机控制，如FOC、无传感器控制和转矩脉动抑制，本质上也是一个高动态、非线性系统的运动跟踪问题。Stubborn框架中用于提升鲁棒性和在不稳定状态下探索的RL技术，可以直接迁移到EPS电机控制策略的优化中。例如，我们可以将EPS电机在极端工况（如高温、低摩擦、负载突变）下的转矩响应、NVH表现作为RL的奖励函数，利用类似Stubborn的统一RL框架来学习更鲁棒的控制参数或自适应控制律。在线控转向中，当系统面临传感器失效、执行器故障等不稳定状态时，RL的跌倒恢复能力可以转化为“降级运行”或“故障容错”策略。这项研究值得投入，作为AI/数据驱动方法改进电机控制策略性能与鲁棒性的重要方向。
+   https://arxiv.org/abs/2606.12814
+
+7. G-MAPP: GPU-accelerated Multi-Agent Planning and Perception for Reactive Motion Generation（来源：arXiv cs.RO）
+   应用分析：这项研究对线控转向系统至关重要，因为车辆的路径规划和运动控制需要极高的实时性和精度。G-MAPP的GPU加速理念可以直接应用到SBW的决策与控制层。我们可以考虑如何将车辆周边环境感知（如激光雷达、摄像头数据）的GPU加速处理集成到我们的系统中，快速构建高精度的局部环境模型，并利用GPU进行实时的多智能体行为预测和避障路径规划。EPS控制器将接收这些由GPU加速生成的实时路径指令和安全约束，并以极低的延迟执行。此外，在电机控制策略中，如模型预测控制（MPC），其计算量也可能受益于GPU加速。这项投入非常值得，实时计算能力是未来高级自动驾驶和线控转向的关键瓶颈之一，GPU加速是解决这一瓶颈的有效途径。我们需要了解并适应上层系统对实时性、数据吞吐量和接口的要求。
+   https://arxiv.org/abs/2606.12579</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260612-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260612-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260612-pm.mp3" length="3577824" type="audio/mpeg"/>
+      <pubDate>Fri, 12 Jun 2026 09:42:37 +0000</pubDate>
     </item>
   </channel>
 </rss>
