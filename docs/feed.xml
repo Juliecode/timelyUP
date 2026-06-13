@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 12 Jun 2026 22:42:58 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 09:42:28 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -522,6 +522,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260613-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260613-am.mp3" length="4072464" type="audio/mpeg"/>
       <pubDate>Fri, 12 Jun 2026 22:42:58 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI赋能工程设计，无稀土电机与线控转向新机遇</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。从AI如何成为您的“通用工程师”，到无稀土电机的突破，再到线控转向和机器人执行器的最新进展，每一条都可能深刻影响您的研发工作。准备好了吗？让我们一起开启今天的科技之旅！
+
+1. Jeff Bezos’ AI startup aims to build an ‘artificial general engineer’（来源：The Verge）
+   应用分析：对我们EPS研发来说，这意味着AI能成为设计流程中的“共同创造者”。我们可以探索用AI优化EPS结构设计（如减重、散热、NVH）、电机磁路设计（提升转矩密度、降低转矩脉动），甚至自动生成部分功能安全文档。例如，让AI根据不同车辆平台自动生成电机参数和绕组方案。长期来看，这是颠覆性趋势，能将模型化设计推向新高度。短期可从AI辅助参数寻优开始投入。
+   https://www.theverge.com/ai-artificial-intelligence/949005/jeff-bezos-prometheus-artificial-general-engineer
+
+2. Award-Winning Researcher Trains Robots to Make Educated Guesses（来源：IEEE Spectrum）
+   应用分析：对于EPS和线控转向，这种能力至关重要。在无传感器或冗余传感方案中，AI可基于现有信息“猜测”电机转子位置、车辆状态或驾驶员意图，维持助力或安全降级。这有助于提升系统鲁棒性和功能安全等级。例如，在极端工况下，AI能为无传感器FOC控制提供更智能的辅助决策。这是提升EPS智能性、鲁棒性及降低传感器成本的潜在方向，值得深入研究，可从MPC结合机器学习构建不确定性状态观测器入手。
+   https://spectrum.ieee.org/researcher-trains-robots-to-guess
+
+3. Electric motors with no rare earths（来源：Hacker News）
+   应用分析：这对EPS的电机选型和控制策略是直接影响。稀土成本和供应风险促使我们寻找替代方案。无稀土电机（如同步磁阻电机）若能达到PMSM性能，将极具吸引力。我们需要提前研究其特性、控制难度，以及对FOC矢量控制、弱磁控制和转矩脉动抑制的挑战。例如，同步磁阻电机的转矩脉动可能更复杂，需先进纹波抑制策略。这是未来EPS电机发展的重要趋势，关系到成本竞争力，必须投入预研。
+   https://www.renaultgroup.com/en/magazine/energy-and-powertrains/all-about-electric-motors-with-no-rare-earths/
+
+4. PEAK Goes Automotive Ethernet: PAE-Media Converter connects 100/1000BASE-T1 with Standard Ethernet（来源：EE Times）
+   应用分析：对于线控转向的功能安全设计，这是不可或缺的基础设施。线控转向需要极高带宽和实时性，汽车以太网是必然选择。这款转换器及其故障模拟功能，能让咱们在HIL和台架测试中，真实模拟网络故障，验证EPS的故障诊断与降级策略，确保ISO 26262功能安全达标。这对于设计冗余通信链路至关重要。这是线控转向研发的必备工具，必须投入，并研究其在EPS系统中的应用。
+   https://www.eetimes.com/peak-goes-automotive-ethernet-pae-media-converter-connects-100-1000base-t1-with-standard-ethernet/
+
+5. Robotics Summit panel explores the state of humanoid robot design（来源：The Robot Report）
+   应用分析：人形机器人关节执行器技术与EPS电机控制高度同源，可互相迁移。为实现低成本高性能，人形机器人对伺服电机、减速器和集成控制提出了极高要求。我们可以借鉴其在电机选型、FOC矢量控制优化（更低转矩脉动、更高动态响应）、无传感器控制鲁棒性提升、以及高集成度设计方面的经验。这能启发我们优化EPS助力手感、路感还原和NVH表现。这是机器人执行器控制的前沿，其技术突破直接赋能EPS，非常值得投入关注和合作。
+   https://www.therobotreport.com/robotics-summit-panel-explores-state-humanoid-robot-design/
+
+6. SOLiTHOR’s solid-state electrolyte hits 465 Wh/kg at stack level, passes nail penetration test（来源：Charged EVs）
+   应用分析：虽然不直接影响EPS控制，但固态电池普及将深刻影响整车EE架构和EPS运行环境。更高能量密度意味着更轻电池包和更长续航，可能改变整车重量分布、底盘设计和动力学特性，进而影响EPS助力策略和手感调校。高安全性也可能简化热管理系统。我们需要了解其特性，以便整车协同优化。若未来线控转向需自带小容量冗余电源，高性能小型固态电池也是备选。我们应保持密切关注。
+   https://chargedevs.com/newswire/solithors-solid-state-electrolyte-hits-465-wh-kg-at-stack-level-passes-nail-penetration-test/
+
+7. Ukraine's one-time test used fully autonomous drones to kill Russian soldiers（来源：Ars Technica）
+   应用分析：尽管背景是军事，但“完全自主”和“AI模块”在机器人和无人机上的应用，对于探索线控转向的自主控制、冗余安全以及AI在故障诊断和预测性维护中的应用，提供了宝贵参考。AI在极端条件下的鲁棒性控制、传感器融合、执行器控制已达高水平。我们可以借鉴其经验，提升EPS的智能故障诊断（如识别电机异响）、预测性维护，并为L3+自动驾驶车辆中的线控转向提供高级自主安全接管策略。AI模块的轻量化和嵌入式部署也是关注点。值得研究其AI控制框架和鲁棒性设计理念。
+   https://arstechnica.com/ai/2026/06/ukraines-one-time-test-used-fully-autonomous-drones-to-kill-russian-soldiers/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260613-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260613-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260613-pm.mp3" length="2624112" type="audio/mpeg"/>
+      <pubDate>Sat, 13 Jun 2026 09:42:28 +0000</pubDate>
     </item>
   </channel>
 </rss>
