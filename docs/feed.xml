@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 13 Jun 2026 22:42:25 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 09:42:06 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -594,6 +594,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260614-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260614-am.mp3" length="3906000" type="audio/mpeg"/>
       <pubDate>Sat, 13 Jun 2026 22:42:25 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI监管趋严，机器人边缘AI赋能，新能源重卡驶入快车道</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天咱们的资讯非常精彩，涵盖了人工智能的前沿动态、汽车智能化的最新趋势，以及机器人领域的进展。特别值得关注的是，人工智能在快速发展的同时，其伦理、安全和监管问题也日益凸显，这对于我们这些身处技术一线的研发人员来说，提供了很多值得深思和借鉴的案例。
+
+1. Amazon CEO's talks with U.S. officials triggered crackdown on Anthropic models（来源：Hacker News）
+   应用分析：警示我们在EPS控制中使用AI时，需高度关注模型安全性、数据来源合规性，以及潜在的政策风险。对于关键功能如故障诊断、预测性维护，若引入外部AI模型，必须进行严格的安全评估和本土化部署，以避免外部政策或技术中断造成的影响。
+   https://www.wsj.com/tech/ai/amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578?st=Yct6gx&amp;reflink=desktopwebshare_permalink
+
+2. KPMG pulls report on AI usage due to apparent hallucinations（来源：TechCrunch）
+   应用分析：这提醒我们，在将AI（如神经网络、强化学习）应用于EPS电机控制策略或自动标定时，必须建立完善的验证、确认与冗余机制。不能盲目信任AI输出，需要结合物理模型、专家知识进行交叉验证，尤其在功能安全（ISO 26262）要求下，幻觉是不可接受的。
+   https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/
+
+3. Police officer investigated for using AI to 'create evidence' in multiple cases（来源：Hacker News）
+   应用分析：在EPS故障诊断或预测性维护中，如果引入AI辅助，其输出必须被视为“建议”而非“证据”。任何基于AI的诊断或决策，都必须有明确的人工复核流程和可追溯的原始数据支撑，以避免AI产生“幻觉证据”而导致误判或责任问题。
+   https://news.sky.com/story/derbyshire-police-officer-investigated-for-using-ai-to-create-evidence-in-multiple-cases-13553661
+
+4. OpenAI faces investigation from state attorneys general（来源：TechCrunch）
+   应用分析：这意味着我们在EPS数据驱动的优化和诊断方案中，如果涉及用户行为数据或车辆运行数据，必须高度重视数据隐私和合规性。尤其是在跨国合作或数据出海时，需要提前研究并遵守各国的数据保护法规，确保数据采集、存储和使用的透明与合法。
+   https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-attorneys-general/
+
+5. Windows for robots: Edge AI expands usability（来源：The Robot Report）
+   应用分析：边缘AI为EPS系统提供了新的思路。我们可以考虑将部分复杂的电机控制算法、状态观测器或故障诊断模型部署到EPS的边缘控制器上，实现实时、低延迟的智能决策。这有助于提升控制策略的性能与鲁棒性，同时降低对云端依赖，提升系统独立性和安全性。值得投入研究，评估现有MCU/MPU的算力是否能支持，以及如何将MATLAB/Simulink模型高效部署到边缘设备。
+   https://www.therobotreport.com/computers-software-windows-utility-robots/
+
+6. China targets 40% penetration for new-energy heavy trucks by 2030（来源：CnEVPost）
+   应用分析：重卡对助力转向系统的要求更高，需要更大的转矩输出和更强的鲁棒性。这意味着DP-EPS或R-EPS等大功率EPS系统将迎来新的市场机遇。我们应提前布局重卡EPS解决方案，重点关注大功率电机选型、高动态响应的控制策略、以及满足商用车严苛环境的可靠性与功能安全设计。
+   https://cnevpost.com/2026/06/13/china-targets-40-penetration-new-energy-heavy-trucks-2030/
+
+7. Honda Civics and the Evil Valet（来源：Hacker News）
+   应用分析：虽然EPS是安全关键系统，与信息娱乐系统物理隔离，但此案例提醒我们，线控转向（Steer-by-Wire）等未来架构中，软件定义汽车的趋势将使得整车网络安全变得极其重要。我们需要从系统架构层面考虑EPS与整车网络的隔离、加密通信、安全启动等机制，防范潜在的网络攻击，确保EPS系统在任何情况下都能安全运行。对ISO 21434（汽车网络安全）的关注也应提升。
+   https://juniperspring.org/posts/honda-evil-valet/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260614-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260614-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260614-pm.mp3" length="2375856" type="audio/mpeg"/>
+      <pubDate>Sun, 14 Jun 2026 09:42:06 +0000</pubDate>
     </item>
   </channel>
 </rss>
