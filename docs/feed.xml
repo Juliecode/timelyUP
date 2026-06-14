@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 14 Jun 2026 09:42:06 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 22:43:05 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -630,6 +630,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260614-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260614-pm.mp3" length="2375856" type="audio/mpeg"/>
       <pubDate>Sun, 14 Jun 2026 09:42:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技早报：AI幻觉与安全警示，固态电池新进展，机器人与汽车控制的交汇点</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化以及机器人技术这三大热点方向。AI的可靠性与安全性再次成为焦点，KPMG因AI幻觉撤回报告，亚马逊也因AI模型漏洞引发了监管关注。同时，固态电池的最新进展，以及工业机器人与我们汽车EPS电机控制技术的深度关联，都将是今天值得深入探讨的话题。让我们一起看看这些资讯如何影响我们的研发工作。
+
+1. KPMG pulls report on AI usage due to apparent hallucinations（来源：TechCrunch）
+   应用分析：现阶段，像GPT这类生成式AI模型直接用于EPS的实时控制或故障诊断决策，风险极高，几乎不可接受。其“幻觉”特性会导致不可预测的错误输出，严重威胁行车安全。因此，对于直接影响功能安全的场景，目前不值得投入将这类AI作为核心决策单元。但我们可以投入研究AI的鲁棒性评估、可解释性AI，以及如何建立AI输出的信任度验证机制，为未来可能更可靠的AI技术做准备。
+   https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/
+
+2. Amazon security research reportedly led to the White House’s Anthropic Fable ban（来源：The Verge）
+   应用分析：这种存在安全风险的AI模型，在汽车关键系统中的直接应用，面临巨大的安全挑战和ISO 26262合规性障碍。因此，如果未来要引入，必须建立一套涵盖AI模型全生命周期的安全评估与漏洞管理体系。值得投入研究AI模型的安全漏洞分析、对抗性攻击与防御，以及如何将AI模型的安全评估融入到ISO 26262功能安全流程中。这对于线控转向等未来架构的AI应用至关重要。
+   https://www.theverge.com/ai-artificial-intelligence/949601/amazon-anthropic-fablemythos-government-ban
+
+3. AI is code – and can't be prompted into being smarter（来源：Hacker News）
+   应用分析：这个观点有助于我们务实看待AI在EPS中的应用。如果希望AI辅助提升电机控制性能，就需要提供高质量的电机数据、定义清晰的优化目标，并设计合适的神经网络结构或强化学习环境。值得投入研究将AI作为现有控制策略的辅助或优化工具，例如利用神经网络作为非线性观测器提升无传感器控制精度。但核心仍在于深入理解AI工作原理，结合电机控制的物理模型。
+   https://www.theregister.com/ai-and-ml/2026/06/14/ai-is-code-and-cant-be-prompted-into-being-smarter/5254141
+
+4. Solid-state batteries still aren’t ready, but gels are（来源：The Verge）
+   应用分析：电池技术进展会深刻影响我们对EPS系统电源设计、功耗管理和热管理策略的考量。如果凝胶态电池能提供更高的能量密度和更快的充放电能力，可能意味着我们EPS的功率级设计可以更紧凑，或在极端工况下获得更稳定的瞬时大电流支持。因此，值得投入关注。理解电池技术路线图，能帮助我们更好地设计与电池系统匹配的EPS产品，例如优化电源管理模块、提升系统效率，或为未来的高压平台做准备。
+   https://www.theverge.com/column/948594/solid-state-batteries-semi-solid-state
+
+5. Modernizing the global economy with industrial robotics is needed but not inevitable（来源：The Robot Report）
+   应用分析：工业机器人执行器在电机选型、FOC控制，以及高精度位置和力矩控制方面的技术，可以直接借鉴到EPS，尤其是未来线控转向的执行器设计。例如，其在转矩脉动抑制、温漂补偿，以及无传感器控制方面的先进算法，可能对提升我们EPS的性能和手感有很大帮助。因此，非常值得投入！机器人执行器控制是我们的核心交叉点之一。通过跟踪机器人领域的前沿进展，我们可以为EPS，尤其是线控转向的电机控制和系统设计，找到创新的解决方案。
+   https://www.therobotreport.com/modernizing-global-economy-industrial-robotics-needed-not-inevitable/
+
+6. I indexed 669 GB of my GoPro videos using my M1 Max computer and local ML models（来源：Hacker News）
+   应用分析：这种本地机器学习处理大规模数据的思路，可以完美迁移到EPS的故障诊断和预测性维护中。我们可以建立本地机器学习模型，对EPS运行数据进行实时分析，精准识别异常模式，并预测潜在故障。这能大大减少对云端数据传输和计算的依赖，显著提升响应速度和数据隐私性。因此，非常值得投入研究！它能提升系统的自主性和实时性，降低通信和云计算成本，同时满足数据安全和隐私要求。这与我们现在最想解决的目标高度契合。
+   https://iliashaddad.com/blog/i-indexed-669-gb-of-my-gopro-videos-using-my-m1-max-computer
+
+7. Not everyone is using AI for everything（来源：Hacker News）
+   应用分析：这种思维方式提醒我们在考虑将AI引入EPS时，要首先问：AI能真正解决我们EPS的哪些痛点？AI带来的收益是否大于风险和成本？对于已经有成熟、高可靠性传统解决方案的问题，不应轻易被AI取代；而对于传统方法难以解决的问题，AI才更有可能发挥其独特的价值。因此，非常值得投入这种批判性思维。在技术选型和研发投入上，我们要以解决实际工程问题为导向，将有限资源投入到AI能真正发挥优势且风险可控的领域。
+   https://gabrielweinberg.com/p/people-are-consuming-ai-like-they</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260615-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260615-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260615-am.mp3" length="3212640" type="audio/mpeg"/>
+      <pubDate>Sun, 14 Jun 2026 22:43:05 +0000</pubDate>
     </item>
   </channel>
 </rss>
