@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 15 Jun 2026 16:08:32 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2026 22:43:53 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -738,6 +738,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260616-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260616-pm.mp3" length="4676832" type="audio/mpeg"/>
       <pubDate>Mon, 15 Jun 2026 16:08:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI智能体突破，SiC器件升级，物理约束赋能机器人：今日科技早报</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，看看有哪些值得我们关注的突破和进展。从AI在嵌入式控制中的自适应能力，到汽车功率器件的革新，再到机器人如何更好地理解物理世界，每一条都可能为我们的日常研发工作带来新的灵感和方向。
+
+1. TetraRL: A Self-Adaptive Runtime for On-Device Deep Reinforcement Learning Systems（来源：arXiv eess.SY 控制系统）
+   应用分析：在EPS电机控制策略开发中，我们可以探索将部分高级控制，比如复杂的助力曲线自适应、NVH抑制参数自整定，通过轻量化深度强化学习模型来实现。TetraRL的自适应运行时能帮助我们在MCU有限的算力和内存下，动态调整深度强化学习模型的推理频率和复杂度，确保实时响应的同时，优化助力手感和能耗。例如，在不同驾驶模式或路况下，系统可以自适应调整深度强化学习策略的执行强度，既保证驾驶体验，又控制功耗。这比传统的模型预测控制，也就是MPC，或基于规则的自适应方法更灵活，也能降低我们手动标定的工作量。我认为，这项技术值得我们投入研究其在车规级MCU上的部署可行性，以及功能安全认证路径。
+   https://arxiv.org/abs/2606.13891
+
+2. D2H-AD: A Hybrid Model Utilizing Hyperdimensional Computing for Advanced Anomaly Detection（来源：arXiv cs.LG）
+   应用分析：EPS系统需要对电机、传感器（转矩、位置、电流）和控制器自身的各种异常进行实时诊断。D2H-AD可以用于：电机故障诊断，监测电机电流、电压、转速等高维运行数据，通过超维度计算构建正常运行模式的“指纹”，当出现转矩脉动异常、绕组短路、轴承磨损等早期迹象时，即使没有明确的故障样本，也能快速识别出与正常模式的偏差。传感器漂移或失效检测，对转向角传感器、转矩传感器等信号进行实时分析，识别细微的漂移或异常抖动，避免误判。预测性维护，早期发现潜在硬件老化或性能下降，及时预警，从被动故障处理转向主动预测性维护，提升系统可靠性。这项技术有望降低对大量故障样本的需求，加速故障诊断算法的开发和部署，尤其是在线控转向这种对安全冗余要求极高的系统中。值得进行概念验证性研究。
+   https://arxiv.org/abs/2606.13754
+
+3. When Sample Selection Bias Precipitates Model Collapse（来源：arXiv cs.AI）
+   应用分析：在我们使用AI方法改进EPS控制和标定效率时，例如利用强化学习进行助力曲线自动调校，或者使用神经网络观测器进行无传感器控制时，我们通常会先在仿真环境中生成大量数据进行预训练。这项研究提醒我们：首先，要确保仿真数据足够多样，尤其要覆盖各种极端工况和长尾事件，避免模型在“舒适区”过拟合。其次，要设计更鲁棒的验证机制，不仅仅依赖于平均性能，更要关注模型在边界条件和异常情况下的表现。最后，在将仿真训练的模型部署到实车前，务必使用少量高质量的真实数据进行校准和微调，以弥补仿真与现实的“域鸿沟”，并防止模型崩溃。这篇研究为我们使用AI方法提供了一个重要的警示，强调了数据质量和验证策略的重要性，是AI落地工程中必须高度关注的风险点。
+   https://arxiv.org/abs/2606.13732
+
+4. Multi-Agent Embodied Autonomous Driving: From V2X Information Exchange to Shared World Models（来源：arXiv cs.RO）
+   应用分析：在线控转向系统向 Steer-by-Wire 演进的过程中，车辆不仅需要感知自身状态，还需要与周围车辆、基础设施进行信息交互。共享世界模型（SWMs）的理念可以应用到：冗余与功能安全方面，SWMs可以作为一种高级冗余层。例如，当主转向系统出现故障时，通过SWMs获取的周边环境信息，比如其他车辆的转向意图、道路障碍物等，结合车辆自身其他传感器的信息，可以辅助决策降级策略，甚至实现有限的远程接管或协同避障。在助力手感调校的智能化方面，SWMs可以提供更丰富的环境上下文信息，例如前方道路曲率、相邻车道车辆动态等，从而实现更精细、更具预见性的助力策略调校，提升驾驶员在复杂交通流中的手感和信心。在协同控制方面，在L4、L5级自动驾驶中，线控转向将与其他车辆协同，SWMs能提供统一的、实时的环境态势感知，支持车辆编队行驶、自动泊车等高级功能，确保转向指令的准确性和安全性。这是一个宏观的架构思考，需要长期投入，但对于定义线控转向的未来能力边界和系统集成方向至关重要。
+   https://arxiv.org/abs/2606.13840
+
+5. Wolfspeed Introduces Gen 5 SiC MOSFETs with Industry-Leading Low RDS(ON)（来源：Power Electronics News）
+   应用分析：作为EPS产品研发工程师，这直接关系到我们电机控制器的硬件选型和性能提升：采用低RDS(ON)的SiC MOSFET能显著降低功率损耗，提高电机控制器的效率，减少热量产生。这对于紧凑型EPS系统，例如C-EPS、DP-EPS 至关重要，可以降低对散热系统的要求，或在现有散热条件下提升最大持续输出功率。更好的热性能意味着可以使用更小的散热器，从而减小控制器体积和重量，降低材料成本。此外，随着电动汽车向更高电压平台，例如八百伏发展，SiC MOSFET在高压应用中的优势更加明显，它能提供更好的耐压和开关性能。更高效的功率器件也为电机控制策略，比如高频开关、更精细的死区补偿，提供了更多操作空间，间接有助于NVH优化。这是我们硬件团队和控制策略团队都应密切关注的技术进展，值得在下一代EPS控制器开发中优先评估和导入。
+   https://www.powerelectronicsnews.com/wolfspeed-introduces-gen-5-sic-mosfets-with-industry-leading-low-rdson/
+
+6. PhysVLA: Towards Physically-Grounded VLA for Embodied Robotic Manipulation（来源：arXiv cs.RO）
+   应用分析：在EPS电机控制中，我们可以将PhysVLA的理念应用于：AI辅助电机控制的安全性。例如，在基于深度强化学习或神经网络的电机控制策略中，为了避免生成违反物理约束的电流指令，比如过大的电流、不稳定的开关波形，可以在AI模型的输出层引入物理约束检查和校正模块。在转矩脉动抑制与NVH优化方面，AI模型可能学习到一些非最优的控制参数或指令，导致转矩脉动增加。通过PhysVLA的思路，我们可以定义物理上可接受的转矩纹波范围、加速度限制等，并在AI输出不符合时进行实时调整，从而保证NVH性能。在线控转向的冗余与降级方面，如果AI决策出现异常，PhysVLA的物理约束层可以作为一道安全屏障，防止系统执行危险操作，确保车辆的物理稳定性。这提供了一个“黑盒”AI模型与“白盒”物理知识结合的实用工程方案，可以在不完全理解AI模型内部决策逻辑的情况下，通过外部物理约束来提高其在安全关键系统中的可靠性。值得深入研究其具体实现方式，并尝试在电机控制的仿真或半实物台架上进行概念验证。
+   https://arxiv.org/abs/2606.13886
+
+7. Scalable Dynamic Tactile Sensing Enabled by Passive and Flexible Acoustic Waveguides（来源：arXiv cs.RO）
+   应用分析：目前EPS的路感主要通过力矩传感器和车辆动力学模型来模拟。如果能将这种高分辨率、动态的触觉感知技术应用到方向盘表面，理论上可以更精细地感知驾驶员的手部压力分布、微小动作，甚至皮肤与方向盘的摩擦变化，从而提供更真实、更沉浸式的“路感”反馈，或实现个性化手感调校。这可能超越现有助力曲线和阻尼补偿的范畴。在L2+或L3级自动驾驶中，人机共驾需要驾驶员与车辆之间有清晰的交互。这种触觉传感器可以作为一种非侵入式的驾驶员状态监测方式，例如疲劳、紧张时手部细微动作的变化，甚至通过方向盘的微动反馈提供更直观的驾驶建议或预警。在线控转向去除了机械连接后，路感还原的挑战更大。这种技术或许能提供一种全新的、更自然的触觉反馈机制。这项技术目前距离EPS的直接应用可能尚远，但其底层原理，比如声波导、信号重建、分布式传感，具有启发性。短期内不建议大规模投入，但可以安排团队进行技术跟踪和小型原型概念探索。
+   https://arxiv.org/abs/2606.13746</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260616-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260616-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260616-am.mp3" length="4961520" type="audio/mpeg"/>
+      <pubDate>Mon, 15 Jun 2026 22:43:53 +0000</pubDate>
     </item>
   </channel>
 </rss>
