@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 15 Jun 2026 22:43:53 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 22:35:08 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -774,6 +774,26 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260616-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260616-am.mp3" length="4961520" type="audio/mpeg"/>
       <pubDate>Mon, 15 Jun 2026 22:43:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>专题 · 探索 Milvus：AI时代的向量数据库</title>
+      <description>本期专题：Milvus是什么
+
+1. Milvus 是一个开源的向量数据库，专为海量向量数据的存储、索引和相似性搜索而设计。（来源：专题讲解）
+
+2. 它将图像、文本等非结构化数据转化为高维向量（Embedding），并通过高效的近似最近邻（ANN）算法进行快速查找。（来源：专题讲解）
+
+3. Milvus 解决了传统数据库难以处理高维向量相似性搜索的挑战，是AI应用（如推荐系统、语义搜索）的核心基础设施。（来源：专题讲解）
+
+4. 其重要性体现在处理非结构化数据、支持AI应用、高可扩展性和性能优化。（来源：专题讲解）
+
+5. 作为云原生架构，Milvus 易于部署和集成，已成为RAG（检索增强生成）等现代AI架构的关键组成部分。（来源：专题讲解）
+
+6. 它通过将复杂数据转化为向量并进行高效管理，使得AI能够更好地理解和利用世界上的信息。（来源：专题讲解）</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260617-topic-063428.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260617-topic-063428.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260617-topic-063428.mp3" length="1220256" type="audio/mpeg"/>
+      <pubDate>Tue, 16 Jun 2026 22:35:08 +0000</pubDate>
     </item>
   </channel>
 </rss>
