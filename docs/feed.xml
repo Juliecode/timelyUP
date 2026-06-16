@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 16 Jun 2026 22:35:08 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 22:44:08 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -794,6 +794,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260617-topic-063428.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260617-topic-063428.mp3" length="1220256" type="audio/mpeg"/>
       <pubDate>Tue, 16 Jun 2026 22:35:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾、机器人与AI控制：前沿科技如何重塑EPS研发？</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最具价值的资讯。这些内容不仅将带您了解最新的技术突破，更重要的是，我将结合我们汽车EPS，也就是电动助力转向系统的研发背景，深入分析这些技术对我们工作的具体应用潜力，以及它们是否值得我们投入时间和精力去探索。准备好了吗？让我们一起开启今天的科技之旅！
+
+1. QPILOTS: Efficient Test-Time Q-Steering for Flow Policies（来源：arXiv cs.LG）
+   应用分析：能不能用：能用，但需要将“流匹配/扩散策略”这种生成式模型映射到电机控制的动作生成上。怎么用：可以考虑将线控转向的复杂助力曲线或阻尼特性建模为一种生成式策略，QPILOTS 可以用于在实际运行中，根据实时的路况、车速、驾驶员意图等信息，微调这些策略的输出，从而优化转向手感或响应速度。例如，在车辆高速过弯时，根据预测的车身姿态，对转向助力进行精细的实时修正，提升稳定性。值不值得投入：值得投入关注。这是将深度强化学习应用于实时控制的关键技术之一。它解决了传统强化学习策略在实际部署中，因环境变化导致性能下降的问题。通过与现有模型化控制结合，可能实现更智能、更适应复杂工况的 EPS/线控转向控制。可以先进行仿真验证，再考虑在HIL平台上进行初步测试。
+   https://arxiv.org/abs/2606.14801
+
+2. Adaptive Deep Koopman Operator for Vehicle Dynamics Modeling: A Physics-Informed and Tire-Force-Driven Approach（来源：arXiv eess.SY 控制系统）
+   应用分析：能不能用：非常能用，与我目前在做的方向高度契合。怎么用：1. 线控转向控制：将该模型作为线控转向系统中的核心车辆动力学预测模块，实时预测车辆状态，优化转向力矩分配和路径跟踪控制。特别是在高速或低附着力路面等复杂情况下，其在线自适应能力可以显著提升控制器的鲁棒性。2. 助力策略自适应：利用该模型预测不同驾驶员风格、路面条件下的车辆响应，从而实现助力曲线和回正特性的自动标定与自适应调整，提供更个性化和安全的手感。3. 故障诊断与降级：建立高精度车辆动力学模型后，可以通过模型预测与实际传感器数据的差异进行故障诊断，例如轮胎异常磨损、悬架故障等，并为线控转向系统提供更智能的降级方案。值不值得投入：极度值得投入。这是将前沿控制理论与车辆工程深度结合的典范，直接解决了模型准确性、自适应性和在线稳定性的痛点。建议立即组织团队深入研究，在 MATLAB/Simulink 中搭建原型，利用现有台架数据进行离线验证，并规划在HIL平台进行在线测试。
+   https://arxiv.org/abs/2606.15094
+
+3. Hamilton-Jacobi Reachability-Based Safe Reinforcement Learning for Emergency Collision Avoidance（来源：arXiv eess.SY 控制系统）
+   应用分析：能不能用：能用，且非常关键，是线控转向与自动驾驶融合的必经之路。怎么用：1. 线控转向功能安全：将该安全监督框架集成到线控转向的控制层，作为上层自动驾驶决策的“安全过滤器”。即使自动驾驶系统发出激进的转向指令，该框架也能确保转向执行器（EPS）在保持车辆动态稳定性和不发生碰撞的前提下，提供最大可能的避障能力。2. 冗余与降级策略：在系统设计阶段，利用 HJ 可达性分析来评估不同故障模式下（例如传感器失效、部分执行器性能下降）车辆的安全边界，从而设计更可靠的冗余方案和降级策略。3. HIL/整车测试验证：在验证环节，该框架可以生成极端工况下的安全边界，用于 HIL 和整车测试，确保线控转向系统在所有潜在危险场景下都能满足功能安全要求。值不值得投入：极其值得投入。这是未来线控转向系统实现 L3+ 甚至 L4 级别自动驾驶的关键安全技术。应立即启动预研项目，将 HJ 可达性分析与 EPS/线控转向的控制架构结合，从理论验证到仿真，再到 HIL 平台，逐步推进。
+   https://arxiv.org/abs/2606.15311
+
+4. Inference-time Policy Steering via Vision and Touch（来源：arXiv cs.RO）
+   应用分析：能不能用：能用，且非常具有启发性。怎么用：1. 高级路感还原：利用触觉传感器（例如安装在转向柱或轮胎上的力/振动传感器）感知路面细微纹理和冲击，结合视觉信息（例如摄像头识别路面类型、坑洼），通过类似 ViTaL 的框架，在 EPS 控制器中实时生成更精细的阻尼和摩擦补偿，从而还原更真实、更丰富的路感。2. 驾驶员意图识别与个性化手感：结合驾驶员操作的视觉（如眼动、面部表情）和触觉（如握力、转向力矩变化）信息，训练模型识别驾驶员的驾驶意图（如激进驾驶、舒适驾驶），并实时调整助力策略，提供高度个性化的转向手感，甚至能预测驾驶员的疲劳状态。3. 线控转向冗余与故障检测：视觉和触觉结合，可以作为线控转向系统的多模态冗余感知输入。例如，当转向传感器失效时，可以通过视觉（路面信息）和触觉（驾驶员手感）的融合来辅助判断转向状态和执行器健康状况。值不值得投入：值得投入。虽然直接将机器人操作策略迁移到 EPS 还需要转换，但其多模态感知和推理时策略引导的核心思想，对提升 EPS 的智能化、精细化和个性化水平具有巨大潜力。可以先从收集多模态驾驶数据开始，探索如何构建视觉-触觉融合模型，并进行仿真验证。
+   https://arxiv.org/abs/2606.14981
+
+5. Danfoss’s Dextreme Max system reduces electric excavator power consumption（来源：Charged EVs）
+   应用分析：能不能用：核心理念和方法可以借鉴。怎么用：1. EPS 电机选型与优化：深入研究 Dextreme Max 的数字液压架构如何实现高效率。虽然液压与电机不同，但其“数字”和“按需分配”的思路，可以启发我们重新审视 EPS 电机的控制策略，例如，是否可以引入更精细的“数字”控制单元，实现更精确的扭矩按需输出，减少无用功耗。2. FOC 策略优化：在 FOC 矢量控制中，进一步优化电流控制、弱磁控制等策略，结合电机模型参数的在线辨识，减少电机在不同工况下的损耗。3. 系统级节能：从 EPS 系统的角度，考虑如何与整车能量管理系统进行更深度的协同，例如，在车辆滑行或停驻时，将 EPS 电机切换到超低功耗模式，甚至通过能量回收为小容量电池充电。值不值得投入：值得投入关注。虽然技术领域不同，但其在“电动化设备功耗优化”上的突破，提供了重要的工程目标和可能的思路。可以组织内部技术交流，分析其数字控制原理，并思考如何在电机控制和 EPS 系统架构层面进行创新，以达到类似的能效提升。
+   https://chargedevs.com/newswire/danfosss-dextreme-max-system-reduces-electric-excavator-power-consumption/
+
+6. SiMa Launches Agentic Development Environment for Physical AI（来源：EE Times）
+   应用分析：能不能用：非常能用，这是提升我们研发效率的利器。怎么用：1. AI 控制器快速原型：在开发新的 AI 控制策略（如基于强化学习的助力调校、神经网络观测器）时，利用这种 Agentic 环境，可以快速将训练好的模型部署到我们现有的 MCU 或边缘计算单元上进行测试，大大缩短从模型到 HIL 或台架验证的周期。2. 自动代码生成与优化：探索该环境是否支持 MATLAB/Simulink 模型化设计与代码生成，以及是否能对生成的嵌入式代码进行进一步的性能优化和硬件适配，以满足 EPS 对实时性、内存和功耗的严苛要求。3. 功能安全认证辅助：了解该环境在模型部署过程中，是否提供对 ISO 26262 等功能安全标准的辅助支持，例如模型量化、鲁棒性验证等工具，这对于 EPS 产品的认证至关重要。值不值得投入：极度值得投入。它解决了物理 AI 落地的一个核心痛点。应该立即评估该开发环境，联系 SiMa 获取试用或技术资料，并考虑将其引入我们的开发流程，尤其是在 AI 控制算法的快速迭代和验证阶段。
+   https://www.eetimes.com/sima-launches-agentic-development-environment-for-physical-ai/
+
+7. A Comparative Study of Graph Neural Network Layer Selection for Interaction Modelling in Driving Trajectory Prediction（来源：arXiv cs.LG）
+   应用分析：能不能用：间接能用，对理解和定义线控转向系统的上层需求有帮助。怎么用：1. 需求定义与接口设计：了解 GNN 在轨迹预测中的最佳实践，可以帮助我们更好地理解自动驾驶系统对未来转向指令的精度、延迟和鲁棒性要求。这有助于我们更准确地定义线控转向系统的性能指标和与上层决策模块的接口。2. 协同控制优化：如果未来线控转向与自动驾驶系统深度融合，轨迹预测的准确性直接影响车辆的平稳性、舒适性和安全性。我们可以与自动驾驶团队协作，提供 EPS 侧的控制能力约束和反馈，共同优化 GNN 模型的输出，以实现更平滑、更自然的转向控制。3. 测试场景生成：基于 GNN 模型的交互预测能力，可以生成更真实、更复杂的交通场景用于线控转向的 MIL/SIL/HIL 仿真测试，提升测试的全面性和有效性。值不值得投入：值得投入关注。虽然不是直接的技术迁移，但作为线控转向未来发展的重要外部条件，理解自动驾驶感知预测的最新进展，能帮助我们更好地规划 EPS 的演进路径，确保我们的产品能满足未来智能汽车的需求。可以定期追踪此类研究，并与整车自动驾驶团队保持紧密沟通。
+   https://arxiv.org/abs/2606.14956</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260617-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260617-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260617-am.mp3" length="5893056" type="audio/mpeg"/>
+      <pubDate>Tue, 16 Jun 2026 22:44:08 +0000</pubDate>
     </item>
   </channel>
 </rss>
