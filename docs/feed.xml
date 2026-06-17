@@ -13,7 +13,7 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 17 Jun 2026 09:42:56 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 22:43:13 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
@@ -886,6 +886,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260617-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260617-pm.mp3" length="4492800" type="audio/mpeg"/>
       <pubDate>Wed, 17 Jun 2026 09:42:56 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI前沿、汽车智能化与机器人：EPS工程师的今日科技早报</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报，我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。从AI驱动的安全控制，到电动汽车核心器件的迭代，再到人形机器人背后的电机效率奥秘，相信这些内容都能为您的研发工作带来新的启发。
+
+1. Robust Direct Data-Driven Hamiltonian for Safe Set Computation under Measurement Noise and Disturbances（来源：arXiv eess.SY 控制系统）
+   应用分析：能用，且非常值得深入研究和尝试。可在EPS的故障诊断和降级模式中应用，实时评估转向系统的“安全裕度”或“健康边界”。在开发阶段，可用于HIL/SIL测试中，通过注入噪声和扰动验证控制器鲁棒性和安全集的有效性。对于线控转向（Steer-by-Wire）这种功能安全要求极高的系统，这种数据驱动的安全集计算方法能为冗余系统设计和故障容错提供新的验证手段。投入有助于提升EPS系统在复杂工况下的可靠性和市场竞争力。
+   https://arxiv.org/abs/2606.17292
+
+2. Model-Free Control for Multi-Time Scale Dynamics of Grid-Connected Power Converters（来源：arXiv eess.SY 控制系统）
+   应用分析：能用，且具有很高的潜力。可在EPS电机FOC控制中，尝试引入无模型控制思想，例如替代传统的PI控制器或作为其增强。特别是在处理转矩脉动抑制、温漂补偿、参数辨识等难题时，无模型控制可能提供更强的自适应能力。这有助于提升助力手感的一致性和NVH性能。值得作为现有FOC控制策略的补充或升级方向，尤其是在追求更高性能、更低NVH、更强鲁棒性的高端EPS产品上。
+   https://arxiv.org/abs/2606.17873
+
+3. Beyond Parallel Sampling: Diverse Query Initialization for Agentic Search（来源：arXiv cs.AI）
+   应用分析：间接可用，主要体现在AI工具链和辅助开发方面。假设未来开发基于LLM的自动标定智能体，需要探索大量参数组合和工况。DivInit方法可以帮助智能体在初始阶段生成更多样化的标定策略或测试路径，避免陷入局部最优或重复探索，从而加速标定过程，提高效率和质量。值得关注，但不作为核心研发投入，更多是作为提升AI辅助开发效率的思路。
+   https://arxiv.org/abs/2606.17209
+
+4. Wolfspeed introduces new Gen 5 SiC MOSFETs for EV traction inverters（来源：Charged EVs）
+   应用分析：能用，且是EPS功率级未来发展的重要方向。在EPS电机驱动器（逆变器）的功率级设计中，可考虑采用Wolfspeed的第五代SiC MOSFET。特别是在开发高功率密度、高效率的下一代EPS产品时，如R-EPS或线控转向系统中的执行器驱动，SiC器件能显著减小驱动器体积和重量，降低能耗。其耐高温特性也有助于简化散热设计。强烈建议持续跟踪SiC技术发展，并在新一代EPS产品规划中积极导入。
+   https://chargedevs.com/newswire/wolfspeed-introduces-new-gen-5-sic-mosfets-for-ev-traction-inverters/
+
+5. Li Auto exec says Tesla FSD stands alone, urges peers to face the gap（来源：CnEVPost）
+   应用分析：这不是一个直接的技术应用，而是对技术发展趋势的战略性指导。我们需要将特斯拉FSD的领先性视为线控转向和高级自动驾驶系统发展的风向标。这意味着EPS系统需要：提升控制精度和响应速度；加强冗余和功能安全设计（ASIL D）；探索与AI决策层的接口和协同；关注HIL/SIL仿真和整车标定效率。强烈值得作为战略投入，提前布局线控转向和EPS未来发展的方向。
+   https://cnevpost.com/2026/06/17/li-auto-exec-tesla-fsd-stands-alone-urges-peers-face-gap/
+
+6. The Secret to Marathon-Winning Humanoid Robots（来源：IEEE Spectrum）
+   应用分析：能用，且有直接借鉴意义。在电机选型与设计方面，可借鉴人形机器人对高转矩密度、高效率电机的需求，优化PMSM的电磁设计，提高效率、降低损耗和温升。在电机控制策略上，研究其能量优化控制策略，例如优化FOC的电流矢量控制，最小化铜耗和铁耗。同时，关注其热管理与降额控制，以及转矩脉动抑制、抖动抑制技术。人形机器人是高性能执行器控制的集大成者，其技术突破可以直接迁移到EPS领域，提升产品性能和竞争力，非常值得持续关注。
+   https://spectrum.ieee.org/china-humanoid-robot-marathon
+
+7. The First-Time-Right Revolution（来源：EE Times）
+   应用分析：能用，且是EPS系统升级的直接方向。在传感器选型上，可评估Melexis这类供应商提供的轴端位置和转矩传感器，高精度传感器能直接提升FOC控制的精度。研究其“零延迟”实现机制，可能涉及更快的采样率、优化的信号处理链或更高效的MCU架构，这对于线控转向这种实时性要求极高的系统尤为重要。关注其提供的整体解决方案，有助于简化EPS控制器设计，降低成本和开发周期。这是EPS底层硬件和控制算法优化的直接机会，能显著提升产品性能和竞争力，应与相关供应商保持紧密沟通。
+   https://www.eetimes.com/the-first-time-right-revolution/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260618-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260618-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260618-am.mp3" length="3286368" type="audio/mpeg"/>
+      <pubDate>Wed, 17 Jun 2026 22:43:13 +0000</pubDate>
     </item>
   </channel>
 </rss>
