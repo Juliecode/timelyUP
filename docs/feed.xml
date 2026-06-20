@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 20 Jun 2026 09:42:27 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2026 22:42:32 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾风向标：AI控制、线控转向与机器人执行器前沿</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天咱们聚焦AI前沿、汽车智能化和机器人三大领域，一共精选了七条重磅资讯，希望能为你在日常研发工作中带来一些新视角和启发。今天的头条，我们先从AI控制的最新进展说起。
-
-1. 核聚变离线强化学习：数据驱动鲁棒控制新范式（来源：arXiv cs.LG）
-   应用分析：对于EPS系统，我们可以借鉴这种离线强化学习方法来优化电机控制策略，如处理转矩脉动、NVH、温漂等问题。通过收集大量的台架测试和整车运行数据，训练更优的FOC、弱磁控制或转矩脉动抑制策略，减少传统调参的经验依赖，提升性能和效率。这需要投入数据平台和强化学习算法的学习，但长期来看，有望大幅提升控制性能和开发效率，降低实车调校成本。
-   https://arxiv.org/abs/2606.07550
-
-2. KANs在FPGA上实现超快机器学习，加速嵌入式AI部署（来源：Hacker News）
-   应用分析：对于EPS系统，我们正在探索用AI方法改进控制、标定和故障诊断。将KANs部署到FPGA上，能为我们提供高性能硬件平台。例如，可构建更精确、鲁棒的无传感器位置观测器或参数辨识网络，甚至智能标定算法。FPGA的并行计算和低功耗满足车规需求。结合MATLAB/Simulink的模型化设计与代码生成工具链，值得投入预研，提升电机控制性能。
-   https://aarushgupta.io/posts/kan-fpga/
-
-3. 赛力斯Aiva品牌发布，剑指AI定义电动车未来（来源：CnEVPost）
-   应用分析：AI定义电动车对EPS意味着更多软件定义功能和更强的协同能力。未来的EPS将不仅仅是执行转向指令，更可能成为智能节点，与整车AI深度交互，提供精细路感、智能助力，甚至线控转向冗余。我们需要思考如何将AI技术融入EPS控制器，例如用AI改进助力手感调校效率和个性化，或更精准的故障诊断。线控转向的架构、冗余和功能安全设计，也将是AI定义电动车时代EPS研发的重中之重。这需要我们从系统层面积极与整车厂合作，共同定义未来EPS的软硬件接口和AI能力边界，这是必须投入的方向。
-   https://cnevpost.com/2026/06/09/seres-saidou-launches-new-brand-aiva-ai-defined-evs/
-
-4. 多千兆车载以太网验证指南：线控转向与自动驾驶的通信基石（来源：Charged EVs）
-   应用分析：线控转向是我目前正在做的重要方向，多千兆车载以太网是其实现的关键基础设施。这份验证指南非常实用，特别提到的MEMS故障注入技术，对于我们验证线控转向系统的通信鲁棒性和功能安全至关重要。我们可以将这种故障注入方法集成到MIL/SIL/HIL测试环境中，模拟各种极端通信故障场景，以验证EPS控制器在这些情况下的故障诊断、降级和安全响应能力。这能大大提升测试效率，发现潜在的系统弱点，并满足ISO 26262对通信安全的严格要求。这是线控转向研发中必不可少的一环，需要积极学习和应用。
-   https://chargedevs.com/whitepapers/download-the-guide-to-multi-gig-automotive-ethernet-validation/
-
-5. 端到端控制助力假肢：实现统一、免调校的自适应辅助（来源：arXiv cs.RO）
-   应用分析：这个研究对于EPS的助力策略与手感调校非常有启发。我们一直在寻求减少手动标定、提升系统自适应性的方法。借鉴这种端到端、免调校的思路，可以尝试用深度学习或强化学习直接从驾驶员操作和路况数据中学习助力输出，而不是依赖复杂的物理模型和经验曲线。这将大大简化助力曲线、阻尼补偿等参数的调校过程，并有可能实现更精细、个性化的手感。虽然在车规级功能安全上仍有挑战，但作为前沿研究方向，非常值得投入预研，探索其在自动标定、自适应控制、以及线控转向手感模拟上的潜力。
-   https://arxiv.org/abs/2606.07902
-
-6. 机器人“接触智能”将定义机器人技术新时代（来源：IEEE Spectrum）
-   应用分析：EPS的核心就是提供良好的手感和路感还原。这个“接触智能”的概念，对我们理解和优化助力策略、阻尼/回正/摩擦补偿，以及线控转向的路感模拟至关重要。我们可以借鉴机器人领域在力/触觉传感器、高带宽力矩控制方面的进展，提升EPS的感知精度和电机控制的响应速度。例如，研究更先进的力矩传感器和更精密的FOC算法，以更准确地模拟路面反馈和驾驶员意图，减少转矩脉动和抖动，提供更平滑、更线性的转向手感。这需要我们关注机器人关节执行器、伺服电机控制的前沿技术，并探索如何将其迁移到EPS中，提升产品竞争力。这是我们长期关注的交叉点，值得持续投入。
-   https://spectrum.ieee.org/agilink-contact-intelligence-robot-manipulation
-
-7. 智能体网络物理系统安全隐患：增益操控攻击，引发稳定与安全之争（来源：arXiv eess.SY 控制系统）
-   应用分析：这篇论文对线控转向和AI辅助EPS的功能安全和网络安全设计敲响了警钟。在未来的线控转向架构中，AI智能体可能会动态调整助力曲线、阻尼系数等“增益”参数以适应不同驾驶场景。恶意篡改这些参数，即使系统在数学上保持“稳定”，也可能导致车辆转向特性急剧变化，引发危险。我们需要在ISO 26262功能安全框架下，加强对AI控制模块的输入验证、输出监控和参数完整性保护。例如，引入更严格的运行时参数范围检查、冗余计算和异常检测机制，并设计安全的降级策略。同时，需要深入研究如何防止对控制器参数的远程攻击，确保EPS控制器的安全性和鲁棒性。这是一个高优先级的问题，必须投入资源进行防御性设计和验证。
-   https://arxiv.org/abs/2606.07803</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260610-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-am.mp3" length="4513248" type="audio/mpeg"/>
-      <pubDate>Wed, 10 Jun 2026 00:10:08 +0000</pubDate>
-    </item>
     <item>
       <title>专题 · EPS单电阻采样功能安全评估：挑战与创新方案</title>
       <description>本期专题：单电阻采样的功能安全评估：讨论单电阻方案的可行性，功能安全方案未知。 安全分析： 1. A/B两路单路控制的扭矩输出，shunt只有一路母线电流监控，无法实施校验。对执行端冗余（6相电机）系统来说，单边相电流需要达到ASILD，如无法实施校验，无法满足要求。 2. 思路：是否有其他硬件可以独立采样出相电流，评估下来用mos内阻满足精度要求，9189耐压无法承受高压，硬件可以通过分压方案，采样方案。   1. ——硬件提供基于9189分压方案的样件，测试精度是否能否满足要求。   2. ——采样的比较机制：mos采样U,W两相；母线的采样电阻（UV,VW,UW）     1. 问题1：采样时刻如何保持统一     2. 问题2：采样诊断的方案     3. 问题3：采样是否有无法覆盖的场景
@@ -1016,6 +980,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260620-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260620-pm.mp3" length="3455136" type="audio/mpeg"/>
       <pubDate>Sat, 20 Jun 2026 09:42:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技早报：AI架构革新、智能汽车前瞻与机器人实时控制</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人技术这三大热门领域，精选了七条重磅资讯。从AI基础架构的突破，到LLM在安全领域的应用挑战，再到线控转向和机器人实时控制的深度洞察，希望能为大家的日常研发工作带来新的启发。话不多说，我们马上进入今天的早报时间。
+
+1. ITNet: A Learnable Integral Transform That Subsumes Convolution, Attention, and Recurrence（来源：arXiv cs.AI）
+   应用分析：能不能用：有潜力，但需要深入研究其在实时、嵌入式控制系统中的计算效率和收敛性。 怎么用：如果ITNet能以更小的模型规模实现与现有FOC、MPC或助力策略相似甚至更好的性能，可以考虑将其作为电机控制策略或助力曲线学习模型的基础。特别是在处理多模态传感器数据（如力矩、角度、电流、振动）融合时，其统一特性可能简化模型设计。例如，用于学习和自适应补偿电机转矩脉动或NVH特性。 值不值得投入：值得投入时间跟踪其后续发展和开源实现。初期可在MATLAB/Simulink中进行模型验证和仿真，评估其在特定控制任务上的表现，尤其是其对实时性、资源占用和功能安全的影响。如果效果显著且计算开销可控，可考虑小范围POC。
+   https://arxiv.org/abs/2606.19538
+
+2. LLM Doesn't Know What It Doesn't Know: Detecting Epistemic Blind Spots via Cross-Model Attribution Divergence on Clinical Tabular Data（来源：arXiv cs.AI）
+   应用分析：能不能用：不能直接将不具备自知能力的LLM用于安全关键的决策环节。这项研究是警示而非直接工具。 怎么用：它促使我们设计基于LLM的系统时，必须引入外部的“守门员”机制。例如，在AI辅助的故障诊断或标定参数推荐系统中，LLM的输出必须经过严格的规则引擎、模型预测或人类专家的二次确认，并结合传统控制算法的鲁棒性验证。应重点投入研究如何结合传统方法，为LLM的决策提供可解释性（XAI）和不确定性量化，尤其是在无传感器控制或冗余传感方案中，AI辅助的传感器融合和故障检测更需要这种“自知”能力。 值不值得投入：必须投入。这是功能安全（ISO 26262）在AI时代的核心挑战之一。需要投入资源研究和开发针对LLM输出的不确定性量化、置信度评估以及故障降级策略。
+   https://arxiv.org/abs/2606.19509
+
+3. Emergent Alignment（来源：arXiv cs.AI）
+   应用分析：能不能用：有潜力，但需针对汽车领域的特定伦理和安全标准进行定制与验证。 怎么用：可以考虑将这种“良知步骤”和DPO对齐方法应用于开发线控转向系统中的AI辅助决策模块。例如，在自动避险、紧急转向等场景下，AI需要快速做出决策，同时确保这些决策符合交通法规、乘客安全和车辆稳定性等伦理和安全原则。该技术可用于训练AI模型，使其在面对不确定或冲突信息时，能够“自我审查”并选择最安全、最符合规范的助力或转向指令。这对于提升线控转向系统的鲁棒性和信任度至关重要。 值不值得投入：值得投入。这是确保AI在汽车安全关键应用中“可信赖”的关键路径之一。应探索将其与功能安全（ISO 26262）流程相结合，研究如何定义和量化AI的“伦理对齐”指标。
+   https://arxiv.org/abs/2606.19527
+
+4. Go eyes robotaxis and acquisitions after Japan’s biggest IPO of 2026 — here’s why it matters（来源：TechCrunch）
+   应用分析：能不能用：这不是一个直接的技术工具，而是市场和行业趋势的信号。 怎么用：关注Go等公司在机器人出租车技术栈上的选择，特别是对转向系统冗余、功能安全等级和通信协议的需求。我的团队应加速线控转向系统的架构设计、冗余方案、功能安全（ASIL D）认证以及高性能电机控制策略的研发，确保我们的EPS产品线能平滑演进到满足未来L4/L5自动驾驶的需求。同时，研究如何将我们的电机控制技术应用于线控转向的执行器，提升其响应速度和精度。 值不值得投入：必须投入。这是EPS产品未来发展的核心方向。需要持续投入研发资源，确保我们在Steer-by-Wire技术领域保持领先。
+   https://techcrunch.com/2026/06/19/go-eyes-robotaxis-and-acquisitions-after-japans-biggest-ipo-of-2026-heres-why-it-matters/
+
+5. EU readies tariffs on Chinese plug-in hybrids, report says（来源：CnEVPost）
+   应用分析：能不能用：这不是技术应用，而是重要的市场风险和策略调整依据。 怎么用：密切关注关税政策的最终落地情况，评估其对主要客户（特别是中国和欧洲市场的PHEV制造商）生产计划和EPS采购策略的影响。在产品开发中，需更加强调成本优化、供应链韧性和不同区域市场的适应性。例如，在电机选型和控制器设计时，要考虑更广泛的成本效益方案，并可能需要预研针对不同市场法规和成本结构的EPS变型产品。同时，这也可能加速我们对纯电动汽车（BEV）和线控转向的投入，因为BEV受此关税影响相对较小，且是长期趋势。 值不值得投入：必须投入关注。虽然不是技术研发，但市场和政策环境直接影响研发投入方向和商业可行性。需要与市场和销售团队紧密协作，将这些信息纳入产品路线图和战略规划。
+   https://cnevpost.com/2026/06/20/eu-readies-tariffs-chinese-phevs/
+
+6. He made your free video player run smoothly. Now he’s doing that for robots.（来源：TechCrunch）
+   应用分析：能不能用：Kyber作为一个基础设施层，其理念和技术栈对线控转向的通信架构设计有很强的借鉴意义。 怎么用：深入研究Kyber的架构设计，特别是其在处理实时数据流、保证低延迟和高可靠性方面的技术细节。可以将其作为设计线控转向系统通信总线（例如，以太网或未来的时间敏感网络）和冗余通信路径时的参考。我们可以在线控转向的HIL仿真环境中，尝试模拟Kyber的通信模型，评估其对转向响应时间、同步性和容错能力的影响。这有助于我们构建更鲁棒、更高效的线控转向控制系统。 值不值得投入：值得投入。对于线控转向这种对实时性和可靠性要求极高的系统，研究类似Kyber的底层通信和控制基础设施至关重要。
+   https://techcrunch.com/2026/06/19/he-made-your-free-video-player-run-smoothly-now-hes-doing-that-for-robots/
+
+7. Defense manufacturing readiness hinges on autonomous finishing, says GrayMatter Robotics（来源：The Robot Report）
+   应用分析：能不能用：表面处理机器人的高精度控制技术和自主决策能力，可以迁移到EPS的电机控制和助力策略中。 怎么用：研究GrayMatter Robotics等公司在自主表面处理机器人中采用的电机控制算法（例如，更先进的FOC变体、基于模型的力控策略、自适应控制）和传感器融合技术。这些技术可能有助于提升EPS电机在不同工况下的转矩输出精度、降低NVH，并改善助力手感。例如，将机器人领域的力/位置混合控制思想引入EPS，实现更精细的路感还原和阻尼补偿。此外，机器人自主学习和适应环境变化的能力，也可以启发我们开发更智能、更易于标定的EPS助力策略。 值不值得投入：值得投入。机器人关节执行器控制与EPS电机控制有很高的技术共通性，是重要的交叉点。应积极关注并学习这些前沿技术，探索其在EPS领域的落地应用。
+   https://www.therobotreport.com/defense-manufacturing-readiness-hinges-autonomous-surface-prep-says-graymatter/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260621-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260621-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260621-am.mp3" length="4000176" type="audio/mpeg"/>
+      <pubDate>Sat, 20 Jun 2026 22:42:32 +0000</pubDate>
     </item>
   </channel>
 </rss>
