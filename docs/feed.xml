@@ -13,31 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 21 Jun 2026 09:43:20 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 22:42:56 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>专题 · EPS工程师必听：CIPOS传感器如何驱动未来转向</title>
-      <description>本期专题：我想深入了解下CIPOS扭矩和角度传感器
-
-1. CIPOS：CMOS集成位置传感器，高集成度、数字输出，简化设计并抗干扰。（来源：专题讲解）
-
-2. 基于磁阻效应，高精度感知扭矩和角度，为EPS提供核心输入。（来源：专题讲解）
-
-3. 提升FOC电机控制精度，优化转矩密度、效率和NVH。（来源：专题讲解）
-
-4. 全面支持ISO 26262功能安全，自带诊断功能，简化系统安全设计。（来源：专题讲解）
-
-5. 是线控转向和无传感器/冗余传感方案的关键使能技术。（来源：专题讲解）
-
-6. 助力EPS系统实现小型化、高性能化、高可靠性及手感调校优化。（来源：专题讲解）</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-191543.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-191543.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-191543.mp3" length="1898208" type="audio/mpeg"/>
-      <pubDate>Wed, 10 Jun 2026 11:16:03 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 研发工程师科技早报：AI、智能汽车与机器人的前沿洞察</title>
       <description>各位研发工程师朋友们，早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热点方向，为您精选7条最有价值的资讯。从奔驰量产轴向磁通电机，到小鹏CEO亲自抓机器人业务，再到AI在物理系统中的安全应用，希望能为您的日常研发工作带来新的启发和思考。
@@ -1034,6 +1014,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260621-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260621-pm.mp3" length="5578704" type="audio/mpeg"/>
       <pubDate>Sun, 21 Jun 2026 09:43:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾与机器人：中国力量崛起，AI赋能转向未来</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您带来七条精选资讯。从开源AI模型到自动驾驶的中国速度，从工业机器人的精妙控制到AI在研发中的实用落地，相信会给您的日常工作和未来规划带来不少启发。
+
+1. Apertus – Open Foundation Model for Sovereign AI（来源：Hacker News）
+   应用分析：作为EPS工程师，我可以研究Apertus这类模型在边缘设备上的部署潜力，比如用于EPS控制器上的实时故障诊断、异常检测。特别是针对电机NVH异常、传感器漂移等问题，利用模型进行在线参数辨识和自适应控制。这比依赖云端AI更符合车规级安全和实时性要求。值得投入关注其架构和训练方法，看能否与现有模型预测控制、状态观测器等结合。
+   https://apertvs.ai/
+
+2. TechCrunch Mobility: A new robotaxi scorecard shows China’s dominance（来源：TechCrunch）
+   应用分析：作为EPS工程师，我需要密切关注Robotaxi对转向系统提出的新要求，例如更快的响应速度、更高的精度、更强的冗余和功能安全等级。中国市场的快速发展，意味着我们有机会接触到更多实际路况数据和测试场景，用于验证线控转向系统的鲁棒性。这促使我们思考如何将EPS设计与更高级别的自动驾驶系统深度融合，例如基于AI的路径规划与转向控制协同。投入是必须的，这是未来EPS的核心方向。
+   https://techcrunch.com/2026/06/21/techcrunch-mobility-a-new-robotaxi-scorecard-shows-chinas-dominance/
+
+3. Güdel to show grinding beyond stationary robots with vertical, horizontal motion at Automate 2026（来源：The Robot Report）
+   应用分析：我们可以借鉴Güdel在重载机器人磨削中实现垂直和水平运动的电机控制技术。例如，其如何处理多轴耦合、如何实现高精度力矩控制和轨迹跟踪、以及如何在恶劣环境下保持鲁棒性。这些技术，如先进的FOC算法、转矩脉动抑制、参数自适应辨识等，可以直接迁移到EPS电机控制中，提升助力精度和手感。特别是对于R-EPS或DP-EPS这类大型EPS系统，其电机负载和控制复杂性与工业机器人有共通之处。这绝对值得深入研究其技术细节。
+   https://www.therobotreport.com/gudel-to-showcase-grinding-beyond-stationary-robots-integrated-vertical-horizontal-motion-automate/
+
+4. Founders Fund’s outlier bet on humanely killed fish（来源：TechCrunch）
+   应用分析：我们可以从Shinkei机器人的执行器设计和控制策略中寻找灵感。例如，它如何实现快速而精准的定位和力矩输出，可能涉及先进的伺服控制算法、高带宽电流环、以及基于视觉或其他传感器的闭环反馈。这些技术可以用于提升EPS电机在复杂工况下的转矩响应速度和精度，减少抖动，改善手感。尤其是在线控转向中，执行器的精细控制能力至关重要。这值得关注其公开的技术细节，思考其电机和控制方案是否能为EPS提供新的思路，特别是在无传感器控制和精度提升方面。
+   https://techcrunch.com/2026/06/20/founders-funds-outlier-bet-on-humanely-killed-fish/
+
+5. Signal’s Meredith Whittaker wants you to remember that AI chatbots ‘are not your friends’（来源：TechCrunch）
+   应用分析：这提醒我们在将AI（如神经网络观测器、强化学习控制器）引入EPS系统时，必须保持严谨的工程态度。避免盲目信任AI的黑盒决策，强调其可解释性、可预测性和在极端情况下的安全降级机制。这与ISO 26262的功能安全要求高度契合，即AI作为工具，其决策必须是可验证和可控的。我们需要建立严格的测试和验证流程，确保AI在EPS中的应用不会引入新的安全风险。这是一个长期需要警惕的工程伦理问题，而非一次性投入。
+   https://techcrunch.com/2026/06/20/signals-meredith-whittaker-wants-you-to-remember-that-ai-chatbots-are-not-your-friends/
+
+6. Beyond Siri: Here are the practical AI features coming to your iPhone in iOS 27（来源：TechCrunch）
+   应用分析：这促使我们思考，除了核心的电机控制，EPS系统能否集成一些“实用AI功能”来提升用户体验或维护效率？例如，基于AI的转向系统健康监测，预测性维护提示；或者结合驾驶员习惯，AI自适应调整助力曲线，提供个性化手感。虽然这些可能不是核心控制，但可以作为EPS产品的增值点。我们可以借鉴苹果在用户界面、数据隐私和边缘AI优化方面的经验，看如何将这些概念引入车载系统。这属于未来产品规划和用户体验提升范畴，值得关注其具体实现方式。
+   https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27/
+
+7. Stop wasting tokens and re explaining your project between sessions（来源：Hacker News）
+   应用分析：在我们的嵌入式C代码开发、Simulink模型设计和功能安全文档编写过程中，经常需要LLM理解复杂的项目背景和代码逻辑。Recall这类工具可以帮助我们构建更智能的AI辅助开发环境，避免每次提问都重复上传大量上下文，提高LLM在特定领域的理解深度和生成质量。例如，让LLM更好地协助我们审查ISO 26262文档、分析电机控制算法的潜在缺陷、或自动生成测试用例。这可以显著提升研发效率，值得在日常开发流程中尝试和推广。
+   https://github.com/raiyanyahya/recall</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260622-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260622-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260622-am.mp3" length="3986784" type="audio/mpeg"/>
+      <pubDate>Sun, 21 Jun 2026 22:42:56 +0000</pubDate>
     </item>
   </channel>
 </rss>
