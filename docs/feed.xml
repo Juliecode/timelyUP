@@ -13,29 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 20 Jun 2026 22:42:32 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 09:43:20 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>专题 · EPS单电阻采样功能安全评估：挑战与创新方案</title>
-      <description>本期专题：单电阻采样的功能安全评估：讨论单电阻方案的可行性，功能安全方案未知。 安全分析： 1. A/B两路单路控制的扭矩输出，shunt只有一路母线电流监控，无法实施校验。对执行端冗余（6相电机）系统来说，单边相电流需要达到ASILD，如无法实施校验，无法满足要求。 2. 思路：是否有其他硬件可以独立采样出相电流，评估下来用mos内阻满足精度要求，9189耐压无法承受高压，硬件可以通过分压方案，采样方案。   1. ——硬件提供基于9189分压方案的样件，测试精度是否能否满足要求。   2. ——采样的比较机制：mos采样U,W两相；母线的采样电阻（UV,VW,UW）     1. 问题1：采样时刻如何保持统一     2. 问题2：采样诊断的方案     3. 问题3：采样是否有无法覆盖的场景
-
-1. 单电阻采样在ASIL D等级EPS系统中面临功能安全挑战，尤其在冗余执行端无法独立校验相电流。（来源：专题讲解）
-
-2. 探索替代硬件方案，如利用MOSFET内阻进行相电流采样，并解决耐压与精度问题（如通过9189分压方案）。（来源：专题讲解）
-
-3. 设计多源采样比较机制，结合MOSFET采样与母线采样，提升诊断能力。（来源：专题讲解）
-
-4. 解决多源采样中的关键挑战：采样时刻统一、故障诊断方案设计、以及确保高诊断覆盖率避免无法覆盖的场景。（来源：专题讲解）
-
-5. 这些解决方案直接关联EPS的功能安全、成本优化，并为线控转向等未来架构奠定基础。（来源：专题讲解）</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-123024.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-123024.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-123024.mp3" length="1943712" type="audio/mpeg"/>
-      <pubDate>Wed, 10 Jun 2026 04:30:54 +0000</pubDate>
-    </item>
     <item>
       <title>专题 · EPS工程师必听：CIPOS传感器如何驱动未来转向</title>
       <description>本期专题：我想深入了解下CIPOS扭矩和角度传感器
@@ -1016,6 +998,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260621-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260621-am.mp3" length="4000176" type="audio/mpeg"/>
       <pubDate>Sat, 20 Jun 2026 22:42:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 研发早报：AI可靠性与机器人精控，赋能智驾未来</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的《研发早报》。我是你们的主播兼技术分析师。今天，我们将聚焦 AI 前沿、汽车智能化以及机器人三大领域，为您精选出七条最值得关注的科技资讯。虽然今天直接关于汽车智能化的新闻不多，但别担心，我们将把 AI 和机器人的最新进展，深度解析它们如何能为我们的汽车 EPS 研发工作带来启发和实际应用。从 AI 系统的可靠性构建，到机器人高精度执行器的控制策略，相信今天的早报能为您的一天带来满满的灵感！
+
+1. Building reliable agentic AI systems（来源：Hacker News）
+   应用分析：能用，且非常必要。未来 EPS 系统可能引入 AI 辅助的故障诊断智能体或自适应控制智能体。在设计 AI 辅助的 EPS 功能时，必须将“可靠性”作为首要设计目标。例如，在开发基于 AI 的电机参数自适应辨识或转矩脉动抑制策略时，需要设计明确的“智能体”目标（如最小化 NVH 或温漂），并建立一套完整的测试验证流程，包括异常输入处理、故障模式识别及降级策略。同时，需要考虑如何通过在线监控 AI 智能体的行为，并在其输出不确定或超出安全阈值时，能够快速切换到预设的安全模式或经典控制策略。值得投入。可靠性是汽车产品的生命线。投入精力学习并实践构建可靠 AI 智能体的方法，是确保未来 AI 技术在 EPS 中安全落地的关键，也是我们从早期实验性应用走向量产部署的必经之路。
+   https://martinfowler.com/articles/reliable-llm-bayer.html
+
+2. When I reject AI code even if it works（来源：Hacker News）
+   应用分析：AI 辅助生成代码是一种趋势，但必须审慎使用。怎么用呢？第一，代码审查与重构。即使是 AI 生成的少量代码，也必须经过严格的人工审查，确保其符合编码规范、可读性、可维护性，并满足功能安全要求。必要时进行重构。第二，性能与鲁棒性验证。对 AI 生成的控制算法代码，需要通过 MIL/SIL/HIL 以及台架测试进行全面的性能和鲁棒性验证，检查其在各种工况和边界条件下的表现，特别是电机控制的转矩脉动、NVH 抑制效果。第三，小范围、非核心功能试点。可以先在一些非功能安全相关的辅助工具或测试脚本中尝试使用 AI 生成代码，积累经验，逐步评估其在核心控制算法中的潜力。值得投入。AI 辅助编码能提高效率，但前提是确保代码质量和安全。投入时间建立 AI 生成代码的评估、审查和验证流程，是高效利用 AI 而不牺牲产品质量的关键。
+   https://vinibrasil.com/when-i-reject-ai-code-even-if-it-works/
+
+3. The 100k Whys of AI（来源：Hacker News）
+   应用分析：这种哲学层面的思考对工程实践有指导意义，但不是直接的工具或技术。怎么用呢？第一，风险评估与可解释性设计。在引入 AI 算法（如强化学习控制、神经网络观测器）时，需要更深入地思考其决策逻辑，而不是仅仅关注结果。例如，在设计无传感器控制的状态观测器时，如果引入 AI 模块，我们需要考虑如何提升其可解释性，例如通过注意力机制或特征归因方法，理解 AI 模块在何种输入下做出何种状态估计。第二，边界条件与失效模式分析。结合对 AI 原理的理解，更全面地分析 AI 算法的边界条件和潜在失效模式，为功能安全分析（如 HARA、FMEA）提供更深层次的输入。第三，混合控制策略。对于关键的 EPS 功能，可以考虑采用经典控制与 AI 辅助控制相结合的混合策略，利用 AI 提升性能，同时保留经典控制作为安全冗余或兜底方案，确保在 AI 行为异常时能够平稳降级。值得投入。理解 AI 的本质和局限性，是避免盲目崇拜和错误应用 AI 的前提。这能帮助我们更理性、更安全地将 AI 技术融入 EPS 的核心控制系统。
+   https://lcamtuf.substack.com/p/the-100000-whys-of-ai
+
+4. The Atlantic created a searchable database of the music used to train AI（来源：The Verge）
+   应用分析：能用，且必须重视。数据是 AI 的“燃料”，数据的来源、质量和管理对我们应用 AI 至关重要。怎么用呢？第一，建立数据采集与管理规范。针对 EPS 系统，需要建立一套严谨的电机运行数据、传感器数据、故障日志等数据的采集、存储和标注规范。确保数据的多样性、准确性和代表性，避免数据偏见。第二，数据清洗与预处理。在训练 AI 模型前，投入大量精力进行数据清洗、去噪和预处理。例如，对于电机电流/位置采样数据，需要处理异常值、缺失值，并进行合适的特征工程。第三，数据溯源与合规性。思考我们用于训练 AI 的车辆数据是否涉及隐私或合规性问题。虽然与音乐版权不同，但数据的来源透明度和使用合规性同样重要，尤其是在未来数据驱动的控制系统审计中。极其值得。数据的质量是 AI 项目成功的基石。建立健全的数据管理体系，确保训练数据的合规性、高质量和代表性，将直接提升 AI 在 EPS 系统中应用的有效性和可靠性。
+   https://www.theverge.com/ai-artificial-intelligence/953183/the-atlantic-searchable-database-music-ai-training-data
+
+5. Signal’s Meredith Whittaker wants you to remember that AI chatbots ‘are not your friends’（来源：TechCrunch）
+   应用分析：这种认知层面的提醒对我们的工作态度和方法有重要指导意义。怎么用呢？第一，批判性思维与验证。无论 AI 给出怎样的代码、设计建议或故障诊断方案，我们都必须保持批判性思维，不盲目接受，而是进行独立思考和严格验证。例如，AI 给出的电机控制策略优化建议，必须通过仿真、HIL 和台架测试来验证其有效性和安全性。第二，AI 作为辅助工具，而非替代者。将 AI 视为提高效率的强大辅助工具，而非完全替代人类决策和专业知识的实体。在复杂的 EPS 系统架构设计、功能安全分析、故障诊断等关键环节，最终的决策权和责任始终在工程师手中。第三，内部培训与认知统一。在团队内部进行关于 AI 局限性和正确使用态度的培训，避免因过度信任 AI 而导致的工程失误。值得投入。建立正确的 AI 认知和使用态度，是确保在利用 AI 提升效率的同时，不损害产品质量和功能安全的关键。这是一种“软技能”的投入，但其对工程决策的影响是深远的。
+   https://techcrunch.com/2026/06/20/signals-meredith-whittaker-wants-you-to-remember-that-ai-chatbots-are-not-your-friends/
+
+6. Defense manufacturing readiness hinges on autonomous finishing, says GrayMatter Robotics（来源：The Robot Report）
+   应用分析：能用，且是重要的技术借鉴方向。怎么用呢？第一，学习机器人伺服控制技术。我们需要密切关注机器人领域，尤其是工业机器人和人形机器人的关节执行器、高精度伺服电机控制、力矩控制和柔顺控制策略。这些技术可以直接迁移到 EPS 电机控制，用于提升转矩密度、效率、NVH 和手感调校。第二，自主路径规划与轨迹跟踪。虽然 EPS 自身不直接进行“精加工”，但线控转向系统需要高精度的转向角和转向力矩控制，类似于机器人的轨迹跟踪。可以借鉴机器人领域的路径规划和轨迹跟踪算法，用于优化助力策略和手感调校。第三，传感器融合与环境感知。机器人精加工需要视觉、触觉等多传感器融合。虽然 EPS 传感器主要是电流、位置、力矩，但未来线控转向可能需要更多环境感知信息，可以从机器人领域获取灵感。极其值得。机器人执行器控制是 EPS 电机控制的前沿交叉点。投入时间和精力跟踪并研究这些技术，对于提升 EPS 系统的性能和向线控转向的演进具有战略意义。
+   https://www.therobotreport.com/defense-manufacturing-readiness-hinges-autonomous-surface-prep-says-graymatter/
+
+7. Founders Fund’s outlier bet on humanely killed fish（来源：TechCrunch）
+   应用分析：能用，作为机器人精细操作和高效执行的案例进行技术启发。怎么用呢？第一，高动态响应与精细力控制。我们可以研究 Poseidon 机器人在快速操作中如何实现高动态响应和精细的力控制。这可以启发我们优化 EPS 电机在快速转向或路面冲击时的助力响应速度和力矩输出平稳性，减少抖动和噪声。第二，高效与可靠性设计。我们可以思考 Shinkei 如何在设计中平衡效率与“人道”处理（即可靠性），将其理念迁移到 EPS 系统中，如何在保证高效率（如快速转向响应）的同时，确保系统的安全性和舒适性（如平稳手感）。第三，系统集成与优化。机器人 Poseidon 是一个完整的系统，包括感知、决策和执行。这提醒我们，EPS 系统也应作为一个整体进行系统集成和优化，从电机选型到控制策略，再到手感调校，都要追求整体的最优。值得投入。虽然应用领域不同，但这类高精度、高效率的机器人执行系统，其底层的电机控制和运动控制技术与 EPS 高度相关。通过分析这类案例，可以获得跨领域的工程灵感，推动我们在电机控制策略和助力手感调校上的创新。
+   https://techcrunch.com/2026/06/20/founders-funds-outlier-bet-on-humanely-killed-fish/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260621-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260621-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260621-pm.mp3" length="5578704" type="audio/mpeg"/>
+      <pubDate>Sun, 21 Jun 2026 09:43:20 +0000</pubDate>
     </item>
   </channel>
 </rss>
