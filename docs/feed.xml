@@ -13,31 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 22 Jun 2026 09:42:38 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 22:42:20 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>专题 · 解读Claude系列：从Fable的猜想到最新进展</title>
-      <description>本期专题：我想了解下Claude Fable
-
-1. “Claude Fable”通常指代对Anthropic公司先进AI模型，特别是其Claude系列最新进展的关注和期待，而非一个已发布的具体产品名称。（来源：专题讲解）
-
-2. Anthropic的Claude系列模型是大型语言模型，其核心理念是“负责任的AI”和“宪法式AI”，强调安全、可控性及与人类价值观的对齐。（来源：专题讲解）
-
-3. Claude模型具备强大的多模态能力，能处理文本和视觉信息，并通过深度学习实现复杂推理、代码生成和多语言理解。（来源：专题讲解）
-
-4. 最新的Claude 3.5 Sonnet模型在性能、速度和成本效益上达到平衡，推动了AI技术前沿，提升了AI的实用性和可访问性。（来源：专题讲解）
-
-5. Anthropic对AI安全和伦理的持续关注，为行业树立了负责任AI发展的榜样。（来源：专题讲解）
-
-6. Claude系列代表了AI发展趋势：更强的多模态理解、精细推理、高效运行以及对AI安全伦理的持续重视。（来源：专题讲解）</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-214431.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-214431.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-214431.mp3" length="1390176" type="audio/mpeg"/>
-      <pubDate>Wed, 10 Jun 2026 13:45:06 +0000</pubDate>
-    </item>
     <item>
       <title>专题 · AI助力Book-to-Skill：从书本到技能的智慧转化</title>
       <description>本期专题：book-to-skill 技能怎么样，学习专业书籍用什么更好，anythingllm和motebookllm
@@ -1050,6 +1030,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260622-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260622-pm.mp3" length="3580128" type="audio/mpeg"/>
       <pubDate>Mon, 22 Jun 2026 09:42:38 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾、机器人与功率电子：研发工程师的今日科技速览</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出7条重磅资讯。从AI驱动的控制系统，到电动汽车核心功率器件的突破，再到机器人安全与编程的革新，这些都与我们的日常研发工作息息相关。话不多说，让我们立即进入今天的科技世界！
+
+1. Skyworks推出Si829x ASIL D栅极驱动器，赋能EV牵引逆变器（来源：Charged EVs）
+   应用分析：作为EPS工程师，我们知道线控转向是未来发展方向，其功率级需要极高的可靠性和功能安全等级。Si829x这类产品是理想的候选方案。我们应该立即联系Skyworks获取样品和开发套件，评估其ProVCD技术能否在PMSM电机的FOC控制中，有效提升性能、降低开关损耗、改善NVH表现。这对于我们优化EPS电机驱动系统，特别是未来线控转向系统的功率级设计，具有非常实际的指导意义和应用价值。
+   https://chargedevs.com/newswire/skyworks-unveils-si829x-asil-d-gate-driver-for-ev-traction-inverters/
+
+2. 小米YU7 GT在纽博格林赛道完成全球首次自动驾驶圈速（来源：CnEVPost）
+   应用分析：小米在纽博格林赛道的自动驾驶表现，揭示了AI在车辆动力学控制上的成熟度。我们可以深入研究小米在自动驾驶路径规划、车辆动力学控制（包括转向、制动、驱动）方面如何利用AI，特别是它如何处理赛道上的极限工况，例如高速过弯时的侧向力控制和转向响应。对于EPS系统，AI可以用于更精细地优化助力曲线和阻尼补偿，甚至在极限驾驶场景下提供更精准、更实时的转向辅助，从而提升车辆的运动性能和驾驶体验。这项技术值得我们投入资源，探索强化学习或模型预测控制在EPS助力手感调校和鲁棒性提升方面的具体应用。
+   https://cnevpost.com/2026/06/22/xiaomi-yu7-gt-laps-nurburgring-autonomously/
+
+3. 英伟达发布Halos：面向机器人学的全栈安全系统（来源：The Robot Report）
+   应用分析：NVIDIA Halos的全栈安全理念为EPS，特别是线控转向系统的冗余和功能安全设计提供了重要参考。我们可以借鉴其在AI计算、传感器数据处理、系统软件和安全应用层面的集成思路，来构建更可靠、更易于验证的EPS功能安全架构。例如，如何在MCU层面实现AI控制算法的实时安全监控，如何通过冗余传感器融合提升位置或转矩估计的鲁棒性，以及如何设计故障诊断与降级策略。这值得我们密切关注，并研究其技术细节与ISO 26262标准的结合点，将其转化为EPS工程方案。
+   https://www.therobotreport.com/nvidia-releases-halos-a-full-stack-safety-system-for-robotics/
+
+4. AI世界正变得“循环”：代理式AI实现后台持续工作（来源：TechCrunch）
+   应用分析：代理式AI可以革新EPS系统的自动标定和在线优化。设想一下，多个AI代理可以分别负责监测路况、驾驶员意图、电机运行状态、温度变化等，并持续优化助力曲线、NVH抑制参数，甚至预测性地调整电机控制策略以延长系统寿命。这有望显著提高EPS系统的性能和鲁棒性，并大幅减少人工标定工作量。短期内，我们可以探索在MIL/SIL/HIL环境下，利用代理式AI进行参数寻优和故障模式模拟；长期来看，这绝对值得投入资源进行原型开发和实车验证，将其转化为可落地的工程方案。
+   https://techcrunch.com/2026/06/22/the-ai-world-is-getting-loopy/
+
+5. 安森美推出Elite Pairing Studio：SiC MOSFET与栅极驱动器在线匹配工具（来源：Charged EVs）
+   应用分析：EPS系统正逐步向高效率、紧凑型发展，SiC MOSFET的应用是必然趋势。安森美的Elite Pairing Studio能帮助我们快速评估不同SiC MOSFET和栅极驱动器的组合，优化功率级性能、降低损耗、提高效率，这对于PMSM电机的驱动至关重要。我们可以利用这个工具在EPS系统设计初期进行快速迭代和预选，减少昂贵的硬件测试成本，缩短开发周期。尤其在电机选型和功率级设计阶段，这是一个非常有价值的资源，值得我们团队积极采用和推广。
+   https://chargedevs.com/newswire/onsemi-launches-online-tool-for-pairing-sic-mosfets-with-gate-drivers/
+
+6. Intrinsic“智能单元”：Alphabet公司通过AI消除机器人手动编程（来源：The Robot Report）
+   应用分析：Intrinsic的“智能单元”理念，即通过AI自动化机器人编程，对于EPS的控制算法开发和标定具有非常重要的启发意义。我们可以借鉴这种思路，开发AI辅助的电机控制策略生成工具，例如基于系统需求自动生成FOC参数、PI控制器增益，甚至无传感器控制的状态观测器参数。这能极大提高算法开发的效率，降低对资深工程师经验的依赖，并提升算法的鲁棒性和泛化能力。这是一个值得深入投入研究的方向，可以探索AI在嵌入式C代码生成、模型化设计自动优化以及自动测试用例生成方面的潜力。
+   https://www.therobotreport.com/how-intrinsic-eliminates-manual-robot-coding/
+
+7. 多千兆汽车以太网验证指南发布，聚焦ADAS与自动驾驶（来源：Charged EVs）
+   应用分析：随着EPS系统向线控转向演进，车载网络的数据传输带宽和实时性需求将呈指数级增长，多千兆汽车以太网无疑将成为核心技术。这份验证指南对于我们设计和测试线控转向系统的通信架构至关重要，特别是如何确保数据传输的实时性、完整性和功能安全。我们可以参考其推荐的验证方法，例如利用MEMS故障注入来模拟真实世界的连接故障，这对于评估线控转向的冗余通道和故障诊断机制的鲁棒性非常有价值。团队应深入研读这份指南，并将其应用于线控转向的通信协议选择、网络拓扑设计以及HIL测试方案中，以确保未来系统的可靠性。
+   https://chargedevs.com/whitepapers/download-the-guide-to-multi-gig-automotive-ethernet-validation/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260623-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260623-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260623-am.mp3" length="3455712" type="audio/mpeg"/>
+      <pubDate>Mon, 22 Jun 2026 22:42:20 +0000</pubDate>
     </item>
   </channel>
 </rss>
