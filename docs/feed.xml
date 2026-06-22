@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 21 Jun 2026 22:42:56 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 09:42:38 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 研发工程师科技早报：AI、智能汽车与机器人的前沿洞察</title>
-      <description>各位研发工程师朋友们，早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热点方向，为您精选7条最有价值的资讯。从奔驰量产轴向磁通电机，到小鹏CEO亲自抓机器人业务，再到AI在物理系统中的安全应用，希望能为您的日常研发工作带来新的启发和思考。
-
-1. Mercedes‑Benz starts large‑scale production of electric axial flux motor（来源：Hacker News）
-   应用分析：轴向磁通电机在EPS系统中同样具有巨大潜力。目前EPS多采用永磁同步径向磁通电机，但轴向磁通电机能提供更高的转矩密度，意味着在相同助力需求下，可以使用更小、更轻的电机，或者在相同体积下提供更强的助力。这对于追求轻量化和空间优化的线控转向系统尤其有利。我们应密切关注奔驰轴向磁通电机的具体技术细节，例如其冷却方案、NVH性能、成本结构和可靠性数据。可以在下一代EPS平台预研中，将轴向磁通电机作为备选方案进行评估，甚至与电机供应商合作，定制开发适用于EPS的紧凑型轴向磁通电机。这可能涉及新的电机控制策略调整，比如对轴向磁通电机特有磁路和电磁特性进行优化，以实现FOC控制下的更优转矩输出和更低转矩脉动，非常值得投入。
-   https://media.mercedes-benz.com/en/article/bebac2af-acdc-465a-9538-adb0bf3d8ccf
-
-2. EPC Launches New GaN-Based BLDC Inverter Boards（来源：Power Electronics News）
-   应用分析：GaN功率器件在EPS的功率级设计中前景广阔。目前我们的EPS功率级主要使用MOSFET，GaN器件可以显著提升逆变器效率，减少发热，从而降低对冷却系统的要求，实现控制器的小型化和轻量化。对于线控转向这种集成度更高、对响应速度和效率要求更严苛的系统，GaN更是关键技术。我们应该立即启动对GaN基逆变器的评估，可以采购这类开发板进行初步测试，了解其在汽车级温度范围、振动、EMC等环境下的表现。重点关注GaN器件在FOC控制下的动态响应、开关损耗、以及对电机NVH的影响。同时，需要评估其功能安全（ISO 26262）合规性，例如驱动电路的鲁棒性、故障诊断和降级策略。这可能需要与功率器件供应商紧密合作，推动车规级GaN器件的开发和应用，非常值得投入。
-   https://www.powerelectronicsnews.com/epc-launches-new-gan-based-bldc-inverter-boards/
-
-3. Xpeng CEO takes helm of robotics unit to drive physical AI transition（来源：CnEVPost）
-   应用分析：小鹏的这一战略方向与我们关注的“机器人/人形机器人的关节执行器、伺服电机控制”与“EPS电机控制高度相关，技术可互相迁移”这一交叉点不谋而合。这意味着我们可以从机器人领域，特别是小鹏的机器人业务中，学习其在电机控制、高精度执行器、AI驱动的运动控制等方面的最新进展。例如，机器人关节的FOC控制、无传感器控制、弱磁控制技术，以及如何通过AI提升控制策略的性能和鲁棒性，都可能直接应用于EPS系统，尤其是在线控转向中对力矩控制精度和响应速度的极致追求。这是一个战略性投入方向，我们应积极跟踪小鹏机器人团队的技术路线和公开成果，甚至考虑进行技术交流，为我们EPS系统在电机控制策略优化、无传感器/冗余传感方案、以及AI赋能的故障诊断和预测性维护方面提供宝贵思路。
-   https://cnevpost.com/2026/06/10/xpeng-ceo-takes-helm-robotics-unit/
-
-4. Sim2Schedule: A Simulator-Guided LLM Framework for Autonomous Open-Pit Mine Scheduling（来源：arXiv cs.AI）
-   应用分析：模拟器引导LLM的思路可以直接迁移到EPS系统的自动标定、故障诊断与降级策略优化中。我们可以构建一个高保真的EPS系统仿真模型（如Simulink或HIL），让LLM根据仿真结果和预设的优化目标（如手感舒适度、助力响应速度、能耗、NVH等）生成或调整助力曲线、阻尼参数等控制策略。当LLM提出新的策略时，先在模拟器中验证其性能和安全性，再逐步部署到MIL/SIL/HIL平台，甚至台架进行验证。这能极大加速标定过程，减少人工经验依赖。这种“AI+仿真”的闭环优化方法，是提升我们研发效率和产品性能的有效途径，非常值得投入。可以从简单的助力曲线自动生成和优化开始尝试，逐步扩展到更复杂的参数调校。
-   https://arxiv.org/abs/2606.10286
-
-5. Alignment Collapse Under KV Cache Quantization: Diagnosis and Mitigation（来源：arXiv cs.LG）
-   应用分析：尽管我们目前在EPS中尚未大规模直接部署LLM，但未来随着AI在控制和诊断中的深入应用，例如使用轻量级神经网络进行状态观测器、故障预测或辅助决策，对这些模型的部署优化（如模型量化、剪枝）将是必然趋势。这项研究提醒我们，在对任何可能影响系统安全性的AI模型进行量化等优化时，必须进行全面的、针对安全指标的专项测试，而不能仅依赖传统的性能指标。这不仅仅是“值不值得”，而是“必须”关注的问题。我们需要建立一套针对嵌入式AI模型的安全验证流程，特别是在模型压缩和部署阶段。这包括设计针对性的安全测试用例，开发能够检测“安全对齐崩溃”的诊断工具，并研究如何在量化过程中保留或增强安全特征的鲁棒性。这有助于我们确保在将AI技术引入EPS等安全关键系统时，能满足ISO 26262等功能安全标准的要求。
-   https://arxiv.org/abs/2606.09864
-
-6. MARCH: Model-Assisted Reinforcement Learning for the Perceptive Control of Humanoids over Sparse Footholds（来源：arXiv cs.RO）
-   应用分析：MARCH框架的思路可以直接应用于EPS的电机控制策略优化。例如，我们可以利用传统的FOC模型（模型基方法）来生成参考转矩轨迹，然后用强化学习（无模型方法）来学习补偿非线性、不确定性、温漂等因素，从而提升转矩脉动抑制、NVH性能。CLF作为奖励函数，可以确保RL训练过程中控制器的稳定性。在无传感器控制中，我们也可以用模型辅助RL来提升状态观测器的精度和鲁棒性，特别是在极限工况或参数漂移时。这是将前沿AI控制理论与传统控制方法结合的典范，非常值得投入。我们可以尝试在Simulink或HIL环境中搭建一个模型辅助RL的实验平台，将我们已有的FOC模型作为“简化模型”来生成参考，然后用RL去学习残差控制或参数自适应。这有助于解决电机控制策略在性能与鲁棒性方面的一些痛点，并为线控转向系统提供更精细、更鲁棒的力矩控制。
-   https://arxiv.org/abs/2606.10288
-
-7. The Concerning, Unchecked Rise of E2E AI in Physical Applications（来源：EE Times）
-   应用分析：虽然E2E AI在某些感知任务上表现出色，但其“黑箱”特性和潜在的不可预测行为，在EPS这种安全关键系统中是巨大的风险。我们不应盲目追求E2E AI，而应采取更谨慎、分层、可解释的AI应用策略。例如，AI可以用于辅助标定、故障诊断和预测性维护，但核心的助力控制和功能安全逻辑仍应基于传统的、可验证的控制算法。如果必须引入AI进行控制，也应限制其作用范围，并设计强大的安全监控和降级机制。投入方向应是“如何安全地、有限制地引入AI”，而不是“盲目采用E2E AI”。我们需要深入研究AI模型的可解释性（XAI）、鲁棒性、不确定性量化等技术，并将其融入我们的功能安全开发流程。例如，针对AI模型，开发形式化验证方法或基于测试用例的覆盖率分析，确保其在所有预期工况下行为可预测且安全。这对于线控转向的架构、冗余与功能安全设计至关重要。
-   https://www.eetimes.com/the-concerning-unchecked-rise-of-e2e-ai-in-physical-applications/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260610-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-pm.mp3" length="4687776" type="audio/mpeg"/>
-      <pubDate>Wed, 10 Jun 2026 13:00:42 +0000</pubDate>
-    </item>
     <item>
       <title>专题 · 解读Claude系列：从Fable的猜想到最新进展</title>
       <description>本期专题：我想了解下Claude Fable
@@ -1050,6 +1014,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260622-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260622-am.mp3" length="3986784" type="audio/mpeg"/>
       <pubDate>Sun, 21 Jun 2026 22:42:56 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技早报：AI大模型赋能汽车控制，机器人与智能驾驶加速演进</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门方向，为您精选出七条最值得关注的重磅资讯。从AI大模型在边缘计算的应用，到中国在机器人出租车领域的领先地位，再到高性能电动车的电机控制挑战，以及机器人执行器技术对我们转向系统的启示，每一条都可能为您的研发工作带来新的灵感和突破。希望今天的早报能助您把握行业脉搏，发现技术机遇。
+
+1. Sakana Fugu（来源：Hacker News）
+   应用分析：虽然目前关于Sakana Fugu的具体技术细节尚未披露，但如果它代表了AI模型架构或训练效率上的创新，我们将持续关注。在EPS的AI辅助标定或故障诊断中，我们一直在寻找更轻量级、更高效的模型。这类前沿研究值得我们跟踪其底层技术原理，但目前不建议直接投入资源，需等待更多技术细节和开源成果发布后，再评估其在车载嵌入式环境中的实际潜力。
+   https://sakana.ai/fugu/
+
+2. Apertus – Open Foundation Model for Sovereign AI（来源：Hacker News）
+   应用分析：这项进展对我们EPS的研发工作具有非常高的价值。在EPS系统中，我们处理着大量的运行数据和诊断信息，未来AI辅助故障诊断和预测性维护将需要对这些数据进行深入分析。采用Apertus这类“主权AI”模式，能够确保数据在车端或企业内部进行处理和存储，符合ISO两万六千两百六十二等功能安全标准对数据链的严格要求，并有效避免数据泄露风险。我建议投入资源研究其技术栈和部署方案，评估其在车载边缘计算平台的适配性，并将其作为未来AI诊断模块或自动标定工具的底层技术支撑。
+   https://apertvs.ai/
+
+3. Good results fine tuning a local LLM like Qwen 3:0.6B to categorize questions（来源：Hacker News）
+   应用分析：这项进展为我们“用AI改进控制、标定效率、故障诊断”提供了具体且可操作的路径。例如，我们可以微调一个像通义千问三点零点六B这样的小型大语言模型，来对EPS系统的故障代码、用户反馈或测试数据日志进行自动分类和初步分析，从而显著提升诊断效率。由于模型体积小，它有可能在车载MCU或边缘网关上运行，或者直接用于测试台架的自动化分析。投入成本相对可控，我建议先行进行概念验证，探索其在特定诊断或标定辅助任务中的应用，例如将工程师输入的自然语言故障描述映射到特定的故障树节点，或者辅助分析标定参数的异常变化。
+   https://www.teachmecoolstuff.com/viewarticle/fine-tuning-a-local-llm-to-categorize-questions
+
+4. TechCrunch Mobility: A new robotaxi scorecard shows China’s dominance（来源：TechCrunch）
+   应用分析：这是未来EPS系统演进的重要风向标。机器人出租车对转向系统的精度、响应速度、冗余和功能安全提出了极致要求，直接推动了线控转向技术的商业化落地。我们需要密切关注中国机器人出租车领域的技术路线图，特别是它们对转向系统接口、通信协议、冗余架构的具体需求。这为我们R型EPS和线控转向的架构设计、功能安全分析提供了宝贵的参考。我建议现在就积极参与相关标准制定，预研线控转向的底层执行器控制和冗余方案，并与国内领先的机器人出租车公司建立技术交流，以便将前沿研究快速转化为可落地的EPS工程方案。
+   https://techcrunch.com/2026/06/21/techcrunch-mobility-a-new-robotaxi-scorecard-shows-chinas-dominance/
+
+5. Xiaomi touts self-driving feat as YU7 GT laps Nürburgring autonomously（来源：CnEVPost）
+   应用分析：这一成就直接验证了高阶自动驾驶对车辆底盘控制（包括EPS）的极致需求。EPS系统需要提供更快的响应、更高的精度、更强的鲁棒性来应对赛道级的动态驾驶。我们需要深入分析小米这类自动驾驶车辆的控制策略，特别是它们如何利用EPS实现精确的路径跟踪、车身稳定控制和极限工况下的转向力矩分配。这对我们提升助力策略、手感调校的智能化水平，以及优化电机控制策略以应对大动态负载和NVH挑战有直接指导意义。尤其是在线控转向背景下，EPS将成为线控执行器的一部分，需要在各种复杂工况下提供极致性能。我建议投入资源进行仿真分析和台架验证，探索如何在EPS中集成更智能的控制算法，以满足未来高性能自动驾驶的需求。
+   https://cnevpost.com/2026/06/22/xiaomi-yu7-gt-laps-nurburgring-autonomously/
+
+6. Geely releases more images of tri-motor Galaxy Cruiser 700 ahead of 2026 launch（来源：CnEVPost）
+   应用分析：高性能多电机系统对整车控制和底盘系统提出了新的挑战。EPS作为转向执行器，需要与三电机系统进行更深度的协同，例如在扭矩矢量控制中提供精确的转向输入，或者在车辆失稳时进行主动转向干预。这促使我们思考EPS如何更好地与整车控制器、电机控制器进行融合，实现更高级别的横纵垂向耦合控制。我们需要研究这类高性能电动车的整车控制架构，以及EPS在其中的角色变化。我建议投入仿真和算法预研，探索EPS如何支持更复杂的车辆动态控制，例如通过转向助力与电机扭矩的智能匹配，优化车辆的操控性和稳定性。这不仅是性能的提升，也是未来EPS系统集成度与智能化的重要方向。
+   https://cnevpost.com/2026/06/22/geely-releases-more-images-galaxy-cruiser-700/
+
+7. Güdel to show grinding beyond stationary robots with vertical, horizontal motion at Automate 2026（来源：The Robot Report）
+   应用分析：这项技术直接契合我关注的“机器人关节执行器、伺服电机控制”交叉点。重型机器人对电机转矩密度、精度、抗干扰能力和鲁棒性有极高要求，这与EPS电机控制面临的挑战异曲同工。Güdel的TMV和TMF系统在复杂运动中如何实现高精度控制，其电机选型、FOC算法、减速器设计，以及如何处理负载变化和振动抑制的经验，对我们提升EPS电机控制策略（如转矩脉动抑制、NVH优化、无传感器控制）具有极强的参考价值。我们可以从中学习新的控制算法、机械耦合设计思路，甚至考虑将部分先进的伺服控制理念引入到我们的EPS电机控制中。我建议投入精力进行技术调研和理论分析，甚至考虑与这类机器人公司进行技术交流，以期将前沿研究快速转化为EPS的工程方案。
+   https://www.therobotreport.com/gudel-to-showcase-grinding-beyond-stationary-robots-integrated-vertical-horizontal-motion-automate/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260622-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260622-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260622-pm.mp3" length="3580128" type="audio/mpeg"/>
+      <pubDate>Mon, 22 Jun 2026 09:42:38 +0000</pubDate>
     </item>
   </channel>
 </rss>
