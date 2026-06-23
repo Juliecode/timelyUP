@@ -13,31 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 22 Jun 2026 22:42:20 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 09:42:09 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>专题 · AI助力Book-to-Skill：从书本到技能的智慧转化</title>
-      <description>本期专题：book-to-skill 技能怎么样，学习专业书籍用什么更好，anythingllm和motebookllm
-
-1. “Book-to-skill”旨在将书本知识转化为实际应用技能，是学习的核心目标。（来源：专题讲解）
-
-2. 人工智能（LLM）通过文本理解、归纳总结和内容生成，极大地提升了“从书本到技能”的转化效率。（来源：专题讲解）
-
-3. AI工具能够帮助应对信息爆炸、实现个性化学习，并加速知识的吸收与应用。（来源：专题讲解）
-
-4. AnythingLLM是通用的文档交互工具，能与多种资料对话，快速提取和理解内容。（来源：专题讲解）
-
-5. MotebookLLM等工具可能更侧重结构化笔记和知识体系构建，辅助深度学习和技能系统化。（来源：专题讲解）
-
-6. AI是强大的学习辅助工具，但深层理解、批判性思维和实际应用仍需人类主动参与，并关注数据隐私和内容准确性。（来源：专题讲解）</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-225342.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-225342.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260610-topic-225342.mp3" length="1336176" type="audio/mpeg"/>
-      <pubDate>Wed, 10 Jun 2026 14:54:04 +0000</pubDate>
-    </item>
     <item>
       <title>专题 · Anthropic新模型展望：Claude 3系列与未来趋势</title>
       <description>本期专题：今天凌晨，Anthropic 发布新模型 Claude Fable 5 和 Mythos 5，请介绍下具体特性以及应用场景
@@ -1066,6 +1046,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260623-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260623-am.mp3" length="3455712" type="audio/mpeg"/>
       <pubDate>Mon, 22 Jun 2026 22:42:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI与线控转向的融合：EPS工程师的今日必读</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热点，为您精选出七条最有价值的资讯。从OpenAI的最新AI模型，到英伟达的机器人安全系统，再到汽车功率电子的最新进展，每一条都可能为您的EPS研发工作带来新的思路和突破。准备好了吗？让我们立即开始！
+
+1. OpenAI DayBreak – GPT-5.5-Cyber（来源：Hacker News）
+   应用分析：可以探索将这类高级AI模型用于EPS软件开发流程的早期阶段，例如辅助生成功能安全概念、测试用例，或代码审查。在运行时，可以考虑利用其异常检测能力，对EPS系统产生的海量传感器和诊断数据进行实时分析，识别潜在的网络攻击或内部故障模式。投入方面，初期可作为研究性项目，评估其在低实时性、高复杂性分析任务中的效能，例如离线日志分析和故障根因诊断，再逐步考虑集成到开发辅助工具链中。
+   https://openai.com/index/daybreak-securing-the-world/
+
+2. CEA-Leti CEO: AI’s Real Bottleneck Is Architecture（来源：EE Times）
+   应用分析：这提醒我们在探索AI在EPS中的应用时，要特别关注轻量级、高能效比的神经网络架构，例如用于电机状态观测、参数辨识或助力曲线自适应调整的AI模型。在MCU选型和系统设计阶段，需优先考虑支持特定AI加速指令集或具有高效异构计算能力的芯片。投入上，应鼓励团队研究和评估面向嵌入式AI的优化技术，如模型剪枝、量化和知识蒸馏，以在有限的硬件资源下实现AI功能。
+   https://www.eetimes.com/cea-leti-ceo-ais-real-bottleneck-is-architecture/
+
+3. Skyworks unveils Si829x ASIL D gate driver for EV traction inverters（来源：Charged EVs）
+   应用分析：在EPS电机控制器功率级设计中，我们可以直接评估或选用这款Si829x驱动器。ASIL D认证能大幅简化我们自身的功能安全分析和验证工作。ProVCD技术可以优化开关损耗、减少电磁干扰，进而提升电机控制的精度和NVH性能。这是一个非常值得投入的硬件选择，能直接提升EPS产品的核心竞争力。
+   https://chargedevs.com/newswire/skyworks-unveils-si829x-asil-d-gate-driver-for-ev-traction-inverters/
+
+4. onsemi launches online tool for pairing SiC MOSFETs with gate drivers（来源：Charged EVs）
+   应用分析：团队应立即试用这款工具，将其整合到SiC功率级选型和初步设计流程中。通过快速迭代和评估不同的SiC MOSFET与栅极驱动器组合，可以更早地发现潜在问题，优化电路性能，缩短开发周期。这对于我们向SiC技术迁移，提升EPS电机控制器的效率和功率密度，具有实际的工程价值。值得大力推广和应用。
+   https://chargedevs.com/newswire/onsemi-launches-online-tool-for-pairing-sic-mosfets-with-gate-drivers/
+
+5. Download the guide to multi-gig automotive ethernet validation（来源：Charged EVs）
+   应用分析：团队应下载并研究这份指南，尤其关注其故障注入和验证方法。这对于我们设计线控转向系统的通信架构、冗余机制以及开发HIL测试平台具有直接指导意义。MEMS故障注入技术可为台架和HIL测试提供更真实的故障模拟，提升测试的全面性和效率。这是面向未来线控转向系统开发的必要投入。
+   https://chargedevs.com/whitepapers/download-the-guide-to-multi-gig-automotive-ethernet-validation/
+
+6. Bear Robotics acquires Kinisi Robotics to boost its physical AI capabilities（来源：The Robot Report）
+   应用分析：密切关注Kinisi Robotics在KR1人形机器人上的电机控制、关节执行器设计和物理AI算法。特别是其如何实现高精度、高动态响应的力矩控制和抗扰动能力。这些技术经验可以借鉴到EPS的电机控制策略中，例如提升转矩脉动抑制、改善手感调校的精细度，以及探索无传感器控制的鲁棒性。这是一个长期关注点，值得持续跟踪其技术进展，并尝试将相关研究成果转化为EPS的工程方案。
+   https://www.therobotreport.com/bear-robotics-acquires-kinisi-robotics-to-boost-its-physical-ai-capabilities/
+
+7. NVIDIA releases Halos, a full-stack safety system for robotics（来源：The Robot Report）
+   应用分析：深入研究Halos的架构和设计理念，尤其是其如何实现从传感器到执行器的端到端安全链，以及如何整合AI进行安全决策和异常检测。这对于我们构建线控转向的冗余架构、功能安全概念、故障诊断和降级策略，以及未来引入AI进行安全控制具有重要的参考价值。可以组织内部研讨，分析其模块化设计和安全机制，评估哪些部分可以直接借鉴或启发EPS和线控转向的未来开发。
+   https://www.therobotreport.com/nvidia-releases-halos-a-full-stack-safety-system-for-robotics/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260623-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260623-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260623-pm.mp3" length="3006288" type="audio/mpeg"/>
+      <pubDate>Tue, 23 Jun 2026 09:42:09 +0000</pubDate>
     </item>
   </channel>
 </rss>
