@@ -13,76 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 24 Jun 2026 04:23:11 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 09:42:22 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI、汽车与机器人：EPS工程师的今日洞察</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人三大领域，为大家精选了7条最有价值的资讯。从时间序列的“语言化”，到自动驾驶中的不确定性感知，再到机器人控制与SiC功率器件的突破，每一条都可能为我们汽车EPS系统的未来发展带来新的思路和机会。让我们一起深入分析，看看这些前沿技术如何能落地到我们的日常工作中。
-
-1. Time Series as Language: A Universal Tokenizer for General-Purpose Time Series Foundation Models（来源：arXiv cs.LG）
-   应用分析：能用，而且潜力巨大。我们EPS系统每天产生大量的电机电流、位置、转矩、车速等时序数据，这些数据包含了系统运行状态、故障模式、环境变化等丰富信息。
-1.  **故障诊断与预测性维护**：我们可以利用UniTok对EPS系统的多路传感器数据进行分词，然后用UniTok-FM预训练模型来识别异常模式。例如，电机轴承异响、传感器漂移、控制器过热等，这些异常在时序数据上会表现出特定的“语言模式”。通过零样本或少样本学习，可以快速部署针对新型故障的检测模型。
-2.  **控制参数自适应与标定**：EPS系统的手感调校和助力曲线标定是耗时耗力的工作。我们可以将车辆在不同路况、不同驾驶风格下的EPS响应数据作为时间序列输入，利用UniTok-FM模型学习不同驾驶场景下的最优控制参数“语言”。未来有望实现基于驾驶员习惯和路况的自动适应性控制，甚至辅助标定工程师快速找到最优参数区间。
-3.  **无传感器控制鲁棒性提升**：在无传感器FOC控制中，转子位置估计算法的鲁棒性至关重要。我们可以将电机电压、电流的时序数据输入UniTok-FM，让模型学习在各种工况（如低速、弱磁、负载突变）下的位置估计误差模式，并提供修正建议或直接输出更鲁棒的位置估计。
-这项技术非常值得我们投入。如果能成功落地，它将极大地提升我们数据处理和分析的效率，降低故障诊断成本，并为未来EPS系统的智能化、自适应性控制开辟新路径。我们应该关注相关开源实现，并尝试在离线数据上进行概念验证。
-   https://arxiv.org/abs/2606.09861
-
-2. Uncertainty-Aware Motion Planning for Autonomous Driving in Mixed Traffic Environment（来源：arXiv cs.RO）
-   应用分析：能用，尤其是在高级别自动驾驶（L3及以上）向线控转向演进的过程中，其理念和方法对我们有直接启发。
-1.  **线控转向的安全冗余与决策**：在Steer-by-Wire架构中，转向系统的响应速度和精度直接影响自动驾驶的安全性。UAMP的理念可以用于指导线控转向系统的安全决策层。当感知系统对人类驾驶员的意图（如变道、避让）存在较高不确定性时，转向系统可以被指示采取更保守的路径，或提前准备好冗余路径，确保在最坏情况下也能保持车辆稳定。
-2.  **助力手感与人车共驾**：即使在有人驾驶模式下，我们也可以将UAMP的理念应用于提升助力策略。例如，在紧急避障或与人类驾驶员协作驾驶（如L2+的辅助驾驶）时，系统可以根据对驾驶员操作意图的不确定性，智能调整助力大小、阻尼感，提供更符合驾驶员预期但又兼顾安全的转向手感。
-3.  **测试与验证**：UAMP强调不确定性量化，这对于我们MIL/SIL/HIL以及台架测试的场景生成和风险评估非常有帮助。可以基于UAMP的不确定性模型，生成更具挑战性、更贴近真实世界的混合交通场景，从而更全面地验证EPS/Steer-by-Wire系统的鲁棒性。
-这项研究的理念非常值得我们关注和投入。虽然直接将UAMP算法集成到EPS控制器中可能需要较长时间，但其“不确定性感知”的理念可以指导我们线控转向系统架构的设计，尤其是功能安全和决策层的设计。可以先从概念验证和仿真层面入手，探索如何将高层决策的不确定性信息传递给底层转向控制。
-   https://arxiv.org/abs/2606.09958
-
-3. MARCH: Model-Assisted Reinforcement Learning for the Perceptive Control of Humanoids over Sparse Footholds（来源：arXiv cs.RO）
-   应用分析：完全能用，而且是解决我们核心痛点（控制策略性能与鲁棒性）的潜在突破口。
-1.  **FOC控制策略的自适应与鲁棒性**：我们可以将MARCH框架应用于EPS电机的FOC控制。首先，利用现有电机模型（PMSM模型）生成一个安全、高效的参考轨迹（如期望的电流或转矩曲线）。然后，训练一个RL策略，以CLF（控制李雅普诺夫函数）作为奖励函数，引导RL学习在实际复杂工况（如温漂、参数辨识误差、负载扰动）下如何偏离参考轨迹以保持系统稳定性并优化性能（如抑制转矩脉动、NVH）。这可以显著提升传统FOC的鲁棒性和自适应性。
-2.  **无传感器控制的鲁棒性提升**：在无传感器FOC中，位置估计误差容易导致系统不稳定。MARCH可以用于学习在传感器信号退化或缺失情况下的补偿策略，通过RL探索在保证稳定性的前提下，如何利用电机模型和其他可用信息进行更精确的位置和转速估计。
-3.  **故障诊断与降级控制**：当EPS系统发生部分故障（如某个电流传感器失效、某个绕组短路）时，MARCH可以学习如何在降级模式下继续提供有限的助力功能，确保车辆仍能安全行驶到维修点。模型辅助可以确保降级策略的安全性边界。
-这项研究非常值得我们投入。这是将前沿AI控制技术快速转化为EPS工程方案的典型交叉点。我们团队应该深入研究MARCH的原理，尝试在MATLAB/Simulink或HIL平台上进行初步验证，甚至考虑与相关研究机构合作。
-   https://arxiv.org/abs/2606.10288
-
-4. Mitsubishi Electric Unveils New SiC MOSFETs for EV Powertrains（来源：Power Electronics News）
-   应用分析：能用，而且是我们持续关注和迭代的方向。
-1.  **提升EPS控制器效率与紧凑性**：新一代SiC MOSFET的低开关损耗和高耐压特性，可以直接应用于我们下一代EPS控制器设计。通过采用SiC器件，我们可以提升电机驱动效率，减少发热，从而缩小散热器体积，使控制器更加紧凑轻量化。这对于追求更高功率密度和更小安装空间的EPS系统（如DP-EPS、R-EPS）尤其有利。
-2.  **优化NVH性能**：更高的开关频率是SiC器件的优势之一，这有助于将PWM开关噪声推到人耳听不到的频段，从而改善EPS系统的NVH性能。同时，高效率也减少了发热，有助于降低因温度变化引起的电机参数漂移，间接提升控制稳定性。
-3.  **线控转向的冗余与功能安全**：在Steer-by-Wire系统中，功率级的可靠性是功能安全的基石。SiC器件更高的耐用性和更宽的工作温度范围，有助于提升功率级的可靠性，减少故障率。同时，更紧凑的设计也为在有限空间内实现冗余功率级提供了可能。
-这项技术是硬件层面的核心升级，直接影响EPS产品的竞争力。我们应该及时评估三菱电机以及其他供应商（如英飞凌、安森美）的最新SiC产品，进行性能测试、可靠性验证，并与供应商保持紧密合作，将其集成到我们未来的EPS控制器设计中。
-   https://www.powerelectronicsnews.com/mitsubishi-electric-unveils-new-sic-mosfets-for-ev-powertrains/
-
-5. Efficient-WAM: A 1B-Parameter World-Action Model with Low-Cost Future Imagination（来源：arXiv cs.RO）
-   应用分析：能用，其核心思想是可迁移的，尤其是在线控转向这种需要高实时性和预见性的系统上。
-1.  **线控转向的预见性控制**：我们可以借鉴Efficient-WAM的“未来想象”能力，在线控转向系统中构建一个轻量级的车辆动力学和环境交互预测模型。这个模型不需达到视觉级别的精度，但能快速预测未来几百毫秒到几秒内车辆的姿态、路径偏离、轮胎抓地力变化等关键信息。基于这些预测，EPS控制器可以提前调整转向角度、阻尼力，实现更平稳、更安全的转向辅助，尤其是在高速弯道、湿滑路面或紧急避障场景。
-2.  **驾驶员意图预测与手感优化**：结合车辆外部传感器（如摄像头、雷达）和驾驶员内部传感器（如眼动仪、踏板力），构建一个简化的“驾驶员-车辆-环境”世界模型。利用类似Efficient-WAM的机制，预测驾驶员的下一步转向意图和车辆的响应。这样，EPS可以提供更符合驾驶员预期的“前瞻性”助力，减少驾驶员的转向修正，提升驾驶体验。
-3.  **系统级故障预警与降级**：通过预测系统关键参数（如电机温度、电流、转矩）的未来趋势，提前发现潜在故障风险。例如，如果预测到电机温度将很快超过阈值，系统可以提前进入降级模式，限制最大助力，以避免更严重的故障。
-这项研究值得投入研究。其“低成本未来想象”的思路对于我们这种对实时性要求极高的嵌入式系统非常有价值。可以从简化模型和抽象预测开始，逐步探索其在EPS预见性控制中的应用潜力。
-   https://arxiv.org/abs/2606.10040
-
-6. An Algebraic State Observer for a Self-Sensing Active Magnetic Bearing System（来源：arXiv eess.SY 控制系统）
-   应用分析：非常能用，这是我们一直关注的核心技术方向之一。
-1.  **无传感器FOC的位置与转速估计**：在EPS中，我们使用无传感器FOC时需要精确估计转子位置和转速。传统的估计算法（如滑模观测器、扩展卡尔曼滤波器）在低速、零速或参数变化时性能会下降。这种“代数状态观测器”有望提供一种更鲁棒、更精确的估计方法，它通过电压和电流的滤波版本直接建立代数关系，可能避免了传统方法对模型参数的强依赖，或者对噪声的敏感性。这直接解决了我们“无传感器/冗余传感方案，提升安全性与成本竞争力”的问题。
-2.  **提升故障诊断能力**：如果能通过代数观测器精确估计出原本需要传感器的状态量，那么当实际传感器发生故障时，观测器可以作为冗余信息源，提供降级运行所需的关键数据。这对于ISO 26262功能安全设计中对冗余和故障容错的要求非常有价值。
-3.  **成本优化与系统简化**：减少或移除EPS系统中的物理位置传感器（如旋转变压器或霍尔传感器），可以显著降低系统成本和复杂度。该技术为实现这一目标提供了新的理论基础和工程路径。
-这项研究极其值得投入。这是可以直接转化为EPS工程方案的前沿研究。我们应该立即组织团队对这篇论文进行深入研读，理解其代数观测器的具体构建方法，并在MATLAB/Simulink中进行仿真验证，评估其在PMSM电机控制中的性能和鲁棒性，尤其是在我们关注的低速和弱磁区。
-   https://arxiv.org/abs/2606.10157
-
-7. Xpeng CEO takes helm of robotics unit to drive physical AI transition（来源：CnEVPost）
-   应用分析：这是一个战略层面的消息，直接的应用在于指引我们的技术发展方向和能力建设。
-1.  **技术路线图调整与能力建设**：这一消息强化了我们“机器人/人形机器人的关节执行器、伺服电机控制”与“EPS电机控制高度相关，技术可互相迁移”的判断。我们应继续加大在伺服电机控制、高性能FOC、力矩控制、多模态融合控制等方面的研究投入，并积极招聘或培养具备机器人控制背景的工程师。
-2.  **探索EPS与机器人技术的融合点**：思考EPS系统如何从简单的助力转向，向更高级的具身智能执行器演进。例如，线控转向系统本身就是一种高度集成的“关节执行器”，未来可以借鉴机器人关节的控制算法，实现更精细的力矩控制、更灵活的响应，甚至与车身其他执行器协同，实现更高级的车辆运动控制。
-3.  **关注小鹏等车企的开源与合作**：密切关注小鹏机器人部门的技术进展，特别是其在物理AI、电机控制、执行器设计等方面的开源项目或合作机会。这可以为我们提供宝贵的行业实践经验和技术参考。
-4.  **内部知识分享与研讨**：组织内部技术分享会，讨论“物理AI”对EPS意味着什么，如何将机器人控制的最新成果（如第三条MARCH论文）快速引入EPS开发流程。
-总的来说，这是一个值得我们进行战略性投入的重要信号。跟随并理解这种趋势，有助于我们保持技术领先性，并为EPS产品的未来演进做好准备。
-   https://cnevpost.com/2026/06/10/xpeng-ceo-takes-helm-robotics-unit/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260611-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260611-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260611-am.mp3" length="5523120" type="audio/mpeg"/>
-      <pubDate>Thu, 11 Jun 2026 00:15:29 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 智驾之锚：AI与机器人的硬核突破，如何赋能汽车转向系统？</title>
       <description>各位研发工程师朋友们，大家早上好！我是你们的中文科技早报主播兼技术分析师。今天是二零二六年六月十一日，星期四。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条最具信息量的硬核资讯。从强化学习的最新进展，到物理约束下的AI设计，再到电动汽车SiC功率器件的革新，以及具身智能和机器人落地实践的深刻洞察。这些前沿技术，都将与我们汽车EPS，也就是电动助力转向系统的未来发展息息相关。话不多说，让我们立刻进入今天的早报时间！
@@ -1096,6 +1031,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260624-topic-122230.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260624-topic-122230.mp3" length="1552464" type="audio/mpeg"/>
       <pubDate>Wed, 24 Jun 2026 04:23:11 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技早报：AI赋能安全转向与高效电驱，JEDEC发布SiC可靠性新规</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。今天的亮点包括AI如何提升自动驾驶的安全性，低功耗模拟神经网络在控制系统中的应用，以及碳化硅器件在电动汽车中的最新进展。希望这些内容能为您的日常研发工作带来新的启发。
+
+1. Safe and Generalizable Hierarchical Multi-Agent RL via Constraint Manifold Control（来源：arXiv cs.AI）
+   应用分析：这个框架对我们线控转向，也就是Steer-by-Wire，以及高级助力策略的开发非常有潜力。在未来的线控转向系统中，EPS可能需要与车辆的其他域控制器进行多智能体协调。我们可以将EPS或线控转向系统中的安全约束，比如最大转矩、最大转速、故障响应等，定义为低层约束流形，确保底层物理安全始终得到满足。高层强化学习策略则负责学习复杂的助力曲线、回正阻尼、路感模拟，甚至在自动驾驶场景下的转向行为。这是一个非常值得长期投入研究的方向，有助于解决AI控制在安全关键系统中的两大痛点，可以从HIL和台架测试开始验证。
+   https://arxiv.org/abs/2606.24010
+
+2. Low-power analogue neural networks with trainable nonlinear connections for continuous control（来源：arXiv cs.LG）
+   应用分析：这种低功耗模拟神经网络有潜力用于EPS的嵌入式控制器，尤其是在对功耗和实时性要求极高的场景。我们可以考虑将部分EPS控制算法，例如电机转矩纹波抑制、复杂的助力曲线非线性补偿，甚至FOC控制中的部分环节，通过这种模拟神经网络实现。这能显著降低MCU的计算负担和功耗，提升响应速度，同时对电机NVH和效率的优化也有帮助。不过，需要解决模拟电路的精度、温漂和抗干扰能力等挑战，值得我们进行中长期关注和预研。
+   https://arxiv.org/abs/2606.23742
+
+3. Data-Driven Robust MPC for Unknown Nonlinear Systems via Set-Membership Learning（来源：arXiv eess.SY 控制系统）
+   应用分析：这个方案非常适用于提升我们EPS电机控制策略的性能和鲁棒性。EPS系统本身就具有摩擦、磁饱和等非线性特性，而且还要面对路面反馈、环境温度变化等外部扰动。我们可以将这些非线性特性和扰动建模为未知非线性系统。利用实际运行或台架测试数据，通过集合成员学习方法来辨识这些未知参数的范围，然后将鲁棒MPC应用于转矩、速度或位置控制，在保证转矩精度和NVH性能的同时，抵御各种不确定性。这有助于解决转矩脉动和温漂问题，尤其在无传感器控制方案中，其对参数变化的鲁棒性提升可能带来显著优势。这是非常值得我们深入研究和投入的方向。
+   https://arxiv.org/abs/2606.24316
+
+4. JEDEC releases two SiC reliability guidelines for power conversion（来源：Charged EVs）
+   应用分析：这是行业标准，我们EPS控制器功率级设计和器件选型时必须参考。如果我们在EPS控制器中考虑采用碳化硅MOSFET来提升效率和功率密度，就必须遵循JEDEC新发布的JEP203短路评估指南和JEP204SiC功率器件评估与鉴定指南。这将直接影响我们器件选型、驱动电路设计以及故障诊断和降级策略，确保EPS系统满足ISO 26262功能安全要求。例如，在短路事件发生时，SiC MOSFET的承受能力和保护机制设计需要严格按照这些新标准进行验证。我们应立即组织团队学习并更新内部设计和测试规范，这是为了确保车规级可靠性，避免潜在的质量风险。
+   https://chargedevs.com/newswire/jedec-releases-two-sic-reliability-guidelines-for-power-conversion/
+
+5. SiC-Based 500 kW/l Inverter Built on AMB Chip Embedding（来源：Power Electronics News）
+   应用分析：这项技术在EPS功率级模块的小型化和集成化方面有巨大潜力。我们的EPS控制器，特别是DP-EPS和R-EPS，通常需要集成在电机本体附近，对体积和散热有严格要求。采用AMB芯片嵌入的SiC逆变器技术，可以大幅缩小EPS功率级模块的尺寸，使其更易于集成到电机壳体内部，实现更紧凑的机电一体化设计。这不仅能减少线束，降低电磁兼容风险，还能提升散热效率。对于线控转向系统而言，紧凑高效的执行器模块是关键。虽然500千瓦每升的功率等级远超EPS所需，但其高功率密度技术理念和AMB封装技术对EPS功率模块的小型化非常有借鉴意义，值得我们密切关注和进行预研。
+   https://www.powerelectronicsnews.com/sic-based-500-kw-l-inverter-built-on-amb-chip-embedding/
+
+6. Verifiable Foundation Models for Robot Safety（来源：arXiv cs.RO）
+   应用分析：这个框架非常适用于线控转向，也就是Steer-by-Wire系统的功能安全设计，尤其是在线控转向开始集成更复杂的AI感知和决策功能时。我们可以将AI模型，比如基于视觉或多传感器的环境感知和路径规划，视为负责高层次转向决策的“控制器”。而我们EPS核心的电机控制、转矩角度限制、故障诊断和冗余切换等，则可以作为“安全模块”。安全模块接收低维度的EPS内部状态，并严格执行预定义的安全策略。这样，即使AI控制器出现不可预测的行为，安全模块也能保证车辆的转向安全。这直接解决了ISO 26262中对AI安全论证的挑战，是一个极其值得我们投入研究和原型开发的关键路径。
+   https://arxiv.org/abs/2606.23754
+
+7. Grounding Generative Policies in Physics: Optimization-Guided Diffusion for Robot Control（来源：arXiv cs.RO）
+   应用分析：这个框架具有很高的潜力用于线控转向系统中的高级转向轨迹生成和控制，特别是在复杂驾驶场景下。我们可以利用扩散模型生成多样化的转向轨迹或手感曲线，但这些生成结果需要满足车辆动力学约束、EPS系统的物理极限，以及驾驶员手感舒适性等。通过这个优化指导扩散框架，我们可以在生成转向轨迹时，实时将这些物理约束和手感偏好作为优化目标或惩罚项，确保生成的轨迹既符合AI的“创意”，又能被EPS系统安全平稳地执行。这对于实现更自然、更个性化的转向手感调校，以及在极端工况下生成安全可行的转向方案非常有价值，值得我们长期投入研究和探索。
+   https://arxiv.org/abs/2606.24208</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260624-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260624-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260624-pm.mp3" length="1643760" type="audio/mpeg"/>
+      <pubDate>Wed, 24 Jun 2026 09:42:22 +0000</pubDate>
     </item>
   </channel>
 </rss>
