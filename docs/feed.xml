@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 24 Jun 2026 09:42:22 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 22:42:23 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 智驾之锚：AI与机器人的硬核突破，如何赋能汽车转向系统？</title>
-      <description>各位研发工程师朋友们，大家早上好！我是你们的中文科技早报主播兼技术分析师。今天是二零二六年六月十一日，星期四。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条最具信息量的硬核资讯。从强化学习的最新进展，到物理约束下的AI设计，再到电动汽车SiC功率器件的革新，以及具身智能和机器人落地实践的深刻洞察。这些前沿技术，都将与我们汽车EPS，也就是电动助力转向系统的未来发展息息相关。话不多说，让我们立刻进入今天的早报时间！
-
-1. HERO: Hindsight-Enhanced Reflection from Environment Observations for Agentic Self-Distillation（来源：arXiv cs.AI）
-   应用分析：HERO框架能用于EPS电机控制策略学习，例如优化FOC参数或引入非线性补偿，尤其在处理转矩脉动、NVH抑制等问题时。通过在MIL/SIL/HIL仿真中进行离线训练和策略优化，加速迭代。这绝对值得投入，有望在现有FOC难以解决的复杂问题上带来突破。
-   https://arxiv.org/abs/2606.11559
-
-2. Physics-informed generative AI for semiconductor manufacturing: Enforcing hard physical constraints in generative models by construction（来源：arXiv cs.LG）
-   应用分析：这是必须遵循的原则。当我们用AI辅助EPS系统架构设计、电机选型或优化控制参数时，必须将物理约束和功能安全要求内建到AI模型中，作为损失函数或通过特定网络层强制执行。例如，AI生成的助力曲线必须符合驾驶手感特性，并满足ISO 26262的安全限制。这能从根本上提升AI方案的工程可行性和安全性，避免大量无效或危险的尝试，因此必须投入。
-   https://arxiv.org/abs/2606.11247
-
-3. Large Language Models in Process Systems Engineering: Opportunities, Architectures, and Industrial Deployment Challenges（来源：arXiv eess.SY 控制系统）
-   应用分析：部分场景能用，但需谨慎。LLMs在辅助研发、知识管理和故障诊断等非实时、非安全关键场景有价值，如文档问答、故障诊断辅助、报告生成。但不适合直接用于实时控制策略。对于核心控制算法，LLMs更多是提供参数调优建议。值得适度投入，主要集中在提高研发效率和知识管理方面。
-   https://arxiv.org/abs/2606.11589
-
-4. Mitsubishi Electric Unveils New SiC MOSFETs for EV Powertrains（来源：Power Electronics News）
-   应用分析：能用，且是必然趋势。我们需要评估第五代SiC MOSFET在EPS功率级中的应用潜力，优化散热设计，并利用SiC器件允许的更高开关频率，提升FOC控制精度和NVH性能。同时，需全面评估其成本效益和长期可靠性。绝对值得投入，是EPS系统实现高性能、小型化、轻量化的关键技术之一。
-   https://www.powerelectronicsnews.com/mitsubishi-electric-unveils-new-sic-mosfets-for-ev-powertrains/
-
-5. ConsistencyPlanner: Real-time Planning with Fast-Sampling Consistency Models（来源：arXiv cs.RO）
-   应用分析：直接用于EPS控制层不行，但其技术发展对EPS未来规划有重要影响。我们需要为线控转向系统提前布局，提升EPS在转矩响应速度、精度、NVH和手感一致性等方面的性能指标，以匹配自动驾驶更激进或精细的轨迹规划。同时，在MIL/SIL/HIL测试中，可将Consistency Planner生成的轨迹作为输入，验证EPS的鲁棒性。值得重点关注和间接投入，以确保产品竞争力。
-   https://arxiv.org/abs/2606.11569
-
-6. Embodied-R1.5: Evolving Physical Intelligence via Embodied Foundation Models（来源：arXiv cs.RO）
-   应用分析：能用，且具有高度迁移价值。我们可以借鉴Embodied-R1.5的“具身认知”和“纠错”能力，设计更智能的EPS电机控制策略，实现自适应参数调整，优化助力手感和NVH。同时，其感知能力可启发无传感器控制中的状态观测器设计，并通过AI提升自动标定的效率和自我纠错能力。非常值得投入，为解决EPS电机控制策略性能、鲁棒性及无传感器方案等核心问题提供新思路。
-   https://arxiv.org/abs/2606.11324
-
-7. Robotics will not have a clean Llama moment（来源：The Robot Report）
-   应用分析：这不是具体技术，而是重要工程指导原则，必须采纳。在用AI改进EPS控制、标定和故障诊断时，必须将“可解释性”、“可调试性”和“可追溯性”作为关键设计要求。这意味着不能仅依赖黑盒模型，需结合传统控制理论，或开发AI解释工具。同时，要设计全面的验证测试策略，并建立完善的日志回溯机制。这是确保AI技术在EPS等安全关键领域可靠应用的基础，值得优先投入“软投入”以降低落地风险和维护成本。
-   https://www.therobotreport.com/robotics-will-not-have-a-clean-llama-moment/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260611-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260611-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260611-pm.mp3" length="4074336" type="audio/mpeg"/>
-      <pubDate>Thu, 11 Jun 2026 09:43:11 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 科技早报：AI赋能智能驾驶安全，奔驰量产轴向磁通电机，机器人具身智能突破</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能前沿、汽车智能化和机器人三大领域，从最新的科研进展到产业动态，为您精选出7条重磅资讯，并结合我们汽车EPS产品研发工程师的工作背景，深入分析这些技术对我们日常工作的影响和潜在应用价值。希望这些信息能为您带来新的启发和思考。
@@ -1067,6 +1031,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260624-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260624-pm.mp3" length="1643760" type="audio/mpeg"/>
       <pubDate>Wed, 24 Jun 2026 09:42:22 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI芯片定制化与汽车智能化的安全可解释之路</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最具洞察力的资讯。OpenAI发布定制AI芯片，预示着AI硬件的专业化趋势；汽车领域，我们看到可解释AI、48伏电驱桥以及高压功率器件的新进展；而在机器人和控制系统方面，可验证的AI安全架构和高效的仿真验证方法正在成为焦点。话不多说，让我们立即进入今天的早报时间。
+
+1. OpenAI unveils its first custom chip, built by Broadcom（来源：Hacker News）
+   应用分析：虽然不是直接用于电动助力转向（EPS）的边缘AI芯片，但这一趋势表明，AI模型一旦成熟并需要大规模部署，定制化硬件是必然选择。对于我们EPS团队，如果未来AI控制算法（例如基于神经网络的观测器或控制器）被证明能显著提升性能或鲁棒性，那么考虑与芯片供应商合作开发或定制专门用于电机控制AI推理的低功耗、高效率微控制器或专用集成电路模块，将是提升产品竞争力的关键。短期内我们主要依赖现有微控制器进行嵌入式AI算法部署，但值得长期关注和适度投入预研。可以在下一代EPS控制器平台规划时，预留支持异构计算或可编程逻辑的接口，为未来集成定制AI加速模块做准备。
+   https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/
+
+2. Neuro-Symbolic Drive: Rule-Grounded Faithful Reasoning for Driving VLAs（来源：arXiv cs.AI）
+   应用分析：这个框架对我们EPS的助力策略和手感调校具有极强的借鉴意义。目前，助力策略大量依赖专家经验和基于规则的标定。如果能将驾驶员意图、路况感知与EPS的输出扭矩、阻尼/回正力矩之间建立可解释的“神经符号”关联，将极大提升助力策略的智能性和可调校性。例如，可以用视觉语言模型感知当前驾驶场景，并结合预设的转向规则，生成可解释的助力决策。这完全可以借鉴并值得重点投入。短期内可在模型化设计与仿真环境中尝试，长期目标是开发一套能自我解释、自我诊断的智能助力控制系统，特别是在线控转向（Steer-by-Wire）中，这种可解释性对功能安全认证至关重要。
+   https://arxiv.org/abs/2606.23938
+
+3. Data-Driven Robust MPC for Unknown Nonlinear Systems via Set-Membership Learning（来源：arXiv eess.SY 控制系统）
+   应用分析：这项研究非常有用，直接契合我们“电机控制策略的性能与鲁棒性提升”以及“用AI/数据驱动方法改进控制”的目标。我们可以利用车辆台架测试或整车标定过程中收集的EPS输入输出数据，通过集合成员学习来辨识EPS电机或整个转向系统的非线性动态模型及其不确定性边界。然后将这个数据驱动的鲁棒MPC应用于电机磁场定向控制（FOC）的扭矩脉动抑制、噪声、振动与声振粗糙度（NVH）优化，或作为助力策略的顶层控制器，以自适应地补偿温漂、参数变化等。这值得高度投入，是数据驱动和AI控制方法落地到EPS的关键技术之一。可以从MATLAB/Simulink仿真开始验证。
+   https://arxiv.org/abs/2606.24316
+
+4. Valeo’s new 48 V eAxle replaces mechanical 4×4 drive on Dacia’s hybrid vehicles（来源：Charged EVs）
+   应用分析：虽然是电驱桥而非电动助力转向（EPS），但其分布式驱动、48伏系统以及取代机械结构的设计理念，与线控转向（Steer-by-Wire）的发展方向高度契合。线控转向的目标之一就是取消机械连接，用电机实现转向功能。我们可以从电驱桥的功率级设计、电机选型（如永磁同步电机）、控制策略以及功能安全集成方面学习经验。特别是48伏系统的应用，可能为EPS在未来集成更多辅助功能（如转向冗余、主动回正）提供了低压平台上的可能性。这不是一个直接的技术应用，但代表了汽车电气化和架构演进的大方向，值得密切关注。
+   https://chargedevs.com/newswire/valeos-new-48-v-eaxle-replaces-mechanical-4x4-drive-on-dacias-hybrid-vehicles/
+
+5. Vishay’s new 1,200 V hyperfast rectifiers cut switching losses（来源：Charged EVs）
+   应用分析：这款产品直接可用。虽然EPS目前主要工作在12伏或48伏，但随着线控转向和更集成化的底盘系统发展，以及未来车辆高压系统的普及，EPS功率级对高压、高效率功率器件的需求会增加。这些超快整流器可以用于EPS的功率级（如逆变器、直流对直流转换器）设计，特别是对于追求更高效率、更低发热、更紧凑尺寸的下一代EPS控制器。降低开关损耗意味着更小的散热器、更高的功率密度，甚至可以提升电机控制的开关频率，从而改善电流纹波和噪声、振动与声振粗糙度（NVH）性能。这值得立即关注和评估。
+   https://chargedevs.com/newswire/vishays-new-1200-v-hyperfast-rectifiers-cut-switching-losses/
+
+6. Verifiable Foundation Models for Robot Safety（来源：arXiv cs.RO）
+   应用分析：这种分层安全架构对线控转向（Steer-by-Wire）系统设计具有极强的借鉴意义。线控转向需要最高级别的功能安全（ASIL D），任何AI算法的引入都必须考虑其可验证性。我们可以将复杂的AI助力决策或路径规划算法视为“控制器”，而将底层的扭矩/角度控制、故障诊断、冗余切换等安全关键功能封装在独立的、可形式化验证的“安全模块”中。例如，一个“安全模块”可以独立监测转向角、扭矩传感器、电机电流等低维数据，确保转向系统始终在安全包络内运行，并在“控制器”输出异常时进行降级或接管。这值得高度投入和深入研究，是解决线控转向中AI应用功能安全挑战的关键思路。
+   https://arxiv.org/abs/2606.23754
+
+7. Sim-to-Real Betting on the E-Process: Bringing "simulators" to anytime-valid confidence sequences（来源：arXiv cs.RO）
+   应用分析：这项研究完全可以用于EPS和线控转向系统的验证。我们目前在模型在环（MIL）、软件在环（SIL）和硬件在环（HIL）以及台架测试中进行大量仿真验证，但如何评估仿真结果的“真实世界”置信度一直是个难题。通过引入这种“投注法”和置信序列，我们可以更科学地评估EPS电机控制算法（如扭矩脉动抑制效果）、助力曲线或手感调校参数在仿真环境中的表现，并预测其在真实车辆上的性能范围。例如，在HIL测试中，我们可以实时监测关键性能指标，并根据该方法提供的置信区间，决定何时可以结束测试或需要调整参数。这值得中等偏上投入，能够提升我们现有验证流程的科学性和效率。
+   https://arxiv.org/abs/2606.24038</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260625-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260625-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260625-am.mp3" length="2704608" type="audio/mpeg"/>
+      <pubDate>Wed, 24 Jun 2026 22:42:23 +0000</pubDate>
     </item>
   </channel>
 </rss>
