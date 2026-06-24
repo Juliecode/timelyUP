@@ -13,31 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 23 Jun 2026 22:42:03 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 04:23:11 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>专题 · 电机电流采样：单电阻与三电阻方案的攻防战</title>
-      <description>本期专题：电机单电阻采样方案和三电阻采样主要攻克难点的不同，后者提升占空比和电压利用率方面，前者是什么
-
-1. FOC矢量控制依赖精确的电机电流反馈，这是电机控制的核心。（来源：专题讲解）
-
-2. 三电阻采样方案通过独立测量各相电流，能实现接近0%到100%的全占空比范围，从而最大化电压利用率。（来源：专题讲解）
-
-3. 单电阻采样方案通过单个电阻重构各相电流，成本低但面临挑战，尤其是在极端占空比（接近0%或100%）时难以准确采样，形成“盲区”。（来源：专题讲解）
-
-4. 单电阻方案的“盲区”限制了有效占空比范围，导致其在极端工况下牺牲一部分电压利用率，影响低速精度和高速弱磁性能。（来源：专题讲解）
-
-5. EPS工程师需在成本与性能间权衡，通过先进算法（如电流重构、优化PWM、状态观测器）克服单电阻方案的局限，提升转矩脉动、NVH、弱磁控制及功能安全。（来源：专题讲解）
-
-6. 选择何种方案是工程上的权衡，单电阻方案要求更精巧的软件算法来弥补硬件劣势，以实现精准控制。（来源：专题讲解）</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260611-topic-060043.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260611-topic-060043.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260611-topic-060043.mp3" length="2603376" type="audio/mpeg"/>
-      <pubDate>Wed, 10 Jun 2026 22:01:13 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI、汽车与机器人：EPS工程师的今日洞察</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人三大领域，为大家精选了7条最有价值的资讯。从时间序列的“语言化”，到自动驾驶中的不确定性感知，再到机器人控制与SiC功率器件的突破，每一条都可能为我们汽车EPS系统的未来发展带来新的思路和机会。让我们一起深入分析，看看这些前沿技术如何能落地到我们的日常工作中。
@@ -1098,6 +1078,24 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260624-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260624-am.mp3" length="2441952" type="audio/mpeg"/>
       <pubDate>Tue, 23 Jun 2026 22:42:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>专题 · Claude Tag：提升AI交互效率的结构化利器</title>
+      <description>本期专题：介绍Claude tag的应用
+
+1. Claude tag是一种利用类似XML标签的语法，结构化输入信息以指导AI模型理解和响应的技术。（来源：专题讲解）
+
+2. 其核心原理在于通过清晰地划分和定义信息块，帮助模型更好地理解用户意图，从而提高响应的准确性和相关性。（来源：专题讲解）
+
+3. 应用Claude tag可以显著提升响应质量、实现复杂的任务和多轮对话管理，并增强对模型输出格式的控制。（来源：专题讲解）
+
+4. 标签还可用于赋予AI模型特定角色，引导其以特定视角或风格进行回应。（来源：专题讲解）
+
+5. 它是高级提示工程的推荐实践，能有效减少“跑题”和“幻觉”，是与AI高效沟通的重要思维方式。（来源：专题讲解）</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260624-topic-122230.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260624-topic-122230.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260624-topic-122230.mp3" length="1552464" type="audio/mpeg"/>
+      <pubDate>Wed, 24 Jun 2026 04:23:11 +0000</pubDate>
     </item>
   </channel>
 </rss>
