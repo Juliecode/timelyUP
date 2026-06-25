@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 25 Jun 2026 09:43:49 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 22:43:26 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI赋能转向，智驾安全前瞻：研发工程师早报</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最值得关注的重磅资讯。从AI如何提升自动驾驶的预判安全性，到大型语言模型如何重塑控制系统，再到电动汽车核心部件的最新技术进展，以及机器人领域对我们EPS电机控制的启发，内容非常丰富。希望今天的早报能为您一天的工作带来新的思考和灵感。
-
-1. Seeing Before Colliding: Anticipatory Safe RL with Frozen Vision-Language Models（来源：arXiv cs.LG）
-   应用分析：这项研究对我们EPS工程师来说非常重要，尤其是在线控转向（Steer-by-Wire, SBW）系统的安全设计上。我们可以考虑将VLM-Safe-RL的理念引入车辆的路径规划和避障决策层。比如，训练一个VLM来实时分析复杂的路况信息，像识别前方施工区域、突然出现的行人，并预测这些情况对车辆轨迹的潜在影响。这些预测可以转化为EPS控制器的高级安全约束，动态调整助力策略或在紧急情况下触发更保守的转向干预。这有助于提升SBW系统的整体功能安全等级和用户信任度。投入预研是非常值得的，这能帮助我们了解如何将AI的前瞻性安全能力融入到EPS控制链中，与上层决策团队协同，共同提升系统鲁棒性。
-   https://arxiv.org/abs/2606.11266
-
-2. Agentic MPC for Semantic Control System Resynthesis（来源：arXiv eess.SY 控制系统）
-   应用分析：这项技术在EPS系统中具有巨大潜力，尤其是在手感调校和助力策略的个性化、自适应方面。设想一下，驾驶员可以通过自然语言指令表达“今天我想转向更轻柔一些”或者“高速行驶时希望转向更稳重”，LLM代理可以解析这些语义，并将其转化为MPC的动态约束或目标函数调整，实时优化转向比、阻尼感和回正力矩等参数。对于未来的线控转向系统，这能实现高度个性化且安全可靠的转向体验。虽然实时性、鲁棒性和可解释性是挑战，但其带来的自适应控制能力是未来汽车智能化竞争力的核心。建议先从离线模拟或半实物仿真进行概念验证，逐步探索落地可能性，长期投入非常有价值。
-   https://arxiv.org/abs/2606.12774
-
-3. Physics-informed generative AI for semiconductor manufacturing: Enforcing hard physical constraints in generative models by construction（来源：arXiv cs.LG）
-   应用分析：这是未来将AI引入EPS控制算法设计和优化的重要指导原则。在开发FOC参数优化、转矩脉动抑制算法或无传感器控制状态观测器时，我们可以借鉴物理信息生成式AI的理念。这意味着在构建AI模型时，不仅要考虑数据驱动的优化，更要将电机的电气方程、机械约束、电流电压限制等硬性物理约束作为先验知识或硬约束嵌入到AI模型的架构或训练过程中。例如，在生成新的控制参数组合时，确保它们不会导致电机过载或系统失稳。这项投入非常值得，它能解决将AI引入安全攸关控制系统时人们对其“黑箱”特性和物理不一致性的担忧，从而加速AI控制算法的工程化落地。
-   https://arxiv.org/abs/2606.11247
-
-4. Mercedes-Benz begins volume production of axial flux electric motor（来源：Charged EVs）
-   应用分析：这项技术虽然主要用于电动汽车的驱动电机，但对我们EPS电机研发同样具有间接但重要的参考价值。目前EPS电机以径向磁通为主，但轴向磁通电机在功率密度、紧凑性、NVH和效率上的优势，可能会促使其未来在EPS领域得到应用，尤其是在线控转向（SBW）系统需要更小、更集成、更高性能的执行器时。我们可以深入研究轴向磁通电机的设计原理、制造工艺、控制特性（如FOC控制、转矩脉动抑制）与传统径向磁通电机的异同，了解其NVH特性和热管理挑战。这项投入值得进行预研和技术跟踪，为未来EPS电机选型和设计提供新的思路。
-   https://chargedevs.com/newswire/mercedes-benz-begins-volume-production-of-axial-flux-electric-motor/
-
-5. JEDEC Publishes New SiC Evaluation and Reliability Guidelines（来源：Power Electronics News）
-   应用分析：这些JEDEC指南对我们EPS控制器硬件设计和功能安全认证具有直接的指导意义。EPS控制器中的功率级（H桥）是电机驱动的核心，随着电压平台向800V演进，以及对效率、紧凑性的更高要求，SiC器件在EPS功率级中的应用将越来越普遍。我们必须依据这些指南，重新审视和优化SiC器件的可靠性测试方案、短路保护策略、热管理设计，并将其纳入ISO 26262功能安全分析（如FMEA、FTA）中，确保功率级在各种工况和故障模式下的安全性和鲁棒性。与供应商沟通SiC器件的质量和可靠性时，这些标准化的语言也至关重要。这项投入是必须的，它是功能安全和产品质量的基石。
-   https://www.powerelectronicsnews.com/jedec-publishes-new-sic-evaluation-and-reliability-guidelines/
-
-6. Stubborn: A Streamlined and Unified Reinforcement Learning Framework for Robust Motion Tracking and Fall Recovery for Humanoids（来源：arXiv cs.RO）
-   应用分析：这项研究对我们EPS电机控制，特别是线控转向的鲁棒控制，具有很强的借鉴意义。EPS电机控制，如FOC、无传感器控制和转矩脉动抑制，本质上也是一个高动态、非线性系统的运动跟踪问题。Stubborn框架中用于提升鲁棒性和在不稳定状态下探索的RL技术，可以直接迁移到EPS电机控制策略的优化中。例如，我们可以将EPS电机在极端工况（如高温、低摩擦、负载突变）下的转矩响应、NVH表现作为RL的奖励函数，利用类似Stubborn的统一RL框架来学习更鲁棒的控制参数或自适应控制律。在线控转向中，当系统面临传感器失效、执行器故障等不稳定状态时，RL的跌倒恢复能力可以转化为“降级运行”或“故障容错”策略。这项研究值得投入，作为AI/数据驱动方法改进电机控制策略性能与鲁棒性的重要方向。
-   https://arxiv.org/abs/2606.12814
-
-7. G-MAPP: GPU-accelerated Multi-Agent Planning and Perception for Reactive Motion Generation（来源：arXiv cs.RO）
-   应用分析：这项研究对线控转向系统至关重要，因为车辆的路径规划和运动控制需要极高的实时性和精度。G-MAPP的GPU加速理念可以直接应用到SBW的决策与控制层。我们可以考虑如何将车辆周边环境感知（如激光雷达、摄像头数据）的GPU加速处理集成到我们的系统中，快速构建高精度的局部环境模型，并利用GPU进行实时的多智能体行为预测和避障路径规划。EPS控制器将接收这些由GPU加速生成的实时路径指令和安全约束，并以极低的延迟执行。此外，在电机控制策略中，如模型预测控制（MPC），其计算量也可能受益于GPU加速。这项投入非常值得，实时计算能力是未来高级自动驾驶和线控转向的关键瓶颈之一，GPU加速是解决这一瓶颈的有效途径。我们需要了解并适应上层系统对实时性、数据吞吐量和接口的要求。
-   https://arxiv.org/abs/2606.12579</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260612-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260612-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260612-pm.mp3" length="3577824" type="audio/mpeg"/>
-      <pubDate>Fri, 12 Jun 2026 09:42:37 +0000</pubDate>
-    </item>
     <item>
       <title>专题 · 深入浅出：探秘“Harness”在技术中的应用</title>
       <description>本期专题：讲解下harness的应用
@@ -1067,6 +1031,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260625-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260625-pm.mp3" length="4735872" type="audio/mpeg"/>
       <pubDate>Thu, 25 Jun 2026 09:43:49 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI与智能出行前沿：七大技术洞察</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，精选出七条对我们EPS产品研发工程师工作最有启发和实际应用价值的重磅资讯。从AI的信任与安全，到嵌入式AI的自适应优化，再到机器人电机控制的最新突破，以及汽车电源管理和传感器融合的演进，相信今天的分享能为您的研发工作带来一些新的思考和方向。
+
+1. The Clinician's Veto: Navigating Trust, Liability, and Uncertainty in Autonomous AI Prescribing（来源：arXiv cs.AI）
+   应用分析：我们可以在EPS中引入AI模型时，借鉴这些原则。例如，AI模型输出的决策应附带其置信度，以便系统根据高低决定是否采纳或触发人工干预。同时，要区分AI模型因数据不足或系统固有随机性导致的不确定性，并建立AI决策的“可解释性”机制，例如，当AI决定改变助力曲线时，系统能解释其基于哪些输入做出的判断。这对于故障排查、功能安全审计和责任划分至关重要。这是未来线控转向和AI驱动控制系统实现功能安全和市场接受度的基石，非常值得投入。
+   https://arxiv.org/abs/2606.25108
+
+2. When Do Conservation Laws Survive Learned Representations? Certified Horizons for Latent World Models（来源：arXiv cs.LG）
+   应用分析：这项技术在线控转向这类解耦物理连接的系统中尤其有用。我们可以在开发基于AI的电机控制策略或助力手感模型时，利用这种“认证地平线”方法，评估AI模型在预测未来状态时，其对能量守恒、转矩平衡等物理定律的遵守程度。将这种机制集成到MIL/SIL/HIL验证中，自动检测模型是否违反物理定律，从而发现安全隐患。通过在训练中引入物理守恒作为软约束，并结合认证方法优化，可提升模型的物理鲁棒性。这是确保AI控制系统在安全关键应用中可靠性的关键，值得投入。
+   https://arxiv.org/abs/2606.24945
+
+3. On-Device Neural Architecture Search（来源：arXiv cs.LG）
+   应用分析：这项技术对EPS的嵌入式控制非常有潜力。我们可以利用On-Device NAS解决模型部署后的性能优化和适应性问题，例如针对不同批次电机个体差异或长期运行后的参数漂移，自适应优化电机控制中的神经网络模型。在故障诊断方面，控制器可以根据实时传感器数据，自动搜索并部署最适合当前工况的故障诊断模型，提高诊断的准确性和实时性。此外，这还有助于减少复杂的模型化标定工作，实现真正的“自适应”和“自优化”控制器。这是未来嵌入式AI在汽车控制领域的新范式，值得深入研究。
+   https://arxiv.org/abs/2606.24900
+
+4. RGB: RL Guided Whole-Body MPPI for Humanoid Control（来源：arXiv cs.RO）
+   应用分析：这是将前沿机器人控制技术迁移到EPS电机控制的绝佳案例。我们可以将FOC、弱磁控制等传统策略作为MPPI的“采样先验”，然后通过MPPI的模块化成本函数（例如，转矩纹波最小化、效率最大化、NVH抑制等），在线优化控制指令，实现更精细、更鲁棒的电机转矩输出。这也能用于助力手感调校，实现更自然、更个性化的转向手感。在线控转向执行器控制中，这种RL+MPPI组合可以实现高精度、高鲁棒性的协同控制。这代表了未来电机控制和高级助力策略的发展方向，能有效解决传统FOC在复杂工况下的局限性，提升EPS系统的性能和用户体验，也是线控转向技术落地的关键一环，非常值得投入。
+   https://arxiv.org/abs/2606.25123
+
+5. ADM-Fusion: Adaptive Deep Multi-Sensor Fusion for Robust Ego-Motion Estimation in Diverse Conditions（来源：arXiv cs.RO）
+   应用分析：这项技术在线控转向和高级驾驶辅助系统（ADAS）中至关重要。我们可以将ADM-Fusion应用于车辆的自身运动估计模块，为线控转向系统提供更稳定、更准确的车辆速度、姿态和位置信息。这对于助力策略的精准匹配、车道保持/居中功能等至关重要。其自适应特性可作为智能的传感器故障检测和降级策略，提升功能安全等级。准确的自身运动信息结合路面感知，还能更好地还原路感。这是提升线控转向和自动驾驶系统安全性和性能的关键技术，值得投入。
+   https://arxiv.org/abs/2606.25111
+
+6. FAULHABER focuses on torque, noise, and power with new GPT gearheads（来源：The Robot Report）
+   应用分析：这是我们进行EPS电机和减速器选型、定制化设计时的重要参考。我们可以关注新型齿轮箱的设计理念和材料技术，例如如何实现高扭矩密度同时降低NVH，这些技术可能应用于PMSM永磁同步电机的结构优化或减速器方案改进。了解其噪声抑制细节，可以为我们改进EPS的NVH性能提供思路。更高的功率密度对于C-EPS、DP-EPS等对空间有严格限制的EPS类型尤为重要，有助于实现更紧凑的系统设计。虽然FAULHABER可能不直接是我们的供应商，但其技术方向对整个精密驱动行业具有指导意义，值得关注和投入。
+   https://www.therobotreport.com/faulhaber-focuses-torque-noise-power-new-gpt-gearheads/
+
+7. PCIM 2026: CGD’s Fabio Necco on Monolithic GaN Integration and the Startup Advantage（来源：Power Electronics News）
+   应用分析：GaN是未来EPS功率级发展的必然趋势，我们必须积极评估和导入单片集成GaN器件。这有助于我们设计出更小、更轻、效率更高的EPS控制器，降低发热量，简化散热设计，并支持更高的开关频率，进一步降低电机电流纹波，改善NVH性能。同时，关注GaN器件的成本趋势和可靠性数据，单片集成有望降低BOM成本和PCB面积，提升可靠性。在线控转向系统中，电源系统的冗余和高效率至关重要，GaN器件的高功率密度和高效率特性使其成为构建紧凑、高效且具备冗余能力的功率级模块的理想选择。尽早进行技术储备和产品验证，将为我们的EPS产品带来显著竞争优势，必须投入。
+   https://www.powerelectronicsnews.com/pcim-2026-cgds-fabio-necco-on-monolithic-gan-integration-and-the-startup-advantage/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260626-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260626-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260626-am.mp3" length="4350384" type="audio/mpeg"/>
+      <pubDate>Thu, 25 Jun 2026 22:43:26 +0000</pubDate>
     </item>
   </channel>
 </rss>
