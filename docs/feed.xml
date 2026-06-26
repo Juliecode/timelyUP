@@ -13,31 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 25 Jun 2026 22:43:26 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 09:42:41 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>专题 · 深入浅出：探秘“Harness”在技术中的应用</title>
-      <description>本期专题：讲解下harness的应用
-
-1. 技术领域的Harness是一种控制性、辅助性的环境或框架，用于为特定组件提供受控的运行舞台。（来源：专题讲解）
-
-2. 其核心原理是隔离目标组件，通过驱动器、桩、模拟对象和适配器，模拟外部依赖，提供输入并验证输出。（来源：专题讲解）
-
-3. Harness是各种软件测试（如单元测试、集成测试、系统测试）的基石，确保代码和系统功能的正确性。（来源：专题讲解）
-
-4. 它能显著加速开发和调试过程，支持并行开发，并高效复现和解决问题。（来源：专题讲解）
-
-5. 在系统集成与现代化改造中，Harness可作为桥梁或适配层，促进新老系统的平滑过渡。（来源：专题讲解）
-
-6. Harness在航空、工业控制等高风险领域用于复杂系统的仿真与训练，降低成本和风险。（来源：专题讲解）</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260613-topic-055736.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260613-topic-055736.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260613-topic-055736.mp3" length="1682064" type="audio/mpeg"/>
-      <pubDate>Fri, 12 Jun 2026 21:57:56 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 科技早报：AI赋能物理系统，智能汽车与机器人控制新突破</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化以及机器人领域，为大家精选出七条最值得关注的重磅资讯。从AI如何融入物理世界的精确控制，到智能汽车的模拟与决策，再到机器人更鲁棒、更精细的动作执行，每一项进展都可能为我们的日常研发工作带来新的灵感和解决方案。话不多说，让我们马上进入今天的早报时间。
@@ -1067,6 +1047,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260626-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260626-am.mp3" length="4350384" type="audio/mpeg"/>
       <pubDate>Thu, 25 Jun 2026 22:43:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI、智能汽车与机器人前沿：EPS工程师的今日洞察</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，从中精选出七条最值得关注的资讯。我将结合我们EPS电动助力转向系统研发工程师的视角，为大家深入分析这些技术对我们工作可能带来的影响和应用价值。希望今天的分享能为大家带来新的启发，让我们在技术演进的浪潮中，始终保持敏锐的洞察力。
+
+1. \chisao{}: A GPU-Native Parallel Optimizer for Multimodal Black-Box Functions via Convergence-Anticonvergence Oscillation（来源：arXiv cs.LG）
+   应用分析：这项技术对我们解决EPS电机控制策略的性能与鲁棒性提升问题非常有价值。例如，在FOC矢量控制、无传感器控制、弱磁控制以及转矩脉动、纹波/抖动抑制等算法的参数标定中，我们可以利用\chisao{}（读作“奇骚”）这类并行优化器，在GPU上加速参数空间的探索。它能帮助我们更快速、更系统地找到最优参数组合，有效抑制转矩脉动和噪声，甚至应对温漂问题。其“冻结”已确认最优模式的特性，也能避免重复计算，提高我们基于模型标定的效率，将前沿的优化算法快速转化为可落地的工程方案。
+   https://arxiv.org/abs/2606.26164
+
+2. Patronus AI lands $50M to build ‘digital worlds’ that stress-test AI agents（来源：TechCrunch）
+   应用分析：对于EPS系统向线控转向演进，以及未来AI驱动的助力策略或故障诊断模块，我们需要确保AI智能体在各种复杂工况、环境扰动甚至潜在的恶意攻击下都能稳定可靠运行。利用Patronus AI这类“数字世界”平台，我们可以构建EPS系统的数字孪生，模拟极端驾驶场景、传感器故障、系统降级等情况，对AI控制器进行大规模、高强度的压力测试，验证其是否满足ISO 26262功能安全标准。这不仅能加速AI控制算法的验证周期，还能帮助我们发现潜在的边缘案例，提升系统的整体安全性，并为AI驱动的故障诊断和预测性维护提供强大的验证工具。
+   https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-that-stress-test-ai-agents/
+
+3. Fast LeWorldModel（来源：arXiv cs.LG）
+   应用分析：在线控转向系统（Steer-by-Wire）或更高级别的自动驾驶功能中，EPS系统需要与车辆的路径规划和运动控制系统深度协同。Fast LeWorldModel提供的快速、低误差累积的预测能力，有望应用于线控转向系统的路径跟踪和运动预测模块。例如，我们可以利用它来预测车辆在不同转向指令下的未来轨迹和姿态，从而优化助力策略，提升转向手感和响应速度。它还可以为我们正在研究的无传感器控制方案提供更精确的车辆状态预测模型，增强鲁棒性。此外，对于EPS的故障诊断和预测性维护，一个高效、准确的世界模型也能帮助我们更好地预测系统未来的健康状况，提前发现潜在问题。
+   https://arxiv.org/abs/2606.26217
+
+4. Battery thermal-safety reserve erosion by mandatory cabin ventilation in shared-cooling electric vehicles（来源：arXiv eess.SY 控制系统）
+   应用分析：虽然EPS系统本身不直接进行电池热管理，但作为整车功耗的一部分，其电机和控制器产生的热量也需要散热。这项研究提醒我们，在设计EPS系统时，必须更深入地理解整车热管理策略，尤其是在高温、高负载工况下。我们可以主动与整车热管理团队协同，优化EPS电机和控制器的散热设计，确保在极端条件下（如电池热安全储备受侵蚀时）EPS仍能稳定工作，避免因过热导致性能下降或功能降级，从而影响整车功能安全。在系统架构设计时，也应考虑冷却资源的优先级分配，确保包括EPS在内的安全关键部件的热管理需求得到充分满足，这对于ISO 26262功能安全设计至关重要。
+   https://arxiv.org/abs/2606.26932
+
+5. Nio's energy arm signs deal with Zhongan to build 500 swap stations（来源：CnEVPost）
+   应用分析：换电模式意味着车辆电池包的快速插拔和标准化。这要求EPS系统在整车电气架构设计中，考虑电池包更换对供电稳定性、电压波动以及系统唤醒和休眠机制的影响。我们需要确保EPS在换电过程中能够安全、快速地完成初始化和自检，并在电池更换后，转向系统能立即恢复正常功能。同时，换电模式可能加速电池技术的迭代，EPS在电机选型和控制器设计时，需要保持对不同电池电压平台和功率输出特性的兼容性与适应性，以支持未来的产品升级和平台化战略。这对于提升EPS的成本竞争力，以及为线控转向（Steer-by-Wire）系统提供更灵活的电源管理方案都具有参考价值。
+   https://cnevpost.com/2026/06/26/nio-power-zhongan-500-swap-stations/
+
+6. Racing a Wheeled Quadruped: Active Load Transfer Mitigation via Model Predictive Control（来源：arXiv cs.RO）
+   应用分析：EPS系统在车辆动态控制中扮演着关键角色，尤其是在向线控转向演进的背景下。这项研究中MPC和RL策略在主动载荷转移抑制方面的成功应用，可以启发我们设计更先进的助力策略。例如，通过预测车辆的运动状态和驾驶员意图，EPS可以与主动悬架、电控制动系统协同，提前调整转向助力，甚至在一定程度上通过转向系统输出反向力矩，主动抵消侧倾力矩。这有望显著提升车辆在高速转弯或紧急避险时的操控稳定性、乘坐舒适性和安全性，改善路感还原。这正是我们特别关注机器人/人形机器人关节执行器、伺服电机控制与EPS电机控制技术互相迁移的重要交叉点，值得我们深入研究并将其快速转化为EPS的工程方案。
+   https://arxiv.org/abs/2606.26313
+
+7. Xpeng overhauls robotics unit, adds nine departments in production push（来源：CnEVPost）
+   应用分析：小鹏汽车的这一战略举动，进一步印证了我们对汽车与机器人技术交叉点的关注。这意味着我们可以从机器人领域，特别是人形机器人关节执行器、伺服电机控制、多自由度运动控制等方面，学习并借鉴其在PMSM永磁同步电机选型、FOC矢量控制、高精度位置/力矩控制、转矩密度提升、效率优化以及NVH抑制等方面的最新进展。这些技术可以直接应用于EPS电机的优化和控制策略的改进，以实现更优异的转向手感和更低的噪声。此外，机器人领域在无传感器/冗余传感方案、功能安全设计（如ISO 26262）方面的探索，也能为EPS系统提升安全性和成本竞争力提供新的思路和工程实践经验。这是一个值得我们持续投入和快速转化的方向。
+   https://cnevpost.com/2026/06/26/xpeng-overhauls-robotics-unit-production-push/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260626-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260626-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260626-pm.mp3" length="3752064" type="audio/mpeg"/>
+      <pubDate>Fri, 26 Jun 2026 09:42:40 +0000</pubDate>
     </item>
   </channel>
 </rss>
