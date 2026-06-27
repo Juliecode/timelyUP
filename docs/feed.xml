@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 26 Jun 2026 22:42:53 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2026 09:42:18 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI赋能工程设计，无稀土电机与线控转向新机遇</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。从AI如何成为您的“通用工程师”，到无稀土电机的突破，再到线控转向和机器人执行器的最新进展，每一条都可能深刻影响您的研发工作。准备好了吗？让我们一起开启今天的科技之旅！
-
-1. Jeff Bezos’ AI startup aims to build an ‘artificial general engineer’（来源：The Verge）
-   应用分析：对我们EPS研发来说，这意味着AI能成为设计流程中的“共同创造者”。我们可以探索用AI优化EPS结构设计（如减重、散热、NVH）、电机磁路设计（提升转矩密度、降低转矩脉动），甚至自动生成部分功能安全文档。例如，让AI根据不同车辆平台自动生成电机参数和绕组方案。长期来看，这是颠覆性趋势，能将模型化设计推向新高度。短期可从AI辅助参数寻优开始投入。
-   https://www.theverge.com/ai-artificial-intelligence/949005/jeff-bezos-prometheus-artificial-general-engineer
-
-2. Award-Winning Researcher Trains Robots to Make Educated Guesses（来源：IEEE Spectrum）
-   应用分析：对于EPS和线控转向，这种能力至关重要。在无传感器或冗余传感方案中，AI可基于现有信息“猜测”电机转子位置、车辆状态或驾驶员意图，维持助力或安全降级。这有助于提升系统鲁棒性和功能安全等级。例如，在极端工况下，AI能为无传感器FOC控制提供更智能的辅助决策。这是提升EPS智能性、鲁棒性及降低传感器成本的潜在方向，值得深入研究，可从MPC结合机器学习构建不确定性状态观测器入手。
-   https://spectrum.ieee.org/researcher-trains-robots-to-guess
-
-3. Electric motors with no rare earths（来源：Hacker News）
-   应用分析：这对EPS的电机选型和控制策略是直接影响。稀土成本和供应风险促使我们寻找替代方案。无稀土电机（如同步磁阻电机）若能达到PMSM性能，将极具吸引力。我们需要提前研究其特性、控制难度，以及对FOC矢量控制、弱磁控制和转矩脉动抑制的挑战。例如，同步磁阻电机的转矩脉动可能更复杂，需先进纹波抑制策略。这是未来EPS电机发展的重要趋势，关系到成本竞争力，必须投入预研。
-   https://www.renaultgroup.com/en/magazine/energy-and-powertrains/all-about-electric-motors-with-no-rare-earths/
-
-4. PEAK Goes Automotive Ethernet: PAE-Media Converter connects 100/1000BASE-T1 with Standard Ethernet（来源：EE Times）
-   应用分析：对于线控转向的功能安全设计，这是不可或缺的基础设施。线控转向需要极高带宽和实时性，汽车以太网是必然选择。这款转换器及其故障模拟功能，能让咱们在HIL和台架测试中，真实模拟网络故障，验证EPS的故障诊断与降级策略，确保ISO 26262功能安全达标。这对于设计冗余通信链路至关重要。这是线控转向研发的必备工具，必须投入，并研究其在EPS系统中的应用。
-   https://www.eetimes.com/peak-goes-automotive-ethernet-pae-media-converter-connects-100-1000base-t1-with-standard-ethernet/
-
-5. Robotics Summit panel explores the state of humanoid robot design（来源：The Robot Report）
-   应用分析：人形机器人关节执行器技术与EPS电机控制高度同源，可互相迁移。为实现低成本高性能，人形机器人对伺服电机、减速器和集成控制提出了极高要求。我们可以借鉴其在电机选型、FOC矢量控制优化（更低转矩脉动、更高动态响应）、无传感器控制鲁棒性提升、以及高集成度设计方面的经验。这能启发我们优化EPS助力手感、路感还原和NVH表现。这是机器人执行器控制的前沿，其技术突破直接赋能EPS，非常值得投入关注和合作。
-   https://www.therobotreport.com/robotics-summit-panel-explores-state-humanoid-robot-design/
-
-6. SOLiTHOR’s solid-state electrolyte hits 465 Wh/kg at stack level, passes nail penetration test（来源：Charged EVs）
-   应用分析：虽然不直接影响EPS控制，但固态电池普及将深刻影响整车EE架构和EPS运行环境。更高能量密度意味着更轻电池包和更长续航，可能改变整车重量分布、底盘设计和动力学特性，进而影响EPS助力策略和手感调校。高安全性也可能简化热管理系统。我们需要了解其特性，以便整车协同优化。若未来线控转向需自带小容量冗余电源，高性能小型固态电池也是备选。我们应保持密切关注。
-   https://chargedevs.com/newswire/solithors-solid-state-electrolyte-hits-465-wh-kg-at-stack-level-passes-nail-penetration-test/
-
-7. Ukraine's one-time test used fully autonomous drones to kill Russian soldiers（来源：Ars Technica）
-   应用分析：尽管背景是军事，但“完全自主”和“AI模块”在机器人和无人机上的应用，对于探索线控转向的自主控制、冗余安全以及AI在故障诊断和预测性维护中的应用，提供了宝贵参考。AI在极端条件下的鲁棒性控制、传感器融合、执行器控制已达高水平。我们可以借鉴其经验，提升EPS的智能故障诊断（如识别电机异响）、预测性维护，并为L3+自动驾驶车辆中的线控转向提供高级自主安全接管策略。AI模块的轻量化和嵌入式部署也是关注点。值得研究其AI控制框架和鲁棒性设计理念。
-   https://arstechnica.com/ai/2026/06/ukraines-one-time-test-used-fully-autonomous-drones-to-kill-russian-soldiers/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260613-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260613-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260613-pm.mp3" length="2624112" type="audio/mpeg"/>
-      <pubDate>Sat, 13 Jun 2026 09:42:28 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI安全与机器人进阶：EPS研发工程师的每日技术洞察</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选了七条重磅资讯。从AI模型引发的国家安全担忧，到机器人如何“有根据地猜测”，再到汽车以太网和耐高温超级电容器的最新进展，这些都与我们电动助力转向，也就是EPS系统的未来发展息息相关。话不多说，让我们马上开始今天的早报时间。
@@ -1083,6 +1047,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260627-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260627-am.mp3" length="4351680" type="audio/mpeg"/>
       <pubDate>Fri, 26 Jun 2026 22:42:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI前沿、智能汽车与机器人：EPS工程师的今日科技早报</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最值得关注的资讯。内容涵盖了下一代AI模型的进展与监管挑战、AI芯片的底层创新、自动驾驶的安全边界、汽车电子的整合趋势，以及机器人训练数据的新方法。这些资讯不仅能帮助我们把握行业脉搏，更将结合我们EPS研发工程师的视角，深入分析它们对我们日常工作的具体应用和潜在价值。
+
+1. OpenAI 预览新一代模型 GPT-5.6 Sol 并受政府限制推出（来源：Hacker News, TechCrunch）
+   应用分析：GPT-5.6作为通用大模型，可以辅助我们的研发工作，比如代码生成、文档总结、技术方案头脑风暴，甚至辅助进行ISO 26262文档的编写和审查，提升效率。但其受限发布提醒我们，在EPS或线控转向等功能安全要求极高的领域，直接采用外部黑盒AI模型需极其谨慎，需要自研或深度定制，并建立严格的验证和功能安全流程。因此，值得投入了解其能力边界和监管趋势，并在可控范围内探索其辅助研发的潜力。
+   https://openai.com/index/previewing-gpt-5-6-sol/
+
+2. OpenAI 等公司自研 AI 芯片，为人工智能发展提供底层支撑（来源：TechCrunch）
+   应用分析：虽然我们不直接使用这些定制芯片，但这一趋势对我们的电机控制和线控转向有重要指导意义。未来EPS控制器可能需集成更强的边缘AI算力，以支持复杂AI控制策略。因此，值得投入关注。在选择下一代MCU或SoC时，我们要考虑其内置的AI加速单元（NPU）性能，评估能否满足未来AI驱动的无传感器控制、转矩脉动抑制或预测性维护算法的需求。甚至可以探索与芯片厂商合作，共同定义满足EPS功能安全和高性能要求的定制化AI计算模块。
+   https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/
+
+3. 新型AI治理模型：通过机构认证管理高风险自主AI系统行动（来源：arXiv cs.AI）
+   应用分析：这种“行动而非代理”的治理思想非常适用于线控转向（Steer-by-Wire）等安全关键系统。在线控转向中，AI或复杂算法会直接影响车辆的行驶安全。我们可以借鉴这种模式，将转向执行器（EPS）的关键动作（如大角度转向、紧急避障辅助）定义为“高风险行动”。极其值得深入研究和投入。我们可以设计一个框架，要求这些高风险转向动作在执行前，必须经过独立的功能安全模块的“认证”，确保计算结果在安全包络内、符合驾驶员意图。同时，所有关键决策和执行参数都应记录在防篡改日志中，以满足ISO 26262的可追溯性要求，并为故障诊断和事故分析提供依据。这有助于构建线控转向的冗余和功能安全架构，提升系统的透明度和可信赖性。
+   https://arxiv.org/abs/2606.26298
+
+4. 特斯拉 FSD 致命事故达成和解，自动驾驶安全与责任引关注（来源：TechCrunch）
+   应用分析：这不是一个技术方案，而是一个警示案例，但其背后的经验教训可以直接指导我们的研发工作。在EPS向线控转向演进的过程中，功能安全等级会更高（ASIL D）。FSD的案例提醒我们，即使是L2/L2+系统，其故障或误用也可能导致严重后果。必须持续投入。我们需要加强对助力策略、故障诊断、降级模式以及人机交互界面的设计和验证。例如，在开发线控转向的冗余系统时，不仅要考虑硬件冗余，更要关注软件控制策略在各种故障模式下的鲁棒性和平稳切换能力。同时，对驾驶员接管请求的响应时间、驾驶员状态监控以及系统限制下的安全保障机制，都需要进行更严格的测试和标定，确保在任何情况下都能保证转向系统的基本安全功能。
+   https://techcrunch.com/2026/06/26/tesla-settles-fsd-crash-lawsuit-as-federal-investigations-continue/
+
+5. onsemi 收购 Synaptics 拓展AI战略，强化边缘AI、传感和电源技术整合（来源：Power Electronics News, EE Times）
+   应用分析：这项收购虽然不是直接技术，但它指明了未来汽车电子控制器件的发展方向：更紧密的电源、传感和边缘AI计算的整合。对于EPS系统，这意味着我们应关注集成度更高、算力更强、功耗更低的边缘AI芯片。值得投入关注。在EPS控制器硬件设计中，我们可以预见未来MCU会更紧密地集成NPU（神经网络处理单元）和高性能传感接口。我们应与onsemi这类供应商保持沟通，了解其未来产品路线图，尤其是在车规级边缘AI芯片、高精度电流/位置传感器以及功率器件方面的最新进展。这些技术进步可能直接帮助我们实现更先进的无传感器控制、基于AI的转矩脉动抑制和更智能的故障诊断功能，同时优化BOM成本和PCB面积。
+   https://www.powerelectronicsnews.com/onsemi-expands-ai-strategy-with-planned-synaptics-acquisition/
+
+6. Wolfspeed 发布第五代碳化硅技术，推进300毫米晶圆生产以提升电动汽车功率效率（来源：Power Electronics News）
+   应用分析：SiC功率器件直接应用于EPS控制器的功率级，以驱动PMSM电机。更高效率的SiC器件意味着更低的开关损耗、更小的散热需求和更高的功率密度，这有助于减小EPS控制器的体积和重量，提升系统效率。极其值得投入和持续关注。我们应将Wolfspeed的第五代SiC器件纳入我们的功率级设计选型考虑范围。通过采用SiC，我们可以提高逆变器开关频率，从而减小滤波元件尺寸，并可能改善电机控制的响应速度和转矩纹波抑制效果。同时，300毫米晶圆的规模化生产有望降低SiC器件成本，使其在EPS等对成本敏感的系统中更具竞争力。我们需要对SiC器件的驱动、保护以及与MCU的接口进行深入研究，并进行充分的台架和整车验证，确保其在车规级应用中的可靠性和功能安全。
+   https://www.powerelectronicsnews.com/wolfspeed-gen-5-sic-breakthrough-efficiency-built-for-real-world-performance-and-adoption/
+
+7. General Intuition 获3.2亿美元融资，创新性利用视频游戏数据训练机器人（来源：The Robot Report）
+   应用分析：这种利用合成数据训练AI的方法，可以迁移到EPS电机控制领域。我们可以构建高精度的EPS系统仿真模型（如Simulink），模拟各种驾驶场景、路况和电机负载变化，生成带有“理想控制输出”标签的“视频游戏数据”。然后，利用这些合成数据训练基于AI的电机控制器（如强化学习控制器或神经网络观测器）。值得投入尝试和探索。当前EPS控制器的标定效率和鲁棒性提升是痛点。通过仿真数据训练AI模型，可以大幅减少物理台架和整车测试的时间和成本。初期可以从小范围场景（如特定转矩脉动抑制或无传感器启动）开始验证这种方法的有效性。如果效果显著，可以逐步扩展到更复杂的助力策略和故障诊断。这需要我们投入资源构建高质量的仿真环境，并探索有效的“sim-to-real”迁移技术，确保在仿真中学习到的控制策略在真实世界中也能稳定可靠地工作。
+   https://www.therobotreport.com/general-intuition-raises-320m-uses-video-game-data-train-robots/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260627-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260627-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260627-pm.mp3" length="2304864" type="audio/mpeg"/>
+      <pubDate>Sat, 27 Jun 2026 09:42:18 +0000</pubDate>
     </item>
   </channel>
 </rss>
