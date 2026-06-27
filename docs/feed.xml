@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 27 Jun 2026 09:42:18 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2026 22:41:33 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI安全与机器人进阶：EPS研发工程师的每日技术洞察</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选了七条重磅资讯。从AI模型引发的国家安全担忧，到机器人如何“有根据地猜测”，再到汽车以太网和耐高温超级电容器的最新进展，这些都与我们电动助力转向，也就是EPS系统的未来发展息息相关。话不多说，让我们马上开始今天的早报时间。
-
-1. Anthropic cuts off Fable 5 and Mythos 5 access following government order（来源：The Verge）
-   应用分析：作为EPS工程师，我们不能直接将这类大型通用AI模型应用于产品。但是，它揭示的AI安全和监管问题，对我们评估在EPS中引入AI的风险至关重要。在探索用AI改进EPS控制、标定或故障诊断时，我们必须将模型的鲁棒性、可解释性，以及潜在的“对抗性攻击”和“越狱”风险纳入前期研究和功能安全（ISO 26262）分析。尤其是在线控转向这种安全等级极高的系统中，如何确保AI决策的透明度、可审计性，以及在极端情况下的安全降级策略，是我们需要投入大量精力研究和解决的问题。这项投入是长远且必要的，因为它关乎未来汽车AI的落地信任基础。
-   https://www.theverge.com/ai-artificial-intelligence/949553/anthropic-fable-5-mythos-5-government-national-security
-
-2. Police officer investigated for using AI to 'create evidence' in multiple cases（来源：Hacker News）
-   应用分析：这个案例本身不能直接用于EPS，但它告诫我们在将AI引入EPS控制、诊断或标定辅助工具时，必须建立严格的验证和溯源机制。例如，AI生成或辅助生成的任何参数、控制策略、诊断报告，都必须有明确的人工审核流程和底层数据支撑，确保其真实性、可解释性和可追溯性。我们必须避免AI“黑箱”决策，特别是在故障诊断或安全相关的功能中。投入关注这类AI伦理事件，有助于我们更好地设计AI在汽车安全领域的应用规范，提升系统的公信力，这绝对是值得的。
-   https://news.sky.com/story/derbyshire-police-officer-investigated-for-using-ai-to-create-evidence-in-multiple-cases-13553661
-
-3. Award-Winning Researcher Trains Robots to Make Educated Guesses（来源：IEEE Spectrum）
-   应用分析：这种“有根据的猜测”或“不确定性建模”的思路非常值得我们借鉴，可以将其应用于EPS的电机无传感器控制、路况自适应助力调校以及故障诊断。例如，在无传感器控制中，当传感器信息缺失或存在噪声时，我们可以通过AI模型对电机位置和速度进行更智能的估计；在助力策略中，可以根据驾驶员输入、车辆动态和环境信息，动态“猜测”最佳手感和助力曲线，从而提升驾驶体验。这项技术与我们提升电机控制策略性能与鲁棒性、以及无传感器方案的目标高度契合，绝对值得投入研究。我们可以尝试将强化学习或贝叶斯推理等AI方法引入到状态观测器或助力控制器设计中，提升系统在非理想条件下的表现。
-   https://spectrum.ieee.org/researcher-trains-robots-to-guess
-
-4. Windows for robots: Edge AI expands usability（来源：The Robot Report）
-   应用分析：Edge AI的理念和技术栈可以直接用于EPS。我们可以探索将部分AI模型，比如用于转矩脉动抑制的神经网络、用于参数辨识的自适应模型、或用于故障诊断的异常检测模型，部署到EPS控制器MCU上，实现边缘侧的AI计算。这可以显著提升控制器的智能化水平，减少对外部算力的依赖，并提高系统响应速度。例如，通过轻量级神经网络在边缘端实时优化FOC参数，或者实时检测电机异常振动。这项技术与我们“用AI/数据驱动方法改进控制、标定效率、故障诊断与预测性维护”的目标高度一致，是未来提升EPS系统性能和智能化的重要方向，值得大力投入。
-   https://www.therobotreport.com/computers-software-windows-utility-robots/
-
-5. Here's what Jeff Bezos' new startup Prometheus will do（来源：Ars Technica）
-   应用分析：Prometheus的技术本身是外部公司的，但其方向和理念对我们有非常重要的启发。我们可以将“物理AI”的理念应用到线控转向系统的研发中。思考如何利用AI更好地理解和控制转向执行器的物理特性，例如通过AI模型优化电机选型、提升电机控制策略的精度和响应速度、实现更精细的力反馈和路感还原。特别是在线控转向中，AI可以帮助设计更鲁棒的冗余控制和故障诊断机制。这个方向与我们“把前沿研究快速转成可落地的EPS工程方案”以及“线控转向的架构、冗余与功能安全设计”的长期目标高度契合，非常值得我们持续关注和研究。
-   https://arstechnica.com/ai/2026/06/heres-what-jeff-bezos-new-startup-prometheus-will-do/
-
-6. PEAK Goes Automotive Ethernet: PAE-Media Converter connects 100/1000BASE-T1 with Standard Ethernet（来源：EE Times）
-   应用分析：PEAK的PAE-Media Converter是我们可以直接采购和使用的测试工具。在线控转向系统的开发和验证阶段，我们可以利用这款设备进行网络通信的故障注入测试，例如模拟以太网链路中断、数据包丢失或延迟等情况，以验证线控转向控制器在各种网络故障下的响应、降级策略和功能安全表现。这对于ISO 26262功能安全认证中的故障注入测试环节非常关键。汽车以太网是未来趋势，线控转向尤其需要其高带宽和低延迟，因此这款工具能有效提升我们对线控转向通信链路可靠性及功能安全验证的效率和深度，绝对值得投入。
-   https://www.eetimes.com/peak-goes-automotive-ethernet-pae-media-converter-connects-100-1000base-t1-with-standard-ethernet/
-
-7. Tecate Group Announces New Ultracapacitor Cells Rated for Operation up to 105°C (221°F)（来源：EE Times）
-   应用分析：这些新型超级电容器可以直接考虑用于EPS系统的电源设计。我们可以评估将其集成到EPS功率级中，用于以下场景：第一，瞬态大电流补偿。在驾驶员快速打方向时，EPS电机需要瞬时大电流，超级电容器可以提供快速补充，减轻主电源压力，提升助力响应速度。第二，冗余电源。在线控转向系统中，作为电机驱动的备用电源，在主电源失效时提供短时供电，实现安全降级或维持基本转向功能。第三，抑制电源纹波，减少功率级对车辆电源的冲击，改善NVH性能。其耐高温特性解决了汽车应用中的一大痛点，能为EPS系统带来性能和安全性上的提升，尤其是在向线控转向演进的过程中，对冗余和瞬态响应的需求会更高，因此值得投入研究和小批量试用。
-   https://www.eetimes.com/tecate-group-announces-new-ultracapacitor-cells-rated-foroperation-up-to-105c-221f/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260614-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260614-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260614-am.mp3" length="3906000" type="audio/mpeg"/>
-      <pubDate>Sat, 13 Jun 2026 22:42:25 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI监管趋严，机器人边缘AI赋能，新能源重卡驶入快车道</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天咱们的资讯非常精彩，涵盖了人工智能的前沿动态、汽车智能化的最新趋势，以及机器人领域的进展。特别值得关注的是，人工智能在快速发展的同时，其伦理、安全和监管问题也日益凸显，这对于我们这些身处技术一线的研发人员来说，提供了很多值得深思和借鉴的案例。
@@ -1083,6 +1047,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260627-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260627-pm.mp3" length="2304864" type="audio/mpeg"/>
       <pubDate>Sat, 27 Jun 2026 09:42:18 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾之锚：AI安全、机器人训练与SiC芯片的未来</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能的前沿进展，特别是其在安全治理和训练方法上的创新，同时也会关注机器人领域的测试挑战与数据驱动方案，以及智能汽车核心部件——功率半导体技术的最新动态。希望这些精选资讯，能为您的日常研发工作带来新的启发和思考。
+
+1. Governing Actions, Not Agents: Institutional Attestation as a Governance Model for Autonomous AI Systems（来源：arXiv cs.AI）
+   应用分析：作为EPS产品研发工程师，我们正向线控转向（Steer-by-Wire）系统演进，其中AI控制和决策将扮演更核心的角色。这个治理模型提出的独立认证和防篡改日志机制，能为我们设计线控转向的功能安全架构提供新的思路，特别是在AI决策模块的故障诊断、降级策略以及满足ISO 26262等功能安全标准方面。我们可以借鉴其理念，探索如何为线控转向系统中的AI执行器（如电机控制器）设计外部的、可独立验证的“守门人”机制，确保在极端或异常情况下，AI的转向指令能够被有效制约或安全接管。这项研究值得深入投入，评估其在汽车嵌入式系统中的可行性和工程实现复杂度。
+   https://arxiv.org/abs/2606.26298
+
+2. Why everyone from OpenAI to SpaceX is building their own chips (and turning up the heat on Nvidia)（来源：TechCrunch）
+   应用分析：在EPS系统中，我们正在探索将AI/数据驱动方法应用于电机控制、自动标定和故障诊断。这些应用对边缘计算能力和实时性有较高要求。自研或定制化AI芯片的趋势，提醒我们未来在MCU选型和系统架构设计时，需要更紧密地关注芯片厂商的AI加速能力和定制化选项。例如，如果未来我们需要在EPS控制器中集成复杂的神经网络观测器或强化学习控制器，具备专用AI加速单元的MCU或FPGA方案将更具优势。虽然我们短期内不会自研芯片，但理解这一趋势有助于我们选择更合适的供应商，并向其提出定制化需求，以满足线控转向对性能和功能安全日益增长的需求。这是一个需要持续关注市场动态的方向。
+   https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/
+
+3. DSpark: Speculative decoding accelerates LLM inference [pdf]（来源：Hacker News）
+   应用分析：虽然LLM目前直接应用于EPS电机控制的场景较少，但其在自动标定、故障诊断与预测性维护中的潜力巨大。例如，我们可以设想一个LLM辅助的诊断系统，通过分析车辆数据和用户反馈，快速定位EPS故障。DSpark等推理加速技术，对于将这些计算密集型AI模型部署到车规级MCU或边缘计算单元上至关重要，因为它们能确保实时响应。我们将持续关注这类技术，评估其在嵌入式环境下的部署难度和性能收益，以便未来能将更复杂的AI模型集成到EPS的诊断和优化工具链中，提升开发和维护效率。这是一个值得关注，但短期内应用尚需转化的方向。
+   https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf
+
+4. How Do Tool-Augmented LLM Agents Perform on Real-World Energy Analytics Tasks?（来源：arXiv cs.AI）
+   应用分析：这个研究为我们展示了AI智能体如何结合特定领域的工具和知识来解决实际问题。在EPS领域，我们可以借鉴这种思路，开发工具增强型LLM智能体来改进标定效率和故障诊断。例如，可以构建一个智能体，它能够访问EPS系统的历史数据、传感器读数、控制算法参数以及故障代码数据库（作为其“工具”），然后通过自然语言指令，自动分析电机转矩脉动、NVH异常、温漂等问题，甚至提供优化的控制参数建议。这能大幅减少工程师的手动分析工作量，提高问题解决效率。投入资源构建一个概念验证系统，探索其在EPS数据分析和辅助决策中的潜力，是非常值得的。
+   https://arxiv.org/abs/2606.26346
+
+5. We know how to build smarter robots. Now, we need to learn smarter ways to test them（来源：The Robot Report）
+   应用分析：这篇报道直接指出了我们EPS系统，尤其是向线控转向和AI控制演进时面临的共性问题：如何有效测试越来越复杂的控制系统。EPS系统的手感调校、助力策略以及功能安全验证，本质上也是对“智能”行为的测试。我们可以借鉴机器人领域提出的“更智能的测试方法”，例如引入基于模型的测试（Model-Based Testing）、强化学习驱动的测试场景生成、以及更先进的MIL/SIL/HIL仿真平台，来提高测试覆盖率和效率。特别是在AI控制算法的验证上，我们需要确保其在各种复杂工况、故障模式下的鲁棒性。投入资源研究和引入这些前沿测试理念和工具，对于提升EPS产品的质量和开发效率具有长期价值。
+   https://www.therobotreport.com/we-know-how-to-build-smarter-robots-now-we-need-to-learn-smarter-ways-to-test-them/
+
+6. General Intuition raises $320M to use video game data to train robots（来源：The Robot Report）
+   应用分析：这个创新方法与我们目前在MIL/SIL/HIL仿真验证控制算法的思路高度契合。我们可以借鉴General Intuition的经验，探索如何利用高质量的仿真环境（如MATLAB/Simulink模型）或甚至游戏引擎，生成带有丰富标签的EPS电机控制数据。例如，模拟各种路况、驾驶员操作、电机参数漂移和故障模式下的转向力矩、转角、电流等数据，用于训练基于AI的电机控制策略（如神经网络控制器、状态观测器）或故障诊断模型。这能大幅降低实际台架和整车测试的数据采集成本，并加速算法迭代。投入资源研究这种“仿真到现实”的AI训练范式，对于提升EPS电机控制策略的性能和鲁棒性，以及实现无传感器/冗余传感方案，都具有重要的战略意义。
+   https://www.therobotreport.com/general-intuition-raises-320m-uses-video-game-data-train-robots/
+
+7. Wolfspeed CEO Reflects on Year One: New Generations, 300mm Wafers, and a Company Transformed（来源：Power Electronics News）
+   应用分析：作为EPS产品研发工程师，电机选型和功率级设计是我们的核心工作。SiC功率器件，特别是Wolfspeed Gen 5 SiC等新一代产品，对于PMSM永磁同步电机控制器而言，是提升效率、降低损耗、减小体积和重量的关键。300毫米晶圆的量产，预示着未来SiC器件的成本可能进一步下降，供货稳定性增强，这对于我们控制器的成本竞争力具有重要意义。我们将持续关注Wolfspeed新一代SiC器件的详细参数和可靠性数据，评估其在EPS功率级中的应用潜力，尤其是在提高转矩密度、系统效率、降低散热需求，以及应对线控转向高功率密度需求方面。这是值得持续投入和跟进的硬件技术方向，直接影响我们产品的核心性能。
+   https://www.powerelectronicsnews.com/wolfspeed-ceo-reflects-on-year-one-new-generations-300mm-wafers-and-a-company-transformed/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260628-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260628-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260628-am.mp3" length="4252176" type="audio/mpeg"/>
+      <pubDate>Sat, 27 Jun 2026 22:41:33 +0000</pubDate>
     </item>
   </channel>
 </rss>
