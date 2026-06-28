@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 27 Jun 2026 22:41:33 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 09:42:15 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI监管趋严，机器人边缘AI赋能，新能源重卡驶入快车道</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天咱们的资讯非常精彩，涵盖了人工智能的前沿动态、汽车智能化的最新趋势，以及机器人领域的进展。特别值得关注的是，人工智能在快速发展的同时，其伦理、安全和监管问题也日益凸显，这对于我们这些身处技术一线的研发人员来说，提供了很多值得深思和借鉴的案例。
-
-1. Amazon CEO's talks with U.S. officials triggered crackdown on Anthropic models（来源：Hacker News）
-   应用分析：警示我们在EPS控制中使用AI时，需高度关注模型安全性、数据来源合规性，以及潜在的政策风险。对于关键功能如故障诊断、预测性维护，若引入外部AI模型，必须进行严格的安全评估和本土化部署，以避免外部政策或技术中断造成的影响。
-   https://www.wsj.com/tech/ai/amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578?st=Yct6gx&amp;reflink=desktopwebshare_permalink
-
-2. KPMG pulls report on AI usage due to apparent hallucinations（来源：TechCrunch）
-   应用分析：这提醒我们，在将AI（如神经网络、强化学习）应用于EPS电机控制策略或自动标定时，必须建立完善的验证、确认与冗余机制。不能盲目信任AI输出，需要结合物理模型、专家知识进行交叉验证，尤其在功能安全（ISO 26262）要求下，幻觉是不可接受的。
-   https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/
-
-3. Police officer investigated for using AI to 'create evidence' in multiple cases（来源：Hacker News）
-   应用分析：在EPS故障诊断或预测性维护中，如果引入AI辅助，其输出必须被视为“建议”而非“证据”。任何基于AI的诊断或决策，都必须有明确的人工复核流程和可追溯的原始数据支撑，以避免AI产生“幻觉证据”而导致误判或责任问题。
-   https://news.sky.com/story/derbyshire-police-officer-investigated-for-using-ai-to-create-evidence-in-multiple-cases-13553661
-
-4. OpenAI faces investigation from state attorneys general（来源：TechCrunch）
-   应用分析：这意味着我们在EPS数据驱动的优化和诊断方案中，如果涉及用户行为数据或车辆运行数据，必须高度重视数据隐私和合规性。尤其是在跨国合作或数据出海时，需要提前研究并遵守各国的数据保护法规，确保数据采集、存储和使用的透明与合法。
-   https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-attorneys-general/
-
-5. Windows for robots: Edge AI expands usability（来源：The Robot Report）
-   应用分析：边缘AI为EPS系统提供了新的思路。我们可以考虑将部分复杂的电机控制算法、状态观测器或故障诊断模型部署到EPS的边缘控制器上，实现实时、低延迟的智能决策。这有助于提升控制策略的性能与鲁棒性，同时降低对云端依赖，提升系统独立性和安全性。值得投入研究，评估现有MCU/MPU的算力是否能支持，以及如何将MATLAB/Simulink模型高效部署到边缘设备。
-   https://www.therobotreport.com/computers-software-windows-utility-robots/
-
-6. China targets 40% penetration for new-energy heavy trucks by 2030（来源：CnEVPost）
-   应用分析：重卡对助力转向系统的要求更高，需要更大的转矩输出和更强的鲁棒性。这意味着DP-EPS或R-EPS等大功率EPS系统将迎来新的市场机遇。我们应提前布局重卡EPS解决方案，重点关注大功率电机选型、高动态响应的控制策略、以及满足商用车严苛环境的可靠性与功能安全设计。
-   https://cnevpost.com/2026/06/13/china-targets-40-penetration-new-energy-heavy-trucks-2030/
-
-7. Honda Civics and the Evil Valet（来源：Hacker News）
-   应用分析：虽然EPS是安全关键系统，与信息娱乐系统物理隔离，但此案例提醒我们，线控转向（Steer-by-Wire）等未来架构中，软件定义汽车的趋势将使得整车网络安全变得极其重要。我们需要从系统架构层面考虑EPS与整车网络的隔离、加密通信、安全启动等机制，防范潜在的网络攻击，确保EPS系统在任何情况下都能安全运行。对ISO 21434（汽车网络安全）的关注也应提升。
-   https://juniperspring.org/posts/honda-evil-valet/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260614-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260614-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260614-pm.mp3" length="2375856" type="audio/mpeg"/>
-      <pubDate>Sun, 14 Jun 2026 09:42:06 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 科技早报：AI幻觉与安全警示，固态电池新进展，机器人与汽车控制的交汇点</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化以及机器人技术这三大热点方向。AI的可靠性与安全性再次成为焦点，KPMG因AI幻觉撤回报告，亚马逊也因AI模型漏洞引发了监管关注。同时，固态电池的最新进展，以及工业机器人与我们汽车EPS电机控制技术的深度关联，都将是今天值得深入探讨的话题。让我们一起看看这些资讯如何影响我们的研发工作。
@@ -1083,6 +1047,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260628-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260628-am.mp3" length="4252176" type="audio/mpeg"/>
       <pubDate>Sat, 27 Jun 2026 22:41:33 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 智驾、机器人与AI前沿：研发工程师的早报洞察</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师，在这里和大家一起洞察前沿科技动态，看看它们能如何赋能我们的研发工作。今天，我们将聚焦AI前沿、汽车智能化以及机器人三大方向，精选出七条对我们EPS研发工作极具启发意义的资讯。希望能帮助大家拓展思路，把最新的技术应用到我们的电动助力转向系统，甚至是未来的线控转向方案中。
+
+1. Wayfinder Router: deterministic routing of queries between local and hosted LLM（来源：Hacker News）
+   应用分析：在线控转向等系统中，我们可能需要用轻量级AI模型进行实时的路感识别、故障预诊断或自适应助力策略调整。而更复杂的、需要大量算力的模型训练和更新则在云端进行。Wayfinder Router的思路可以借鉴，设计一个智能决策模块，根据当前路况、车辆状态、网络条件以及计算负载，动态选择在本地MCU或电机控制器上运行预训练的小模型，还是将部分感知数据或高层决策请求发送到云端进行更精细的推理。这有助于提升系统响应速度和鲁棒性，同时降低通信成本。我觉得非常值得我们关注其开源实现，评估它能否集成到我们的边缘AI部署框架中。
+   https://github.com/itsthelore/wayfinder-router
+
+2. Asian AI startups launch Mythos-like models as Anthropic’s export ban drags on（来源：TechCrunch）
+   应用分析：考虑到功能安全和供应链风险，我们不能只依赖单一来源的AI技术。亚洲本土AI模型的成熟，为我们提供了更多选择。在评估用于自动标定、故障诊断或预测性维护的AI工具链时，应将这些模型纳入考量范围。我们需要关注这些模型的性能、可靠性、是否支持本地部署、以及是否能满足ISO 26262等行业标准。如果其能力与西方模型相当，甚至在特定场景下表现更优，那么投入资源去调研和测试，建立合作关系，将有助于我们降低地缘政治风险，并可能获得更具成本效益的解决方案。
+   https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/
+
+3. AMD Strix Halo RDMA Cluster Setup Guide（来源：Hacker News）
+   应用分析：在线控转向等高级EPS系统中，我们正在探索将强化学习控制器或复杂的神经网络观测器集成进来。这些算法的训练和推理都需要强大的并行计算能力。如果Strix Halo能提供高效、低延迟的车载AI计算方案，我们将需要深入研究其架构和编程模型，评估其在车载环境下的功耗、散热、可靠性，以及是否符合ISO 26262的安全要求。投入资源进行原型验证，比如在HIL平台上测试其AI模型推理性能，以验证其在转矩脉动抑制、无传感器控制等复杂场景下的实时性，是值得的。
+   https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes/blob/main/rdma_cluster/setup_guide.md
+
+4. Ford hired AI and sacked humans. It backfired badly（来源：Hacker News）
+   应用分析：当我们尝试用AI改进控制、标定效率或故障诊断时，这个案例提供了宝贵的教训。我们应将AI视为辅助工具，而非完全替代。例如，在自动标定中，AI可以快速探索参数空间、生成初步标定曲线，但最终的手感调校和鲁棒性验证仍需经验丰富的工程师介入。在故障诊断中，AI可以提高异常检测的效率和准确性，但复杂的、关联性强的故障分析仍需人工判断。在引入AI时，应采取渐进式策略，从小范围试点开始，评估其真实效益，并确保有完善的人工干预和回溯机制。避免“为了AI而AI”，而应聚焦解决实际问题，将AI能力与工程师的专业知识有效结合。
+   https://www.the-independent.com/tech/ford-ai-automation-human-workers-b3003787.html
+
+5. Apple wants permission to buy memory from a blacklisted Chinese supplier（来源：The Verge）
+   应用分析：这条新闻提醒我们，在进行EPS控制器软硬件设计时，必须高度关注芯片供应链的风险。我们不能只盯着性能和成本，更要考虑供应商的地理位置、政治风险以及替代方案。在MCU和功率器件选型时，应优先选择有多家可靠供应商、或有成熟国产替代方案的芯片。对于关键器件，应考虑多源采购策略，并与供应商建立长期合作关系，确保供应的稳定性。同时，内部也应储备不同架构MCU的开发能力，以便在供应链出现问题时能快速切换平台。虽然我们无法直接影响国际贸易政策，但可以优化内部设计和采购策略，以应对外部不确定性。
+   https://www.theverge.com/tech/958707/apple-ram-buy-memory-blacklisted-china-cxmt
+
+6. AGIBOT produces 15,000th robot, marking a milestone in embodied AI deployment（来源：The Robot Report）
+   应用分析：AGIBOT的成就表明，高精度、高可靠性的机器人执行器控制技术已经具备规模化量产能力。我们应积极关注其电机选型、控制策略（如力矩控制、阻抗控制）、传感器融合、以及功能安全设计方面的实践。这些经验可以直接用于提升EPS电机控制的性能和鲁棒性，例如，在转矩脉动抑制、温漂补偿、无传感器控制算法优化等方面。特别是线控转向系统，其对执行器响应速度、精度和冗余安全的要求与机器人关节执行器非常相似。投入资源研究AGIBOT公开的技术资料、参与相关技术论坛，甚至考虑与这类机器人公司进行技术交流，评估其在工业机器人上验证过的电机控制算法和安全架构，能否迁移到EPS和SBW系统中，是极具价值的。
+   https://www.therobotreport.com/agibot-produces-15000th-robot-marking-milestone-embodied-ai-deployment/
+
+7. We know how to build smarter robots. Now, we need to learn smarter ways to test them（来源：The Robot Report）
+   应用分析：在EPS和线控转向系统中，引入AI控制（如强化学习助力策略、神经网络观测器）后，传统的基于工况的测试方法可能不足以覆盖所有复杂场景。我们需要借鉴机器人领域的先进测试理念，例如：基于模型的测试，它可以自动生成测试用例，覆盖更多边界条件；还有仿真优先，在虚拟环境中进行大规模、多场景测试，加速迭代；以及数据驱动测试，利用真实数据训练AI模型，并通过AI生成对抗性测试场景等等。我们应投入资源研究这些“更智能的测试方法”，将其引入到我们的MIL/SIL/HIL和台架测试流程中，特别是在验证AI控制器的鲁棒性和功能安全时。例如，可以探索如何利用AI生成故障注入场景，或自动化评估不同助力策略下的驾驶手感。这不仅能提升测试效率，更能提高EPS产品的可靠性和安全性，尤其是在线控转向这种Safety-Critical系统中，其价值不言而喻。
+   https://www.therobotreport.com/we-know-how-to-build-smarter-robots-now-we-need-to-learn-smarter-ways-to-test-them/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260628-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260628-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260628-pm.mp3" length="3838032" type="audio/mpeg"/>
+      <pubDate>Sun, 28 Jun 2026 09:42:15 +0000</pubDate>
     </item>
   </channel>
 </rss>
