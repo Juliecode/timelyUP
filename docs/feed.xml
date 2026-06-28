@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 28 Jun 2026 09:42:15 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 22:40:03 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 科技早报：AI幻觉与安全警示，固态电池新进展，机器人与汽车控制的交汇点</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化以及机器人技术这三大热点方向。AI的可靠性与安全性再次成为焦点，KPMG因AI幻觉撤回报告，亚马逊也因AI模型漏洞引发了监管关注。同时，固态电池的最新进展，以及工业机器人与我们汽车EPS电机控制技术的深度关联，都将是今天值得深入探讨的话题。让我们一起看看这些资讯如何影响我们的研发工作。
-
-1. KPMG pulls report on AI usage due to apparent hallucinations（来源：TechCrunch）
-   应用分析：现阶段，像GPT这类生成式AI模型直接用于EPS的实时控制或故障诊断决策，风险极高，几乎不可接受。其“幻觉”特性会导致不可预测的错误输出，严重威胁行车安全。因此，对于直接影响功能安全的场景，目前不值得投入将这类AI作为核心决策单元。但我们可以投入研究AI的鲁棒性评估、可解释性AI，以及如何建立AI输出的信任度验证机制，为未来可能更可靠的AI技术做准备。
-   https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/
-
-2. Amazon security research reportedly led to the White House’s Anthropic Fable ban（来源：The Verge）
-   应用分析：这种存在安全风险的AI模型，在汽车关键系统中的直接应用，面临巨大的安全挑战和ISO 26262合规性障碍。因此，如果未来要引入，必须建立一套涵盖AI模型全生命周期的安全评估与漏洞管理体系。值得投入研究AI模型的安全漏洞分析、对抗性攻击与防御，以及如何将AI模型的安全评估融入到ISO 26262功能安全流程中。这对于线控转向等未来架构的AI应用至关重要。
-   https://www.theverge.com/ai-artificial-intelligence/949601/amazon-anthropic-fablemythos-government-ban
-
-3. AI is code – and can't be prompted into being smarter（来源：Hacker News）
-   应用分析：这个观点有助于我们务实看待AI在EPS中的应用。如果希望AI辅助提升电机控制性能，就需要提供高质量的电机数据、定义清晰的优化目标，并设计合适的神经网络结构或强化学习环境。值得投入研究将AI作为现有控制策略的辅助或优化工具，例如利用神经网络作为非线性观测器提升无传感器控制精度。但核心仍在于深入理解AI工作原理，结合电机控制的物理模型。
-   https://www.theregister.com/ai-and-ml/2026/06/14/ai-is-code-and-cant-be-prompted-into-being-smarter/5254141
-
-4. Solid-state batteries still aren’t ready, but gels are（来源：The Verge）
-   应用分析：电池技术进展会深刻影响我们对EPS系统电源设计、功耗管理和热管理策略的考量。如果凝胶态电池能提供更高的能量密度和更快的充放电能力，可能意味着我们EPS的功率级设计可以更紧凑，或在极端工况下获得更稳定的瞬时大电流支持。因此，值得投入关注。理解电池技术路线图，能帮助我们更好地设计与电池系统匹配的EPS产品，例如优化电源管理模块、提升系统效率，或为未来的高压平台做准备。
-   https://www.theverge.com/column/948594/solid-state-batteries-semi-solid-state
-
-5. Modernizing the global economy with industrial robotics is needed but not inevitable（来源：The Robot Report）
-   应用分析：工业机器人执行器在电机选型、FOC控制，以及高精度位置和力矩控制方面的技术，可以直接借鉴到EPS，尤其是未来线控转向的执行器设计。例如，其在转矩脉动抑制、温漂补偿，以及无传感器控制方面的先进算法，可能对提升我们EPS的性能和手感有很大帮助。因此，非常值得投入！机器人执行器控制是我们的核心交叉点之一。通过跟踪机器人领域的前沿进展，我们可以为EPS，尤其是线控转向的电机控制和系统设计，找到创新的解决方案。
-   https://www.therobotreport.com/modernizing-global-economy-industrial-robotics-needed-not-inevitable/
-
-6. I indexed 669 GB of my GoPro videos using my M1 Max computer and local ML models（来源：Hacker News）
-   应用分析：这种本地机器学习处理大规模数据的思路，可以完美迁移到EPS的故障诊断和预测性维护中。我们可以建立本地机器学习模型，对EPS运行数据进行实时分析，精准识别异常模式，并预测潜在故障。这能大大减少对云端数据传输和计算的依赖，显著提升响应速度和数据隐私性。因此，非常值得投入研究！它能提升系统的自主性和实时性，降低通信和云计算成本，同时满足数据安全和隐私要求。这与我们现在最想解决的目标高度契合。
-   https://iliashaddad.com/blog/i-indexed-669-gb-of-my-gopro-videos-using-my-m1-max-computer
-
-7. Not everyone is using AI for everything（来源：Hacker News）
-   应用分析：这种思维方式提醒我们在考虑将AI引入EPS时，要首先问：AI能真正解决我们EPS的哪些痛点？AI带来的收益是否大于风险和成本？对于已经有成熟、高可靠性传统解决方案的问题，不应轻易被AI取代；而对于传统方法难以解决的问题，AI才更有可能发挥其独特的价值。因此，非常值得投入这种批判性思维。在技术选型和研发投入上，我们要以解决实际工程问题为导向，将有限资源投入到AI能真正发挥优势且风险可控的领域。
-   https://gabrielweinberg.com/p/people-are-consuming-ai-like-they</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260615-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260615-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260615-am.mp3" length="3212640" type="audio/mpeg"/>
-      <pubDate>Sun, 14 Jun 2026 22:43:05 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 智驾与机器人：AI如何重塑我们的转向系统和未来出行</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，看看最新的技术进展如何影响我们的工作，尤其是对汽车电动助力转向系统（EPS）的未来发展有哪些启发。话不多说，让我们立刻进入今天的精选资讯！
@@ -1083,6 +1047,38 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260628-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260628-pm.mp3" length="3838032" type="audio/mpeg"/>
       <pubDate>Sun, 28 Jun 2026 09:42:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾芯片自研潮，AI赋能与回归工程本源：今日科技早报</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，看看有哪些值得我们深入思考的重磅消息。从中国智谱AI大模型在网络安全领域的突破，到福特在AI应用上的反思，再到比亚迪自研智能驾驶芯片的布局，以及具身智能机器人的大规模部署，每一条都可能触及我们日常工作的痛点与未来方向。话不多说，让我们立刻进入今天的正题。
+
+1. NanoEuler – GPT-2 scale model in pure C/CUDA from scratch（来源：Hacker News）
+   应用分析：{'能不能用': '直接用于EPS控制不现实，但其“从零开始、低层优化”的思路极具启发性。', '怎么用': '我们可以借鉴这种深入到硬件层面的优化，提升FOC和无传感器控制算法性能，优化EPS电机的转矩密度、效率和NVH。同时，理解LLM底层优化，能指导我们为EPS设计轻量级AI模型，用于自动标定或故障诊断。这种深挖底层技术对线控转向的复杂实时计算也有储备意义。', '值不值得投入': '值得关注其技术思路，将其优化思维引入EPS电机控制算法的极致优化。'}
+   https://github.com/JustVugg/nanoeuler
+
+2. GLM 5.2 beats Claude in our benchmarks / China’s Z.ai claims it can match Mythos on cybersecurity（来源：Hacker News / The Verge）
+   应用分析：{'能不能用': 'GLM 5.2作为开源模型，在特定任务上表现突出，具备潜在应用价值。', '怎么用': '我们可尝试用它结合EPS数据，训练定制故障诊断模型，利用其推理能力实现更精准预警。在嵌入式C代码开发和功能安全文档编写中，它能辅助代码审查、漏洞检测，提升效率和质量，辅助满足ISO 26262。此外，还能辅助分析标定数据，给出参数建议，加速标定。', '值不值得投入': '作为开源模型，值得积极探索，有望提升研发效率和产品质量。'}
+   https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/
+
+3. China claims the world's fastest supercomputer（来源：The Verge）
+   应用分析：{'能不能用': '直接使用世界最快超算进行EPS研发不现实，但其代表的算力进步趋势非常重要。', '怎么用': '线控转向等复杂系统需海量仿真验证，超算能力提升意味着我们能更快运行复杂模型，加速新控制策略开发和鲁棒性测试。若将AI应用于EPS，强大算力可缩短AI模型训练周期，提升性能。在电机选型、NVH优化等高精度仿真中，超算也能加速迭代。', '值不值得投入': '应间接关注超算发展，积极探索将更强大算力引入仿真、验证和AI模型训练流程，提升研发效率和产品性能。'}
+   https://www.theverge.com/tech/958768/china-claims-the-worlds-fastest-supercomputer
+
+4. Ford rehires ‘gray beard’ engineers after AI falls short（来源：TechCrunch）
+   应用分析：{'能不能用': '这是一个管理和策略层面的教训，但对技术研发有直接指导意义。', '怎么用': 'AI可用于自动标定、故障诊断，但手感调校、鲁棒性保证、功能安全设计仍需工程师专业知识。我们应将“老工程师”经验通过知识图谱沉淀，结合AI形成人机协作模式。在功能安全方面，ISO 26262要求严格，AI作为辅助角色，其可解释性与可验证性仍需人把关。', '值不值得投入': '这是一个深刻教训，引入AI时需保持清醒，确保人与AI有效协同，尤其在功能安全和用户体验方面。'}
+   https://techcrunch.com/2026/06/28/ford-rehires-gray-beard-engineers-after-ai-falls-short/
+
+5. AGIBOT produces 15,000th robot, marking a milestone in embodied AI deployment（来源：The Robot Report）
+   应用分析：{'能不能用': '具身智能机器人的控制技术与EPS电机控制高度相关，是重要的技术交叉点。', '怎么用': 'AGIBOT的PMSM电机FOC、转矩脉动抑制、无传感器控制等技术，与EPS需求高度重合。我们可借鉴其大规模部署中保证鲁棒性、NVH、成本优化的经验。线控转向需要高精度执行器，机器人关节执行器在精度、动态响应、冗余设计方面的经验，对我们开发线控转向执行器很有价值。其AI控制策略落地经验，也能为EPS控制器中的AI应用提供实践案例。', '值不值得投入': '强烈建议持续关注并投入学习，很多技术可迁移，有望加速线控转向执行器和AI控制策略研发。'}
+   https://www.therobotreport.com/agibot-produces-15000th-robot-marking-milestone-embodied-ai-deployment/
+
+6. BYD plans 2027 debut of in-house smart driving chip on Denza cars, report says（来源：CnEVPost）
+   应用分析：{'能不能用': '直接使用比亚迪的芯片不现实，但其战略和技术路径对我们有重要参考意义。', '怎么用': '车企深度整合智能驾驶算法，促使我们思考EPS如何更好地与中央计算平台进行接口定义、通信协议和功能解耦，以适应集中式架构，这对线控转向尤为关键。自研芯片能从底层支持ISO 26262功能安全，需关注其硬件冗余、故障检测如何与EPS的ASIL-D要求对接。同时，学习其芯片设计中算力、功耗、成本的平衡，对我们选择EPS的MCU和功率器件有借鉴。', '值不值得投入': '密切关注智能驾驶芯片相关标准和功能安全设计理念，思考EPS如何融入未来智能驾驶生态，非常值得。'}
+   https://cnevpost.com/2026/06/28/byd-plans-2027-debut-adas-chip-denza-cars/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260629-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260629-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260629-am.mp3" length="2971296" type="audio/mpeg"/>
+      <pubDate>Sun, 28 Jun 2026 22:40:03 +0000</pubDate>
     </item>
   </channel>
 </rss>
