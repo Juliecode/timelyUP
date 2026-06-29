@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 28 Jun 2026 22:40:03 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 09:42:57 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 智驾与机器人：AI如何重塑我们的转向系统和未来出行</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，看看最新的技术进展如何影响我们的工作，尤其是对汽车电动助力转向系统（EPS）的未来发展有哪些启发。话不多说，让我们立刻进入今天的精选资讯！
-
-1. TetraRL: A Self-Adaptive Runtime for On-Device Deep Reinforcement Learning Systems（来源：arXiv eess.SY 控制系统）
-   应用分析：在EPS系统中，如果尝试引入基于深度强化学习的自适应助力策略或故障诊断，TetraRL提供了一个务实的框架。它能帮助我们设计在微控制器单元上运行的深度强化学习模型，同时兼顾FOC电机控制的实时性要求、助力效果（任务奖励）、有限的随机存取存储器和车载功耗限制。例如，可以探索用深度强化学习优化不同驾驶场景下的助力曲线切换，或者在低功耗模式下维持基本的助力功能。这是一个直接解决了将AI落地到车规级嵌入式系统中的关键工程难题，非常值得投入研究。
-   https://arxiv.org/abs/2606.13891
-
-2. Neural Slack Variables for Shape Constraints（来源：arXiv cs.LG）
-   应用分析：在EPS助力曲线和手感调校中，我们常常需要保证助力力矩随方向盘转矩的单调性，以及在某些区域的凸性或凹性，以提供舒适且可预测的手感。如果使用神经网络来学习和生成助力曲线，或进行自动标定，该方法可以用来强制这些关键的物理和用户体验约束，避免生成不合理或危险的输出。这能显著降低AI引入的风险，提升模型在车规级应用中的说服力。这是一个非常值得投入研究的方向，可以直接提升我们AI控制方案的工程实用性。
-   https://arxiv.org/abs/2606.13803
-
-3. Uncertainty Estimation and Generalization Bounds for Modern Deep Learning（来源：arXiv cs.LG）
-   应用分析：在EPS的故障诊断和预测性维护中，我们可以利用神经网络来识别电机异常、传感器漂移或系统性能下降。但仅仅给出“有故障”的判断是不够的，我们需要知道这个判断的置信度。该研究提供的不确定性量化方法，可以帮助我们评估诊断结果的可靠性，并据此设计更智能的降级策略。例如，当不确定性高时，系统可以切换到更保守的助力模式或提示驾驶员。在向线控转向演进时，这种不确定性量化对于冗余传感器的决策融合、故障模式分析和安全状态评估具有决定性意义。这是未来AI在车规级应用中必须攻克的难题，非常值得持续关注和探索。
-   https://arxiv.org/abs/2606.13818
-
-4. Multi-Agent Embodied Autonomous Driving: From V2X Information Exchange to Shared World Models（来源：arXiv cs.RO）
-   应用分析：随着EPS向线控转向发展，它将不再是一个孤立的系统，而是自动驾驶决策链条上的重要一环。共享世界模型概念指导我们思考线控转向系统如何接收来自其他车辆或基础设施的环境信息（通过V2X），并结合自身状态，更智能地执行转向指令。例如，在自动泊车、车道保持辅助或紧急避障时，线控转向可以根据共享世界模型提供的全局信息，提前预判并执行更平稳、更安全的转向操作。这为线控转向的冗余设计、故障诊断和功能安全提供了新的视角，即如何利用多源信息提升整体系统的鲁棒性。这是一个高层次的架构性方向，虽然不直接涉及电机控制细节，但对EPS产品的未来演进路径具有战略指导意义，需要密切关注。
-   https://arxiv.org/abs/2606.13840
-
-5. Efficient Domain-Adaptive Policy Learning via Kernel Representation with Application to Quadrotor Control under Non-Stationary Disturbances（来源：arXiv cs.RO）
-   应用分析：在EPS的助力策略和手感调校中，我们目前依赖大量的整车标定来应对不同车型、不同轮胎、不同路况下的性能需求。引入域自适应策略学习，可以让我们在Simulink/MATLAB仿真环境中训练更通用的初始策略，然后利用少量实际数据进行快速在线适应，以应对路面湿滑、转向系统老化等非平稳扰动。这有助于减少标定工作量，提升系统在未知工况下的性能一致性。特别是对于电机控制策略中的转矩脉动抑制、无传感器控制的鲁棒性，以及温漂补偿等问题，该方法可能提供新的思路。值得投入，因为其目标是提升控制策略在复杂动态环境下的性能与鲁棒性，这正是我们现在面临的核心挑战之一。
-   https://arxiv.org/abs/2606.13842
-
-6. Seres debuts humanoid as Chinese automakers pile into robotics（来源：CnEVPost）
-   应用分析：赛力斯作为汽车厂商，其人形机器人项目无疑会带动高性能电机、精密减速器、高带宽控制器、以及复杂运动控制算法的研发。我们可以密切关注这些机器人在关节伺服电机控制方面的进展，例如如何实现高精度、高动态响应的力矩控制，如何抑制谐波和抖动，以及在多自由度协调控制中的算法创新。这些经验和技术成果，可以直接为EPS的电机选型、FOC矢量控制策略优化、转矩脉动抑制、甚至未来的线控转向执行器设计提供宝贵参考。这不仅是跨界，更是技术同源的融合，非常值得我们持续跟踪和学习。
-   https://cnevpost.com/2026/06/15/seres-debuts-humanoid-robot/
-
-7. PhysVLA: Towards Physically-Grounded VLA for Embodied Robotic Manipulation（来源：arXiv cs.RO）
-   应用分析：在EPS系统中，如果尝试使用视觉-语言-动作（VLA）模型来指导一些高级辅助驾驶功能（例如，根据路况视觉信息和驾驶员意图调整助力特性），那么确保其输出的转向动作符合车辆动力学、轮胎抓地力等物理约束是至关重要的。PhysVLA提供了一种在AI输出层进行物理修正的思路，我们可以在EPS的控制执行层之前，加入一个轻量级的物理检查和修正模块，确保AI生成的转向指令不会超出物理极限或导致危险工况。这对于提升AI控制在车规级系统中的可信度、降低部署风险具有非常实际的指导价值。值得投入，可以作为我们AI控制策略安全验证和后处理的一个重要方向，它的推理时开销小于一毫秒也极具吸引力。
-   https://arxiv.org/abs/2606.13886</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260615-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260615-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260615-pm.mp3" length="3738672" type="audio/mpeg"/>
-      <pubDate>Mon, 15 Jun 2026 09:42:59 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI与智能汽车：从边缘算力到物理约束的控制新范式</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最有价值的资讯。从提升EPS系统性能的AI异常检测，到线控转向所需的非线性稳定性验证，再到下一代SiC功率器件，以及如何让AI控制更加“脚踏实地”的物理约束方法，今天的早报将为您带来启发，助您洞察技术趋势，加速工程落地。话不多说，我们马上开始！
@@ -1079,6 +1043,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260629-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260629-am.mp3" length="2971296" type="audio/mpeg"/>
       <pubDate>Sun, 28 Jun 2026 22:40:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI与智能汽车新风向：从世界模型到福特工程师的回归</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人技术，为您精选了七条重磅资讯。从大语言模型如何学会“思考未来”，到福特重新请回“老工程师”的背后故事，再到比亚迪自研智能驾驶芯片的战略布局，每一条都与我们的研发工作息息相关。让我们一起看看这些技术动态将如何影响我们的未来产品和开发路径。
+
+1. Internalizing the Future: A Unified Agentic Training Paradigm for World Model Planning（来源：arXiv cs.AI）
+   应用分析：这对我们EPS系统，尤其是在线控转向等复杂系统中提升决策和规划能力，具有巨大潜力。当车辆故障或路况突变时，EPS需快速评估降级方案。传统的基于规则或模型预测控制（MPC）方法在长周期规划上有限。引入这种具备“内在世界模型”的LLM代理，可构建更智能的故障诊断与降级策略，甚至用于高级助力策略的在线优化。这非常值得投入。可从离线模拟入手，让LLM代理学习生成合理的降级路径和控制指令，通过HIL测试验证。这能显著提升EPS的智能化水平和功能安全冗余设计能力。
+   https://arxiv.org/abs/2606.27483
+
+2. Towards Reliable and Robust LLM Planning: Symbolic Feedback-Driven Iterative Self-Refinement Framework（来源：arXiv cs.AI）
+   应用分析：该框架对我们EPS这类ASIL D等级的关键系统，在控制策略鲁棒性和可靠性提升上极具借鉴意义。可将LLM应用于EPS的“故障诊断与降级”模块。当传感器异常、电机参数漂移或功率器件故障时，LLM代理能结合系统约束和功能安全要求，生成降级操作。符号验证器可检查这些操作是否违反ISO 26262标准或物理限制。此方向非常值得投入，将EPS功能安全需求、故障模式等知识图谱化，有望在自动故障恢复和预测性维护方面取得突破。
+   https://arxiv.org/abs/2606.27757
+
+3. Support-Constrained RL Enables Real-World Policy Improvement without Real-World Experience（来源：arXiv cs.RO）
+   应用分析：这项技术对EPS电机控制策略开发，特别是FOC、无传感器控制、转矩脉动抑制等高精度算法的优化，极其有用。这些算法调优高度依赖真实环境测试。SCORE框架提供了一条“仿真到实车”的优化路径。我们可以利用现有EPS控制器的实车数据训练基础策略，将其“行为支持域”作为约束，在Simulink或HIL中进行强化学习优化，提升手感、NVH或鲁棒性。优化后的策略在部署实车前，行为范围受限，大大降低不安全风险。这是提升EPS电机控制算法开发效率和性能的关键方向，必须投入，可大幅减少昂贵实车测试时间，加速线控转向迭代。
+   https://arxiv.org/abs/2606.27475
+
+4. CWI: Composite Humanoid Whole-Body Imitation System for Loco-manipulation（来源：arXiv cs.RO）
+   应用分析：虽非直接用于EPS，但CWI对优化EPS助力策略与手感调校有极高借鉴价值。人形机器人关节执行器控制与EPS电机控制在底层共通，尤其在高动态、高精度和NVH方面。CWI处理“运动与操作协调”及“数据驱动模仿学习”的思路可启发我们。例如，如何通过模仿驾驶员转向意图（类比MoCap数据），生成更自然、个性化的助力曲线和路感反馈，同时保证稳定性。解耦数据处理的思路，也可用于区分转向的“主观意图”与“客观路况”对助力策略的影响。这值得适度投入，学习其先进理论和方法，探索迁移到线控转向等系统。
+   https://arxiv.org/abs/2606.27676
+
+5. Ford rehires ‘gray beard’ engineers after AI falls short（来源：TechCrunch）
+   应用分析：这则新闻对我们EPS研发工程师是一剂清醒剂。我们探索用AI改进控制、标定和故障诊断，但福特案例强调AI局限性，特别是在需高度领域知识、工程直觉和判断时。这意味着在EPS开发中，AI应是辅助工具而非替代。例如，AI可助自动标定助力参数，但最终手感调校和极端工况验证仍需资深工程师判断。这启示我们务实看待AI在EPS中的应用，重心放在AI辅助设计、诊断、标定，而非盲目“AI全自动化”，并注重培养和传承核心工程经验。
+   https://techcrunch.com/2026/06/28/ford-rehires-gray-beard-engineers-after-ai-falls-short/
+
+6. BYD plans 2027 debut of in-house smart driving chip on Denza cars, report says（来源：CnEVPost）
+   应用分析：这对EPS行业有直接影响，需密切关注和投入。智能驾驶芯片自研意味着更高集成度、软硬件协同和更强算力，为线控转向落地提供更好硬件基础。线控转向需强大计算能力进行路径规划、决策和冗余控制。此外，比亚迪自研芯片趋势可能影响我们EPS控制器中MCU和功率器件选型策略，以及与客户的接口定义。我们需与客户沟通，了解其自研芯片对EPS功能、性能和接口要求。作为EPS研发工程师，需评估此趋势对未来EPS系统架构、功能安全设计、控制器软硬件和控制算法的影响，甚至考虑支持客户自研芯片平台。
+   https://cnevpost.com/2026/06/28/byd-plans-2027-debut-adas-chip-denza-cars/
+
+7. From Detection to Action: Using LLM Agents for Fault-Tolerant Control（来源：arXiv eess.SY 控制系统）
+   应用分析：这项研究对EPS系统功能安全和高可用性挑战提供了极佳解决方案。可借鉴构建EPS专用的LLM故障容错代理。当EPS发生故障时，代理能：一、结合传感器数据、故障码、车辆工况等，通过LLM推理进行深层次故障诊断。二、基于EPS数字孪生模型、ISO 26262功能安全要求、预设降级策略及实时车辆状态，LLM生成最优故障恢复方案，如切换冗余模式、限制助力、调整参数等。三、生成的方案在数字孪生中预验证，确保安全可行后转化为控制指令下发。这非常值得投入，有望实现更智能、自适应的故障处理，提高效率和安全性。初期可在HIL和MIL环境下进行概念验证和原型开发，逐步构建EPS领域知识图谱。
+   https://arxiv.org/abs/2606.28011</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260629-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260629-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260629-pm.mp3" length="3279168" type="audio/mpeg"/>
+      <pubDate>Mon, 29 Jun 2026 09:42:57 +0000</pubDate>
     </item>
   </channel>
 </rss>
