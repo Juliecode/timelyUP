@@ -13,31 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 30 Jun 2026 09:43:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 22:42:28 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>专题 · 探索 Milvus：AI时代的向量数据库</title>
-      <description>本期专题：Milvus是什么
-
-1. Milvus 是一个开源的向量数据库，专为海量向量数据的存储、索引和相似性搜索而设计。（来源：专题讲解）
-
-2. 它将图像、文本等非结构化数据转化为高维向量（Embedding），并通过高效的近似最近邻（ANN）算法进行快速查找。（来源：专题讲解）
-
-3. Milvus 解决了传统数据库难以处理高维向量相似性搜索的挑战，是AI应用（如推荐系统、语义搜索）的核心基础设施。（来源：专题讲解）
-
-4. 其重要性体现在处理非结构化数据、支持AI应用、高可扩展性和性能优化。（来源：专题讲解）
-
-5. 作为云原生架构，Milvus 易于部署和集成，已成为RAG（检索增强生成）等现代AI架构的关键组成部分。（来源：专题讲解）
-
-6. 它通过将复杂数据转化为向量并进行高效管理，使得AI能够更好地理解和利用世界上的信息。（来源：专题讲解）</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260617-topic-063428.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260617-topic-063428.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260617-topic-063428.mp3" length="1220256" type="audio/mpeg"/>
-      <pubDate>Tue, 16 Jun 2026 22:35:08 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 智驾、机器人与AI控制：前沿科技如何重塑EPS研发？</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最具价值的资讯。这些内容不仅将带您了解最新的技术突破，更重要的是，我将结合我们汽车EPS，也就是电动助力转向系统的研发背景，深入分析这些技术对我们工作的具体应用潜力，以及它们是否值得我们投入时间和精力去探索。准备好了吗？让我们一起开启今天的科技之旅！
@@ -1079,6 +1059,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260630-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260630-pm.mp3" length="2980512" type="audio/mpeg"/>
       <pubDate>Tue, 30 Jun 2026 09:43:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技早报：特斯拉无人驾驶出租车上路，宝马人形机器人上岗，AI自进化与控制新突破</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们聚焦人工智能前沿、汽车智能化和机器人三大领域。从特斯拉的无人驾驶出租车上路，到宝马生产线上的人形机器人，再到AI智能体的自进化能力和控制系统的新突破，每一条都可能点燃你新的灵感。话不多说，我们马上开始今天的播报。
+
+1. Recursive Self-Evolving Agents via Held-Out Selection（来源：arXiv cs.AI）
+   应用分析：在EPS或线控转向领域，我们可以探索使用RSEA的理念来开发自适应助力策略。例如，智能体可以观察车辆在不同路况下的转向手感数据、驾驶员反馈，并自动优化助力曲线、阻尼补偿等参数。通过其“非退步验证”机制，确保每次优化都带来实际提升。这种方法在自动标定和故障诊断方面潜力巨大，值得投入研究以提高效率和系统鲁棒性。
+   https://arxiv.org/abs/2606.28374
+
+2. Learning to Distributedly Estimate under Partially Known Dynamics: A Covariance-Agnostic Neural Kalman Consensus Filter（来源：arXiv cs.LG）
+   应用分析：在EPS电机控制中，我们可以利用CA-NKCF改进无传感器控制方案中的转子位置和速度观测器。传统卡尔曼滤波需要精确的噪声协方差，而CA-NKCF能通过学习适应未知噪声，提升在温漂、参数不确定性下的控制鲁棒性。在整车层面，它也能用于线控转向系统中的车辆状态估计，实现更精确的车辆动力学控制。这是对现有FOC观测器的重要升级方向，非常值得投入研发资源。
+   https://arxiv.org/abs/2606.28441
+
+3. Tesla starts testing Cybercab without pedals or a steering wheel in Austin（来源：TechCrunch）
+   应用分析：Cybercab的测试直接验证了线控转向系统的可行性和市场潜力。我们需要密切关注其功能安全设计、冗余机制以及在无方向盘/踏板情况下的用户体验和应急处理方案。这会直接影响我们未来在R-EPS向SBW演进过程中的技术路线选择、安全等级需求以及控制算法的开发方向。投入研究SBW的架构和控制是当前最值得做的事情之一。
+   https://techcrunch.com/2026/06/30/tesla-starts-testing-cybercab-without-pedals-or-a-steering-wheel-in-austin/
+
+4. A Query-Driven Communication-Efficient Digital Twins Design for Autonomous Driving（来源：arXiv cs.RO）
+   应用分析：在线控转向系统的开发中，我们可以建立EPS或SBW的数字孪生模型。通过这种查询驱动的机制，可以在硬件在环（HIL）或软件在环（SIL）测试中，只在关键工况下（如故障诊断、极端转向）请求高精度传感器数据，以验证EPS或SBW控制器的性能和功能安全。这能大幅降低测试成本和数据处理负担，同时提高故障诊断和预测性维护的效率。这项技术在功能安全验证和系统鲁棒性测试方面，非常值得投入。
+   https://arxiv.org/abs/2606.28384
+
+5. TrajRS: Towards Certified Robustness in Pedestrian Trajectory Prediction（来源：arXiv cs.AI）
+   应用分析：虽然这并非直接针对EPS控制，但TrajRS的理念对我们设计EPS或SBW系统的功能安全和鲁棒性有重要借鉴意义。我们可以考虑在EPS或SBW的输入端，例如来自上层控制器的转向指令，引入类似的“认证鲁棒性”检查机制，确保即使上层指令存在微小扰动或潜在攻击，EPS也能保持安全稳定的输出。这有助于提升整个线控转向系统的端到端安全性，尤其是在冗余和故障降级设计中，提供量化的安全保障。值得关注其在安全验证领域的应用。
+   https://arxiv.org/abs/2606.28716
+
+6. FADA: Few-Shot Domain Adaptation via Dynamics Alignment for Humanoid Control（来源：arXiv cs.RO）
+   应用分析：FADA的少样本域适应思想可以直接迁移到EPS电机控制策略中。例如，在FOC控制中，电机参数会随温度变化。我们可以利用FADA的框架，通过少量台架或整车数据，快速对电机控制器的参数辨识模块或控制增益进行自适应调整，以补偿温漂效应，提升控制性能和鲁棒性。这对于缩短标定周期、提高产品一致性、降低成本非常有帮助。强烈建议投入研究，将其应用于电机参数自适应和控制策略的快速部署。
+   https://arxiv.org/abs/2606.28476
+
+7. BMW Group deploys Figure 03 humanoid after tests with previous version（来源：The Robot Report）
+   应用分析：宝马的实践证明了人形机器人在汽车制造领域的实用性。虽然不是直接用于EPS产品，但其背后驱动技术，特别是关节电机控制、力控、无传感器感知等，与我们正在研究的EPS电机控制策略有很强的技术迁移性。我们可以持续关注Figure系列机器人在执行器、传感器和控制算法上的技术细节，从中汲取灵感，用于提升EPS电机的性能和智能化水平。同时，人形机器人未来可能成为线控转向测试和验证的平台，模拟人类驾驶员行为。这项进展值得我们持续关注。
+   https://www.therobotreport.com/bmw-group-deploys-figure-03-humanoid-after-tests-previous-version/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260701-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260701-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260701-am.mp3" length="3577104" type="audio/mpeg"/>
+      <pubDate>Tue, 30 Jun 2026 22:42:28 +0000</pubDate>
     </item>
   </channel>
 </rss>
