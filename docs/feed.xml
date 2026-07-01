@@ -13,67 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 01 Jul 2026 09:42:30 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 22:43:20 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI与智能出行：从芯片到控制，再到数据驱动的未来</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最值得关注的重磅资讯。从AI开发环境的革新，到汽车核心芯片的迭代，再到机器人学习的新范式，每一条都可能触及我们EPS产品研发的神经。让我们一起探索这些技术如何赋能我们的转向系统，推动线控转向的未来。
-
-1. SiMa Launches Agentic Development Environment for Physical AI（来源：EE Times）
-   应用分析：能不能用：能用，而且非常需要。目前将AI算法（如神经网络观测器、预测性维护模型）部署到EPS的嵌入式MCU上，往往需要大量手动优化和适配。这个开发环境有望大幅简化流程，实现快速原型验证和迭代。
-怎么用：我们可以用它来快速迭代基于神经网络的电机状态观测器、故障诊断模型，或者强化学习辅助的助力曲线自适应标定算法。它能帮助我们更高效地将MATLAB/Simulink中验证过的AI模型，自动化地转换成可在边缘芯片上运行的C代码，并进行性能优化。
-值不值得投入：绝对值得投入关注和研究。如果真能将开发效率从“月”缩短到“小时”，这将是EPS产品快速迭代和AI功能落地的关键加速器，显著提升我们的研发竞争力。应密切关注其工具链和支持的硬件平台，尝试在非功能安全关键模块（如高级NVH抑制、预测性维护）进行小范围试点。
-   https://www.eetimes.com/sima-launches-agentic-development-environment-for-physical-ai/
-
-2. Robust Direct Data-Driven Hamiltonian for Safe Set Computation under Measurement Noise and Disturbances（来源：arXiv eess.SY 控制系统）
-   应用分析：能不能用：有潜力应用于EPS系统的功能安全验证和在线安全监控。特别是在线控转向（Steer-by-Wire）这种对安全要求极高的系统演进中，如何确保在传感器失效或外部冲击下的系统鲁棒性至关重要。
-怎么用：我们可以利用历史运行数据，结合R-DDH框架来构建EPS系统的安全运行区域。例如，在电机过载、温度异常或传感器信号异常时，系统能否在保证安全的前提下提供降级助力或执行安全停车。这可以辅助我们设计更智能的故障诊断和降级策略，甚至在控制器内部实时评估当前状态是否处于安全集内。
-值不值得投入：值得深入研究和概念验证。虽然直接应用于ASIL D级别的核心安全功能可能需要更长时间，但作为辅助验证工具、故障诊断的决策依据，或线控转向冗余设计中的安全边界估计，其价值巨大。可以考虑将其作为博士生合作课题或内部预研项目。
-   https://arxiv.org/abs/2606.17292
-
-3. Wolfspeed introduces new Gen 5 SiC MOSFETs for EV traction inverters（来源：Charged EVs）
-   应用分析：能不能用：非常能用，是EPS功率级硬件升级的直接方向。
-怎么用：EPS控制器中的功率级（H桥）是驱动永磁同步电机（PMSM）的核心。采用这种高效率的SiC MOSFET可以显著降低开关损耗和导通损耗，从而减少发热，允许更高的开关频率，进而减小电感体积，降低系统成本和体积。更高的开关频率也有助于抑制电机电流纹波，改善NVH性能。我们可以在下一代EPS控制器设计中评估其性能、成本和可靠性。
-值不值得投入：必须投入。SiC技术已是电动汽车领域的趋势，直接关系到EPS产品的竞争力。应立即进行样品评估、台架测试，并与供应商建立紧密合作，争取在量产项目中导入。
-   https://chargedevs.com/newswire/wolfspeed-introduces-new-gen-5-sic-mosfets-for-ev-traction-inverters/
-
-4. ParkingTransformer: LLM-Enhanced End-to-End Trajectory Planning for Autonomous Parking（来源：arXiv cs.RO）
-   应用分析：能不能用：可以作为线控转向系统或高级自动泊车功能的预研方向。LLM的语义理解能力可能有助于处理复杂的泊车场景（如识别不规则障碍物、理解用户意图等）。
-怎么用：我们可以探索将LLM与我们现有的MPC或其他轨迹规划算法结合。例如，LLM可以负责理解用户通过语音或其他高层指令表达的泊车意图，并结合环境语义信息（如“停在这个车位旁边”、“避开那个自行车”）生成高层规划，然后由底层控制器转换为具体的转向、驱动指令。3D位置编码的概念对我们理解空间几何信息也有启发。
-值不值得投入：值得投入预研。虽然直接在EPS中集成LLM的计算资源和实时性可能仍是挑战，但其在复杂决策和语义理解方面的潜力对未来的线控转向和智能驾驶功能至关重要。可以从小范围的仿真或HIL环境开始，探索LLM在高层决策或异常场景处理中的应用。
-   https://arxiv.org/abs/2606.17082
-
-5. QSPICE’s Native Python Socket API: Real-Time Co-Simulation for Power, Analog and Mixed-Signal Designers（来源：Power Electronics News）
-   应用分析：能不能用：非常能用，且能显著提升我们的开发和验证效率。
-怎么用：我们可以利用QSPICE仿真电机、功率级、传感器等硬件，并通过Python API与MATLAB/Simulink生成的C代码或手写的嵌入式C代码进行实时交互。这使得我们可以在物理硬件缺失或早期设计阶段，就能进行更接近真实的闭环仿真，提前发现软硬件接口问题、控制算法在真实物理特性下的表现，并加速参数标定。例如，在FOC算法开发中，我们可以用QSPICE仿真含有非线性、寄生参数的电机模型和逆变器，然后用Python API将电流、位置等反馈给控制算法，再将控制输出（PWM占空比）传回QSPICE，形成实时闭环。
-值不值得投入：必须投入。这是一个实用的工具链升级，能有效解决我们当前MIL/SIL/HIL验证中物理模型精度和实时性不足的问题，加速从算法到硬件集成的过程。团队应立即学习和尝试QSPICE及其Python API，并将其纳入标准开发流程。
-   https://www.powerelectronicsnews.com/qspices-native-python-socket-api-real-time-co-simulation-for-power-analog-and-mixed-signal-designers/
-
-6. EgoInfinity: A Web-Scale 4D Hand-Object Interaction Data Engine for Any-View Robot Retargeting and Video-to-Action Robot Learning（来源：arXiv cs.RO）
-   应用分析：能不能用：直接用于EPS可能较远，但其核心思想——从大规模、多样化的数据中提取“行为”并“重定向”到执行器控制——对我们非常有启发。
-怎么用：我们可以借鉴这种“数据引擎”的思路，构建一个EPS特有的“驾驶员意图-转向行为”数据库。例如，收集大量人类驾驶员在不同路况、不同情绪下的转向操作数据（包括手部动作、路面反馈、车辆状态等），然后用AI模型从这些数据中学习“优秀手感”的特征，甚至通过某种形式的“重定向”来自动生成或优化助力曲线和阻尼补偿，以匹配特定驾驶员或场景需求。这可以用于自动标定，或者为线控转向提供更自然、个性化的手感。
-值不值得投入：值得作为前瞻性研究方向。虽然不是短期内的工程落地，但它是解决EPS手感调校主观性、效率低下等痛点的潜在突破口。可以关注其底层技术，比如如何从视频中提取高维动态信息，以及如何进行“动作重定向”，这些对我们理解和量化“手感”有帮助。
-   https://arxiv.org/abs/2606.17385
-
-7. Model-Free Control for Multi-Time Scale Dynamics of Grid-Connected Power Converters（来源：arXiv eess.SY 控制系统）
-   应用分析：能不能用：这种无模型控制思想非常适合应用于EPS的电机控制，尤其是应对复杂的非线性、时变参数和外部扰动。
-怎么用：我们可以将iPI控制器或类似无模型控制方法应用于EPS电机的FOC控制环路中。例如，在转矩控制或速度控制中，当电机参数（如电阻、电感）因温度变化、磁饱和等因素发生漂移，或存在未建模的转矩脉动时，无模型控制器可以通过实时估计系统“等效”导数来快速补偿，从而提升控制精度和鲁棒性，减少对精确参数辨识的依赖。这有助于抑制NVH，提高手感一致性。
-值不值得投入：值得深入研究和实验验证。无模型控制为解决EPS系统中的模型不确定性、非线性以及参数漂移等问题提供了新思路。可以在仿真和台架上对iPI控制器进行验证，评估其在不同工况下（如低温、高温、不同转速负载）对转矩脉动、NVH抑制和鲁棒性的提升效果。
-   https://arxiv.org/abs/2606.17873
-
-8. HRDX: A Large-Scale Vector HD-Map Dataset（来源：arXiv cs.RO）
-   应用分析：能不能用：高清地图是线控转向系统实现高级自动驾驶功能的关键输入之一，直接相关。
-怎么用：线控转向系统未来将与自动驾驶深度融合。高清地图提供车道线、交通标志、路口拓扑等精确信息，能帮助EPS系统在自动驾驶模式下进行更精准的路径跟踪、车道保持和变道决策。例如，在自动泊车或狭窄空间行驶时，结合高清地图信息，EPS可以更精确地控制转向角度，提升车辆的操控性和安全性。HRDX数据集的丰富属性也有助于训练更智能的转向策略，以适应复杂路况。
-值不值得投入：值得持续关注。虽然我们不直接生产高清地图，但其数据格式、精度要求和应用场景对于我们理解未来线控转向系统在自动驾驶环境中的需求至关重要。可以利用这些数据集进行仿真测试，验证EPS控制算法在不同地图精度和语义信息下的表现，并与自动驾驶团队紧密协作，确保转向系统能有效利用地图数据。
-   https://arxiv.org/abs/2606.17080</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260617-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260617-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260617-pm.mp3" length="4492800" type="audio/mpeg"/>
-      <pubDate>Wed, 17 Jun 2026 09:42:56 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI前沿、汽车智能化与机器人：EPS工程师的今日科技早报</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报，我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。从AI驱动的安全控制，到电动汽车核心器件的迭代，再到人形机器人背后的电机效率奥秘，相信这些内容都能为您的研发工作带来新的启发。
@@ -1095,6 +1039,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260701-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260701-pm.mp3" length="3383856" type="audio/mpeg"/>
       <pubDate>Wed, 01 Jul 2026 09:42:30 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI、汽车与机器人：智能执行与安全控制的融合前沿</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门领域，精选出七条最值得关注的资讯。从AI如何赋能控制系统、提升自动驾驶安全性，到机器人灵巧操作的最新进展，再到电动汽车底层硬件技术的突破，每一条都和我们的研发工作息息相关。话不多说，让我们立刻进入今天的早报时间。
+
+1. A Systematic Approach to Multi-Agent AI from Advanced Regulatory Control Theory: Safe and Auditable LLM Operator Agents for Process Control（来源：arXiv eess.SY 控制系统）
+   应用分析：这个概念在EPS辅助功能上具有可行性。我们可以将EPS在不同驾驶场景（比如低速驻车、高速巡航、运动模式）下的助力需求，视为不同的“控制变量”，并由专门的LLM智能体来生成或优化助力参数。通过多智能体框架中的优先级逻辑，处理不同场景间的切换和冲突。例如，在故障诊断方面，可以训练LLM智能体根据传感器数据和历史故障模式，对EPS系统的异常进行初步分析和归因。其强调的可审计性，对于满足ISO 26262功能安全要求尤为重要，能够为AI决策提供更清晰的解释路径。初期值得投入进行概念验证和前期研究，尤其是在自动标定和故障诊断的辅助决策方面，以提升效率和鲁棒性。但对于核心的电机闭环控制，由于对实时性和安全性的极高要求，短期内还需要更严格的验证。
+   https://arxiv.org/abs/2606.30877
+
+2. ShardNet: Training Neural Controllers with Hard, Non-Convex Constraints（来源：arXiv eess.SY 控制系统）
+   应用分析：这项技术潜力巨大，非常值得深入研究。我们可以将ShardNet应用于EPS的转矩控制或线控转向的力矩输出控制。例如，电机最大输出扭矩、转向角速度限制，甚至线控转向中的力矩叠加区间等，都可以作为硬约束嵌入到ShardNet的控制策略中。这能帮助我们设计出既能适应复杂路况、提供良好手感，又能严格保证安全边界的控制器。在无传感器控制方案中，如果能结合状态观测器输出的估计值作为约束，也能进一步提升系统的鲁棒性。可以从模型预测控制（MPC）中引入硬约束的经验出发，研究如何将EPS的物理和安全约束转化为ShardNet可处理的多面体约束，并在MIL/SIL/HIL环境中进行验证。
+   https://arxiv.org/abs/2606.30935
+
+3. Joint discovery of governing partial differential equations from multi-source datasets by competitive optimization（来源：arXiv cs.LG）
+   应用分析：这项研究具有很强的应用潜力，非常值得投入研究。我们可以将EPS系统在不同工况（例如不同车速、不同转向角、不同温度）下采集的台架或整车数据作为多源数据集，利用MCO-PDE框架来发现EPS电机、减速机构、转向柱等关键部件的动力学模型，或者整个系统的助力特性方程。这有助于我们更精确地理解系统行为，改进FOC控制、弱磁控制中的参数辨识，甚至为线控转向系统建立更准确的数字孪生模型。发现的PDE形式也能为设计基于模型的控制策略（如MPC）提供理论基础。准确的系统模型是高性能控制的基础，这种数据驱动的方程发现方法能补充传统建模的不足，尤其是在复杂非线性系统和参数时变场景下。
+   https://arxiv.org/abs/2606.30699
+
+4. Off the Rails: Hijacking the Scoring Head in Generative End-to-End Driving Planners with Safety-Violating Adversarial Perturbations（来源：arXiv cs.RO）
+   应用分析：这项研究并非直接应用于EPS，而是提供了一个重要的安全警示和研究方向。虽然EPS本身不是自动驾驶规划器，但作为线控转向的执行器，需要对上层自动驾驶系统发来的指令保持警惕。我们可以将这项研究作为参考，在EPS功能安全设计中，考虑如何建立更强大的指令校验和冗余机制，防止上层系统因对抗攻击而发出不安全指令。例如，在接收到异常或超出物理极限的转向指令时，EPS系统应能智能地进行判断、限制或触发降级模式。这也能启发我们，在HIL测试中加入对抗性攻击场景，以提升EPS系统的鲁棒性。对抗性攻击是未来汽车智能化不可避免的挑战，提前布局防御机制至关重要，因此值得高度关注并将其安全理念融入到线控转向和功能安全设计中。
+   https://arxiv.org/abs/2606.30807
+
+5. Soitec and ZenSemi partner to mass-produce 300 mm BCD-on-SOI power ICs（来源：Charged EVs）
+   应用分析：虽然我们作为EPS产品研发工程师，直接参与芯片设计可能性较小，但这项技术作为底层硬件，对我们的产品选型和性能提升至关重要。在下一代EPS控制器硬件设计中，我们可以优先考虑采用基于BCD-on-SOI技术的功率集成电路。这种高集成度、高性能的功率IC有助于减小控制器体积、降低系统成本、提高功率密度和开关频率，从而改善电机控制效率和NVH性能。它还能简化PCB设计，提高系统可靠性，并可能支持更高的工作电压，为未来更高功率密度的EPS电机提供硬件基础。我们应密切关注其发展和市场应用情况，并在功率器件选型时，将其作为重要考量因素之一，甚至可以与供应商建立合作，共同探索该技术在EPS中的定制化应用。
+   https://chargedevs.com/newswire/soitec-and-zensemi-partner-to-mass-produce-300-mm-bcd-on-soi-power-ics/
+
+6. From Grasps to Dexterity: Large-Scale Grasp Pretraining for Dexterous Manipulation（来源：arXiv cs.RO）
+   应用分析：这项研究的核心思想——从大规模数据中学习精细运动模式和分层控制——对EPS系统的助力策略与手感调校非常有用，值得投入研究。我们可以借鉴其分层模仿学习框架。例如，将EPS的助力手感调校视为一种“灵巧操作”，通过收集大量驾驶员在不同路况、不同车速下的转向数据（包括主观手感反馈），构建“EPS操作数据集”。高层控制器负责识别驾驶意图和路况，生成粗略的助力目标，低层控制器（如FOC或更高级的力矩控制器）则通过预训练（基于标准手感曲线和物理模型）和微调（基于驾驶员偏好数据），实现更精细、更个性化的助力输出和手感还原。这有助于解决手感调校耗时耗力的问题，并显著提升驾驶体验和产品竞争力。此外，研究中提到的转矩密度、效率、NVH等机器人关节执行器关注的指标，也与EPS电机选型和控制策略紧密相关。
+   https://arxiv.org/abs/2606.30749
+
+7. FPGA-based LQG controller and hardware-in-the-loop simulator implementation for nanomechanical systems（来源：arXiv eess.SY 控制系统）
+   应用分析：这项研究非常实用，可以直接借鉴或在其基础上进行定制开发，值得大力投入。我们可以将这个FPGA框架引入到EPS的HIL仿真平台中，用于测试新的电机控制策略（如FOC、无传感器控制）或助力策略。特别是其可配置的二阶随机植物模型和非线性输入输出映射，非常适合模拟EPS电机在不同负载、温度、摩擦条件下的复杂行为，以及传感器噪声和执行器非线性。MATLAB自动化工作流能显著提高模型化设计与代码生成的效率。通过在FPGA上实现LQG控制器，我们可以探索其在EPS中替代传统PI控制器的潜力，尤其是在处理多变量耦合和噪声抑制方面，以提升性能和鲁棒性。这能有效提升EPS控制算法的验证效率和质量，降低HIL平台成本，并为未来更复杂的控制算法（如MPC）在实时硬件上的部署提供经验和工具链。
+   https://arxiv.org/abs/2606.31228</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260702-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260702-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260702-am.mp3" length="4975920" type="audio/mpeg"/>
+      <pubDate>Wed, 01 Jul 2026 22:43:20 +0000</pubDate>
     </item>
   </channel>
 </rss>
