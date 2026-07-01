@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 30 Jun 2026 22:42:28 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 09:42:30 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾、机器人与AI控制：前沿科技如何重塑EPS研发？</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最具价值的资讯。这些内容不仅将带您了解最新的技术突破，更重要的是，我将结合我们汽车EPS，也就是电动助力转向系统的研发背景，深入分析这些技术对我们工作的具体应用潜力，以及它们是否值得我们投入时间和精力去探索。准备好了吗？让我们一起开启今天的科技之旅！
-
-1. QPILOTS: Efficient Test-Time Q-Steering for Flow Policies（来源：arXiv cs.LG）
-   应用分析：能不能用：能用，但需要将“流匹配/扩散策略”这种生成式模型映射到电机控制的动作生成上。怎么用：可以考虑将线控转向的复杂助力曲线或阻尼特性建模为一种生成式策略，QPILOTS 可以用于在实际运行中，根据实时的路况、车速、驾驶员意图等信息，微调这些策略的输出，从而优化转向手感或响应速度。例如，在车辆高速过弯时，根据预测的车身姿态，对转向助力进行精细的实时修正，提升稳定性。值不值得投入：值得投入关注。这是将深度强化学习应用于实时控制的关键技术之一。它解决了传统强化学习策略在实际部署中，因环境变化导致性能下降的问题。通过与现有模型化控制结合，可能实现更智能、更适应复杂工况的 EPS/线控转向控制。可以先进行仿真验证，再考虑在HIL平台上进行初步测试。
-   https://arxiv.org/abs/2606.14801
-
-2. Adaptive Deep Koopman Operator for Vehicle Dynamics Modeling: A Physics-Informed and Tire-Force-Driven Approach（来源：arXiv eess.SY 控制系统）
-   应用分析：能不能用：非常能用，与我目前在做的方向高度契合。怎么用：1. 线控转向控制：将该模型作为线控转向系统中的核心车辆动力学预测模块，实时预测车辆状态，优化转向力矩分配和路径跟踪控制。特别是在高速或低附着力路面等复杂情况下，其在线自适应能力可以显著提升控制器的鲁棒性。2. 助力策略自适应：利用该模型预测不同驾驶员风格、路面条件下的车辆响应，从而实现助力曲线和回正特性的自动标定与自适应调整，提供更个性化和安全的手感。3. 故障诊断与降级：建立高精度车辆动力学模型后，可以通过模型预测与实际传感器数据的差异进行故障诊断，例如轮胎异常磨损、悬架故障等，并为线控转向系统提供更智能的降级方案。值不值得投入：极度值得投入。这是将前沿控制理论与车辆工程深度结合的典范，直接解决了模型准确性、自适应性和在线稳定性的痛点。建议立即组织团队深入研究，在 MATLAB/Simulink 中搭建原型，利用现有台架数据进行离线验证，并规划在HIL平台进行在线测试。
-   https://arxiv.org/abs/2606.15094
-
-3. Hamilton-Jacobi Reachability-Based Safe Reinforcement Learning for Emergency Collision Avoidance（来源：arXiv eess.SY 控制系统）
-   应用分析：能不能用：能用，且非常关键，是线控转向与自动驾驶融合的必经之路。怎么用：1. 线控转向功能安全：将该安全监督框架集成到线控转向的控制层，作为上层自动驾驶决策的“安全过滤器”。即使自动驾驶系统发出激进的转向指令，该框架也能确保转向执行器（EPS）在保持车辆动态稳定性和不发生碰撞的前提下，提供最大可能的避障能力。2. 冗余与降级策略：在系统设计阶段，利用 HJ 可达性分析来评估不同故障模式下（例如传感器失效、部分执行器性能下降）车辆的安全边界，从而设计更可靠的冗余方案和降级策略。3. HIL/整车测试验证：在验证环节，该框架可以生成极端工况下的安全边界，用于 HIL 和整车测试，确保线控转向系统在所有潜在危险场景下都能满足功能安全要求。值不值得投入：极其值得投入。这是未来线控转向系统实现 L3+ 甚至 L4 级别自动驾驶的关键安全技术。应立即启动预研项目，将 HJ 可达性分析与 EPS/线控转向的控制架构结合，从理论验证到仿真，再到 HIL 平台，逐步推进。
-   https://arxiv.org/abs/2606.15311
-
-4. Inference-time Policy Steering via Vision and Touch（来源：arXiv cs.RO）
-   应用分析：能不能用：能用，且非常具有启发性。怎么用：1. 高级路感还原：利用触觉传感器（例如安装在转向柱或轮胎上的力/振动传感器）感知路面细微纹理和冲击，结合视觉信息（例如摄像头识别路面类型、坑洼），通过类似 ViTaL 的框架，在 EPS 控制器中实时生成更精细的阻尼和摩擦补偿，从而还原更真实、更丰富的路感。2. 驾驶员意图识别与个性化手感：结合驾驶员操作的视觉（如眼动、面部表情）和触觉（如握力、转向力矩变化）信息，训练模型识别驾驶员的驾驶意图（如激进驾驶、舒适驾驶），并实时调整助力策略，提供高度个性化的转向手感，甚至能预测驾驶员的疲劳状态。3. 线控转向冗余与故障检测：视觉和触觉结合，可以作为线控转向系统的多模态冗余感知输入。例如，当转向传感器失效时，可以通过视觉（路面信息）和触觉（驾驶员手感）的融合来辅助判断转向状态和执行器健康状况。值不值得投入：值得投入。虽然直接将机器人操作策略迁移到 EPS 还需要转换，但其多模态感知和推理时策略引导的核心思想，对提升 EPS 的智能化、精细化和个性化水平具有巨大潜力。可以先从收集多模态驾驶数据开始，探索如何构建视觉-触觉融合模型，并进行仿真验证。
-   https://arxiv.org/abs/2606.14981
-
-5. Danfoss’s Dextreme Max system reduces electric excavator power consumption（来源：Charged EVs）
-   应用分析：能不能用：核心理念和方法可以借鉴。怎么用：1. EPS 电机选型与优化：深入研究 Dextreme Max 的数字液压架构如何实现高效率。虽然液压与电机不同，但其“数字”和“按需分配”的思路，可以启发我们重新审视 EPS 电机的控制策略，例如，是否可以引入更精细的“数字”控制单元，实现更精确的扭矩按需输出，减少无用功耗。2. FOC 策略优化：在 FOC 矢量控制中，进一步优化电流控制、弱磁控制等策略，结合电机模型参数的在线辨识，减少电机在不同工况下的损耗。3. 系统级节能：从 EPS 系统的角度，考虑如何与整车能量管理系统进行更深度的协同，例如，在车辆滑行或停驻时，将 EPS 电机切换到超低功耗模式，甚至通过能量回收为小容量电池充电。值不值得投入：值得投入关注。虽然技术领域不同，但其在“电动化设备功耗优化”上的突破，提供了重要的工程目标和可能的思路。可以组织内部技术交流，分析其数字控制原理，并思考如何在电机控制和 EPS 系统架构层面进行创新，以达到类似的能效提升。
-   https://chargedevs.com/newswire/danfosss-dextreme-max-system-reduces-electric-excavator-power-consumption/
-
-6. SiMa Launches Agentic Development Environment for Physical AI（来源：EE Times）
-   应用分析：能不能用：非常能用，这是提升我们研发效率的利器。怎么用：1. AI 控制器快速原型：在开发新的 AI 控制策略（如基于强化学习的助力调校、神经网络观测器）时，利用这种 Agentic 环境，可以快速将训练好的模型部署到我们现有的 MCU 或边缘计算单元上进行测试，大大缩短从模型到 HIL 或台架验证的周期。2. 自动代码生成与优化：探索该环境是否支持 MATLAB/Simulink 模型化设计与代码生成，以及是否能对生成的嵌入式代码进行进一步的性能优化和硬件适配，以满足 EPS 对实时性、内存和功耗的严苛要求。3. 功能安全认证辅助：了解该环境在模型部署过程中，是否提供对 ISO 26262 等功能安全标准的辅助支持，例如模型量化、鲁棒性验证等工具，这对于 EPS 产品的认证至关重要。值不值得投入：极度值得投入。它解决了物理 AI 落地的一个核心痛点。应该立即评估该开发环境，联系 SiMa 获取试用或技术资料，并考虑将其引入我们的开发流程，尤其是在 AI 控制算法的快速迭代和验证阶段。
-   https://www.eetimes.com/sima-launches-agentic-development-environment-for-physical-ai/
-
-7. A Comparative Study of Graph Neural Network Layer Selection for Interaction Modelling in Driving Trajectory Prediction（来源：arXiv cs.LG）
-   应用分析：能不能用：间接能用，对理解和定义线控转向系统的上层需求有帮助。怎么用：1. 需求定义与接口设计：了解 GNN 在轨迹预测中的最佳实践，可以帮助我们更好地理解自动驾驶系统对未来转向指令的精度、延迟和鲁棒性要求。这有助于我们更准确地定义线控转向系统的性能指标和与上层决策模块的接口。2. 协同控制优化：如果未来线控转向与自动驾驶系统深度融合，轨迹预测的准确性直接影响车辆的平稳性、舒适性和安全性。我们可以与自动驾驶团队协作，提供 EPS 侧的控制能力约束和反馈，共同优化 GNN 模型的输出，以实现更平滑、更自然的转向控制。3. 测试场景生成：基于 GNN 模型的交互预测能力，可以生成更真实、更复杂的交通场景用于线控转向的 MIL/SIL/HIL 仿真测试，提升测试的全面性和有效性。值不值得投入：值得投入关注。虽然不是直接的技术迁移，但作为线控转向未来发展的重要外部条件，理解自动驾驶感知预测的最新进展，能帮助我们更好地规划 EPS 的演进路径，确保我们的产品能满足未来智能汽车的需求。可以定期追踪此类研究，并与整车自动驾驶团队保持紧密沟通。
-   https://arxiv.org/abs/2606.14956</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260617-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260617-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260617-am.mp3" length="5893056" type="audio/mpeg"/>
-      <pubDate>Tue, 16 Jun 2026 22:44:08 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI与智能出行：从芯片到控制，再到数据驱动的未来</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最值得关注的重磅资讯。从AI开发环境的革新，到汽车核心芯片的迭代，再到机器人学习的新范式，每一条都可能触及我们EPS产品研发的神经。让我们一起探索这些技术如何赋能我们的转向系统，推动线控转向的未来。
@@ -1095,6 +1059,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260701-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260701-am.mp3" length="3577104" type="audio/mpeg"/>
       <pubDate>Tue, 30 Jun 2026 22:42:28 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI与智能汽车的未来：从安全控制器到线控转向新突破</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报，我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。从AI模型效率的突破到智能驾驶的安全挑战，再到线控转向的未来趋势，以及电动汽车高压部件的最新进展，每一条都可能深刻影响我们的研发工作。话不多说，让我们立刻进入今天的早报时间！
+
+1. Hierarchical Global Attention (HGA)（来源：arXiv cs.LG）
+   应用分析：在EPS领域，我们正探索利用AI和数据驱动方法改进控制和诊断，例如通过分析长时间序列的驾驶行为、路况和电机运行历史数据来优化助力策略或进行预测性维护。但长序列数据的处理往往需要高昂的计算成本和内存。HGA这种无需重新训练、即插即用的长上下文优化方案，能帮助我们更高效地处理这些数据，降低AI模型的部署门槛，提升实时性。我觉得非常值得我们持续关注其在边缘计算设备上的潜力，以实现更智能、更高效的EPS系统。
+   https://arxiv.org/abs/2606.30709
+
+2. ShardNet: Training Neural Controllers with Hard, Non-Convex Constraints（来源：arXiv eess.SY 控制系统）
+   应用分析：作为EPS工程师，功能安全ISO 26262是我们的核心关注点。EPS系统是ASIL D等级，任何控制策略都必须严格满足安全约束，比如电机过温、过流、转向角限位等。传统的AI控制方案很难严格保证这些硬性约束。ShardNet提出的“安全按构造”方法，能让我们把这些关键约束直接嵌入神经网络控制器设计中，极大地提升了AI控制方案在EPS中的可信度和功能安全认证的可行性，有望大幅降低后续的验证和测试成本。这绝对是值得我们深入研究和投入的方向，以实现既智能又安全的EPS控制。
+   https://arxiv.org/abs/2606.30935
+
+3. A Systematic Approach to Multi-Agent AI from Advanced Regulatory Control Theory: Safe and Auditable LLM Operator Agents for Process Control（来源：arXiv eess.SY 控制系统）
+   应用分析：EPS控制策略的性能与鲁棒性提升、自动标定和故障诊断效率是我们目前亟待解决的问题。这个LLM代理框架为我们提供了一个将AI应用于EPS控制的实用范式。我们可以借鉴这种分层、模块化的思想，让LLM代理在更高级别上进行决策，比如根据驾驶场景和驾驶员意图，动态调整底层的FOC或MPC控制参数。同时，结合控制理论的结构化设计，能让AI的决策过程可解释、可审计，这对于ISO 26262功能安全至关重要。例如，LLM可以辅助进行故障模式分析，提供基于专家知识和历史数据的预测性维护建议。这非常值得投入，有望加速AI在EPS控制中的落地，将前沿研究快速转成工程方案。
+   https://arxiv.org/abs/2606.30877
+
+4. Off the Rails: Hijacking the Scoring Head in Generative End-to-End Driving Planners with Safety-Violating Adversarial Perturbations（来源：arXiv cs.RO）
+   应用分析：随着EPS向线控转向（Steer-by-Wire）演进，转向系统将完全由电子控制，其安全性面临前所未有的挑战。这项研究提醒我们，线控转向系统不仅要满足传统的功能安全要求，还要特别关注AI控制模块的对抗性鲁棒性。我们需要投入资源，对线控转向的感知、规划和控制链路进行对抗性攻击测试，并开发相应的防御机制，例如输入数据验证、模型鲁棒性训练等，确保系统在恶意攻击或异常输入下的最高安全性，避免潜在的“劫持”风险。这是线控转向架构和功能安全设计中不可忽视的一环。
+   https://arxiv.org/abs/2606.30807
+
+5. Tesla starts testing Cybercab without pedals or a steering wheel in Austin（来源：TechCrunch）
+   应用分析：作为EPS工程师，Cybercab的测试对我们来说是极其重要的信号。它意味着线控转向（Steer-by-Wire）将成为主流，甚至完全取代机械连接。我们需要加速线控转向的系统架构设计研究，包括多重冗余方案以满足ASIL D功能安全等级，以及在没有方向盘反馈的情况下，如何通过电机控制提供必要路感和虚拟手感。此外，无传感器或冗余传感方案的开发将变得更加关键，以提升安全性和成本竞争力。这是一个必须全力投入的方向，我们的技术储备要紧跟这一趋势，将前沿研究快速转成可落地的EPS工程方案。
+   https://techcrunch.com/2026/06/30/tesla-starts-testing-cybercab-without-pedals-or-a-steering-wheel-in-austin/
+
+6. From Grasps to Dexterity: Large-Scale Grasp Pretraining for Dexterous Manipulation（来源：arXiv cs.RO）
+   应用分析：机器人关节执行器和伺服电机控制与EPS电机控制在底层技术上有高度共通性。这项研究启发我们，可以借鉴这种大规模数据预训练的思路，利用大量的实际驾驶数据、路况数据和电机运行数据，来预训练EPS电机控制模型。这有助于我们更精准地优化FOC矢量控制、弱磁控制等策略，提升电机转矩密度、效率和NVH性能，特别是抑制转矩脉动和抖动。通过数据驱动的自动标定，也能大幅提升助力策略与手感调校的效率和鲁棒性。这值得我们投入，将机器人领域的先进电机控制技术迁移到EPS中，解决电机控制策略的性能与鲁棒性提升等问题。
+   https://arxiv.org/abs/2606.30749
+
+7. Vishay’s VOLA617A optocoupler brings 1,000 V isolation to 800 V EV batteries（来源：Charged EVs）
+   应用分析：我们的EPS系统控制器中的功率级，直接与车辆的电源系统相连。随着电动汽车向800V高压平台演进，EPS系统的电源管理和信号隔离面临更高要求。VOLA617A这款光耦能够提供1000V的隔离电压，远超传统500V的限制，这对于我们设计符合ISO 26262功能安全标准的高压EPS系统至关重要。它能确保控制逻辑电路与高压功率电路之间的安全隔离，提升系统的EMC性能和整体可靠性。在未来的800V EPS产品开发中，我们必须将这类高压隔离器件纳入硬件选型和设计考量，这是确保产品竞争力和安全性的关键。
+   https://chargedevs.com/newswire/vishays-vola617a-optocoupler-brings-1000-v-isolation-to-800-v-ev-batteries/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260701-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260701-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260701-pm.mp3" length="3383856" type="audio/mpeg"/>
+      <pubDate>Wed, 01 Jul 2026 09:42:30 +0000</pubDate>
     </item>
   </channel>
 </rss>
