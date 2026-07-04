@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 03 Jul 2026 22:39:46 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 09:42:35 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI、智驾与机器人：EPS工程师的今日科技洞察</title>
-      <description>各位研发工程师朋友们，早上好！我是你们的AI主播小智。欢迎收听今天的科技早报。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯，希望能为您的研发工作带来一些新的启发和思考。让我们立刻开始今天的播报。
-
-1. ITNet：统一的神经网络架构，融合卷积、注意力与循环网络特性。（来源：arXiv cs.AI）
-   应用分析：作为EPS工程师，我们一直在寻求更优的电机控制策略和状态观测器。ITNet这种统一架构，理论上可能帮助我们设计出更精简、但同时具备强大特征提取和时序建模能力的神经网络模型。例如，在FOC矢量控制中，可以尝试用ITNet构建非线性补偿器，或者在无传感器控制中，用它来提升转子位置观测器的精度和鲁棒性。其核心优势在于可能通过一个更通用的模型来适应不同类型的信号处理需求，避免为不同问题设计不同的网络结构。是否值得投入？初期可以进行小规模的理论验证和仿真，评估其在EPS特定场景下的计算效率和性能增益。如果能在嵌入式MCU上实现高效部署，且性能显著优于现有方法，那么投入深入研究的价值非常高。
-   https://arxiv.org/abs/2606.19538
-
-2. PowerAgentBench-Dyn：首个面向电力系统动态研究的智能体AI基准。（来源：arXiv eess.SY 控制系统）
-   应用分析：LLM智能体在电力系统动态研究中的应用，为我们思考AI在EPS研发中的角色提供了新视角。我们可以借鉴这种思路，构建一个智能体来自动化EPS的某些研发流程，例如助力曲线的自动标定、复杂故障模式的诊断逻辑生成，甚至辅助进行线控转向系统的架构设计。智能体可以与我们的MATLAB/Simulink仿真环境或HIL台架交互，通过迭代实验和推理来优化EPS的性能和手感。前期投入可以集中在概念验证和小型智能体开发上，探索其在参数空间搜索、多目标优化以及知识管理方面的潜力。如果能有效提升标定效率、减少人工干预，并能快速将前沿研究转化为工程方案，那么长期投入是值得的。
-   https://arxiv.org/abs/2606.20401
-
-3. 数据投毒下的数据驱动控制：Secure DeePC方法提升鲁棒性。（来源：arXiv eess.SY 控制系统）
-   应用分析：在我们的EPS研发中，如果引入AI或数据驱动方法来改进电机控制策略、故障诊断或预测性维护，那么数据来源的可靠性就必须得到保障。尤其是在线控转向这种安全关键系统中，任何被投毒的数据都可能导致灾难性后果。Secure DeePC的思路提醒我们，在设计数据驱动的控制方案时，必须考虑数据完整性校验、数据冗余以及对潜在数据投毒攻击的鲁棒性。例如，在基于在线学习或数据更新的自适应控制中，需要建立严格的数据安全防护机制。我们应该投入资源进行安全性评估，研究如何将类似Secure DeePC的鲁棒控制思想融入到EPS的AI控制算法中，并通过MIL/SIL/HIL测试来验证其在数据异常情况下的性能和功能安全等级。
-   https://arxiv.org/abs/2606.20301
-
-4. 自博弈强化学习结合少量人类数据，实现类人自主驾驶策略。（来源：arXiv cs.LG）
-   应用分析：线控转向系统的一个核心挑战是提供自然、符合驾驶员预期的手感。传统的助力策略调校依赖大量人工经验和路试。这项研究提出的方法，可以通过在仿真环境（如Simulink/HIL）中进行大规模自博弈，并结合少量实际驾驶员数据（例如三十分钟的演示数据），快速学习和优化助力曲线、阻尼和回正特性，从而实现更符合人类驾驶习惯的EPS手感。这能显著减少昂贵的整车标定时间和资源投入。我们应该积极投入研究资源，将强化学习与人类驾驶数据结合，探索自动化的EPS手感调校方法，以提升用户体验并降低开发成本。这与我们“用AI/数据驱动方法改进控制、标定效率”的目标高度契合。
-   https://arxiv.org/abs/2606.19370
-
-5. 下一代汽车对数据连接提出更高要求，推动ADAS和自动驾驶发展。（来源：Charged EVs）
-   应用分析：线控转向系统作为汽车控制的核心执行器之一，对数据实时性、带宽和冗余性有着极高的要求。为了实现精确的助力控制、路感还原以及功能安全，EPS控制器需要接收来自车辆传感器（如ADAS摄像头、雷达、IMU）和线控转向ECU的实时数据，并以极低的延迟进行处理和响应。该趋势提醒我们，在设计Steer-by-Wire的通信总线（例如车载以太网）和内部接口时，必须提前规划高数据吞吐和低延迟方案，并考虑多重冗余设计以确保功能安全。我们需要与芯片供应商和通信模块供应商紧密合作，评估新型高速连接方案（如SerDes、光纤）在车规级应用中的可行性、成本和可靠性，并将其纳入下一代EPS和线控转向系统的架构规划中。这是实现未来高级自动驾驶的关键一环，值得高度关注和投入。
-   https://chargedevs.com/whitepapers/enabling-superior-mobility-experiences-supercharging-data-connectivity-to-meet-next-generation-automotive-expectations/
-
-6. Elmo推出高功率密度运动控制器和伺服驱动器，面向工业应用。（来源：The Robot Report）
-   应用分析：EPS系统中的电机和驱动器是核心部件，其性能直接影响助力效果、NVH表现和系统成本。Elmo新产品在功率密度上的提升，意味着在相同体积下可以输出更大的功率，或者在相同功率下实现更小的体积和更轻的重量。我们应该密切关注其技术细节，例如所采用的功率器件技术（如碳化硅/氮化镓）、开关频率、电流控制精度、散热设计以及功能安全特性。这些技术进步可能为我们提供新的思路，用于优化EPS的功率级设计，实现更紧凑、更高效率的电机驱动，从而降低系统成本、改善NVH性能，并为线控转向等对集成度要求更高的系统提供支持。值得投入资源对这些前沿的工业级伺服驱动技术进行分析和评估，探索其在车规级应用中的潜在迁移性。
-   https://www.therobotreport.com/elmo-releases-new-motion-controller-servo-drives-industrial-applications/
-
-7. 安全实时的非线性系统故障诊断，通过可微分可达性实现。（来源：arXiv cs.RO）
-   应用分析：EPS系统作为安全关键部件，必须具备强大的实时故障诊断能力，以便在发生故障时能及时识别并执行安全降级策略。该研究提出的“可微分可达性”方法，为我们设计更精确、更实时的故障诊断算法提供了新的工具。例如，我们可以利用这种方法来建立EPS电机、传感器、控制器内部故障的模型，并通过实时监测系统输出与这些模型的可达集进行比较，从而实现快速、确定性的故障诊断。这对于提升EPS的功能安全等级（如ASIL D）非常有帮助。值得投入资源，在MIL/SIL/HIL环境中对该方法进行原型验证，探索其在EPS故障诊断、预测性维护以及线控转向系统冗余管理中的应用潜力。这能够显著提升系统的可靠性和安全性，符合我们解决“故障诊断与降级”问题的需求。
-   https://arxiv.org/abs/2606.19590</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260620-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260620-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260620-am.mp3" length="3804480" type="audio/mpeg"/>
-      <pubDate>Fri, 19 Jun 2026 22:34:26 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI与智能汽车：从模型幻觉到机器人执行器，今日科技早报深度解析</title>
       <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是大家的老朋友，将和您一同探索前沿科技的脉搏。今天，我们将聚焦AI的最新进展，深度探讨智能汽车的未来挑战，并展望机器人技术在工业和汽车领域的应用。从大模型的可靠性到高功率密度的电机驱动，再到自动驾驶的定位安全，每一条资讯都与我们的研发工作息息相关。话不多说，让我们马上进入今天的早报。
@@ -1075,6 +1039,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260704-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260704-am.mp3" length="4719024" type="audio/mpeg"/>
       <pubDate>Fri, 03 Jul 2026 22:39:46 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI与智能出行：从模型证明到GaN驱动的深度洞察</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是大家的老朋友，你们的技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人技术这三大热点方向，为您精选了七条重磅资讯。从AI大模型的可验证性突破，到机器人电机控制与GaN功率器件的融合，再到自动驾驶的未来愿景，以及半导体供应链的策略考量和新能源车市场的最新脉动，内容非常丰富。希望今天的分享能为您的研发工作带来一些新的启发和思考。
+
+1. Leanstral 1.5: Proof abundance for all（来源：Hacker News）
+   应用分析：这款模型在“生成证明”方面的能力，对我们EPS研发来说，有潜力在控制算法验证、功能安全文档辅助和代码审查方面发挥作用。比如，我们可以尝试利用它生成FOC或MPC控制算法的形式化证明，辅助MIL/SIL/HIL阶段的验证；或者在ISO 26262流程中，辅助生成安全机制的逻辑验证报告。当然，目前还处于概念验证阶段，需要小范围投入进行探索，但如果能在这些高度依赖验证和证明的环节显著提高效率和质量，那将是非常值得投入的方向。
+   https://mistral.ai/news/leanstral-1-5/
+
+2. Anthropic wants to develop its own drugs（来源：The Verge）
+   应用分析：虽然Anthropic的Claude Science是面向药物研发，但其核心理念——整合零散工具和数据集，利用AI进行复杂分析和探索——与我们解决EPS电机控制问题的思路不谋而合。我们可以借鉴这种“AI工作台”的模式，构建一个EPS专用的AI平台，整合电机模型、控制器参数、测试数据、整车手感反馈等，利用AI进行多目标优化，实现助力曲线、阻尼补偿等参数的自动标定。此外，在故障诊断和预测性维护方面，AI分析历史运行数据和传感器数据的能力，也能帮助我们快速识别电机异常或控制器故障模式。这是一个值得我们投入研究和概念验证的未来方向。
+   https://www.theverge.com/ai-artificial-intelligence/961311/anthropic-claude-science-ai-drug-development
+
+3. Agentic coding notes from Galapagos Island（来源：Hacker News）
+   应用分析：AI在编码中的智能体循环能力，对我们嵌入式C和MATLAB/Simulink开发来说，是非常有吸引力的。我们可以利用AI辅助生成嵌入式C代码的骨架、驱动程序，甚至根据Simulink模型自动生成部分代码。在代码审查环节，AI可以帮助我们识别潜在的bug、性能瓶颈或不符合MISRA C规范的地方，并给出重构建议。此外，自动生成单元测试和集成测试用例也能大大提高测试覆盖率。当然，在功能安全要求极高的汽车领域，AI生成的代码仍需严格的人工审核和验证，但作为提升研发效率和代码质量的强大工具，这是非常值得积极投入的方向。
+   https://danluu.com/ai-coding/#appendix-agentic-loops-and-writing-this-post
+
+4. Battery Energy Storage Systems, Motor Control for Robotics, GaN Half-Bridge Driver: Power Electronics Week Insights（来源：Power Electronics News）
+   应用分析：这绝对是我们EPS研发的重点投入方向。首先，我们可以深入研究机器人领域的高精度、高动态电机控制策略，结合无传感器控制、弱磁控制等，优化EPS的助力手感、响应速度和路感还原能力。其次，GaN半桥驱动器在EPS功率级中的应用潜力巨大，它能带来更高的开关频率、更低的损耗、更小的体积和更轻的重量，从而提升系统效率和NVH性能。同时，机器人领域在无传感器或冗余传感方案上的探索，也能为我们提升EPS的安全性并降低成本提供宝贵经验。这是我们现在和未来都极度值得投入的方向。
+   https://www.powerelectronicsnews.com/battery-energy-storage-systems-motor-control-for-robotics-gan-half-bridge-driver-power-electronics-week-insights/
+
+5. Quarterhill discusses transport modernization as U.S. marks 70 years of federal highways（来源：The Robot Report）
+   应用分析：这直接关系到我们EPS的未来发展方向。面对自动驾驶的浪潮，我们必须紧密结合其需求，重新审视线控转向系统的架构设计，充分考虑冗余、ISO 26262功能安全（ASIL D）以及网络安全等因素，确保在自动驾驶模式下的高可靠性。同时，我们需要预研与自动驾驶域控制器、车辆运动控制器之间的通信接口和协议，确保EPS系统能无缝接收控制指令并提供准确反馈。自动驾驶对转向精度和响应速度的更高要求，也促使我们必须持续优化电机控制策略，减少转矩脉动和抖动。这是一个必须长期、持续、高强度投入的战略方向。
+   https://www.therobotreport.com/quarterhill-discusses-transport-modernization-u-s-marks-70-years-federal-highways/
+
+6. Spain’s Semiconductor Landscape: Six Stories from a Growing Ecosystem（来源：EE Times）
+   应用分析：虽然这不是直接的技术开发，但半导体供应链的稳定性和技术演进直接关系到我们EPS产品的落地和竞争力。我们需要关注西班牙等欧洲国家在半导体领域的投资和技术突破，评估其作为潜在第二甚至第三供应商的可能性，以降低对单一地区或供应商的依赖，提升供应链韧性。同时，也要留意这些地区在特定半导体技术，比如SiC/GaN功率器件、车规级MCU、传感器芯片上的创新，为未来EPS控制器硬件升级提供备选方案。这方面值得我们投入关注和策略性研究，确保我们在硬件选型上有更多选择和更强的抗风险能力。
+   https://www.eetimes.com/spains-semiconductor-landscape-six-stories-from-a-growing-ecosystem/
+
+7. CPCA preliminary data shows China's NEV retail sales fell 7% in June（来源：CnEVPost）
+   应用分析：乘联会数据显示中国六月新能源乘用车零售销量环比下降百分之七，但渗透率仍高达百分之六十二点八。这个数据对我们EPS研发团队来说，是重要的市场信号。我们需要分析销量下降的原因，是季节性、政策调整还是市场饱和，并结合长期预测，来调整EPS新产品线的研发优先级和资源投入。例如，是继续投入高阶线控转向的研发，还是更侧重于优化现有EPS产品的成本和性能，以适应市场的短期波动。同时，在保证功能安全的前提下，寻求更经济的电机和控制器方案，以提升产品竞争力。市场数据是企业决策的重要输入，我们必须持续投入分析和关注。
+   https://cnevpost.com/2026/07/03/chinas-nev-retail-jun-cpca-preliminary-data/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260704-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260704-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260704-pm.mp3" length="3443760" type="audio/mpeg"/>
+      <pubDate>Sat, 04 Jul 2026 09:42:35 +0000</pubDate>
     </item>
   </channel>
 </rss>
