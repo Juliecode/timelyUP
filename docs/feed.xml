@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 04 Jul 2026 22:34:18 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2026 09:42:25 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 科技早报：AI架构革新、智能汽车前瞻与机器人实时控制</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人技术这三大热门领域，精选了七条重磅资讯。从AI基础架构的突破，到LLM在安全领域的应用挑战，再到线控转向和机器人实时控制的深度洞察，希望能为大家的日常研发工作带来新的启发。话不多说，我们马上进入今天的早报时间。
-
-1. ITNet: A Learnable Integral Transform That Subsumes Convolution, Attention, and Recurrence（来源：arXiv cs.AI）
-   应用分析：能不能用：有潜力，但需要深入研究其在实时、嵌入式控制系统中的计算效率和收敛性。 怎么用：如果ITNet能以更小的模型规模实现与现有FOC、MPC或助力策略相似甚至更好的性能，可以考虑将其作为电机控制策略或助力曲线学习模型的基础。特别是在处理多模态传感器数据（如力矩、角度、电流、振动）融合时，其统一特性可能简化模型设计。例如，用于学习和自适应补偿电机转矩脉动或NVH特性。 值不值得投入：值得投入时间跟踪其后续发展和开源实现。初期可在MATLAB/Simulink中进行模型验证和仿真，评估其在特定控制任务上的表现，尤其是其对实时性、资源占用和功能安全的影响。如果效果显著且计算开销可控，可考虑小范围POC。
-   https://arxiv.org/abs/2606.19538
-
-2. LLM Doesn't Know What It Doesn't Know: Detecting Epistemic Blind Spots via Cross-Model Attribution Divergence on Clinical Tabular Data（来源：arXiv cs.AI）
-   应用分析：能不能用：不能直接将不具备自知能力的LLM用于安全关键的决策环节。这项研究是警示而非直接工具。 怎么用：它促使我们设计基于LLM的系统时，必须引入外部的“守门员”机制。例如，在AI辅助的故障诊断或标定参数推荐系统中，LLM的输出必须经过严格的规则引擎、模型预测或人类专家的二次确认，并结合传统控制算法的鲁棒性验证。应重点投入研究如何结合传统方法，为LLM的决策提供可解释性（XAI）和不确定性量化，尤其是在无传感器控制或冗余传感方案中，AI辅助的传感器融合和故障检测更需要这种“自知”能力。 值不值得投入：必须投入。这是功能安全（ISO 26262）在AI时代的核心挑战之一。需要投入资源研究和开发针对LLM输出的不确定性量化、置信度评估以及故障降级策略。
-   https://arxiv.org/abs/2606.19509
-
-3. Emergent Alignment（来源：arXiv cs.AI）
-   应用分析：能不能用：有潜力，但需针对汽车领域的特定伦理和安全标准进行定制与验证。 怎么用：可以考虑将这种“良知步骤”和DPO对齐方法应用于开发线控转向系统中的AI辅助决策模块。例如，在自动避险、紧急转向等场景下，AI需要快速做出决策，同时确保这些决策符合交通法规、乘客安全和车辆稳定性等伦理和安全原则。该技术可用于训练AI模型，使其在面对不确定或冲突信息时，能够“自我审查”并选择最安全、最符合规范的助力或转向指令。这对于提升线控转向系统的鲁棒性和信任度至关重要。 值不值得投入：值得投入。这是确保AI在汽车安全关键应用中“可信赖”的关键路径之一。应探索将其与功能安全（ISO 26262）流程相结合，研究如何定义和量化AI的“伦理对齐”指标。
-   https://arxiv.org/abs/2606.19527
-
-4. Go eyes robotaxis and acquisitions after Japan’s biggest IPO of 2026 — here’s why it matters（来源：TechCrunch）
-   应用分析：能不能用：这不是一个直接的技术工具，而是市场和行业趋势的信号。 怎么用：关注Go等公司在机器人出租车技术栈上的选择，特别是对转向系统冗余、功能安全等级和通信协议的需求。我的团队应加速线控转向系统的架构设计、冗余方案、功能安全（ASIL D）认证以及高性能电机控制策略的研发，确保我们的EPS产品线能平滑演进到满足未来L4/L5自动驾驶的需求。同时，研究如何将我们的电机控制技术应用于线控转向的执行器，提升其响应速度和精度。 值不值得投入：必须投入。这是EPS产品未来发展的核心方向。需要持续投入研发资源，确保我们在Steer-by-Wire技术领域保持领先。
-   https://techcrunch.com/2026/06/19/go-eyes-robotaxis-and-acquisitions-after-japans-biggest-ipo-of-2026-heres-why-it-matters/
-
-5. EU readies tariffs on Chinese plug-in hybrids, report says（来源：CnEVPost）
-   应用分析：能不能用：这不是技术应用，而是重要的市场风险和策略调整依据。 怎么用：密切关注关税政策的最终落地情况，评估其对主要客户（特别是中国和欧洲市场的PHEV制造商）生产计划和EPS采购策略的影响。在产品开发中，需更加强调成本优化、供应链韧性和不同区域市场的适应性。例如，在电机选型和控制器设计时，要考虑更广泛的成本效益方案，并可能需要预研针对不同市场法规和成本结构的EPS变型产品。同时，这也可能加速我们对纯电动汽车（BEV）和线控转向的投入，因为BEV受此关税影响相对较小，且是长期趋势。 值不值得投入：必须投入关注。虽然不是技术研发，但市场和政策环境直接影响研发投入方向和商业可行性。需要与市场和销售团队紧密协作，将这些信息纳入产品路线图和战略规划。
-   https://cnevpost.com/2026/06/20/eu-readies-tariffs-chinese-phevs/
-
-6. He made your free video player run smoothly. Now he’s doing that for robots.（来源：TechCrunch）
-   应用分析：能不能用：Kyber作为一个基础设施层，其理念和技术栈对线控转向的通信架构设计有很强的借鉴意义。 怎么用：深入研究Kyber的架构设计，特别是其在处理实时数据流、保证低延迟和高可靠性方面的技术细节。可以将其作为设计线控转向系统通信总线（例如，以太网或未来的时间敏感网络）和冗余通信路径时的参考。我们可以在线控转向的HIL仿真环境中，尝试模拟Kyber的通信模型，评估其对转向响应时间、同步性和容错能力的影响。这有助于我们构建更鲁棒、更高效的线控转向控制系统。 值不值得投入：值得投入。对于线控转向这种对实时性和可靠性要求极高的系统，研究类似Kyber的底层通信和控制基础设施至关重要。
-   https://techcrunch.com/2026/06/19/he-made-your-free-video-player-run-smoothly-now-hes-doing-that-for-robots/
-
-7. Defense manufacturing readiness hinges on autonomous finishing, says GrayMatter Robotics（来源：The Robot Report）
-   应用分析：能不能用：表面处理机器人的高精度控制技术和自主决策能力，可以迁移到EPS的电机控制和助力策略中。 怎么用：研究GrayMatter Robotics等公司在自主表面处理机器人中采用的电机控制算法（例如，更先进的FOC变体、基于模型的力控策略、自适应控制）和传感器融合技术。这些技术可能有助于提升EPS电机在不同工况下的转矩输出精度、降低NVH，并改善助力手感。例如，将机器人领域的力/位置混合控制思想引入EPS，实现更精细的路感还原和阻尼补偿。此外，机器人自主学习和适应环境变化的能力，也可以启发我们开发更智能、更易于标定的EPS助力策略。 值不值得投入：值得投入。机器人关节执行器控制与EPS电机控制有很高的技术共通性，是重要的交叉点。应积极关注并学习这些前沿技术，探索其在EPS领域的落地应用。
-   https://www.therobotreport.com/defense-manufacturing-readiness-hinges-autonomous-surface-prep-says-graymatter/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260621-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260621-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260621-am.mp3" length="4000176" type="audio/mpeg"/>
-      <pubDate>Sat, 20 Jun 2026 22:42:32 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 研发早报：AI可靠性与机器人精控，赋能智驾未来</title>
       <description>各位研发工程师朋友，大家早上好！欢迎收听今天的《研发早报》。我是你们的主播兼技术分析师。今天，我们将聚焦 AI 前沿、汽车智能化以及机器人三大领域，为您精选出七条最值得关注的科技资讯。虽然今天直接关于汽车智能化的新闻不多，但别担心，我们将把 AI 和机器人的最新进展，深度解析它们如何能为我们的汽车 EPS 研发工作带来启发和实际应用。从 AI 系统的可靠性构建，到机器人高精度执行器的控制策略，相信今天的早报能为您的一天带来满满的灵感！
@@ -1075,6 +1039,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260705-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260705-am.mp3" length="3280464" type="audio/mpeg"/>
       <pubDate>Sat, 04 Jul 2026 22:34:18 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 研发早报：AI模型性能警报、英飞凌新厂加速、电动车电池超预期</title>
+      <description>各位研发同仁，早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师，专注于汽车EPS系统的研发。今天，我们将聚焦AI前沿、汽车智能化和机器人领域，为您带来七条精选资讯。OpenAI的GPT模型性能出现波动，对我们AI应用有何警示？英飞凌新晶圆厂提前投产，对汽车芯片供应意味着什么？还有电动汽车电池寿命超预期、机器人AI安全网以及软件效率的核心价值。话不多说，我们马上开始！
+
+1. GPT-5.5 Codex reasoning-token clustering may be leading to degraded performance（来源：Hacker News）
+   应用分析：这则消息给我们一个明确的警示：AI模型在实际应用中，其性能的一致性和鲁棒性是巨大的挑战。在EPS系统的故障诊断、预测性维护，甚至未来的AI辅助控制策略中，如果依赖这些大型语言模型，我们必须进行极其严格和全面的验证，确保其在各种复杂工况下的可靠性。面对这种潜在的“黑盒”问题，我们不能完全寄希望于AI，而应始终考虑结合传统的基于模型或规则的方法，并设计完善的安全降级机制，避免因AI性能波动导致系统失控或误判。这意味着在项目早期就要投入资源进行大量场景测试和异常处理研究。
+   https://github.com/openai/codex/issues/30364
+
+2. What is Mistral AI? Everything to know about the OpenAI competitor（来源：TechCrunch）
+   应用分析：Mistral AI的崛起，特别是其开源模型的策略，对我们R&amp;D工程师来说是个好消息。它意味着我们可能获得更多高性能、且更易于定制和本地部署的AI模型。对于EPS控制器这类资源受限的嵌入式系统，我们尤其关注其在小模型、边缘部署上的潜力。例如，我们可以探索利用Mistral的轻量级模型，实现更智能的电机状态观测器、参数自适应算法，或者作为在线标定、故障预警的辅助工具。鉴于其开源性质，我们可以投入一个小团队进行技术预研，评估其在EPS嵌入式环境下的性能、资源占用以及部署的可行性，这有望降低我们AI应用的门槛和成本。
+   https://techcrunch.com/2026/07/04/what-is-mistral-ai-everything-to-know-about-the-openai-competitor/
+
+3. EV Batteries Are Defying Expectations After Miles（来源：Hacker News）
+   应用分析：电动汽车电池寿命超出预期，这对整个汽车行业都是一个积极信号，也间接利好我们EPS系统的发展。这意味着电动汽车作为整体系统，其核心动力源的可靠性和寿命得到了验证，我们EPS系统在整车生命周期内可以获得更稳定、更可靠的电源供应。这使得我们设计的电机和控制器可以更专注于性能和效率的提升，而无需过多地考虑电池老化带来的性能衰减或电压波动，从而减少对电源劣化的冗余设计或性能折衷。同时，对于线控转向（Steer-by-Wire）等未来可能功耗更高、对电源稳定性要求更严苛的系统，电池性能的改善也提供了更好的基础保障，为我们的前沿技术落地铺平道路。
+   https://www.wsj.com/business/autos/ev-batteries-are-defying-expectations-after-hundreds-of-thousands-of-miles-8579de13
+
+4. Inside Infineon’s €5B Dresden Fab: Virtual Fab Cloning Fast-Tracked the Launch（来源：EE Times）
+   应用分析：英飞凌是我们EPS系统中MCU（微控制器）和功率器件（如MOSFET）的关键供应商。这家耗资五十亿欧元的新晶圆厂提前三个月投产，并且得益于“虚拟晶圆厂克隆”技术，这意味着未来我们的关键汽车电子部件的供应将更加稳定，且可能在成本上更具竞争力。这对于我们EPS产品的研发和量产至关重要，我们可以更稳定地获取高性能、高可靠性的车规级芯片，从而支持更复杂的电机控制算法、更严格的功能安全（ISO 26262）设计，并有能力应对未来线控转向系统对芯片性能和冗余的更高要求。我们应该与英飞凌保持密切沟通，了解新产能对我们未来产品路线图和供应链策略的潜在影响。
+   https://www.eetimes.com/inside-infineon-e5b-dresden-fab-virtual-fab-cloning-fast-tracked-the-launch/
+
+5. Context is king: How Avride uses cloud VLMs as a safety net for delivery robots（来源：The Robot Report）
+   应用分析：Avride公司利用云端视觉语言模型（VLM）作为配送机器人的安全网，提升环境感知能力，这给我带来了很大的启发。配送机器人的关节执行器控制与我们的EPS电机控制有许多共通之处，而VLM在复杂环境理解和安全决策上的应用，可以迁移到线控转向（Steer-by-Wire, SbW）系统中。例如，我们可以探索利用VLM处理车内外的多模态传感器数据（如视觉、雷达、激光雷达），辅助判断驾驶员意图、路况复杂性，甚至预测潜在危险。这些智能化的上下文信息可以为EPS助力策略提供更精细、更安全的输入，或者作为线控转向系统中的一个独立的冗余安全层。这是一个值得投入预研的方向，探索VLM如何帮助我们的EPS系统在复杂交通场景下做出更智能、更可靠的决策。
+   https://www.therobotreport.com/how-avride-uses-cloud-vlms-safety-net-delivery-robots/
+
+6. Nio's Firefly brand to hit 70,000th delivery milestone soon（来源：CnEVPost）
+   应用分析：蔚来旗下萤火虫品牌即将达成七万辆交付里程碑，并且六月交付量创历史第二高，这充分体现了新能源汽车市场的活力和智能化趋势。作为EPS研发工程师，我们必须紧跟市场需求，尤其是线控转向等前瞻技术在量产车上的应用节奏。市场规模的扩大，意味着未来EPS系统将承载更多智能化、个性化的功能，对性能、成本、功能安全的要求也会更高。这促使我们思考如何在现有EPS平台基础上，通过快速迭代和技术创新，支持更高等级的自动驾驶和线控转向需求。例如，如何通过软件定义转向手感，如何集成更多传感器数据进行路感还原，这些都是我们未来研发的重点方向。这样的市场表现也为我们投入新技术的研发提供了信心。
+   https://cnevpost.com/2026/07/05/nio-firefly-to-hit-70000th-delivery/
+
+7. Fast Software, the Best Software（来源：Hacker News）
+   应用分析：对于我们EPS系统来说，这是一条颠扑不破的真理。EPS是典型的实时嵌入式系统，电机控制算法，无论是FOC矢量控制、无传感器控制还是弱磁控制，都需要在微秒甚至纳秒级完成精确计算和输出。软件的执行效率直接决定了助力手感的细腻度、响应速度，以及系统对突发工况的应对能力，甚至与ISO 26262功能安全等级息息相关。这提醒我们，在设计控制算法、编写嵌入式C代码、进行MATLAB/Simulink模型化设计与代码生成时，必须始终将“快”和“高效”放在核心位置。这意味着持续优化算法复杂度、精简代码、合理利用MCU资源、减少内存占用和计算周期。我们应定期进行代码审查和性能剖析，利用HIL/SIL等工具验证实时性能，确保软件质量和执行效率，这绝对是值得长期投入和贯彻的工程文化。
+   https://craigmod.com/essays/fast_software/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260705-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260705-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260705-pm.mp3" length="3409632" type="audio/mpeg"/>
+      <pubDate>Sun, 05 Jul 2026 09:42:25 +0000</pubDate>
     </item>
   </channel>
 </rss>
