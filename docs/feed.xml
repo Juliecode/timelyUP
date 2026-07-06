@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 05 Jul 2026 22:35:15 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2026 09:43:14 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾与机器人：中国力量崛起，AI赋能转向未来</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您带来七条精选资讯。从开源AI模型到自动驾驶的中国速度，从工业机器人的精妙控制到AI在研发中的实用落地，相信会给您的日常工作和未来规划带来不少启发。
-
-1. Apertus – Open Foundation Model for Sovereign AI（来源：Hacker News）
-   应用分析：作为EPS工程师，我可以研究Apertus这类模型在边缘设备上的部署潜力，比如用于EPS控制器上的实时故障诊断、异常检测。特别是针对电机NVH异常、传感器漂移等问题，利用模型进行在线参数辨识和自适应控制。这比依赖云端AI更符合车规级安全和实时性要求。值得投入关注其架构和训练方法，看能否与现有模型预测控制、状态观测器等结合。
-   https://apertvs.ai/
-
-2. TechCrunch Mobility: A new robotaxi scorecard shows China’s dominance（来源：TechCrunch）
-   应用分析：作为EPS工程师，我需要密切关注Robotaxi对转向系统提出的新要求，例如更快的响应速度、更高的精度、更强的冗余和功能安全等级。中国市场的快速发展，意味着我们有机会接触到更多实际路况数据和测试场景，用于验证线控转向系统的鲁棒性。这促使我们思考如何将EPS设计与更高级别的自动驾驶系统深度融合，例如基于AI的路径规划与转向控制协同。投入是必须的，这是未来EPS的核心方向。
-   https://techcrunch.com/2026/06/21/techcrunch-mobility-a-new-robotaxi-scorecard-shows-chinas-dominance/
-
-3. Güdel to show grinding beyond stationary robots with vertical, horizontal motion at Automate 2026（来源：The Robot Report）
-   应用分析：我们可以借鉴Güdel在重载机器人磨削中实现垂直和水平运动的电机控制技术。例如，其如何处理多轴耦合、如何实现高精度力矩控制和轨迹跟踪、以及如何在恶劣环境下保持鲁棒性。这些技术，如先进的FOC算法、转矩脉动抑制、参数自适应辨识等，可以直接迁移到EPS电机控制中，提升助力精度和手感。特别是对于R-EPS或DP-EPS这类大型EPS系统，其电机负载和控制复杂性与工业机器人有共通之处。这绝对值得深入研究其技术细节。
-   https://www.therobotreport.com/gudel-to-showcase-grinding-beyond-stationary-robots-integrated-vertical-horizontal-motion-automate/
-
-4. Founders Fund’s outlier bet on humanely killed fish（来源：TechCrunch）
-   应用分析：我们可以从Shinkei机器人的执行器设计和控制策略中寻找灵感。例如，它如何实现快速而精准的定位和力矩输出，可能涉及先进的伺服控制算法、高带宽电流环、以及基于视觉或其他传感器的闭环反馈。这些技术可以用于提升EPS电机在复杂工况下的转矩响应速度和精度，减少抖动，改善手感。尤其是在线控转向中，执行器的精细控制能力至关重要。这值得关注其公开的技术细节，思考其电机和控制方案是否能为EPS提供新的思路，特别是在无传感器控制和精度提升方面。
-   https://techcrunch.com/2026/06/20/founders-funds-outlier-bet-on-humanely-killed-fish/
-
-5. Signal’s Meredith Whittaker wants you to remember that AI chatbots ‘are not your friends’（来源：TechCrunch）
-   应用分析：这提醒我们在将AI（如神经网络观测器、强化学习控制器）引入EPS系统时，必须保持严谨的工程态度。避免盲目信任AI的黑盒决策，强调其可解释性、可预测性和在极端情况下的安全降级机制。这与ISO 26262的功能安全要求高度契合，即AI作为工具，其决策必须是可验证和可控的。我们需要建立严格的测试和验证流程，确保AI在EPS中的应用不会引入新的安全风险。这是一个长期需要警惕的工程伦理问题，而非一次性投入。
-   https://techcrunch.com/2026/06/20/signals-meredith-whittaker-wants-you-to-remember-that-ai-chatbots-are-not-your-friends/
-
-6. Beyond Siri: Here are the practical AI features coming to your iPhone in iOS 27（来源：TechCrunch）
-   应用分析：这促使我们思考，除了核心的电机控制，EPS系统能否集成一些“实用AI功能”来提升用户体验或维护效率？例如，基于AI的转向系统健康监测，预测性维护提示；或者结合驾驶员习惯，AI自适应调整助力曲线，提供个性化手感。虽然这些可能不是核心控制，但可以作为EPS产品的增值点。我们可以借鉴苹果在用户界面、数据隐私和边缘AI优化方面的经验，看如何将这些概念引入车载系统。这属于未来产品规划和用户体验提升范畴，值得关注其具体实现方式。
-   https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27/
-
-7. Stop wasting tokens and re explaining your project between sessions（来源：Hacker News）
-   应用分析：在我们的嵌入式C代码开发、Simulink模型设计和功能安全文档编写过程中，经常需要LLM理解复杂的项目背景和代码逻辑。Recall这类工具可以帮助我们构建更智能的AI辅助开发环境，避免每次提问都重复上传大量上下文，提高LLM在特定领域的理解深度和生成质量。例如，让LLM更好地协助我们审查ISO 26262文档、分析电机控制算法的潜在缺陷、或自动生成测试用例。这可以显著提升研发效率，值得在日常开发流程中尝试和推广。
-   https://github.com/raiyanyahya/recall</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260622-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260622-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260622-am.mp3" length="3986784" type="audio/mpeg"/>
-      <pubDate>Sun, 21 Jun 2026 22:42:56 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 科技早报：AI大模型赋能汽车控制，机器人与智能驾驶加速演进</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门方向，为您精选出七条最值得关注的重磅资讯。从AI大模型在边缘计算的应用，到中国在机器人出租车领域的领先地位，再到高性能电动车的电机控制挑战，以及机器人执行器技术对我们转向系统的启示，每一条都可能为您的研发工作带来新的灵感和突破。希望今天的早报能助您把握行业脉搏，发现技术机遇。
@@ -1111,6 +1075,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260706-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260706-am.mp3" length="2141280" type="audio/mpeg"/>
       <pubDate>Sun, 05 Jul 2026 22:35:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 研发早报：AI、机器人与汽车智驾的交汇点</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的《研发早报》，我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，看看有哪些重磅资讯值得我们深挖，以及它们对我们EPS研发工作意味着什么。
+
+1. GPT-5.6 Sol Ultra will be in Codex（来源：Hacker News）
+   应用分析：作为EPS嵌入式C开发工程师，我们可以利用Codex来辅助生成或优化部分非核心、模板化的C代码，比如外设初始化、通信协议接口、诊断代码框架等。它还能帮助我们快速理解和重构一些老旧代码。在日常工作中，可以作为“智能副驾驶”，辅助编写单元测试、生成文档注释，甚至进行初步的代码审查。这能显著提高开发效率，减少重复劳动。所以，投入学习和尝试GPT-5.6 Sol Ultra这样的AI工具，是非常值得的。但核心的电机控制算法仍需人工精调和验证，AI生成的代码必须经过严格的功能安全和性能测试，不能盲目信任。投入的重点应放在如何将AI工具无缝集成到现有的MATLAB/Simulink模型化设计流程中。
+   https://twitter.com/thsottiaux/status/2073933490513752151
+
+2. Does code cleanliness affect coding agents? A controlled minimal-pair study（来源：Hacker News）
+   应用分析：这项研究结果直接指导我们如何更有效地利用像Codex这类AI工具。在使用AI辅助编写或优化EPS相关代码时，我们必须确保提供给AI的现有代码库、需求描述、接口定义等是清晰、规范、无歧义的。例如，在要求AI修改或扩展某个电机控制模块时，输入的模块代码应有良好的结构、清晰的变量命名和充分的注释。如果输入的是“烂代码”，AI很可能也会生成“烂代码”。这反过来也促使我们维护高质量的自有代码库。所以，值得深入理解并将其原则融入我们的开发实践。这意味着我们需要投入时间去整理和规范现有代码，并培训团队成员如何编写“AI友好”的代码和提示词。长期来看，这将提升AI辅助开发的效率和产出质量，减少后期调试和重构成本。
+   https://arxiv.org/abs/2605.20049
+
+3. When AI Costs More Than the Engineer（来源：Hacker News）
+   应用分析：这项分析是我们在规划AI引入策略时的重要参考。在考虑将AI应用于EPS系统设计、控制策略优化或故障诊断时，我们需要进行详细的成本效益分析。比如，使用AI进行自动标定，其模型训练、推理部署以及持续维护的成本是否会超过传统人工标定和优化所节省的人力成本？尤其是在高性能、高安全要求的嵌入式系统上，推理计算资源本身就有成本。我们不能只看AI的“智能”一面，还要看它的“经济”一面。所以，值得高度关注并纳入我们的决策框架。对于EPS这种成本敏感、对可靠性要求极高的产品，AI的投入产出比至关重要。这意味着我们初期应选择那些投入成本相对可控、且能带来显著效益的AI应用点，例如辅助性的数据分析、异常检测，而非立即替换核心的控制逻辑。同时，需要关注AI推理的效率和资源占用，选择适合边缘部署的轻量级模型。
+   https://tomtunguz.com/ai-spend-breakeven-2029/
+
+4. Kioxia All Set to Raise the NAND Game in AI SSDs（来源：EE Times）
+   应用分析：这项新闻间接相关，但很重要。EPS控制器本身对存储容量要求不高，但我们使用的MCU内部闪存性能、可靠性和成本是关键。更重要的是，如果我们将AI应用于EPS的数据驱动控制、预测性维护或自动标定，这些AI模型的训练和大量数据分析将运行在数据中心。铠侠在AI SSD上的技术进步，意味着未来在云端进行EPS相关AI模型训练时，数据读写速度更快，训练效率更高。这能加速我们从海量测试数据中提取特征、优化控制参数的迭代过程。同时，高性能、高可靠的NAND技术也可能影响到未来车规级存储器件的发展，尤其是在线控转向这种需要大量数据记录和处理的系统中。所以，这项技术进展值得我们持续关注。它虽然不是直接的EPS部件，但它是AI基础设施的基石，对于我们规划未来的AI辅助开发和部署策略，能够帮助我们更好地设计数据流和训练架构。
+   https://www.eetimes.com/kioxia-all-set-to-raise-the-nand-game-in-ai-ssds/
+
+5. Humanoid says KinetIQ Ascend reinforcement learning approaches human-level dexterity（来源：The Robot Report）
+   应用分析：这项新闻高度相关，非常能用！EPS的电机控制本质上就是对执行器（电机）的精确控制，涉及转矩输出、位置跟踪、力矩脉动抑制等。KinetIQ Ascend在操作可靠性上的突破，直接指向了我们提升电机控制策略性能和鲁棒性的核心问题。我们可以探索将强化学习应用于EPS电机控制策略的优化。例如，在助力曲线调校中，利用强化学习自动学习驾驶员意图和路面反馈，实现更精细、个性化的手感；在转矩脉动抑制中，通过RL动态调整控制参数，以适应电机参数变化和外部干扰，从而提高NVH性能。无传感器控制中的状态观测器，也可以考虑用RL来提高鲁棒性。所以，这项技术非常值得投入！它可以作为我们将前沿研究（机器人执行器控制、AI控制）快速转化为EPS工程方案的绝佳交叉点。可以从仿真环境开始，构建EPS电机和车辆动力学模型，利用强化学习训练控制代理。初期可以专注于解决现有FOC控制策略在特定工况下的痛点，如温漂、参数辨识困难等，逐步验证其可行性和优势。
+   https://www.therobotreport.com/humanoid-announces-kinetiq-ascend-reinforcement-learning-approach/
+
+6. This humanoid robotics company is going public, but its CEO isn’t promising a robot in your home anytime soon（来源：TechCrunch）
+   应用分析：这项新闻为我们提供了行业发展趋势的视角，尤其是在机器人执行器和控制技术方面。Agility Robotics的执行器技术（腿部、关节）与EPS的电机和传动系统在原理上有共通之处，例如对高转矩密度、高效率、低NVH电机的需求，以及对高精度、高带宽控制的要求。虽然Agility的CEO对家用市场谨慎，但其工业应用（如Digit机器人已在仓库中部署）的成功，验证了其执行器和控制方案的鲁棒性和可靠性。我们可以持续关注Agility在电机、减速器、驱动器以及运动控制算法上的技术进展，从中吸取经验，思考如何将这些创新应用于EPS系统的演进，尤其是线控转向中对执行器性能的极致要求。所以，这项技术动态值得我们持续关注其技术路线和工程实践。虽然我们不直接投入研发Agility的产品，但将其作为电机控制和机器人执行器领域的先进案例进行学习和借鉴，对我们线控转向的架构设计、功能安全和电机选型都有启发意义。
+   https://techcrunch.com/2026/07/05/this-humanoid-robotics-company-is-going-public-but-its-ceo-isnt-promising-a-robot-in-your-home-anytime-soon/
+
+7. Li Auto's new L6 set for potential price hike as costs surge（来源：CnEVPost）
+   应用分析：这项新闻直接影响我们EPS产品的成本控制和供应链管理策略。EPS控制器中包含MCU、功率器件以及一些存储单元。存储芯片（如快闪存储器、RAM）的价格上涨会直接推高我们的BOM成本。碳酸锂价格上涨则影响电池成本，虽然EPS本身不直接用锂电池，但作为新能源汽车的核心部件，整车成本压力会传导到各个子系统。这意味着我们需要更积极地与供应商沟通，进行多源采购，并重新评估现有物料清单的成本结构。同时，在设计新一代EPS系统时，需要更关注硬件平台的可扩展性和成本优化，例如选择更具成本效益的MCU，或优化软件以减少对昂贵存储的需求。所以，这项挑战我们必须高度重视并立即行动。这不仅仅是关注，更是需要实际投入资源去应对的。我们需要加强对供应链的风险评估和管理，探索替代方案，并与采购部门紧密合作，以确保EPS产品的成本竞争力。这包括但不限于：与供应商签订长期协议锁定价格、寻找新的合格供应商、优化设计以减少物料消耗、提高生产效率等。
+   https://cnevpost.com/2026/07/06/li-auto-new-l6-potential-price-hike/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260706-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260706-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260706-pm.mp3" length="4192272" type="audio/mpeg"/>
+      <pubDate>Mon, 06 Jul 2026 09:43:14 +0000</pubDate>
     </item>
   </channel>
 </rss>
