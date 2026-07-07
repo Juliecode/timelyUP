@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 07 Jul 2026 09:43:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 22:41:30 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI与线控转向的融合：EPS工程师的今日必读</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热点，为您精选出七条最有价值的资讯。从OpenAI的最新AI模型，到英伟达的机器人安全系统，再到汽车功率电子的最新进展，每一条都可能为您的EPS研发工作带来新的思路和突破。准备好了吗？让我们立即开始！
-
-1. OpenAI DayBreak – GPT-5.5-Cyber（来源：Hacker News）
-   应用分析：可以探索将这类高级AI模型用于EPS软件开发流程的早期阶段，例如辅助生成功能安全概念、测试用例，或代码审查。在运行时，可以考虑利用其异常检测能力，对EPS系统产生的海量传感器和诊断数据进行实时分析，识别潜在的网络攻击或内部故障模式。投入方面，初期可作为研究性项目，评估其在低实时性、高复杂性分析任务中的效能，例如离线日志分析和故障根因诊断，再逐步考虑集成到开发辅助工具链中。
-   https://openai.com/index/daybreak-securing-the-world/
-
-2. CEA-Leti CEO: AI’s Real Bottleneck Is Architecture（来源：EE Times）
-   应用分析：这提醒我们在探索AI在EPS中的应用时，要特别关注轻量级、高能效比的神经网络架构，例如用于电机状态观测、参数辨识或助力曲线自适应调整的AI模型。在MCU选型和系统设计阶段，需优先考虑支持特定AI加速指令集或具有高效异构计算能力的芯片。投入上，应鼓励团队研究和评估面向嵌入式AI的优化技术，如模型剪枝、量化和知识蒸馏，以在有限的硬件资源下实现AI功能。
-   https://www.eetimes.com/cea-leti-ceo-ais-real-bottleneck-is-architecture/
-
-3. Skyworks unveils Si829x ASIL D gate driver for EV traction inverters（来源：Charged EVs）
-   应用分析：在EPS电机控制器功率级设计中，我们可以直接评估或选用这款Si829x驱动器。ASIL D认证能大幅简化我们自身的功能安全分析和验证工作。ProVCD技术可以优化开关损耗、减少电磁干扰，进而提升电机控制的精度和NVH性能。这是一个非常值得投入的硬件选择，能直接提升EPS产品的核心竞争力。
-   https://chargedevs.com/newswire/skyworks-unveils-si829x-asil-d-gate-driver-for-ev-traction-inverters/
-
-4. onsemi launches online tool for pairing SiC MOSFETs with gate drivers（来源：Charged EVs）
-   应用分析：团队应立即试用这款工具，将其整合到SiC功率级选型和初步设计流程中。通过快速迭代和评估不同的SiC MOSFET与栅极驱动器组合，可以更早地发现潜在问题，优化电路性能，缩短开发周期。这对于我们向SiC技术迁移，提升EPS电机控制器的效率和功率密度，具有实际的工程价值。值得大力推广和应用。
-   https://chargedevs.com/newswire/onsemi-launches-online-tool-for-pairing-sic-mosfets-with-gate-drivers/
-
-5. Download the guide to multi-gig automotive ethernet validation（来源：Charged EVs）
-   应用分析：团队应下载并研究这份指南，尤其关注其故障注入和验证方法。这对于我们设计线控转向系统的通信架构、冗余机制以及开发HIL测试平台具有直接指导意义。MEMS故障注入技术可为台架和HIL测试提供更真实的故障模拟，提升测试的全面性和效率。这是面向未来线控转向系统开发的必要投入。
-   https://chargedevs.com/whitepapers/download-the-guide-to-multi-gig-automotive-ethernet-validation/
-
-6. Bear Robotics acquires Kinisi Robotics to boost its physical AI capabilities（来源：The Robot Report）
-   应用分析：密切关注Kinisi Robotics在KR1人形机器人上的电机控制、关节执行器设计和物理AI算法。特别是其如何实现高精度、高动态响应的力矩控制和抗扰动能力。这些技术经验可以借鉴到EPS的电机控制策略中，例如提升转矩脉动抑制、改善手感调校的精细度，以及探索无传感器控制的鲁棒性。这是一个长期关注点，值得持续跟踪其技术进展，并尝试将相关研究成果转化为EPS的工程方案。
-   https://www.therobotreport.com/bear-robotics-acquires-kinisi-robotics-to-boost-its-physical-ai-capabilities/
-
-7. NVIDIA releases Halos, a full-stack safety system for robotics（来源：The Robot Report）
-   应用分析：深入研究Halos的架构和设计理念，尤其是其如何实现从传感器到执行器的端到端安全链，以及如何整合AI进行安全决策和异常检测。这对于我们构建线控转向的冗余架构、功能安全概念、故障诊断和降级策略，以及未来引入AI进行安全控制具有重要的参考价值。可以组织内部研讨，分析其模块化设计和安全机制，评估哪些部分可以直接借鉴或启发EPS和线控转向的未来开发。
-   https://www.therobotreport.com/nvidia-releases-halos-a-full-stack-safety-system-for-robotics/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260623-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260623-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260623-pm.mp3" length="3006288" type="audio/mpeg"/>
-      <pubDate>Tue, 23 Jun 2026 09:42:09 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI、智能汽车与机器人的前沿洞察：EPS工程师的今日早报</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最有价值的资讯。从芯片封装技术到AI驱动的工厂自动化，再到自动驾驶的安全挑战，这些内容都与我们的电动助力转向，也就是EPS系统研发息息相关。话不多说，让我们立即进入今天的早报时间。
@@ -1111,6 +1075,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260707-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260707-pm.mp3" length="3722112" type="audio/mpeg"/>
       <pubDate>Tue, 07 Jul 2026 09:43:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI赋能转向，材料革新电机：智驾与机器人前沿速递</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。无论是通用具身智能的突破，还是汽车线控转向的控制新范式，抑或是电机材料的革新，都将为我们的研发工作带来新的启发。话不多说，让我们马上进入今天的早报时间。
+
+1. iFLYTEK-Embodied-Omni Technical Report（来源：arXiv cs.AI）
+   应用分析：作为EPS工程师，我关注的是如何将这种多模态理解能力应用于汽车内部。例如，未来的线控转向系统可能需要一个能理解驾驶员意图（语言、手势、眼动）、车辆状态（视觉、传感器数据）和外部环境（路况、交通参与者）的智能代理。iFLYTEK-Embodied-Omni的统一建模思路，可以启发我们设计更智能的EPS控制策略，比如在特定驾驶场景下，根据驾驶员的语音指令或视觉焦点，动态调整转向助力曲线，提供更个性化和直观的驾驶体验。短期内，直接应用可能较远，但其架构和理念值得我们持续跟踪和思考，尤其是对于未来智能座舱与线控转向深度融合的场景，投入研究是值得的。
+   https://arxiv.org/abs/2607.02542
+
+2. ASK in the Dark: Uncertainty-Gated LLM Assistance under Partial Observability（来源：arXiv cs.AI）
+   应用分析：在EPS系统中，我们经常面临传感器数据不完整或存在噪声的情况，例如，无传感器控制方案对电机参数变化和外部扰动非常敏感。ASK+的思路可以应用于提升EPS控制策略的鲁棒性和安全性。我们可以训练一个SLM作为“专家顾问”，在传感器数据存在不确定性时，结合车辆历史轨迹、驾驶员意图等“上下文”信息，为电机控制策略提供修正建议，例如调整FOC控制器的PI参数，或在无传感器控制中优化状态观测器的增益。这能帮助我们更好地处理温漂、参数辨识不准等问题，降低对高精度传感器的依赖，从而提升成本竞争力。这是一个值得投入的方向，可以先从HIL或SIL仿真环境开始验证其效果。
+   https://arxiv.org/abs/2607.02686
+
+3. Direct Data Driven Natural Gradient Descent for Control（来源：arXiv eess.SY 控制系统）
+   应用分析：这对于我们优化EPS电机控制策略（如FOC、弱磁控制、转矩脉动抑制）是极具吸引力的。我们可以利用车辆实际运行中采集的输入输出数据，直接学习和优化控制参数，而无需耗费大量时间建立精确的电机或转向系统模型。例如，在转矩脉动抑制方面，传统方法需要精确的电机参数和复杂的谐波补偿算法，而数据驱动NGD可以从实际运行数据中学习最佳的补偿策略，自动适应电机老化、温度变化等因素。这有望显著提升EPS的NVH性能和手感调校效率。由于其理论上提供了稳定性保证，这是一个非常值得投入研究和尝试落地的方向，可以考虑将其作为自动标定工具链的一部分。
+   https://arxiv.org/abs/2607.03393
+
+4. CLEAR: Closed-Loop Reinforcement Learning at Scale for End-to-End Autonomous Driving（来源：arXiv cs.RO）
+   应用分析：对于向线控转向演进的EPS系统，其控制性能和鲁棒性是核心。CLEAR的闭环强化学习思路，可以启发我们设计更高效的EPS助力策略与手感调校方法。例如，我们可以将EPS的助力曲线、阻尼补偿等参数视为RL的动作空间，通过在仿真环境（或HIL/SIL）中进行大规模闭环训练，让EPS系统自主学习在各种复杂路况和驾驶员意图下的最优转向响应。这不仅能提高手感调校的效率，还能让系统更好地适应不同的驾驶员习惯和车辆负载变化，提升用户体验和功能安全。这是一个值得长期关注和投入的技术方向，可以从HIL测试阶段开始，探索RL在特定EPS子功能（如回正控制、抖动抑制）中的应用。
+   https://arxiv.org/abs/2607.02841
+
+5. Longitudinal-Motion-Aware Lateral Control for Autonomous Vehicles: A Robust Nonlinear Control Framework（来源：arXiv cs.RO）
+   应用分析：EPS的助力策略与手感调校需要考虑车速、转向角速度等多种因素。当前大多EPS系统在调校时，纵向运动的影响（如加减速带来的载荷转移和轮胎特性变化）通常通过经验或离线标定进行补偿。该研究提出的纵向运动感知控制框架，可以让我们更科学、更精确地将车辆纵向加减速状态纳入EPS的助力策略设计中。例如，在急加速或急减速时，转向手感和回正力矩可能需要不同的补偿策略以维持驾驶员的信心和舒适性。通过采用这种鲁棒非线性控制框架，我们可以开发出在全工况下表现更一致、更稳定的EPS系统，特别是在线控转向中，这对于实现更自然的转向手感和更高的功能安全等级至关重要。这是一个直接提升产品性能和用户体验的实用技术，非常值得投入开发和验证。
+   https://arxiv.org/abs/2607.02924
+
+6. POSCO and Hyundai partner to develop 6.5% silicon electrical steel for EV motors（来源：Charged EVs）
+   应用分析：EPS系统主要使用PMSM电机。6.5%硅电工钢的应用，可以直接提升我们EPS电机的性能。具体来说，更高的效率意味着更低的能耗和发热，这对于电机在高温环境下的可靠性至关重要；更高的功率密度则允许我们设计更小巧、更轻的EPS电机，从而节省安装空间并降低整车重量。此外，铁损的降低也有助于改善电机的NVH特性，减少高频噪声。在电机选型时，我需要积极评估这类高硅电工钢的应用潜力，并与供应商探讨其在EPS电机中的可行性。虽然初期成本可能较高，但从长期来看，其带来的性能提升和系统优化价值是巨大的，值得持续投入研发资源进行验证和导入。
+   https://chargedevs.com/newswire/posco-and-hyundai-partner-to-develop-6-5-silicon-electrical-steel-for-ev-motors/
+
+7. TACO: TActile World Model as a Self-COrrector forScalable VLA Post-Training（来源：arXiv cs.RO）
+   应用分析：这个研究与我的工作背景中的“机器人/人形机器人的关节执行器、伺服电机控制”高度相关。EPS电机控制中，转矩脉动、纹波和抖动抑制的目标，与机器人关节执行器追求的平滑、精确力矩输出有异曲同工之妙。TACO的触觉感知世界模型提示我们，在EPS的控制策略中，除了传统的电流/位置采样，是否可以引入更“物理感知”的反馈机制来提升控制精度和鲁棒性。例如，可以探索利用高带宽的转矩传感器或基于模型的状态观测器，构建一个“转向触觉世界模型”，实时评估驾驶员与方向盘的交互以及路面反馈的细微变化。通过这种“触觉反馈”，可以更智能地进行助力曲线的精细调整和抖动抑制，让手感更加自然、平顺。这对于提升线控转向的路感还原能力和高级驾驶辅助的平顺性有巨大潜力，值得深入研究和探索，尤其是在模型预测控制(MPC)和强化学习控制中集成这类物理感知信息。
+   https://arxiv.org/abs/2607.02840</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260708-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260708-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260708-am.mp3" length="2427840" type="audio/mpeg"/>
+      <pubDate>Tue, 07 Jul 2026 22:41:29 +0000</pubDate>
     </item>
   </channel>
 </rss>
