@@ -13,29 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 08 Jul 2026 09:42:19 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 22:38:41 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>专题 · Claude Tag：提升AI交互效率的结构化利器</title>
-      <description>本期专题：介绍Claude tag的应用
-
-1. Claude tag是一种利用类似XML标签的语法，结构化输入信息以指导AI模型理解和响应的技术。（来源：专题讲解）
-
-2. 其核心原理在于通过清晰地划分和定义信息块，帮助模型更好地理解用户意图，从而提高响应的准确性和相关性。（来源：专题讲解）
-
-3. 应用Claude tag可以显著提升响应质量、实现复杂的任务和多轮对话管理，并增强对模型输出格式的控制。（来源：专题讲解）
-
-4. 标签还可用于赋予AI模型特定角色，引导其以特定视角或风格进行回应。（来源：专题讲解）
-
-5. 它是高级提示工程的推荐实践，能有效减少“跑题”和“幻觉”，是与AI高效沟通的重要思维方式。（来源：专题讲解）</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260624-topic-122230.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260624-topic-122230.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260624-topic-122230.mp3" length="1552464" type="audio/mpeg"/>
-      <pubDate>Wed, 24 Jun 2026 04:23:11 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 科技早报：AI赋能安全转向与高效电驱，JEDEC发布SiC可靠性新规</title>
       <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。今天的亮点包括AI如何提升自动驾驶的安全性，低功耗模拟神经网络在控制系统中的应用，以及碳化硅器件在电动汽车中的最新进展。希望这些内容能为您的日常研发工作带来新的启发。
@@ -1111,6 +1093,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260708-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260708-pm.mp3" length="3387888" type="audio/mpeg"/>
       <pubDate>Wed, 08 Jul 2026 09:42:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI赋能转向，智驾新材料，机器人控制：EPS工程师的今日洞察</title>
+      <description>各位研发工程师早上好，欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，从中精选出七条最值得我们EPS电动助力转向工程师关注的重磅资讯。这些信息不仅关乎技术趋势，更与我们日常工作中的电机控制、功能安全、线控转向等核心挑战息息相关。准备好了吗？让我们立即开始今天的科技探索！
+
+1. Learning Stable Controlled Dynamical Systems via Input-Contraction Neural Differential Models（来源：arXiv eess.SY 控制系统）
+   应用分析：这个研究与我们EPS电机控制策略的性能与鲁棒性提升方向高度契合，尤其是在线控转向（Steer-by-Wire）中，对系统稳定性和鲁棒性的要求极高。我们可以探索将EPS电机控制的某些非线性环节，比如摩擦补偿、非线性助力曲线，或者复杂参数，如磁饱和、温度漂移等，建模为这种ICNDM。通过数据驱动的方式学习其动态特性，并保证其稳定性。例如，用它来学习电机在不同温度下的转矩特性，或在无传感器控制中补偿状态观测器的非线性误差。这绝对值得深入研究和投入，因为它是将AI与经典控制理论深度融合的前沿方向，直接触及EPS系统最核心的性能与安全问题，对线控转向的落地至关重要。
+   https://arxiv.org/abs/2607.05718
+
+2. Can Agentic AI Solve the Embedded Software Problem?（来源：EE Times）
+   应用分析：Agentic AI在EPS软件开发中潜力巨大。我们可以利用它来辅助代码生成与优化，例如针对FOC、无传感器控制等算法的特定模块，Agentic AI可以基于规范和约束生成初始代码，并进行性能优化，减少人工编码和调试时间。此外，它还能结合ISO 26262功能安全要求和历史故障数据，辅助设计更完善的故障诊断逻辑和降级运行策略。甚至在MIL/SIL/HIL验证阶段，Agentic AI可以自动生成测试用例，并辅助分析测试结果，找出潜在的逻辑缺陷。虽然完全自动化尚远，但作为辅助工具，提高开发效率和代码质量的潜力巨大，特别是对于复杂算法模块和功能安全相关的代码生成与验证，值得初期投入研究和概念验证。
+   https://www.eetimes.com/can-agentic-ai-solve-the-embedded-software-problem/
+
+3. Why this CEO thinks video games make better training data than the internet（来源：TechCrunch）
+   应用分析：这个理念对我们EPS研发有很大的借鉴意义。我们可以借鉴视频游戏引擎的物理模拟能力，构建高精度的EPS系统虚拟仿真环境，就像一个大型的“EPS游戏”世界。在这个环境中，我们可以模拟各种驾驶场景、路面条件、驾驶员操作，生成大量带有物理反馈的“游戏数据”。利用这些虚拟数据，我们可以训练AI控制策略，例如用强化学习来优化助力手感调校，或者提升极端工况下的电机控制鲁棒性。此外，在仿真环境中，可以轻松生成传统台架或实车测试难以复现的极端情况或故障模式，用于训练AI进行故障诊断和降级控制。构建高保真仿真环境本身就是EPS研发的重要组成部分，如果能有效利用仿真数据训练AI，将大幅降低真实世界测试成本和周期，加速AI在EPS控制中的应用落地，特别是在线控转向这种需要海量复杂场景验证的领域，绝对值得深入研究和尝试。
+   https://techcrunch.com/video/why-this-ceo-thinks-video-games-make-better-training-data-than-the-internet/
+
+4. Virtual validation of eMobility control units: challenges and solutions in the SIL context（来源：Charged EVs）
+   应用分析：SIL，也就是软件在环验证，是我们EPS研发流程中的关键环节，直接关系到产品质量和功能安全。这篇白皮书强调了电动化传动系统带来的新复杂性，以及对可验证性、确定性行为的更高要求。我们可以对照文中提到的解决方案，重新审视并优化我们EPS控制器的SIL测试策略，特别是针对电机控制算法（如FOC、无传感器控制）和功能安全相关模块。确保测试覆盖率足够，能充分验证在各种工况和故障模式下的确定性行为。同时，我们也可以评估并引入更高精度的电机模型、机械负载模型和车辆动力学模型到SIL环境中，以更好地模拟实际物理世界的复杂性，提高仿真结果的置信度。持续投入和优化SIL验证，是保障EPS系统质量和功能安全不可或缺的一步。
+   https://chargedevs.com/whitepapers/virtual-validation-of-emobility-control-units-challenges-and-solutions-in-the-sil-context/
+
+5. New Allegro A81415 PMIC Simplifies Brake-by-Wire Systems（来源：Power Electronics News）
+   应用分析：这款Allegro的PMIC A81415，虽然是为线控制动系统设计的，但对我们线控转向（Steer-by-Wire）的架构和控制器硬件设计有着极强的借鉴意义。ASIL-D是汽车功能安全的最高等级，能在简化系统、减少组件的同时达到这个等级，非常了不起。我们可以研究它如何集成电源管理和轮速传感，思考能否将类似的高集成度设计理念应用到EPS/线控转向的电流、位置传感器信号处理和供电管理上，从而简化板级设计，提高可靠性，同时还能降低成本、节省空间。这是线控技术发展的必然趋势，持续关注这类高集成度、高功能安全等级的芯片，对我们未来EPS和线控转向的商业竞争力至关重要，绝对值得持续关注和研究。
+   https://www.powerelectronicsnews.com/new-allegro-a81415-pmic-simplifies-brake-by-wire-systems/
+
+6. POSCO and Hyundai partner to develop 6.5% silicon electrical steel for EV motors（来源：Charged EVs）
+   应用分析：EPS系统中的电机，永磁同步电机是主力，我们对它的转矩密度、效率、NVH和成本都非常敏感。电工钢作为电机铁芯的核心材料，其性能直接决定了电机的磁性能和损耗。6.5%硅含量的电工钢有望大幅降低铁损，从而提升电机效率，这与我们提升电机效率和降低温升的方向高度契合。在未来的EPS电机设计或供应商选型中，我们需要将这种高硅电工钢作为评估电机性能，尤其是效率和温升的关键指标之一。深入了解这种材料的特性、成本和可制造性，并与电机供应商沟通其在新材料应用上的进展。同时，也要评估它对电机NVH特性的影响，并在控制策略中进行相应补偿或抑制。持续关注这类前沿材料技术，有助于我们提前规划EPS电机的技术路线，确保在电机性能和成本上保持竞争力，非常值得投入关注。
+   https://chargedevs.com/newswire/posco-and-hyundai-partner-to-develop-6-5-silicon-electrical-steel-for-ev-motors/
+
+7. Dynamic Evaluation of Classical and Control-Aware Optimal Trajectory Planning in Robot Manipulators（来源：arXiv cs.RO）
+   应用分析：这项研究的思路和方法对我们EPS和线控转向的研发有极高的借鉴价值。我们可以将“控制感知型最优轨迹规划”的思想引入EPS的助力策略和手感调校。这意味着在生成助力曲线时，不仅仅考虑车速、转向角等常规参数，而是把转向系统的整体动力学模型（包括电机、齿轮、转向柱等），以及电机自身的功耗、温升、NVH特性都纳入考量，实时优化助力力矩的输出轨迹。这样可以在保证驾驶手感的同时，降低电机损耗，提升系统效率和平稳性，有效抑制转矩脉动和抖动。在线控转向场景中，方向盘与车轮之间没有机械连接，这个框架可以直接用于线控转向系统的运动规划和控制，确保车轮能够精确、平稳、高效地跟踪目标轨迹，同时优化执行器的能耗和寿命。这是我们值得深入研究，并将其迁移到EPS和线控转向的宝贵技术。
+   https://arxiv.org/abs/2607.05544</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260709-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260709-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260709-am.mp3" length="3322512" type="audio/mpeg"/>
+      <pubDate>Wed, 08 Jul 2026 22:38:41 +0000</pubDate>
     </item>
   </channel>
 </rss>
