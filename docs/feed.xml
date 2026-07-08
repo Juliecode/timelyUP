@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 07 Jul 2026 22:41:30 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 09:42:19 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI、智能汽车与机器人的前沿洞察：EPS工程师的今日早报</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最有价值的资讯。从芯片封装技术到AI驱动的工厂自动化，再到自动驾驶的安全挑战，这些内容都与我们的电动助力转向，也就是EPS系统研发息息相关。话不多说，让我们立即进入今天的早报时间。
-
-1. ROHM brings TO-247-class cooling to surface-mount SiC MOSFET package（来源：Charged EVs）
-   应用分析：这条消息非常值得我们投入关注。我们EPS的功率级设计正寻求更高效率和更紧凑的方案。罗姆的这款新型封装，能在不牺牲散热性能的前提下，让我们采用全自动化SMT工艺生产功率模块，这对于降低成本、提高生产一致性至关重要。我们可以考虑在下一代EPS控制器中评估这款器件，尤其是在对功率密度和热管理要求更高的DP-EPS或R-EPS产品线上。当然，我们也要关注其长期可靠性、车规认证以及实际热阻表现，进行充分的测试验证。
-   https://chargedevs.com/newswire/rohm-brings-to-247-class-cooling-to-surface-mount-sic-mosfet-package/
-
-2. SiC-Based 500 kW/l Inverter Built on AMB Chip Embedding（来源：Power Electronics News）
-   应用分析：这同样是非常值得投入研究的方向。高功率密度逆变器对线控转向系统尤其关键，因为线控转向需要更紧凑、更轻量化的执行器。我们可以深入研究AMB芯片嵌入技术在EPS电机控制器功率级中的应用潜力，例如将SiC MOSFET芯片直接集成到散热基板上，以实现更小的尺寸和更高的效率。这能帮助我们解决电机控制器小型化和热管理挑战，并可能为无传感器控制提供更好的硬件平台，因为更小的物理尺寸通常意味着更低的寄生参数，对信号测量更有利。
-   https://www.powerelectronicsnews.com/sic-based-500-kw-l-inverter-built-on-amb-chip-embedding/
-
-3. Tesla claims driver 'manually overrode self-driving' in deadly Texas crash（来源：The Verge）
-   应用分析：这条新闻提醒我们，在开发过程中必须持续关注并加强内部讨论与设计。对于我们正在向线控转向演进的EPS系统来说，如何清晰定义驾驶员与系统之间的权力交接、如何有效监测驾驶员状态、以及在紧急情况下如何确保安全降级和驾驶员接管，都是核心问题。尤其是线控转向一旦脱离机械连接，冗余设计和故障诊断就变得极其重要。我们需要从这类事故中吸取教训，在助力策略与手感调校中，增加对驾驶员意图的智能判断，并设计更鲁棒的冗余传感器和执行器方案，确保功能安全达到ASIL D等级。
-   https://www.theverge.com/transportation/955153/tesla-full-self-driving-texas-crash
-
-4. Bear Robotics acquires Kinisi Robotics to boost its physical AI capabilities（来源：The Robot Report）
-   应用分析：这条消息值得我们密切关注和学习。Kinisi Robotics在人形机器人方面的物理AI和执行器控制技术，很可能包含我们提升EPS电机控制策略性能的关键思路。例如，它们如何处理关节的精细力控、如何抑制抖动、如何进行无传感器位置或力矩估计。我们可以主动研究其公开的技术资料，甚至考虑与相关研究机构合作，将机器人领域前沿的电机控制算法，比如基于模型的预测控制、先进状态观测器等，迁移到EPS系统，以提升转矩脉动抑制和无传感器控制的鲁棒性。
-   https://www.therobotreport.com/bear-robotics-acquires-kinisi-robotics-to-boost-its-physical-ai-capabilities/
-
-5. CEA-Leti CEO: AI’s Real Bottleneck Is Architecture（来源：EE Times）
-   应用分析：这条观点非常值得我们深入思考。对于我们想用AI改进EPS控制、标定和诊断的方案，它提供了重要的指导。我们不应该盲目追求在MCU上运行复杂的神经网络，而应考虑如何设计轻量级的AI模型，并将其与传统控制算法，比如FOC、PI等进行有效融合。例如，可以利用AI进行参数辨识、自适应控制器的增益调整或异常检测，同时保持核心FOC的实时性和鲁棒性。这意味着在MCU选型时，要关注其AI加速能力、内存带宽和低功耗特性，并探索模型压缩、量化等技术，以实现高效的片上AI应用。
-   https://www.eetimes.com/cea-leti-ceo-ais-real-bottleneck-is-architecture/
-
-6. How Intrinsic eliminates manual robot coding（来源：The Robot Report）
-   应用分析：这条新闻值得我们关注和尝试。我们可以探索将类似Intrinsic的AI驱动方法引入EPS的标定和测试环节。例如，利用AI自动生成测试用例，或者通过学习历史标定数据，自动优化助力曲线和阻尼参数。在软件开发方面，AI辅助的代码生成和验证工具可以帮助我们减少手动编程，提高代码质量和开发效率。这需要我们投入资源研究AI在控制算法自动生成、参数优化和故障诊断中的实际落地路径，并结合我们现有的MATLAB/Simulink模型化设计，看能否实现更高程度的自动化。
-   https://www.therobotreport.com/how-intrinsic-eliminates-manual-robot-coding/
-
-7. The AI world is getting ‘loopy’（来源：TechCrunch）
-   应用分析：这个“循环”代理式AI的概念，非常值得我们研究其潜力。在EPS系统中，我们可以设想一种“循环”AI代理，它持续监测电机运行数据，比如转矩、电流、温度和NVH，并结合车辆状态，实时调整控制参数以优化性能、抑制温漂和转矩脉动。例如，一个后台AI代理可以不断学习驾驶员的转向习惯和路况，动态调整助力曲线，提供更个性化的手感。另一个代理则可以专注于预测性维护，通过分析电机健康数据，提前预警潜在故障。这当然需要强大的数据处理能力和实时决策能力，但有望显著提升EPS的智能性和鲁棒性。
-   https://techcrunch.com/2026/06/22/the-ai-world-is-getting-loopy/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260624-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260624-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260624-am.mp3" length="2441952" type="audio/mpeg"/>
-      <pubDate>Tue, 23 Jun 2026 22:42:03 +0000</pubDate>
-    </item>
     <item>
       <title>专题 · Claude Tag：提升AI交互效率的结构化利器</title>
       <description>本期专题：介绍Claude tag的应用
@@ -1111,6 +1075,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260708-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260708-am.mp3" length="2427840" type="audio/mpeg"/>
       <pubDate>Tue, 07 Jul 2026 22:41:29 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 智驾新视界：AI赋能设计、控制与材料革新</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的智驾新视界科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大方向，为您精选七条重磅资讯。从AI如何助力嵌入式软件开发和工业设计，到智能汽车定位技术的突破，再到电机材料和控制策略的革新，每一条都与我们电动助力转向，也就是EPS的研发工作息息相关。让我们一起看看这些前沿技术，能为我们的工作带来哪些新的启发和落地可能。
+
+1. AI智能体能否解决嵌入式软件开发难题？（来源：EE Times）
+   应用分析：这项技术非常值得投入。我们可以尝试利用AI智能体来辅助生成控制算法的C代码骨架，或者自动生成MIL/SIL/HIL测试用例。特别是在基于模型的设计（MBD）流程中，AI可以作为代码生成后的初步验证或优化建议工具。此外，它还能用于代码审查、故障诊断脚本生成，甚至针对ISO 26262功能安全标准，辅助生成安全需求文档或分析报告，减轻工程师的重复性工作负担。
+   https://www.eetimes.com/can-agentic-ai-solve-the-embedded-software-problem/
+
+2. ArtisanCAD：结合专家知识的工业级CAD智能体（来源：arXiv cs.AI）
+   应用分析：这项技术可以尝试应用。我们可以借鉴ArtisanCAD的理念，将EPS电机或减速器的设计规范、装配约束、材料特性等专家知识，比如NVH优化目标、转矩密度要求等，蒸馏进AI模型。让它辅助我们生成或优化CAD模型，特别是针对不同车型平台衍生的变型设计，能快速适应新需求。这项技术值得我们长期关注并逐步探索，短期内可用于自动化重复性高的参数化设计任务，长期则有望提升设计创新和整体效率。
+   https://arxiv.org/abs/2607.05750
+
+3. 基于Mamba和证据深度学习的不确定性感知车辆速度校正（来源：arXiv cs.RO）
+   应用分析：这项技术非常能用，且极具价值。我们可以将EVC-Mamba的思路集成到EPS系统或车辆底盘控制域中。利用IMU、轮速传感器等现有车载数据，结合Mamba模型学习车辆运动模式，提供更精确且带有不确定性量化的速度估计，从而优化助力策略、回正控制，甚至为线控转向提供更可靠的车辆状态输入。这对于提升未来EPS系统智能化和安全性是关键技术之一，非常值得我们投入研究和开发。
+   https://arxiv.org/abs/2607.05669
+
+4. 浦项制铁与现代汽车合作开发6.5%硅电工钢用于电动汽车电机（来源：Charged EVs）
+   应用分析：这项技术我们必须密切关注。作为EPS电机选型和设计的重要考量因素，我们需要关注这种新型高硅电工钢的量产成熟度、成本和可供性。一旦技术成熟，在下一代EPS电机平台开发时，应优先考虑采用此类材料，以提升电机效率、降低发热、优化NVH，从而间接提升助力手感和系统可靠性。这不是我们直接研发的技术，但作为应用方，积极评估和采纳是必须的。
+   https://chargedevs.com/newswire/posco-and-hyundai-partner-to-develop-6-5-silicon-electrical-steel-for-ev-motors/
+
+5. 电动驱动数字孪生在测试实验室环境中的实现（来源：arXiv eess.SY 控制系统）
+   应用分析：这项技术非常能用，而且是当前的热点和趋势。我们可以在EPS电机控制模块中，建立PMSM的数字孪生模型。利用它来实时估计电机负载转矩、摩擦力矩等外部扰动，并将其用于FOC控制的补偿环节，或者作为助力策略调校的输入。同时，数字孪生还能用于预测性维护、故障早期诊断，甚至在HIL/SIL测试环境中模拟各种工况，加速开发验证周期。这项技术非常值得投入，是提升EPS系统性能、鲁棒性和开发效率的有效手段。
+   https://arxiv.org/abs/2607.05877
+
+6. 机器人机械臂中考虑控制的优化轨迹规划的动态评估（来源：arXiv cs.RO）
+   应用分析：这项技术的理念可以很好地迁移到我们的工作中。我们可以将这种“控制感知”的轨迹规划思想应用到EPS的助力曲线设计和手感调校中。例如，在设计助力力矩随转向角或车速变化的曲线时，不仅要考虑静态手感，还要考虑电机动态响应、电流限制、NVH特性等执行器约束，生成既满足手感要求又能避免电机过载或产生不适振动的最优助力轨迹。对于线控转向而言，这更是核心技术，需要将转向盘力矩、车轮转角等目标轨迹与EPS电机的实际动力学能力紧密结合。因此，这项技术值得我们深入研究和尝试，能有效提升EPS控制的精细化和智能化水平。
+   https://arxiv.org/abs/2607.05544
+
+7. LLM引导的测量可信度校正，提升工业过程推理的可靠性（来源：arXiv eess.SY 控制系统）
+   应用分析：作为一种前瞻性技术，这项研究非常值得我们探索。在EPS的故障诊断和冗余传感方案中，我们可以尝试引入类似LLM的机制。例如，当多个传感器读数出现不一致时，LLM可以结合历史故障模式、运行工况描述，甚至其他关联变量的语义信息，来判断哪个传感器数据更可信，或者识别出潜在的软故障。这有助于提升故障诊断的准确性和鲁棒性，减少误报或漏报。在AI驱动的故障诊断和预测性维护方向上，这项技术值得我们在前期研究和概念验证阶段投入。
+   https://arxiv.org/abs/2607.06111</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260708-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260708-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260708-pm.mp3" length="3387888" type="audio/mpeg"/>
+      <pubDate>Wed, 08 Jul 2026 09:42:19 +0000</pubDate>
     </item>
   </channel>
 </rss>
