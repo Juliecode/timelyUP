@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 10 Jul 2026 09:43:09 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 22:38:00 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI与智能出行前沿：七大技术洞察</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，精选出七条对我们EPS产品研发工程师工作最有启发和实际应用价值的重磅资讯。从AI的信任与安全，到嵌入式AI的自适应优化，再到机器人电机控制的最新突破，以及汽车电源管理和传感器融合的演进，相信今天的分享能为您的研发工作带来一些新的思考和方向。
-
-1. The Clinician's Veto: Navigating Trust, Liability, and Uncertainty in Autonomous AI Prescribing（来源：arXiv cs.AI）
-   应用分析：我们可以在EPS中引入AI模型时，借鉴这些原则。例如，AI模型输出的决策应附带其置信度，以便系统根据高低决定是否采纳或触发人工干预。同时，要区分AI模型因数据不足或系统固有随机性导致的不确定性，并建立AI决策的“可解释性”机制，例如，当AI决定改变助力曲线时，系统能解释其基于哪些输入做出的判断。这对于故障排查、功能安全审计和责任划分至关重要。这是未来线控转向和AI驱动控制系统实现功能安全和市场接受度的基石，非常值得投入。
-   https://arxiv.org/abs/2606.25108
-
-2. When Do Conservation Laws Survive Learned Representations? Certified Horizons for Latent World Models（来源：arXiv cs.LG）
-   应用分析：这项技术在线控转向这类解耦物理连接的系统中尤其有用。我们可以在开发基于AI的电机控制策略或助力手感模型时，利用这种“认证地平线”方法，评估AI模型在预测未来状态时，其对能量守恒、转矩平衡等物理定律的遵守程度。将这种机制集成到MIL/SIL/HIL验证中，自动检测模型是否违反物理定律，从而发现安全隐患。通过在训练中引入物理守恒作为软约束，并结合认证方法优化，可提升模型的物理鲁棒性。这是确保AI控制系统在安全关键应用中可靠性的关键，值得投入。
-   https://arxiv.org/abs/2606.24945
-
-3. On-Device Neural Architecture Search（来源：arXiv cs.LG）
-   应用分析：这项技术对EPS的嵌入式控制非常有潜力。我们可以利用On-Device NAS解决模型部署后的性能优化和适应性问题，例如针对不同批次电机个体差异或长期运行后的参数漂移，自适应优化电机控制中的神经网络模型。在故障诊断方面，控制器可以根据实时传感器数据，自动搜索并部署最适合当前工况的故障诊断模型，提高诊断的准确性和实时性。此外，这还有助于减少复杂的模型化标定工作，实现真正的“自适应”和“自优化”控制器。这是未来嵌入式AI在汽车控制领域的新范式，值得深入研究。
-   https://arxiv.org/abs/2606.24900
-
-4. RGB: RL Guided Whole-Body MPPI for Humanoid Control（来源：arXiv cs.RO）
-   应用分析：这是将前沿机器人控制技术迁移到EPS电机控制的绝佳案例。我们可以将FOC、弱磁控制等传统策略作为MPPI的“采样先验”，然后通过MPPI的模块化成本函数（例如，转矩纹波最小化、效率最大化、NVH抑制等），在线优化控制指令，实现更精细、更鲁棒的电机转矩输出。这也能用于助力手感调校，实现更自然、更个性化的转向手感。在线控转向执行器控制中，这种RL+MPPI组合可以实现高精度、高鲁棒性的协同控制。这代表了未来电机控制和高级助力策略的发展方向，能有效解决传统FOC在复杂工况下的局限性，提升EPS系统的性能和用户体验，也是线控转向技术落地的关键一环，非常值得投入。
-   https://arxiv.org/abs/2606.25123
-
-5. ADM-Fusion: Adaptive Deep Multi-Sensor Fusion for Robust Ego-Motion Estimation in Diverse Conditions（来源：arXiv cs.RO）
-   应用分析：这项技术在线控转向和高级驾驶辅助系统（ADAS）中至关重要。我们可以将ADM-Fusion应用于车辆的自身运动估计模块，为线控转向系统提供更稳定、更准确的车辆速度、姿态和位置信息。这对于助力策略的精准匹配、车道保持/居中功能等至关重要。其自适应特性可作为智能的传感器故障检测和降级策略，提升功能安全等级。准确的自身运动信息结合路面感知，还能更好地还原路感。这是提升线控转向和自动驾驶系统安全性和性能的关键技术，值得投入。
-   https://arxiv.org/abs/2606.25111
-
-6. FAULHABER focuses on torque, noise, and power with new GPT gearheads（来源：The Robot Report）
-   应用分析：这是我们进行EPS电机和减速器选型、定制化设计时的重要参考。我们可以关注新型齿轮箱的设计理念和材料技术，例如如何实现高扭矩密度同时降低NVH，这些技术可能应用于PMSM永磁同步电机的结构优化或减速器方案改进。了解其噪声抑制细节，可以为我们改进EPS的NVH性能提供思路。更高的功率密度对于C-EPS、DP-EPS等对空间有严格限制的EPS类型尤为重要，有助于实现更紧凑的系统设计。虽然FAULHABER可能不直接是我们的供应商，但其技术方向对整个精密驱动行业具有指导意义，值得关注和投入。
-   https://www.therobotreport.com/faulhaber-focuses-torque-noise-power-new-gpt-gearheads/
-
-7. PCIM 2026: CGD’s Fabio Necco on Monolithic GaN Integration and the Startup Advantage（来源：Power Electronics News）
-   应用分析：GaN是未来EPS功率级发展的必然趋势，我们必须积极评估和导入单片集成GaN器件。这有助于我们设计出更小、更轻、效率更高的EPS控制器，降低发热量，简化散热设计，并支持更高的开关频率，进一步降低电机电流纹波，改善NVH性能。同时，关注GaN器件的成本趋势和可靠性数据，单片集成有望降低BOM成本和PCB面积，提升可靠性。在线控转向系统中，电源系统的冗余和高效率至关重要，GaN器件的高功率密度和高效率特性使其成为构建紧凑、高效且具备冗余能力的功率级模块的理想选择。尽早进行技术储备和产品验证，将为我们的EPS产品带来显著竞争优势，必须投入。
-   https://www.powerelectronicsnews.com/pcim-2026-cgds-fabio-necco-on-monolithic-gan-integration-and-the-startup-advantage/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260626-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260626-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260626-am.mp3" length="4350384" type="audio/mpeg"/>
-      <pubDate>Thu, 25 Jun 2026 22:43:26 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI、智能汽车与机器人前沿：EPS工程师的今日洞察</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，从中精选出七条最值得关注的资讯。我将结合我们EPS电动助力转向系统研发工程师的视角，为大家深入分析这些技术对我们工作可能带来的影响和应用价值。希望今天的分享能为大家带来新的启发，让我们在技术演进的浪潮中，始终保持敏锐的洞察力。
@@ -1129,6 +1093,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260710-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260710-pm.mp3" length="5048496" type="audio/mpeg"/>
       <pubDate>Fri, 10 Jul 2026 09:43:09 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI、智能汽车与机器人：从数学猜想到手术台，技术前沿的最新洞察</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为大家精选了七条重磅资讯。从GPT-5.6在数学推理上的突破，到英飞凌在传感器领域的布局，再到仿人机器人在复杂地形和外科手术中的进展，每一条都可能为我们的研发工作带来新的灵感和方向。话不多说，让我们立刻进入今天的早报时间！
+
+1. GPT-5.6 Sol Ultra produces proof of the Cycle Double Cover Conjecture [pdf]（来源：Hacker News）
+   应用分析：直接用于EPS产品研发可能较远，但我们可以关注其背后的推理能力。例如，能否应用于复杂控制算法的理论完备性验证、功能安全分析的逻辑链条推导，或者在海量代码中自动发现潜在的逻辑漏洞？如果模型能做到，我们可以尝试用它来辅助设计更严谨的控制策略，或验证现有策略的边界条件。当前阶段，直接投入资源去利用大型语言模型进行数学猜想证明，对EPS研发来说不值得。但持续关注这类AI在形式化验证、定理证明工具链上的进展是值得的。长期来看，这可能成为辅助高等级功能安全，比如ASIL D等级验证的强大工具，减少人工审查的工作量和出错率。
+   https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf
+
+2. LiST: Lipschitz Scaling Training for Robust and Calibrated Neural Networks（来源：arXiv cs.LG）
+   应用分析：非常能用。我们正在探索将AI和神经网络应用于电机控制策略，例如转矩脉动抑制、无传感器观测器和故障诊断。利普希茨尺度训练方法可以直接用于训练这些神经网络模型，确保它们在实际运行中面对传感器噪声、环境变化或系统参数漂移时，仍能保持稳定的性能和准确的诊断结果。比如，在无传感器控制中，基于神经网络的状态观测器可以通过利普希茨尺度训练，提高其在电机参数不确定或负载突变时的鲁棒性。鲁棒性和校准性是EPS系统功能安全的基石，将该方法集成到我们现有的MATLAB/Simulink模型化设计流程中，用于训练关键的神经网络组件，可以显著提升模型在MIL、SIL、HIL测试中的表现，并减少后续的标定和验证工作量，降低风险，非常值得投入。
+   https://arxiv.org/abs/2607.07745
+
+3. Feedback Manipulation Regularization: Enabling Offline Agent Alignment for Imitation Learning（来源：arXiv cs.AI）
+   应用分析：非常能用，特别是对于线控转向系统。线控转向系统需要高度模仿驾驶员的手感和意图，同时在紧急情况下提供最优辅助。我们可以利用FMR来训练线控转向的助力策略模型，从专家驾驶员的驾驶数据和反馈中学习，确保系统在各种工况下都能提供符合驾驶员预期且安全的转向手感。例如，在手感调校阶段，专家驾驶员对转向系统的反馈，比如“路感不够清晰”、“回正力矩不足”，可以作为FMR的纠正信号，来优化模仿学习模型。这直接关系到线控转向的用户体验和功能安全，通过FMR，我们可以更高效地将人类专家的经验和隐性知识融入到控制算法中，减少传统基于规则和参数调优的复杂性，并有望在开发早期就发现并纠正潜在的未对齐行为，加速线控转向的落地，非常值得投入。
+   https://arxiv.org/abs/2607.07859
+
+4. Input-Constrained Spatiotemporal Tubes for Safe Navigation of Unknown Euler-Lagrange Systems in Dynamic Environments（来源：arXiv eess.SY 控制系统）
+   应用分析：极其能用。在线控转向的架构和功能安全设计中，我们需要确保系统在任何工况下，即使面临未知扰动或部分传感器失效，也能在执行器物理极限内保证车辆安全。这个框架可以用于设计线控转向系统的上层路径规划和下层运动控制的接口，确保规划出的轨迹在满足车辆动力学约束，即EPS电机的转矩、转速限制的同时，能够安全地避开预期的动态障碍。例如，在紧急避障场景下，该框架可以生成一个“安全管”，指导EPS系统在有限的转向能力下，最大限度地避免碰撞，并提供明确的、可离线验证的安全边界。这绝对是线控转向功能安全和鲁棒性设计的核心挑战之一，值得我们重点投入。
+   https://arxiv.org/abs/2607.08189
+
+5. Infineon Completes Acquisition of Non-Optical ams OSRAM Sensor Business（来源：Power Electronics News）
+   应用分析：对我们EPS系统架构设计和控制器软硬件选型有直接影响。我们可以期待英飞凌未来推出更集成、性能更好的汽车级传感器解决方案，例如将电流、位置传感器与MCU或功率级更紧密地集成，或者提供符合ISO 26262更高安全等级的冗余传感方案。这有助于我们简化硬件设计，降低物料成本，并提高系统的可靠性和功能安全等级。作为EPS研发工程师，我们需要持续关注上游供应商的技术路线和产品布局。与英飞凌等关键供应商保持紧密沟通，了解其传感器集成路线图，可以帮助我们提前规划下一代EPS和线控转向的硬件平台，这对于我们优化系统成本、提升性能和满足功能安全要求都至关重要，非常值得投入关注和分析。
+   https://www.powerelectronicsnews.com/infineon-completes-acquisition-of-non-optical-ams-osram-sensor-business/
+
+6. Physics-Guided Biomechanical Gait Adaptation for Humanoid Locomotion on Extreme Sloped Terrains（来源：arXiv cs.RO）
+   应用分析：非常能用。仿人机器人的关节电机控制，特别是其对转矩密度、效率、NVH和鲁棒性的要求，与EPS电机高度一致。HumoSlope中“斜坡自适应零力矩点”（ZMP）调节器和“生物力学斜坡步态适配器”的思想，可以启发我们设计更先进的EPS助力策略。例如，车辆在上下坡、侧向坡道或湿滑路面行驶时，如何动态调整助力曲线、阻尼和回正力矩，以提供稳定且线性的转向手感，同时抑制由于路面变化导致的转矩脉动或抖动。强化学习结合物理模型的方法，可以用于自动生成和优化这些复杂工况下的助力策略。虽然直接迁移有难度，但其核心思想——将物理先验与AI控制结合，解决复杂动态环境下的鲁棒性问题——对我们提升电机控制策略的性能与鲁棒性至关重要，值得投入研究和概念验证。
+   https://arxiv.org/abs/2607.07830
+
+7. In vivo feasibility study of humanoid robots in surgery（来源：arXiv cs.RO）
+   应用分析：间接但重要。活猪手术的成功，证明了仿人机器人执行器和控制系统能够达到外科手术所需的极高精度和可靠性。这为线控转向（Steer-by-Wire）的“冗余与功能安全设计”提供了信心和技术参考。我们可以从手术机器人的冗余设计、故障诊断、降级模式以及人机交互安全性方面学习，将其最佳实践应用于线控转向系统。例如，手术机器人如何处理传感器失效、执行器卡死等极端情况，并确保患者安全，这些经验可以直接启发线控转向的ASIL D等级功能安全设计。虽然我们不直接开发手术机器人，但研究这类高风险、高精度机器人系统的功能安全架构和控制方案，可以为我们解决线控转向面临的类似挑战提供宝贵的思路和借鉴，非常值得投入关注和分析。
+   https://arxiv.org/abs/2607.07972</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260711-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260711-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260711-am.mp3" length="3560544" type="audio/mpeg"/>
+      <pubDate>Fri, 10 Jul 2026 22:38:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
