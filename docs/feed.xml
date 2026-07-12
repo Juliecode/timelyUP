@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 12 Jul 2026 09:42:12 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2026 22:29:47 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾之锚：AI安全、机器人训练与SiC芯片的未来</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能的前沿进展，特别是其在安全治理和训练方法上的创新，同时也会关注机器人领域的测试挑战与数据驱动方案，以及智能汽车核心部件——功率半导体技术的最新动态。希望这些精选资讯，能为您的日常研发工作带来新的启发和思考。
-
-1. Governing Actions, Not Agents: Institutional Attestation as a Governance Model for Autonomous AI Systems（来源：arXiv cs.AI）
-   应用分析：作为EPS产品研发工程师，我们正向线控转向（Steer-by-Wire）系统演进，其中AI控制和决策将扮演更核心的角色。这个治理模型提出的独立认证和防篡改日志机制，能为我们设计线控转向的功能安全架构提供新的思路，特别是在AI决策模块的故障诊断、降级策略以及满足ISO 26262等功能安全标准方面。我们可以借鉴其理念，探索如何为线控转向系统中的AI执行器（如电机控制器）设计外部的、可独立验证的“守门人”机制，确保在极端或异常情况下，AI的转向指令能够被有效制约或安全接管。这项研究值得深入投入，评估其在汽车嵌入式系统中的可行性和工程实现复杂度。
-   https://arxiv.org/abs/2606.26298
-
-2. Why everyone from OpenAI to SpaceX is building their own chips (and turning up the heat on Nvidia)（来源：TechCrunch）
-   应用分析：在EPS系统中，我们正在探索将AI/数据驱动方法应用于电机控制、自动标定和故障诊断。这些应用对边缘计算能力和实时性有较高要求。自研或定制化AI芯片的趋势，提醒我们未来在MCU选型和系统架构设计时，需要更紧密地关注芯片厂商的AI加速能力和定制化选项。例如，如果未来我们需要在EPS控制器中集成复杂的神经网络观测器或强化学习控制器，具备专用AI加速单元的MCU或FPGA方案将更具优势。虽然我们短期内不会自研芯片，但理解这一趋势有助于我们选择更合适的供应商，并向其提出定制化需求，以满足线控转向对性能和功能安全日益增长的需求。这是一个需要持续关注市场动态的方向。
-   https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/
-
-3. DSpark: Speculative decoding accelerates LLM inference [pdf]（来源：Hacker News）
-   应用分析：虽然LLM目前直接应用于EPS电机控制的场景较少，但其在自动标定、故障诊断与预测性维护中的潜力巨大。例如，我们可以设想一个LLM辅助的诊断系统，通过分析车辆数据和用户反馈，快速定位EPS故障。DSpark等推理加速技术，对于将这些计算密集型AI模型部署到车规级MCU或边缘计算单元上至关重要，因为它们能确保实时响应。我们将持续关注这类技术，评估其在嵌入式环境下的部署难度和性能收益，以便未来能将更复杂的AI模型集成到EPS的诊断和优化工具链中，提升开发和维护效率。这是一个值得关注，但短期内应用尚需转化的方向。
-   https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf
-
-4. How Do Tool-Augmented LLM Agents Perform on Real-World Energy Analytics Tasks?（来源：arXiv cs.AI）
-   应用分析：这个研究为我们展示了AI智能体如何结合特定领域的工具和知识来解决实际问题。在EPS领域，我们可以借鉴这种思路，开发工具增强型LLM智能体来改进标定效率和故障诊断。例如，可以构建一个智能体，它能够访问EPS系统的历史数据、传感器读数、控制算法参数以及故障代码数据库（作为其“工具”），然后通过自然语言指令，自动分析电机转矩脉动、NVH异常、温漂等问题，甚至提供优化的控制参数建议。这能大幅减少工程师的手动分析工作量，提高问题解决效率。投入资源构建一个概念验证系统，探索其在EPS数据分析和辅助决策中的潜力，是非常值得的。
-   https://arxiv.org/abs/2606.26346
-
-5. We know how to build smarter robots. Now, we need to learn smarter ways to test them（来源：The Robot Report）
-   应用分析：这篇报道直接指出了我们EPS系统，尤其是向线控转向和AI控制演进时面临的共性问题：如何有效测试越来越复杂的控制系统。EPS系统的手感调校、助力策略以及功能安全验证，本质上也是对“智能”行为的测试。我们可以借鉴机器人领域提出的“更智能的测试方法”，例如引入基于模型的测试（Model-Based Testing）、强化学习驱动的测试场景生成、以及更先进的MIL/SIL/HIL仿真平台，来提高测试覆盖率和效率。特别是在AI控制算法的验证上，我们需要确保其在各种复杂工况、故障模式下的鲁棒性。投入资源研究和引入这些前沿测试理念和工具，对于提升EPS产品的质量和开发效率具有长期价值。
-   https://www.therobotreport.com/we-know-how-to-build-smarter-robots-now-we-need-to-learn-smarter-ways-to-test-them/
-
-6. General Intuition raises $320M to use video game data to train robots（来源：The Robot Report）
-   应用分析：这个创新方法与我们目前在MIL/SIL/HIL仿真验证控制算法的思路高度契合。我们可以借鉴General Intuition的经验，探索如何利用高质量的仿真环境（如MATLAB/Simulink模型）或甚至游戏引擎，生成带有丰富标签的EPS电机控制数据。例如，模拟各种路况、驾驶员操作、电机参数漂移和故障模式下的转向力矩、转角、电流等数据，用于训练基于AI的电机控制策略（如神经网络控制器、状态观测器）或故障诊断模型。这能大幅降低实际台架和整车测试的数据采集成本，并加速算法迭代。投入资源研究这种“仿真到现实”的AI训练范式，对于提升EPS电机控制策略的性能和鲁棒性，以及实现无传感器/冗余传感方案，都具有重要的战略意义。
-   https://www.therobotreport.com/general-intuition-raises-320m-uses-video-game-data-train-robots/
-
-7. Wolfspeed CEO Reflects on Year One: New Generations, 300mm Wafers, and a Company Transformed（来源：Power Electronics News）
-   应用分析：作为EPS产品研发工程师，电机选型和功率级设计是我们的核心工作。SiC功率器件，特别是Wolfspeed Gen 5 SiC等新一代产品，对于PMSM永磁同步电机控制器而言，是提升效率、降低损耗、减小体积和重量的关键。300毫米晶圆的量产，预示着未来SiC器件的成本可能进一步下降，供货稳定性增强，这对于我们控制器的成本竞争力具有重要意义。我们将持续关注Wolfspeed新一代SiC器件的详细参数和可靠性数据，评估其在EPS功率级中的应用潜力，尤其是在提高转矩密度、系统效率、降低散热需求，以及应对线控转向高功率密度需求方面。这是值得持续投入和跟进的硬件技术方向，直接影响我们产品的核心性能。
-   https://www.powerelectronicsnews.com/wolfspeed-ceo-reflects-on-year-one-new-generations-300mm-wafers-and-a-company-transformed/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260628-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260628-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260628-am.mp3" length="4252176" type="audio/mpeg"/>
-      <pubDate>Sat, 27 Jun 2026 22:41:33 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 智驾、机器人与AI前沿：研发工程师的早报洞察</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师，在这里和大家一起洞察前沿科技动态，看看它们能如何赋能我们的研发工作。今天，我们将聚焦AI前沿、汽车智能化以及机器人三大方向，精选出七条对我们EPS研发工作极具启发意义的资讯。希望能帮助大家拓展思路，把最新的技术应用到我们的电动助力转向系统，甚至是未来的线控转向方案中。
@@ -1129,6 +1093,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260712-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260712-pm.mp3" length="3047760" type="audio/mpeg"/>
       <pubDate>Sun, 12 Jul 2026 09:42:12 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾浪潮下的转向未来：AI芯片、安全与人才新动向</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报，我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，看看有哪些值得我们关注的重磅资讯。从大模型训练的效率突破，到自动驾驶芯片的幕后英雄，再到嵌入式系统安全的新挑战，以及未来人才的培养方向，每一条都可能触及我们EPS产品研发的神经。话不多说，让我们立刻进入今天的早报时间。
+
+1. Flash-MSA: Accelerating Million-Token Training with Sparse Attention Kernels（来源：Hacker News）
+   应用分析：这项技术本身主要针对超大规模的语言模型训练，直接用于我们EPS或线控转向的控制算法开发可能较远。但其核心思想——优化内存访问和稀疏计算——对嵌入式AI模型优化有重要的借鉴意义。例如，在设计用于电机控制的神经网络观测器或控制器时，我们可以思考如何引入稀疏性或更高效的内存访问模式，以适应MCU有限的资源。因此，现阶段不值得直接投入研究 Flash-MSA 本身，但团队中负责AI算法方向的同事应关注这类底层优化技术，了解其原理和潜力，为未来将更复杂的AI模型移植到嵌入式平台做技术储备。
+   https://nanduruganesh.github.io/flash-msa/
+
+2. Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k（来源：Hacker News）
+   应用分析：这项资讯对我们非常有用。我们团队正在探索利用AI辅助方法改进控制算法开发和标定效率，因此在评估和选择用于代码生成、代码审查或故障诊断的LLM工具时，Token使用效率是一个关键指标。这项资讯提示我们，即使是知名模型，也可能存在效率问题。因此，值得投入关注和实践，在引入AI辅助开发工具时，我们应该进行内部测试和评估，对比不同模型的Token消耗、生成质量和响应速度。选择更高效的LLM能加快迭代速度，降低云服务成本。
+   https://systima.ai/blog/claude-code-vs-opencode-token-overhead
+
+3. Apple’s failed self-driving car program left a legacy of powerful AI chips（来源：The Verge）
+   应用分析：这项信息对我们规划EPS系统架构，特别是向线控转向演进时，提供了重要的参考方向。线控转向对计算能力、实时性、冗余和功能安全有极高要求，未来必然需要集成强大的AI处理单元。苹果的经验印证了对高性能车载AI芯片的投入是趋势。因此，我们值得密切关注汽车行业高性能AI芯片的进展，例如英伟达、高通、地平线等厂商的车规级AI芯片路线图。在EPS控制器向线控转向演进的架构设计中，我们需要预留足够的算力接口和扩展性，以适应未来AI控制策略的需求，甚至可以开始评估一些嵌入式AI加速器在电机控制中的潜力。
+   https://www.theverge.com/tech/964519/apple-silicon-self-driving-car-ai-m7-ultra
+
+4. TechCrunch Mobility: A robotaxi ultimatum（来源：TechCrunch）
+   应用分析：这项资讯对我们判断行业趋势非常有帮助。Robotaxi的商业化成功与否，将直接影响线控转向的普及速度和技术要求。如果Robotaxi发展受阻，线控转向的短期需求可能更多集中在L2+/L3级别，而非立即进入L4/L5的完全冗余和功能安全架构。这会影响我们对产品路线图、技术投入优先级的决策。因此，值得投入时间和精力进行深入分析和跟踪。我们需要定期评估Robotaxi及整个自动驾驶行业的宏观发展，理解其面临的挑战，这有助于我们更理性地规划EPS向线控转向演进的节奏和技术储备，避免盲目超前投入或错失关键机遇。
+   https://techcrunch.com/2026/07/12/techcrunch-mobility-a-robotaxi-ultimatum/
+
+5. The State of MCP Security [pdf]（来源：Hacker News）
+   应用分析：这份报告对我们直接且非常有用。我们的EPS控制器软硬件开发必须严格遵循ISO二六二六二功能安全标准，并日益关注ISO斜杠SAE二一四三四汽车网络安全标准。这份MCP安全报告可以作为我们进行威胁分析与风险评估（TARA）的参考，指导我们在MCU选型、硬件安全模块（HSM）集成、固件加密、安全启动、故障诊断与降级策略设计中，提升EPS系统的抗攻击能力。因此，值得高度投入。团队中的硬件工程师、软件工程师和功能安全专家应共同研读这份报告，并将其中的最佳实践或潜在风险点纳入到EPS产品的开发流程中，确保我们的系统满足最新的汽车网络安全要求。
+   https://www.canopii.dev/State%20of%20MCP%20Security%202026.pdf
+
+6. The One-Step Trap (In AI Research)（来源：Hacker News）
+   应用分析：这项资讯间接但非常有用，可以作为方法论指导。在利用AI改进EPS控制策略时，例如开发基于强化学习的助力曲线调校或神经网络状态观测器，我们不能只关注短期内某个特定工况下的性能提升。需要考虑模型的泛化能力、鲁棒性、在不同环境下的适应性，以及与现有物理模型结合的潜力。这要求我们建立更全面的评估体系，并投入时间和资源进行长期验证。因此，值得团队内部，尤其是负责AI和前瞻研究的工程师认真思考。可以组织内部技术分享，讨论如何将文章中提到的“一步陷阱”理论应用于我们当前的AI项目评估中，平衡短期目标与长期愿景。
+   http://incompleteideas.net/IncIdeas/OneStepTrap.html
+
+7. STEM education in the classroom, introducing BotBall（来源：The Robot Report）
+   应用分析：这项资讯对我们而言，间接但具有战略意义。虽然BotBall不是直接的技术方案，但它代表了基础教育中对机器人和编程的重视。对于我们团队而言，这意味着未来进入行业的工程师，其机器人和编程基础将更加扎实。我们可以考虑与高校或职业技术学校合作，提供EPS相关的实践项目或实习机会，吸引这些具备BotBall背景的优秀人才。因此，值得投入一定的关注和战略思考。不直接投入研发，但可以作为人才引进和企业社会责任（CSR）的一部分，帮助我们建立长期的人才储备，并提升企业在机器人和智能控制领域的品牌影响力。
+   https://www.therobotreport.com/stem-education-classroom-introducing-botball/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260713-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260713-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260713-am.mp3" length="3621024" type="audio/mpeg"/>
+      <pubDate>Sun, 12 Jul 2026 22:29:47 +0000</pubDate>
     </item>
   </channel>
 </rss>
