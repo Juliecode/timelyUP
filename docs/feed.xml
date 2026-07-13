@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 12 Jul 2026 22:29:47 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 09:42:46 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 智驾、机器人与AI前沿：研发工程师的早报洞察</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师，在这里和大家一起洞察前沿科技动态，看看它们能如何赋能我们的研发工作。今天，我们将聚焦AI前沿、汽车智能化以及机器人三大方向，精选出七条对我们EPS研发工作极具启发意义的资讯。希望能帮助大家拓展思路，把最新的技术应用到我们的电动助力转向系统，甚至是未来的线控转向方案中。
-
-1. Wayfinder Router: deterministic routing of queries between local and hosted LLM（来源：Hacker News）
-   应用分析：在线控转向等系统中，我们可能需要用轻量级AI模型进行实时的路感识别、故障预诊断或自适应助力策略调整。而更复杂的、需要大量算力的模型训练和更新则在云端进行。Wayfinder Router的思路可以借鉴，设计一个智能决策模块，根据当前路况、车辆状态、网络条件以及计算负载，动态选择在本地MCU或电机控制器上运行预训练的小模型，还是将部分感知数据或高层决策请求发送到云端进行更精细的推理。这有助于提升系统响应速度和鲁棒性，同时降低通信成本。我觉得非常值得我们关注其开源实现，评估它能否集成到我们的边缘AI部署框架中。
-   https://github.com/itsthelore/wayfinder-router
-
-2. Asian AI startups launch Mythos-like models as Anthropic’s export ban drags on（来源：TechCrunch）
-   应用分析：考虑到功能安全和供应链风险，我们不能只依赖单一来源的AI技术。亚洲本土AI模型的成熟，为我们提供了更多选择。在评估用于自动标定、故障诊断或预测性维护的AI工具链时，应将这些模型纳入考量范围。我们需要关注这些模型的性能、可靠性、是否支持本地部署、以及是否能满足ISO 26262等行业标准。如果其能力与西方模型相当，甚至在特定场景下表现更优，那么投入资源去调研和测试，建立合作关系，将有助于我们降低地缘政治风险，并可能获得更具成本效益的解决方案。
-   https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/
-
-3. AMD Strix Halo RDMA Cluster Setup Guide（来源：Hacker News）
-   应用分析：在线控转向等高级EPS系统中，我们正在探索将强化学习控制器或复杂的神经网络观测器集成进来。这些算法的训练和推理都需要强大的并行计算能力。如果Strix Halo能提供高效、低延迟的车载AI计算方案，我们将需要深入研究其架构和编程模型，评估其在车载环境下的功耗、散热、可靠性，以及是否符合ISO 26262的安全要求。投入资源进行原型验证，比如在HIL平台上测试其AI模型推理性能，以验证其在转矩脉动抑制、无传感器控制等复杂场景下的实时性，是值得的。
-   https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes/blob/main/rdma_cluster/setup_guide.md
-
-4. Ford hired AI and sacked humans. It backfired badly（来源：Hacker News）
-   应用分析：当我们尝试用AI改进控制、标定效率或故障诊断时，这个案例提供了宝贵的教训。我们应将AI视为辅助工具，而非完全替代。例如，在自动标定中，AI可以快速探索参数空间、生成初步标定曲线，但最终的手感调校和鲁棒性验证仍需经验丰富的工程师介入。在故障诊断中，AI可以提高异常检测的效率和准确性，但复杂的、关联性强的故障分析仍需人工判断。在引入AI时，应采取渐进式策略，从小范围试点开始，评估其真实效益，并确保有完善的人工干预和回溯机制。避免“为了AI而AI”，而应聚焦解决实际问题，将AI能力与工程师的专业知识有效结合。
-   https://www.the-independent.com/tech/ford-ai-automation-human-workers-b3003787.html
-
-5. Apple wants permission to buy memory from a blacklisted Chinese supplier（来源：The Verge）
-   应用分析：这条新闻提醒我们，在进行EPS控制器软硬件设计时，必须高度关注芯片供应链的风险。我们不能只盯着性能和成本，更要考虑供应商的地理位置、政治风险以及替代方案。在MCU和功率器件选型时，应优先选择有多家可靠供应商、或有成熟国产替代方案的芯片。对于关键器件，应考虑多源采购策略，并与供应商建立长期合作关系，确保供应的稳定性。同时，内部也应储备不同架构MCU的开发能力，以便在供应链出现问题时能快速切换平台。虽然我们无法直接影响国际贸易政策，但可以优化内部设计和采购策略，以应对外部不确定性。
-   https://www.theverge.com/tech/958707/apple-ram-buy-memory-blacklisted-china-cxmt
-
-6. AGIBOT produces 15,000th robot, marking a milestone in embodied AI deployment（来源：The Robot Report）
-   应用分析：AGIBOT的成就表明，高精度、高可靠性的机器人执行器控制技术已经具备规模化量产能力。我们应积极关注其电机选型、控制策略（如力矩控制、阻抗控制）、传感器融合、以及功能安全设计方面的实践。这些经验可以直接用于提升EPS电机控制的性能和鲁棒性，例如，在转矩脉动抑制、温漂补偿、无传感器控制算法优化等方面。特别是线控转向系统，其对执行器响应速度、精度和冗余安全的要求与机器人关节执行器非常相似。投入资源研究AGIBOT公开的技术资料、参与相关技术论坛，甚至考虑与这类机器人公司进行技术交流，评估其在工业机器人上验证过的电机控制算法和安全架构，能否迁移到EPS和SBW系统中，是极具价值的。
-   https://www.therobotreport.com/agibot-produces-15000th-robot-marking-milestone-embodied-ai-deployment/
-
-7. We know how to build smarter robots. Now, we need to learn smarter ways to test them（来源：The Robot Report）
-   应用分析：在EPS和线控转向系统中，引入AI控制（如强化学习助力策略、神经网络观测器）后，传统的基于工况的测试方法可能不足以覆盖所有复杂场景。我们需要借鉴机器人领域的先进测试理念，例如：基于模型的测试，它可以自动生成测试用例，覆盖更多边界条件；还有仿真优先，在虚拟环境中进行大规模、多场景测试，加速迭代；以及数据驱动测试，利用真实数据训练AI模型，并通过AI生成对抗性测试场景等等。我们应投入资源研究这些“更智能的测试方法”，将其引入到我们的MIL/SIL/HIL和台架测试流程中，特别是在验证AI控制器的鲁棒性和功能安全时。例如，可以探索如何利用AI生成故障注入场景，或自动化评估不同助力策略下的驾驶手感。这不仅能提升测试效率，更能提高EPS产品的可靠性和安全性，尤其是在线控转向这种Safety-Critical系统中，其价值不言而喻。
-   https://www.therobotreport.com/we-know-how-to-build-smarter-robots-now-we-need-to-learn-smarter-ways-to-test-them/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260628-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260628-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260628-pm.mp3" length="3838032" type="audio/mpeg"/>
-      <pubDate>Sun, 28 Jun 2026 09:42:15 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 智驾芯片自研潮，AI赋能与回归工程本源：今日科技早报</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，看看有哪些值得我们深入思考的重磅消息。从中国智谱AI大模型在网络安全领域的突破，到福特在AI应用上的反思，再到比亚迪自研智能驾驶芯片的布局，以及具身智能机器人的大规模部署，每一条都可能触及我们日常工作的痛点与未来方向。话不多说，让我们立刻进入今天的正题。
@@ -1129,6 +1093,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260713-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260713-am.mp3" length="3621024" type="audio/mpeg"/>
       <pubDate>Sun, 12 Jul 2026 22:29:47 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技早报：AI赋能电机控制，线控转向与云端驾驶的未来挑战</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热门方向，为您精选七条重磅资讯。从电机控制的精度突破，到大模型如何保障物理世界的安全，再到线控转向的云端挑战，以及苹果自动驾驶遗产中的AI芯片，相信今天的分享能为您带来新的思考和启发。话不多说，我们马上开始。
+
+1. Residual Physics-Informed Neural Networks for High-Fidelity BLDC Motor Modeling（来源：arXiv cs.RO）
+   应用分析：这项技术对我们的EPS产品研发而言，非常能用，且值得深入投入。它直接解决了电机控制策略性能与鲁棒性提升中的核心问题。具体来说，我们可以将PINN模型集成到MATLAB/Simulink仿真环境中，用于更准确地模拟EPS电机在不同工况下的动态响应，包括温度变化对电机参数的影响，从而优化FOC、弱磁控制等策略。其次，利用PINN的超低延迟推理能力，可以在ECU中部署轻量化模型，实时辨识电机参数的温漂或老化，进而自适应调整FOC控制器的参数或观测器增益，提升控制的鲁棒性。此外，PINN的高精度预测能力有助于设计更精细的转矩脉动和NVH抑制策略，并优化无传感器控制方案，提升在低速或零速下的性能和成本竞争力。
+   https://arxiv.org/abs/2607.09136
+
+2. Neuro-Agentic Control: A Deep Learning-based LLM-Powered Agentic AI Framework for Controlling Security Controls（来源：arXiv cs.AI）
+   应用分析：这项技术概念上能用，但需要大量的工程转化和验证，值得中长期投入探索。我们可以将其思想应用于EPS系统的智能故障诊断与降级策略。将LLM作为高层故障诊断的“智能体”，结合EPS系统的传感器数据和车辆总线数据，识别复杂故障模式。通过“反事实物理注入”机制，在虚拟环境中模拟LLM建议的降级或恢复操作对EPS系统手感、助力性能和功能安全的影响，确保决策的物理可行性和安全性，避免误操作。此外，在线控转向系统中，LLM可以辅助规划复杂的冗余切换逻辑，并在出现故障时，结合车辆动力学模型进行预判，推荐最优的备用方案，并通过物理注入机制确保安全稳定性。对于自动标定，LLM可生成初步的助力曲线调整建议，物理注入则用于快速验证其手感和NVH特性。
+   https://arxiv.org/abs/2607.09076
+
+3. Can the Cloud Drive? Infrastructure Feasibility of Offloading Autonomous Driving Across 5G and 6G（来源：arXiv eess.SY 控制系统）
+   应用分析：这项研究的结论对EPS/SbW的系统架构设计具有战略指导意义，投入价值极高。它直接影响了线控转向系统的架构选择和功能安全策略。研究结果明确指出，对于需要100毫秒响应的“反应层”任务，5G在稠密区域很快就会遇到通信瓶颈。这意味着SbW系统的核心控制逻辑，例如电机控制和力反馈生成，必须保留在本地ECU上，以确保低延迟和功能安全。而对于300毫秒“决策层”任务，则有更多云端卸载的可能。这为我们设计SbW的本地和云端混合架构提供了数据支撑，确保关键功能不依赖不稳定的云连接。此外，在未来的SbW车辆中，如果考虑部分功能云端化，需要根据车辆的预期使用区域和所需的延迟等级，评估5G/6G通信模块的性能要求，并设计完善的本地回退机制，以应对云连接中断或高延迟情况，确保系统安全。
+   https://arxiv.org/abs/2607.09045
+
+4. BeyondSight: Object Permanence for End-to-End Autonomous Driving（来源：arXiv cs.RO）
+   应用分析：这项技术对EPS本身影响不大，但对上层自动驾驶系统至关重要，值得我们持续关注。虽然EPS主要执行转向指令，但未来线控转向系统将直接接收自动驾驶的规划指令。如果上层自动驾驶系统能更准确地识别被遮挡物体，例如行人和非机动车，就能提供更稳定、更可靠的路径规划和避障策略。这将减少EPS系统在紧急避障时可能遇到的突发、大角度转向指令，使得助力控制更加平稳和可预测，从而提升驾驶员或乘客的乘坐舒适性。在L2+或L3级别自动驾驶中，系统对环境的感知能力越强，越能提前预警并辅助驾驶员进行操作。BeyondSight技术可以帮助车辆在复杂交通场景下，更好地理解周围环境，例如在路口有车辆被其他车辆遮挡时，也能“记住”其存在并进行合理预判，避免急刹或急转，从而降低EPS的瞬时高负荷需求。
+   https://arxiv.org/abs/2607.09138
+
+5. Data-driven predictive control of nonlinear systems using weighted regularization（来源：arXiv eess.SY 控制系统）
+   应用分析：这项技术非常能用，是AI/数据驱动方法改进控制、标定效率的关键技术之一，值得深入投入。EPS的助力曲线和阻尼回正等参数在不同车速、路况、驾驶员偏好下需要精细调整。利用该数据驱动预测控制框架，我们可以收集大量驾驶数据，并通过加权正则化，让控制器在特定驾驶条件下，例如高速行驶、低速泊车、激烈驾驶等，优先利用与当前工况最相关的数据，实现助力策略的自适应调整，提供更个性化、更舒适的转向手感。此外，该方法也可用于电机控制策略优化，例如FOC、弱磁控制等策略中的PI参数、电流环和速度环增益等，这些参数在电机温度、负载变化时可能需要调整。通过预测电机在不同控制输入下的响应，选择最优控制量，以抑制转矩脉动、降低NVH并提高效率。同时，通过收集正常和异常工况下的系统数据，训练数据驱动模型，当系统行为偏离模型预测的正常范围时，可以及时发出故障预警。加权正则化有助于模型更好地适应局部异常，提高诊断的灵敏度。
+   https://arxiv.org/abs/2607.09187
+
+6. Observer Design for a Class of Systems Described by Differential-Algebraic Equations and Parameter Identification of an Unmeasured Disturbance（来源：arXiv eess.SY 控制系统）
+   应用分析：这项技术对EPS控制系统而言，非常能用，且是核心技术之一，值得深入投入。在无传感器FOC控制中，我们需要精确估计转子位置和速度。该观测器可用于估计这些关键状态变量，同时还能辨识电机参数的温漂或老化，将其作为未测量扰动进行处理，从而提高无传感器控制在全速范围内的精度和鲁棒性，降低对物理位置传感器的依赖，提升成本竞争力。其次，EPS系统中，转向柱摩擦力、万向节摩擦力、齿条摩擦力等都是难以直接测量的扰动。利用该方法，我们可以设计观测器来实时估计这些摩擦力，并将其作为前馈补偿，从而有效抑制转矩脉动，改善转向手感，减少抖动。此外，当某个传感器失效或输出异常时，该观测器可以利用其他传感器数据和系统模型来估计缺失的状态或参数，实现软冗余。通过辨识扰动参数的变化，还可以早期预警潜在的机械故障，例如轴承磨损或齿轮间隙变化。
+   https://arxiv.org/abs/2607.08864
+
+7. Apple’s failed self-driving car program left a legacy of powerful AI chips（来源：The Verge）
+   应用分析：这项新闻间接能用，对硬件选型和技术路线规划有指导意义，值得持续关注，但不需直接投入研发。苹果的案例表明，即使是传统汽车厂商，也应关注芯片巨头在AI算力上的突破。在规划下一代EPS或SbW控制器时，我们需要考虑集成更高性能的MCU，甚至带有专用AI加速单元的SoC，以支持更复杂的AI控制算法，例如强化学习控制、神经网络观测器，以及更大量的数据处理需求。其次，高性能AI芯片通常采用异构计算架构。我们需要研究如何在这些复杂芯片上实现ISO 26262功能安全等级要求，例如通过冗余设计、安全岛隔离等方式。苹果在车载芯片上的经验，可能为未来汽车级AI芯片的功能安全设计提供借鉴。最后，虽然高性能芯片带来了强大的AI能力，但成本也是车规级产品的重要考量。我们需要评估在EPS/SbW系统中，哪些AI功能是必须的，需要多少算力，以及如何在满足性能和安全要求的前提下，选择最具成本效益的芯片方案。
+   https://www.theverge.com/tech/964519/apple-silicon-self-driving-car-ai-m7-ultra</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260713-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260713-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260713-pm.mp3" length="3542256" type="audio/mpeg"/>
+      <pubDate>Mon, 13 Jul 2026 09:42:46 +0000</pubDate>
     </item>
   </channel>
 </rss>
