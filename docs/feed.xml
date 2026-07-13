@@ -13,43 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 13 Jul 2026 09:42:46 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 22:34:00 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾芯片自研潮，AI赋能与回归工程本源：今日科技早报</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，看看有哪些值得我们深入思考的重磅消息。从中国智谱AI大模型在网络安全领域的突破，到福特在AI应用上的反思，再到比亚迪自研智能驾驶芯片的布局，以及具身智能机器人的大规模部署，每一条都可能触及我们日常工作的痛点与未来方向。话不多说，让我们立刻进入今天的正题。
-
-1. NanoEuler – GPT-2 scale model in pure C/CUDA from scratch（来源：Hacker News）
-   应用分析：{'能不能用': '直接用于EPS控制不现实，但其“从零开始、低层优化”的思路极具启发性。', '怎么用': '我们可以借鉴这种深入到硬件层面的优化，提升FOC和无传感器控制算法性能，优化EPS电机的转矩密度、效率和NVH。同时，理解LLM底层优化，能指导我们为EPS设计轻量级AI模型，用于自动标定或故障诊断。这种深挖底层技术对线控转向的复杂实时计算也有储备意义。', '值不值得投入': '值得关注其技术思路，将其优化思维引入EPS电机控制算法的极致优化。'}
-   https://github.com/JustVugg/nanoeuler
-
-2. GLM 5.2 beats Claude in our benchmarks / China’s Z.ai claims it can match Mythos on cybersecurity（来源：Hacker News / The Verge）
-   应用分析：{'能不能用': 'GLM 5.2作为开源模型，在特定任务上表现突出，具备潜在应用价值。', '怎么用': '我们可尝试用它结合EPS数据，训练定制故障诊断模型，利用其推理能力实现更精准预警。在嵌入式C代码开发和功能安全文档编写中，它能辅助代码审查、漏洞检测，提升效率和质量，辅助满足ISO 26262。此外，还能辅助分析标定数据，给出参数建议，加速标定。', '值不值得投入': '作为开源模型，值得积极探索，有望提升研发效率和产品质量。'}
-   https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/
-
-3. China claims the world's fastest supercomputer（来源：The Verge）
-   应用分析：{'能不能用': '直接使用世界最快超算进行EPS研发不现实，但其代表的算力进步趋势非常重要。', '怎么用': '线控转向等复杂系统需海量仿真验证，超算能力提升意味着我们能更快运行复杂模型，加速新控制策略开发和鲁棒性测试。若将AI应用于EPS，强大算力可缩短AI模型训练周期，提升性能。在电机选型、NVH优化等高精度仿真中，超算也能加速迭代。', '值不值得投入': '应间接关注超算发展，积极探索将更强大算力引入仿真、验证和AI模型训练流程，提升研发效率和产品性能。'}
-   https://www.theverge.com/tech/958768/china-claims-the-worlds-fastest-supercomputer
-
-4. Ford rehires ‘gray beard’ engineers after AI falls short（来源：TechCrunch）
-   应用分析：{'能不能用': '这是一个管理和策略层面的教训，但对技术研发有直接指导意义。', '怎么用': 'AI可用于自动标定、故障诊断，但手感调校、鲁棒性保证、功能安全设计仍需工程师专业知识。我们应将“老工程师”经验通过知识图谱沉淀，结合AI形成人机协作模式。在功能安全方面，ISO 26262要求严格，AI作为辅助角色，其可解释性与可验证性仍需人把关。', '值不值得投入': '这是一个深刻教训，引入AI时需保持清醒，确保人与AI有效协同，尤其在功能安全和用户体验方面。'}
-   https://techcrunch.com/2026/06/28/ford-rehires-gray-beard-engineers-after-ai-falls-short/
-
-5. AGIBOT produces 15,000th robot, marking a milestone in embodied AI deployment（来源：The Robot Report）
-   应用分析：{'能不能用': '具身智能机器人的控制技术与EPS电机控制高度相关，是重要的技术交叉点。', '怎么用': 'AGIBOT的PMSM电机FOC、转矩脉动抑制、无传感器控制等技术，与EPS需求高度重合。我们可借鉴其大规模部署中保证鲁棒性、NVH、成本优化的经验。线控转向需要高精度执行器，机器人关节执行器在精度、动态响应、冗余设计方面的经验，对我们开发线控转向执行器很有价值。其AI控制策略落地经验，也能为EPS控制器中的AI应用提供实践案例。', '值不值得投入': '强烈建议持续关注并投入学习，很多技术可迁移，有望加速线控转向执行器和AI控制策略研发。'}
-   https://www.therobotreport.com/agibot-produces-15000th-robot-marking-milestone-embodied-ai-deployment/
-
-6. BYD plans 2027 debut of in-house smart driving chip on Denza cars, report says（来源：CnEVPost）
-   应用分析：{'能不能用': '直接使用比亚迪的芯片不现实，但其战略和技术路径对我们有重要参考意义。', '怎么用': '车企深度整合智能驾驶算法，促使我们思考EPS如何更好地与中央计算平台进行接口定义、通信协议和功能解耦，以适应集中式架构，这对线控转向尤为关键。自研芯片能从底层支持ISO 26262功能安全，需关注其硬件冗余、故障检测如何与EPS的ASIL-D要求对接。同时，学习其芯片设计中算力、功耗、成本的平衡，对我们选择EPS的MCU和功率器件有借鉴。', '值不值得投入': '密切关注智能驾驶芯片相关标准和功能安全设计理念，思考EPS如何融入未来智能驾驶生态，非常值得。'}
-   https://cnevpost.com/2026/06/28/byd-plans-2027-debut-adas-chip-denza-cars/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260629-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260629-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260629-am.mp3" length="2971296" type="audio/mpeg"/>
-      <pubDate>Sun, 28 Jun 2026 22:40:03 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI与智能汽车新风向：从世界模型到福特工程师的回归</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人技术，为您精选了七条重磅资讯。从大语言模型如何学会“思考未来”，到福特重新请回“老工程师”的背后故事，再到比亚迪自研智能驾驶芯片的战略布局，每一条都与我们的研发工作息息相关。让我们一起看看这些技术动态将如何影响我们的未来产品和开发路径。
@@ -1129,6 +1097,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260713-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260713-pm.mp3" length="3542256" type="audio/mpeg"/>
       <pubDate>Mon, 13 Jul 2026 09:42:46 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾与机器人：AI赋能EPS控制与未来架构</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最有价值的资讯。从无刷直流电机的AI建模，到自动驾驶的云端算力挑战，再到AI在安全闭环控制中的应用，希望能为您的日常研发工作带来新的启发和思考。话不多说，让我们立刻开始今天的早报播报。
+
+1. Residual Physics-Informed Neural Networks for High-Fidelity BLDC Motor Modeling（来源：arXiv cs.RO）
+   应用分析：这个研究对我们EPS工程师来说，简直是雪中送炭。它完全可以用，而且潜力巨大。我们可以利用PINN模型来设计更鲁棒、更精确的电机状态观测器，尤其是在无传感器控制或多传感器融合场景下，精确估计转子位置和速度，直接提升FOC性能。同时，PINN对电机动态的精确建模能力，能帮助我们识别和预测转矩脉动源，进而开发更精细的补偿策略，显著降低EPS系统的NVH表现。另外，模型中包含绕组温度预测，也能用于实时温漂补偿，确保电机在不同温度下的性能一致性。更长远看，监测模型预测与实际测量之间的偏差，还能辅助进行故障诊断与预测性维护。这绝对值得我们投入资源进行算法开发和验证，结合MIL、SIL、HIL平台快速迭代，它有望解决EPS系统长久以来的痛点，直接提升产品性能和竞争力。
+   https://arxiv.org/abs/2607.09136
+
+2. Can the Cloud Drive? Infrastructure Feasibility of Offloading Autonomous Driving Across 5G and 6G（来源：arXiv eess.SY 控制系统）
+   应用分析：这个研究对于我们EPS系统架构的演进有很强的指导意义，虽然不是直接的控制算法，但非常重要。在设计未来的线控转向系统时，我们必须考虑高阶自动驾驶功能对实时性，特别是那一百毫秒反应性预算的需求，这决定了是否需要云端协同。如果需要，EPS作为执行器，其响应延迟和与云端决策的同步机制是关键。同时，如果部分感知或决策任务被卸载到云端，我们必须设计车端（也就是边缘侧）的冗余和降级策略，以应对网络中断或高延迟情况，确保ISO 26262功能安全等级。此外，理解哪些数据适合云端处理，哪些必须在边缘处理，也能帮助我们优化数据传输协议和带宽需求。这是一个值得我们持续关注和研究的方向，有助于我们提前布局技术路线和储备相关知识。
+   https://arxiv.org/abs/2607.09045
+
+3. Neuro-Agentic Control: A Deep Learning-based LLM-Powered Agentic AI Framework for Controlling Security Controls（来源：arXiv cs.AI）
+   应用分析：这个框架对我们来说前景非常广阔，是AI在安全关键控制系统落地的关键技术之一。我们可以利用LLM强大的语义推理能力来分析复杂的故障模式，然后结合物理模型进行“反事实物理注入”验证，生成更智能、更安全的故障诊断报告和降级操作建议，甚至在极端情况下自动调整EPS的控制参数。此外，结合EPS的历史运行数据和物理模型，LLM还能分析潜在的磨损或失效模式，并建议预测性维护措施，通过物理注入验证其有效性。在自动标定和手感调校方面，LLM可以根据驾驶员反馈、路况数据和车辆状态，提出新的助力曲线或阻尼补偿参数，并通过物理仿真验证这些参数对车辆动态和驾驶手感的影响，确保安全性和舒适性。这是一个值得我们投入的领域，需要搭建仿真验证平台，并探索如何将LLM的输出转化为可执行的控制指令。
+   https://arxiv.org/abs/2607.09076
+
+4. GATS: Graph-Augmented Tree Search with Layered World Models for Efficient Agent Planning（来源：arXiv cs.AI）
+   应用分析：GATS的理念对我们提升EPS相关AI应用的效率很有借鉴意义。例如，在自动标定流程中，EPS的标定过程复杂且耗时，我们可以构建一个基于GATS的LLM代理，结合其L1精确符号匹配和L2执行日志统计层，快速探索和优化标定参数空间，从而减少对昂贵LLM推理的依赖。对于多重、偶发性故障的诊断，LLM代理可以规划一系列诊断步骤，而GATS的分层世界模型能帮助代理高效筛选诊断方案，避免无效尝试。在未来的线控转向中，高层决策如路径规划、驾驶模式选择可能需要LLM代理参与，GATS可以帮助这些代理在有限时间内做出更可靠的决策。其核心思想——用分层世界模型减少LLM调用——对于嵌入式AI的成本和性能优化非常关键，值得我们关注并尝试在特定场景下进行概念验证。
+   https://arxiv.org/abs/2607.08894
+
+5. Data-driven predictive control of nonlinear systems using weighted regularization（来源：arXiv eess.SY 控制系统）
+   应用分析：这个研究对我们EPS工程师来说，非常有潜力，它直接解决了EPS控制的非线性问题。我们可以利用这个数据驱动预测控制框架来开发自适应助力控制，根据驾驶员输入、车速、路况等实时数据，动态调整助力曲线，以适应不同驾驶场景和驾驶员偏好，提升驾驶手感。在电机控制层面，利用该方法从运行数据中学习并预测电机非线性特性，例如齿槽转矩和磁饱和，进行实时补偿，从而更有效地抑制转矩脉动和抖动。甚至在无传感器控制中，结合实际运行数据，通过加权正则化来优化观测器参数，提高其在不同工况下的鲁棒性和精度。这是一个非常值得投入的领域，有望大幅提升EPS系统的自适应能力和性能，同时减少传统基于模型的开发和标定工作量。
+   https://arxiv.org/abs/2607.09187
+
+6. AgenticFocus: Object-Preserving Mixed Reality Synthesis from Human FPV Video for Dexterous Humanoid Learning（来源：arXiv cs.RO）
+   应用分析：这个研究虽然是针对人形机器人，但它的方法论和数据处理思路对我们有间接的启发。我们可以借鉴AgenticFocus的技术，通过收集专业驾驶员在不同路况下的驾驶视频，包括驾驶员视角、手部动作、车辆数据，重建高保真的驾驶员意图和手部操作轨迹，进而训练AI模型来复现或学习特定的线控转向手感调校。这有助于我们提取和量化“手感基因”。在自动标定数据生成方面，也可以利用类似技术，从人类工程师的标定操作中“学习”如何高效、准确地执行任务，并生成合成数据进行训练。此外，分析人类驾驶员在复杂或极限工况下，例如打滑、紧急避让时的转向操作，提取关键特征，也能指导EPS的极限性能设计。这是一个值得我们关注和研究的交叉点，为线控转向的“手感基因”提取和AI化提供了新的思路。
+   https://arxiv.org/abs/2607.08857
+
+7. BeyondSight: Object Permanence for End-to-End Autonomous Driving（来源：arXiv cs.RO）
+   应用分析：这个研究虽然不直接涉及EPS控制算法，但它对我们EPS上游的自动驾驶决策系统有重要影响。作为EPS工程师，我们需要确保上游自动驾驶系统提供给转向系统的目标路径和速度指令是基于对环境鲁棒且持久的理解。BeyondSight这类技术提示我们，在设计EPS与自动驾驶系统接口时，必须关注上层系统如何处理感知不确定性和物体永久性，这直接关系到EPS能否安全、准确地执行任务。如果上层感知系统未能提供可靠的物体永久性信息，EPS系统可能需要更保守的降级策略，或者依赖于自身的更基础的传感器进行安全判断。此外，该研究提出的nuScenes-Permanence数据集可以用于设计更具挑战性的测试场景，以验证EPS与感知系统协同工作的鲁棒性，尤其是在有遮挡的环境中。这是一个值得我们持续关注的领域，理解其原理和影响，有助于我们更好地进行EPS的未来集成和功能安全设计。
+   https://arxiv.org/abs/2607.09138</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260714-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260714-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260714-am.mp3" length="4820832" type="audio/mpeg"/>
+      <pubDate>Mon, 13 Jul 2026 22:34:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
