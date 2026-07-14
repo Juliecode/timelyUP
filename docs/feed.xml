@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 13 Jul 2026 22:34:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 09:42:42 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI与智能汽车新风向：从世界模型到福特工程师的回归</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人技术，为您精选了七条重磅资讯。从大语言模型如何学会“思考未来”，到福特重新请回“老工程师”的背后故事，再到比亚迪自研智能驾驶芯片的战略布局，每一条都与我们的研发工作息息相关。让我们一起看看这些技术动态将如何影响我们的未来产品和开发路径。
-
-1. Internalizing the Future: A Unified Agentic Training Paradigm for World Model Planning（来源：arXiv cs.AI）
-   应用分析：这对我们EPS系统，尤其是在线控转向等复杂系统中提升决策和规划能力，具有巨大潜力。当车辆故障或路况突变时，EPS需快速评估降级方案。传统的基于规则或模型预测控制（MPC）方法在长周期规划上有限。引入这种具备“内在世界模型”的LLM代理，可构建更智能的故障诊断与降级策略，甚至用于高级助力策略的在线优化。这非常值得投入。可从离线模拟入手，让LLM代理学习生成合理的降级路径和控制指令，通过HIL测试验证。这能显著提升EPS的智能化水平和功能安全冗余设计能力。
-   https://arxiv.org/abs/2606.27483
-
-2. Towards Reliable and Robust LLM Planning: Symbolic Feedback-Driven Iterative Self-Refinement Framework（来源：arXiv cs.AI）
-   应用分析：该框架对我们EPS这类ASIL D等级的关键系统，在控制策略鲁棒性和可靠性提升上极具借鉴意义。可将LLM应用于EPS的“故障诊断与降级”模块。当传感器异常、电机参数漂移或功率器件故障时，LLM代理能结合系统约束和功能安全要求，生成降级操作。符号验证器可检查这些操作是否违反ISO 26262标准或物理限制。此方向非常值得投入，将EPS功能安全需求、故障模式等知识图谱化，有望在自动故障恢复和预测性维护方面取得突破。
-   https://arxiv.org/abs/2606.27757
-
-3. Support-Constrained RL Enables Real-World Policy Improvement without Real-World Experience（来源：arXiv cs.RO）
-   应用分析：这项技术对EPS电机控制策略开发，特别是FOC、无传感器控制、转矩脉动抑制等高精度算法的优化，极其有用。这些算法调优高度依赖真实环境测试。SCORE框架提供了一条“仿真到实车”的优化路径。我们可以利用现有EPS控制器的实车数据训练基础策略，将其“行为支持域”作为约束，在Simulink或HIL中进行强化学习优化，提升手感、NVH或鲁棒性。优化后的策略在部署实车前，行为范围受限，大大降低不安全风险。这是提升EPS电机控制算法开发效率和性能的关键方向，必须投入，可大幅减少昂贵实车测试时间，加速线控转向迭代。
-   https://arxiv.org/abs/2606.27475
-
-4. CWI: Composite Humanoid Whole-Body Imitation System for Loco-manipulation（来源：arXiv cs.RO）
-   应用分析：虽非直接用于EPS，但CWI对优化EPS助力策略与手感调校有极高借鉴价值。人形机器人关节执行器控制与EPS电机控制在底层共通，尤其在高动态、高精度和NVH方面。CWI处理“运动与操作协调”及“数据驱动模仿学习”的思路可启发我们。例如，如何通过模仿驾驶员转向意图（类比MoCap数据），生成更自然、个性化的助力曲线和路感反馈，同时保证稳定性。解耦数据处理的思路，也可用于区分转向的“主观意图”与“客观路况”对助力策略的影响。这值得适度投入，学习其先进理论和方法，探索迁移到线控转向等系统。
-   https://arxiv.org/abs/2606.27676
-
-5. Ford rehires ‘gray beard’ engineers after AI falls short（来源：TechCrunch）
-   应用分析：这则新闻对我们EPS研发工程师是一剂清醒剂。我们探索用AI改进控制、标定和故障诊断，但福特案例强调AI局限性，特别是在需高度领域知识、工程直觉和判断时。这意味着在EPS开发中，AI应是辅助工具而非替代。例如，AI可助自动标定助力参数，但最终手感调校和极端工况验证仍需资深工程师判断。这启示我们务实看待AI在EPS中的应用，重心放在AI辅助设计、诊断、标定，而非盲目“AI全自动化”，并注重培养和传承核心工程经验。
-   https://techcrunch.com/2026/06/28/ford-rehires-gray-beard-engineers-after-ai-falls-short/
-
-6. BYD plans 2027 debut of in-house smart driving chip on Denza cars, report says（来源：CnEVPost）
-   应用分析：这对EPS行业有直接影响，需密切关注和投入。智能驾驶芯片自研意味着更高集成度、软硬件协同和更强算力，为线控转向落地提供更好硬件基础。线控转向需强大计算能力进行路径规划、决策和冗余控制。此外，比亚迪自研芯片趋势可能影响我们EPS控制器中MCU和功率器件选型策略，以及与客户的接口定义。我们需与客户沟通，了解其自研芯片对EPS功能、性能和接口要求。作为EPS研发工程师，需评估此趋势对未来EPS系统架构、功能安全设计、控制器软硬件和控制算法的影响，甚至考虑支持客户自研芯片平台。
-   https://cnevpost.com/2026/06/28/byd-plans-2027-debut-adas-chip-denza-cars/
-
-7. From Detection to Action: Using LLM Agents for Fault-Tolerant Control（来源：arXiv eess.SY 控制系统）
-   应用分析：这项研究对EPS系统功能安全和高可用性挑战提供了极佳解决方案。可借鉴构建EPS专用的LLM故障容错代理。当EPS发生故障时，代理能：一、结合传感器数据、故障码、车辆工况等，通过LLM推理进行深层次故障诊断。二、基于EPS数字孪生模型、ISO 26262功能安全要求、预设降级策略及实时车辆状态，LLM生成最优故障恢复方案，如切换冗余模式、限制助力、调整参数等。三、生成的方案在数字孪生中预验证，确保安全可行后转化为控制指令下发。这非常值得投入，有望实现更智能、自适应的故障处理，提高效率和安全性。初期可在HIL和MIL环境下进行概念验证和原型开发，逐步构建EPS领域知识图谱。
-   https://arxiv.org/abs/2606.28011</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260629-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260629-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260629-pm.mp3" length="3279168" type="audio/mpeg"/>
-      <pubDate>Mon, 29 Jun 2026 09:42:57 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI前沿、汽车智能化与机器人：EPS研发工程师的今日洞察</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能前沿、汽车智能化和机器人三大热门领域，精选七条重磅资讯。我将结合我在汽车电动助力转向，也就是EPS系统研发的经验，为大家深度剖析这些技术，看看它们对我们的工作究竟意味着什么，能否为我们的线控转向、电机控制策略、功能安全和故障诊断等方向带来新的突破。
@@ -1133,6 +1097,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260714-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260714-am.mp3" length="4820832" type="audio/mpeg"/>
       <pubDate>Mon, 13 Jul 2026 22:34:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 智驾之锚：AI驱动转向与机器人执行器的融合</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大热门领域，为您精选七条最值得关注的重磅资讯。从AI如何赋能闭环控制和安全决策，到汽车线控转向系统的验证新范式，再到机器人领域那些与我们EPS电机控制息息相关的创新技术，今天的内容干货满满，希望能为大家的工作带来新的启发。话不多说，让我们马上进入今天的早报时间。
+
+1. Closed-Loop Control with Rule-Aligned Small Language Models and Multi-Agent Self-Correction（来源：arXiv cs.AI）
+   应用分析：能用，而且潜力巨大。我们可以考虑将SLM集成到EPS控制器的故障诊断模块中。比如，通过自然语言描述故障现象和诊断规则，让SLM生成初步的诊断建议，再通过我们的数字孪生或HIL平台进行验证。在线控转向场景下，SLM甚至可以辅助生成一些基础的助力模式或安全降级策略，然后由验证层进行实时检查和修正。考虑到SLM的紧凑性和低延迟特性，它有望在车载边缘计算设备上运行，这对于我们至关重要。我建议可以先从非安全关键的辅助功能或故障诊断入手，逐步验证其在EPS控制中的潜力，值得投入研究。
+   https://arxiv.org/abs/2607.09713
+
+2. Robustly Invertible Nonlinear Dynamics and the BiLipREN: From Inversion-Based Control to Generative Trajectory Modelling（来源：arXiv eess.SY 控制系统）
+   应用分析：理论上可行，但工程实现难度会比较高。我们可以尝试将BiLipREN应用于EPS电机的高精度转矩控制中，通过学习电机的非线性特性，实现更精确的转矩输出和转矩脉动抑制。在线控转向中，它甚至可以用于构建从驾驶员意图到车轮转角的鲁棒逆模型，以实现更直接、更精准的转向控制。特别是其鲁棒性特点，对于解决电机参数温漂和制造差异带来的控制精度问题，我认为有很强的借鉴意义。我建议可以进行前瞻性研究和概念验证，探索将其与FOC、MPC等现有控制策略结合，在特定场景，比如转矩脉动抑制、摩擦补偿等方面，看能否带来改进效果。
+   https://arxiv.org/abs/2607.10026
+
+3. YUKTI: From Natural-Language Situations to Robust, Verifiable Decisions An Uncertainty-Typed Proposition IR, Assumption-Robust Pareto Frontiers, and a Regret Certificate（来源：arXiv cs.AI）
+   应用分析：对于线控转向等高层决策，特别是涉及安全关键的场景，YUKTI有非常强的指导意义。我们可以在线控转向的功能安全设计中，利用其“假设鲁棒帕累托前沿”概念，来评估不同降级策略在各种不确定性，比如传感器故障、执行器性能衰退等情况下的风险和收益。我们可以构建一个决策辅助系统，将复杂的故障模式和安全目标以自然语言输入，然后让YUKTI框架帮助生成并通过其“后悔证书”评估不同决策方案的鲁棒性，从而指导我们制定和验证更安全的策略。我建议我们值得深入研究其理论框架，并探索如何将其原则应用于线控转向的冗余和功能安全设计中，尤其是在决策层面的鲁棒性评估。
+   https://arxiv.org/abs/2607.09706
+
+4. A Risk-Field Enhanced Closed-Loop Digital Twin Framework for Autonomous Driving Safety Validation（来源：arXiv cs.RO）
+   应用分析：这个框架对我们来说非常有用，是未来EPS系统，尤其是线控转向系统验证的必然趋势，我们必须投入。我们可以构建EPS系统的数字孪生，将EPS控制器的软件模型、电机模型、机械特性模型等都集成到自动驾驶的数字孪生框架中。然后，利用其风险场概念，针对线控转向在不同驾驶场景，比如紧急避障、高速变道等情况下的性能和故障模式，生成并测试大量的安全关键场景。这能帮助我们更早地发现并解决EPS系统在极限工况下的潜在风险，从而优化助力策略和故障降级方案。这可以显著提升线控转向功能安全验证的效率和覆盖率，同时降低实车测试的成本和风险。
+   https://arxiv.org/abs/2607.09772
+
+5. Learning High-Level Decision Making with an Interaction-Aware Attention-Based Network in Autonomous Driving（来源：arXiv cs.RO）
+   应用分析：虽然我们EPS直接处理的是底层的力矩控制，但上层自动驾驶系统的决策质量直接影响EPS的工作负荷和性能。所以，这项研究对于线控转向的上层决策输入有直接的指导意义。我们可以与自动驾驶团队合作，研究如何将DecisionPerceiver这类高层决策模型的输出，转化为EPS系统所需的精准、平滑的转向角或转向力矩指令。这有助于优化EPS的助力曲线和手感调校，使其更好地适应自动驾驶系统的需求，减少不必要的抖动和响应延迟。这是一个值得关注和合作的方向，有助于我们设计出更适应未来自动驾驶需求的EPS产品，提升系统集成度。
+   https://arxiv.org/abs/2607.09725
+
+6. A Biomimetic Myoelectric Tentacle Prosthesis with Sensorless Object Detection and Vibrotactile Feedback（来源：arXiv cs.RO）
+   应用分析：这项研究的核心思想完全可以迁移到我们EPS领域，非常值得借鉴。我们可以借鉴其“基于电机电流斜率进行无传感器物体接触检测”的思路，应用到EPS电机中。例如，当EPS电机发生机械卡滞或意外碰撞时，我们可以通过监测电机电流的异常变化率，实现快速的无传感器故障诊断或安全降级。这有助于提升EPS系统的鲁棒性，在主传感器失效时提供一层额外的安全保障，甚至可以探索在某些低成本EPS应用中，减少对外部转矩传感器的依赖。这是一个值得投入研发的方向，无传感器技术是EPS领域的重要发展趋势，这项研究提供了具体且有潜力的实现路径，有助于提升我们产品的成本竞争力和安全性。
+   https://arxiv.org/abs/2607.09807
+
+7. Building a Foundation Stack for General-Purpose Robots（来源：IEEE Spectrum）
+   应用分析：这项研究对于EPS系统架构的未来演进有很强的启发性，特别是线控转向。在线控转向的系统架构设计中，我们可以借鉴这种“基础栈”的理念，将EPS的底层电机控制、助力策略、功能安全模块视为一个可复用的“执行器基础栈”。在此基础上，集成高层感知，比如路感还原、决策，比如助力模式选择，以及诊断模块。我们应该特别关注其世界模型和动作模型的概念，思考如何将EPS的物理模型和控制行为封装成更通用的模块，以便未来与不同自动驾驶平台或机器人系统进行更高效的集成和功能扩展。虽然短期内可能不会直接应用到EPS产品中，但对指导线控转向的长期架构规划和技术路线选择具有战略意义，值得我们持续关注其发展趋势和架构思想。
+   https://spectrum.ieee.org/x-square-robot-embodied-ai-stack</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260714-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260714-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260714-pm.mp3" length="3729312" type="audio/mpeg"/>
+      <pubDate>Tue, 14 Jul 2026 09:42:42 +0000</pubDate>
     </item>
   </channel>
 </rss>
