@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 15 Jul 2026 22:35:09 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 09:43:51 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI与智能汽车的未来：从安全控制器到线控转向新突破</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报，我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。从AI模型效率的突破到智能驾驶的安全挑战，再到线控转向的未来趋势，以及电动汽车高压部件的最新进展，每一条都可能深刻影响我们的研发工作。话不多说，让我们立刻进入今天的早报时间！
-
-1. Hierarchical Global Attention (HGA)（来源：arXiv cs.LG）
-   应用分析：在EPS领域，我们正探索利用AI和数据驱动方法改进控制和诊断，例如通过分析长时间序列的驾驶行为、路况和电机运行历史数据来优化助力策略或进行预测性维护。但长序列数据的处理往往需要高昂的计算成本和内存。HGA这种无需重新训练、即插即用的长上下文优化方案，能帮助我们更高效地处理这些数据，降低AI模型的部署门槛，提升实时性。我觉得非常值得我们持续关注其在边缘计算设备上的潜力，以实现更智能、更高效的EPS系统。
-   https://arxiv.org/abs/2606.30709
-
-2. ShardNet: Training Neural Controllers with Hard, Non-Convex Constraints（来源：arXiv eess.SY 控制系统）
-   应用分析：作为EPS工程师，功能安全ISO 26262是我们的核心关注点。EPS系统是ASIL D等级，任何控制策略都必须严格满足安全约束，比如电机过温、过流、转向角限位等。传统的AI控制方案很难严格保证这些硬性约束。ShardNet提出的“安全按构造”方法，能让我们把这些关键约束直接嵌入神经网络控制器设计中，极大地提升了AI控制方案在EPS中的可信度和功能安全认证的可行性，有望大幅降低后续的验证和测试成本。这绝对是值得我们深入研究和投入的方向，以实现既智能又安全的EPS控制。
-   https://arxiv.org/abs/2606.30935
-
-3. A Systematic Approach to Multi-Agent AI from Advanced Regulatory Control Theory: Safe and Auditable LLM Operator Agents for Process Control（来源：arXiv eess.SY 控制系统）
-   应用分析：EPS控制策略的性能与鲁棒性提升、自动标定和故障诊断效率是我们目前亟待解决的问题。这个LLM代理框架为我们提供了一个将AI应用于EPS控制的实用范式。我们可以借鉴这种分层、模块化的思想，让LLM代理在更高级别上进行决策，比如根据驾驶场景和驾驶员意图，动态调整底层的FOC或MPC控制参数。同时，结合控制理论的结构化设计，能让AI的决策过程可解释、可审计，这对于ISO 26262功能安全至关重要。例如，LLM可以辅助进行故障模式分析，提供基于专家知识和历史数据的预测性维护建议。这非常值得投入，有望加速AI在EPS控制中的落地，将前沿研究快速转成工程方案。
-   https://arxiv.org/abs/2606.30877
-
-4. Off the Rails: Hijacking the Scoring Head in Generative End-to-End Driving Planners with Safety-Violating Adversarial Perturbations（来源：arXiv cs.RO）
-   应用分析：随着EPS向线控转向（Steer-by-Wire）演进，转向系统将完全由电子控制，其安全性面临前所未有的挑战。这项研究提醒我们，线控转向系统不仅要满足传统的功能安全要求，还要特别关注AI控制模块的对抗性鲁棒性。我们需要投入资源，对线控转向的感知、规划和控制链路进行对抗性攻击测试，并开发相应的防御机制，例如输入数据验证、模型鲁棒性训练等，确保系统在恶意攻击或异常输入下的最高安全性，避免潜在的“劫持”风险。这是线控转向架构和功能安全设计中不可忽视的一环。
-   https://arxiv.org/abs/2606.30807
-
-5. Tesla starts testing Cybercab without pedals or a steering wheel in Austin（来源：TechCrunch）
-   应用分析：作为EPS工程师，Cybercab的测试对我们来说是极其重要的信号。它意味着线控转向（Steer-by-Wire）将成为主流，甚至完全取代机械连接。我们需要加速线控转向的系统架构设计研究，包括多重冗余方案以满足ASIL D功能安全等级，以及在没有方向盘反馈的情况下，如何通过电机控制提供必要路感和虚拟手感。此外，无传感器或冗余传感方案的开发将变得更加关键，以提升安全性和成本竞争力。这是一个必须全力投入的方向，我们的技术储备要紧跟这一趋势，将前沿研究快速转成可落地的EPS工程方案。
-   https://techcrunch.com/2026/06/30/tesla-starts-testing-cybercab-without-pedals-or-a-steering-wheel-in-austin/
-
-6. From Grasps to Dexterity: Large-Scale Grasp Pretraining for Dexterous Manipulation（来源：arXiv cs.RO）
-   应用分析：机器人关节执行器和伺服电机控制与EPS电机控制在底层技术上有高度共通性。这项研究启发我们，可以借鉴这种大规模数据预训练的思路，利用大量的实际驾驶数据、路况数据和电机运行数据，来预训练EPS电机控制模型。这有助于我们更精准地优化FOC矢量控制、弱磁控制等策略，提升电机转矩密度、效率和NVH性能，特别是抑制转矩脉动和抖动。通过数据驱动的自动标定，也能大幅提升助力策略与手感调校的效率和鲁棒性。这值得我们投入，将机器人领域的先进电机控制技术迁移到EPS中，解决电机控制策略的性能与鲁棒性提升等问题。
-   https://arxiv.org/abs/2606.30749
-
-7. Vishay’s VOLA617A optocoupler brings 1,000 V isolation to 800 V EV batteries（来源：Charged EVs）
-   应用分析：我们的EPS系统控制器中的功率级，直接与车辆的电源系统相连。随着电动汽车向800V高压平台演进，EPS系统的电源管理和信号隔离面临更高要求。VOLA617A这款光耦能够提供1000V的隔离电压，远超传统500V的限制，这对于我们设计符合ISO 26262功能安全标准的高压EPS系统至关重要。它能确保控制逻辑电路与高压功率电路之间的安全隔离，提升系统的EMC性能和整体可靠性。在未来的800V EPS产品开发中，我们必须将这类高压隔离器件纳入硬件选型和设计考量，这是确保产品竞争力和安全性的关键。
-   https://chargedevs.com/newswire/vishays-vola617a-optocoupler-brings-1000-v-isolation-to-800-v-ev-batteries/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260701-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260701-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260701-pm.mp3" length="3383856" type="audio/mpeg"/>
-      <pubDate>Wed, 01 Jul 2026 09:42:30 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI、汽车与机器人：智能执行与安全控制的融合前沿</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门领域，精选出七条最值得关注的资讯。从AI如何赋能控制系统、提升自动驾驶安全性，到机器人灵巧操作的最新进展，再到电动汽车底层硬件技术的突破，每一条都和我们的研发工作息息相关。话不多说，让我们立刻进入今天的早报时间。
@@ -1133,6 +1097,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260716-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260716-am.mp3" length="3579408" type="audio/mpeg"/>
       <pubDate>Wed, 15 Jul 2026 22:35:09 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI、汽车智能化与机器人：前沿技术如何赋能EPS系统</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三个热门方向，为大家精选出七条最有价值的资讯。这些资讯涵盖了AI控制、芯片技术、机器人执行器等多个关键领域，希望能给您的日常工作带来新的启发。
+
+1. Change-Aware Self-Adaptive AI-Aided Kalman Filters With Neural Change Point Detection（来源：arXiv eess.SY 控制系统）
+   应用分析：完全可以。EPS系统对电机状态估计的精度和鲁棒性要求极高，例如无传感器FOC控制。我们可以将CASA-KalmanNet框架应用于EPS电机控制中的无传感器观测器，或者用于提升有传感器控制中的状态估计精度。具体来说，利用CPDNet监测电机模型参数（如电阻、电感）的变化、负载扰动，或传感器信号异常，并在线调整卡尔曼滤波器的增益或模型参数，以适应这些变化。这有助于提高转矩脉动抑制、弱磁控制等策略的鲁棒性。提升状态估计的鲁棒性是解决EPS系统性能与鲁棒性提升的关键挑战之一，非常值得投入，有望在降低对高精度传感器依赖的同时，保持甚至提升系统性能，并增强故障诊断与预测性维护的能力。
+   https://arxiv.org/abs/2607.13387
+
+2. Learning Safe Agent Behaviour from Human Preferences and Justifications via World Models（来源：arXiv cs.AI）
+   应用分析：可以，且非常重要。在EPS助力策略和手感调校中，安全性是首要考虑。特别是向线控转向演进时，系统复杂性增加，AI参与决策的可能性提高，如何保证AI决策的安全性是核心难题。我们可以将DROPJ方法应用于EPS助力策略的自动调校和验证。首先，从实际驾驶数据或专家操作中构建EPS系统的“世界模型”（即一个仿真器）。然后，专家工程师在这个仿真器中进行操作，并对不同助力表现（如回正手感、阻尼感、路感还原）给出偏好及理由。这些数据用于训练一个奖励模型，指导AI生成更安全、更符合人类驾驶习惯的助力策略。对于故障诊断和降级模式，也可以通过专家对不同故障场景下的降级表现进行偏好标注，来训练AI选择最安全的降级策略。这提供了一个系统性的框架将人类安全知识和经验融入AI控制策略中，降低了AI在安全关键领域应用的技术风险，非常值得投入。
+   https://arxiv.org/abs/2607.13172
+
+3. Design and Characterization of a Limb Encircling Actuator（来源：arXiv cs.RO）
+   应用分析：LEA的设计理念和部分技术细节（如径向轴承布局）对EPS电机和减速器设计有借鉴意义。其高转矩密度特性是EPS电机追求的方向。我们可以研究LEA的径向轴承布局如何实现轻量化和成本优势，并评估其在EPS电机中的可行性，例如，是否能减少电机轴向长度，或改善NVH性能。虽然EPS电机通常是圆柱形，但LEA的环绕式结构在某些特殊的EPS布局（如R-EPS或未来更紧凑的线控转向执行器）中可能启发新的电机集成方案。其1.2公斤质量下达到17.5牛米连续转矩和51牛米峰值转矩的性能指标，为我们PMSM电机选型提供了参考。值得关注和投入研究，特别是在线控转向这种对空间、重量和性能要求更高的未来趋势下，这种创新执行器设计思路可能会带来突破。
+   https://arxiv.org/abs/2607.13337
+
+4. How Nidec Is Rethinking Gear Design for Humanoid and Mobile Robots（来源：EE Times）
+   应用分析：Nidec在机器人齿轮设计上的突破，可以直接借鉴到EPS减速器的设计中。我们可以研究Nidec如何平衡齿轮箱的零回程间隙、轻量化和集成度。例如，了解他们采用的齿轮类型（如谐波齿轮、行星齿轮的改进型）、材料选择、润滑方案以及如何实现与电机的紧密集成。这些技术可能有助于我们开发出更紧凑、更安静、手感更好的EPS减速器，减少转向系统的回程间隙和振动，提升NVH性能，并为线控转向系统提供更优的机械执行方案。齿轮箱设计是EPS机械性能提升的关键，Nidec作为行业领导者，其在机器人领域的创新技术往往具有很强的通用性，非常值得投入研究。
+   https://www.eetimes.com/how-nidec-is-rethinking-gear-design-for-humanoid-and-mobile-robots/
+
+5. SPINE: Bridging the Cyber-Physical Gap with Agentic AI（来源：arXiv cs.AI）
+   应用分析：SPINE框架的核心理念——利用AI智能体进行系统性诊断、修复和验证，可以直接迁移到EPS系统的标定、测试和故障诊断流程中。我们可以借鉴SPINE的“配置文件构建器”来自动收集EPS系统的硬件配置、软件版本、传感器数据等信息，并建立特定车辆型号或配置的“上下文”。然后，利用“调试器”智能体来执行自动化的助力曲线调校、阻尼/回正/摩擦补偿参数优化、NVH测试与分析。当系统性能不达标时，智能体可以自动诊断问题、提出修复方案（例如调整某个控制参数或建议硬件检查），并通过MIL/SIL/HIL或台架测试进行验证，直到达到目标性能。这能显著提高标定效率，并减少对经验丰富的标定工程师的依赖。自动化标定和诊断是提升EPS研发效率、降低成本、缩短开发周期的重要方向，非常值得投入。
+   https://arxiv.org/abs/2607.13049
+
+6. Bosch begins silicon carbide sample production at Roseville, its first US chip fab（来源：Charged EVs）
+   应用分析：SiC芯片已在电动汽车主逆变器中广泛应用，在EPS功率级中也有巨大的应用潜力。我们可以考虑在EPS控制器功率级中采用SiC MOSFET或SiC肖特基二极管。SiC器件能显著提高功率级的开关频率和效率，从而减小电感和电容的体积，降低控制器整体尺寸和重量，并减少热损耗。高开关频率还能改善电机电流波形，降低转矩脉动和NVH。博世的量产将有助于降低SiC器件的成本和提高供货稳定性，使EPS系统采用SiC成为更具吸引力的选择。SiC是提升EPS系统性能和紧凑性的关键技术，我们应该积极评估并导入SiC器件，优化功率级设计，提升EPS产品的竞争力，非常值得投入。这与我们关注的“芯片（MCU/功率器件）动态”高度契合。
+   https://chargedevs.com/newswire/bosch-begins-silicon-carbide-sample-production-at-roseville-its-first-us-chip-fab/
+
+7. Energy Fuels to acquire rare earth magnet maker VAC for $1.9 billion（来源：Charged EVs）
+   应用分析：这项交易对EPS电机选型和供应链管理具有直接影响。我们可以持续关注Energy Fuels与VAC整合后，其稀土永磁体的成本、性能和供货稳定性变化。在PMSM电机选型时，除了关注转矩密度、效率、NVH等技术指标，还需要将磁体材料的供应链风险和成本纳入考量。如果整合后的“矿到磁体”平台能够提供更具竞争力的产品，我们可以将其纳入供应商考察范围，甚至探索定制化磁体方案，以优化电机设计，例如，在保证性能的前提下，通过调整磁体材料来降低成本或提高耐温性能。这项动态值得我们持续关注，它对EPS电机的长期竞争力至关重要，有助于我们进行更具前瞻性的电机选型和供应商策略规划。
+   https://chargedevs.com/newswire/energy-fuels-to-acquire-rare-earth-magnet-maker-vac-for-1-9-billion/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260716-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260716-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260716-pm.mp3" length="4227264" type="audio/mpeg"/>
+      <pubDate>Thu, 16 Jul 2026 09:43:51 +0000</pubDate>
     </item>
   </channel>
 </rss>
