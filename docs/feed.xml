@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 18 Jul 2026 09:43:17 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 22:28:58 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾与机器人融合：EPS研发工程师的AI前沿洞察</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们聚焦AI前沿、汽车智能化和机器人三大领域，从海量信息中精选出七条最值得关注的重磅资讯。我们将一起深入探讨这些技术对我们汽车电动助力转向，也就是EPS产品研发的潜在影响和应用价值。话不多说，让我们立刻进入今天的早报时间！
-
-1. PACE: A Neuro-Symbolic Framework for Plausible and Actionable Counterfactual Explanations（来源：arXiv cs.AI）
-   应用分析：这个框架对我们EPS研发非常有用，且值得深入研究。我们可以将PACE应用于EPS故障诊断系统中，为AI模型（比如预测电机可能出现的转矩脉动异常、传感器漂移等）的判断提供反事实解释。例如，当AI预测某个电机可能在未来几百小时内出现异常时，PACE可以解释“如果电机绕组温度降低五摄氏度，或者电流采样精度提高零点一百分比，则故障预测会改变”，并指出这些干预措施在工程上是否可行。这能帮助我们的工程师理解AI的决策逻辑，并制定有针对性的维护或设计改进方案。尤其是在线控转向（Steer-by-Wire）等更复杂的系统演进中，AI将扮演更关键的角色，其决策透明度和可解释性是功能安全认证不可或缺的一环。早期探索这类技术，有助于我们建立未来的工程标准和实践。
-   https://arxiv.org/abs/2607.01306
-
-2. Procedural Memory Distillation: Online Reflection for Self-Improving Language Models（来源：arXiv cs.AI）
-   应用分析：这项技术潜力巨大，非常值得我们投入。我们可以将PMD应用于EPS的助力策略或电机控制参数的在线自适应调整。想象一下，在车辆实际运行中，一个RL代理可以根据驾驶员输入、路面反馈和EPS电机状态，动态调整助力曲线或FOC控制器的PI参数。PMD能让RL代理从历史的成功和失败经验中学习，例如“在高速弯道时，某种助力参数组合能提供更好的手感和回正力矩，而另一种则会导致抖动”，并将这些“程序记忆”固化到模型中，避免重复犯错，实现控制策略的持续优化，同时在推理时保持模型轻量化。这直接对应了我们“用AI/数据驱动方法改进控制、标定效率”和“快速转成可落地的EPS工程方案”的需求，能极大减少人工标定工作量，提高控制策略的适应性和性能。
-   https://arxiv.org/abs/2607.01480
-
-3. BIFROST: Bridging Invariant Feature Representation for Observation-space Sim2Real Transfer（来源：arXiv cs.RO）
-   应用分析：这项技术对提升我们开发效率有直接帮助，非常值得投入。我们可以将BIFROST应用于EPS电机控制策略（比如转矩脉动抑制、无传感器控制）的Sim2Real迁移。具体来说，我们可以在Simulink或MATLAB仿真环境中训练基于强化学习或神经网络的控制策略。然后，利用BIFROST学习仿真数据和少量真实台架测试数据之间的不变特征表示，从而将仿真训练好的策略零样本迁移到实际EPS台架或整车。例如，它可以学习电机电流、转速、转矩等传感器数据在仿真与真实世界中的“视觉”差异，并找到其内在的物理一致性，使得在仿真中学习到的弱磁控制策略能直接在真实电机上表现良好。Sim2Real是当前将AI和复杂控制算法从理论推向实际工程应用的最大瓶颈之一，解决这个瓶颈能极大加速EPS和线控转向的迭代开发，降低测试成本，提高产品竞争力。
-   https://arxiv.org/abs/2607.01410
-
-4. Multi-Rate Nonlinear Model Predictive Control for Wall-Supported Bipedal Locomotion of Quadrupedal Robots（来源：arXiv cs.RO）
-   应用分析：这项技术能用，但需要较高的技术储备和工程转化能力。我们可以借鉴MR-NMPC框架，优化EPS电机的FOC矢量控制或弱磁控制策略。例如，针对EPS电机在不同车速、转向角速度下对转矩响应、NVH和效率的综合需求，可以构建一个NMPC控制器。高层NMPC负责根据车辆状态和驾驶员输入，规划电机参考转矩和最佳运行区域；低层则采用更快速率的NMPC或FOC控制器，精确执行转矩指令并抑制转矩脉动。壁面辅助的理念可以类比为EPS在极端工况（如故障降级）下，如何利用系统冗余或限制输出以确保基本安全功能。虽然NMPC计算复杂度高，在现有量产EPS中直接应用挑战大，但作为中长期的高级控制策略储备，尤其在未来线控转向（Steer-by-Wire）中，NMPC有望成为核心控制算法，解决更复杂的动力学和冗余控制问题，因此值得投入研究。
-   https://arxiv.org/abs/2607.01574
-
-5. Robust and Explainable 3D Mode Shape Recognition Using Region-Aware Graph Neural Networks（来源：arXiv eess.SY 控制系统）
-   应用分析：这项技术非常实用，且能直接应用。我们可以将此方法引入EPS电机的NVH分析和优化流程。在电机设计阶段，利用图神经网络对不同电机结构（例如定转子槽配合、绕组分布）的有限元模型进行模态分析，识别潜在的振动模式。在控制策略开发阶段，结合图神经网络分析电机在不同FOC控制参数（例如电流谐波注入）下的振动响应。通过这种方法，我们可以更鲁棒、更精准地识别导致EPS系统异响或抖动的振型，并据此优化电机结构或调整控制参数，例如调整FOC控制器的电流环带宽或加入特定频率的谐波抑制。NVH问题在汽车行业是“老大难”，传统的模态分析依赖专家经验且鲁棒性差。引入图神经网络这种数据驱动且结合领域知识的方法，能显著提升NVH分析的效率和准确性，直接关系到产品质量和用户体验，具有很高的投资回报率，非常值得投入。
-   https://arxiv.org/abs/2607.01522
-
-6. CommonRoad-Game: A Human-in-the-Loop Simulation Framework for Autonomous Driving（来源：arXiv cs.RO）
-   应用分析：这个框架能用，并可作为我们现有HIL平台的补充或升级方向，值得投入。在线控转向（Steer-by-Wire）系统的开发中，我们可以利用CommonRoad-Game构建HIL仿真测试平台。我们可以将线控转向的控制器（无论是硬件还是软件在环）集成到该框架中，让测试驾驶员在模拟环境中体验不同运动规划算法下的转向手感和响应。例如，在测试自动泊车或车道保持功能时，驾驶员可以随时接管，评估系统在紧急情况下的表现，并分析驾驶员的接管行为和主观感受。其轻量化特性也方便我们进行快速迭代和初期概念验证。HIL和整车标定是线控转向开发和验证的关键环节，一个高效、灵活的人在环仿真框架能显著缩短开发周期，提高测试覆盖率和安全性，尤其对“线控转向的架构、冗余与功能安全设计”的验证至关重要。
-   https://arxiv.org/abs/2607.01382
-
-7. Koopman operator theory: fundamentals, control, and applications（来源：arXiv eess.SY 控制系统）
-   应用分析：Koopman算子理论能用，但属于前沿控制理论的应用，需要一定的研究投入。我们可以将其应用于EPS系统的建模和高级控制。例如，可以利用实际运行数据（比如电机电流、转速、转矩、转向角、转向力矩）构建EPS系统的Koopman线性代理模型。基于这个线性模型，我们可以设计更高效的模型预测控制器（MPC）或LQR控制器，以优化助力手感、抑制转矩脉动，并实现更精确的无传感器控制。尤其是在线控转向中，系统动力学更加复杂，Koopman模型可以简化控制器设计，同时保持对非线性特性的良好捕捉。这项技术值得投入，作为前瞻性研究和高级控制策略的储备。它能为解决“电机控制策略的性能与鲁棒性提升”提供新的数学工具和视角，尤其是在处理高阶非线性、时变参数等挑战时，具有独特的优势。
-   https://arxiv.org/abs/2607.01819</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260704-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260704-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260704-am.mp3" length="4719024" type="audio/mpeg"/>
-      <pubDate>Fri, 03 Jul 2026 22:39:46 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI与智能出行：从模型证明到GaN驱动的深度洞察</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是大家的老朋友，你们的技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人技术这三大热点方向，为您精选了七条重磅资讯。从AI大模型的可验证性突破，到机器人电机控制与GaN功率器件的融合，再到自动驾驶的未来愿景，以及半导体供应链的策略考量和新能源车市场的最新脉动，内容非常丰富。希望今天的分享能为您的研发工作带来一些新的启发和思考。
@@ -1133,6 +1097,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260718-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260718-pm.mp3" length="2901600" type="audio/mpeg"/>
       <pubDate>Sat, 18 Jul 2026 09:43:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI赋能转向，从可解释控制到多智能体协同：EPS工程师的今日必读</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大方向，为您精选了七条重磅资讯。这些内容不仅涵盖了AI在闭环控制、强化学习、边缘推理等方面的最新突破，更将深入探讨它们如何赋能我们的汽车电动助力转向，也就是EPS系统，以及线控转向的未来发展。让我们一起看看，这些前沿技术将如何改变我们的工作，带来哪些新的机遇与挑战。
+
+1. Interpretable Language Model for Closed-Loop Type 1 Diabetes Control（来源：arXiv cs.AI）
+   应用分析：这种思路可以直接用于EPS的AI辅助控制策略验证和故障诊断。例如，当AI控制器做出非常规助力调整时，LLM可以根据其训练知识和当前传感器数据，生成人类可理解的解释，说明为何在特定路况或驾驶员行为下做出此决策。这能大大加速AI控制策略的信任建立和功能安全认证过程，尤其是在线控转向这种高度依赖软件的未来架构中，可解释性将是核心竞争力，因此非常值得投入研究和概念验证。
+   https://arxiv.org/abs/2607.14126
+
+2. RENEW: Towards Learning World Models and Repairing Model Exploitation from Preferences（来源：arXiv cs.LG）
+   应用分析：这个框架非常能用。我们可以在MIL、SIL或HIL环境中构建EPS的世界模型，模拟不同工况下的电机行为和助力输出。当模型在某些极端或不常见工况下出现“模型利用”导致的错误预测时，可以引入工程师（人类专家）对模拟轨迹的偏好反馈，例如“这个回正力矩太弱了”，来指导世界模型修正其动力学预测，从而优化基于模型预测控制或强化学习的助力策略。这能减少对大量真实数据采集的依赖，提升控制策略的开发和迭代效率，投入价值很高。
+   https://arxiv.org/abs/2607.14180
+
+3. Intelligent Three Level Learning Architecture for Autonomous UAV Swarms in Search and Rescue（来源：arXiv cs.AI）
+   应用分析：我们可以借鉴其分层理念。在未来的线控转向架构中，底层可以是单个电机控制器，负责FOC等基本控制；中间层可以是转向子系统控制器，负责左右转向电机的协调、助力曲线的执行；顶层可以是整车域控制器，负责根据驾驶员意图、路况等进行高层策略决策和自适应调整。多智能体强化学习可以用于协调左右转向电机在故障降级模式下的协同工作。这种架构为线控转向等复杂底盘系统的功能安全、冗余设计和分布式控制提供了前沿思路，值得投入研究和概念验证。
+   https://arxiv.org/abs/2607.14093
+
+4. Low-Latency Relay Selection in NR-V2X Vehicular Communications via Graph Isomorphism Networks with Edge Features（来源：arXiv cs.LG）
+   应用分析：这种GNN优化思路可以间接应用于线控转向的通信冗余和路由选择。在多冗余线控转向系统中，各节点之间的通信链路需要高度可靠。当某些链路出现干扰或故障时，如何实时、低延迟地选择最优的备用路径或中继节点，确保转向指令的及时传递，是关键挑战。GNN模型可以学习不同通信环境下的链路状态和潜在路由，预测最优的冗余路径。这能为未来线控转向系统提供更智能、更鲁棒的通信保障，从而提升整体功能安全等级，值得在概念层面进行评估和探索。
+   https://arxiv.org/abs/2607.14176
+
+5. This Graduate Student Equips NASA’s Robots With Assembly Skills（来源：IEEE Spectrum）
+   应用分析：机器人高精度组装所需的力控、位置控算法，以及对电机选型、控制策略（如FOC、转矩脉动抑制）的极致要求，可以直接迁移到EPS中。例如，在助力策略调校中，我们可以借鉴机器人关节控制的精细度，实现更细腻、更符合驾驶员意图的手感。在线控转向中，精确的轮端角度控制和路感还原，尤其是在复杂工况下的抖动抑制，都可以从这类机器人研究中获得灵感和具体算法。这是典型的跨领域技术迁移，投入价值非常高。
+   https://spectrum.ieee.org/graduate-student-nasas-robots-assembly
+
+6. Understanding MPPT Algorithms, Hybrid-LCC Systems with IGCTs, SiC Bidirectional Switches: Electronics Week Insights（来源：Power Electronics News）
+   应用分析：SiC双向开关可以用于EPS的功率级（逆变器）设计，实现更高的功率密度和更小的散热需求。特别是在未来的线控转向中，可能需要更紧凑、更高效的电机驱动单元。同时，SiC器件的高开关频率有助于降低电机电流纹波，从而改善NVH性能和转矩脉动，这正是我现在最想解决的问题之一。因此，我们应该持续投入和关注SiC器件的最新进展，评估其在EPS功率级中的应用潜力，包括与电机控制策略的协同优化，以充分发挥其优势。
+   https://www.powerelectronicsnews.com/understanding-mppt-algorithms-hybrid-lcc-systems-with-igcts-sic-bidirectional-switches-electronics-week-insights/
+
+7. Enhancing Small Language Models Reasoning through Knowledge Graph Grounding（来源：arXiv cs.AI）
+   应用分析：我们可以将EPS系统的故障模式、诊断规则、控制参数之间的逻辑关系构建成知识图谱。然后，利用轻量级的SLM作为智能体，结合这个知识图谱，在车端或ECU内部进行实时的故障诊断。例如，当传感器数据出现异常时，SLM可以根据知识图谱进行多跳推理，识别出潜在的故障根源，并给出可解释的诊断结果。这也能辅助自动标定，通过知识图谱指导SLM根据车辆状态和驾驶员偏好，推荐或调整控制参数。SLM结合知识图谱的方案，有望在不增加过多硬件成本和算力需求的前提下，为EPS引入更智能的诊断和自适应能力，值得投入概念验证和技术预研。
+   https://arxiv.org/abs/2607.14149</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260719-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260719-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260719-am.mp3" length="3508272" type="audio/mpeg"/>
+      <pubDate>Sat, 18 Jul 2026 22:28:58 +0000</pubDate>
     </item>
   </channel>
 </rss>
