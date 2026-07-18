@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 17 Jul 2026 22:29:19 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 09:43:17 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 科技早报：AI Agent安全与汽车智驾前沿洞察</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人领域，为您精选出七条最值得关注的重磅资讯。从AI模型的可解释性与安全性，到自动驾驶的仿真测试与电池安全，再到机器人关节的紧凑控制，每一条都与我们的研发工作息息相关。话不多说，让我们马上进入今天的早报时间。
-
-1. PACE: A Neuro-Symbolic Framework for Plausible and Actionable Counterfactual Explanations（来源：arXiv cs.AI）
-   应用分析：在EPS故障诊断中，当AI系统给出某个诊断结果时，PACE可以帮助我们理解“为什么AI认为这是故障，如果某个参数略有不同，AI的判断会如何变化”，从而提升诊断的透明度和工程师的信任度。这对于AI辅助的电机参数辨识、异常检测等场景也很有价值，能帮助我们理解模型对哪些输入最敏感，并据此优化传感器布局或数据预处理。值得投入研究其在ISO 26262 ASIL D级别系统中的应用潜力，特别是在AI模型验证和可追溯性方面。
-   https://arxiv.org/abs/2607.01306
-
-2. CommonRoad-Game: A Human-in-the-Loop Simulation Framework for Autonomous Driving（来源：arXiv cs.RO）
-   应用分析：对于线控转向系统的HIL/SIL验证，我们可以利用CommonRoad-Game来模拟人类驾驶员在不同助力曲线、手感调校下的实际操作反馈，评估线控转向在紧急避障、车道保持等场景下的规划与控制性能。这能帮助我们更早地发现潜在的人机共驾问题，优化助力策略，甚至可以作为自动标定系统的一部分，收集人类驾驶偏好数据。投入价值高，可作为现有HIL平台的补充，提升测试效率和场景覆盖度。
-   https://arxiv.org/abs/2607.01382
-
-3. Robust and Explainable 3D Mode Shape Recognition Using Region-Aware Graph Neural Networks（来源：arXiv eess.SY 控制系统）
-   应用分析：在EPS电机选型和控制策略开发中，我们关注电机的转矩脉动、齿槽转矩等导致的NVH问题。该方法可用于分析电机本体、支架、齿轮箱等部件的振型，识别噪声源。通过将电机结构及其与转向柱的连接关系抽象为图，用AI进行振型识别，可以帮助我们快速定位NVH问题，并指导电机结构优化、FOC控制参数调优（如注入高频抑制谐波）。这对于提升电机控制策略的鲁棒性，减少NVH调校周期有实际价值，值得投入研究。
-   https://arxiv.org/abs/2607.01522
-
-4. Tesla driver faces manslaughter charges over Texas crash that killed a woman inside her home（来源：The Verge）
-   应用分析：这直接促使我们重新审视EPS向线控转向演进过程中的功能安全设计。我们需要确保在L3及以上自动驾驶功能激活时，EPS系统具备极致的冗余和故障降级能力，例如双路/多路供电、双重传感器、异构计算单元等。同时，需要明确在自动驾驶故障时的驾驶员接管边界和责任划分，这会影响线控转向的故障安全状态设计。虽然是负面新闻，但对功能安全设计和法规遵从性有极强的警示和指导意义，必须高度关注。
-   https://www.theverge.com/transportation/961163/tesla-fsd-katy-tx-manslaughter-charges
-
-5. Webinar: Improving EV safety with new active &amp; passive battery isolation strategies（来源：Charged EVs）
-   应用分析：虽然直接与EPS电机控制关联不大，但电池系统是电动汽车的“心脏”，其安全直接影响整车功能安全。作为EPS工程师，我们需了解整车电气架构和高压安全防护，特别是电池隔离策略如何应对短路、碰撞等极端情况。这有助于我们设计EPS系统的供电冗余和高压线束防护，确保EPS在电池系统发生故障时能安全降级或维持基本功能，避免次生灾害。值得了解行业最佳实践，并在EPS系统架构设计时考虑与整车高压安全系统的协同。
-   https://chargedevs.com/whitepapers/webinar-improving-ev-safety-with-new-active-passive-battery-isolation-strategies/
-
-6. Neuro-Symbolic Safety Guidance for Vision-Language-Action Models via Constrained Flow Matching（来源：arXiv cs.RO）
-   应用分析：该方法与我们在EPS领域探索AI控制的思路高度契合，即如何将AI的性能优势与传统控制的鲁棒性、安全性结合。在线控转向的未来发展中，如果采用VLA模型进行高层决策或运动规划，这种神经符号安全指导可以确保规划出的转向轨迹在执行前就满足碰撞避免、车道保持等安全约束。这对于我们设计AI辅助的助力策略或线控转向轨迹规划器时，提供了一个融合安全约束的框架。非常值得深入研究，将其思想迁移到EPS的AI控制策略安全验证和实时修正中。
-   https://arxiv.org/abs/2607.01378
-
-7. Smart Power in Compact Spaces: Rethinking Motor Control for Robotics（来源：Power Electronics News）
-   应用分析：EPS系统对尺寸、重量和成本都有严格要求，尤其是在C-EPS和DP-EPS等紧凑型结构中。该研究提出的“智能电源在紧凑空间中的电机控制”理念，与我们优化EPS控制器软硬件、电机集成度、热管理方案的目标完全一致。我们可以借鉴机器人关节执行器中高集成度、高效散热的设计思路，结合PMSM电机的FOC控制，探索更紧凑、更高功率密度的EPS电机和控制器一体化方案。这对于提升EPS产品的竞争力，特别是线控转向对空间和性能的更高要求，具有直接的指导意义和投入价值。
-   https://www.powerelectronicsnews.com/smart-power-in-compact-spaces-rethinking-motor-control-for-robotics/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260703-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260703-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260703-pm.mp3" length="3520224" type="audio/mpeg"/>
-      <pubDate>Fri, 03 Jul 2026 09:42:52 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 智驾与机器人融合：EPS研发工程师的AI前沿洞察</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们聚焦AI前沿、汽车智能化和机器人三大领域，从海量信息中精选出七条最值得关注的重磅资讯。我们将一起深入探讨这些技术对我们汽车电动助力转向，也就是EPS产品研发的潜在影响和应用价值。话不多说，让我们立刻进入今天的早报时间！
@@ -1133,6 +1097,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260718-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260718-am.mp3" length="4405536" type="audio/mpeg"/>
       <pubDate>Fri, 17 Jul 2026 22:29:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI赋能转向，机器人与材料科技新趋势</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最具洞察力的资讯，帮助大家把握技术脉搏，思考如何将这些前沿研究落地到我们日常的研发工作中。
+
+1. Intelligent Three Level Learning Architecture for Autonomous UAV Swarms in Search and Rescue（来源：arXiv cs.AI）
+   应用分析：作为汽车EPS研发工程师，我们的系统未来向线控转向演进时，需要处理更复杂的环境感知、路径规划和车辆协同。这套分层架构可以启发我们设计更鲁棒的控制系统：底层反射机制可以对应快速响应的电机控制和故障降级策略；中间层的技能学习，比如强化学习，可用于优化助力曲线、阻尼控制等“手感”调校；而高层推理和数字孪生则能用于复杂的故障诊断、预测性维护，甚至与车队管理系统进行战略决策，实现自适应的转向性能。我认为这项研究非常值得我们投入，它是线控转向控制系统架构演进的重要方向，可以显著提升系统在复杂工况下的性能、鲁棒性和安全性。
+   https://arxiv.org/abs/2607.14093
+
+2. Interpretable Language Model for Closed-Loop Type 1 Diabetes Control（来源：arXiv cs.AI）
+   应用分析：在EPS系统中，我们可以探索使用类似LLM-T1D的架构来提升高级助力策略或故障诊断的可解释性。例如，当系统检测到异常并切换到降级模式时，一个可解释的AI控制器不仅能做出正确的决策，还能以清晰的语言“解释”为什么做出这个决策，比如“由于电机温度过高，为防止损坏，系统已将最大助力输出限制至百分之五十”。这对于驾驶员信任、故障排除和ISO 26262功能安全认证都至关重要。这项投入价值很高，可解释性是AI落地汽车控制的关键一步。
+   https://arxiv.org/abs/2607.14126
+
+3. IMEX Interaction-Based Model Explanation（来源：arXiv cs.AI）
+   应用分析：在EPS电机控制策略中，我们面临转矩脉动、噪声（NVH）、温漂和参数辨识等挑战。如果采用AI模型，比如神经网络，来优化FOC参数、进行无传感器控制的状态观测或故障诊断，IMEX可以帮助我们理解哪些输入，例如电流、位置、温度，以及它们的组合对控制输出影响最大。这能帮助我们调试AI模型，确保其在各种工况下的鲁棒性，并辅助功能安全分析，验证模型的决策逻辑。这项技术投入价值高，是解决AI在安全关键系统“黑盒”问题的重要工具。
+   https://arxiv.org/abs/2607.14096
+
+4. Nio chip unit showcases multiple chips at WAIC 2026 in Shanghai（来源：CnEVPost）
+   应用分析：蔚来自研芯片的趋势提示我们，EPS控制器未来可能需要更紧密地与整车中央计算平台集成，或者自身集成更强大的AI推理能力。对于线控转向，这意味着转向域控制器需要处理更复杂的感知数据和决策算法，可能需要定制化的MCU或AI加速器。我们应关注这些芯片的算力、功耗、功能安全等级，比如ASIL-D，以及与车规级操作系统的兼容性。与这些自研芯片团队合作，将EPS控制算法集成到更高效的硬件平台，可以提升系统性能并降低成本。这是一个值得持续关注的趋势，并需要我们提前规划控制器软硬件架构。
+   https://cnevpost.com/2026/07/17/nio-shenji-showcases-chips-waic-2026/
+
+5. Evolution Metals signs supply deal for non-China NdPr metal used in EV motor magnets（来源：Charged EVs）
+   应用分析：作为EPS电机选型的主要负责人，这项新闻直接提醒我们关注稀土材料的供应链多元化。与供应商合作时，我们需要更深入地了解其稀土来源，评估其供应链的稳定性和可持续性。同时，这也促使我们继续探索减少稀土用量或采用非稀土永磁电机的方案，例如通过优化电机结构设计、改进FOC控制算法来提升效率，或者研究成本更低的铁氧体永磁电机和感应电机在EPS中的应用潜力，以降低对单一稀土来源的依赖。我认为这非常值得投入资源进行供应链风险评估和替代方案研究。
+   https://chargedevs.com/newswire/evolution-metals-signs-supply-deal-for-non-china-ndpr-metal-used-in-ev-motor-magnets/
+
+6. Weave Robotics launches Isaac, its first mobile humanoid robot（来源：The Robot Report）
+   应用分析：Isaac这类人形机器人的关节执行器通常采用高性能永磁同步电机，并辅以先进的力矩控制、位置控制和顺应性控制策略。我们可以从中学习其在复杂负载变化、高精度定位、低NVH以及能量效率方面的设计理念和控制算法。例如，人形机器人中的高精度无传感器或冗余传感方案，以及对电机转矩脉动和抖动的抑制技术，可以直接迁移到EPS的电机控制上，以提升手感、降低成本和提高安全性。我认为这项投入价值高，是我们的“交叉点”方向，我们应积极关注其技术细节，并尝试在仿真或实验台上复现其核心控制思想。
+   https://www.therobotreport.com/weave-robotics-launches-isaac-first-mobile-humanoid-robot/
+
+7. This Graduate Student Equips NASA’s Robots With Assembly Skills（来源：IEEE Spectrum）
+   应用分析：这种用于高精度装配的机器人算法，其核心在于对执行器的精细控制和任务规划。我们可以研究该算法如何处理不确定性、如何实现高精度的力/位置混合控制，以及如何进行故障检测和自适应调整。这些技术可以借鉴到线控转向的冗余执行器协调控制、高精度路径跟踪以及故障降级策略中。例如，在转向执行器发生故障时，如何通过算法协调其他执行器或切换到备用模式，以确保车辆仍能安全行驶。我认为这项投入价值高，尤其对于线控转向的功能安全和鲁棒性设计具有直接指导意义。
+   https://spectrum.ieee.org/graduate-student-nasas-robots-assembly</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260718-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260718-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260718-pm.mp3" length="2901600" type="audio/mpeg"/>
+      <pubDate>Sat, 18 Jul 2026 09:43:17 +0000</pubDate>
     </item>
   </channel>
 </rss>
