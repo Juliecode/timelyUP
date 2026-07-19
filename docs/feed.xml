@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 18 Jul 2026 22:28:58 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 09:42:33 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI与智能出行：从模型证明到GaN驱动的深度洞察</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是大家的老朋友，你们的技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人技术这三大热点方向，为您精选了七条重磅资讯。从AI大模型的可验证性突破，到机器人电机控制与GaN功率器件的融合，再到自动驾驶的未来愿景，以及半导体供应链的策略考量和新能源车市场的最新脉动，内容非常丰富。希望今天的分享能为您的研发工作带来一些新的启发和思考。
-
-1. Leanstral 1.5: Proof abundance for all（来源：Hacker News）
-   应用分析：这款模型在“生成证明”方面的能力，对我们EPS研发来说，有潜力在控制算法验证、功能安全文档辅助和代码审查方面发挥作用。比如，我们可以尝试利用它生成FOC或MPC控制算法的形式化证明，辅助MIL/SIL/HIL阶段的验证；或者在ISO 26262流程中，辅助生成安全机制的逻辑验证报告。当然，目前还处于概念验证阶段，需要小范围投入进行探索，但如果能在这些高度依赖验证和证明的环节显著提高效率和质量，那将是非常值得投入的方向。
-   https://mistral.ai/news/leanstral-1-5/
-
-2. Anthropic wants to develop its own drugs（来源：The Verge）
-   应用分析：虽然Anthropic的Claude Science是面向药物研发，但其核心理念——整合零散工具和数据集，利用AI进行复杂分析和探索——与我们解决EPS电机控制问题的思路不谋而合。我们可以借鉴这种“AI工作台”的模式，构建一个EPS专用的AI平台，整合电机模型、控制器参数、测试数据、整车手感反馈等，利用AI进行多目标优化，实现助力曲线、阻尼补偿等参数的自动标定。此外，在故障诊断和预测性维护方面，AI分析历史运行数据和传感器数据的能力，也能帮助我们快速识别电机异常或控制器故障模式。这是一个值得我们投入研究和概念验证的未来方向。
-   https://www.theverge.com/ai-artificial-intelligence/961311/anthropic-claude-science-ai-drug-development
-
-3. Agentic coding notes from Galapagos Island（来源：Hacker News）
-   应用分析：AI在编码中的智能体循环能力，对我们嵌入式C和MATLAB/Simulink开发来说，是非常有吸引力的。我们可以利用AI辅助生成嵌入式C代码的骨架、驱动程序，甚至根据Simulink模型自动生成部分代码。在代码审查环节，AI可以帮助我们识别潜在的bug、性能瓶颈或不符合MISRA C规范的地方，并给出重构建议。此外，自动生成单元测试和集成测试用例也能大大提高测试覆盖率。当然，在功能安全要求极高的汽车领域，AI生成的代码仍需严格的人工审核和验证，但作为提升研发效率和代码质量的强大工具，这是非常值得积极投入的方向。
-   https://danluu.com/ai-coding/#appendix-agentic-loops-and-writing-this-post
-
-4. Battery Energy Storage Systems, Motor Control for Robotics, GaN Half-Bridge Driver: Power Electronics Week Insights（来源：Power Electronics News）
-   应用分析：这绝对是我们EPS研发的重点投入方向。首先，我们可以深入研究机器人领域的高精度、高动态电机控制策略，结合无传感器控制、弱磁控制等，优化EPS的助力手感、响应速度和路感还原能力。其次，GaN半桥驱动器在EPS功率级中的应用潜力巨大，它能带来更高的开关频率、更低的损耗、更小的体积和更轻的重量，从而提升系统效率和NVH性能。同时，机器人领域在无传感器或冗余传感方案上的探索，也能为我们提升EPS的安全性并降低成本提供宝贵经验。这是我们现在和未来都极度值得投入的方向。
-   https://www.powerelectronicsnews.com/battery-energy-storage-systems-motor-control-for-robotics-gan-half-bridge-driver-power-electronics-week-insights/
-
-5. Quarterhill discusses transport modernization as U.S. marks 70 years of federal highways（来源：The Robot Report）
-   应用分析：这直接关系到我们EPS的未来发展方向。面对自动驾驶的浪潮，我们必须紧密结合其需求，重新审视线控转向系统的架构设计，充分考虑冗余、ISO 26262功能安全（ASIL D）以及网络安全等因素，确保在自动驾驶模式下的高可靠性。同时，我们需要预研与自动驾驶域控制器、车辆运动控制器之间的通信接口和协议，确保EPS系统能无缝接收控制指令并提供准确反馈。自动驾驶对转向精度和响应速度的更高要求，也促使我们必须持续优化电机控制策略，减少转矩脉动和抖动。这是一个必须长期、持续、高强度投入的战略方向。
-   https://www.therobotreport.com/quarterhill-discusses-transport-modernization-u-s-marks-70-years-federal-highways/
-
-6. Spain’s Semiconductor Landscape: Six Stories from a Growing Ecosystem（来源：EE Times）
-   应用分析：虽然这不是直接的技术开发，但半导体供应链的稳定性和技术演进直接关系到我们EPS产品的落地和竞争力。我们需要关注西班牙等欧洲国家在半导体领域的投资和技术突破，评估其作为潜在第二甚至第三供应商的可能性，以降低对单一地区或供应商的依赖，提升供应链韧性。同时，也要留意这些地区在特定半导体技术，比如SiC/GaN功率器件、车规级MCU、传感器芯片上的创新，为未来EPS控制器硬件升级提供备选方案。这方面值得我们投入关注和策略性研究，确保我们在硬件选型上有更多选择和更强的抗风险能力。
-   https://www.eetimes.com/spains-semiconductor-landscape-six-stories-from-a-growing-ecosystem/
-
-7. CPCA preliminary data shows China's NEV retail sales fell 7% in June（来源：CnEVPost）
-   应用分析：乘联会数据显示中国六月新能源乘用车零售销量环比下降百分之七，但渗透率仍高达百分之六十二点八。这个数据对我们EPS研发团队来说，是重要的市场信号。我们需要分析销量下降的原因，是季节性、政策调整还是市场饱和，并结合长期预测，来调整EPS新产品线的研发优先级和资源投入。例如，是继续投入高阶线控转向的研发，还是更侧重于优化现有EPS产品的成本和性能，以适应市场的短期波动。同时，在保证功能安全的前提下，寻求更经济的电机和控制器方案，以提升产品竞争力。市场数据是企业决策的重要输入，我们必须持续投入分析和关注。
-   https://cnevpost.com/2026/07/03/chinas-nev-retail-jun-cpca-preliminary-data/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260704-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260704-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260704-pm.mp3" length="3443760" type="audio/mpeg"/>
-      <pubDate>Sat, 04 Jul 2026 09:42:35 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI模型性能波动？开源AI新势力崛起！EPS工程师的今日科技早报</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报，我是你们的主播兼技术分析师。今天，我们将一起聚焦AI前沿、汽车智能化以及机器人三大领域，看看有哪些值得我们关注的重磅资讯。从AI模型的性能波动，到开源AI的崛起，再到机器人安全感知的新思路，以及汽车芯片制造的幕后故事，内容非常丰富。话不多说，我们马上进入今天的头条。
@@ -1133,6 +1097,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260719-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260719-am.mp3" length="3508272" type="audio/mpeg"/>
       <pubDate>Sat, 18 Jul 2026 22:28:58 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI突破凸优化，Kimi迎“K3时刻”，EPS工程师如何应对行业变革？</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师，老王。今天，我们为您精选了七条重磅资讯，覆盖了人工智能前沿、汽车智能化和机器人三大领域，希望能为您的研发工作带来新的启发。特别是对于咱们做汽车电动助力转向，也就是EPS的工程师来说，今天的每一条内容都值得咱们好好琢磨琢磨。那么，话不多说，我们马上进入今天的早报时间！
+
+1. GPT-5.6 used a prompt to close a 30-year gap in convex optimization（来源：Hacker News）
+   应用分析：理论上可以。我们EPS的电机控制策略，如FOC参数调优、MPC模型优化，以及助力曲线的生成，都涉及复杂的凸优化问题。可以尝试将现有优化问题描述为大模型可理解的提示词，让GPT-5.6这类模型辅助寻找新的优化解法或改进现有算法。例如，探索更优的弱磁控制曲线、转矩脉动抑制参数组合，甚至在无传感器控制中提升状态观测器的鲁棒性。这值得初期小规模投入研究。这不是直接的工程落地，而是前瞻性研究投入。可以先用公开可用的模型对一些已知的、有明确数学定义的优化问题进行初步探索，评估其解决实际工程问题的能力和效率。如果能从数学层面提供新的思路或更优解，哪怕是辅助性的，其潜在价值也巨大。
+   https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/
+
+2. The Kimi K3 Moment（来源：Hacker News）
+   应用分析：可以作为潜在的辅助工具。Kimi这类大模型在代码理解、文档总结、需求分析、故障诊断知识库构建等方面有应用潜力。例如，让它协助分析ISO 26262标准文档，提取关键安全目标；或者帮助我们理解电机控制算法的复杂代码逻辑，进行初步的静态分析；甚至基于历史故障数据，辅助进行故障模式分析和预测性维护方案的生成。这值得关注和尝试。考虑到其本土化优势，在处理中文技术文档、内部知识库方面可能表现更优。可以先进行小范围的概念验证，看能否有效提高研发效率。如果效果显著，可考虑将其整合到内部知识管理或辅助开发流程中。
+   https://stephen.bochinski.dev/blog/2026/07/18/the-kimi-k3-moment/
+
+3. NYC may require landlords and realtors to disclose the use of AI in listings（来源：Hacker News）
+   应用分析：这不是一个直接的技术应用，而是一个重要的风险管理和合规性考量。在将AI引入EPS控制策略（如AI辅助标定、神经网络观测器、强化学习控制）时，必须提前考虑AI模型的决策过程是否可解释、是否公平、是否存在安全隐患、以及如何满足功能安全标准的要求。我们需要建立更严格的AI模型验证和确认流程，确保其行为透明且可追溯。这方面必须投入。我们需要主动研究AI的可解释性（XAI）技术，例如LIME、SHAP等，并将其纳入AI控制算法的开发和验证流程。同时，与功能安全团队紧密合作，探索AI在ISO 26262框架下的认证路径，确保未来AI技术在EPS中的应用是合规且安全的。
+   https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties/
+
+4. Palm Garden AI develops Coherence Guard relational decision layer for human-facing robots（来源：The Robot Report）
+   应用分析：间接借鉴。Coherence Guard的核心理念——在复杂环境中实现鲁棒、安全的“关系”决策，与线控转向中EPS执行器如何理解驾驶员意图并提供恰当、平顺、安全的力反馈，有异曲同工之处。我们可以研究其在“关系决策”中使用的算法框架，例如如何处理不确定性、如何进行行为预测，并将其思想迁移到线控转向的人机接口设计中，以优化助力策略、阻尼回正特性，甚至实现更高级的驾驶员状态自适应调校。这值得中等投入研究。这不是直接引入产品，而是借鉴其背后的设计理念和控制思想。可以组织内部技术分享，研究相关论文和公开资料，探索其在机器人领域如何实现“软性”交互和决策，并评估这些思路在线控转向手感调校、冗余控制和故障降级策略中的潜在应用。尤其关注其如何处理安全性和鲁棒性，这与ISO 26262功能安全高度相关。
+   https://www.therobotreport.com/palm-garden-ai-develops-coherence-guard-relational-decision-layer-human-facing-robots/
+
+5. CALB in spotlight as GAC Aion S vehicles hit by widespread battery cell defects（来源：CnEVPost）
+   应用分析：这不是一个技术应用，而是一个重要的设计输入和风险规避。我们需要加强EPS系统对供电电源波动、瞬态跌落的鲁棒性设计，确保在电池出现轻微故障或性能衰减时，EPS仍能保持稳定工作或安全降级。在功能安全分析（如FMEA、FTA）中，应将动力电池的各类故障模式及其对EPS供电的影响作为关键输入，评估其风险并制定相应的缓解措施。同时，在EPS控制器硬件设计时，需要考虑电源管理和滤波，以应对可能出现的电源噪声。这方面必须投入。这直接关系到EPS系统的功能安全和产品质量。我们需要与整车厂、电池供应商保持密切沟通，了解电池的详细性能参数、故障模式和诊断接口，以便在EPS系统设计时充分考虑这些因素。加强电源管理模块设计、提升系统对电源波动的耐受性、完善故障诊断和降级策略，都是需要优先投入的方向。
+   https://cnevpost.com/2026/07/18/calb-in-spotlight-gac-aion-s-battery-cell-defects/
+
+6. China's battery tax shift is a strong push for automakers to make their own cells, CPCA's Cui says（来源：CnEVPost）
+   应用分析：这不是直接的技术应用，而是战略规划和合作模式调整的信号。我们需要密切关注车企在电池自研自产上的进展，理解其电池技术路线和集成策略。这可能要求EPS在功耗管理、接口标准化、与整车E/E架构的深度融合方面做得更好。例如，如果车企自研电池管理系统（BMS）更强大，EPS是否可以利用BMS提供更精细的电池状态信息，从而优化自身的功耗管理和性能输出？这值得战略层面投入。需要加强与头部车企的沟通，了解他们的中长期电池战略，并评估这对EPS产品路线图和技术发展方向的影响。在EPS系统设计中，应考虑未来更紧密的整车集成趋势，预留更多接口和灵活性，以适应车企垂直整合带来的变化。
+   https://cnevpost.com/2026/07/18/china-battery-tax-shift-push-automakers-make-own-cells/
+
+7. All the EVs that were discontinued or killed off in the U.S. this year（来源：TechCrunch）
+   应用分析：这是一个市场洞察和产品策略调整的考量。它提醒我们，在开发下一代EPS系统时，不仅要关注技术先进性，更要关注成本效益和市场接受度。例如，在电机选型时，除了追求高性能，也要平衡NVH和成本；在控制策略开发时，除了实现极致手感，也要考虑标定效率和维护成本。平台化、模块化设计，以及支持不同车型快速适配的软件定义能力，将变得更加重要。这值得在产品规划和研发方向上持续关注。我们需要定期进行市场分析，了解哪些车型正在崛起、哪些正在衰落，以及背后的原因。将这些市场信息反馈到EPS的产品定义和技术路线图中，确保我们的研发投入与市场需求保持一致，避免开发出不符合市场趋势的产品。
+   https://techcrunch.com/2026/07/18/all-the-evs-that-were-discontinued-or-killed-off-in-the-u-s-this-year/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260719-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260719-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260719-pm.mp3" length="3497040" type="audio/mpeg"/>
+      <pubDate>Sun, 19 Jul 2026 09:42:33 +0000</pubDate>
     </item>
   </channel>
 </rss>
