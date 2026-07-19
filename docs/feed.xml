@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 19 Jul 2026 09:42:33 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 22:31:13 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI模型性能波动？开源AI新势力崛起！EPS工程师的今日科技早报</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报，我是你们的主播兼技术分析师。今天，我们将一起聚焦AI前沿、汽车智能化以及机器人三大领域，看看有哪些值得我们关注的重磅资讯。从AI模型的性能波动，到开源AI的崛起，再到机器人安全感知的新思路，以及汽车芯片制造的幕后故事，内容非常丰富。话不多说，我们马上进入今天的头条。
-
-1. GPT-5.5 Codex reasoning-token clustering may be leading to degraded performance（来源：Hacker News）
-   应用分析：如果我们用类似模型（如Copilot）辅助代码生成、测试脚本编写、甚至初步的模型化设计，这种性能下降会直接影响工作效率和产出质量。需要警惕AI工具的“漂移”现象，不能盲目信任其输出，始终保持人工复核。对于关键的控制算法代码生成，目前仍需严格的验证流程，AI工具更多是作为提升效率的辅助，而非决策者。
-   https://github.com/openai/codex/issues/30364
-
-2. What is Mistral AI? Everything to know about the OpenAI competitor（来源：TechCrunch）
-   应用分析：Mistral的开源模型可以探索在本地部署，用于内部文档生成、代码审查建议、甚至特定场景下的故障诊断模型训练。相比闭源API，本地部署能更好地保护EPS相关的敏感数据，并可能降低长期使用成本。可以投入少量资源进行概念验证（PoC），比如用其模型对历史故障报告进行分类或生成初步的测试计划。
-   https://techcrunch.com/2026/07/04/what-is-mistral-ai-everything-to-know-about-the-openai-competitor/
-
-3. New Google commercial imagines a Declaration of Independence written with help from AI（来源：TechCrunch）
-   应用分析：这启发我们思考AI在EPS产品研发中，如何辅助生成复杂的技术文档、需求规格书、测试报告初稿，甚至功能安全分析报告（如HARA、FTA的初步框架）。通过AI快速整理和格式化信息，工程师可以专注于核心技术分析和决策，大幅提高文档工作效率。值得小范围尝试，例如用现有AI工具生成某模块的接口文档草稿。
-   https://techcrunch.com/2026/07/04/new-google-commercial-imagines-a-declaration-of-independence-written-with-help-from-ai/
-
-4. Context is king: How Avride uses cloud VLMs as a safety net for delivery robots（来源：The Robot Report）
-   应用分析：EPS系统虽然不像自动驾驶需要全局环境感知，但在线控转向演进中，对车辆内部环境（如驾驶员意图、手部姿态）和车辆状态的理解会越来越重要。VLMs的思路可以借鉴到对转向系统“意图”的理解和异常行为的判断上。例如，结合摄像头和传感器数据，利用VLM对驾驶员操作意图进行更精细的分析，或识别异常的路面反馈模式。这属于长期投入方向，可关注相关研究进展。
-   https://www.therobotreport.com/how-avride-uses-cloud-vlms-safety-net-delivery-robots/
-
-5. Inside Infineon’s €5B Dresden Fab: Virtual Fab Cloning Fast-Tracked the Launch（来源：EE Times）
-   应用分析：作为EPS工程师，我们依赖英飞凌等供应商的MCU和功率器件。晶圆厂的快速投产意味着更稳定的供应链和潜在的成本优化，有助于我们产品量产的风险控制。虽然我们不直接参与芯片制造，但了解这种先进制造技术，有助于评估供应商的技术实力和应对未来供应链波动的能力。这是宏观层面的关注，无需直接投入，但要留意其对芯片供应的影响。
-   https://www.eetimes.com/inside-infineon-e5b-dresden-fab-virtual-fab-cloning-fast-tracked-the-launch/
-
-6. Protocol Prying: Vulnerability Research in AirDrop and Quick Share（来源：Hacker News）
-   应用分析：EPS系统，尤其是在向线控转向演进时，会涉及更多的车内通信（如CAN FD, Ethernet）甚至车外通信。这类针对消费电子无线协议的漏洞研究，其方法论和发现的漏洞类型，可以为我们评估未来EPS系统通信模块的安全风险提供参考。例如，在设计线控转向的冗余通信链路时，需要考虑类似协议层面的攻击向量。这是功能安全和网络安全团队需要重点关注的领域，我个人需要了解这些研究进展，以便在架构设计阶段提出安全要求。
-   https://arxiv.org/abs/2606.26967
-
-7. Zig: All Package Management Functionality Moved from Compiler to Build System（来源：Hacker News）
-   应用分析：对于EPS这样的嵌入式系统开发，我们目前主要使用C语言和MATLAB/Simulink。关注Zig这类语言的发展，可以探索其在某些非功能安全关键模块（如测试工具、标定辅助工具）或未来迭代中的应用潜力。例如，Zig的交叉编译能力和对C库的良好兼容性，可能使其成为开发高性能、低级别驱动或诊断工具的备选项。短期内无需投入，但可保持关注，作为长期技术储备方向。
-   https://ziglang.org/devlog/2026/#2026-06-30</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260705-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260705-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260705-am.mp3" length="3280464" type="audio/mpeg"/>
-      <pubDate>Sat, 04 Jul 2026 22:34:18 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 研发早报：AI模型性能警报、英飞凌新厂加速、电动车电池超预期</title>
       <description>各位研发同仁，早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师，专注于汽车EPS系统的研发。今天，我们将聚焦AI前沿、汽车智能化和机器人领域，为您带来七条精选资讯。OpenAI的GPT模型性能出现波动，对我们AI应用有何警示？英飞凌新晶圆厂提前投产，对汽车芯片供应意味着什么？还有电动汽车电池寿命超预期、机器人AI安全网以及软件效率的核心价值。话不多说，我们马上开始！
@@ -1133,6 +1097,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260719-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260719-pm.mp3" length="3497040" type="audio/mpeg"/>
       <pubDate>Sun, 19 Jul 2026 09:42:33 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾洞察：AI大模型热潮与汽车转向技术前沿</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿的最新动态，特别是大模型Kimi引发的行业思考，以及汽车智能化和机器人领域对我们EPS产品研发的深刻影响。废话不多说，让我们立刻进入今天的头条资讯。
+
+1. Moonshot AI suspends new subscriptions due to Kimi K3 demand（来源：Hacker News）
+   应用分析：作为EPS工程师，我们可以思考Kimi这类长上下文大模型在处理大量技术文档、设计规范、测试报告方面的潜力。例如，它能否高效地从海量数据中提取关键信息，辅助我们进行系统架构设计时的需求分析，或者在故障诊断时快速匹配历史案例。它甚至可能帮助我们优化MATLAB/Simulink模型中的注释和文档生成。不过，在实际投入前，需要评估其在专业领域知识的准确性，并警惕过度依赖单一供应商带来的数据安全和成本锁定风险。
+   https://twitter.com/kimi_moonshot/status/2078855608565207130
+
+2. Kimi: Threat or menace?（来源：TechCrunch）
+   应用分析：在EPS这样对功能安全和数据隐私要求极高的领域，采用外部大模型服务时，我们需要特别关注数据传输和存储的安全性、合规性。如果“全面AI共产主义”意味着少数供应商掌握核心AI能力，那么我们可能会面临技术受制于人的风险。因此，我们应优先考虑可控、可审计的本地化部署AI方案，或者积极参与开源AI社区，将AI能力内化，保障核心技术的自主可控。投入需要谨慎评估长期风险和收益。
+   https://techcrunch.com/2026/07/18/kimi-threat-or-menace/
+
+3. AI advice made people 3x less accurate but 2x confident, researchers found（来源：Hacker News）
+   应用分析：在利用AI进行电机控制策略优化、故障诊断或参数标定时，我们必须建立严格的人工复核、交叉验证和功能安全审计流程。不能盲目采纳AI的“建议”。例如，AI生成的控制参数或诊断结果，必须经过MIL/SIL/HIL、台架测试以及整车标定等多层验证，确保其鲁棒性和安全性。同时，团队内部需要培养对AI结果的批判性思维，将其视为辅助工具而非最终决策者。这是一个值得长期关注和投入的问题，需要建立健全的AI应用规范。
+   https://thenextweb.com/news/ai-advice-suppresses-critical-thinking-wrong-answers-study
+
+4. Nonprofit Current AI is racing to build the World Wide Web of AI, free for all（来源：TechCrunch）
+   应用分析：我们正在寻求用AI改进控制、标定效率和故障诊断。如果Current AI能提供高质量、开放且易于部署的AI模型或工具链，我们可以将其应用于EPS的无传感器控制中的状态观测器、电机参数的在线辨识，甚至尝试在MCU上部署轻量级神经网络进行转矩脉动抑制。这将有助于我们降低商业AI工具的成本依赖，并加速前沿研究的工程落地。我认为，这非常值得投入资源进行跟踪和初步的POC（概念验证）性尝试。
+   https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all/
+
+5. TechCrunch Mobility: The battle over robotaxi rules（来源：TechCrunch）
+   应用分析：我们必须密切关注Robotaxi相关的法规、标准和技术趋势。例如，未来Robotaxi对转向系统的ASIL（汽车安全完整性等级）要求可能更高，这会直接影响我们线控转向方案的冗余设计、故障诊断与降级策略。同时，AI在Robotaxi决策控制中的应用，也提示我们可以在EPS的助力策略中探索AI辅助，实现更精细、更智能的手感调校和路感还原。投入资源追踪这些法规和技术发展是必须的，以确保我们的产品符合未来市场需求。
+   https://techcrunch.com/2026/07/19/techcrunch-mobility-the-battle-over-robotaxi-rules/
+
+6. All the EVs that were discontinued or killed off in the U.S. this year（来源：TechCrunch）
+   应用分析：EV市场的分化和洗牌，要求我们的EPS产品在设计之初就考虑平台化和模块化。我们需要开发能够快速适配不同车型、不同扭矩需求、不同成本区间的EPS解决方案。例如，通用化的电机控制硬件平台、可配置的软件模块，以及高效的标定工具链，将变得至关重要。这能帮助我们降低研发成本、缩短开发周期，并减少因单一车型生命周期缩短带来的风险。我们应该加强对市场趋势的分析，避免在短期爆款车型上投入过多的定制化资源，而应着眼于核心技术和平台能力的提升。
+   https://techcrunch.com/2026/07/18/all-the-evs-that-were-discontinued-or-killed-off-in-the-u-s-this-year/
+
+7. How to avoid the teleoperation trap in robotics development（来源：The Robot Report）
+   应用分析：Flexion公司CEO的观点为我们解决EPS电机控制的性能和鲁棒性问题提供了新思路。我们可以将强化学习和高精度仿真环境引入到FOC矢量控制、转矩脉动抑制、无传感器控制的开发中。通过在仿真中进行海量训练，让控制算法自主学习并优化参数，以应对温漂、参数辨识不准等挑战，从而减少昂贵的台架和整车标定时间。这与我们“把前沿研究快速转成可落地EPS工程方案”的目标高度契合，非常值得投入资源进行深入研究和概念验证，甚至可以考虑与机器人领域的专家进行技术交流。
+   https://www.therobotreport.com/how-to-avoid-teleoperation-trap-robotics-development/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260720-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260720-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260720-am.mp3" length="2946384" type="audio/mpeg"/>
+      <pubDate>Sun, 19 Jul 2026 22:31:13 +0000</pubDate>
     </item>
   </channel>
 </rss>
