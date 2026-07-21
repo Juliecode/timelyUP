@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 21 Jul 2026 09:42:50 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 22:32:33 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 洞察未来转向：AI、机器人与电动汽车前沿技术早报</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最具价值的资讯。这些内容不仅将拓宽我们的技术视野，更重要的是，它们能为我们电动助力转向，也就是EPS系统的研发，带来实实在在的启发和应用方向。准备好了吗？让我们一起开启今天的技术探索之旅！
-
-1. MIPS on the RISC-V Shift: ‘Physical AI Is Agentic AI at the Edge’（来源：EE Times）
-   应用分析：能不能用：能用，且必须关注。EPS向线控转向演进，以及引入AI进行控制和诊断，都离不开强大的边缘计算能力。RISC-V的开放性和灵活性，结合ARC AI，可能成为我们未来MCU选型的重要考量。怎么用：首先在架构设计阶段，评估RISC-V架构的MCU在EPS控制器中的可行性，特别是在功能安全ISO 26262和实时性方面的支持。其次，研究如何将我们正在开发的AI控制算法，如神经网络观测器、强化学习控制，高效部署到支持ARC AI或类似AI加速的RISC-V芯片上。最后，关注MIPS等公司在RISC-V生态中的进展，寻找潜在的IP供应商或合作伙伴，以获取定制化的AI边缘计算解决方案。值不值得投入：值得高度投入。这是未来汽车电子和AI控制融合的关键方向。早期研究和评估，能为我们的下一代EPS产品抢占技术制高点，提升系统性能、降低成本并增强功能安全性。
-   https://www.eetimes.com/mips-software-to-silicon-with-risc-v-interview-with-mips-physical-ai-is-agentic-ai-at-the-edge/
-
-2. Voice Is Key to Physical AI; Development Methods Need to Catch Up（来源：EE Times）
-   应用分析：能不能用：能用，且是我们当前工作的延伸和深化。物理AI对仿真验证的强调，正是我们EPS控制系统开发中MBD和HIL的核心价值。怎么用：我们可以借鉴远场ASR在物理AI中的经验，进一步强化我们EPS电机控制策略的物理仿真，特别是考虑复杂工况、温漂、噪声等非理想因素。同时，投入更多资源提升电机模型、机械系统模型（转向柱、齿条等）的物理建模精度，为AI控制算法提供更真实的训练和验证环境。更进一步，探索如何将AI（例如强化学习）与高精度物理仿真（HIL）结合，进行自动化的控制策略优化和标定，甚至用于生成故障样本数据进行诊断模型训练。值不值得投入：值得投入。提升仿真能力是确保AI控制算法在EPS这种安全关键系统上可靠落地的基石。这有助于我们更高效地迭代和验证控制策略，降低实车测试风险和成本。
-   https://www.eetimes.com/voice-is-key-to-physical-ai-development-methods-need-to-catch-up/
-
-3. This humanoid robotics company is going public, but its CEO isn’t promising a robot in your home anytime soon（来源：TechCrunch）
-   应用分析：能不能用：能用，其执行器和控制技术是我们的重要参考。怎么用：我们可以深入研究Agility Robotics等公司在关节执行器、伺服电机控制（如高精度位置/力矩控制、NVH抑制、高效能设计）方面的论文和公开资料，看是否有可迁移到EPS电机控制策略或硬件选型上的创新。同时，人形机器人在复杂动态环境下的鲁棒性控制，对于EPS在各种路况和故障下的性能保持有重要启发。研究其功能安全和冗余设计，对线控转向的开发尤其有价值。值不值得投入：值得持续投入。机器人执行器控制是EPS电机控制的前沿，其技术突破可以直接推动EPS系统性能和功能安全性的提升，尤其是在线控转向这种对响应速度和精度要求极高的场景。
-   https://techcrunch.com/2026/07/05/this-humanoid-robotics-company-is-going-public-but-its-ceo-isnt-promising-a-robot-in-your-home-anytime-soon/
-
-4. Boston Dynamics brings its legged robots to the FIFA World Cup（来源：The Robot Report）
-   应用分析：能不能用：能用，是重要的技术参考。怎么用：我们可以深入研究波士顿动力在动态系统中的运动规划、力控、阻抗控制等技术，思考如何将其思想应用于EPS的助力曲线、阻尼补偿、回正控制，以实现更精细、更自然的手感调校和路感还原。此外，足式机器人对多传感器融合（IMU、力传感器、编码器）进行精确状态估计的需求，与EPS无传感器控制或冗余传感方案的挑战相似。可以借鉴其状态观测器设计。值不值得投入：值得持续关注和研究。波士顿动力代表了运动控制的顶尖水平，其技术理念和实现方式对我们提升EPS的性能和智能化水平具有长期价值。
-   https://www.therobotreport.com/boston-dynamics-brings-its-legged-robots-to-the-fifa-world-cup/
-
-5. GaN Lateral Superjunction Schottky Diode（来源：Power Electronics News）
-   应用分析：能不能用：能用，是未来EPS功率级升级的重要方向。怎么用：我们可以密切关注GaN器件的商业化进展和可靠性数据。在下一代EPS控制器设计中，将GaN器件纳入功率级拓扑选型考量，评估其在效率、散热、体积和成本上的优势。GaN器件支持更高的开关频率，这可能让我们能够采用更高频的电机控制PWM，从而降低电机电流纹波、改善NVH性能，甚至实现更紧凑的电感设计。当然，也要研究GaN器件在汽车环境下的长期可靠性和功能安全ISO 26262认证情况。值不值得投入：值得投入。GaN是功率电子的未来趋势，其在EPS中的应用潜力巨大，可以显著提升系统性能并优化成本。现在开始研究和储备相关技术是必要的。
-   https://www.powerelectronicsnews.com/gan-lateral-superjunction-schottky-diode/
-
-6. CATL unveils new light commercial vehicle battery that charges to 80% in under 7 minutes（来源：CnEVPost）
-   应用分析：能不能用：间接相关，但需要密切关注。怎么用：超快充技术意味着整车电气系统在高功率工作时，电压和电流波动可能更剧烈。EPS控制器在设计时需要确保其电源输入端的鲁棒性，以及在极端工况下的稳定工作。同时，高功率快充会产生大量热量，整车热管理系统会更加复杂。EPS作为车内重要热源之一，其自身的热设计需要与整车热管理系统更好地协同，尤其是在线控转向系统中，需要保证电机和功率器件的稳定工作温度。值不值得投入：值得持续关注。虽然不是EPS核心技术，但作为智能电动车的重要组成部分，电池快充技术会影响整车电气架构和热管理，进而间接影响EPS的集成和设计要求。了解这些趋势有助于我们提前规划。
-   https://cnevpost.com/2026/07/06/catl-unveils-tectrans-ii-battery/
-
-7. F1 in Britain: Automated software to blame for crushing expectations（来源：Ars Technica）
-   应用分析：能不能用：能用，是功能安全和软件鲁棒性设计的重要警示。怎么用：我们可以借鉴F1案例，重新审视EPS控制软件的鲁棒性设计，特别是针对边界条件、异常输入、传感器故障等情况的处理。强化MIL、SIL、HIL测试，确保自动化测试用例能够覆盖更广泛的潜在失效模式。同时，深入分析F1自动化软件失误的具体原因，思考如何改进EPS的故障诊断算法，使其能更早、更准确地识别潜在问题，并执行平稳、安全的降级操作，避免“未能达到预期”的安全风险。值不值得投入：值得高度投入。这是功能安全和软件质量的永恒课题。F1的例子是一个警钟，促使我们更严谨地对待EPS控制软件的开发、验证和安全设计，避免类似问题在线控转向等未来产品中发生。
-   https://arstechnica.com/cars/2026/07/f1-in-britain-automated-software-to-blame-for-crushing-expectations/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260707-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260707-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260707-am.mp3" length="3762576" type="audio/mpeg"/>
-      <pubDate>Mon, 06 Jul 2026 22:43:10 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI驱动未来转向：智能汽车与机器人控制前沿洞察</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术，为大家精选出7条重磅资讯，深入探讨它们对我们EPS产品研发工作的潜在影响和应用价值。从具身智能的统一模型，到数据驱动的控制策略，再到电动汽车的核心部件创新，每一条都可能为我们的未来产品和技术路线带来启发。准备好了吗？让我们一起开启今天的技术探索之旅。
@@ -1097,6 +1061,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260721-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260721-pm.mp3" length="4238208" type="audio/mpeg"/>
       <pubDate>Tue, 21 Jul 2026 09:42:50 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾浪潮下的EPS新机遇：小模型、SiC与安全RL的融合</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能前沿、汽车智能化和机器人三大领域，为您精选出七条最有价值的资讯。从轻量级AI模型如何赋能车载边缘计算，到碳化硅功率器件在电动车中的关键作用，再到机器人领域最新的安全强化学习和可微分控制技术，这些都与我们汽车电动助力转向系统，也就是EPS的未来发展息息相关。让我们一起探索这些前沿技术将如何重塑我们的工作，带来哪些新的机遇和挑战。
+
+1. 小型语言模型开启车载边缘AI新篇章（来源：arXiv cs.AI）
+   应用分析：能不能用：能用，并且非常值得投入。在EPS控制器上实现AI功能，轻量级模型和高效微调是突破现有算力瓶颈的关键。怎么用：我们可以利用这些轻量级模型，对EPS运行数据进行实时分析，实现更精细的故障诊断和预测性维护，例如，通过监测电机电流或扭矩传感器信号的微小异常来预警潜在故障。另外，也可以辅助进行助力策略的自动标定，通过学习驾驶员行为和路况数据，优化助力曲线，提升驾驶手感。值不值得投入：绝对值得投入。这是将AI能力真正带入EPS产品，实现产品差异化和智能化升级的关键路径。我们需要关注模型压缩、量化以及边缘部署的工具链，并探索如何将现有FOC电机控制算法与轻量级AI模型进行融合，以解决转矩脉动和NVH等问题。
+   https://arxiv.org/abs/2607.16202
+
+2. 扩散语言模型：构建强化学习智能体的可控世界模型（来源：arXiv cs.AI）
+   应用分析：能不能用：理论上能用，但需要将“文本”世界模型转化为“物理”或“控制参数”世界模型。这是一项前瞻性技术，值得我们研究。怎么用：我们可以利用这一理念，为线控转向系统生成多样化的驾驶场景和潜在故障模式。比如，通过输入“在湿滑路面高速过弯，转向电机出现5%扭矩波动”的描述，让世界模型生成对应的物理仿真输入，用于训练线控转向的RL控制策略。这有助于我们更全面地测试和优化控制算法，提升系统在极端条件下的鲁棒性。值不值得投入：值得投入前期研究。虽然离直接落地EPS还有距离，但其核心思想——用生成模型构建多样化、可控的仿真环境——对提升RL在复杂控制系统中的应用效率和鲁棒性至关重要。我们可以先在MIL/SIL/HIL仿真环境中进行概念验证，探索其在故障模式生成与测试中的潜力。
+   https://arxiv.org/abs/2607.16204
+
+3. 特斯拉Robotaxi在佛罗里达启动试点，线控转向需求迫切（来源：TechCrunch）
+   应用分析：能不能用：这不是直接能用的技术，而是市场和技术趋势的强烈信号。它直接验证了我们当前线控转向研发方向的正确性和紧迫性。怎么用：Robotaxi的进展意味着对线控转向的成熟度、冗余设计（例如多路电源、多核MCU、多传感器融合）、功能安全（ISO 26262 ASIL D）和网络安全要求会达到前所未有的高度。我们需要加速相关架构设计、软件开发和验证的进度。同时，在无人驾驶模式下，手感调校的重心将从驾驶员体验转向车辆自身运动学和乘客舒适性，这需要我们探索新型的助力策略。值不值得投入：必须持续投入。Robotaxi代表了未来出行方向，我们的EPS产品必须紧跟其后，尤其是在线控转向领域，要保持技术领先和方案的可靠性。
+   https://techcrunch.com/2026/07/21/tesla-spins-up-robotaxi-pilots-in-orlando-and-tampa-ahead-of-q2-earnings/
+
+4. 闻泰科技发布1200V-2300V碳化硅功率模块，赋能电动汽车高压系统（来源：Charged EVs）
+   应用分析：能不能用：能用，且非常重要。SiC器件是提升EPS电机控制器性能的潜在方向。怎么用：我们可以考虑在未来的高压EPS系统，特别是应用于商用车或重型线控转向系统中，将SiC MOSFET或模块集成到功率级，以实现更高的开关频率，从而减小无源元件尺寸，提高系统效率，降低温升。在电机控制策略方面，SiC器件的低开关损耗特性，有助于优化FOC控制的效率，并可能将开关噪声推向人耳听不到的频段，但也需要仔细评估其引入的新型电磁干扰（EMI）和高频谐波对电机NVH的影响。值不值得投入：值得持续投入研究和评估。SiC技术虽然目前成本相对较高，但其在性能和小型化上的优势，对于高端或高性能EPS产品线有战略意义。可以先在原型机或下一代产品预研中进行验证，为未来产品升级做准备。
+   https://chargedevs.com/newswire/ween-launches-wmsc-family-of-1200-2300-v-sic-power-modules-for-solid-state-transformers/
+
+5. 理想汽车成立芯片公司，自研芯片已量产（来源：CnEVPost）
+   应用分析：能不能用：这不是直接能用的技术，而是行业发展趋势的信号。它直接影响我们EPS产品未来的研发模式和技术路线。怎么用：随着车企对芯片的掌控力增强，未来EPS的控制器硬件，特别是微控制器单元MCU，可能不再是完全外购标准件，而是需要与车企共同定义或适配其自研芯片。这要求我们更早地介入芯片选型、功能安全架构定义，并提供对电机控制算法的算力、存储、外设需求。同时，自研芯片可以更灵活地集成功能安全机制，但也要求我们对芯片底层架构有更深入的理解，以确保EPS系统达到ISO 26262 ASIL D等级要求。值不值得投入：必须持续关注并调整研发策略。这不仅是技术问题，更是商业模式和合作关系的变化。我们应积极与客户沟通，了解其芯片自研路线图，并提前布局相应的技术和人才储备，以适应软件定义汽车（SDV）时代的需求。
+   https://cnevpost.com/2026/07/21/li-auto-sets-up-chip-company/
+
+6. 可认证安全模型强化学习：为机器人控制提供安全保障（来源：arXiv cs.RO）
+   应用分析：能不能用：理论上非常能用，是解决线控转向安全性和鲁棒性的前沿方案。怎么用：我们可以利用该框架，提升线控转向系统的鲁棒性。例如，学习EPS或线控转向系统的部分未知动力学，如摩擦、磨损或温漂效应，并在学习过程中通过CBF确保转向力矩、转向角速度等关键参数始终在安全范围内，避免失控。此外，当EPS系统出现部分故障时，如某个传感器失效或电机相电流异常，利用强化学习快速学习新的降级控制策略，同时通过CBF确保系统仍能提供基本的安全助力或保持车辆可控。值不值得投入：值得深度投入研究。这是将强化学习从“高风险”变为“可信赖”的关键一步，对于安全攸关的汽车控制系统具有颠覆性意义。可以从仿真环境开始，逐步引入HIL验证，探索其在无传感器控制安全性增强方面的应用潜力。
+   https://arxiv.org/abs/2607.16501
+
+7. 可微分强化学习：仿生鱼机器人路径跟踪的创新控制（来源：arXiv cs.RO）
+   应用分析：能不能用：能用，且很有借鉴意义。可微分强化学习对于优化EPS电机控制策略中的复杂增益参数、抑制非线性干扰非常有效。怎么用：我们可以将FOC或无传感器控制器的PI参数、弱磁控制参数等，通过可微分强化学习在仿真环境中进行自动优化，以达到转矩脉动最小、效率最高、NVH最佳等目标。这项技术特别适用于解决EPS电机在低速或特定工况下的转矩脉动和抖动问题，通过学习自适应补偿策略，调整电流指令或PWM波形来抑制不期望的现象。此外，借鉴其高效仿真平台开发经验，可以优化EPS的MIL/SIL/HIL仿真工具链，提高仿真精度和速度，加速控制策略从仿真到实车的迁移。值不值得投入：值得投入研究和概念验证。可微分强化学习是强化学习领域的一个重要发展方向，其结合传统控制器的思路也符合工程实践。在解决EPS电机控制的精细化、鲁棒性问题上，它可能提供新的突破口。
+   https://arxiv.org/abs/2607.16508</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260722-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260722-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260722-am.mp3" length="4208544" type="audio/mpeg"/>
+      <pubDate>Tue, 21 Jul 2026 22:32:33 +0000</pubDate>
     </item>
   </channel>
 </rss>
