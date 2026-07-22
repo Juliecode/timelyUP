@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 22 Jul 2026 09:43:34 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 22:39:41 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI赋能转向，材料革新电机：智驾与机器人前沿速递</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。无论是通用具身智能的突破，还是汽车线控转向的控制新范式，抑或是电机材料的革新，都将为我们的研发工作带来新的启发。话不多说，让我们马上进入今天的早报时间。
-
-1. iFLYTEK-Embodied-Omni Technical Report（来源：arXiv cs.AI）
-   应用分析：作为EPS工程师，我关注的是如何将这种多模态理解能力应用于汽车内部。例如，未来的线控转向系统可能需要一个能理解驾驶员意图（语言、手势、眼动）、车辆状态（视觉、传感器数据）和外部环境（路况、交通参与者）的智能代理。iFLYTEK-Embodied-Omni的统一建模思路，可以启发我们设计更智能的EPS控制策略，比如在特定驾驶场景下，根据驾驶员的语音指令或视觉焦点，动态调整转向助力曲线，提供更个性化和直观的驾驶体验。短期内，直接应用可能较远，但其架构和理念值得我们持续跟踪和思考，尤其是对于未来智能座舱与线控转向深度融合的场景，投入研究是值得的。
-   https://arxiv.org/abs/2607.02542
-
-2. ASK in the Dark: Uncertainty-Gated LLM Assistance under Partial Observability（来源：arXiv cs.AI）
-   应用分析：在EPS系统中，我们经常面临传感器数据不完整或存在噪声的情况，例如，无传感器控制方案对电机参数变化和外部扰动非常敏感。ASK+的思路可以应用于提升EPS控制策略的鲁棒性和安全性。我们可以训练一个SLM作为“专家顾问”，在传感器数据存在不确定性时，结合车辆历史轨迹、驾驶员意图等“上下文”信息，为电机控制策略提供修正建议，例如调整FOC控制器的PI参数，或在无传感器控制中优化状态观测器的增益。这能帮助我们更好地处理温漂、参数辨识不准等问题，降低对高精度传感器的依赖，从而提升成本竞争力。这是一个值得投入的方向，可以先从HIL或SIL仿真环境开始验证其效果。
-   https://arxiv.org/abs/2607.02686
-
-3. Direct Data Driven Natural Gradient Descent for Control（来源：arXiv eess.SY 控制系统）
-   应用分析：这对于我们优化EPS电机控制策略（如FOC、弱磁控制、转矩脉动抑制）是极具吸引力的。我们可以利用车辆实际运行中采集的输入输出数据，直接学习和优化控制参数，而无需耗费大量时间建立精确的电机或转向系统模型。例如，在转矩脉动抑制方面，传统方法需要精确的电机参数和复杂的谐波补偿算法，而数据驱动NGD可以从实际运行数据中学习最佳的补偿策略，自动适应电机老化、温度变化等因素。这有望显著提升EPS的NVH性能和手感调校效率。由于其理论上提供了稳定性保证，这是一个非常值得投入研究和尝试落地的方向，可以考虑将其作为自动标定工具链的一部分。
-   https://arxiv.org/abs/2607.03393
-
-4. CLEAR: Closed-Loop Reinforcement Learning at Scale for End-to-End Autonomous Driving（来源：arXiv cs.RO）
-   应用分析：对于向线控转向演进的EPS系统，其控制性能和鲁棒性是核心。CLEAR的闭环强化学习思路，可以启发我们设计更高效的EPS助力策略与手感调校方法。例如，我们可以将EPS的助力曲线、阻尼补偿等参数视为RL的动作空间，通过在仿真环境（或HIL/SIL）中进行大规模闭环训练，让EPS系统自主学习在各种复杂路况和驾驶员意图下的最优转向响应。这不仅能提高手感调校的效率，还能让系统更好地适应不同的驾驶员习惯和车辆负载变化，提升用户体验和功能安全。这是一个值得长期关注和投入的技术方向，可以从HIL测试阶段开始，探索RL在特定EPS子功能（如回正控制、抖动抑制）中的应用。
-   https://arxiv.org/abs/2607.02841
-
-5. Longitudinal-Motion-Aware Lateral Control for Autonomous Vehicles: A Robust Nonlinear Control Framework（来源：arXiv cs.RO）
-   应用分析：EPS的助力策略与手感调校需要考虑车速、转向角速度等多种因素。当前大多EPS系统在调校时，纵向运动的影响（如加减速带来的载荷转移和轮胎特性变化）通常通过经验或离线标定进行补偿。该研究提出的纵向运动感知控制框架，可以让我们更科学、更精确地将车辆纵向加减速状态纳入EPS的助力策略设计中。例如，在急加速或急减速时，转向手感和回正力矩可能需要不同的补偿策略以维持驾驶员的信心和舒适性。通过采用这种鲁棒非线性控制框架，我们可以开发出在全工况下表现更一致、更稳定的EPS系统，特别是在线控转向中，这对于实现更自然的转向手感和更高的功能安全等级至关重要。这是一个直接提升产品性能和用户体验的实用技术，非常值得投入开发和验证。
-   https://arxiv.org/abs/2607.02924
-
-6. POSCO and Hyundai partner to develop 6.5% silicon electrical steel for EV motors（来源：Charged EVs）
-   应用分析：EPS系统主要使用PMSM电机。6.5%硅电工钢的应用，可以直接提升我们EPS电机的性能。具体来说，更高的效率意味着更低的能耗和发热，这对于电机在高温环境下的可靠性至关重要；更高的功率密度则允许我们设计更小巧、更轻的EPS电机，从而节省安装空间并降低整车重量。此外，铁损的降低也有助于改善电机的NVH特性，减少高频噪声。在电机选型时，我需要积极评估这类高硅电工钢的应用潜力，并与供应商探讨其在EPS电机中的可行性。虽然初期成本可能较高，但从长期来看，其带来的性能提升和系统优化价值是巨大的，值得持续投入研发资源进行验证和导入。
-   https://chargedevs.com/newswire/posco-and-hyundai-partner-to-develop-6-5-silicon-electrical-steel-for-ev-motors/
-
-7. TACO: TActile World Model as a Self-COrrector forScalable VLA Post-Training（来源：arXiv cs.RO）
-   应用分析：这个研究与我的工作背景中的“机器人/人形机器人的关节执行器、伺服电机控制”高度相关。EPS电机控制中，转矩脉动、纹波和抖动抑制的目标，与机器人关节执行器追求的平滑、精确力矩输出有异曲同工之妙。TACO的触觉感知世界模型提示我们，在EPS的控制策略中，除了传统的电流/位置采样，是否可以引入更“物理感知”的反馈机制来提升控制精度和鲁棒性。例如，可以探索利用高带宽的转矩传感器或基于模型的状态观测器，构建一个“转向触觉世界模型”，实时评估驾驶员与方向盘的交互以及路面反馈的细微变化。通过这种“触觉反馈”，可以更智能地进行助力曲线的精细调整和抖动抑制，让手感更加自然、平顺。这对于提升线控转向的路感还原能力和高级驾驶辅助的平顺性有巨大潜力，值得深入研究和探索，尤其是在模型预测控制(MPC)和强化学习控制中集成这类物理感知信息。
-   https://arxiv.org/abs/2607.02840</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260708-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260708-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260708-am.mp3" length="2427840" type="audio/mpeg"/>
-      <pubDate>Tue, 07 Jul 2026 22:41:29 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 智驾新视界：AI赋能设计、控制与材料革新</title>
       <description>各位研发工程师朋友，大家早上好！欢迎收听今天的智驾新视界科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大方向，为您精选七条重磅资讯。从AI如何助力嵌入式软件开发和工业设计，到智能汽车定位技术的突破，再到电机材料和控制策略的革新，每一条都与我们电动助力转向，也就是EPS的研发工作息息相关。让我们一起看看这些前沿技术，能为我们的工作带来哪些新的启发和落地可能。
@@ -1101,6 +1065,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260722-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260722-pm.mp3" length="4602384" type="audio/mpeg"/>
       <pubDate>Wed, 22 Jul 2026 09:43:34 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾新纪元：AI安全、线控转向与机器人控制的前沿突破</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将把目光聚焦在AI前沿、汽车智能化和机器人这三大核心领域，为您精选出七条最值得关注的重磅资讯。从AI智能体的功能安全，到线控转向的验证挑战，再到机器人电机控制的最新突破，每一条都可能为您的研发工作带来新的灵感和方向。话不多说，让我们立刻进入今天的早报时间。
+
+1. From Agent Failure Paths to Quantified Residual Risk: A Compositional Framework for Resilient Agentic AI（来源：arXiv cs.AI）
+   应用分析：作为EPS研发工程师，我们正面临线控转向（Steer-by-Wire）的演进，AI控制算法的引入是必然趋势。这项研究提出的CPS AINT七层分解框架和FRIESA-K风险量化函数，为我们评估AI控制器的功能安全提供了理论工具。特别是在EPS中集成AI辅助控制模块时，例如基于AI的助力曲线自适应或故障诊断，我们可以借鉴其分层分解思想，系统性地识别潜在故障路径，如传感器数据异常、计算错误、执行器误动作，并量化其对转向系统安全的影响。这有助于我们建立更完善的风险评估模型，确保AI决策的鲁棒性和可审计性，从而满足ISO 26262等功能安全标准的要求。这是一个值得投入研究和概念验证的方向，能够为我们未来的线控转向产品提供更坚实的安全保障。
+   https://arxiv.org/abs/2607.18243
+
+2. Phionyx: A Deterministic AI Runtime Architecture with Structured State Management and Pre-Response Governance（来源：arXiv cs.AI）
+   应用分析：EPS控制系统对确定性和实时性有着极高要求。如果AI要应用于电机控制策略，例如FOC参数的自适应调整、扭矩脉动抑制或无传感器控制，其行为必须是可预测和可重复的。Phionyx将LLM输出视为“带噪声的传感器测量”，并通过确定性状态演化方程实现可复现行为的思想，非常契合我们的需求。我们可以探索将部分AI模块，例如用于自动标定或异常检测的轻量级神经网络，封装进类似Phionyx的确定性运行时。将其输出视为对传统控制器的“建议”或“校正信号”，并通过预响应治理层进行安全验证。这能有效降低AI引入的不确定性，并满足功能安全对可预测性的严苛要求。这对于我们把前沿AI控制技术快速转化为可落地的EPS工程方案，具有重要的指导意义，值得深入研究其框架在嵌入式AI部署中的应用潜力。
+   https://arxiv.org/abs/2607.18246
+
+3. Model-Agnostic Meta Learning for Differentiable MPC（来源：arXiv eess.SY 控制系统）
+   应用分析：在EPS中，电机控制策略如FOC、弱磁控制以及助力策略的手感调校，都涉及大量参数，且对环境变化敏感。MPC曾被我们考虑用于优化转向助力曲线，但其计算复杂度和对模型、参数的依赖性是主要挑战。这项研究的元学习MPC框架，能够让EPS控制器在面对不同车型、不同驾驶员偏好，甚至不同工况，比如轮胎磨损、路面摩擦变化时，快速自适应地调整助力特性和手感。更重要的是，它集成了系统辨识，可以持续优化MPC超参数和预测模型，这对于解决电机参数温漂、提升控制鲁棒性具有巨大的潜力。这直接回应了我们最想解决的问题：提升电机控制策略的性能与鲁棒性，以及用AI/数据驱动方法改进控制和标定效率。这绝对是值得我们重点投入研究和验证的方向。
+   https://arxiv.org/abs/2607.19271
+
+4. VW to deliver L3 autonomous driving in China from H2 2027 as Horizon Robotics tie-up deepens（来源：CnEVPost）
+   应用分析：大众汽车计划在2027年下半年于中国交付L3级自动驾驶功能，这对于我们EPS研发工程师来说，是一个非常明确的市场信号：线控转向（Steer-by-Wire）的商业化落地正在加速。L3自动驾驶对转向系统的冗余、功能安全、响应速度、精度和鲁棒性都提出了更高的要求。大众与地平线机器人公司的合作，也表明车企在自动驾驶核心AI算法上倾向于与专业AI公司深度合作。这提示我们在EPS系统架构设计时，需要充分考虑如何与上层自动驾驶系统进行高效、安全的接口对接，包括数据交互、指令执行和故障降级策略。同时，AI在传感器融合、环境感知和决策规划中的应用，将对EPS的线控转向执行能力提出新的挑战，例如实现超低延迟控制和高精度定位反馈。我们应该积极参与线控转向的功能安全分析和冗余方案设计，确保我们的EPS产品能够满足并引领未来L3及以上自动驾驶的需求，提升产品的核心竞争力。
+   https://cnevpost.com/2026/07/22/vw-l3-autonomous-driving-china-h2-2027/
+
+5. Bridging the Sim-to-Real Gap under Real-Time Constraints in Autonomous Racing（来源：arXiv cs.RO）
+   应用分析：在EPS的研发过程中，我们大量依赖MIL、SIL、HIL以及台架测试进行功能验证。尤其是线控转向系统，其性能和鲁棒性在极限工况下的验证，与自动驾驶赛车面临的Sim-to-Real问题高度相关。这项论文提出的“三层视角”（物理、网络、执行）和一套诊断指标，例如性能翻转、稳定性导向测量、对延迟和噪声的敏感性等，可以直接用于我们线控转向系统的验证和校准。通过这些指标，我们可以更系统地评估HIL测试结果与整车实际表现的差异，深入分析电机控制算法在不同延迟和噪声条件下的鲁棒性表现。这种系统性的分析方法能够帮助我们更有效地识别和弥补仿真模型与物理系统之间的差距，从而加速线控转向方案的开发和部署。这不仅能提升我们的验证效率，也能为EPS系统的故障诊断和预测性维护提供新的思路，非常值得我们借鉴和实践。
+   https://arxiv.org/abs/2607.18586
+
+6. Towards Torque-Driven Reinforcement Learning for Quadruped Locomotion（来源：arXiv cs.RO）
+   应用分析：四足机器人的关节执行器控制与我们EPS的电机控制在底层技术上高度相似，都是围绕永磁同步电机进行FOC矢量控制。这项研究的“扭矩驱动强化学习”方法，直接作用于电机扭矩输出，而非间接的位置指令，这与我们FOC控制中直接控制转矩环的目标不谋而合。更引人注目的是，它能在无需代理当前速度知识的情况下，有效跟踪所需的线性速度，这对我们探索无传感器控制方案有重要的启发。我们可以借鉴这种RL框架，尝试将其应用于EPS电机控制策略中，例如优化转矩脉动抑制、弱磁控制或无传感器控制中的转矩指令生成，以进一步提升电机性能和鲁棒性。这可能需要深入研究RL算法与传统FOC的结合方式，但其在复杂动态环境下的自适应能力和鲁棒性，对解决NVH、温漂等问题有潜在价值。因此，这是一个值得投入概念验证和小规模实验的交叉点研究方向。
+   https://arxiv.org/abs/2607.18365
+
+7. BearingNAS: Obtaining In-Sensor Intelligent Fault Diagnosis Systems for Bearings Using a Laptop（来源：arXiv cs.LG）
+   应用分析：在EPS系统中，电机轴承、齿轮等关键部件的健康状况，直接影响系统的可靠性和NVH性能。传统的故障诊断多依赖外部ECU进行复杂计算。BearingNAS提出的“传感器内智能”思路，可以启发我们在EPS电机或减速器的集成传感器中，嵌入轻量级AI模型，实现对轴承振动、温度异常等早期故障的实时、本地化诊断。这能有效降低对主MCU计算资源的占用，提升故障响应速度，并支持预测性维护，从而提高产品可靠性和降低维护成本。该框架强调的“硬件感知NAS”，意味着我们可以针对EPS控制器MCU的资源限制（例如4到8千字节的RAM和16到32千字节的Flash），定制优化AI模型架构。这对于提升EPS系统的智能化和成本竞争力，以及探索更具鲁棒性的无传感器/冗余传感方案，都具有非常直接且可操作的帮助，是一个值得研究和投入的实际应用方向。
+   https://arxiv.org/abs/2607.18287</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260723-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260723-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260723-am.mp3" length="4507488" type="audio/mpeg"/>
+      <pubDate>Wed, 22 Jul 2026 22:39:41 +0000</pubDate>
     </item>
   </channel>
 </rss>
