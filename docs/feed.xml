@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 23 Jul 2026 09:44:29 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 22:36:41 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI赋能转向，智驾新材料，机器人控制：EPS工程师的今日洞察</title>
-      <description>各位研发工程师早上好，欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，从中精选出七条最值得我们EPS电动助力转向工程师关注的重磅资讯。这些信息不仅关乎技术趋势，更与我们日常工作中的电机控制、功能安全、线控转向等核心挑战息息相关。准备好了吗？让我们立即开始今天的科技探索！
-
-1. Learning Stable Controlled Dynamical Systems via Input-Contraction Neural Differential Models（来源：arXiv eess.SY 控制系统）
-   应用分析：这个研究与我们EPS电机控制策略的性能与鲁棒性提升方向高度契合，尤其是在线控转向（Steer-by-Wire）中，对系统稳定性和鲁棒性的要求极高。我们可以探索将EPS电机控制的某些非线性环节，比如摩擦补偿、非线性助力曲线，或者复杂参数，如磁饱和、温度漂移等，建模为这种ICNDM。通过数据驱动的方式学习其动态特性，并保证其稳定性。例如，用它来学习电机在不同温度下的转矩特性，或在无传感器控制中补偿状态观测器的非线性误差。这绝对值得深入研究和投入，因为它是将AI与经典控制理论深度融合的前沿方向，直接触及EPS系统最核心的性能与安全问题，对线控转向的落地至关重要。
-   https://arxiv.org/abs/2607.05718
-
-2. Can Agentic AI Solve the Embedded Software Problem?（来源：EE Times）
-   应用分析：Agentic AI在EPS软件开发中潜力巨大。我们可以利用它来辅助代码生成与优化，例如针对FOC、无传感器控制等算法的特定模块，Agentic AI可以基于规范和约束生成初始代码，并进行性能优化，减少人工编码和调试时间。此外，它还能结合ISO 26262功能安全要求和历史故障数据，辅助设计更完善的故障诊断逻辑和降级运行策略。甚至在MIL/SIL/HIL验证阶段，Agentic AI可以自动生成测试用例，并辅助分析测试结果，找出潜在的逻辑缺陷。虽然完全自动化尚远，但作为辅助工具，提高开发效率和代码质量的潜力巨大，特别是对于复杂算法模块和功能安全相关的代码生成与验证，值得初期投入研究和概念验证。
-   https://www.eetimes.com/can-agentic-ai-solve-the-embedded-software-problem/
-
-3. Why this CEO thinks video games make better training data than the internet（来源：TechCrunch）
-   应用分析：这个理念对我们EPS研发有很大的借鉴意义。我们可以借鉴视频游戏引擎的物理模拟能力，构建高精度的EPS系统虚拟仿真环境，就像一个大型的“EPS游戏”世界。在这个环境中，我们可以模拟各种驾驶场景、路面条件、驾驶员操作，生成大量带有物理反馈的“游戏数据”。利用这些虚拟数据，我们可以训练AI控制策略，例如用强化学习来优化助力手感调校，或者提升极端工况下的电机控制鲁棒性。此外，在仿真环境中，可以轻松生成传统台架或实车测试难以复现的极端情况或故障模式，用于训练AI进行故障诊断和降级控制。构建高保真仿真环境本身就是EPS研发的重要组成部分，如果能有效利用仿真数据训练AI，将大幅降低真实世界测试成本和周期，加速AI在EPS控制中的应用落地，特别是在线控转向这种需要海量复杂场景验证的领域，绝对值得深入研究和尝试。
-   https://techcrunch.com/video/why-this-ceo-thinks-video-games-make-better-training-data-than-the-internet/
-
-4. Virtual validation of eMobility control units: challenges and solutions in the SIL context（来源：Charged EVs）
-   应用分析：SIL，也就是软件在环验证，是我们EPS研发流程中的关键环节，直接关系到产品质量和功能安全。这篇白皮书强调了电动化传动系统带来的新复杂性，以及对可验证性、确定性行为的更高要求。我们可以对照文中提到的解决方案，重新审视并优化我们EPS控制器的SIL测试策略，特别是针对电机控制算法（如FOC、无传感器控制）和功能安全相关模块。确保测试覆盖率足够，能充分验证在各种工况和故障模式下的确定性行为。同时，我们也可以评估并引入更高精度的电机模型、机械负载模型和车辆动力学模型到SIL环境中，以更好地模拟实际物理世界的复杂性，提高仿真结果的置信度。持续投入和优化SIL验证，是保障EPS系统质量和功能安全不可或缺的一步。
-   https://chargedevs.com/whitepapers/virtual-validation-of-emobility-control-units-challenges-and-solutions-in-the-sil-context/
-
-5. New Allegro A81415 PMIC Simplifies Brake-by-Wire Systems（来源：Power Electronics News）
-   应用分析：这款Allegro的PMIC A81415，虽然是为线控制动系统设计的，但对我们线控转向（Steer-by-Wire）的架构和控制器硬件设计有着极强的借鉴意义。ASIL-D是汽车功能安全的最高等级，能在简化系统、减少组件的同时达到这个等级，非常了不起。我们可以研究它如何集成电源管理和轮速传感，思考能否将类似的高集成度设计理念应用到EPS/线控转向的电流、位置传感器信号处理和供电管理上，从而简化板级设计，提高可靠性，同时还能降低成本、节省空间。这是线控技术发展的必然趋势，持续关注这类高集成度、高功能安全等级的芯片，对我们未来EPS和线控转向的商业竞争力至关重要，绝对值得持续关注和研究。
-   https://www.powerelectronicsnews.com/new-allegro-a81415-pmic-simplifies-brake-by-wire-systems/
-
-6. POSCO and Hyundai partner to develop 6.5% silicon electrical steel for EV motors（来源：Charged EVs）
-   应用分析：EPS系统中的电机，永磁同步电机是主力，我们对它的转矩密度、效率、NVH和成本都非常敏感。电工钢作为电机铁芯的核心材料，其性能直接决定了电机的磁性能和损耗。6.5%硅含量的电工钢有望大幅降低铁损，从而提升电机效率，这与我们提升电机效率和降低温升的方向高度契合。在未来的EPS电机设计或供应商选型中，我们需要将这种高硅电工钢作为评估电机性能，尤其是效率和温升的关键指标之一。深入了解这种材料的特性、成本和可制造性，并与电机供应商沟通其在新材料应用上的进展。同时，也要评估它对电机NVH特性的影响，并在控制策略中进行相应补偿或抑制。持续关注这类前沿材料技术，有助于我们提前规划EPS电机的技术路线，确保在电机性能和成本上保持竞争力，非常值得投入关注。
-   https://chargedevs.com/newswire/posco-and-hyundai-partner-to-develop-6-5-silicon-electrical-steel-for-ev-motors/
-
-7. Dynamic Evaluation of Classical and Control-Aware Optimal Trajectory Planning in Robot Manipulators（来源：arXiv cs.RO）
-   应用分析：这项研究的思路和方法对我们EPS和线控转向的研发有极高的借鉴价值。我们可以将“控制感知型最优轨迹规划”的思想引入EPS的助力策略和手感调校。这意味着在生成助力曲线时，不仅仅考虑车速、转向角等常规参数，而是把转向系统的整体动力学模型（包括电机、齿轮、转向柱等），以及电机自身的功耗、温升、NVH特性都纳入考量，实时优化助力力矩的输出轨迹。这样可以在保证驾驶手感的同时，降低电机损耗，提升系统效率和平稳性，有效抑制转矩脉动和抖动。在线控转向场景中，方向盘与车轮之间没有机械连接，这个框架可以直接用于线控转向系统的运动规划和控制，确保车轮能够精确、平稳、高效地跟踪目标轨迹，同时优化执行器的能耗和寿命。这是我们值得深入研究，并将其迁移到EPS和线控转向的宝贵技术。
-   https://arxiv.org/abs/2607.05544</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260709-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260709-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260709-am.mp3" length="3322512" type="audio/mpeg"/>
-      <pubDate>Wed, 08 Jul 2026 22:38:41 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI赋能汽车与机器人：从控制策略到安全验证的七大前沿突破</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师，专注于汽车电动助力转向，也就是EPS系统的研发。今天，我们为您精选了七条最值得关注的科技资讯，涵盖了AI前沿、汽车智能化和机器人技术三大方向。这些内容不仅洞察未来，更聚焦当下，希望能为您的日常研发工作带来启发。让我们一起看看，如何将这些前沿技术转化为我们EPS系统性能提升、成本优化和功能安全保障的实际解决方案。
@@ -1127,6 +1091,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260723-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260723-pm.mp3" length="7258464" type="audio/mpeg"/>
       <pubDate>Thu, 23 Jul 2026 09:44:29 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技早报：AI、汽车、机器人前沿动态与EPS应用洞察</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选了七条最具价值的资讯，并结合我们汽车EPS产品研发工程师的工作背景，深入分析这些技术如何赋能我们的转向系统。准备好了吗？让我们一起探索今天的科技亮点！
+
+1. Towards Torque-Driven Reinforcement Learning for Quadruped Locomotion（来源：arXiv eess.SY 控制系统）
+   应用分析：这项研究对我们EPS电机控制策略有极高的借鉴价值。EPS系统中的永磁同步电机（PMSM）本质上就是力矩输出设备。目前FOC等控制策略已非常成熟，但强化学习（RL）在处理非线性、不确定性以及复杂环境适应性方面有潜力。我们可以尝试将力矩驱动的RL应用于EPS的电机控制，尤其是在手感调校和复杂工况下的转矩脉动抑制上。例如，可以构建一个仿真环境，让RL智能体学习在不同路况（如低摩擦、高摩擦、坑洼路面）和驾驶员意图下，如何输出最优电机力矩，以提供稳定、舒适且路感清晰的转向手感。RL有望学习补偿传统PI控制难以完全消除的非线性摩擦、惯量变化等。这与我们提升电机控制策略性能与鲁棒性，以及将前沿研究快速落地到EPS方案的需求高度契合，非常值得投入，可以从小规模仿真验证开始。
+   https://arxiv.org/abs/2607.18365
+
+2. Time-Series Anomaly Detection for Mobile Robots in Automotive Active Safety Testing using an RNN-VAE（来源：arXiv eess.SY 控制系统）
+   应用分析：这个方案可以直接迁移到EPS系统的故障诊断和预测性维护中。EPS系统在整车运行过程中产生大量的电机电流、电压、转速、位置、力矩、温度等时间序列数据。我们可以利用RNN-VAE模型，在EPS系统正常运行期间收集这些数据进行预训练，学习其“正常”行为模式。一旦部署到实际车辆中，模型可以实时监测这些时间序列数据，检测出与训练模式不符的异常，例如电机轴承磨损导致的NVH异常、传感器漂移、功率级器件早期失效等。这有助于在故障初期就发出预警，避免更严重的故障发生，降低维修成本和召回风险。这直接契合我们“用AI/数据驱动方法改进控制、标定效率、故障诊断与预测性维护”的需求，非常值得投入，可以先在台架测试中收集数据进行模型训练和验证。
+   https://arxiv.org/abs/2607.20079
+
+3. Emergent Autonomous Drifting for Collision Avoidance in Real-World Winter Driving Scenarios（来源：arXiv cs.RO）
+   应用分析：虽然EPS本身不直接控制车辆漂移，但该研究中对车辆极限动态的精确感知和控制，对线控转向（Steer-by-Wire, SbW）的架构和功能安全设计有重要参考价值。SbW系统需要更宽泛的控制能力来应对车辆动态的各种情况。我们可以借鉴MPC在极端工况下对车辆状态的预测和控制能力，将其融入到SbW的控制策略中，特别是在路感还原、助力策略和回正控制方面。例如，在低附着力路面或紧急避障时，SbW系统需要更快速、更精确地响应车辆侧滑或打滑，并提供驾驶员能接受的转向手感。长期来看，这非常值得关注和投入，因为它直接关系到线控转向的未来发展方向以及实现L4/L5级自动驾驶的关键技术。
+   https://arxiv.org/abs/2607.19484
+
+4. BYD previews 2027 Seal 06 sedan with LiDAR for enhanced driver assistance（来源：CnEVPost）
+   应用分析：LiDAR的引入对EPS系统间接影响很大。更精确的环境感知（通过LiDAR）意味着自动驾驶系统能做出更精准的路径规划和决策，进而对EPS提出更精细的转向控制要求。例如，在L3+级别自动驾驶中，车辆需要根据LiDAR提供的高精度障碍物信息，进行车道保持、紧急避让等动作，这就要求EPS能够提供极低延迟、高精度的转向力矩输出，并且具备极高的鲁棒性和功能安全等级。作为EPS研发工程师，我们需要关注LiDAR数据如何影响上位控制器的转向需求，以及如何优化电机控制策略以满足这些高精度、高动态的转向指令。虽然不是直接的技术投入，但理解ADAS和自动驾驶系统的演进方向有助于我们预判EPS未来的技术需求，值得持续关注。
+   https://cnevpost.com/2026/07/23/byd-previews-2027-seal-06-sedan/
+
+5. AMD unveils Kria module for real-time control, unified memory for robots（来源：The Robot Report）
+   应用分析：这款Kria模块对EPS控制器软硬件的未来发展有潜在影响。虽然EPS控制器目前主要使用MCU，但随着线控转向（SbW）向更高集成度、更复杂功能演进，以及AI算法在电机控制、故障诊断中的应用，对实时计算能力和统一内存的需求会增加。Kria模块的“实时控制”和“统一内存”特性，可能使其成为未来高性能EPS或SbW域控制器的潜在硬件平台。我们可以研究其在处理FOC、无传感器控制、MPC等复杂算法时的性能，尤其是在多核并行处理、FPGA加速自定义算法以及与功能安全IP核集成方面的能力。统一内存可以简化数据传输和管理，降低延迟。值得关注和评估，特别是考虑到机器人关节执行器控制与EPS电机控制的高度相关性，Kria在机器人领域的应用经验可以直接迁移。
+   https://www.therobotreport.com/amd-unveils-kria-module-real-time-control-unified-memory-robots/
+
+6. NEXUS: Structured Runtime Safety for Tool-Using LLM Agents（来源：arXiv cs.AI）
+   应用分析：尽管EPS系统目前不直接使用LLM代理，但随着“用AI/数据驱动方法改进控制、标定效率、故障诊断与预测性维护”的趋势，未来LLM可能参与到更上层的决策或诊断流程中。NEXUS的理念——结合确定性规则和AI风险评估进行分级干预——对EPS系统的功能安全（ISO 26262）设计有启发。我们可以将类似的分级安全策略应用于AI辅助诊断或自动标定工具中，确保AI的建议在被采纳前经过多层验证，并能根据风险等级进行人工确认或自动修正。短期内投入到EPS产品开发中优先级不高，但为未来AI在汽车控制系统中的应用提供安全框架的思路，值得关注并借鉴其理念。
+   https://arxiv.org/abs/2607.19356
+
+7. LISA: Linear-Indexed Sparse Attention for Efficient Long-Context Reasoning（来源：arXiv cs.AI）
+   应用分析：对于我们EPS工程师来说，直接应用LISA的可能性较小，因为EPS系统通常不直接处理自然语言长文本。但是，LISA代表了AI模型效率优化的一种前沿方向，特别是针对“长序列”数据处理。在未来，如果我们需要将AI模型（例如基于Transformer的预测模型或状态观测器）集成到EPS的复杂控制或诊断中，并且这些模型需要处理长时间序列的传感器数据或历史运行数据，那么LISA这种高效处理长上下文的机制就可能派上用场。它可以帮助我们设计出更轻量、更实时的车载AI模型，降低计算资源需求。值得持续关注AI模型架构和效率的最新进展，它有助于解决“把前沿研究快速转成可落地的EPS工程方案”中的效率挑战。
+   https://arxiv.org/abs/2607.19358</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260724-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260724-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260724-am.mp3" length="4869216" type="audio/mpeg"/>
+      <pubDate>Thu, 23 Jul 2026 22:36:41 +0000</pubDate>
     </item>
   </channel>
 </rss>
