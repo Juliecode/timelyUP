@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 24 Jul 2026 09:43:11 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 22:38:35 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾之舵：AI赋能EPS，机器人控制启示录</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的中文科技早报。我是大家的老朋友，专注于汽车电动助力转向系统，也就是EPS的研发工程师。今天，我们将一起探索AI前沿、汽车智能化和机器人领域的七条重磅资讯。这些信息不仅能拓宽我们的技术视野，更希望能为我们在电机控制策略、线控转向架构以及AI应用方面，带来实实在在的启发和可落地的工程方案。
-
-1. OpenAI 推出 GPT-5.6，并宣布“ChatGPT Work”（来源：TechCrunch, Hacker News, The Verge）
-   应用分析：对于我们EPS研发而言，GPT-5.6更强的代码生成和理解能力，可辅助编写嵌入式C代码的初始框架或进行代码审查，加速开发流程。例如，让GPT-5.6辅助生成电机FOC算法中的状态机逻辑、外设驱动代码的模板，或审查现有代码的功能安全漏洞。其强大的推理能力还可用于分析大量技术文档、标准如ISO 26262并提炼关键要求。因此，值得投入，能提升开发效率和代码质量，尤其在模型化设计后的代码优化和故障诊断辅助方面。
-   https://openai.com/index/gpt-5-6/
-
-2. Open-Ended Scenario Reasoning for Specialist Model Adaptation（来源：arXiv cs.LG）
-   应用分析：这项研究对我们EPS研发非常实用。在电机控制中，电机参数如电阻、电感会随温度变化或老化而漂移，影响FOC控制性能。ROAM可以作为上层智能适配层，利用LLM理解温度、运行时间、路况等“场景知识”，结合当前EPS系统的运行数据，实时修正电机模型参数或调整FOC控制器参数，以补偿温漂或老化效应。这比传统的查表法更智能。极度值得投入，因为它直接解决了电机控制策略性能和鲁棒性提升的关键痛点，大幅减少标定工作量，并提升产品全生命周期的性能稳定性。
-   https://arxiv.org/abs/2607.06625
-
-3. LLM-Guided Task-Semantic Field Factorization for Industrial Process Forecasting（来源：arXiv cs.LG）
-   应用分析：这项技术能非常实用。EPS系统中，我们需对电机电流、转矩、温度等进行预测，以实现故障预警或优化控制。但不同车型、工况数据差异大，故障标签稀缺。我们可以用LLM分析EPS设计文档、故障报告，理解“电机过温”、“电流纹波异常”等变量的物理意义和相互关系。TSF可以帮助我们构建语义增强的预测模型，例如预测电机轴承磨损程度、控制器功率器件的健康状态，或预判转向手感在特定工况下的劣化趋势。非常值得投入，能显著提升EPS系统的智能化水平和预测性维护能力，从被动故障处理转向主动预防。
-   https://arxiv.org/abs/2607.06623
-
-4. Integrated Automated Car Following and Lane-changing control based on a Parametrized Deep Q-network with Hybrid Action Space（来源：arXiv eess.SY 控制系统）
-   应用分析：这项研究对线控转向或L3+自动驾驶的系统层面有重要意义。随着线控转向（Steer-by-Wire）发展，EPS将成为车辆运动控制的核心执行单元。P-DQN框架可作为上层自动驾驶规划控制模块的参考，其输出的横向和纵向控制指令，将直接影响线控转向系统对转向角度和手感的需求。我们可以研究如何将P-DQN的输出指令平滑、安全地传递给EPS底层控制器，并确保在变道等动态过程中，EPS能提供符合驾驶员预期或系统安全要求的转向响应和路感还原。值得关注和投入预研，对Steer-by-Wire的架构和功能安全设计有直接启发。
-   https://arxiv.org/abs/2607.06771
-
-5. Inside the Race to Electrify Semi Trailers for Long-Haul Freight（来源：IEEE Spectrum）
-   应用分析：这项技术本身不直接用于EPS，但其技术理念对EPS电机选型和控制策略有借鉴意义。EPS电机虽然功率远小于电动车轴，但其PMSM电机选型、FOC矢量控制、效率优化、再生制动（在某些线控转向方案中可能实现）等方面，都可以从电动车轴的经验中学习。例如，该电动车轴对高功率密度、高效率、低NVH的要求，与EPS电机设计不谋而合。再生制动技术可以启发我们思考在Steer-by-Wire系统中，如何通过电机反向发电来回收能量，或者在回正阻尼等手感调校中，如何更精细地利用电机控制实现能量优化。值得关注，但无需直接投入，主要作为未来EPS系统演进的参考。
-   https://spectrum.ieee.org/self-powered-trailers-freight-decarbonization
-
-6. Humanoid robots controlled by surgeons did world-first operation on live pigs（来源：Ars Technica, The Robot Report）
-   应用分析：这项研究与我们的工作高度相关，技术可迁移。机器人手术对执行器的精度、响应速度、力反馈、安全冗余都有极高要求。EPS系统作为车辆转向的核心执行器，也面临类似挑战。我们可以深入研究这些人形机器人关节执行器（伺服电机）的控制策略，例如它们如何实现亚毫米级的定位精度、如何处理外部扰动、如何通过力矩控制模拟精细手感，以及如何设计冗余机制以确保功能安全。这些经验可以直接应用于EPS电机控制策略的性能与鲁棒性提升，尤其是线控转向系统对转向手感和精确控制的严格要求。极度值得投入，机器人关节执行器控制是EPS电机控制的前沿参考，可以带来直接的技术突破和工程方案。
-   https://arstechnica.com/ai/2026/07/humanoid-robots-controlled-by-surgeons-did-world-first-operation-on-live-pigs/
-
-7. NVIDIA and Hugging Face bring new models and frameworks to LeRobot（来源：The Robot Report）
-   应用分析：LeRobot提供的模型和框架可以帮助我们探索AI在EPS领域的应用。例如，利用其预训练的机器人行为模型或强化学习框架，我们可以尝试开发基于模仿学习或强化学习的助力策略自动标定工具，让EPS系统在不同驾驶员、不同路况下自动学习并优化转向手感。此外，其数据集管理和模型共享能力，有助于我们在公司内部建立EPS控制算法的模型库，加速迭代和验证。值得关注和少量投入，作为AI在控制系统应用的一个重要切入点，LeRobot提供了一个现成的平台和工具链，可以用来快速验证AI控制概念在EPS中的可行性，并探索自动标定、异常检测等应用。
-   https://www.therobotreport.com/nvidia-hugging-face-bring-new-models-frameworks-lerobot/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260710-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260710-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260710-am.mp3" length="3772224" type="audio/mpeg"/>
-      <pubDate>Thu, 09 Jul 2026 22:43:02 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 科技早报：GPT-5.6发布，AI控制系统安全性提升，人形机器人手术新突破</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人技术三大方向，为您精选出七条最具价值的资讯。从OpenAI最新大模型发布，到AI在控制系统中的安全应用，再到汽车线控转向和人形机器人手术的突破，每一条都可能为您的研发工作带来新的启发。让我们一起开启今天的科技之旅！
@@ -1127,6 +1091,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260724-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260724-pm.mp3" length="2684304" type="audio/mpeg"/>
       <pubDate>Fri, 24 Jul 2026 09:43:11 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI、汽车智能化、机器人前沿：EPS工程师的今日洞察</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能前沿、汽车智能化和机器人三大领域，为您精选出七条最值得关注的资讯。从大模型的最新进展，到控制系统中的功能安全突破，再到电动汽车硬件材料革新，以及机器人实时控制芯片的动态，这些都与我们汽车EPS产品研发工程师的工作息息相关。话不多说，让我们立刻进入今天的早报时间！
+
+1. Anthropic 发布 Claude Opus 5，能力接近 Fable 5（来源：The Verge）
+   应用分析：作为EPS工程师，Opus 5的发布对我们而言是间接但重要的信号。它代表了通用AI能力的提升，未来可以作为我们引入AI的强大基础工具。例如，利用其强大的自然语言理解和生成能力，我们可以辅助进行需求分析、技术文档生成，甚至在模型化设计中提供高层级的逻辑验证或自动生成部分测试用例。短期内，我们不会直接将大模型用于EPS的实时控制，但其在辅助研发、提升效率方面的潜力巨大。现在值得投入时间去了解其最新能力，并在非实时、辅助性任务中进行小范围尝试，例如利用其生成代码片段或优化开发流程，无需大规模定制开发。
+   https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release
+
+2. CLOE：基于 Christoffel Loss Autoencoder 的异常检测方法（来源：arXiv cs.LG）
+   应用分析：这项研究与我们工作高度相关，非常值得投入。在EPS电机控制中，电机转矩脉动、NVH异常、传感器漂移或失效、功率器件故障等都属于异常检测的范畴。CLOE这种结合降维和理论基础的半监督方法，可能比传统基于阈值或简单统计的方法更鲁棒，且能有效处理高维数据。我们可以尝试将EPS系统中的电机电流、电压、转速、位置、温度等多种传感器数据作为高维输入，利用CLOE在离线正常数据上进行训练，然后实时监测其输出的异常分数，用于早期故障诊断和预测性维护。这可以显著提升EPS系统的可靠性和安全性，降低质保成本，是值得深入研究和落地的方向。
+   https://arxiv.org/abs/2607.20530
+
+3. AINTMA：基于智能体AI架构的自主测试管理系统（来源：arXiv cs.AI）
+   应用分析：这项技术与我们工作高度相关，值得关注并积极探索。EPS系统开发中，MIL、SIL、HIL测试、台架测试和整车标定测试占据了大量的时间和资源。AINTMA提出的测试发现、风险评估、强化学习优先级排序、执行编排等智能体，可以为我们提供思路，利用AI自动生成测试用例、优化测试序列、预测潜在缺陷。特别是其“生成式质量智能体”利用大型语言模型生成质量叙述和测试建议，有望帮助我们更高效地分析测试结果、编写测试报告，甚至自动生成部分测试脚本。我们可以在HIL或SIL环境中，尝试构建一个简化版的多智能体测试助手，以提升测试覆盖率和效率，降低测试成本。这是一个值得投入资源进行概念验证和初期开发的领域。
+   https://arxiv.org/abs/2607.20452
+
+4. 鲁棒自适应备用控制障碍函数：处理参数不确定性的安全控制（来源：arXiv eess.SY 控制系统）
+   应用分析：这项研究与我们工作极其相关，建议深入研究和落地。EPS系统，尤其是线控转向，面临电机参数变化（如温漂）、摩擦力不确定性、外部干扰等挑战。传统的安全机制通常依赖于保守的冗余设计。鲁棒自适应备用CBF能够预测系统轨迹，并结合参数估计误差界限收紧安全条件，这为我们设计更智能、更高效的安全控制器提供了新思路。我们可以考虑将其应用于线控转向的冗余执行器控制，确保在某个电机失效或性能下降时，系统仍能保持基本转向功能，并且在参数不确定性下也能满足ISO 26262的安全目标。这对于提升线控转向的安全性和鲁棒性，以及降低冗余成本具有巨大潜力，是当前最值得投入的研发方向之一。
+   https://arxiv.org/abs/2607.20842
+
+5. SevDiff：基于严重程度条件扩散模型生成长尾冲突轨迹用于 ADAS 评估（来源：arXiv eess.SY 控制系统）
+   应用分析：这项技术对我们EPS工程师而言，是间接相关但具有重要战略价值的，值得关注。虽然EPS本身不直接生成驾驶轨迹，但作为L3/L4级自动驾驶的执行器，其控制性能和鲁棒性需要在各种极端场景下进行验证。SevDiff能够生成长尾冲突轨迹数据，可以作为我们HIL或整车测试环境的输入，模拟更真实、更严苛的危险场景。这有助于我们验证EPS在紧急避障、自动驾驶接管等关键时刻的响应速度、精确性和稳定性，并优化助力策略与手感调校。我们可以与ADAS团队协作，将此类生成数据集成到我们现有的测试验证流程中，提升测试的全面性和效率。初期投入以技术评估和与相关团队协作为主。
+   https://arxiv.org/abs/2607.20549
+
+6. SABIC 推出新型 PPS 化合物，用于 800V 电动汽车逆变器功率模块绝缘（来源：Charged EVs）
+   应用分析：这项资讯与我们工作高度相关，非常值得技术调研。EPS系统中的电机控制器包含功率级，对绝缘材料的耐压、耐温、散热性能要求很高。随着汽车电气化向八百伏甚至更高电压发展，现有材料可能面临挑战。SABIC的新型PPS化合物能用于八百伏逆变器，这意味着它在高压绝缘、耐热性、机械强度方面具有优势，可能有助于提升功率密度和可靠性。我们可以关注这类材料在电机控制器功率模块封装、母线绝缘等方面的应用潜力，了解其在散热、成本和可靠性方面的具体参数。这有助于我们选型更先进的功率器件和封装方案，优化控制器设计，以支持更高性能、更紧凑的EPS系统。这是一个中期值得投入资源进行材料评估和供应商合作的方向。
+   https://chargedevs.com/newswire/sabics-new-pps-compounds-insulate-power-modules-for-800-v-ev-inverters/
+
+7. AMD 推出 Kria 模块，为机器人提供实时控制和统一内存（来源：The Robot Report）
+   应用分析：这项资讯与我们工作高度相关，值得技术调研和未来评估。EPS控制器需要高性能的微控制器（MCU）或片上系统（SoC）来执行复杂的FOC矢量控制、状态观测器、模型预测控制（MPC）等算法，同时还要满足ISO 26262功能安全要求。AMD Kria模块强调实时控制和统一内存，这对于我们实现更复杂的电机控制策略、引入AI算法（如神经网络观测器、强化学习控制）以及线控转向的冗余计算非常有利。统一内存可以减少数据搬运延迟，提升实时性，这在ASIL-D等级的功能安全系统中尤其重要。我们可以关注其在实时操作系统支持、功能安全认证、功耗和成本等方面的具体信息，并将其纳入未来EPS控制器硬件平台选型的备选方案。这是一个长期值得关注的技术方向，可以从早期测试和评估开始投入。
+   https://www.therobotreport.com/amd-unveils-kria-module-real-time-control-unified-memory-robots/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260725-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260725-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260725-am.mp3" length="2588112" type="audio/mpeg"/>
+      <pubDate>Fri, 24 Jul 2026 22:38:35 +0000</pubDate>
     </item>
   </channel>
 </rss>
