@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 24 Jul 2026 22:38:35 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 09:42:37 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 科技早报：GPT-5.6发布，AI控制系统安全性提升，人形机器人手术新突破</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人技术三大方向，为您精选出七条最具价值的资讯。从OpenAI最新大模型发布，到AI在控制系统中的安全应用，再到汽车线控转向和人形机器人手术的突破，每一条都可能为您的研发工作带来新的启发。让我们一起开启今天的科技之旅！
-
-1. OpenAI Launches GPT-5.6（来源：TechCrunch）
-   应用分析：GPT-5.6的增强能力，尤其是其在理解复杂指令、生成高质量代码、以及处理长上下文方面的进步，可以直接用于研发辅助。具体来说，我们可以利用它来协助生成嵌入式C代码片段，特别是在实现一些标准算法，比如PID控制或状态观测器基础框架时；也可以用于审查现有代码的潜在逻辑错误和风格问题。在技术文档和规范撰写方面，它能辅助编写EPS系统设计文档、测试报告或功能安全分析的初步草稿。此外，利用其强大的知识库，还能快速查询关于电机控制理论、ISO 26262标准细节或特定MCU外设配置的疑问。虽然目前可能无法直接用于自动标定流程，但可作为智能助手提升效率。这笔投入是值得的，它能显著提升研发效率，减少重复性劳动，并作为头脑风暴的伙伴，加速初期概念验证和迭代进程。
-   https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/
-
-2. LiST: Lipschitz Scaling Training for Robust and Calibrated Neural Networks（来源：arXiv cs.LG）
-   应用分析：这项技术对我们来说高度相关且能直接应用。当我们使用神经网络作为FOC控制器中的观测器（如无传感器控制中的转子位置观测器）或作为助力曲线的自适应模块时，通过LiST训练可以确保这些网络在面对传感器噪声、参数漂移或外部干扰时，输出依然稳定且在可接受的范围内，避免系统失稳。在故障诊断与预测性维护方面，训练用于电机故障诊断的神经网络时，LiST能使其在少量异常数据或噪声干扰下，仍能准确判断故障类型和严重程度，并给出可靠的置信度。此外，LiST通过明确的利普希茨约束，使得神经网络的行为边界更加清晰，这对于ISO 26262功能安全分析中的“确定性”和“可预测性”要求具有重要意义。因此，非常值得投入研究这类方法，并在MIL/SIL/HIL环境中进行验证，它能显著降低AI引入的风险，加速AI在核心控制模块中的落地。
-   https://arxiv.org/abs/2607.07745
-
-3. Data-Driven Critic-Free Policy Iteration for Continuous-Time Linear Quadratic Regulation（来源：arXiv eess.SY 控制系统）
-   应用分析：这项技术具有很高的潜在价值，可以在EPS系统中的电机控制、助力手感调校等问题中得到应用。在PMSM FOC控制中，电机参数会随温度变化，传统方法需要在线辨识或建立复杂模型。利用这种数据驱动策略迭代，我们可以在实际运行中采集电机输入和状态数据，直接学习并自适应调整电流环或速度环的PI增益，提升控制性能和鲁棒性。在助力手感自动标定方面，可以将不同驾驶场景下的驾驶员输入和EPS输出视为“最优”行为数据，通过该方法学习一个理想的助力控制器，实现更高效、更个性化的助力手感自动标定。此外，在无传感器FOC中，如果将观测器的误差补偿也看作一个控制问题，这种数据驱动方法有可能根据输入和估计误差数据，直接优化观测器参数或结构，提升估计精度。这非常值得投入，它提供了一种将强化学习与经典控制理论结合的务实路径，可以先在HIL或台架上进行小范围验证。
-   https://arxiv.org/abs/2607.08204
-
-4. Toshiba Unveils U-MOS11-H 80V MOSFET（来源：Power Electronics News）
-   应用分析：这款MOSFET对我们来说非常关键，是EPS控制器硬件选型和性能优化的直接考量。采用低导通电阻的MOSFET能显著降低功率损耗，特别是在大电流输出时，从而提升EPS系统的整体效率，间接为电动汽车增加续航里程，或减少对冷却系统的需求。改进的开关性能可以帮助我们设计更优的PWM控制策略，减少开关噪声，从而改善EPS系统的NVH表现，提升驾驶体验。增强的散热特性意味着在相同散热条件下，MOSFET可以承受更大的电流，或者在相同电流下工作温度更低，这有助于我们设计更小型化、更轻量化的EPS控制器，并提高其在高温环境下的长期可靠性，满足ISO 26262对硬件可靠性的要求。因此，绝对值得投入，这是EPS研发的必做项，能带来显著的竞争力优势和系统性能提升。
-   https://www.powerelectronicsnews.com/toshiba-unveils-u-mos11-h-80v-mosfet/
-
-5. Shift &amp; Drift: A Zero-Shot Benchmark for Generalizable and Robust Autonomous Driving Motion Planning（来源：arXiv cs.RO）
-   应用分析：虽然这项研究不直接用于EPS电机控制，但它对未来线控转向系统的架构设计和功能安全至关重要。作为EPS向线控转向演进的关键一步，我们需要理解上层自动驾驶系统对转向系统的性能要求，特别是其在复杂、未知环境下的鲁棒性需求。这项基准测试的结果可以作为我们定义线控转向系统响应速度、精度、故障容忍度等指标的参考。当自动驾驶规划器在未知场景下出现“漂移”或不确定性时，线控转向系统需要具备足够的冗余和故障安全机制来接管或降级。这项研究可以帮助我们理解自动驾驶系统可能出现的失效模式，从而更好地设计线控转向系统的安全架构，满足ISO 26262对ASIL D等级的要求。此外，了解这种高级运动规划的挑战，有助于我们与自动驾驶团队更好地协同，确保在极端或不确定场景下，转向系统能够提供可靠的执行能力。因此，值得投入时间去学习和分析这类自动驾驶基准测试，这有助于我们预见线控转向系统的技术演进方向，并提前进行技术预研和架构规划。
-   https://arxiv.org/abs/2607.07844
-
-6. Input-Constrained Spatiotemporal Tubes for Safe Navigation of Unknown Euler-Lagrange Systems in Dynamic Environments（来源：arXiv eess.SY 控制系统）
-   应用分析：这项技术具有变革性潜力，可以作为线控转向系统核心控制策略的理论基础。我们可以将车辆视为一个欧拉-拉格朗日系统，利用“时空管”概念来定义车辆在特定场景（如紧急避障、车道保持）下的安全可达区域。该框架可以在考虑转向电机最大力矩、转向角速度等输入约束的前提下，实时生成并跟踪安全轨迹，确保车辆不偏离安全区域，即使在系统参数不完全已知的情况下也能保持鲁棒性。在功能安全与故障降级策略方面，当EPS系统出现部分故障导致助力能力受限时，该方法可以根据剩余的执行器能力，动态调整安全“时空管”的范围，并计算出在当前限制下车辆仍能安全导航的最大能力边界，从而指导故障降级策略。此外，在EPS系统中，车辆负载、轮胎特性等因素可能导致模型偏差，该方法通过处理“未知系统”，提供了一种在模型不完全精确时仍能保证性能和安全的控制范式。因此，非常值得投入，通过在Simulink/MATLAB中进行模型验证，甚至在HIL平台上进行初步实验，可以评估其在EPS系统中的可行性，为未来线控转向系统实现高级功能安全和性能保证奠定基础。
-   https://arxiv.org/abs/2607.08189
-
-7. In vivo feasibility study of humanoid robots in surgery（来源：arXiv cs.RO）
-   应用分析：这项技术对我们来说高度相关。人形机器人的关节执行器控制技术与EPS电机的FOC、力矩控制、NVH抑制等有直接的技术迁移价值。手术机器人要求亚毫米级的精度和极低的振动，这促使其关节伺服电机在力矩控制精度、响应速度和NVH抑制方面达到极致。我们可以借鉴这些先进的电机控制策略，如更精细的FOC控制、转矩脉动抑制算法，以提升EPS电机输出力矩的平顺性和精度，从而改善转向手感和NVH表现。手术机器人需要与软组织进行柔顺交互，这与EPS在助力手感调校中实现自然、线性的阻尼和回正力矩，以及未来线控转向中模拟路感、提供安全力反馈有异曲同工之处。借鉴其柔顺控制算法，可以优化EPS的助力曲线和手感模型。此外，手术机器人对故障安全要求极高，通常采用多重冗余设计，这与线控转向ASIL D等级的功能安全要求非常契合。研究其冗余执行器、传感器融合、故障诊断与降级策略，可以为线控转向的硬件架构和软件安全设计提供宝贵经验。因此，非常值得投入，通过跟踪相关论文和开源项目，将其中的电机控制算法和柔顺控制思想引入EPS的预研和开发，将有助于提升EPS产品的技术领先性。
-   https://arxiv.org/abs/2607.07972</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260710-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260710-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260710-pm.mp3" length="5048496" type="audio/mpeg"/>
-      <pubDate>Fri, 10 Jul 2026 09:43:09 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI、智能汽车与机器人：从数学猜想到手术台，技术前沿的最新洞察</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为大家精选了七条重磅资讯。从GPT-5.6在数学推理上的突破，到英飞凌在传感器领域的布局，再到仿人机器人在复杂地形和外科手术中的进展，每一条都可能为我们的研发工作带来新的灵感和方向。话不多说，让我们立刻进入今天的早报时间！
@@ -1127,6 +1091,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260725-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260725-am.mp3" length="2588112" type="audio/mpeg"/>
       <pubDate>Fri, 24 Jul 2026 22:38:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 智驾前沿：高压EPS、机器人基础模型与AI工程新范式</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将一起聚焦AI前沿、汽车智能化和机器人这三大领域，看看有哪些值得我们深入思考和实践的新动向。从电动汽车的高压技术挑战，到机器人执行器控制的AI新范式，再到如何用AI提升我们的研发效率，相信今天的资讯都能给大家带来不少启发。话不多说，我们马上开始！
+
+1. SABIC’s new PPS compounds insulate power modules for 800 V EV inverters（来源：Charged EVs）
+   应用分析：这对我们EPS系统向高压平台演进至关重要。目前EPS多为十二伏，但线控转向（Steer-by-Wire）未来可能集成到更高压的车辆架构中，或者EPS电机本身采用更高电压以提升功率密度。这种PPS材料可以用于我们EPS控制器中的功率级封装，特别是IGBT或碳化硅模块的绝缘。投入研究其热管理、介电性能与我们现有封装工艺的兼容性非常值得，能直接提升高压EPS系统的功能安全和长期可靠性，甚至可能减小控制器体积，降低成本。
+   https://chargedevs.com/newswire/sabics-new-pps-compounds-insulate-power-modules-for-800-v-ev-inverters/
+
+2. Yokogawa’s WT1500 power analyzer measures up to 2,000 V DC without high-voltage dividers（来源：Charged EVs）
+   应用分析：在我们开发和验证高压EPS电机控制器的过程中，精确测量功率、效率和损耗是必不可少的。如果未来EPS向高压线控转向发展，两千伏的直接测量能力将极大地简化我们的台架测试和整车标定工作。无需分压器意味着更少的设备、更快的设置和更可靠的数据。这值得我们采购并集成到测试体系中，尤其是对于未来高压电机和功率器件的性能评估，能加快开发周期，提升验证质量。
+   https://chargedevs.com/newswire/yokogawas-wt1500-power-analyzer-measures-up-to-2000-v-dc-without-high-voltage-dividers/
+
+3. Momenta reportedly enters robovan sector as China's driverless delivery market heats up（来源：CnEVPost）
+   应用分析：这与我们线控转向（Steer-by-Wire）的架构和功能安全设计方向高度契合。自动驾驶货运车是线控转向的理想应用场景，因为对可靠性和自动化的需求更强。我们可以关注Momenta在转向系统方面的需求和技术选型，了解他们如何实现冗余、故障诊断和降级策略。与这类自动驾驶公司合作，或参与其线控转向方案的讨论，能为我们未来EPS向线控转向演进提供宝贵的工程经验和市场洞察。投入研究其对线控转向的性能、安全和鲁棒性要求，对我们的产品路线图有直接指导意义。
+   https://cnevpost.com/2026/07/24/momenta-enters-robovan-sector/
+
+4. Generalist’s GEN-1 foundation model now supports a range of robot end effectors（来源：The Robot Report）
+   应用分析：这项技术对我们的EPS电机控制有巨大的借鉴意义。EPS电机本质上也是一种高精度执行器。我们可以探索如何将类似的“基础模型”概念应用于EPS电机控制。例如，训练一个通用的FOC（磁场定向控制）或无传感器控制基础模型，通过少量微调就能适应不同型号的PMSM电机，处理不同的转矩密度、惯量和NVH特性。这能显著提高我们控制策略的开发效率和鲁棒性，减少针对每个新项目的调校工作量。投入研究这类模型在嵌入式系统上的部署和实时性是值得的。
+   https://www.therobotreport.com/generalists-gen-1-foundation-model-now-supports-a-range-of-robot-end-effectors/
+
+5. NEURA Robotics establishes NEURA Gym RWTH Aachen to train physical AI（来源：The Robot Report）
+   应用分析：这个方向与我们提升电机控制策略性能和鲁棒性，以及线控转向的需求高度一致。我们可以借鉴“物理AI”的训练方法来改进EPS电机的控制。例如，利用强化学习在仿真环境中训练无传感器控制算法，使其在各种工况（如温漂、负载变化）下表现出更强的鲁棒性。或者，通过数据驱动的方法自动优化助力曲线和手感调校参数，减少人工经验依赖。建立类似的内部“物理AI训练平台”或与相关研究机构合作，投入资源进行算法验证和迭代，将是提升我们产品竞争力的重要途径。
+   https://www.therobotreport.com/neura-robotics-establishes-neura-gym-rwth-aachen-train-physical-ai/
+
+6. Opus 5 is currently #1 on Artificial Analysis Intelligence Leaderboard（来源：Hacker News）
+   应用分析：虽然Opus 5本身不是直接用于电机控制，但其强大的AI能力可以间接赋能我们的研发工作。例如，我们可以利用它来：代码生成与审查，辅助生成嵌入式C代码片段，或审查现有代码中的潜在缺陷；文档分析与知识管理，快速从大量技术文档（如ISO两万六千两百六十二标准、电机数据手册）中提取关键信息，辅助设计决策；故障诊断辅助，分析历史故障报告和传感器数据，提供初步的故障诊断建议；自动测试用例生成，根据需求文档自动生成MIL/SIL/HIL测试用例。虽然直接投入到训练类似Opus 5的模型不切实际，但作为工具辅助研发、提高效率是值得的。可以考虑部署内部的私有化大型语言模型，或利用现有API服务，但需关注数据安全和隐私。
+   https://artificialanalysis.ai/models
+
+7. Prentis, new AI lab co-founded by Reid Hoffman, Mark Pincus in talks to raise $100M（来源：TechCrunch）
+   应用分析：这个趋势对我们工程团队的效率提升有直接指导意义。我们日常工作中有很多重复性、规则性的电脑操作，例如：数据预处理和分析，自动化传感器数据清洗、特征提取、报告生成；测试报告自动化，自动汇总HIL/SIL/台架测试结果，生成规范的测试报告；配置管理和版本控制辅助，自动化一些Git操作、项目配置更新；模型参数管理，自动化模型参数的导入导出、版本追踪和一致性检查。我们可以投入资源，利用现有AI工具或开发内部脚本，自动化这些“常规电脑任务”。初期投入成本不高，但长期收益显著。
+   https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-mark-pincus-in-talks-to-raise-100m/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260725-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260725-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260725-pm.mp3" length="3745296" type="audio/mpeg"/>
+      <pubDate>Sat, 25 Jul 2026 09:42:37 +0000</pubDate>
     </item>
   </channel>
 </rss>
