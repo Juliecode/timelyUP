@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 27 Jul 2026 09:42:47 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 22:38:52 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾浪潮下的转向未来：AI芯片、安全与人才新动向</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报，我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，看看有哪些值得我们关注的重磅资讯。从大模型训练的效率突破，到自动驾驶芯片的幕后英雄，再到嵌入式系统安全的新挑战，以及未来人才的培养方向，每一条都可能触及我们EPS产品研发的神经。话不多说，让我们立刻进入今天的早报时间。
-
-1. Flash-MSA: Accelerating Million-Token Training with Sparse Attention Kernels（来源：Hacker News）
-   应用分析：这项技术本身主要针对超大规模的语言模型训练，直接用于我们EPS或线控转向的控制算法开发可能较远。但其核心思想——优化内存访问和稀疏计算——对嵌入式AI模型优化有重要的借鉴意义。例如，在设计用于电机控制的神经网络观测器或控制器时，我们可以思考如何引入稀疏性或更高效的内存访问模式，以适应MCU有限的资源。因此，现阶段不值得直接投入研究 Flash-MSA 本身，但团队中负责AI算法方向的同事应关注这类底层优化技术，了解其原理和潜力，为未来将更复杂的AI模型移植到嵌入式平台做技术储备。
-   https://nanduruganesh.github.io/flash-msa/
-
-2. Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k（来源：Hacker News）
-   应用分析：这项资讯对我们非常有用。我们团队正在探索利用AI辅助方法改进控制算法开发和标定效率，因此在评估和选择用于代码生成、代码审查或故障诊断的LLM工具时，Token使用效率是一个关键指标。这项资讯提示我们，即使是知名模型，也可能存在效率问题。因此，值得投入关注和实践，在引入AI辅助开发工具时，我们应该进行内部测试和评估，对比不同模型的Token消耗、生成质量和响应速度。选择更高效的LLM能加快迭代速度，降低云服务成本。
-   https://systima.ai/blog/claude-code-vs-opencode-token-overhead
-
-3. Apple’s failed self-driving car program left a legacy of powerful AI chips（来源：The Verge）
-   应用分析：这项信息对我们规划EPS系统架构，特别是向线控转向演进时，提供了重要的参考方向。线控转向对计算能力、实时性、冗余和功能安全有极高要求，未来必然需要集成强大的AI处理单元。苹果的经验印证了对高性能车载AI芯片的投入是趋势。因此，我们值得密切关注汽车行业高性能AI芯片的进展，例如英伟达、高通、地平线等厂商的车规级AI芯片路线图。在EPS控制器向线控转向演进的架构设计中，我们需要预留足够的算力接口和扩展性，以适应未来AI控制策略的需求，甚至可以开始评估一些嵌入式AI加速器在电机控制中的潜力。
-   https://www.theverge.com/tech/964519/apple-silicon-self-driving-car-ai-m7-ultra
-
-4. TechCrunch Mobility: A robotaxi ultimatum（来源：TechCrunch）
-   应用分析：这项资讯对我们判断行业趋势非常有帮助。Robotaxi的商业化成功与否，将直接影响线控转向的普及速度和技术要求。如果Robotaxi发展受阻，线控转向的短期需求可能更多集中在L2+/L3级别，而非立即进入L4/L5的完全冗余和功能安全架构。这会影响我们对产品路线图、技术投入优先级的决策。因此，值得投入时间和精力进行深入分析和跟踪。我们需要定期评估Robotaxi及整个自动驾驶行业的宏观发展，理解其面临的挑战，这有助于我们更理性地规划EPS向线控转向演进的节奏和技术储备，避免盲目超前投入或错失关键机遇。
-   https://techcrunch.com/2026/07/12/techcrunch-mobility-a-robotaxi-ultimatum/
-
-5. The State of MCP Security [pdf]（来源：Hacker News）
-   应用分析：这份报告对我们直接且非常有用。我们的EPS控制器软硬件开发必须严格遵循ISO二六二六二功能安全标准，并日益关注ISO斜杠SAE二一四三四汽车网络安全标准。这份MCP安全报告可以作为我们进行威胁分析与风险评估（TARA）的参考，指导我们在MCU选型、硬件安全模块（HSM）集成、固件加密、安全启动、故障诊断与降级策略设计中，提升EPS系统的抗攻击能力。因此，值得高度投入。团队中的硬件工程师、软件工程师和功能安全专家应共同研读这份报告，并将其中的最佳实践或潜在风险点纳入到EPS产品的开发流程中，确保我们的系统满足最新的汽车网络安全要求。
-   https://www.canopii.dev/State%20of%20MCP%20Security%202026.pdf
-
-6. The One-Step Trap (In AI Research)（来源：Hacker News）
-   应用分析：这项资讯间接但非常有用，可以作为方法论指导。在利用AI改进EPS控制策略时，例如开发基于强化学习的助力曲线调校或神经网络状态观测器，我们不能只关注短期内某个特定工况下的性能提升。需要考虑模型的泛化能力、鲁棒性、在不同环境下的适应性，以及与现有物理模型结合的潜力。这要求我们建立更全面的评估体系，并投入时间和资源进行长期验证。因此，值得团队内部，尤其是负责AI和前瞻研究的工程师认真思考。可以组织内部技术分享，讨论如何将文章中提到的“一步陷阱”理论应用于我们当前的AI项目评估中，平衡短期目标与长期愿景。
-   http://incompleteideas.net/IncIdeas/OneStepTrap.html
-
-7. STEM education in the classroom, introducing BotBall（来源：The Robot Report）
-   应用分析：这项资讯对我们而言，间接但具有战略意义。虽然BotBall不是直接的技术方案，但它代表了基础教育中对机器人和编程的重视。对于我们团队而言，这意味着未来进入行业的工程师，其机器人和编程基础将更加扎实。我们可以考虑与高校或职业技术学校合作，提供EPS相关的实践项目或实习机会，吸引这些具备BotBall背景的优秀人才。因此，值得投入一定的关注和战略思考。不直接投入研发，但可以作为人才引进和企业社会责任（CSR）的一部分，帮助我们建立长期的人才储备，并提升企业在机器人和智能控制领域的品牌影响力。
-   https://www.therobotreport.com/stem-education-classroom-introducing-botball/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260713-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260713-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260713-am.mp3" length="3621024" type="audio/mpeg"/>
-      <pubDate>Sun, 12 Jul 2026 22:29:47 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 科技早报：AI赋能电机控制，线控转向与云端驾驶的未来挑战</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热门方向，为您精选七条重磅资讯。从电机控制的精度突破，到大模型如何保障物理世界的安全，再到线控转向的云端挑战，以及苹果自动驾驶遗产中的AI芯片，相信今天的分享能为您带来新的思考和启发。话不多说，我们马上开始。
@@ -1123,6 +1087,46 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260727-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260727-pm.mp3" length="2734848" type="audio/mpeg"/>
       <pubDate>Mon, 27 Jul 2026 09:42:47 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技早报：AI预测控制新突破、汽车电驱高集成与机器人合成数据应用</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人三大领域，为大家精选了7条最值得关注的资讯。从AI模型如何实现更精准的预测控制，到汽车电驱系统的高度集成化，再到机器人领域如何利用合成数据加速学习，这些都与我们的日常工作息息相关。话不多说，让我们马上进入今天的早报时间。
+
+1. Toward Goal-Agnostic Joint-Embedding Predictive Control of Partial Differential Equations（来源：arXiv cs.LG）
+   应用分析：这项技术能用，且值得深入研究。EPS系统本质上也是一个多物理场耦合的复杂系统，包含电机电磁、机械传动、液压阻尼以及与车辆底盘的交互。我们可以尝试用JEPA架构离线学习EPS系统的复杂动力学模型，例如电机在不同负载、温度、转速下的转矩响应、NVH特性，或者转向手感与路面反馈的映射关系。这些模型可以捕捉传统物理模型难以精确描述的非线性、时变特性。然后，将学习到的JEPA世界模型作为模型预测控制（MPC）的预测器，替代或辅助传统基于物理方程的模型。特别是在线控转向（Steer-by-Wire）中，对转向执行器（EPS）的精确动态预测是实现高精度、低延迟控制的关键。投入主要在于数据收集、模型训练和嵌入式部署的算力优化，但有望解决传统控制方法在复杂非线性系统建模和鲁棒性方面的瓶颈，尤其是在线控转向演进时对系统精确预测和控制的需求会大幅提升。
+   https://arxiv.org/abs/2607.21644
+
+2. Adjustment Speed as a Safety Constraint for Nonstationary Reinforcement Learning（来源：arXiv cs.LG）
+   应用分析：这项研究非常能用，是未来EPS系统，尤其是线控转向系统功能安全和鲁棒性设计的关键考量。在线控转向系统中，EPS执行器直接与车轮连接，当环境（如路面摩擦系数、轮胎工况）发生快速变化时，系统能否在短时间内调整转向助力或响应策略以保持车辆稳定性，是安全的关键。我们可以利用该框架评估EPS控制系统在不同非平稳场景下的“调整速度”，并将其纳入ISO二六二六二功能安全分析。此外，通过引入“调整速度”约束，可以设计更具鲁棒性的自适应助力策略，确保在快速变化的驾驶场景中，EPS系统能够快速响应并提供安全可靠的助力。结合AI方法，我们还可以预测EPS系统或车辆其他相关部件的潜在故障，评估系统在这些非平稳状态下能否安全、及时地调整控制策略。这是提升未来汽车，特别是线控转向系统功能安全和驾驶鲁棒性的前沿方向，非常值得投入。
+   https://arxiv.org/abs/2607.21646
+
+3. Geely’s 16-in-1 Intelligent E-Drive debuts on the Geely TT（来源：Charged EVs）
+   应用分析：这项技术趋势对我们EPS电机和控制器设计是方向上的启发。我们可以借鉴“十六合一”的理念，探索EPS控制器软硬件的高度集成，例如将MCU、驱动芯片、部分功率器件、电流/位置采样电路甚至通信模块集成到单个定制化芯片或更紧凑的PCBA上，实现“多合一”的EPS控制器。进一步，研究如何将EPS电机与控制器进行机械和电气上的深度集成，形成一个更紧凑、更高效的“电机-控制器一体化”单元。这种高集成度系统对功率器件（如未来的碳化硅）的散热和封装技术提出了更高要求，吉利电驱在八百伏平台上的热管理经验值得我们关注。投入研究集成化是汽车电子系统降本增效、提升性能的必然趋势，尤其是在线控转向中，执行器的小型化和高功率密度是关键，因此值得投入。
+   https://chargedevs.com/newswire/geelys-16-in-1-intelligent-e-drive-debuts-on-the-geely-tt/
+
+4. Advanced thermal management and packaging techniques for SiC（来源：Power Electronics News）
+   应用分析：这项技术非常能用，这是我们EPS功率级设计，尤其是未来采用碳化硅器件时，必须深入研究和掌握的核心技术。目前EPS功率级多采用IGBT或MOSFET，未来转向碳化硅器件，我们需要研究其芯片连接、互连技术，如烧结银、铜键合等，以降低热阻和提高可靠性。同时，评估不同的衬底材料和封装结构，如双面冷却、直通式冷却等先进封装方案，优化热传导路径。针对EPS控制器的紧凑空间要求，设计高效的冷却方案，如微通道散热器、液冷板与外壳一体化设计。这将直接影响EPS系统的性能和可靠性。结合先进的热管理技术，进行详细的热仿真分析，并在台架测试中验证实际散热效果，确保满足ISO二六二六二功能安全对温度降额的要求。碳化硅是功率电子的未来，其热管理和封装技术直接决定了EPS控制器功率级的性能、尺寸、成本和长期可靠性，绝对值得投入。
+   https://www.powerelectronicsnews.com/advanced-thermal-management-and-packaging-techniques-for-sic/
+
+5. Adaptive Driving Style for SAE Level-2 Driving Automation: Minimizing Preference Mismatch（来源：arXiv eess.SY 控制系统）
+   应用分析：这项研究非常能用，对EPS的手感调校和助力策略设计有直接指导意义。我们可以将驾驶员的驾驶偏好（例如，喜欢运动型、舒适型还是经济型手感，对转向阻尼、回正力的偏好）作为输入，通过AI模型预测驾驶员意图，并动态调整EPS的助力曲线、阻尼补偿和回正力矩，从而提升驾驶员对EPS系统的信任度和满意度。结合路况信息和驾驶员偏好，自适应调整路感还原的强度和特性，避免过于激进或过于模糊的反馈。在线控转向场景下，方向盘与车轮解耦，力反馈完全由电机产生，这时自适应驾驶风格控制将变得尤为重要，它能根据驾驶员状态、环境和偏好，实时生成最合适的转向手感和反馈。用户体验是汽车智能化竞争的核心，将驾驶员偏好和适应性纳入EPS控制策略，能够显著提升产品的竞争力，绝对值得投入。
+   https://arxiv.org/abs/2607.21819
+
+6. Impedance Control of Ship-Borne Manipulators via Optimization-based Task-Space Inverse Dynamics（来源：arXiv cs.RO）
+   应用分析：这项技术非常能用，是机器人领域先进控制策略向EPS系统迁移的典型案例，尤其对电机控制策略的性能和鲁棒性提升有直接价值。船载机械臂的阻抗控制通过优化扭矩输出以应对外部扰动，这与EPS电机控制中FOC、转矩脉动抑制、纹波/抖动抑制的目标一致。我们可以借鉴TSID中的优化思想，设计更精细的FOC控制器，通过在线优化或模型预测控制，实时抵消电机内部的转矩脉动和外部负载扰动，从而提升NVH性能。阻抗控制的核心是定义系统对外力响应的“软硬”程度，这可以直接应用于EPS的助力手感调校，例如通过调整虚拟阻尼、刚度参数，使转向系统在不同车速、路况下呈现出理想的“阻抗”特性。ESKF用于基座状态估计的原理，也可以迁移到EPS的无传感器控制中，用于更鲁棒地估计电机转子位置或速度。在线控转向中，阻抗控制是实现高保真、高动态力反馈的核心技术，绝对值得投入。
+   https://arxiv.org/abs/2607.22030
+
+7. Learning Diverse Humanoid Tasks via Synthetic Video Scenarios without Real World Data（来源：arXiv cs.RO）
+   应用分析：这项技术能用，尤其是在数据驱动的控制算法开发和验证阶段，合成数据能够有效弥补真实数据获取的不足。传统的EPS标定需要大量路试和台架测试数据，我们可以利用生成式AI，根据不同的驾驶场景、路面条件、车辆载荷和驾驶员风格，生成多样化的转向工况数据，用于训练AI模型，实现助力曲线、阻尼补偿等参数的自动标定。此外，真实故障数据非常稀缺，通过生成式AI模拟EPS系统在不同故障模式下的数据特征，可以极大地丰富训练数据集，用于开发更精确的故障诊断和预测性维护模型。在线控转向的安全验证中，生成式AI可以根据安全规范和潜在风险，生成难以在真实世界中复现的极端驾驶场景数据，用于MIL、SIL、HIL测试，验证系统鲁棒性和功能安全。数据是AI的“燃料”，生成式AI在数据稀缺或数据多样性不足的场景下，具有巨大的应用潜力，值得投入。
+   https://arxiv.org/abs/2607.21648
+
+8. MAI-Cyber-1-Flash inside MDASH（来源：Hacker News）
+   应用分析：这项技术可以作为我们EPS产品信息安全防护的间接参考。虽然我们主要关注EPS的功能安全，但随着汽车智能化和网联化程度的提高，EPS系统也会面临网络攻击的风险，例如通过车辆总线或远程诊断接口注入恶意指令，干扰转向功能。我们可以借鉴AI在网络安全领域的工作，思考如何提升EPS控制器在固件、通信接口和诊断协议层面的安全性。例如，在车载嵌入式系统中部署轻量级的异常检测AI模型，实时监控关键信号和指令流，一旦发现异常行为立即触发防护或降级机制。这需要团队关注ISO二一四三四等信息安全标准，并在EPS产品开发中融入安全设计理念。虽然不是核心投入方向，但作为功能安全工程师，信息安全意识和相关技术趋势的了解是必要的。
+   https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260728-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260728-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260728-am.mp3" length="5453568" type="audio/mpeg"/>
+      <pubDate>Mon, 27 Jul 2026 22:38:52 +0000</pubDate>
     </item>
   </channel>
 </rss>
