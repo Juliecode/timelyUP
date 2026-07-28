@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 28 Jul 2026 09:42:41 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 22:40:46 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾与机器人：AI赋能EPS控制与未来架构</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最有价值的资讯。从无刷直流电机的AI建模，到自动驾驶的云端算力挑战，再到AI在安全闭环控制中的应用，希望能为您的日常研发工作带来新的启发和思考。话不多说，让我们立刻开始今天的早报播报。
-
-1. Residual Physics-Informed Neural Networks for High-Fidelity BLDC Motor Modeling（来源：arXiv cs.RO）
-   应用分析：这个研究对我们EPS工程师来说，简直是雪中送炭。它完全可以用，而且潜力巨大。我们可以利用PINN模型来设计更鲁棒、更精确的电机状态观测器，尤其是在无传感器控制或多传感器融合场景下，精确估计转子位置和速度，直接提升FOC性能。同时，PINN对电机动态的精确建模能力，能帮助我们识别和预测转矩脉动源，进而开发更精细的补偿策略，显著降低EPS系统的NVH表现。另外，模型中包含绕组温度预测，也能用于实时温漂补偿，确保电机在不同温度下的性能一致性。更长远看，监测模型预测与实际测量之间的偏差，还能辅助进行故障诊断与预测性维护。这绝对值得我们投入资源进行算法开发和验证，结合MIL、SIL、HIL平台快速迭代，它有望解决EPS系统长久以来的痛点，直接提升产品性能和竞争力。
-   https://arxiv.org/abs/2607.09136
-
-2. Can the Cloud Drive? Infrastructure Feasibility of Offloading Autonomous Driving Across 5G and 6G（来源：arXiv eess.SY 控制系统）
-   应用分析：这个研究对于我们EPS系统架构的演进有很强的指导意义，虽然不是直接的控制算法，但非常重要。在设计未来的线控转向系统时，我们必须考虑高阶自动驾驶功能对实时性，特别是那一百毫秒反应性预算的需求，这决定了是否需要云端协同。如果需要，EPS作为执行器，其响应延迟和与云端决策的同步机制是关键。同时，如果部分感知或决策任务被卸载到云端，我们必须设计车端（也就是边缘侧）的冗余和降级策略，以应对网络中断或高延迟情况，确保ISO 26262功能安全等级。此外，理解哪些数据适合云端处理，哪些必须在边缘处理，也能帮助我们优化数据传输协议和带宽需求。这是一个值得我们持续关注和研究的方向，有助于我们提前布局技术路线和储备相关知识。
-   https://arxiv.org/abs/2607.09045
-
-3. Neuro-Agentic Control: A Deep Learning-based LLM-Powered Agentic AI Framework for Controlling Security Controls（来源：arXiv cs.AI）
-   应用分析：这个框架对我们来说前景非常广阔，是AI在安全关键控制系统落地的关键技术之一。我们可以利用LLM强大的语义推理能力来分析复杂的故障模式，然后结合物理模型进行“反事实物理注入”验证，生成更智能、更安全的故障诊断报告和降级操作建议，甚至在极端情况下自动调整EPS的控制参数。此外，结合EPS的历史运行数据和物理模型，LLM还能分析潜在的磨损或失效模式，并建议预测性维护措施，通过物理注入验证其有效性。在自动标定和手感调校方面，LLM可以根据驾驶员反馈、路况数据和车辆状态，提出新的助力曲线或阻尼补偿参数，并通过物理仿真验证这些参数对车辆动态和驾驶手感的影响，确保安全性和舒适性。这是一个值得我们投入的领域，需要搭建仿真验证平台，并探索如何将LLM的输出转化为可执行的控制指令。
-   https://arxiv.org/abs/2607.09076
-
-4. GATS: Graph-Augmented Tree Search with Layered World Models for Efficient Agent Planning（来源：arXiv cs.AI）
-   应用分析：GATS的理念对我们提升EPS相关AI应用的效率很有借鉴意义。例如，在自动标定流程中，EPS的标定过程复杂且耗时，我们可以构建一个基于GATS的LLM代理，结合其L1精确符号匹配和L2执行日志统计层，快速探索和优化标定参数空间，从而减少对昂贵LLM推理的依赖。对于多重、偶发性故障的诊断，LLM代理可以规划一系列诊断步骤，而GATS的分层世界模型能帮助代理高效筛选诊断方案，避免无效尝试。在未来的线控转向中，高层决策如路径规划、驾驶模式选择可能需要LLM代理参与，GATS可以帮助这些代理在有限时间内做出更可靠的决策。其核心思想——用分层世界模型减少LLM调用——对于嵌入式AI的成本和性能优化非常关键，值得我们关注并尝试在特定场景下进行概念验证。
-   https://arxiv.org/abs/2607.08894
-
-5. Data-driven predictive control of nonlinear systems using weighted regularization（来源：arXiv eess.SY 控制系统）
-   应用分析：这个研究对我们EPS工程师来说，非常有潜力，它直接解决了EPS控制的非线性问题。我们可以利用这个数据驱动预测控制框架来开发自适应助力控制，根据驾驶员输入、车速、路况等实时数据，动态调整助力曲线，以适应不同驾驶场景和驾驶员偏好，提升驾驶手感。在电机控制层面，利用该方法从运行数据中学习并预测电机非线性特性，例如齿槽转矩和磁饱和，进行实时补偿，从而更有效地抑制转矩脉动和抖动。甚至在无传感器控制中，结合实际运行数据，通过加权正则化来优化观测器参数，提高其在不同工况下的鲁棒性和精度。这是一个非常值得投入的领域，有望大幅提升EPS系统的自适应能力和性能，同时减少传统基于模型的开发和标定工作量。
-   https://arxiv.org/abs/2607.09187
-
-6. AgenticFocus: Object-Preserving Mixed Reality Synthesis from Human FPV Video for Dexterous Humanoid Learning（来源：arXiv cs.RO）
-   应用分析：这个研究虽然是针对人形机器人，但它的方法论和数据处理思路对我们有间接的启发。我们可以借鉴AgenticFocus的技术，通过收集专业驾驶员在不同路况下的驾驶视频，包括驾驶员视角、手部动作、车辆数据，重建高保真的驾驶员意图和手部操作轨迹，进而训练AI模型来复现或学习特定的线控转向手感调校。这有助于我们提取和量化“手感基因”。在自动标定数据生成方面，也可以利用类似技术，从人类工程师的标定操作中“学习”如何高效、准确地执行任务，并生成合成数据进行训练。此外，分析人类驾驶员在复杂或极限工况下，例如打滑、紧急避让时的转向操作，提取关键特征，也能指导EPS的极限性能设计。这是一个值得我们关注和研究的交叉点，为线控转向的“手感基因”提取和AI化提供了新的思路。
-   https://arxiv.org/abs/2607.08857
-
-7. BeyondSight: Object Permanence for End-to-End Autonomous Driving（来源：arXiv cs.RO）
-   应用分析：这个研究虽然不直接涉及EPS控制算法，但它对我们EPS上游的自动驾驶决策系统有重要影响。作为EPS工程师，我们需要确保上游自动驾驶系统提供给转向系统的目标路径和速度指令是基于对环境鲁棒且持久的理解。BeyondSight这类技术提示我们，在设计EPS与自动驾驶系统接口时，必须关注上层系统如何处理感知不确定性和物体永久性，这直接关系到EPS能否安全、准确地执行任务。如果上层感知系统未能提供可靠的物体永久性信息，EPS系统可能需要更保守的降级策略，或者依赖于自身的更基础的传感器进行安全判断。此外，该研究提出的nuScenes-Permanence数据集可以用于设计更具挑战性的测试场景，以验证EPS与感知系统协同工作的鲁棒性，尤其是在有遮挡的环境中。这是一个值得我们持续关注的领域，理解其原理和影响，有助于我们更好地进行EPS的未来集成和功能安全设计。
-   https://arxiv.org/abs/2607.09138</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260714-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260714-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260714-am.mp3" length="4820832" type="audio/mpeg"/>
-      <pubDate>Mon, 13 Jul 2026 22:34:00 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 智驾之锚：AI驱动转向与机器人执行器的融合</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大热门领域，为您精选七条最值得关注的重磅资讯。从AI如何赋能闭环控制和安全决策，到汽车线控转向系统的验证新范式，再到机器人领域那些与我们EPS电机控制息息相关的创新技术，今天的内容干货满满，希望能为大家的工作带来新的启发。话不多说，让我们马上进入今天的早报时间。
@@ -1127,6 +1091,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260728-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260728-pm.mp3" length="3577824" type="audio/mpeg"/>
       <pubDate>Tue, 28 Jul 2026 09:42:41 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾之声：AI赋能控制，机器人与汽车的交汇点</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人领域，为您精选7条重磅资讯，深入剖析它们对我们EPS研发工作的具体启示。从资源受限的嵌入式AI，到机器人电机控制的最新突破，再到车规级功率器件的进展和自动驾驶的商业化落地，今天的内容干货满满，希望能为大家带来新的思考和灵感。
+
+1. MIITA: Memory-Induced Inference-Time Adaptation for Continual Learning with Small Language Models（来源：arXiv cs.AI）
+   应用分析：能用，且很有价值。在EPS系统中，AI可以用于改进助力策略、故障诊断、预测性维护等。这些AI模型部署在车规级MCU上，面临内存和算力限制。我们可以借鉴MIITA的思路，将EPS系统中的AI模型（例如用于NVH抑制的神经网络观测器、或用于路感调校的自动标定模型）设计成支持推理时自适应的架构。具体来说，当车辆在不同路况、不同驾驶员习惯下运行时，系统可以存储少量的“经验原型”，并在推理时根据当前上下文检索并应用这些“修正方向”，而不是频繁地重新训练或更新整个模型。这能让模型更好地适应个体差异和环境变化，同时避免灾难性遗忘。非常值得投入研究，这解决了嵌入式AI模型在实际应用中面临的两个核心挑战：资源限制下的性能维持和持续适应能力。
+   https://arxiv.org/abs/2607.22556
+
+2. DeepLens Diagnosis Agent: Agentic Workflow Design Lets a Small Reasoning Model Compete with Frontier LLMs（来源：arXiv cs.AI）
+   应用分析：能用，且非常实用。在EPS的故障诊断和预测性维护方面，可以借鉴这种代理工作流设计。例如，将故障诊断任务分解为：事实提取（从传感器数据、CAN总线信息中提取故障码、运行参数）、知识查询（查询故障库、维修手册）、差异分析（结合历史数据、运行工况进行多维度分析）、最终诊断与解释。这种分阶段、结合RAG的工作流能显著提升诊断的准确性和可靠性，同时降低对单一大型模型的依赖。非常值得投入。这提供了一种在资源受限环境下，利用小模型实现复杂、安全关键任务的有效途径。对于EPS的智能诊断和预测性维护，这种方法能提高系统自主性，减少误报漏报，并提供可解释的诊断结果，对提升整车可靠性和降低售后成本有直接帮助。
+   https://arxiv.org/abs/2607.22555
+
+3. PRISM: Polynomial Representations for Interaction-Structured Motor Control（来源：arXiv cs.RO）
+   应用分析：能用，且可能带来突破。在EPS电机控制中，我们面临电机非线性、参数漂移、负载变化等复杂交互。传统的FOC控制结合PI/前馈、模型预测控制等，虽然有效，但在处理复杂的非线性交互时仍有局限。我们可以将PRISM的思路应用于EPS的电机控制策略优化。例如，在FOC控制环路中，除了传统的PI控制器和前馈补偿，可以引入一个基于PRISM的多项式交互模块，显式地建模电流、转速、位置、温度、负载转矩等变量之间的高阶交互关系，用于补偿转矩脉动、抑制NVH。对于线控转向系统，路感还原需要对轮胎与路面、转向机内部摩擦等复杂交互进行精确建模和补偿，PRISM的显式交互建模能力可能在此发挥重要作用。非常值得投入研究。如果能成功将PRISM的理念引入EPS电机控制，有望在转矩脉动抑制、NVH性能、手感调校的精细度上取得显著提升，甚至可能简化部分模型参数辨识的难度。
+   https://arxiv.org/abs/2607.23473
+
+4. BYD confirms plan to unveil humanoid robot in August（来源：CnEVPost）
+   应用分析：这不是一个直接的技术应用，而是一个重要的行业趋势信号。但其背后蕴含的技术，特别是关节执行器和伺服电机控制，对我们是高度可迁移的。我们应密切关注比亚迪人形机器人的技术细节，尤其是其关节执行器的设计（如电机类型、减速比、驱动方式）、力矩控制精度、NVH性能、以及可能采用的先进控制算法。这些技术对于我们PMSM永磁同步电机选型、FOC矢量控制策略优化、转矩密度提升、NVH抑制、甚至线控转向的执行器设计都具有直接的参考价值。此外，比亚迪作为汽车功能安全领域的实践者，其在机器人安全方面的经验也值得学习。值得投入关注和分析。通过观察行业领导者的战略方向和技术实践，为我们EPS产品未来的技术路线和方案选型提供前瞻性指导。
+   https://cnevpost.com/2026/07/28/byd-confirms-plan-humanoid-robot-aug/
+
+5. A Replay-Constrained Simulation Framework for Personalization of Powered Knee--Ankle Prosthesis Controllers（来源：arXiv cs.RO）
+   应用分析：能用，尤其在助力策略和手感调校方面。EPS的手感调校是一个高度依赖经验和反复试验的过程，且需要适应不同车型、不同驾驶员的个性化需求。我们可以借鉴这种“回放约束仿真”的思路，构建一个EPS的虚拟仿真环境。在仿真中回放真实驾驶员的转向操作数据，通过强化学习来调整助力曲线、阻尼/回正补偿、摩擦补偿等参数，以匹配特定驾驶员的个性化手感偏好，或在不同路况下提供最优助力。通过回放真实数据，避免了对复杂驾驶员模型的精确建模需求。非常值得投入。这将极大地提高EPS手感调校的效率和自动化程度，从“黑魔法”走向数据驱动的科学调校。个性化手感是未来高端汽车的重要卖点，这种方法能帮助我们快速迭代和优化。对于线控转向，这种Sim-to-Real方法对于验证冗余控制、功能安全降级等复杂场景也至关重要。
+   https://arxiv.org/abs/2607.22858
+
+6. Toshiba Introduces AEC-Q101-Qualified 40 V MOSFET（来源：Power Electronics News）
+   应用分析：能用，且是日常选型和设计中必须关注的。在EPS控制器硬件设计中，这款MOSFET可以直接作为电机驱动功率级的核心器件进行选型。其低导通电阻能有效降低功率损耗，提高电机驱动效率，从而减少发热量，有助于实现更紧凑的控制器设计，降低对散热系统的要求。增强的散热性能也意味着在极端工况下能提供更好的可靠性。对于PMSM电机，高效的功率级是实现高转矩密度和低NVH的基础。在ISO 26262功能安全设计中，选择可靠性高、经过认证的功率器件是满足ASIL等级要求的重要一环。必须投入关注。功率器件是EPS硬件成本和性能的关键组成部分。及时了解和评估最新的AEC-Q101认证功率器件，能帮助我们在产品设计中选择最优方案，提升系统效率、可靠性和成本竞争力。
+   https://www.powerelectronicsnews.com/toshiba-introduces-aec-q101-qualified-40-v-mosfet/
+
+7. Baidu Apollo Go starts robotaxi road tests in London, public rides in 2027（来源：CnEVPost）
+   应用分析：这不是直接的技术应用，而是我们未来产品的重要市场和技术方向指引。我们需要密切关注Robotaxi在伦敦测试中遇到的转向系统相关挑战和需求。例如，在复杂城市路况下，自动驾驶系统对转向执行器的精度、响应速度、力矩输出范围、以及故障降级模式有何具体要求？线控转向系统如何与自动驾驶软件栈（如Apollo）进行无缝集成，并满足其高阶控制需求？这些路测数据和反馈将直接指导我们线控转向系统架构设计、冗余方案、功能安全策略的制定，以及电机控制算法的优化方向，以适应高度自动驾驶的严苛要求。非常值得持续关注和分析。自动驾驶尤其是Robotaxi的商业化落地，是EPS技术演进的终极目标之一。了解其进展和挑战，能帮助我们预判未来技术需求，确保我们的产品和技术路线与行业前沿保持一致，为线控转向的量产做好准备。
+   https://cnevpost.com/2026/07/28/baidu-apollo-go-robotaxi-road-tests-london/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260729-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260729-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260729-am.mp3" length="5311296" type="audio/mpeg"/>
+      <pubDate>Tue, 28 Jul 2026 22:40:46 +0000</pubDate>
     </item>
   </channel>
 </rss>
