@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 30 Jul 2026 09:43:03 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 22:42:09 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · EPS工程师视角：AI、智驾与机器人前沿技术洞察</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师，老王。今天，我们又从浩瀚的科技资讯中，精选了七条最值得关注的重磅新闻，它们涵盖了人工智能前沿、汽车智能化和机器人三大热门领域。从嵌入式 AI 的操作系统，到电动汽车核心的功率器件和永磁材料，再到人形机器人的关节设计和电源管理，每一条都可能为我们的 EPS 产品研发带来新的启发和突破。准备好了吗？让我们一起来探索今天的科技前沿！
-
-1. SynapticOS: An Inference-First Runtime Architecture for Neural Processing Units on Resource-Constrained Microcontrollers（来源：arXiv eess.SY 控制系统）
-   应用分析：SynapticOS 对我们来说非常有吸引力。未来的 EPS 控制器必然会集成更多 AI 算法，比如基于神经网络的状态观测器或故障诊断。SynapticOS 提供的零碎片、恒定时间分配的张量感知内存管理，以及 NPU 硬件抽象层，能够直接解决我们在 FreeRTOS 或 Zephyr 上集成 AI 推理时遇到的内存和调度瓶颈。特别是在线控转向系统中，AI 算法的实时性和可靠性是生命线，SynapticOS 的设计理念与我们的需求高度契合。这是一个值得我们深入研究和投入的方向，可以考虑在下一代 EPS 控制器原型中进行试点集成。
-   https://arxiv.org/abs/2607.12606
-
-2. Environment Parameter Gradient Theorem for Policy-Environment Co-Design in Reinforcement Learning（来源：arXiv eess.SY 控制系统）
-   应用分析：理论上非常能用，尤其适用于 EPS 系统的自动标定和优化。我们可以将 EPS 系统的物理参数（如齿轮比、摩擦系数模型参数）、电机控制器的 PI 增益、FOC 弱磁控制参数、甚至助力曲线的关键点作为“环境参数”，与转向手感、NVH 性能等“策略”一起，通过强化学习进行协同优化。例如，在台架测试或仿真环境中，利用该定理指导 RL 代理不仅学习最优的电机控制策略，还同时调整电机设计参数或控制器硬件配置，以达到最佳的转矩密度、效率、NVH 和成本平衡。这有助于实现更智能、更高效的系统级设计。值得长期投入和探索。
-   https://arxiv.org/abs/2607.12590
-
-3. Bosch begins silicon carbide sample production at Roseville, its first US chip fab（来源：Charged EVs）
-   应用分析：SiC 芯片是 EPS 功率级未来升级的关键。我们目前主要使用硅基 IGBT 或 MOSFET，SiC 能够显著提升电机控制器的效率，减小体积，降低散热需求，从而提高 EPS 系统的整体性能和集成度。密切关注博世 SiC 芯片的量产进展和产品规格。在设计下一代 EPS 功率级时，优先考虑采用 SiC MOSFET。这需要我们重新设计功率级拓扑、栅极驱动电路和散热方案。同时，SiC 的开关速度更快，需要更精细的电机控制策略（如 FOC）来应对高频谐波和 EMI 问题。可以与博世等供应商建立合作，争取在早期获得样品进行评估和测试。非常值得投入，是保持技术领先的关键。
-   https://chargedevs.com/newswire/bosch-begins-silicon-carbide-sample-production-at-roseville-its-first-us-chip-fab/
-
-4. Energy Fuels to acquire rare earth magnet maker VAC for $1.9 billion（来源：Charged EVs）
-   应用分析：永磁体是 PMSM 的核心，其供应和性能直接关系到 EPS 电机的转矩密度、效率和成本。密切关注 Energy Fuels 与 VAC 整合后的产品路线图和产能规划。在电机选型时，除了关注传统的技术参数，还需要将供应链的可靠性和地理位置纳入考量。与这类拥有“矿山到磁铁”垂直整合能力的供应商建立合作，可以降低供应链风险，并可能在未来获得更具成本竞争力的永磁体。同时，也可以探索永磁体材料的性能提升，例如耐高温性能、磁性能稳定性等，以支持更紧凑、更高功率密度的 EPS 电机设计。值得持续关注和投入。
-   https://chargedevs.com/newswire/energy-fuels-to-acquire-rare-earth-magnet-maker-vac-for-1-9-billion/
-
-5. Nio chip unit previews NX9031U as AI ambitions move beyond cars（来源：CnEVPost）
-   应用分析：具身智能和高算力 AI 芯片对 EPS 的未来发展至关重要。未来线控转向系统需要强大的算力支持复杂的控制算法、多传感器融合和功能安全决策。NX9031U 这样的芯片可以作为未来线控转向域控制器或中央计算平台的 NPU 核心。我们可以研究其架构、编程模型和生态系统，评估其在运行 AI 增强型 EPS 控制算法（如基于深度学习的转矩脉动抑制、无传感器控制、故障预测）时的性能。同时，关注其在功能安全（ISO 26262）方面的支持，因为高算力 AI 芯片在汽车安全应用中需要额外的认证和验证。值得密切关注和潜在投入。
-   https://cnevpost.com/2026/07/15/nio-chip-unit-previews-nx9031u/
-
-6. How Nidec Is Rethinking Gear Design for Humanoid and Mobile Robots（来源：EE Times）
-   应用分析：Nidec 在机器人齿轮箱设计上的突破，对我们的 EPS 电机选型和NVH优化具有直接指导意义。我们可以借鉴 Nidec 在齿轮设计上实现零背隙和低 NVH 的方法，应用于 EPS 的减速机构。例如，研究其采用的齿形优化、材料选择、装配工艺以及集成执行器设计，来提升 EPS 系统的手感、降低噪音和抖动。特别是在线控转向中，对传动系统的精度和NVH要求更高，这些经验可以帮助我们优化机械结构，从而减轻电机控制算法在抑制转矩脉动和抖动方面的压力。可以主动与 Nidec 等供应商进行技术交流，了解其最新进展。非常值得投入。
-   https://www.eetimes.com/how-nidec-is-rethinking-gear-design-for-humanoid-and-mobile-robots/
-
-7. Key to Humanoid Progress: Managing the Power Behind the Robots（来源：The Robot Report）
-   应用分析：人形机器人的电源管理经验对 EPS 功率级设计和热管理非常有价值。我们可以借鉴机器人领域在板载电源转换（如 DC-DC 转换器）、功率分配和执行器供电方面的设计理念。例如，研究如何优化功率级布局以减小体积和重量，如何提升转换效率以降低发热，以及如何在有限空间内实现高效散热。这对于 EPS 控制器，尤其是集成度更高的 DP-EPS 或 R-EPS 系统，在提升功率密度、减小封装体积和满足严格的热管理要求方面，具有直接的指导意义。同时，机器人对电池管理和能量回收的关注，也为我们思考 EPS 系统的能量效率提供了新视角。值得投入研究。
-   https://www.therobotreport.com/key-to-humanoid-progress-managing-the-power-behind-the-robots/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260716-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260716-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260716-am.mp3" length="3579408" type="audio/mpeg"/>
-      <pubDate>Wed, 15 Jul 2026 22:35:09 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI、汽车智能化与机器人：前沿技术如何赋能EPS系统</title>
       <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三个热门方向，为大家精选出七条最有价值的资讯。这些资讯涵盖了AI控制、芯片技术、机器人执行器等多个关键领域，希望能给您的日常工作带来新的启发。
@@ -1127,6 +1091,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260730-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260730-pm.mp3" length="4033872" type="audio/mpeg"/>
       <pubDate>Thu, 30 Jul 2026 09:43:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI赋能智驾与机器人：EPS工程师的今日洞察</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天我们将聚焦人工智能的前沿突破、汽车智能化的最新进展，以及机器人领域的关键技术，为您精选出七条最有价值的资讯。这些内容不仅能拓宽您的技术视野，更重要的是，我们将结合电动助力转向，也就是EPS产品研发的实际工作背景，深入分析它们的应用潜力，看看这些技术能不能用、怎么用，以及值不值得我们投入。
+
+1. LLM智能体自动优化CUDA内核，计算效能新突破（来源：arXiv cs.AI）
+   应用分析：这个技术对我们来说非常值得投入。在EPS系统中，像FOC矢量控制、无传感器控制、以及未来AI驱动的助力策略，都需要高效的实时计算。如果能利用Kernel Forge将这些复杂算法的数学模型或Simulink代码自动转换并优化为高性能的GPU或NPU内核代码，将极大提升我们EPS系统的实时性和响应速度。我们可以尝试将其用于核心控制算法的加速，或优化AI模型的推理部分，以满足车规级的实时性要求。这是一个能显著提升产品竞争力、缩短开发周期的关键技术。
+   https://arxiv.org/abs/2607.24762
+
+2. 元学习奖励整形，AI如何更懂人类偏好（来源：arXiv cs.LG）
+   应用分析：这项技术潜力巨大，尤其是在线控转向系统中，手感完全由软件定义。我们可以收集人类驾驶员对不同转向手感的偏好数据，利用MeRLa框架训练一个奖励模型，将隐式偏好转化为强化学习智能体的显式奖励信号，指导其优化助力策略，从而实现自动化的“黄金手感”调校。此外，它也能用于故障诊断或复杂工况下的自适应助力调整。这是一个能颠覆传统调校流程、大幅提升产品竞争力的前沿方向，非常值得我们深入研究和投入。
+   https://arxiv.org/abs/2607.26094
+
+3. 大语言模型赋能PID调优，控制系统智能校准（来源：arXiv eess.SY 控制系统）
+   应用分析：这项技术对我们来说非常实用。EPS系统中有大量的PID控制器需要调优，例如FOC中的电流PI控制器。我们可以将系统响应数据、性能指标以及工程师的调优偏好和诊断规则输入给大语言模型智能体，让它迭代生成并优化PID参数。即使不完全自动化，大语言模型也可以作为辅助工具，根据Simulink模型或台架测试数据，提供初步的PID参数建议或诊断分析，加速标定过程。这直接契合了我们用AI改进控制和标定效率的核心需求，投入产出比会非常高。
+   https://arxiv.org/abs/2607.26594
+
+4. 碳化硅功率模块可靠性再升级，晶圆级鉴定保驾护航（来源：Power Electronics News）
+   应用分析：这项技术直接影响我们EPS功率级的设计和器件选型，我们必须密切关注。在选择碳化硅功率器件供应商时，晶圆级鉴定能力应作为重要的评估标准，要求供应商提供详细的可靠性报告和鉴定数据。我们还需要深入研究碳化硅器件的失效模式和鉴定数据，指导EPS功率级的ISO 两万六千两百六十二功能安全设计，例如冗余设计、故障诊断和降级策略。这对于提升系统性能、减小体积重量、降低能耗至关重要，是必须要投入的方向。
+   https://www.powerelectronicsnews.com/power-corner-inside-semiqs-wafer-level-qualification-process-for-sic-power-modules/
+
+5. 无稀土永磁电机新进展，电动车动力系统新选择（来源：EE Times）
+   应用分析：这项技术非常值得我们关注和评估。如果技术成熟且性能可靠，可用于下一代EPS电机。我们需要密切关注Vimag Labs这类无线励磁电机的技术进展，包括其转矩密度、效率、NVH特性、成本以及在不同转速和负载下的性能表现，并与现有PMSM进行详细对比。如果有可能，可以考虑采购原型电机进行台架测试，评估其与EPS控制策略的兼容性。将无稀土电机技术纳入长期电机选型和供应链战略规划中，是降低成本和风险的重要途径，值得初期投入进行技术跟踪和评估。
+   https://www.eetimes.com/indian-startup-vimag-labs-develops-wirelessly-excited-motor-without-rare-earth-magnets/
+
+6. 谷歌DeepMind发布Gemini Robotics 2，机器人全身智能控制迈向新纪元（来源：The Verge）
+   应用分析：这项技术对我们来说具有很强的直接技术迁移能力。人形机器人的关节执行器控制与EPS电机控制高度相关，其全身协同控制的思路对线控转向的整体系统控制架构设计有启发。我们可以借鉴Gemini Robotics 2的全身协调控制思路，思考如何设计线控转向系统的多执行器协同控制架构，以实现更精细的车辆姿态控制。此外，我们还可以研究其在复杂动作中如何处理鲁棒性和潜在故障，为线控转向的功能安全和冗余设计提供新的视角。这是值得我们密切关注和学习的前沿方向。
+   https://www.theverge.com/tech/973276/google-deepmind-gemini-robotics-2-whole-body
+
+7. 强化学习克服硬件挑战，低成本机器人实现鲁棒运动（来源：arXiv cs.RO）
+   应用分析：这项技术对我们来说非常关键。解决“仿真到现实的鸿沟”是强化学习在EPS领域落地的核心挑战之一。我们可以借鉴研究中的前向模型和时间感知神经网络，建立EPS电机的精确延迟模型，并将其融入到基于强化学习的电机控制或助力策略中，以提升控制精度和响应速度。同时，研究中处理噪声反馈的方法，也可以用于设计对传感器噪声更鲁棒的强化学习控制策略或状态观测器。这是将前沿AI控制研究转化为EPS工程方案的关键一步，对我们提升电机控制策略的性能和鲁棒性有直接帮助，绝对值得投入。
+   https://arxiv.org/abs/2607.26434</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260731-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260731-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260731-am.mp3" length="2494512" type="audio/mpeg"/>
+      <pubDate>Thu, 30 Jul 2026 22:42:09 +0000</pubDate>
     </item>
   </channel>
 </rss>
