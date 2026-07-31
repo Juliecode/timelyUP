@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 30 Jul 2026 22:42:09 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2026 09:42:48 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI、汽车智能化与机器人：前沿技术如何赋能EPS系统</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三个热门方向，为大家精选出七条最有价值的资讯。这些资讯涵盖了AI控制、芯片技术、机器人执行器等多个关键领域，希望能给您的日常工作带来新的启发。
-
-1. Change-Aware Self-Adaptive AI-Aided Kalman Filters With Neural Change Point Detection（来源：arXiv eess.SY 控制系统）
-   应用分析：完全可以。EPS系统对电机状态估计的精度和鲁棒性要求极高，例如无传感器FOC控制。我们可以将CASA-KalmanNet框架应用于EPS电机控制中的无传感器观测器，或者用于提升有传感器控制中的状态估计精度。具体来说，利用CPDNet监测电机模型参数（如电阻、电感）的变化、负载扰动，或传感器信号异常，并在线调整卡尔曼滤波器的增益或模型参数，以适应这些变化。这有助于提高转矩脉动抑制、弱磁控制等策略的鲁棒性。提升状态估计的鲁棒性是解决EPS系统性能与鲁棒性提升的关键挑战之一，非常值得投入，有望在降低对高精度传感器依赖的同时，保持甚至提升系统性能，并增强故障诊断与预测性维护的能力。
-   https://arxiv.org/abs/2607.13387
-
-2. Learning Safe Agent Behaviour from Human Preferences and Justifications via World Models（来源：arXiv cs.AI）
-   应用分析：可以，且非常重要。在EPS助力策略和手感调校中，安全性是首要考虑。特别是向线控转向演进时，系统复杂性增加，AI参与决策的可能性提高，如何保证AI决策的安全性是核心难题。我们可以将DROPJ方法应用于EPS助力策略的自动调校和验证。首先，从实际驾驶数据或专家操作中构建EPS系统的“世界模型”（即一个仿真器）。然后，专家工程师在这个仿真器中进行操作，并对不同助力表现（如回正手感、阻尼感、路感还原）给出偏好及理由。这些数据用于训练一个奖励模型，指导AI生成更安全、更符合人类驾驶习惯的助力策略。对于故障诊断和降级模式，也可以通过专家对不同故障场景下的降级表现进行偏好标注，来训练AI选择最安全的降级策略。这提供了一个系统性的框架将人类安全知识和经验融入AI控制策略中，降低了AI在安全关键领域应用的技术风险，非常值得投入。
-   https://arxiv.org/abs/2607.13172
-
-3. Design and Characterization of a Limb Encircling Actuator（来源：arXiv cs.RO）
-   应用分析：LEA的设计理念和部分技术细节（如径向轴承布局）对EPS电机和减速器设计有借鉴意义。其高转矩密度特性是EPS电机追求的方向。我们可以研究LEA的径向轴承布局如何实现轻量化和成本优势，并评估其在EPS电机中的可行性，例如，是否能减少电机轴向长度，或改善NVH性能。虽然EPS电机通常是圆柱形，但LEA的环绕式结构在某些特殊的EPS布局（如R-EPS或未来更紧凑的线控转向执行器）中可能启发新的电机集成方案。其1.2公斤质量下达到17.5牛米连续转矩和51牛米峰值转矩的性能指标，为我们PMSM电机选型提供了参考。值得关注和投入研究，特别是在线控转向这种对空间、重量和性能要求更高的未来趋势下，这种创新执行器设计思路可能会带来突破。
-   https://arxiv.org/abs/2607.13337
-
-4. How Nidec Is Rethinking Gear Design for Humanoid and Mobile Robots（来源：EE Times）
-   应用分析：Nidec在机器人齿轮设计上的突破，可以直接借鉴到EPS减速器的设计中。我们可以研究Nidec如何平衡齿轮箱的零回程间隙、轻量化和集成度。例如，了解他们采用的齿轮类型（如谐波齿轮、行星齿轮的改进型）、材料选择、润滑方案以及如何实现与电机的紧密集成。这些技术可能有助于我们开发出更紧凑、更安静、手感更好的EPS减速器，减少转向系统的回程间隙和振动，提升NVH性能，并为线控转向系统提供更优的机械执行方案。齿轮箱设计是EPS机械性能提升的关键，Nidec作为行业领导者，其在机器人领域的创新技术往往具有很强的通用性，非常值得投入研究。
-   https://www.eetimes.com/how-nidec-is-rethinking-gear-design-for-humanoid-and-mobile-robots/
-
-5. SPINE: Bridging the Cyber-Physical Gap with Agentic AI（来源：arXiv cs.AI）
-   应用分析：SPINE框架的核心理念——利用AI智能体进行系统性诊断、修复和验证，可以直接迁移到EPS系统的标定、测试和故障诊断流程中。我们可以借鉴SPINE的“配置文件构建器”来自动收集EPS系统的硬件配置、软件版本、传感器数据等信息，并建立特定车辆型号或配置的“上下文”。然后，利用“调试器”智能体来执行自动化的助力曲线调校、阻尼/回正/摩擦补偿参数优化、NVH测试与分析。当系统性能不达标时，智能体可以自动诊断问题、提出修复方案（例如调整某个控制参数或建议硬件检查），并通过MIL/SIL/HIL或台架测试进行验证，直到达到目标性能。这能显著提高标定效率，并减少对经验丰富的标定工程师的依赖。自动化标定和诊断是提升EPS研发效率、降低成本、缩短开发周期的重要方向，非常值得投入。
-   https://arxiv.org/abs/2607.13049
-
-6. Bosch begins silicon carbide sample production at Roseville, its first US chip fab（来源：Charged EVs）
-   应用分析：SiC芯片已在电动汽车主逆变器中广泛应用，在EPS功率级中也有巨大的应用潜力。我们可以考虑在EPS控制器功率级中采用SiC MOSFET或SiC肖特基二极管。SiC器件能显著提高功率级的开关频率和效率，从而减小电感和电容的体积，降低控制器整体尺寸和重量，并减少热损耗。高开关频率还能改善电机电流波形，降低转矩脉动和NVH。博世的量产将有助于降低SiC器件的成本和提高供货稳定性，使EPS系统采用SiC成为更具吸引力的选择。SiC是提升EPS系统性能和紧凑性的关键技术，我们应该积极评估并导入SiC器件，优化功率级设计，提升EPS产品的竞争力，非常值得投入。这与我们关注的“芯片（MCU/功率器件）动态”高度契合。
-   https://chargedevs.com/newswire/bosch-begins-silicon-carbide-sample-production-at-roseville-its-first-us-chip-fab/
-
-7. Energy Fuels to acquire rare earth magnet maker VAC for $1.9 billion（来源：Charged EVs）
-   应用分析：这项交易对EPS电机选型和供应链管理具有直接影响。我们可以持续关注Energy Fuels与VAC整合后，其稀土永磁体的成本、性能和供货稳定性变化。在PMSM电机选型时，除了关注转矩密度、效率、NVH等技术指标，还需要将磁体材料的供应链风险和成本纳入考量。如果整合后的“矿到磁体”平台能够提供更具竞争力的产品，我们可以将其纳入供应商考察范围，甚至探索定制化磁体方案，以优化电机设计，例如，在保证性能的前提下，通过调整磁体材料来降低成本或提高耐温性能。这项动态值得我们持续关注，它对EPS电机的长期竞争力至关重要，有助于我们进行更具前瞻性的电机选型和供应商策略规划。
-   https://chargedevs.com/newswire/energy-fuels-to-acquire-rare-earth-magnet-maker-vac-for-1-9-billion/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260716-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260716-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260716-pm.mp3" length="4227264" type="audio/mpeg"/>
-      <pubDate>Thu, 16 Jul 2026 09:43:51 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI赋能智驾与机器人：EPS工程师的今日洞察</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人三大领域，为大家精选了7条最有价值的资讯。从AI智能体如何提升机器人部署效率，到创新电机驱动技术如何解决NVH问题，再到物理信息神经网络在控制领域的应用潜力，内容可谓干货满满，希望能给大家的日常研发工作带来启发。
@@ -1127,6 +1091,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260731-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260731-am.mp3" length="2494512" type="audio/mpeg"/>
       <pubDate>Thu, 30 Jul 2026 22:42:09 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI驱动未来：从大模型推理到智能汽车与人形机器人</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将一起聚焦AI前沿、汽车智能化以及机器人三大热门领域，精选出七条重磅资讯，看看它们将如何影响我们的研发工作，又能带来哪些新的机遇和挑战。准备好了吗？让我们开始今天的技术探索之旅！
+
+1. Probing the Origins of Reasoning Performance: Representational Quality for Mathematical Problem-Solving in RL vs. SFT Fine-Tuned Models（来源：arXiv cs.AI）
+   应用分析：作为汽车电动助力转向，也就是EPS系统的研发工程师，我们持续关注控制算法的性能与鲁棒性。如果未来AI模型能够用于自动标定或复杂非线性控制，那么理解强化学习模型为何在推理上更强，就能指导我们选择更合适的AI训练范式。例如，在自动生成FOC（磁场定向控制）参数调整策略时，RL训练出的模型可能能够更好地理解物理约束和电机动力学，实现更精确、更鲁棒的控制。这值得我们持续关注，但短期内还难以直接落地到EPS产品，更多是理论储备和技术路线的探索。
+   https://arxiv.org/abs/2607.26119
+
+2. RLPF: Reinforcement Learning from Performance Feedback for Code Generation（来源：arXiv cs.LG）
+   应用分析：这对我这种开发嵌入式C代码的工程师来说非常吸引人。设想一下，如果AI能够根据FOC算法的性能需求，比如更快的控制周期、更低的CPU占用，自动生成优化后的C代码，甚至是在MATLAB/Simulink模型生成代码后进行二次优化，这将极大地提升开发效率和代码质量。尤其是对于EPS电机控制这类实时性要求极高的系统，哪怕是微秒级的性能提升，都可能带来显著的优势。因此，投入研究其在嵌入式、实时系统代码生成上的潜力，作为提升开发效率和代码质量的工具链的一部分，是值得的。
+   https://arxiv.org/abs/2607.27271
+
+3. Flat Score, Amplified Failures: How the Error Budget Masks Damage in Quantized LLM Agents（来源：arXiv cs.LG）
+   应用分析：这对汽车EPS系统至关重要。如果未来我们用AI模型进行故障诊断、预测性维护，或者在更高层级的线控转向系统中使用AI进行决策，那么这些AI模型很可能需要部署在车载MCU或边缘计算单元上，必然会面临量化需求。这项研究明确告诉我们，不能仅仅看量化后的“表面”指标，而必须深入分析量化对特定故障模式的影响。对于功能安全ISO 26262要求极高的EPS系统，任何潜在的故障放大都是不可接受的。因此，在评估AI模型上车时，我们必须进行严谨的、针对特定风险的量化鲁棒性测试，甚至考虑专用的硬件加速器来避免深度量化带来的风险，以确保系统的安全可靠性。
+   https://arxiv.org/abs/2607.27275
+
+4. Tesla brings ByteDance's Doubao AI model to its cars in China（来源：CnEVPost）
+   应用分析：尽管这主要是关于智能座舱体验的提升，但智能座舱的演进最终会与驾驶控制融合，特别是像线控转向（Steer-by-Wire）这样的系统，它需要更智能的人机交互来传递驾驶意图和路感反馈。如果“豆包”这类AI模型能够提供更自然流畅的语音控制、更智能的导航或情境感知，长远来看，它们可能会影响到驾驶模式的选择，以及助力手感调校的自适应性。例如，AI可以根据驾驶员的偏好、情绪和路况，动态调整EPS的助力特性。但就目前而言，这与我的核心工作——底层电机控制和功能安全，关联度相对较低，更多是行业趋势的参考，短期内不值得我们直接投入研发资源。
+   https://cnevpost.com/2026/07/31/tesla-brings-doubao-ai-cars-china/
+
+5. Changan Deepal opens pre-sales for revamped S05 SUV with LiDAR（来源：CnEVPost）
+   应用分析：激光雷达的普及，直接影响到线控转向（Steer-by-Wire）系统的发展。更精准的环境感知意味着系统可以更早、更准确地预判路况和驾驶意图。对EPS而言，这意味着我们可以接收到更丰富、更可靠的感知数据，用于：第一，助力策略优化。我们可以基于前方路况，比如弯道曲率、障碍物，提前调整助力曲线，提供更平顺、更符合预期的驾驶手感。第二，冗余与功能安全。LiDAR提供的高精度环境信息，可以作为线控转向系统决策和冗余验证的重要输入，特别是在传感器失效或感知模糊时，辅助判断安全性。这是一个值得我们密切关注和投入的方向，特别是对于线控转向系统的架构设计和功能安全考量，LiDAR将是不可或缺的组成部分，需要我们积极研究其数据接口、融合算法以及对EPS控制策略的潜在影响。
+   https://cnevpost.com/2026/07/30/changan-deepal-opens-pre-sales-for-revamped-s05/
+
+6. Google DeepMind’s new AI model can control a robot’s entire body（来源：The Verge）
+   应用分析：这项研究与我的EPS电机控制工作高度相关！人形机器人的关节执行器和伺服电机控制，与EPS的永磁同步电机，也就是PMSM控制，在底层技术上有很多共通之处。例如，FOC矢量控制都是高精度转矩控制的核心；人形机器人对运动平稳性和噪声要求很高，其控制策略在抑制电机NVH（噪声、振动、平顺性）、转矩脉动方面可能有很多先进经验可供EPS借鉴；此外，为降低成本和提高可靠性，人形机器人也会积极探索无传感器或冗余传感方案，这与EPS提升安全性和成本竞争力的需求不谋而合。这是一个非常值得我们深入研究和投入的方向。我们可以主动学习DeepMind在全身控制中如何处理多关节协调、力控和运动规划，将其先进的AI控制思想和电机控制策略迁移到EPS系统，以提升性能和鲁棒性。
+   https://www.theverge.com/tech/973276/google-deepmind-gemini-robotics-2-whole-body
+
+7. Nidec Positions Precision Reducers for Cobots, Humanoids, and Automation（来源：EE Times）
+   应用分析：这项资讯对EPS电机选型和系统设计有着直接的参考价值。虽然EPS系统通常不使用传统意义上的“减速器”（而是通过齿轮齿条或双小齿轮机构实现助力），但其对电机输出转矩的精度、NVH（噪声、振动、平顺性）和效率要求极高，这些与机器人关节执行器的需求高度相似。我们可以关注Nidec如何优化电机与减速器的集成设计，以实现更高的转矩密度和更小的体积，这对于EPS电机的紧凑化设计有借鉴意义；此外，机器人减速器强调的“低齿隙”和“平稳运行”正是EPS在手感调校中追求的目标，我们可以研究他们在材料、齿形设计、装配工艺上如何控制齿隙和抑制噪声。这是一个值得投入关注的硬件层面信息，可以作为我们电机选型、传动系统优化以及与供应商合作时的重要参考。
+   https://www.eetimes.com/nidec-positions-precision-reducers-for-cobots-humanoids-and-automation/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260731-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260731-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260731-pm.mp3" length="4005792" type="audio/mpeg"/>
+      <pubDate>Fri, 31 Jul 2026 09:42:48 +0000</pubDate>
     </item>
   </channel>
 </rss>
