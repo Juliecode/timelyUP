@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 02 Aug 2026 09:42:54 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Aug 2026 22:32:38 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI赋能转向，从可解释控制到多智能体协同：EPS工程师的今日必读</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大方向，为您精选了七条重磅资讯。这些内容不仅涵盖了AI在闭环控制、强化学习、边缘推理等方面的最新突破，更将深入探讨它们如何赋能我们的汽车电动助力转向，也就是EPS系统，以及线控转向的未来发展。让我们一起看看，这些前沿技术将如何改变我们的工作，带来哪些新的机遇与挑战。
-
-1. Interpretable Language Model for Closed-Loop Type 1 Diabetes Control（来源：arXiv cs.AI）
-   应用分析：这种思路可以直接用于EPS的AI辅助控制策略验证和故障诊断。例如，当AI控制器做出非常规助力调整时，LLM可以根据其训练知识和当前传感器数据，生成人类可理解的解释，说明为何在特定路况或驾驶员行为下做出此决策。这能大大加速AI控制策略的信任建立和功能安全认证过程，尤其是在线控转向这种高度依赖软件的未来架构中，可解释性将是核心竞争力，因此非常值得投入研究和概念验证。
-   https://arxiv.org/abs/2607.14126
-
-2. RENEW: Towards Learning World Models and Repairing Model Exploitation from Preferences（来源：arXiv cs.LG）
-   应用分析：这个框架非常能用。我们可以在MIL、SIL或HIL环境中构建EPS的世界模型，模拟不同工况下的电机行为和助力输出。当模型在某些极端或不常见工况下出现“模型利用”导致的错误预测时，可以引入工程师（人类专家）对模拟轨迹的偏好反馈，例如“这个回正力矩太弱了”，来指导世界模型修正其动力学预测，从而优化基于模型预测控制或强化学习的助力策略。这能减少对大量真实数据采集的依赖，提升控制策略的开发和迭代效率，投入价值很高。
-   https://arxiv.org/abs/2607.14180
-
-3. Intelligent Three Level Learning Architecture for Autonomous UAV Swarms in Search and Rescue（来源：arXiv cs.AI）
-   应用分析：我们可以借鉴其分层理念。在未来的线控转向架构中，底层可以是单个电机控制器，负责FOC等基本控制；中间层可以是转向子系统控制器，负责左右转向电机的协调、助力曲线的执行；顶层可以是整车域控制器，负责根据驾驶员意图、路况等进行高层策略决策和自适应调整。多智能体强化学习可以用于协调左右转向电机在故障降级模式下的协同工作。这种架构为线控转向等复杂底盘系统的功能安全、冗余设计和分布式控制提供了前沿思路，值得投入研究和概念验证。
-   https://arxiv.org/abs/2607.14093
-
-4. Low-Latency Relay Selection in NR-V2X Vehicular Communications via Graph Isomorphism Networks with Edge Features（来源：arXiv cs.LG）
-   应用分析：这种GNN优化思路可以间接应用于线控转向的通信冗余和路由选择。在多冗余线控转向系统中，各节点之间的通信链路需要高度可靠。当某些链路出现干扰或故障时，如何实时、低延迟地选择最优的备用路径或中继节点，确保转向指令的及时传递，是关键挑战。GNN模型可以学习不同通信环境下的链路状态和潜在路由，预测最优的冗余路径。这能为未来线控转向系统提供更智能、更鲁棒的通信保障，从而提升整体功能安全等级，值得在概念层面进行评估和探索。
-   https://arxiv.org/abs/2607.14176
-
-5. This Graduate Student Equips NASA’s Robots With Assembly Skills（来源：IEEE Spectrum）
-   应用分析：机器人高精度组装所需的力控、位置控算法，以及对电机选型、控制策略（如FOC、转矩脉动抑制）的极致要求，可以直接迁移到EPS中。例如，在助力策略调校中，我们可以借鉴机器人关节控制的精细度，实现更细腻、更符合驾驶员意图的手感。在线控转向中，精确的轮端角度控制和路感还原，尤其是在复杂工况下的抖动抑制，都可以从这类机器人研究中获得灵感和具体算法。这是典型的跨领域技术迁移，投入价值非常高。
-   https://spectrum.ieee.org/graduate-student-nasas-robots-assembly
-
-6. Understanding MPPT Algorithms, Hybrid-LCC Systems with IGCTs, SiC Bidirectional Switches: Electronics Week Insights（来源：Power Electronics News）
-   应用分析：SiC双向开关可以用于EPS的功率级（逆变器）设计，实现更高的功率密度和更小的散热需求。特别是在未来的线控转向中，可能需要更紧凑、更高效的电机驱动单元。同时，SiC器件的高开关频率有助于降低电机电流纹波，从而改善NVH性能和转矩脉动，这正是我现在最想解决的问题之一。因此，我们应该持续投入和关注SiC器件的最新进展，评估其在EPS功率级中的应用潜力，包括与电机控制策略的协同优化，以充分发挥其优势。
-   https://www.powerelectronicsnews.com/understanding-mppt-algorithms-hybrid-lcc-systems-with-igcts-sic-bidirectional-switches-electronics-week-insights/
-
-7. Enhancing Small Language Models Reasoning through Knowledge Graph Grounding（来源：arXiv cs.AI）
-   应用分析：我们可以将EPS系统的故障模式、诊断规则、控制参数之间的逻辑关系构建成知识图谱。然后，利用轻量级的SLM作为智能体，结合这个知识图谱，在车端或ECU内部进行实时的故障诊断。例如，当传感器数据出现异常时，SLM可以根据知识图谱进行多跳推理，识别出潜在的故障根源，并给出可解释的诊断结果。这也能辅助自动标定，通过知识图谱指导SLM根据车辆状态和驾驶员偏好，推荐或调整控制参数。SLM结合知识图谱的方案，有望在不增加过多硬件成本和算力需求的前提下，为EPS引入更智能的诊断和自适应能力，值得投入概念验证和技术预研。
-   https://arxiv.org/abs/2607.14149</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260719-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260719-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260719-am.mp3" length="3508272" type="audio/mpeg"/>
-      <pubDate>Sat, 18 Jul 2026 22:28:58 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI突破凸优化，Kimi迎“K3时刻”，EPS工程师如何应对行业变革？</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师，老王。今天，我们为您精选了七条重磅资讯，覆盖了人工智能前沿、汽车智能化和机器人三大领域，希望能为您的研发工作带来新的启发。特别是对于咱们做汽车电动助力转向，也就是EPS的工程师来说，今天的每一条内容都值得咱们好好琢磨琢磨。那么，话不多说，我们马上进入今天的早报时间！
@@ -1127,6 +1091,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260802-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260802-pm.mp3" length="3844368" type="audio/mpeg"/>
       <pubDate>Sun, 02 Aug 2026 09:42:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI赋能机器人全身控制，汽车电动化无稀土新进展</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，看看有哪些值得我们深入探讨的重磅消息。从谷歌DeepMind的机器人全身控制突破，到马勒的无稀土电机，再到AI在嵌入式开发中的潜力，每一条都可能为我们的工作带来新的启发。话不多说，让我们立刻进入今天的早报时间。
+
+1. Google DeepMind says Gemini Robotics 2 enables full body control（来源：The Robot Report）
+   应用分析：能用，且非常值得深入研究。我们可以关注Gemini Robotics 2在多关节协调控制、复杂环境适应性、以及对执行器力矩输出的精细控制方法。探索将这类基于AI的全局优化控制思想应用于EPS的电机控制策略，例如，在手感调校中，通过AI模型学习驾驶员意图和路面反馈，动态调整助力曲线和阻尼补偿，实现更智能、更个性化的手感。在线控转向架构中，AI模型可以作为高层控制器，协调多个冗余执行器的动作，确保系统鲁棒性与功能安全。投入优先级高，这是未来线控转向和智能驾驶的关键技术方向，尽早布局AI在底层执行器控制的应用，能抢占技术制高点。
+   https://www.therobotreport.com/google-deepmind-says-gemini-robotics-2-enables-full-body-control/
+
+2. MAHLE introduces a new range extender engine and a rare earth-free electric motor（来源：Charged EVs）
+   应用分析：能用，且是当前电机选型和成本优化的重要方向。我们应立即跟进马勒这款无稀土电机的具体技术细节，特别是其磁路设计、材料选择、以及性能参数（转矩密度、效率、NVH）。评估其是否能满足EPS对电机性能、尺寸、成本及可靠性的严苛要求。如果性能接近或达到永磁同步电机水平，可以考虑将其纳入下一代EPS电机的备选方案，甚至进行原型开发和测试。这有助于我们摆脱对稀土的依赖，提升产品竞争力。投入优先级高，这直接关系到EPS产品的成本控制和供应链安全，是可持续发展的关键技术。
+   https://chargedevs.com/newswire/mahle-introduces-a-new-range-extender-engine-and-a-rare-earth-free-electric-motor/
+
+3. Molicel’s INR-21700-P70X cell is designed to close the gap between Li-ion batteries and supercapacitors（来源：Charged EVs）
+   应用分析：间接有用，主要用于理解整车平台电气特性。我们可以关注这类兼具高能量密度和高功率输出特性的电池在电动汽车中的应用趋势。例如，线控转向系统对电源的瞬态响应要求很高，了解电池能提供的瞬时峰值电流和电压稳定性，有助于我们设计更鲁棒的功率级和更精确的电流采样电路。此外，如果未来EPS系统需要独立备用电源，这种高性能电芯也是一个潜在选择。投入优先级中等，虽然不是直接技术应用，但作为汽车智能化工程师，对核心部件如电池的演进保持关注是必要的，它影响我们系统的设计边界和安全策略。
+   https://chargedevs.com/newswire/molicels-inr-21700-p70x-cell-is-designed-to-close-the-gap-between-li-ion-batteries-and-supercapacitors/
+
+4. TechCrunch Mobility: Two roads diverged — for robotaxis（来源：TechCrunch）
+   应用分析：能用，是线控转向未来应用场景的重要参考。我们应深入分析Robotaxi在功能安全、冗余设计、以及故障诊断与降级处理上的技术方案，尤其是转向系统的冗余要求。思考线控转向如何更好地支持L4/L5自动驾驶的需求，例如，如何实现更高等级的转向系统冗余，如何与自动驾驶决策层进行更高效的接口定义，以及如何在极端故障下提供安全的降级操作。这会指导我们在线控转向架构设计和功能安全方案上的早期规划。投入优先级高，线控转向是L3+自动驾驶的基石，而Robotaxi是其终极应用场景之一，提前理解需求有助于我们技术路线的制定。
+   https://techcrunch.com/2026/08/02/techcrunch-mobility-two-roads-diverged-for-robotaxis/
+
+5. Sam Altman and AI’s decel debate（来源：TechCrunch）
+   应用分析：间接有用，用于指导AI在功能安全领域的应用策略。在考虑将AI/数据驱动方法引入EPS控制、标定或故障诊断时，必须将功能安全（ISO 26262）放在首位。奥特曼的呼吁提醒我们，AI的快速发展不能以牺牲安全性为代价。因此，我们需要在AI控制方案中，严格定义其运行边界、故障模式，并设计可解释性强、可验证的AI模型，同时建立完善的故障诊断与降级机制。例如，在自动标定中，AI模型生成的参数必须经过严格的物理约束和整车测试验证。投入优先级中等，这不是技术细节，而是战略层面的考量，但对于确保AI在汽车领域的安全落地至关重要。
+   https://techcrunch.com/2026/08/02/sam-altman-and-ais-decel-debate/
+
+6. Show HN: MicroCodex Coding Agent – OpenAI/codex reimplemented in C++ &lt;1MB binary（来源：Hacker News）
+   应用分析：能用，有潜力提升开发效率。我们可以关注其实现原理和模型压缩技术。虽然直接在EPS控制器上运行代码生成代理不现实，但可以探索将这类小型化AI模型用于辅助开发。例如，在嵌入式C代码编写中，利用其进行代码片段生成、Bug检测、代码重构建议。或者，在MATLAB/Simulink模型化设计中，辅助生成特定模块的C代码，或对生成的代码进行初步优化。这能显著提升开发和验证效率。投入优先级中等偏高，这属于开发工具链的优化，虽然不直接影响产品性能，但能大幅提升团队工作效率，间接加速产品迭代。
+   https://github.com/paoloanzn/microcodex
+
+7. New Mitsubishi Eclipse Sportback EV to offer both J1772 and NACS charging ports（来源：Charged EVs）
+   应用分析：间接有用，有助于理解整车电气架构和市场趋势。我们可以关注这种兼容性设计对整车电气系统复杂度的影响。例如，多充电接口可能意味着更复杂的电源管理单元和诊断逻辑。这提醒我们在EPS设计中，要确保我们的系统能稳定工作在多种整车电气环境和供电模式下。此外，了解充电标准的演变，能帮助我们预判未来电动汽车的市场走向，从而更好地规划EPS产品的适配性。投入优先级中等，这是市场策略而非核心技术，但对整车电气系统设计有间接影响，保持关注有助于我们更好地融入整车开发流程。
+   https://chargedevs.com/newswire/new-mitsubishi-eclipse-sportback-ev-to-offer-both-j1772-and-nacs-charging-ports/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260803-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260803-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260803-am.mp3" length="2249856" type="audio/mpeg"/>
+      <pubDate>Sun, 02 Aug 2026 22:32:38 +0000</pubDate>
     </item>
   </channel>
 </rss>
