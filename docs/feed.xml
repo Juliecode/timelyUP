@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 02 Aug 2026 22:32:38 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 09:43:06 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI突破凸优化，Kimi迎“K3时刻”，EPS工程师如何应对行业变革？</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师，老王。今天，我们为您精选了七条重磅资讯，覆盖了人工智能前沿、汽车智能化和机器人三大领域，希望能为您的研发工作带来新的启发。特别是对于咱们做汽车电动助力转向，也就是EPS的工程师来说，今天的每一条内容都值得咱们好好琢磨琢磨。那么，话不多说，我们马上进入今天的早报时间！
-
-1. GPT-5.6 used a prompt to close a 30-year gap in convex optimization（来源：Hacker News）
-   应用分析：理论上可以。我们EPS的电机控制策略，如FOC参数调优、MPC模型优化，以及助力曲线的生成，都涉及复杂的凸优化问题。可以尝试将现有优化问题描述为大模型可理解的提示词，让GPT-5.6这类模型辅助寻找新的优化解法或改进现有算法。例如，探索更优的弱磁控制曲线、转矩脉动抑制参数组合，甚至在无传感器控制中提升状态观测器的鲁棒性。这值得初期小规模投入研究。这不是直接的工程落地，而是前瞻性研究投入。可以先用公开可用的模型对一些已知的、有明确数学定义的优化问题进行初步探索，评估其解决实际工程问题的能力和效率。如果能从数学层面提供新的思路或更优解，哪怕是辅助性的，其潜在价值也巨大。
-   https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/
-
-2. The Kimi K3 Moment（来源：Hacker News）
-   应用分析：可以作为潜在的辅助工具。Kimi这类大模型在代码理解、文档总结、需求分析、故障诊断知识库构建等方面有应用潜力。例如，让它协助分析ISO 26262标准文档，提取关键安全目标；或者帮助我们理解电机控制算法的复杂代码逻辑，进行初步的静态分析；甚至基于历史故障数据，辅助进行故障模式分析和预测性维护方案的生成。这值得关注和尝试。考虑到其本土化优势，在处理中文技术文档、内部知识库方面可能表现更优。可以先进行小范围的概念验证，看能否有效提高研发效率。如果效果显著，可考虑将其整合到内部知识管理或辅助开发流程中。
-   https://stephen.bochinski.dev/blog/2026/07/18/the-kimi-k3-moment/
-
-3. NYC may require landlords and realtors to disclose the use of AI in listings（来源：Hacker News）
-   应用分析：这不是一个直接的技术应用，而是一个重要的风险管理和合规性考量。在将AI引入EPS控制策略（如AI辅助标定、神经网络观测器、强化学习控制）时，必须提前考虑AI模型的决策过程是否可解释、是否公平、是否存在安全隐患、以及如何满足功能安全标准的要求。我们需要建立更严格的AI模型验证和确认流程，确保其行为透明且可追溯。这方面必须投入。我们需要主动研究AI的可解释性（XAI）技术，例如LIME、SHAP等，并将其纳入AI控制算法的开发和验证流程。同时，与功能安全团队紧密合作，探索AI在ISO 26262框架下的认证路径，确保未来AI技术在EPS中的应用是合规且安全的。
-   https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties/
-
-4. Palm Garden AI develops Coherence Guard relational decision layer for human-facing robots（来源：The Robot Report）
-   应用分析：间接借鉴。Coherence Guard的核心理念——在复杂环境中实现鲁棒、安全的“关系”决策，与线控转向中EPS执行器如何理解驾驶员意图并提供恰当、平顺、安全的力反馈，有异曲同工之处。我们可以研究其在“关系决策”中使用的算法框架，例如如何处理不确定性、如何进行行为预测，并将其思想迁移到线控转向的人机接口设计中，以优化助力策略、阻尼回正特性，甚至实现更高级的驾驶员状态自适应调校。这值得中等投入研究。这不是直接引入产品，而是借鉴其背后的设计理念和控制思想。可以组织内部技术分享，研究相关论文和公开资料，探索其在机器人领域如何实现“软性”交互和决策，并评估这些思路在线控转向手感调校、冗余控制和故障降级策略中的潜在应用。尤其关注其如何处理安全性和鲁棒性，这与ISO 26262功能安全高度相关。
-   https://www.therobotreport.com/palm-garden-ai-develops-coherence-guard-relational-decision-layer-human-facing-robots/
-
-5. CALB in spotlight as GAC Aion S vehicles hit by widespread battery cell defects（来源：CnEVPost）
-   应用分析：这不是一个技术应用，而是一个重要的设计输入和风险规避。我们需要加强EPS系统对供电电源波动、瞬态跌落的鲁棒性设计，确保在电池出现轻微故障或性能衰减时，EPS仍能保持稳定工作或安全降级。在功能安全分析（如FMEA、FTA）中，应将动力电池的各类故障模式及其对EPS供电的影响作为关键输入，评估其风险并制定相应的缓解措施。同时，在EPS控制器硬件设计时，需要考虑电源管理和滤波，以应对可能出现的电源噪声。这方面必须投入。这直接关系到EPS系统的功能安全和产品质量。我们需要与整车厂、电池供应商保持密切沟通，了解电池的详细性能参数、故障模式和诊断接口，以便在EPS系统设计时充分考虑这些因素。加强电源管理模块设计、提升系统对电源波动的耐受性、完善故障诊断和降级策略，都是需要优先投入的方向。
-   https://cnevpost.com/2026/07/18/calb-in-spotlight-gac-aion-s-battery-cell-defects/
-
-6. China's battery tax shift is a strong push for automakers to make their own cells, CPCA's Cui says（来源：CnEVPost）
-   应用分析：这不是直接的技术应用，而是战略规划和合作模式调整的信号。我们需要密切关注车企在电池自研自产上的进展，理解其电池技术路线和集成策略。这可能要求EPS在功耗管理、接口标准化、与整车E/E架构的深度融合方面做得更好。例如，如果车企自研电池管理系统（BMS）更强大，EPS是否可以利用BMS提供更精细的电池状态信息，从而优化自身的功耗管理和性能输出？这值得战略层面投入。需要加强与头部车企的沟通，了解他们的中长期电池战略，并评估这对EPS产品路线图和技术发展方向的影响。在EPS系统设计中，应考虑未来更紧密的整车集成趋势，预留更多接口和灵活性，以适应车企垂直整合带来的变化。
-   https://cnevpost.com/2026/07/18/china-battery-tax-shift-push-automakers-make-own-cells/
-
-7. All the EVs that were discontinued or killed off in the U.S. this year（来源：TechCrunch）
-   应用分析：这是一个市场洞察和产品策略调整的考量。它提醒我们，在开发下一代EPS系统时，不仅要关注技术先进性，更要关注成本效益和市场接受度。例如，在电机选型时，除了追求高性能，也要平衡NVH和成本；在控制策略开发时，除了实现极致手感，也要考虑标定效率和维护成本。平台化、模块化设计，以及支持不同车型快速适配的软件定义能力，将变得更加重要。这值得在产品规划和研发方向上持续关注。我们需要定期进行市场分析，了解哪些车型正在崛起、哪些正在衰落，以及背后的原因。将这些市场信息反馈到EPS的产品定义和技术路线图中，确保我们的研发投入与市场需求保持一致，避免开发出不符合市场趋势的产品。
-   https://techcrunch.com/2026/07/18/all-the-evs-that-were-discontinued-or-killed-off-in-the-u-s-this-year/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260719-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260719-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260719-pm.mp3" length="3497040" type="audio/mpeg"/>
-      <pubDate>Sun, 19 Jul 2026 09:42:33 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 智驾洞察：AI大模型热潮与汽车转向技术前沿</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿的最新动态，特别是大模型Kimi引发的行业思考，以及汽车智能化和机器人领域对我们EPS产品研发的深刻影响。废话不多说，让我们立刻进入今天的头条资讯。
@@ -1127,6 +1091,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260803-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260803-am.mp3" length="2249856" type="audio/mpeg"/>
       <pubDate>Sun, 02 Aug 2026 22:32:38 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 智驾、机器人与无稀土电机：研发工程师的今日科技早报</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大方向，为您精选了七条最具价值的资讯。从无稀土电机的新突破，到谷歌DeepMind的机器人全身控制进展，再到AI在安全关键系统中的应用之道，每一条都可能点燃您工作中的新思路。准备好了吗？让我们一起开启今天的科技之旅！
+
+1. MAHLE introduces a new range extender engine and a rare earth-free electric motor（来源：Charged EVs）
+   应用分析：作为EPS电机选型和控制策略研发工程师，这直接关系到我们产品线的未来竞争力。毫无疑问能用，并且是必须关注的方向。我们需要立即启动对MAHLE这款无稀土电机的技术评估，关注其转矩密度、效率、NVH特性以及成本。重点是与现有PMSM电机进行性能对比，特别是在高转矩输出和宽转速范围下的表现。同时，要评估其对现有FOC矢量控制算法的适应性，看是否需要开发新的控制策略来优化其性能，例如针对其特有的磁路结构进行转矩脉动抑制。这是未来EPS电机发展的重要方向之一，极度值得投入。
+   https://chargedevs.com/newswire/mahle-introduces-a-new-range-extender-engine-and-a-rare-earth-free-electric-motor/
+
+2. Google DeepMind says Gemini Robotics 2 enables full body control（来源：The Robot Report）
+   应用分析：直接将Gemini Robotics 2迁移到EPS有难度，但其背后体现的AI控制理念和方法论非常值得借鉴。我们可以关注Gemini Robotics 2在处理多自由度系统、复杂动力学和高动态响应时的AI控制策略，特别是如何利用AI实现对电机转矩的精细控制，以及如何处理外部扰动和非线性。可以探索将其中的模型预测控制（MPC）、强化学习（RL）或神经网络观测器等思想，应用于EPS的电机控制策略，例如改进转矩脉动抑制、无传感器控制的鲁棒性，甚至用于线控转向（Steer-by-Wire）的底层执行器协调控制。这将是未来EPS系统，尤其是线控转向系统提升性能和实现更高级别控制的关键技术储备，值得中长期投入。
+   https://www.therobotreport.com/google-deepmind-says-gemini-robotics-2-enables-full-body-control/
+
+3. CLIFT: Turning Gemini Robotics On-Device into Humanoid Specialists via Non-Invasive Closed-Loop Iterative Fine-Tuning（来源：arXiv cs.RO）
+   应用分析：CLIFT的核心思想对EPS非常有帮助，尤其是在助力手感调校和故障诊断方面。我们可以借鉴CLIFT的思路，建立EPS助力手感调校的“基础模型”，然后利用车辆实际运行数据进行闭环迭代微调。例如，通过采集驾驶员操作数据和车辆反馈数据，利用强化学习或在线优化方法，自动调整助力曲线、阻尼补偿等参数，以适应不同驾驶员的偏好或车辆状态。这能大幅提升标定效率，并实现个性化手感。在故障诊断方面，可以用类似方法让模型学习在不同工况下的正常和异常行为，提高诊断的准确性和预测性维护能力。这能直接提高我们现有工作的效率和产品的智能化水平，值得短期和中期投入。
+   https://arxiv.org/abs/2607.29172
+
+4. LAWFUL: Law-Aligned Witness for Faithful Use of Latents（来源：arXiv cs.LG）
+   应用分析：在EPS电机控制中，例如FOC算法，我们有明确的电机物理模型和控制定律。如果引入AI模型（如神经网络观测器、AI控制器），就必须确保其行为符合这些物理定律。我们可以利用LAWFUL提出的框架，检查AI模型在处理电机电流、转速、转矩等数据时，其内部表征是否与物理定律（如欧姆定律、电磁转矩公式）保持一致。这有助于发现模型潜在的“幻觉”或不符合物理的决策，从而提升模型的可靠性和可信度，满足ISO 26262等功能安全标准的要求。这是将AI引入安全关键型汽车控制系统，尤其是线控转向系统的必经之路，极度值得投入。
+   https://arxiv.org/abs/2607.28672
+
+5. Closed-Loop Model-Based Control Barrier Functions with Application to Robust Flight Envelope Protection（来源：arXiv eess.SY 控制系统）
+   应用分析：CBF的核心思想可以直接应用于EPS的功能安全设计和线控转向的冗余控制。我们可以将车辆的转向能力边界（如最大转向角、最大转向力矩、最小转弯半径）定义为安全集，利用CBF来设计一个安全控制器，它可以在主控制器失效或出现异常时，确保车辆的转向行为不会超出这些安全边界。对于线控转向，CBF可以用于管理多个执行器（如主转向执行器和冗余执行器）之间的协调，确保在故障发生时系统能够平稳降级，并维持基本转向能力。这能有效提升系统的功能安全等级和鲁棒性，极度值得投入。
+   https://arxiv.org/abs/2607.28830
+
+6. DART: Dual-Axis Airborne Reachability-Gated Torque-Reaction for Off-Road Vehicle Jumps（来源：arXiv cs.RO）
+   应用分析：DART的“可达性分析”和“起跳前预控制”的核心思想对EPS有很强的借鉴意义。在EPS中，我们关注的是转向手感的线性度、回正性以及在极限工况下的鲁棒性。我们可以利用这种前瞻性分析，在转向发生前，通过调整助力策略、预加载电机转矩或优化阻尼控制，来扩大EPS的“可控范围”，避免转向力矩超出驾驶员预期或系统物理极限，从而提高车辆的操控稳定性和安全性。例如，在快速变道时，预先调整助力，使驾驶员感觉更稳定。这是一个值得中期投入研究的方向，能为EPS在动态极限工况下的性能提升和安全保障提供新思路。
+   https://arxiv.org/abs/2607.29011
+
+7. OpenClaw and Ollama in Agentic AI: Toward Fully Autonomous and Scalable AI Agent Systems（来源：arXiv cs.AI）
+   应用分析：这种分层架构思想对于线控转向等复杂系统非常有用。在线控转向系统中，我们可以将“驾驶意图感知与决策”（推理层）、“转向路径规划与协同控制”（编排层）和“EPS执行器精确力矩控制”（执行层）进行解耦。例如，推理层可以由V2X信息、驾驶员输入和环境感知数据决定高层转向目标；编排层负责将高层目标转化为具体的转向角度和转矩需求，并协调左右转向执行器；执行层则确保电机精确响应转矩指令。这种分层架构有助于提升系统的可维护性、可扩展性，并简化功能安全分析。这是一个值得中长期投入的先进系统架构设计理念。
+   https://arxiv.org/abs/2607.28629</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260803-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260803-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260803-pm.mp3" length="3641904" type="audio/mpeg"/>
+      <pubDate>Mon, 03 Aug 2026 09:43:06 +0000</pubDate>
     </item>
   </channel>
 </rss>
