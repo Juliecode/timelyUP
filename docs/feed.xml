@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 04 Aug 2026 09:42:59 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 22:41:24 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾新篇章：可解释AI、快慢控制与区域架构</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是您的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热点，为您精选出七条最有价值的资讯。从AI模型如何变得更加透明可信，到自动驾驶中如何实现高效率的实时决策，再到汽车电气架构的深刻变革，以及机器人领域的大规模数据驱动学习，每一条都可能为您的研发工作带来新的灵感和突破。让我们一起来看看今天的精彩内容。
-
-1. 黑盒变白盒：可解释强化学习新进展（来源：arXiv cs.AI）
-   应用分析：这项技术对我们EPS研发来说非常有用，且具备落地潜力。我们可以尝试将现有EPS电机控制策略中的部分复杂非线性补偿逻辑，或者未来基于强化学习优化的助力曲线、阻尼控制策略，通过这种方法进行解释和验证。例如，针对特定工况如高速转向回正或低速泊车抖动抑制训练的强化学习控制器，其决策过程可以通过Prolog程序进行反向工程，从而理解其内部逻辑，验证其安全性、鲁棒性，并找出潜在的非预期行为。这比直接分析神经网络权重更直观。因此，非常值得投入。这是解决AI在功能安全领域应用的关键技术之一。我们可以先从仿真环境中的EPS控制器或电机模型开始，尝试训练一些简单的强化学习策略，然后应用此框架进行概念验证。初期投入可以集中在工具链的调研和探索，研究如何与我们现有的MATLAB/Simulink模型化设计流程结合。如果成功，将极大地降低AI控制策略的验证成本和风险，加速AI在EPS中的应用。
-   https://arxiv.org/abs/2607.15459
-
-2. 谷歌新AI芯片曝光：专为Gemini模型优化效率（来源：TechCrunch）
-   应用分析：虽然这款芯片不是直接用于EPS电机控制，但这一趋势对未来EPS系统采用AI算法有重要指导意义。当前EPS控制器主要使用MCU进行实时控制，计算资源有限。如果未来要在EPS中深度集成AI算法，比如神经网络观测器、模型预测控制或自动标定，高效的边缘AI芯片将是关键。我们可以关注行业内是否有针对汽车嵌入式AI应用的定制化芯片方案，尤其是那些支持Transformer或大型语言模型轻量化推理的芯片。这一领域值得关注，但不宜立即投入大量研发资源。目前EPS控制器芯片方案相对成熟，性能主要受MCU主频、浮点运算能力和外设接口限制。短期内，我们应重点关注如何将AI算法轻量化，使其能在现有或下一代车规级MCU上高效运行。但长期来看，随着线控转向等高级功能对AI算力需求的提升，与芯片供应商合作，共同定义满足功能安全和实时性要求的定制化AI加速器，将是战略性投入方向。
-   https://techcrunch.com/2026/07/20/google-is-working-on-a-new-ai-chip-designed-to-make-gemini-more-efficient/
-
-3. 超越Grep：AI编码辅助工具加速嵌入式开发（来源：Ars Technica）
-   应用分析：AI编码辅助工具完全能用，且能显著提高效率。我们可以将GitHub Copilot、Code Llama等AI编码辅助工具集成到我们的开发环境中，辅助嵌入式C代码的编写、Bug修复和代码审查。特别是在MATLAB/Simulink模型生成C代码后，AI可以帮助我们优化生成的代码，或在手动修改时提供智能建议。对于功能安全相关的代码，AI可以辅助进行静态分析，识别潜在的安全漏洞或不符合MISRA C规范的部分。这属于开发工具链的优化，短期内就能看到生产力提升，非常值得投入。可以从小范围团队试用开始，评估不同AI编码工具在嵌入式C开发、模型化设计代码生成后的优化、以及功能安全代码审查方面的表现。投入成本主要是工具订阅费用和团队适应新工具的学习成本。长期来看，这将是提高软件质量和开发速度的必备工具。
-   https://arstechnica.com/ai/2026/07/beyond-grep-the-case-for-a-context-rich-ai-coding-harness/
-
-4. 自动驾驶新范式：快慢结合的异步视觉语言-动作推理（来源：arXiv cs.RO）
-   应用分析：这项研究的思路非常能用，是线控转向架构中AI决策落地的关键。在Steer-by-Wire系统中，转向意图识别、路径规划和轨迹跟踪都需要AI的参与。我们可以将大型语言模型或视觉语言模型作为“慢系统”，负责高层级的驾驶意图理解，比如从导航指令、路况、驾驶员偏好中推断转向风格，并生成粗略的转向目标或参数。然后，将FOC等电机控制策略和助力曲线调校作为“快系统”，实时地将这些高层级目标转化为精确的电机转矩指令。这种异步架构可以有效分离复杂决策与实时执行，确保EPS的响应速度和功能安全。这极其值得投入，因为它是线控转向未来发展中，解决AI与实时控制融合的瓶颈问题。我们应该立即开始研究这种“快慢系统”架构在EPS系统中的应用，例如，如何将高层级AI的“转向意图”转化为助力策略的参数，以及如何设计轻量级的“动作专家”来快速响应。这需要跨领域知识，包括模型预测控制、强化学习和实时嵌入式系统设计。
-   https://arxiv.org/abs/2607.15621
-
-5. 汽车电气架构新趋势：域控到区域架构，48V系统成关键（来源：EE Times）
-   应用分析：这一趋势对我们EPS的系统设计和集成至关重要。在区域架构下，EPS可能不再是一个独立的域控制器，而是作为一个执行器模块，通过标准接口（如车载以太网）与区域控制器通信。我们需要提前规划EPS的硬件接口、通信协议，并考虑其在48V电源系统中的供电需求和热管理。功能安全方面，区域架构下的冗余设计和故障诊断将与传统架构有所不同，需要重新审视EPS的功能安全概念。例如，线控转向可能需要多个电源路径，并与整个区域的电源管理系统协同工作。因此，我们必须持续投入。这是EPS未来发展的必然趋势。我们应积极参与到整车E/E架构的定义中，确保EPS在区域架构和48V系统下的兼容性和优化。研发投入应包括：预研支持区域架构的通信接口和协议栈；评估48V电源对电机选型、功率级设计和热管理的影响；以及重新评估并设计区域架构下的EPS功能安全机制和冗余方案。
-   https://www.eetimes.com/powering-the-automotive-revolution-from-zonal-architecture-to-48v/
-
-6. 多千兆车载以太网验证指南：线控转向通信基石（来源：Charged EVs）
-   应用分析：这项技术非常能用，是线控转向通信可靠性的核心。在开发Steer-by-Wire系统时，通信链路的故障模式、诊断和降级策略是功能安全设计的重中之重。我们可以借鉴MEMS故障注入技术，在硬件在环或台架测试环境中，模拟车载以太网的各种通信故障，如丢包、延迟、误码、线缆断路等，验证EPS控制器在极端通信条件下的表现，确保系统能够及时识别故障并进入安全状态，比如降级为机械备份或最小风险状态。对于线控转向而言，通信的可靠性直接关系到生命安全，因此我们必须投入。我们应投入资源研究车载以太网的协议栈、物理层特性，并与一级供应商合作，开发或采购相应的测试工具和故障注入设备。这不仅是验证环节的投入，更是功能安全设计理念在线控转向通信系统中的具体实践。通过早期验证，可以发现并解决潜在的通信风险，避免后期高昂的修改成本。
-   https://chargedevs.com/whitepapers/download-the-guide-to-multi-gig-automotive-ethernet-validation/
-
-7. 小米机器人一号：超十万小时真实轨迹数据赋能视觉-语言-动作模型（来源：arXiv cs.RO）
-   应用分析：这项研究很有用，尤其是在数据驱动的控制策略和自动标定方面。我们可以借鉴这种大规模轨迹数据收集和自动标注的思路，来训练EPS的某些高级控制模块。例如，收集大量不同驾驶员在不同路况下的转向轨迹、手感偏好数据，并自动标注驾驶员意图、路面反馈等信息。利用这些数据训练视觉语言动作模型，使其能够根据驾驶员指令和路面感知信息，生成更符合用户期望的助力曲线、阻尼特性或回正力矩。这有助于实现个性化手感调校和更智能的助力策略。这项工作值得投入，特别是对AI和数据驱动方法改进控制和标定效率感兴趣的方向。初期可以进行小规模的数据收集和模型验证，评估视觉语言动作模型在特定EPS子任务（如手感调校、转矩脉动抑制参数优化）上的潜力。长期来看，如果能将这种大规模数据驱动学习方法应用于EPS的复杂控制策略和故障诊断，将显著提升产品的性能、鲁棒性和开发效率。
-   https://arxiv.org/abs/2607.15330</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260721-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260721-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260721-am.mp3" length="4599360" type="audio/mpeg"/>
-      <pubDate>Mon, 20 Jul 2026 22:34:40 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI赋能汽车机器人：安全、高效与智能的未来</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最具价值的资讯。从强化学习的探索性突破，到边缘AI的硬件支撑，再到汽车电子架构的演进，以及机器人安全控制的最新进展，每一条都与我们的研发工作息息相关。让我们一起探索这些技术如何赋能未来，提升我们的产品竞争力。
@@ -1127,6 +1091,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260804-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260804-pm.mp3" length="3988800" type="audio/mpeg"/>
       <pubDate>Tue, 04 Aug 2026 09:42:59 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技早报：Agentic AI自主进化，汽车智驾安全基线与无稀土电机新突破</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您带来七条精选资讯。AI智能体架构持续演进，L3、L4级自动驾驶安全基线正式落地，以及无稀土电机的最新进展，都将深刻影响我们的技术路线。接下来，就让我们一起深入分析，看看这些技术将如何赋能我们的工作。
+
+1. Discovering Explicit Magnetic Core Loss Equations via Learnable Symbolic Sparse Identification（来源：arXiv eess.SY 控制系统）
+   应用分析：作为汽车EPS研发工程师，我们主要关注永磁同步电机（PMSM）的性能。磁芯损耗是影响电机效率、温升和NVH（噪声、振动、声振粗糙度）的关键因素。我们可以借鉴LSSI框架，通过台架测试或仿真数据，识别出更精确、更具物理意义的EPS电机磁芯损耗模型。这能帮助我们优化电机设计，改进FOC（磁场定向控制）等控制策略中的损耗补偿算法，特别是在弱磁控制区域，精确的损耗模型对于提升效率和避免过热至关重要。这是一个值得投入的方向，可以先在MATLAB/Simulink模型化设计环境中进行概念验证和算法开发。
+   https://arxiv.org/abs/2608.00379
+
+2. Automotive Cybersecurity: AI Attack Surfaces Grow（来源：EE Times）
+   应用分析：对于EPS产品研发工程师来说，网络安全与功能安全（ISO 26262）是未来EPS系统，尤其是线控转向（Steer-by-Wire）演进中必须高度重视的问题。当AI算法开始应用于助力策略、故障诊断甚至线控转向的冗余控制时，EPS控制器将直接面临更多的网络攻击风险。我们必须在系统架构设计阶段，考虑AI模块和API的隔离与防护，避免攻击蔓延。在功能安全分析中，应将网络安全风险纳入危害分析与风险评估（HARA），识别潜在的攻击路径及其对助力性能、回正手感的影响，并设计相应的安全机制和降级策略。这需要持续投入，并与芯片供应商、整车厂紧密合作，构建端到端的安全防护体系。
+   https://www.eetimes.com/automotive-cybersecurity-ai-attack-surfaces-grow/
+
+3. OpenClaw and Ollama in Agentic AI: Toward Fully Autonomous and Scalable AI Agent Systems（来源：arXiv cs.AI）
+   应用分析：虽然目前的EPS系统主要依赖确定性控制算法，但Agentic AI的理念为未来EPS的智能化提供了新的思路。我们可以设想，未来通过Agentic AI来提升EPS的故障诊断与预测性维护能力，例如，一个AI智能体持续监控电机、传感器数据，自主识别异常模式并预测潜在故障。在自动标定与优化方面，Agentic AI可以作为一个智能体，根据整车测试和驾驶员手感反馈，自主调整助力曲线、阻尼补偿等参数，显著提高标定效率。对于线控转向（Steer-by-Wire），Agentic AI的分层架构及其规划和执行能力，也可以为顶层决策和冗余控制提供新的范式。尽管直接落地到量产EPS尚远，但作为前沿技术储备，持续关注其发展，并在MIL/SIL/HIL环境中进行概念验证是值得投入的。
+   https://arxiv.org/abs/2607.28629
+
+4. China sets unified safety baseline for L3, L4 autonomous driving（来源：CnEVPost）
+   应用分析：对于EPS工程师而言，这项政策具有极其重要的指导意义。它意味着线控转向（Steer-by-Wire）架构设计必须具备更高水平的冗余、故障诊断与降级能力，以确保在极端情况下仍能安全接管或保持安全状态。我们需要重新审视当前的EPS架构，思考如何将其演变为满足线控转向安全要求的执行器，例如增加多通道冗余、独立供电、异构计算等。同时，在功能安全（ISO 26262）分析中，传统的ASIL D要求将进一步细化，需要针对“胜任且专注的驾驶员”这一基线进行量化评估。EPS作为执行层，需要与自动驾驶决策层进行更紧密的协同，确保指令的准确无误执行。这项政策是推动EPS向线控转向和高级别自动驾驶演进的强大驱动力，我们必须高度关注并积极投入。
+   https://cnevpost.com/2026/08/04/china-sets-safety-baseline-l3-l4-autonomous-driving/
+
+5. MAHLE introduces a new range extender engine and a rare earth-free electric motor（来源：Charged EVs）
+   应用分析：对于主要使用PMSM的EPS系统来说，稀土永磁体的成本和供应稳定性是影响产品竞争力的重要因素。如果马勒的不含稀土电动机能够在转矩密度、效率和NVH性能上达到或接近PMSM的要求，那么它将成为EPS电机选型的一个极具吸引力的替代方案。我们需要持续关注这类无稀土电机的技术进展，进行初步的技术调研和可行性分析，评估其在EPS应用中的潜力。这可能涉及对异步电机、磁阻电机等其他电机类型的研究和评估，以规划EPS电机的长期技术路线图，减少对稀土资源的依赖，也是一种有效的供应链风险对冲策略。这是一个值得关注和进行前期技术储备的方向。
+   https://chargedevs.com/newswire/mahle-introduces-a-new-range-extender-engine-and-a-rare-earth-free-electric-motor/
+
+6. Developing Combined Manipulation and Locomotion Skills with Interaction Representation and Skill Composition（来源：arXiv cs.RO）
+   应用分析：尽管EPS是汽车转向系统，但其核心的电机控制与机器人关节执行器控制有高度的共通性。人形机器人对多关节、高精度、高动态响应的电机控制要求极高，我们可以从其全身控制策略、交互表示和技能组合中汲取灵感，优化EPS的FOC矢量控制、转矩脉动抑制、纹波/抖动抑制等算法，以提升转向手感、响应速度和NVH性能。此外，该研究强调自主学习和技能组合，这与我们期望用AI改进控制、标定效率的目标一致。强化学习在机器人领域的成功经验，可以直接迁移到EPS助力策略的自适应调整和复杂工况下的鲁棒控制。这是一个高度相关的交叉点，值得投入时间和资源进行深入研究和技术迁移，例如在Simulink中搭建模型进行仿真验证。
+   https://arxiv.org/abs/2608.00208
+
+7. HEBI Robotics earns NASA SBIR grant to fast track miniaturized actuators（来源：The Robot Report）
+   应用分析：对于EPS系统而言，小型化执行器同样具有重要意义。随着汽车内部空间日益紧张，更紧凑的EPS系统可以提供更大的设计自由度，甚至为线控转向（Steer-by-Wire）的冗余执行器布局创造条件。小型化执行器意味着更小的电机、更紧凑的齿轮箱和更集成化的控制器，有助于减轻整备质量，提升车辆能效。同时，HEBI Robotics的重点在于“加速开发”，意味着在尺寸缩小的前提下，仍追求高功率密度和高效率。这与我们关注PMSM电机转矩密度、效率和NVH的目标一致。我们可以关注其在电机材料、绕组设计、散热技术以及集成驱动技术上的创新。线控转向需要多个高可靠性、高功率密度的小型执行器，HEBI Robotics在小型化执行器领域的进展，可以为我们线控转向执行器的选型和定制提供重要参考。这是一个值得关注的硬件层面进展，对EPS的物理实现和未来架构有直接影响，可以关注其技术报告和产品发布，评估是否能应用于下一代EPS设计。
+   https://www.therobotreport.com/hebi-robotics-earns-nasa-sbir-grant-fast-track-miniaturized-actuators/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260805-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260805-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260805-am.mp3" length="4444272" type="audio/mpeg"/>
+      <pubDate>Tue, 04 Aug 2026 22:41:24 +0000</pubDate>
     </item>
   </channel>
 </rss>
