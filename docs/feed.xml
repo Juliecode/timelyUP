@@ -13,51 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 05 Aug 2026 22:40:38 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2026 09:43:01 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI驱动的确定性与适应性：从机器人力矩控制到汽车功能安全</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最具洞察力的资讯。从AI的确定性架构，到机器人力矩控制的突破，再到汽车功能安全的新范式，每一条都可能为您的研发工作带来新的灵感。话不多说，让我们马上进入今天的早报时间。
-
-1. Phionyx: A Deterministic AI Runtime Architecture with Structured State Management and Pre-Response Governance（来源：arXiv cs.AI）
-   应用分析：在EPS（电动助力转向）这类对功能安全要求极高的系统中，引入AI的最大障碍之一是其“黑箱”特性和不确定性。Phionyx的确定性架构给我们提供了一个务实的路径：不直接让AI做决策，而是将其输出作为辅助信息，比如用于预测路况、驾驶意图或优化助力曲线的“软传感器”输入。核心控制逻辑仍然由确定性算法主导，并对AI的输出进行“预响应控制”和“完整性检查”。这种方法可以逐步将AI从辅助标定、故障诊断等非核心功能，安全地引入到助力策略的自适应优化中，同时满足ISO二六二六二等功能安全标准对可验证性和可审计性的严格要求。这是一个值得深入研究和尝试的框架，以平衡AI的潜力和系统的安全性。
-   https://arxiv.org/abs/2607.18246
-
-2. From Agent Failure Paths to Quantified Residual Risk: A Compositional Framework for Resilient Agentic AI（来源：arXiv cs.AI）
-   应用分析：在线控转向（Steer-by-Wire）这类功能安全等级达到ASIL D的系统中，引入AI代理（例如，用于复杂驾驶场景的决策支持或自适应控制）将面临严峻的安全挑战。CPSAINT框架将AI代理的潜在故障分解为物理、传感器、数据、计算、执行器等七个层面，并结合FRIESA-K函数量化残余风险。这为我们提供了评估AI控制器安全边界的强大工具。例如，在设计线控转向的冗余系统时，我们可以利用此框架分析AI辅助的传感器融合算法（如无传感器控制方案）或故障诊断模块，其自身的失效模式如何影响整体系统的残余风险。通过这种细致的风险量化，可以更科学地设计冗余机制、故障诊断与降级策略，确保即使AI部分出现异常，系统也能保持安全运行，从而加速AI在线控转向等核心汽车控制领域的落地。
-   https://arxiv.org/abs/2607.18243
-
-3. Model-Agnostic Meta Learning for Differentiable MPC（来源：arXiv eess.SY 控制系统）
-   应用分析：EPS系统面临着多种工况（如低速泊车、高速变道）、不同驾驶员偏好以及车辆参数差异等挑战，这使得助力策略和手感调校需要大量耗时的标定工作。传统的PID或FOC控制器在鲁棒性和自适应性方面仍有提升空间。Differentiable MPC结合元学习的框架，为我们解决EPS电机控制策略的性能与鲁棒性问题提供了新的思路。我们可以利用这种方法，训练一个“模型无关”的EPS控制器，使其能够通过少量在线数据，快速适应新的车型、电机参数或驾驶员手感偏好，而无需进行大规模的重新标定。同时，将系统辨识集成到MPC中，可以实现控制器在实际运行中对电机参数（如电阻、电感变化）、摩擦特性等进行实时估计和补偿，有效抑制温漂、提高转矩脉动抑制效果。这将显著提高EPS系统的自适应能力和开发效率，非常值得投入研究和原型验证。
-   https://arxiv.org/abs/2607.19271
-
-4. Integrity-Gated Eco-CACC: Epistemic Admissibility for Cooperative Driving at Signalized Intersections（来源：arXiv eess.SY 控制系统）
-   应用分析：线控转向（Steer-by-Wire）作为未来汽车的核心技术，其功能安全设计是重中之重。在L3及以上自动驾驶场景中，车辆需要与外部环境（如信号灯、其他车辆）进行更复杂的交互，Eco-CACC这类系统将是标配。EPS作为线控转向的执行器，其控制指令的可靠性直接关系到行车安全。我们可以借鉴“完整性门控Eco-CACC”的理念，在线控转向架构中，构建一个类似的“完整性监测模块”。该模块可以持续比对上层自动驾驶系统下发的转向指令（基于其内部世界模型）与EPS自身或车辆底层传感器（如轮速、IMU、转向角传感器）的实时反馈数据。如果发现两者存在显著不一致（例如，指令要求急转弯，但轮速和IMU显示车辆处于高速直线行驶且无障碍物），或者关键传感器本身出现故障，系统就可以触发预警、限制转向响应，甚至启动降级或最小风险操作。这有助于提升线控转向系统的冗余和抗风险能力，确保即使在感知或决策链条的某个环节出现问题时，EPS也能作为最后一道防线，防止潜在的危险发生。这是一个非常务实且可操作的设计思路，值得在线控转向的功能安全架构设计中重点考虑。
-   https://arxiv.org/abs/2607.18565
-
-5. WeEn launches WMSC family of 1,200-2,300 V SiC power modules for solid-state transformers（来源：Charged EVs）
-   应用分析：EPS系统中的电机控制器功率级是核心部件，其性能直接影响电机的效率、发热和系统可靠性。目前EPS系统电压通常在十二伏、四十八伏或四百伏，但随着新能源汽车高压平台（如八百伏）的普及，以及未来线控转向对电机功率密度和响应速度的更高要求，高耐压、高效率的功率器件将变得越来越重要。闻奕半导体的这款一千二百伏至两千三百伏的碳化硅功率模块，虽然目前EPS系统还未达到如此高的电压等级，但它预示了未来功率器件的发展趋势。我们可以关注碳化硅器件在降低导通损耗和开关损耗、提升散热性能方面的潜力。提前进行碳化硅器件的技术储备和评估，特别是在未来高压EPS系统或极致紧凑设计的下一代线控转向执行器中，探索其应用前景，例如通过更高效的碳化硅器件来减小控制器体积、降低能耗。尽管当前成本是主要考量，但碳化硅技术的成熟和成本下降速度很快，值得保持关注并适时进行工程验证。
-   https://chargedevs.com/newswire/ween-launches-wmsc-family-of-1200-2300-v-sic-power-modules-for-solid-state-transformers/
-
-6. Towards Torque-Driven Reinforcement Learning for Quadruped Locomotion（来源：arXiv cs.RO）
-   应用分析：作为EPS电机控制工程师，我对机器人领域的力矩控制技术高度关注，因为EPS的核心就是精确的电机力矩输出。这项研究中，力矩驱动强化学习在四足机器人上的应用，尤其是不依赖线速度估计就能实现鲁棒运动，与我们EPS的无传感器控制（Sensorless Control）方向高度契合。我们可以借鉴这种强化学习方法来优化EPS电机的无传感器FOC（磁场定向控制）策略。例如，利用强化学习来学习在不同转速、负载下更鲁棒的转子位置和速度观测器，或者在低速、高负载等挑战性工况下，通过强化学习自适应地调整控制参数，有效抑制转矩脉动和抖动，提升手感和NVH性能，同时降低对物理传感器，如转矩传感器和位置传感器的依赖，从而降低成本并提升系统冗余安全性。这项技术提供了一个将前沿机器人控制研究快速转化为EPS工程方案的潜在路径，非常值得投入资源进行概念验证和算法迁移研究。
-   https://arxiv.org/abs/2607.18365
-
-7. BearingNAS: Obtaining In-Sensor Intelligent Fault Diagnosis Systems for Bearings Using a Laptop（来源：arXiv cs.LG）
-   应用分析：对于我们EPS电机轴承的故障诊断和预测性维护来说，这简直是量身定制的解决方案。传统的故障诊断需要将大量传感器数据上传到云端或更强大的边缘计算设备，实时性、成本和带宽都面临挑战。BearingNAS的“传感器内智能故障诊断”理念，通过硬件感知神经架构搜索，将AI模型直接部署到微控制器或智能传感器单元中，其“极微预算”（例如，四到八千字节的内存和十六到三十二千字节的闪存）和快速搜索收敛时间（在笔记本电脑CPU上不到一小时），对我们极具吸引力。我们可以借鉴这一框架，为EPS电机开发定制化的、超轻量级AI模型，直接集成到电机控制器或附加的智能传感器中，实时监测电机内部的异常振动、电流谐波等信号，实现早期故障预警和预测性维护。这将大幅提升EPS产品的可靠性、降低维护成本，同时减少对外部计算资源的依赖，实现真正的预测性维护，是值得立即投入资源进行工程验证和落地的方向。
-   https://arxiv.org/abs/2607.18287
-
-8. VW to deliver L3 autonomous driving in China from H2 2027 as Horizon Robotics tie-up deepens（来源：CnEVPost）
-   应用分析：作为EPS工程师，大众与地平线在L3自动驾驶上的合作以及二零二七年下半年的落地时间表，对我们有着直接的影响和启发。L3级自动驾驶意味着车辆在特定条件下将实现手眼脱离，线控转向系统（Steer-by-Wire）将成为核心执行单元。地平线在AI芯片和算法上的优势，结合大众的整车集成能力，将推动更先进的自动驾驶决策和控制算法落地。这意味着EPS系统需要与上层自动驾驶域控制器进行更深层次的集成和通信，对控制器的实时性、鲁棒性、功能安全等级（ASIL D）以及冗余设计提出更高要求。我们必须提前布局线控转向的架构演进，研究如何与AI驱动的自动驾驶系统进行安全、高效的接口设计，确保EPS能够精准、可靠地执行复杂的转向指令，并在AI决策出现不确定性时提供安全降级方案。同时，也可以关注AI基础模型在自动标定、故障预测等方面的潜力，以提升EPS系统的智能化水平和开发效率。与这些AI芯片厂商的合作，也将是未来技术发展的重要方向。
-   https://cnevpost.com/2026/07/22/vw-l3-autonomous-driving-china-h2-2027/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260722-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260722-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260722-pm.mp3" length="4602384" type="audio/mpeg"/>
-      <pubDate>Wed, 22 Jul 2026 09:43:34 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 智驾新纪元：AI安全、线控转向与机器人控制的前沿突破</title>
       <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将把目光聚焦在AI前沿、汽车智能化和机器人这三大核心领域，为您精选出七条最值得关注的重磅资讯。从AI智能体的功能安全，到线控转向的验证挑战，再到机器人电机控制的最新突破，每一条都可能为您的研发工作带来新的灵感和方向。话不多说，让我们立刻进入今天的早报时间。
@@ -1127,6 +1087,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260806-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260806-am.mp3" length="4172688" type="audio/mpeg"/>
       <pubDate>Wed, 05 Aug 2026 22:40:38 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI安全承诺、电机材料革新与机器人鲁棒控制：洞察研发前沿</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大热门领域，精选出七条最具洞察力的资讯。从AI智能体的安全承诺，到神经符号AI的可靠性基石；从电动汽车电机材料的革新，到功率器件的最新进展；再到机器人控制中的不确定性处理和故障检测，每一条都与我们研发工程师的日常工作和未来方向息息相关。话不多说，让我们立刻进入今天的早报时间！
+
+1. SafeCommit: Certifying When Memory-Grounded Agents May Safely Act（来源：arXiv cs.AI）
+   应用分析：EPS系统对功能安全要求极高（ASIL D）。如果未来AI控制策略直接介入，例如用于线控转向的决策，那么“安全提交”机制是绝对必要的。我们可以借鉴SafeCommit通过多重潜在世界验证来确保决策鲁棒性的思想，将其应用于AI辅助的故障诊断或预测性维护模块。例如，当AI系统建议一个诊断结果或维护计划时，SafeCommit的概念可以帮助我们评估该建议是否在所有“可信”的系统状态下都安全可靠。我认为，这个方向非常值得投入研究，尤其是在AI逐渐向上层控制渗透之后。
+   https://arxiv.org/abs/2608.04289
+
+2. The RAIL Principles for Neurosymbolic AI: Reasoning, Assurances, Interfacing and Learning（来源：arXiv cs.AI）
+   应用分析：EPS作为功能安全ASIL D等级的系统，可信赖性是核心。我们可以深入探索，将FOC等传统电机控制算法的物理模型和约束作为“符号推理”部分，与神经网络（例如用于参数辨识、转矩脉动抑制）相结合。通过遵循RAIL原则，我们可以设计出既能利用AI的自适应能力，又能保证其决策可解释、可验证的混合控制架构，从而大幅提升电机控制策略的鲁棒性和故障诊断能力。这绝对是一个值得我们长期投入的方向，也是未来AI在工业控制领域实现大规模落地的关键。
+   https://arxiv.org/abs/2608.04285
+
+3. NeuMoSync: End-to-End Neuromodulatory Control for Plasticity and Adaptability in Continual Learning（来源：arXiv cs.AI）
+   应用分析：在EPS系统中，助力策略和手感调校需要适应不同的路况、车速、驾驶员偏好，以及部件老化带来的特性变化。NeuMoSync所展现的持续学习能力，可以用于开发高度自适应的助力曲线或阻尼补偿算法，让EPS系统能够在线进行微调和优化，从而持续提升驾驶体验。比如说，系统可以学习并补偿电机参数的温漂效应，或者适应不同季节轮胎特性变化对转向手感的影响。这不仅能提升用户体验，也能增强系统的鲁棒性。我认为，在模型预测控制（MPC）或自适应PI控制器中探索其应用，是非常值得投入的。
+   https://arxiv.org/abs/2608.04358
+
+4. Scandium Canada teams with University of Windsor to study aluminum-scandium EV motor wire（来源：Charged EVs）
+   应用分析：EPS电机以永磁同步电机（PMSM）为主，对转矩密度、效率、NVH和成本要求极高。如果铝钪合金能够显著降低电机的重量，或者大幅提升效率，同时还能保持足够的导电性和机械强度，那将是EPS电机选型上的一大突破。我们应该持续关注这项技术的研发进展，并评估其在EPS电机中应用的可行性，包括它的导电率、热稳定性、疲劳强度以及与我们现有制造工艺的兼容性。一旦这项技术成熟，它很可能成为我们下一代EPS电机设计方案中的重要选项，值得进行前瞻性预研。
+   https://chargedevs.com/newswire/scandium-canada-teams-with-university-of-windsor-to-study-aluminum-scandium-ev-motor-wire/
+
+5. TDK releases 125 V axial aluminum electrolytic capacitors for DC-link banks（来源：Charged EVs）
+   应用分析：EPS系统的控制器功率级，需要直流母线电容来进行滤波和能量存储。虽然目前主流的EPS系统电压多为12伏，但随着线控转向（Steer-by-Wire）以及更高功率EPS系统的发展，48伏甚至120伏的电源系统可能会逐渐普及。TDK的这些新型电容器，可以直接用于未来更高电压EPS系统中的功率级设计，帮助我们优化其体积、重量和可靠性。我们应该密切关注这类新型功率器件的性能参数、封装形式以及成本，以便在设计下一代EPS控制器硬件时，能够及时进行选型评估，确保我们的系统保持技术领先。
+   https://chargedevs.com/newswire/tdk-releases-125-v-axial-aluminum-electrolytic-capacitors-for-dc-link-banks/
+
+6. Toward Integrating Adaptive Experience Replay and Online Uncertainty Estimation in Safe Actor-Critic Optimal Control（来源：arXiv eess.SY 控制系统）
+   应用分析：在EPS领域，特别是在线控转向（Steer-by-Wire）和无传感器控制方案中，精确的系统状态估计（比如转子位置、转矩）以及对外部干扰（比如路面不平、轮胎磨损）的不确定性处理至关重要。我们可以借鉴这项研究中不确定性估计和安全机制的思想，将其应用于无传感器FOC控制中的状态观测器设计，从而大幅提高系统在各种复杂工况下的鲁棒性。此外，强化学习在助力策略优化和故障诊断中的应用，也可以通过这种集成的安全框架来确保系统的安全性。我认为这项技术非常值得我们深入投入，它是解决无传感器控制鲁棒性和线控转向功能安全的关键技术之一。
+   https://arxiv.org/abs/2608.04732
+
+7. SAFECAST: Robust Failure Detection for VLA Policies with Contrast-Set Training and Calibration（来源：arXiv cs.RO）
+   应用分析：尽管VLA策略目前主要应用于通用机器人操作，但其“在部署时分布偏移下进行鲁棒故障检测”的核心思想，对汽车智能化，特别是感知系统（如摄像头、激光雷达）以及线控转向的故障诊断，具有直接的借鉴意义。EPS系统需要识别各种故障模式，比如传感器漂移、执行器性能下降等。我们可以将SAFECAST中对比集训练和校准的理念，应用于EPS的传感器数据异常检测，或者电机控制参数自适应调整的鲁棒性评估，以提高故障诊断的准确性，并增强系统对未知工况的适应能力。这是提升EPS系统功能安全和实现预测性维护的一个非常有前景的方向。
+   https://arxiv.org/abs/2608.04246</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260806-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260806-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260806-pm.mp3" length="3707280" type="audio/mpeg"/>
+      <pubDate>Thu, 06 Aug 2026 09:43:01 +0000</pubDate>
     </item>
   </channel>
 </rss>
