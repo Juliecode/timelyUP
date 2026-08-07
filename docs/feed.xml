@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 07 Aug 2026 09:36:03 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 22:11:28 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 科技早报：AI、汽车、机器人前沿动态与EPS应用洞察</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选了七条最具价值的资讯，并结合我们汽车EPS产品研发工程师的工作背景，深入分析这些技术如何赋能我们的转向系统。准备好了吗？让我们一起探索今天的科技亮点！
-
-1. Towards Torque-Driven Reinforcement Learning for Quadruped Locomotion（来源：arXiv eess.SY 控制系统）
-   应用分析：这项研究对我们EPS电机控制策略有极高的借鉴价值。EPS系统中的永磁同步电机（PMSM）本质上就是力矩输出设备。目前FOC等控制策略已非常成熟，但强化学习（RL）在处理非线性、不确定性以及复杂环境适应性方面有潜力。我们可以尝试将力矩驱动的RL应用于EPS的电机控制，尤其是在手感调校和复杂工况下的转矩脉动抑制上。例如，可以构建一个仿真环境，让RL智能体学习在不同路况（如低摩擦、高摩擦、坑洼路面）和驾驶员意图下，如何输出最优电机力矩，以提供稳定、舒适且路感清晰的转向手感。RL有望学习补偿传统PI控制难以完全消除的非线性摩擦、惯量变化等。这与我们提升电机控制策略性能与鲁棒性，以及将前沿研究快速落地到EPS方案的需求高度契合，非常值得投入，可以从小规模仿真验证开始。
-   https://arxiv.org/abs/2607.18365
-
-2. Time-Series Anomaly Detection for Mobile Robots in Automotive Active Safety Testing using an RNN-VAE（来源：arXiv eess.SY 控制系统）
-   应用分析：这个方案可以直接迁移到EPS系统的故障诊断和预测性维护中。EPS系统在整车运行过程中产生大量的电机电流、电压、转速、位置、力矩、温度等时间序列数据。我们可以利用RNN-VAE模型，在EPS系统正常运行期间收集这些数据进行预训练，学习其“正常”行为模式。一旦部署到实际车辆中，模型可以实时监测这些时间序列数据，检测出与训练模式不符的异常，例如电机轴承磨损导致的NVH异常、传感器漂移、功率级器件早期失效等。这有助于在故障初期就发出预警，避免更严重的故障发生，降低维修成本和召回风险。这直接契合我们“用AI/数据驱动方法改进控制、标定效率、故障诊断与预测性维护”的需求，非常值得投入，可以先在台架测试中收集数据进行模型训练和验证。
-   https://arxiv.org/abs/2607.20079
-
-3. Emergent Autonomous Drifting for Collision Avoidance in Real-World Winter Driving Scenarios（来源：arXiv cs.RO）
-   应用分析：虽然EPS本身不直接控制车辆漂移，但该研究中对车辆极限动态的精确感知和控制，对线控转向（Steer-by-Wire, SbW）的架构和功能安全设计有重要参考价值。SbW系统需要更宽泛的控制能力来应对车辆动态的各种情况。我们可以借鉴MPC在极端工况下对车辆状态的预测和控制能力，将其融入到SbW的控制策略中，特别是在路感还原、助力策略和回正控制方面。例如，在低附着力路面或紧急避障时，SbW系统需要更快速、更精确地响应车辆侧滑或打滑，并提供驾驶员能接受的转向手感。长期来看，这非常值得关注和投入，因为它直接关系到线控转向的未来发展方向以及实现L4/L5级自动驾驶的关键技术。
-   https://arxiv.org/abs/2607.19484
-
-4. BYD previews 2027 Seal 06 sedan with LiDAR for enhanced driver assistance（来源：CnEVPost）
-   应用分析：LiDAR的引入对EPS系统间接影响很大。更精确的环境感知（通过LiDAR）意味着自动驾驶系统能做出更精准的路径规划和决策，进而对EPS提出更精细的转向控制要求。例如，在L3+级别自动驾驶中，车辆需要根据LiDAR提供的高精度障碍物信息，进行车道保持、紧急避让等动作，这就要求EPS能够提供极低延迟、高精度的转向力矩输出，并且具备极高的鲁棒性和功能安全等级。作为EPS研发工程师，我们需要关注LiDAR数据如何影响上位控制器的转向需求，以及如何优化电机控制策略以满足这些高精度、高动态的转向指令。虽然不是直接的技术投入，但理解ADAS和自动驾驶系统的演进方向有助于我们预判EPS未来的技术需求，值得持续关注。
-   https://cnevpost.com/2026/07/23/byd-previews-2027-seal-06-sedan/
-
-5. AMD unveils Kria module for real-time control, unified memory for robots（来源：The Robot Report）
-   应用分析：这款Kria模块对EPS控制器软硬件的未来发展有潜在影响。虽然EPS控制器目前主要使用MCU，但随着线控转向（SbW）向更高集成度、更复杂功能演进，以及AI算法在电机控制、故障诊断中的应用，对实时计算能力和统一内存的需求会增加。Kria模块的“实时控制”和“统一内存”特性，可能使其成为未来高性能EPS或SbW域控制器的潜在硬件平台。我们可以研究其在处理FOC、无传感器控制、MPC等复杂算法时的性能，尤其是在多核并行处理、FPGA加速自定义算法以及与功能安全IP核集成方面的能力。统一内存可以简化数据传输和管理，降低延迟。值得关注和评估，特别是考虑到机器人关节执行器控制与EPS电机控制的高度相关性，Kria在机器人领域的应用经验可以直接迁移。
-   https://www.therobotreport.com/amd-unveils-kria-module-real-time-control-unified-memory-robots/
-
-6. NEXUS: Structured Runtime Safety for Tool-Using LLM Agents（来源：arXiv cs.AI）
-   应用分析：尽管EPS系统目前不直接使用LLM代理，但随着“用AI/数据驱动方法改进控制、标定效率、故障诊断与预测性维护”的趋势，未来LLM可能参与到更上层的决策或诊断流程中。NEXUS的理念——结合确定性规则和AI风险评估进行分级干预——对EPS系统的功能安全（ISO 26262）设计有启发。我们可以将类似的分级安全策略应用于AI辅助诊断或自动标定工具中，确保AI的建议在被采纳前经过多层验证，并能根据风险等级进行人工确认或自动修正。短期内投入到EPS产品开发中优先级不高，但为未来AI在汽车控制系统中的应用提供安全框架的思路，值得关注并借鉴其理念。
-   https://arxiv.org/abs/2607.19356
-
-7. LISA: Linear-Indexed Sparse Attention for Efficient Long-Context Reasoning（来源：arXiv cs.AI）
-   应用分析：对于我们EPS工程师来说，直接应用LISA的可能性较小，因为EPS系统通常不直接处理自然语言长文本。但是，LISA代表了AI模型效率优化的一种前沿方向，特别是针对“长序列”数据处理。在未来，如果我们需要将AI模型（例如基于Transformer的预测模型或状态观测器）集成到EPS的复杂控制或诊断中，并且这些模型需要处理长时间序列的传感器数据或历史运行数据，那么LISA这种高效处理长上下文的机制就可能派上用场。它可以帮助我们设计出更轻量、更实时的车载AI模型，降低计算资源需求。值得持续关注AI模型架构和效率的最新进展，它有助于解决“把前沿研究快速转成可落地的EPS工程方案”中的效率挑战。
-   https://arxiv.org/abs/2607.19358</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260724-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260724-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260724-am.mp3" length="4869216" type="audio/mpeg"/>
-      <pubDate>Thu, 23 Jul 2026 22:36:41 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI赋能汽车与机器人：从智能控制到安全验证的前沿进展</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最值得关注的重磅资讯，看看这些最新技术将如何影响我们的工作，又有哪些值得我们深入探索和实践。准备好了吗？让我们一起开启今天的科技之旅！
@@ -1097,6 +1061,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260807-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260807-pm.mp3" length="2488896" type="audio/mpeg"/>
       <pubDate>Fri, 07 Aug 2026 09:36:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 研发工程师早报：AI赋能控制系统，智能汽车与机器人融合前沿</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。这些消息不仅能拓宽您的技术视野，更希望能为您正在进行的研发工作带来一些新的启发和思考。AI如何提升我们控制系统的鲁棒性？智能汽车的硬件趋势对线控转向有何影响？以及机器人领域的最新突破能否迁移到我们的电动助力转向系统？别走开，我们马上开始今天的播报。
+
+1. Decoupling Perception from Description: Computation-Grounded Representation Alignment between Multivariate Time Series and Language（来源：arXiv cs.LG）
+   应用分析：核心要点：新方法通过将感知与描述解耦，利用确定性代码计算多变量时间序列统计量，再由大语言模型进行语言化，提升了多模态模型在时间序列与语言对齐时的标签质量和可扩展性。应用分析：这项研究对我们EPS系统的研发非常有价值。我们每天处理大量的电机电流、电压、转速、力矩、车速、方向盘角度等多变量时间序列数据。如果能借鉴这种“计算与语言解耦”的思路，我们可以编写精确的确定性代码，自动从这些数据中提取关键的统计特征，比如FOC控制器的电流波动、转矩脉动、温度漂移等。然后，让一个经过微调的大语言模型，根据这些结构化特征生成自然语言的故障描述、性能分析报告或调校建议。这能大大提升我们故障诊断的效率和准确性，并为自动标定提供更具语义的反馈。投入产出比高，因为它可以减少人工分析数据的时间，提升AI辅助诊断的可靠性，非常值得我们团队深入研究和尝试。
+   https://arxiv.org/abs/2608.05238
+
+2. Oracle bans AI-generated code from OpenJDK（来源：Hacker News）
+   应用分析：核心要点：甲骨文公司禁止在OpenJDK项目中使用AI生成代码，凸显了在关键软件开发中对AI代码可靠性、安全性和知识产权的担忧。应用分析：在我们EPS这种安全关键领域，直接使用AI生成代码进行核心功能开发，风险巨大，目前不建议直接采用。但我们可以采取更审慎、辅助性的策略。例如，AI可以用于生成非安全相关或低安全等级的辅助代码，比如测试桩、日志模块，或者作为代码评审的辅助工具，检查代码风格、潜在的Bug模式。在算法层面，AI可以帮助生成MATLAB/Simulink模型，然后通过模型化设计和代码生成工具转换为C代码，但这依然需要严格的人工审核和验证。对于功能安全相关的代码，我们必须坚持传统的人工编写、严格评审、形式化验证等流程。所以，投入研究AI辅助开发工具是值得的，但重点应放在提升开发效率和质量，而非直接替代核心代码编写。
+   https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code
+
+3. When Do Corrective Features Help? An Agent for Corrective Feature Discovery on Black-Box Forecasters（来源：arXiv cs.LG）
+   应用分析：核心要点：针对黑盒预测模型，CRAFTER框架提出通过挖掘模型残差中的可解释特征来构建轻量级后处理校正器，有效修复模型结构性、重复性失效，而非通过昂贵的微调。应用分析：这项技术对我们EPS的AI辅助模块非常有用。例如，在基于AI的电机转矩脉动抑制、NVH优化或故障预测模型中，如果模型在某些特定转速、负载或温度区间出现预测偏差或误报，我们可以利用CRAFTER来分析这些“残差”，自动发现导致失败的“校正特征”。比如，在某个转速区间，当电机温度高于某个阈值时，模型输出总是偏低，这就是一个校正特征。然后，基于这些可解释的特征，构建一个轻量级的后处理校正器，在不改变原有复杂AI模型的前提下，提升其在特定边界条件下的性能和鲁棒性。这比重新收集数据、重新训练整个模型要高效得多，而且很适合嵌入式资源受限的场景。这项投入非常有价值。
+   https://arxiv.org/abs/2608.05207
+
+4. Deepal launches updated S05 electric SUV, starting at about $17,000（来源：CnEVPost）
+   应用分析：核心要点：深蓝S05电动SUV高配版搭载了128线激光雷达和两颗地平线J6M芯片，显示出高性能感知与计算平台向中低价位电动汽车普及的趋势。应用分析：这条新闻不是直接的技术应用，而是对未来趋势的预警和指导。它告诉我们，高性能感知和计算平台正加速普及，这将对我们EPS，尤其是线控转向系统提出更高的要求。例如，更精准的激光雷达数据意味着上层自动驾驶系统能生成更精细的路径和避障指令，这就要求我们的线控转向系统具备更高的响应速度、精度和鲁棒性。同时，地平线J6M芯片提供的强大算力，也预示着未来车端会有更多资源来运行复杂的AI控制算法，比如基于路面摩擦系数预估的自适应助力策略。我们必须密切关注这些平台发展，并将其纳入EPS未来架构设计的考量，提前布局，研究如何利用这些算力，将前沿的AI控制算法集成到EPS系统中，并确保与上层系统的无缝衔接和功能安全。这项投入是必须的。
+   https://cnevpost.com/2026/08/07/deepal-launches-updated-s05-suv/
+
+5. BorgWarner extends PHEV and 800 V BEV inverter programs with European OEM（来源：Charged EVs）
+   应用分析：核心要点：博格华纳与欧洲某主要OEM延长合作，将为插电混动和800伏纯电动汽车提供逆变器，标志着800伏高压平台在电动汽车领域的持续普及和深化。应用分析：800伏高压平台是电动汽车的未来趋势，虽然我们的EPS电机通常工作在较低电压，但高压平台对整个车辆的电气架构和EMC环境会产生影响。我们需要研究高压平台下EPS系统如何更好地与整车隔离，确保电磁兼容性。更重要的是，博格华纳在800伏逆变器上的技术积累，特别是在功率器件，比如碳化硅SiC、驱动电路、散热设计和控制算法方面的经验，对我们的EPS电机控制器开发具有直接借鉴意义。我们可以学习其在高压、高频开关场景下的FOC控制优化、损耗管理、NVH抑制等技术，并将其应用到PMSM电机的设计和控制中，以提升转矩密度、效率和NVH表现。此外，也需关注800伏系统对功能安全，也就是ISO 26262的影响，如绝缘要求、故障诊断与降级策略等。这项投入是非常值得的。
+   https://chargedevs.com/newswire/borgwarner-extends-phev-and-800-v-bev-inverter-programs-with-european-oem/
+
+6. Zero-Instruction Sensor Reads: Register-Mapped Peripherals and Hardware PWM on a Five-Stage Soft Processor（来源：arXiv eess.SY 控制系统）
+   应用分析：核心要点：新研究展示了定制化软核处理器通过寄存器映射外设和硬件PWM，实现“零指令”传感器读取和PWM输出，极大提升了嵌入式控制循环的效率。应用分析：这项技术对我们的EPS控制器软硬件设计具有直接的启发意义。在EPS系统中，电机控制的FOC算法需要高速、精确地读取电流、位置传感器数据，并生成PWM信号驱动功率级。传统上，这些操作会消耗宝贵的CPU指令周期。借鉴“零指令传感器读取”和“硬件PWM”的思路，我们可以与MCU供应商合作，或者在下一代控制器设计中，考虑定制化微控制器或FPGA方案，将核心控制循环中频繁访问的传感器输入，比如三相电流采样值、转子位置编码器数据，直接映射到CPU寄存器，并通过硬件逻辑实现PWM的自动输出。这样可以大幅减少中断开销和软件延迟，释放CPU资源用于更复杂的控制算法，同时确保FOC控制的实时性和确定性。这对于提升电机控制策略的性能与鲁棒性，以及满足ISO 26262功能安全对实时性的高要求，都具有显著价值。投入是值得的，尤其是在下一代控制器平台预研阶段。
+   https://arxiv.org/abs/2608.05638
+
+7. KILVO: Kinematic-Inertial-LiDAR-Visual Odometry with Robust Multimodal Adaptation for Humanoid Robots（来源：arXiv cs.RO）
+   应用分析：核心要点：KILVO提出了一种面向人形机器人的运动学-惯性-激光雷达-视觉多模态里程计系统，通过异步序列混合误差状态迭代卡尔曼滤波，并设计了多模态适应性以增强传感器故障下的鲁棒性。应用分析：这项研究对我们EPS系统的传感器融合和故障诊断策略具有极强的借鉴意义，是机器人领域前沿研究向汽车领域快速转化的典范。我们可以将KILVO的多模态融合思想应用于EPS，提升电机状态估计的精度和鲁棒性。例如，在无传感器控制方案中，除了反电动势观测器，我们还可以融合整车IMU的运动信息、轮速传感器信息，甚至未来线控转向系统中的冗余角度传感器，通过误差状态卡尔曼滤波等方法，进行更精确、更抗干扰的电机转子位置和速度估计。KILVO中针对传感器故障的“多模态适应性”设计尤其关键，我们可以借鉴其思路，为EPS设计故障诊断与降级策略：当某个传感器出现故障时，系统能自动切换到基于其他模态信息融合的估计方案，或进入降级运行模式，确保基本的助力功能和功能安全。这项投入产出比极高，是解决无传感器、冗余传感方案、提升安全性与成本竞争力、电机控制策略鲁棒性的直接路径。
+   https://arxiv.org/abs/2608.05647</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260808-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260808-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260808-am.mp3" length="3601872" type="audio/mpeg"/>
+      <pubDate>Fri, 07 Aug 2026 22:11:28 +0000</pubDate>
     </item>
   </channel>
 </rss>
