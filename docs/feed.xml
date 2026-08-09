@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 08 Aug 2026 21:59:31 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 09:20:35 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 智驾前沿：高压EPS、机器人基础模型与AI工程新范式</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将一起聚焦AI前沿、汽车智能化和机器人这三大领域，看看有哪些值得我们深入思考和实践的新动向。从电动汽车的高压技术挑战，到机器人执行器控制的AI新范式，再到如何用AI提升我们的研发效率，相信今天的资讯都能给大家带来不少启发。话不多说，我们马上开始！
-
-1. SABIC’s new PPS compounds insulate power modules for 800 V EV inverters（来源：Charged EVs）
-   应用分析：这对我们EPS系统向高压平台演进至关重要。目前EPS多为十二伏，但线控转向（Steer-by-Wire）未来可能集成到更高压的车辆架构中，或者EPS电机本身采用更高电压以提升功率密度。这种PPS材料可以用于我们EPS控制器中的功率级封装，特别是IGBT或碳化硅模块的绝缘。投入研究其热管理、介电性能与我们现有封装工艺的兼容性非常值得，能直接提升高压EPS系统的功能安全和长期可靠性，甚至可能减小控制器体积，降低成本。
-   https://chargedevs.com/newswire/sabics-new-pps-compounds-insulate-power-modules-for-800-v-ev-inverters/
-
-2. Yokogawa’s WT1500 power analyzer measures up to 2,000 V DC without high-voltage dividers（来源：Charged EVs）
-   应用分析：在我们开发和验证高压EPS电机控制器的过程中，精确测量功率、效率和损耗是必不可少的。如果未来EPS向高压线控转向发展，两千伏的直接测量能力将极大地简化我们的台架测试和整车标定工作。无需分压器意味着更少的设备、更快的设置和更可靠的数据。这值得我们采购并集成到测试体系中，尤其是对于未来高压电机和功率器件的性能评估，能加快开发周期，提升验证质量。
-   https://chargedevs.com/newswire/yokogawas-wt1500-power-analyzer-measures-up-to-2000-v-dc-without-high-voltage-dividers/
-
-3. Momenta reportedly enters robovan sector as China's driverless delivery market heats up（来源：CnEVPost）
-   应用分析：这与我们线控转向（Steer-by-Wire）的架构和功能安全设计方向高度契合。自动驾驶货运车是线控转向的理想应用场景，因为对可靠性和自动化的需求更强。我们可以关注Momenta在转向系统方面的需求和技术选型，了解他们如何实现冗余、故障诊断和降级策略。与这类自动驾驶公司合作，或参与其线控转向方案的讨论，能为我们未来EPS向线控转向演进提供宝贵的工程经验和市场洞察。投入研究其对线控转向的性能、安全和鲁棒性要求，对我们的产品路线图有直接指导意义。
-   https://cnevpost.com/2026/07/24/momenta-enters-robovan-sector/
-
-4. Generalist’s GEN-1 foundation model now supports a range of robot end effectors（来源：The Robot Report）
-   应用分析：这项技术对我们的EPS电机控制有巨大的借鉴意义。EPS电机本质上也是一种高精度执行器。我们可以探索如何将类似的“基础模型”概念应用于EPS电机控制。例如，训练一个通用的FOC（磁场定向控制）或无传感器控制基础模型，通过少量微调就能适应不同型号的PMSM电机，处理不同的转矩密度、惯量和NVH特性。这能显著提高我们控制策略的开发效率和鲁棒性，减少针对每个新项目的调校工作量。投入研究这类模型在嵌入式系统上的部署和实时性是值得的。
-   https://www.therobotreport.com/generalists-gen-1-foundation-model-now-supports-a-range-of-robot-end-effectors/
-
-5. NEURA Robotics establishes NEURA Gym RWTH Aachen to train physical AI（来源：The Robot Report）
-   应用分析：这个方向与我们提升电机控制策略性能和鲁棒性，以及线控转向的需求高度一致。我们可以借鉴“物理AI”的训练方法来改进EPS电机的控制。例如，利用强化学习在仿真环境中训练无传感器控制算法，使其在各种工况（如温漂、负载变化）下表现出更强的鲁棒性。或者，通过数据驱动的方法自动优化助力曲线和手感调校参数，减少人工经验依赖。建立类似的内部“物理AI训练平台”或与相关研究机构合作，投入资源进行算法验证和迭代，将是提升我们产品竞争力的重要途径。
-   https://www.therobotreport.com/neura-robotics-establishes-neura-gym-rwth-aachen-train-physical-ai/
-
-6. Opus 5 is currently #1 on Artificial Analysis Intelligence Leaderboard（来源：Hacker News）
-   应用分析：虽然Opus 5本身不是直接用于电机控制，但其强大的AI能力可以间接赋能我们的研发工作。例如，我们可以利用它来：代码生成与审查，辅助生成嵌入式C代码片段，或审查现有代码中的潜在缺陷；文档分析与知识管理，快速从大量技术文档（如ISO两万六千两百六十二标准、电机数据手册）中提取关键信息，辅助设计决策；故障诊断辅助，分析历史故障报告和传感器数据，提供初步的故障诊断建议；自动测试用例生成，根据需求文档自动生成MIL/SIL/HIL测试用例。虽然直接投入到训练类似Opus 5的模型不切实际，但作为工具辅助研发、提高效率是值得的。可以考虑部署内部的私有化大型语言模型，或利用现有API服务，但需关注数据安全和隐私。
-   https://artificialanalysis.ai/models
-
-7. Prentis, new AI lab co-founded by Reid Hoffman, Mark Pincus in talks to raise $100M（来源：TechCrunch）
-   应用分析：这个趋势对我们工程团队的效率提升有直接指导意义。我们日常工作中有很多重复性、规则性的电脑操作，例如：数据预处理和分析，自动化传感器数据清洗、特征提取、报告生成；测试报告自动化，自动汇总HIL/SIL/台架测试结果，生成规范的测试报告；配置管理和版本控制辅助，自动化一些Git操作、项目配置更新；模型参数管理，自动化模型参数的导入导出、版本追踪和一致性检查。我们可以投入资源，利用现有AI工具或开发内部脚本，自动化这些“常规电脑任务”。初期投入成本不高，但长期收益显著。
-   https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-mark-pincus-in-talks-to-raise-100m/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260725-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260725-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260725-pm.mp3" length="3745296" type="audio/mpeg"/>
-      <pubDate>Sat, 25 Jul 2026 09:42:37 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 研发工程师科技早报：AI、汽车、机器人前沿动态</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热门方向，为您精选出七条最值得关注的资讯。从开放权重AI模型的崛起，到AI在自动化和工程设计中的创新应用；从机器人基础模型的突破，到汽车芯片供应链的挑战与市场趋势，今天的早报内容丰富，希望能为您的研发工作带来新的启发。
@@ -1111,6 +1075,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260809-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260809-am.mp3" length="3648672" type="audio/mpeg"/>
       <pubDate>Sat, 08 Aug 2026 21:59:31 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技早报：火星自驾成功，智能汽车LIDAR上车，AI拓宽应用边界</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦七条重磅资讯，涵盖了人工智能前沿、汽车智能化和机器人这三大热门方向。从火星上的自主驾驶奇迹，到国内智能电动车的最新进展，再到AI行业巨头的战略布局，每一条都可能为我们的日常研发工作带来新的启发和思考。接下来，让我们逐条深入分析。
+
+1. OpenAI acquires presentation startup NextSlide（来源：TechCrunch）
+   应用分析：对于我的团队来说，可以关注这类AI辅助工具在研发流程中的应用潜力，例如：利用生成式AI辅助文档撰写、需求分析、代码注释、甚至测试用例生成。这有助于提升非核心技术环节的效率，让工程师能更专注于核心的电机控制算法和线控转向架构设计。短期内可尝试引入一些成熟的AI辅助工具，如代码助手，但不必投入大量资源自研，而是以提高现有工作效率为主要目标。
+   https://techcrunch.com/2026/08/08/openai-acqui res-presentation-startup-nextslide/
+
+2. The first self-driving vehicle on Mars has proven to be a smashing success（来源：Ars Technica）
+   应用分析：毅力号在未知环境下的路径规划、避障，以及高精度定位与执行控制是值得深入研究的方向。我们可以借鉴其在资源受限、通信延迟高场景下的决策与控制架构，思考如何提升线控转向系统的自主决策能力与鲁棒性。尤其是在冗余设计和故障降级策略上，可以研究火星车是如何处理传感器失效或执行器故障的。虽然环境不同，但其底层控制逻辑、状态估计、路径跟踪等算法思想，对我们提升无传感器控制的精度和安全性、优化助力策略在复杂路况下的表现，以及未来线控转向的冗余控制策略，都具有参考价值。值得投入研究其公开的技术报告。
+   https://arstechnica.com/space/2026/08/the-first-self-driving-vehicle-on-mars-has-proven-to-be-a-smashing-success/
+
+3. Experts look ahead at the next 20 years of robotics at RoboBusiness（来源：The Robot Report）
+   应用分析：我应密切关注RoboBusiness等行业大会上关于机器人执行器控制、电机技术和AI控制的讨论。特别是人形机器人关节的高性能、高集成度、高功率密度电机及驱动方案，以及其在复杂环境下的运动控制算法，这些都可能为EPS的电机选型、控制策略（如转矩脉动抑制、低速平稳性、高动态响应）和无传感器技术带来新的思路。可以考虑参加相关会议或查阅会议论文，了解前沿研究成果，将其快速转化为可落地的EPS工程方案。这是一个值得持续关注并投入资源进行技术跟踪的方向。
+   https://www.therobotreport.com/experts-look-ahead-at-the-next-20-years-of-robotics-at-robobusiness/
+
+4. Avatr launches 07L SUV, taking on Xiaomi YU7 with Huawei ADS 5 and 725 km range（来源：CnEVPost）
+   应用分析：华为ADS 5等高级智驾系统对转向系统提出了更严格的性能要求，例如毫秒级的响应速度、极低的转矩波动、高精度路径跟踪和快速回正能力。我们需要研究ADS 5这类系统对转向执行器的具体接口要求、性能指标和功能安全等级。这促使我们深化电机控制策略，进一步提升转矩输出的平稳性和精度，优化助力手感在自动驾驶接管和脱离时的过渡。同时，对线控转向的冗余和功能安全设计，以及与高阶智驾域控制器的协同，都需要提前布局。这是一个值得投入资源进行竞品分析和技术预研的方向。
+   https://cnevpost.com/2026/08/08/avatr-launches-07l-suv/
+
+5. BYD's 2027 Seal 06 set for August 11 launch with LiDAR-based driver assistance（来源：CnEVPost）
+   应用分析：LiDAR带来的高精度环境感知数据，可以帮助ADAS系统更准确地预测车辆轨迹，从而向转向系统发出更精细的控制指令。这要求我们的EPS系统具备更低的控制延迟、更高的转矩分辨率和更宽的带宽。我们需要研究LiDAR融合方案下的转向控制算法，例如如何利用更精确的道路边界信息优化助力曲线、如何在紧急避障时实现更平稳快速的转向响应。此外，未来线控转向系统与多传感器融合的深度集成也将是重点。值得投入资源进行控制策略的优化和验证，以适应这类高精度传感器输入。
+   https://cnevpost.com/2026/08/08/byd-2027-seal-06-aug-11-launch/
+
+6. GWM to launch Wey V8X 5-seat flagship SUV on August 14（来源：CnEVPost）
+   应用分析：对于魏牌V8X这种旗舰SUV，其EPS系统可能需要支持更高级别的助力策略、更好的手感调校以及与ADAS的深度集成。我们需要与长城汽车的平台开发团队保持紧密沟通，了解One S平台对EPS硬件接口、软件功能、通信协议以及功能安全等级的具体要求。同时，关注其市场定位和目标用户群体，以便精准调校助力手感。这属于日常项目管理和前期技术储备，需要投入人力进行需求分析和方案预研，确保我们的EPS产品能够快速、高质量地适配新平台。
+   https://cnevpost.com/2026/08/08/gwm-to-launch-wey-v8x-aug-14/
+
+7. Nio's flagship SUV ES9 tops 20,000 deliveries, second 10,000 in 6 weeks（来源：CnEVPost）
+   应用分析：ES9的成功交付数据，提醒我们高端智能电动车市场对EPS系统的要求是持续且严苛的。我们需要关注这类车型在实际运行中对EPS性能的反馈，例如用户对手感调校、NVH表现、以及在复杂工况下鲁棒性的评价。这促使我们持续优化电机选型（PMSM的高转矩密度、效率、NVH）、电机控制策略（FOC、转矩脉动抑制）和助力策略，确保产品能够满足甚至超越高端市场的期望。同时，也需为未来更多高端车型项目做好技术储备，确保EPS方案具备竞争力。值得投入资源进行市场调研和竞品分析，以指导产品迭代方向。
+   https://cnevpost.com/2026/08/08/nio-es9-20000-deliveries/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260809-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260809-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260809-pm.mp3" length="3331152" type="audio/mpeg"/>
+      <pubDate>Sun, 09 Aug 2026 09:20:35 +0000</pubDate>
     </item>
   </channel>
 </rss>
