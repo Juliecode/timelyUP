@@ -13,43 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 10 Aug 2026 09:43:02 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 22:11:22 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 研发早报：AI安全挑战与机器人落地新进展</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的研发早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿的最新挑战和产业动态，同时深入探讨机器人和汽车智能化领域的新进展，特别是与我们EPS电动助力转向系统相关的电机控制和执行器技术。希望这些精选资讯能为您的日常研发工作带来一些新的启发和思考。
-
-1. London Gatwick has launched a robotic airport parking service（来源：Hacker News）
-   应用分析：这种自主移动机器人在特定场景的部署经验，对我们思考未来线控转向系统下的整车移动、泊车或维修场景有启发。例如，在自动驾驶或线控转向普及后，车辆在停车场内的自主移动和精准停放，可以借鉴机器人调度和路径规划的成熟方案。如果能将这类机器人的高精度定位、避障和路径规划技术与车辆自身的传感器融合，甚至可以探索在特定维修区内，车辆通过自身执行器和外部机器人协同完成一些复杂操作。短期内无需直接投入开发，但值得关注其技术细节，特别是多机器人协同、复杂环境感知与决策、以及容错机制。这些与线控转向的冗余设计、故障诊断有共通之处，保持技术跟踪，为未来线控转向与高级自动驾驶（如L4/L5）融合的场景做技术储备是很有必要的。
-   https://aerospaceglobalnews.com/news/gatwick-airport-robotic-parking-stanley-robotics/
-
-2. The New AI Superpowers: Focus and Followthrough（来源：Hacker News）
-   应用分析：“专注”和“贯彻执行”正是我们期望AI在EPS电机控制中扮演的角色。例如，我们可以训练AI模型专注于提升FOC矢量控制的鲁棒性，克服电机参数温漂或负载变化带来的性能下降。或者让AI专注于识别和抑制特定频率的转矩脉动，甚至在无传感器控制中，通过AI观测器更精准地估计转子位置和速度，并保证其在各种工况下的“贯彻执行”，即高可靠性。这与我们当前“用AI/数据驱动方法改进控制、标定效率、故障诊断与预测性维护”的目标高度契合，绝对值得投入。可以从特定、明确的问题入手，如用强化学习优化助力曲线调校的效率，或用神经网络进行故障模式识别，提升诊断精度和速度。关键在于定义清晰的“专注”任务和可衡量的“贯彻执行”指标。
-   https://www.rickmanelius.com/p/the-new-ai-superpowers-focus-and
-
-3. Making sense of the panic over Chinese AI（来源：TechCrunch）
-   应用分析：尽管这篇是宏观产业分析，但其中蕴含的“中国AI速度”和“特定应用突破”值得我们思考。如果中国本土AI公司在模型小型化、部署优化或特定行业应用（如工业控制、机器人）上展现出独特优势，我们应积极关注其技术栈和解决方案。例如，关注这些公司是否提供了更高效、更易集成的AI控制框架，或者在边缘计算AI芯片上有所突破，这些都可能成为我们未来EPS控制器集成AI功能的潜在合作方或技术借鉴对象。持续关注国内AI技术的发展动态，特别是那些宣称在模型效率、实时性或嵌入式部署方面有进展的团队，这有助于我们寻找更适合车规级嵌入式环境的AI解决方案，避免盲目追逐通用大模型，而是聚焦于能实际提升EPS性能和功能的AI应用。
-   https://techcrunch.com/2026/07/26/making-sense-of-the-panic-over-chinese-ai/
-
-4. Hugging Face CEO calls for ‘radical transparency’ after ‘unprecedented’ OpenAI hack（来源：TechCrunch）
-   应用分析：这篇文章直接敲响了AI在功能安全系统（如EPS）中应用的警钟。如果未来的EPS系统集成AI控制策略或AI诊断模块，其对抗网络攻击和保证系统完整性的能力将是首要考量。我们需要研究如何设计AI模型以防止对抗性攻击、数据投毒，以及在模型被篡改或异常行为发生时如何快速检测和降级。线控转向系统尤其需要考虑多重冗余和异构校验，确保即使AI模块受损，核心转向功能仍能保持安全。这是必须高度重视并投入的方向。AI在汽车功能安全领域的应用，其安全性是生命线。我们需要在AI控制算法开发阶段就融入“安全设计”，例如，确保AI输出在安全包络内，设计AI异常检测和故障降级机制，并与ISO 26262功能安全标准深度结合。对“自主智能体网络攻击”的研究，可以帮助我们预判未来攻击模式，提前进行防御设计。
-   https://techcrunch.com/2026/07/26/hugging-face-ceo-calls-for-radical-transparency-after-unprecedented-openai-hack/
-
-5. Magmotor makes motors for a changing world for 150+ years（来源：The Robot Report）
-   应用分析：Magmotor作为一家历史悠久的电机公司，其在电机设计、材料选择、制造工艺以及定制化解决方案上的经验，对我们EPS的电机选型和优化非常重要。我们可以关注他们如何平衡转矩密度、效率、NVH噪声、振动与声振粗糙度和成本，以及在机器人应用中如何满足高动态响应和高可靠性的需求。例如，在PMSM永磁同步电机选型时，可以研究其在不同应用场景下的电机拓扑结构、绕组设计和磁路优化方案，甚至考虑与其进行技术交流，了解其在特殊工况下的电机性能表现和测试验证方法。值得投入精力进行技术调研和潜在合作。Magmotor的经验可能为我们解决EPS电机控制策略中的“转矩脉动、噪声、温漂、参数辨识”等问题提供新的思路或方案。特别是他们为机器人提供的定制系统，其对高精度、高可靠性伺服电机的理解，与我们线控转向执行器对电机性能的严苛要求高度契合。
-   https://www.therobotreport.com/magmotor-makes-motors-changing-world-150-years/
-
-6. BYD may unveil humanoid robot in early August, teaser suggests（来源：CnEVPost）
-   应用分析：比亚迪发布人形机器人，意味着汽车企业开始将自身在电机、电池、控制器和量产上的优势向机器人领域拓展。这与我们关注的“机器人/人形机器人的关节执行器、伺服电机控制与EPS电机控制高度相关”的交叉点完全吻合。我们可以密切关注比亚迪人形机器人的关节执行器方案，特别是其电机选型（很可能也是PMSM永磁同步电机）、电机控制策略（如力矩控制、柔顺控制）以及功能安全设计。这些技术细节，尤其是其在成本控制和量产能力上的表现，对我们开发高性价比、高性能的EPS系统和未来的线控转向执行器具有极高的参考价值。强烈建议投入关注和分析。这不仅是行业趋势，更是技术迁移的绝佳机会。通过分析比亚迪在机器人领域的布局和技术选择，我们能提前预判未来汽车执行器可能的发展方向，并从机器人领域汲取先进的电机控制和冗余设计理念，反哺EPS和线控转向的研发。
-   https://cnevpost.com/2026/07/26/byd-may-unveil-humanoid-robot-aug/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260727-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260727-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260727-am.mp3" length="3132144" type="audio/mpeg"/>
-      <pubDate>Sun, 26 Jul 2026 22:35:42 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 科技早报：AI赋能未来转向，机器人与自动驾驶新进展</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条最新资讯。这些突破性研究和产业动态，不仅展示了技术边界的拓展，更蕴含着我们EPS产品研发的巨大机遇。接下来，就让我们一起深入分析，看看这些前沿技术如何赋能我们的转向系统，以及我们应该如何抓住这些机会。
@@ -1104,6 +1072,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260810-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260810-pm.mp3" length="4104720" type="audio/mpeg"/>
       <pubDate>Mon, 10 Aug 2026 09:43:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI驱动智能转向：从边缘LLM到认证控制的未来图景</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门领域，精选出7条重磅资讯。从超轻量级边缘AI模型到安全鲁棒的控制系统设计，再到新型电机材料的突破，每一条都可能为我们的电动助力转向（EPS）系统带来革命性的启发。让我们一起深入分析，看看这些前沿技术如何赋能我们的日常研发工作，以及它们未来的落地潜力。
+
+1. ADIAS: Automated Design of Interactive Agentic Systems（来源：arXiv cs.AI）
+   应用分析：这个框架对我们EPS工程师来说，非常有启发。我们可以探索将ADIAS的“问题驱动”和“迭代优化”机制应用于EPS的自动标定流程。例如，将NVH（噪声、振动、声振粗糙度）问题或转向手感不平顺等具体挑战定义为“问题状态”，让AI智能体自动生成并测试不同的FOC（磁场定向控制）参数组合或助力曲线，并通过HIL（硬件在环）或SIL（软件在环）仿真反馈结果，持续优化直到问题解决。这能显著减少人工标定时间，提升产品性能的鲁棒性，非常值得我们投入研究和实践。
+   https://arxiv.org/abs/2608.06410
+
+2. Needle2: 14MB agentic LLM for phones, wearables, smart home and robots（来源：Hacker News）
+   应用分析：这简直是为我们嵌入式系统量身定制的！在EPS控制器这种计算资源有限的环境里，集成这样轻量级、高性能的LLM，可以实现很多高级功能。比如，结合电机电流、位置、温度等传感器数据进行智能故障诊断，LLM可以分析异常模式，提供更精准的故障原因推断，甚至预测潜在故障。此外，它还能作为高层决策器，在线监测路况、驾驶员行为和车辆状态，建议或直接调整助力曲线、阻尼参数等，实现更精细化的手感调校和鲁棒性提升。这种低成本、高性能的边缘AI解决方案，对提升EPS的智能化水平和成本竞争力具有战略意义，非常值得我们深入探索和投入。
+   https://cactuscompute.com/needle
+
+3. LyEvO: Lyapunov-Guided Evolutionary Optimization for Safe and Robust Sim-to-Real Policy Learning（来源：arXiv cs.RO）
+   应用分析：功能安全是我们的生命线，特别是在线控转向这种关键系统上。LyEvO的思路能帮我们定义和验证不同故障模式下的安全操作区域，确保在极端工况下也能保持稳定。我们可以用它在Simulink、HIL或SIL环境里，利用演化优化生成极端或边界工况，并结合Lyapunov分析来确保在这些工况下控制策略仍能保持稳定，并自动优化参数以提升鲁棒性。这可以用于FOC控制参数在电机参数变化、温度漂移等情况下的鲁棒性优化。将LyEvO的评估标准引入到EPS的台架测试和整车标定流程中，能为新策略的实际部署提供更具信服力的安全认证。这是一个非常值得投入的、具有战略意义的研究方向。
+   https://arxiv.org/abs/2608.06481
+
+4. TaskSense: Focusing on What Matters in World Models（来源：arXiv cs.AI）
+   应用分析：尽管EPS控制器不直接处理图像，但TaskSense“关注任务相关内容”的理念对我们启发很大。在未来线控转向与高级驾驶辅助系统（ADAS）深度融合的语境下，如果EPS需要接收来自车辆感知系统（如摄像头、雷达）的输入，TaskSense的思路可以指导我们设计更高效的特征提取模块，确保EPS控制决策（如车道保持、紧急避让辅助）只基于与转向任务最相关的环境信息，过滤掉不必要的视觉噪音。甚至在多传感器融合（如扭矩传感器、电机位置传感器、惯导）中，也能借鉴其注意力机制，动态调整不同传感器数据对控制决策的影响权重，尤其是在某些传感器可能存在漂移或噪声时，优先关注“更可靠”或“任务更相关”的数据源。这是一个值得关注和借鉴的长期技术储备和架构设计参考。
+   https://arxiv.org/abs/2608.06544
+
+5. Certified Feedforward Tracking for Unknown Nonlinear Systems via Invertible Neural Networks（来源：arXiv eess.SY 控制系统）
+   应用分析：这个方法对我们EPS系统中的非线性补偿和高精度跟踪非常有价值。我们可以利用INN学习转向系统中的非线性摩擦特性，生成精确的前馈补偿信号，有效消除摩擦引起的转向卡滞感或不平顺。对于永磁同步电机（PMSM）的转矩脉动，INN也可以学习并预测这些脉动，生成反向补偿电流，从而在不增加传感器成本的情况下，提升NVH性能。更重要的是，它提供了“认证”，这意味着在满足功能安全要求的前提下，我们可以更放心地用AI方法处理复杂的非线性问题，这可是线控转向技术落地的关键一步，非常值得我们投入研究和开发。
+   https://arxiv.org/abs/2608.06419
+
+6. Kite Magnetics secures A$2-million grant to scale Aeroperm motor core material（来源：Charged EVs）
+   应用分析：电机选型是我的核心工作之一，新型电机材料直接影响转矩密度、效率、NVH和成本。Aeroperm如果能通过汽车级验证并量产，将是下一代EPS电机设计的关键突破。它有望显著提升电机性能，帮助我们实现更小的体积、更轻的重量，同时优化NVH表现。我们会密切关注其进展，了解其性能参数（如磁导率、损耗、饱和磁通密度）和成本，评估其在PMSM电机中替代传统硅钢的可行性。如果能显著提高转矩密度或效率，可以在下一代EPS电机中进行概念验证和原型开发。这是一个值得持续关注和少量投入进行预研的方向，一旦成熟，将是EPS技术升级的重要驱动力。
+   https://chargedevs.com/newswire/kite-magnetics-secures-a2-million-grant-to-scale-aeroperm-motor-core-material/
+
+7. Correct Online Estimation of the Powertrain Time Constants in Adaptive Vehicular Platooning（来源：arXiv eess.SY 控制系统）
+   应用分析：在线参数估计是提升控制系统智能化和鲁棒性的关键技术，而这项研究突破了“持续激励”的限制，将极大扩展其应用范围。我们可以借鉴该方法，开发无需持续激励的PMSM电机参数（如电阻、电感、永磁体磁链）在线辨识算法，以补偿温漂、老化等引起的参数变化，提升FOC控制的鲁棒性和精度。它也能用于在线估计转向系统中的摩擦、惯量等非线性参数，为自适应助力策略的动态调整提供依据，优化手感。甚至在线控转向的背景下，这项技术能够支持冗余传感器的自校准和健康诊断，进一步提升系统的功能安全。这是一个非常值得投入的重点研发方向。
+   https://arxiv.org/abs/2608.06835</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260811-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260811-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260811-am.mp3" length="2388240" type="audio/mpeg"/>
+      <pubDate>Mon, 10 Aug 2026 22:11:22 +0000</pubDate>
     </item>
   </channel>
 </rss>
