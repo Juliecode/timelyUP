@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 10 Aug 2026 22:11:22 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 09:36:33 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 科技早报：AI赋能未来转向，机器人与自动驾驶新进展</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条最新资讯。这些突破性研究和产业动态，不仅展示了技术边界的拓展，更蕴含着我们EPS产品研发的巨大机遇。接下来，就让我们一起深入分析，看看这些前沿技术如何赋能我们的转向系统，以及我们应该如何抓住这些机会。
-
-1. Toward Goal-Agnostic Joint-Embedding Predictive Control of Partial Differential Equations（来源：arXiv cs.LG）
-   应用分析：完全可以借鉴。EPS系统本质上是高动态、非线性的复杂物理系统，其电机控制、手感调校都涉及对系统动力学的精确理解和预测。我们可以尝试用JEPA或类似的自监督学习方法，从大量的EPS运行数据中离线学习一个“转向世界模型”，捕捉电机、减速机构、轮胎与路面之间的复杂相互作用，以及驾驶员意图的潜在动态。然后，将训练好的世界模型冻结，作为在线MPPI控制器的一部分，结合我们预定义的物理可观测目标（例如最小化转矩脉动、最大化力矩响应速度、优化NVH表现、改善路感还原度）来计算成本函数，选择最优控制输入。这对于解决电机控制策略中的转矩脉动、NVH、温漂等问题，以及实现更精细、更个性化的助力手感调校具有巨大潜力，非常值得投入。长远来看，这有助于线控转向系统对复杂路况和驾驶员意图的精准响应。
-   https://arxiv.org/abs/2607.21644
-
-2. Adjustment Speed as a Safety Constraint for Nonstationary Reinforcement Learning（来源：arXiv cs.LG）
-   应用分析：非常有用，尤其在EPS向线控转向演进中，系统对环境变化的适应能力直接关系到驾驶安全。我们可以通过车载传感器实时感知路面条件、车辆动态、驾驶员操作强度等环境上下文，并利用机器学习模型预测这些环境参数的短期变化趋势。通过MIL/SIL/HIL以及台架测试，系统性地标定EPS控制器在不同环境变化速率下的最大安全适应能力。如果预测的环境变化所需的适应量，超出了EPS系统在安全恢复周期内的适应能力，则系统应立即触发安全机制。这不仅仅是性能优化，更是功能安全和系统鲁棒性提升的核心，尤其在L2+及更高等级的辅助驾驶中，确保系统可靠运行的基础，必须投入。
-   https://arxiv.org/abs/2607.21646
-
-3. Kimi-K3 Releases on HuggingFace 7/27（来源：Hacker News）
-   应用分析：Kimi-K3作为一个大型语言模型，直接用于EPS底层控制不太现实，但它在研发辅助、知识管理和故障诊断方面有巨大的应用潜力。我们可以利用Kimi-K3作为智能编程助手，协助嵌入式C代码的编写、审查和优化，特别是针对ISO 26262功能安全要求的代码规范检查和建议。同时，它可以根据设计文档和代码自动生成技术文档、测试报告草稿。此外，将EPS的历史故障数据、诊断手册等输入Kimi-K3，可以辅助工程师分析故障现象、提供解决方案。这能显著提升研发效率，降低知识管理成本，非常值得我们团队投入资源进行定制化应用。
-   https://huggingface.co/moonshotai/Kimi-K3
-
-4. Learning Diverse Humanoid Tasks via Synthetic Video Scenarios without Real World Data（来源：arXiv cs.RO）
-   应用分析：直接用于EPS的整体控制可能需要转化，但其“通过生成式AI创造多样化训练数据”的核心思想对EPS电机控制策略的开发和验证非常有借鉴意义。我们可以利用生成式AI，根据文本描述（例如“湿滑路面的高速过弯”、“低速停车时的精细转向”、“不同驾驶员的激进/平稳操作”）生成多样化的模拟驾驶员输入、路面条件、车辆动态反馈数据。这些数据可以作为EPS控制策略（尤其是FOC、助力策略）在Simulink或HIL平台上的训练和验证输入。通过生成式AI合成数据，可以极大地丰富EPS控制策略的训练和验证数据集，尤其是在真实世界数据收集成本高昂、难以覆盖所有极端场景的情况下。这将有助于提升电机控制策略的泛化性、鲁棒性和安全性，并加速线控转向的开发进程，非常值得投入。
-   https://arxiv.org/abs/2607.21648
-
-5. Impedance Control of Ship-Borne Manipulators via Optimization-based Task-Space Inverse Dynamics（来源：arXiv cs.RO）
-   应用分析：核心技术理念和方法高度可迁移。我们可以将车辆的复杂运动视为EPS系统的“基座运动”，在助力控制策略中，通过优化型控制框架（例如模型预测控制或二次规划求解器），实时计算并补偿这些车身运动对转向手感和回正性能的影响。同时，借鉴误差状态卡尔曼滤波器，融合车身IMU、轮速、转向角、扭矩传感器等信息，对车辆运动和转向系统内部状态进行高精度估计，这对于无传感器电机控制、故障诊断以及线控转向中的冗余传感方案至关重要。此外，将驾驶员的转向操作视为与“环境”的交互，EPS的助力策略可以设计为一种任务空间阻抗控制。这项技术对提升EPS性能和功能安全有直接价值，值得深入研究和应用。
-   https://arxiv.org/abs/2607.22030
-
-6. Momenta confirms robovan entry in push beyond robotaxis（来源：CnEVPost）
-   应用分析：Momenta的R7世界模型理念与EPS系统中的AI控制有着高度的契合点。Robovan的实际运营经验，也为线控转向在商业化运营车辆中的应用提供了参考。随着Robovan等自动驾驶车辆的普及，线控转向作为核心执行器，需要与自动驾驶的感知-决策-规划系统进行更深度的集成。我们可以借鉴R7世界模型的思路，在EPS或线控转向系统中构建一个“转向世界模型”，预测驾驶员意图、路面变化对转向系统的影响，以及转向系统自身的健康状态，这将有助于实现更智能的助力策略、预测性维护和故障诊断。Robovan的落地经验也可以为线控转向的功能安全和冗余设计提供宝贵的工程实践经验。这项投入是战略性的，有助于我们更好地规划EPS向线控转向的演进路径。
-   https://cnevpost.com/2026/07/27/momenta-confirms-robovan-entry/
-
-7. Adaptive Driving Style for SAE Level-2 Driving Automation: Minimizing Preference Mismatch（来源：arXiv eess.SY 控制系统）
-   应用分析：核心理念和方法对EPS的助力策略与手感调校具有直接且重要的应用价值。我们可以通过车载传感器实时学习和预测当前驾驶员的驾驶风格偏好。EPS控制器可以动态调整助力曲线、阻尼补偿、回正力矩等参数，使转向手感与驾驶员的偏好相匹配。例如，如果识别出驾驶员偏爱运动型手感，则可以增加转向阻尼。结合车辆的行驶场景，可以在驾驶员偏好的基础上进一步优化助力风格，确保在紧急避让时提供更直接、更稳定的转向响应。在线控转向系统中，这种个性化能力将是核心卖点。这项投入能显著提升驾驶员的舒适度和信任感，减少人机交互冲突，并为线控转向提供独特的卖点，非常值得。
-   https://arxiv.org/abs/2607.21819</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260727-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260727-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260727-pm.mp3" length="2734848" type="audio/mpeg"/>
-      <pubDate>Mon, 27 Jul 2026 09:42:47 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 科技早报：AI预测控制新突破、汽车电驱高集成与机器人合成数据应用</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人三大领域，为大家精选了7条最值得关注的资讯。从AI模型如何实现更精准的预测控制，到汽车电驱系统的高度集成化，再到机器人领域如何利用合成数据加速学习，这些都与我们的日常工作息息相关。话不多说，让我们马上进入今天的早报时间。
@@ -1108,6 +1072,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260811-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260811-am.mp3" length="2388240" type="audio/mpeg"/>
       <pubDate>Mon, 10 Aug 2026 22:11:22 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技早报：AI赋能驾驶情绪，SiC模块健康监测，机器人泛化控制...</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热门方向，为大家精选出七条最有价值的资讯。从理解驾驶员情绪，到SiC功率模块的健康监测，再到机器人执行器的泛化控制，这些内容都与我们电动助力转向，也就是EPS的研发工作息息相关。话不多说，让我们立刻进入今天的早报时间。
+
+1. Emotion in an active inference model of human driving（来源：arXiv cs.AI）
+   应用分析：这项研究为我们EPS系统的人机界面设计提供了新的视角。在高级辅助驾驶或线控转向系统中，我们可以尝试引入驾驶员情绪状态的感知与评估。例如，通过车内传感器获取驾驶员情绪数据，结合该模型分析情绪对驾驶意图的影响，从而自适应调整EPS的助力曲线和阻尼回正特性。比如，在驾驶员焦虑或疲劳时提供更平稳舒适的助力，而在专注时提供更清晰的路感反馈。这在短期内落地有挑战，需要跨学科合作，但作为未来线控转向系统个性化体验的前瞻性探索，非常值得在仿真和概念验证阶段进行适度投入。
+   https://arxiv.org/abs/2608.07480
+
+2. PhysAttNet: Enhancing Predictive Performance in Industrial and Astrophysical Time Series via Physics-Informed Attention（来源：arXiv cs.LG）
+   应用分析：PhysAttNet在EPS电机控制中有广阔的应用前景。我们可以将其应用于电机参数的实时辨识与温漂补偿，结合电机等效电路模型等物理知识，动态调整FOC控制器的参数。其次，在转矩脉动和NVH抑制方面，结合电机的谐波特性，训练模型进行预测和抑制。最重要的是，它能通过物理信息构建正常运行模型，进行异常检测，提前预警电机或功率器件的潜在故障，同时提高可解释性。这是解决电机控制策略性能与鲁棒性提升的关键，强烈建议投入研发资源进行深入探索和实践。
+   https://arxiv.org/abs/2608.07681
+
+3. From Benchmark Performance to Tool Deployment: Human-in-the-Loop Anomaly Detection（来源：arXiv cs.LG）
+   应用分析：这项研究对我们落地EPS的故障诊断和预测性维护方案有直接指导意义。我们应采纳“人机协同异常检测”框架。模型在车辆运行中实时监测传感器数据，发出潜在异常预警。对于高风险或不确定异常，引入人工专家，如维修技师或研发工程师，进行复核，分析故障根源，并将结果反馈给模型进行持续优化。同时，必须投入更多精力在传感器数据预处理和清洗上，确保输入模型的工业数据质量。这不仅能提升故障诊断的准确性和可靠性，也是满足ISO 二六二六二功能安全要求的务实路径，非常值得投入。
+   https://arxiv.org/abs/2608.07770
+
+4. Physics-Informed Condition Monitoring of SiC Power Modules（来源：arXiv eess.SY 控制系统）
+   应用分析：我们可以将这项研究的混合框架应用于EPS控制器中的功率级模块健康监测。结合SiC MOSFET的物理退化模型和实时运行数据，通过混合模型预测功率器件的剩余寿命和潜在故障模式。这对于我们提升EPS功率级的可靠性和功能安全等级至关重要。例如，一旦检测到功率模块性能下降，EPS系统可以触发降级运行策略，确保基本转向功能不受影响。在开发和验证阶段，可以通过HIL和台架测试，注入模拟故障和老化数据，验证监测框架的准确性和实时性。鉴于SiC器件是未来趋势，这项研究的落地价值极高，强烈建议投入资源。
+   https://arxiv.org/abs/2608.08363
+
+5. Parameter-Dependent LMI Synthesis for Semi-Global Differential ISS Trajectory Tracking of Nonholonomic Mobile Robots Under Multiplicative Wheel Slip（来源：arXiv eess.SY 控制系统）
+   应用分析：这项研究对我们线控转向系统的底层控制有很高的借鉴价值。在线控转向系统中，方向盘与车轮之间没有机械连接，转向完全依赖电子控制。该LMI框架可用于设计更鲁棒的车辆转向控制器，特别是在湿滑路面等车轮打滑情况下，通过精确控制前轮转角，保持车辆的轨迹稳定性。我们也可以借鉴其思想，在传统EPS的助力策略设计中，考虑车轮滑移率，设计参数依赖的助力策略，使其在不同路面附着系数下提供更稳定、可预测的驾驶手感。这项研究值得深入投入，从Simulink模型和HIL验证开始，探索其在车辆稳定性和转向手感方面的优势。
+   https://arxiv.org/abs/2608.08049
+
+6. LUCID: Latent-Skill Unified Control via Imagined Dynamics for Long-Horizon Humanoid Loco-Manipulation（来源：arXiv cs.LG）
+   应用分析：LUCID框架为线控转向系统的复杂任务规划与执行提供了新思路。我们可以将高层驾驶任务（如自动泊车、紧急避障）分解为低层原子技能。通过学习一个宏观的车辆动力学模型，高层控制器可以在“想象”中规划技能序列，并转化为EPS等底层执行器的具体指令。这也能启发人机共驾场景下的模式切换和辅助。虽然直接落地EPS尚需时日，但作为线控转向和L三加自动驾驶控制架构的前瞻性研究，值得在仿真环境中探索其在车辆运动控制中的潜力，进行概念性验证。
+   https://arxiv.org/abs/2608.07746
+
+7. Generalizing deep reinforcement learning across cable-driven parallel robot configurations with actuator-level policies（来源：arXiv cs.RO）
+   应用分析：这项研究为我们EPS电机控制策略的泛化提供了极具工程应用价值的思路。我们可以借鉴其“执行器层面策略”思想，开发一种通用的电机FOC或无传感器控制策略。该策略专注于控制单个永磁同步电机PMSM的转矩、转速和位置，而非依赖特定EPS的总扭矩输出。通过在不同电机型号、不同供电电压的EPS系统上进行训练和微调，有望实现一套能泛化到多款EPS产品的通用控制软件平台，大幅减少新项目的标定和开发工作量。在未来的线控转向系统中，这种策略也能作为基础，协调多个冗余电机执行器，并支持自动标定和参数适应。这是提升产品竞争力和解决核心痛点的关键，强烈建议投入研发。
+   https://arxiv.org/abs/2608.07546</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260811-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260811-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260811-pm.mp3" length="4441968" type="audio/mpeg"/>
+      <pubDate>Tue, 11 Aug 2026 09:36:33 +0000</pubDate>
     </item>
   </channel>
 </rss>
