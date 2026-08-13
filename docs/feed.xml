@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 13 Aug 2026 09:43:47 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 22:22:38 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾深流：AI、汽车与机器人前沿技术速览</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门领域，精选出七条对我们研发工作最具启发和实操意义的资讯。从大语言模型如何优化底层计算，到汽车线控转向的新范式，再到机器人控制的精进，以及关键的AI安全与功能安全考量，希望今天的分享能为您的日常工作带来新的思路和动力。
-
-1. Kernel Forge: An Agent Harness for LLM-based Generation and Optimization of CUDA Kernels（来源：arXiv cs.AI）
-   应用分析：这项技术对我们提升EPS电机控制算法的计算效率非常有价值。例如，可以将FOC、无传感器控制等核心算法的计算密集型部分，尝试通过LLM生成和优化定制化的CUDA或类似低级代码，使其在车载MCU或边缘计算单元上运行得更快、更高效。这能直接提升转矩控制的响应速度和精度，降低功耗。投入方面，初期可以进行概念验证，探索LLM能否辅助生成或优化我们现有控制算法的特定计算模块。如果效果显著，值得进一步投入资源，将其集成到我们的模型化设计与代码生成流程中，以实现更深度的性能优化。
-   https://arxiv.org/abs/2607.24762
-
-2. Physical AI Isn’t Just Bigger AI; It’s a Systems Architecture Challenge（来源：EE Times）
-   应用分析：对于线控转向（Steer-by-Wire）的架构设计，这篇文章提供了重要的指导思想。我们不能只考虑在MCU上跑多大的AI模型，而要更关注整个系统的传感器数据融合、边缘计算的实时性、与电机执行器的闭环控制以及功能安全设计。例如，在冗余传感方案中，如何利用AI融合多源传感器数据提升可靠性；在控制策略中，AI如何与传统的FOC、MPC等结合。这需要我们投入更多精力在系统级方案论证、硬件选型（如高性能MCU、FPGA或ASIC）、软件架构设计以及功能安全（ISO 26262）的AI评估上，避免AI成为“黑箱”而难以认证。
-   https://www.eetimes.com/physical-ai-isnt-just-bigger-ai-its-a-systems-architecture-challenge/
-
-3. Steeringless Drifting: Differential-Torque Control of a Four-Wheel Independently Driven Vehicle（来源：arXiv cs.RO）
-   应用分析：虽然EPS目前仍以助力转向为主，但向线控转向演进是必然趋势。这项研究的差动扭矩控制理念，可以为R-EPS甚至未来的线控转向系统提供新的控制策略灵感。例如，在极限工况下，如何通过精确的左右轮电机扭矩分配，实现更精细的车辆姿态控制，提升车辆的操控性和安全性。我们可以将其作为线控转向技术预研的一部分，搭建仿真模型进行可行性分析，甚至在测试平台上验证差动扭矩对转向手感和车辆动态的影响。这需要投入在电机控制算法、整车动力学模型和控制策略集成方面，但对于提升EPS产品在未来线控转向市场的竞争力，是值得长期投入的方向。
-   https://arxiv.org/abs/2607.24863
-
-4. Magnachip licenses Navitas’s GeneSiC silicon carbide technology for 1,200 V and above（来源：Charged EVs）
-   应用分析：这项技术对我们EPS电机控制器硬件的功率级设计具有直接影响。PMSM永磁同步电机驱动需要高效的功率转换，SiC器件能显著提高逆变器效率，减少发热，从而降低散热需求、缩小控制器体积，并提升整体系统的功率密度和效率。我们可以密切关注SiC器件的市场成熟度和成本曲线，并与供应商合作，评估将1200V及以上SiC器件引入高功率EPS或线控转向系统的可行性。初期可在下一代控制器预研项目中，将SiC MOSFET或IGBT作为替代方案进行选型和测试，重点关注其在高温、高频工作下的可靠性、成本以及与现有驱动电路的兼容性。这是值得持续投入和跟踪的硬件技术趋势。
-   https://chargedevs.com/newswire/magnachip-licenses-navitass-genesic-silicon-carbide-technology-for-1200-v-and-above/
-
-5. Input Shaping for Point-to-Point Motion with a Continuum Robot Arm（来源：arXiv cs.RO）
-   应用分析：输入整形技术可以直接应用于EPS电机控制策略，用于抑制电机在启动、换向或变载荷时的瞬态振动和转矩脉动。例如，在电机指令转矩输入FOC控制器之前，可以先通过设计好的时延滤波器进行“整形”，预补偿可能引起的振动模式。这有助于改善EPS系统的手感平顺性，降低异响，提升用户体验。我们可以将输入整形算法集成到MATLAB/Simulink模型中进行仿真验证，并在台架上进行实物测试，比较其与传统PI/前馈控制、纹波抑制算法的结合效果。投入成本相对较低，主要是算法设计和验证工作，但潜在的NVH改善效果可能非常显著，是值得积极尝试的优化方向。
-   https://arxiv.org/abs/2607.25071
-
-6. US government bans new foreign-made humanoids, robot dogs, and solar inverters, citing risks to national security（来源：TechCrunch）
-   应用分析：虽然EPS系统不在直接禁令范围内，但作为汽车关键执行器，其供应链的安全性、可靠性和合规性至关重要。这项新闻提示我们，在电机、功率器件、MCU等核心零部件的选型和供应商策略上，需要更加多元化和本地化，以规避潜在的地缘政治风险。特别是在线控转向这种关键安全系统上，对核心芯片和软件的来源和自主可控性将成为重要考量。这要求我们投入更多资源进行供应链风险评估，并积极探索国产替代方案或建立多区域供应链，以确保关键组件的持续供应和产品的功能安全认证。这是一项长期且重要的战略性投入。
-   https://techcrunch.com/2026/07/29/us-government-bans-new-foreign-made-humanoids-robot-dogs-and-solar-inverters-citing-risks-to-national-security/
-
-7. Critical slowing down for predicting controller induced loss of control in quadrotors（来源：arXiv eess.SY 控制系统）
-   应用分析：将CSD原理应用于EPS的故障诊断和预测性维护，是一个非常值得探索的方向。例如，我们可以监测电机电流、转速、转矩等信号，分析其波动模式或响应时间是否出现“临界慢化”现象，从而在实际失稳或故障发生前，提前进行预警或触发降级策略。这对于提升EPS的功能安全等级（ASIL D）至关重要，特别是对于无传感器控制方案，可以作为一种额外的安全监控手段。初期可以在HIL或台架测试中，通过注入故障或模拟极端工况来收集数据，验证CSD指标对EPS系统失稳的敏感性和预警时间。这项研究的无模型特性，使得其应用门槛相对较低，主要投入在数据分析和算法验证上，有望以较小的成本带来显著的功能安全提升。
-   https://arxiv.org/abs/2607.25370</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260730-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260730-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260730-am.mp3" length="3474720" type="audio/mpeg"/>
-      <pubDate>Wed, 29 Jul 2026 22:34:32 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI赋能汽车与机器人，SiC与无稀土电机重塑未来转向系统</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦于AI前沿、汽车智能化和机器人三大领域，为您精选了七条重磅资讯。我们将深入分析这些技术如何影响我们的工作，特别是对电动助力转向，也就是EPS系统的未来发展有哪些启示。今天的亮点包括AI如何优化PID控制，低成本硬件上的强化学习挑战，自动驾驶的最新进展，以及功率器件和电机技术的新突破。希望这些内容能为大家带来启发，让我们一起探索科技如何赋能工程实践。
@@ -1104,6 +1068,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260813-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260813-pm.mp3" length="4585392" type="audio/mpeg"/>
       <pubDate>Thu, 13 Aug 2026 09:43:47 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI赋能转向，机器人与电机控制前沿洞察</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是大家的老朋友，技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门领域，为您精选七条最值得关注的重磅资讯。这些内容不仅涵盖了AI在控制系统中的创新应用，也深入探讨了汽车线控转向（Steer-by-Wire）和机器人执行器等关键技术，希望能为您的日常研发工作带来启发和新思路。让我们即刻启程！
+
+1. Distribird：AI自动化贝叶斯模型校准先验分布设计（来源：arXiv cs.AI）
+   应用分析：在我们的电动助力转向（EPS）电机控制策略开发中，例如FOC控制器的PI参数、无传感器控制中的观测器增益、或电机模型（如转矩常数、电感、电阻）的参数辨识，以及助力策略中的各种补偿参数，都可以通过贝叶斯校准来优化。Distribird 可以帮助我们快速收集文献中关于类似电机或控制系统参数的先验信息，自动生成更合理的先验分布，而不是简单地使用均匀分布。这能加速模型收敛，提高校准的精度和鲁棒性。这是一个非常值得投入的工具，尤其是在模型预测控制等需要精确模型参数的场景下，一个高质量的先验分布能大幅提升模型性能，是实现自动标定、减少工程师经验依赖的关键一步。
+   https://arxiv.org/abs/2608.11210
+
+2. 离线动力学模型助力真实世界强化学习超参数选择（来源：arXiv cs.LG）
+   应用分析：这项研究提出的方法非常契合我们现在最想解决的问题之一：用AI和数据驱动方法改进控制和标定效率。在EPS手感调校和助力策略优化中，我们经常面临复杂的、多目标优化问题，强化学习有潜力解决。但EPS是安全关键系统，在线探索成本和风险极高。我们可以利用历史台架测试或整车标定数据，构建EPS系统的离线动力学模型。然后，在这个离线模型上进行强化学习超参数的探索和选择，找到最优的控制策略参数范围，再进行有限的线上微调。这能大大减少台架和整车测试时间，降低风险。投入非常值得，它是实现智能标定、减少物理测试的关键一步。
+   https://arxiv.org/abs/2608.11349
+
+3. 高保真FPGA电机模型实现实时HIL验证（来源：Charged EVs）
+   应用分析：这项技术对我们EPS产品研发至关重要，而且我们已经在HIL测试中使用。引入高保真FPGA电机模型，可以更精确地模拟永磁同步电机（PMSM）的非线性特性、磁链饱和、高频谐波响应、甚至是故障模式下的动态行为。这对于测试我们FOC矢量控制、无传感器控制、转矩脉动抑制等算法在极端工况和故障下的鲁棒性至关重要，能发现仅靠低保真模型无法暴露的问题，显著提高控制器软硬件的验证质量。这是一个核心且需要持续投入的方向，我们应持续关注FPGA技术和高保真电机模型的发展，评估现有HIL供应商的能力，或考虑内部开发更定制化的模型。
+   https://chargedevs.com/newswire/webinar-high-fidelity-fpga-motor-models-for-real-time-hil-validation/
+
+4. 神经符号安全卫士保障自动驾驶安全（来源：arXiv cs.RO）
+   应用分析：随着EPS向线控转向（SbW）发展，转向系统将直接接收来自自动驾驶系统（L3+）的转向指令。这些指令可能由复杂的端到端AI模型生成。我们可以借鉴“神经符号安全卫士”的思想，在SbW控制器内部或外部，集成一个轻量级的安全层。这个安全层可以基于ISO 26262等功能安全标准和车辆动力学约束，定义一系列符号化的安全规则（例如最大转向角速度、最小转弯半径、横向加速度限制等）。所有来自上层AI的转向指令在执行前都必须通过这个安全卫士的验证。如果指令违反规则，则立即启动降级或替换为预设的安全指令。这项投入非常值得，它是解决SbW系统中AI决策安全性和功能安全合规性的一个关键路径，能有效弥补纯AI控制在可解释性和确定性方面的不足。
+   https://arxiv.org/abs/2608.11451
+
+5. Turntide获资助扩大轴向磁通电机生产（来源：Charged EVs）
+   应用分析：轴向磁通电机的高转矩密度和紧凑性，对于EPS系统，尤其是对安装空间有严格限制的C-EPS或R-EPS，非常有吸引力。它可能允许我们使用更小巧的电机实现相同的助力性能，从而减轻系统重量，优化封装空间，甚至降低NVH。我们应密切关注其量产成本、可靠性、NVH特性以及与现有控制策略的兼容性。可以考虑开展预研项目，评估轴向磁通电机在EPS特定应用场景下的性能优势和集成挑战，包括电磁设计、热管理和控制算法适应性。这项投入早期研究和评估是值得的。如果其成本和可靠性能够满足车规要求，将是我们在电机选型上取得竞争优势的关键。
+   https://chargedevs.com/newswire/turntide-selected-for-17-million-uk-axial-flux-motor-scale-up/
+
+6. ADI发布Trinamic电机控制器ROS1驱动，助力机器人开发（来源：EE Times）
+   应用分析：尽管EPS的量产系统通常不直接运行ROS，但ROS在研发和原型阶段具有极高的灵活性和丰富的工具链。我们可以借鉴这种思路，利用ROS来快速搭建EPS电机控制算法的验证平台，例如将我们开发的FOC、无传感器控制算法通过ROS节点与Trinamic等高性能电机控制器或仿真环境进行集成。这有助于快速迭代算法、进行数据采集和分析，并与机器人领域的最新控制技术（如MPC、强化学习）进行融合。此外，ROS生态中有很多机器人运动学、动力学库，可以为我们线控转向的复杂运动规划和控制提供参考。在研发和预研阶段投入是值得的，它能加速算法开发和验证周期，特别是对于线控转向等需要与上层决策系统紧密耦合的复杂系统。
+   https://www.eetimes.com/enabling-robot-operating-systems/
+
+7. 单模柔性结构时间最优控制的解析解与柔性成本（来源：arXiv eess.SY 控制系统）
+   应用分析：这项研究对我们EPS系统，尤其在向线控转向演进时，具有非常重要的指导意义。转向柱、齿条等部件的柔性是实际存在的。这项研究提供的解析解，能帮助我们：第一，精确评估EPS系统在达到特定转向目标时，因机械柔性而额外付出的时间成本。第二，基于理论最优解，设计更先进的电机控制策略，如通过前馈控制或模型预测控制，在保证系统稳定的前提下，最大限度地逼近时间最优响应，同时有效抑制柔性振动，改善手感。第三，在SbW的架构设计阶段，可以利用这个理论来指导机械结构的刚度设计，权衡性能与成本。这项投入非常值得，它是从根本上提升控制系统性能的理论基础，我们应该深入研究并尝试将其应用于我们电机控制策略的仿真和设计中。
+   https://arxiv.org/abs/2608.11360</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260814-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260814-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260814-am.mp3" length="2830320" type="audio/mpeg"/>
+      <pubDate>Thu, 13 Aug 2026 22:22:38 +0000</pubDate>
     </item>
   </channel>
 </rss>
