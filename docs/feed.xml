@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 14 Aug 2026 09:39:55 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 21:56:06 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI赋能智驾与机器人：EPS工程师的今日洞察</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天我们将聚焦人工智能的前沿突破、汽车智能化的最新进展，以及机器人领域的关键技术，为您精选出七条最有价值的资讯。这些内容不仅能拓宽您的技术视野，更重要的是，我们将结合电动助力转向，也就是EPS产品研发的实际工作背景，深入分析它们的应用潜力，看看这些技术能不能用、怎么用，以及值不值得我们投入。
-
-1. LLM智能体自动优化CUDA内核，计算效能新突破（来源：arXiv cs.AI）
-   应用分析：这个技术对我们来说非常值得投入。在EPS系统中，像FOC矢量控制、无传感器控制、以及未来AI驱动的助力策略，都需要高效的实时计算。如果能利用Kernel Forge将这些复杂算法的数学模型或Simulink代码自动转换并优化为高性能的GPU或NPU内核代码，将极大提升我们EPS系统的实时性和响应速度。我们可以尝试将其用于核心控制算法的加速，或优化AI模型的推理部分，以满足车规级的实时性要求。这是一个能显著提升产品竞争力、缩短开发周期的关键技术。
-   https://arxiv.org/abs/2607.24762
-
-2. 元学习奖励整形，AI如何更懂人类偏好（来源：arXiv cs.LG）
-   应用分析：这项技术潜力巨大，尤其是在线控转向系统中，手感完全由软件定义。我们可以收集人类驾驶员对不同转向手感的偏好数据，利用MeRLa框架训练一个奖励模型，将隐式偏好转化为强化学习智能体的显式奖励信号，指导其优化助力策略，从而实现自动化的“黄金手感”调校。此外，它也能用于故障诊断或复杂工况下的自适应助力调整。这是一个能颠覆传统调校流程、大幅提升产品竞争力的前沿方向，非常值得我们深入研究和投入。
-   https://arxiv.org/abs/2607.26094
-
-3. 大语言模型赋能PID调优，控制系统智能校准（来源：arXiv eess.SY 控制系统）
-   应用分析：这项技术对我们来说非常实用。EPS系统中有大量的PID控制器需要调优，例如FOC中的电流PI控制器。我们可以将系统响应数据、性能指标以及工程师的调优偏好和诊断规则输入给大语言模型智能体，让它迭代生成并优化PID参数。即使不完全自动化，大语言模型也可以作为辅助工具，根据Simulink模型或台架测试数据，提供初步的PID参数建议或诊断分析，加速标定过程。这直接契合了我们用AI改进控制和标定效率的核心需求，投入产出比会非常高。
-   https://arxiv.org/abs/2607.26594
-
-4. 碳化硅功率模块可靠性再升级，晶圆级鉴定保驾护航（来源：Power Electronics News）
-   应用分析：这项技术直接影响我们EPS功率级的设计和器件选型，我们必须密切关注。在选择碳化硅功率器件供应商时，晶圆级鉴定能力应作为重要的评估标准，要求供应商提供详细的可靠性报告和鉴定数据。我们还需要深入研究碳化硅器件的失效模式和鉴定数据，指导EPS功率级的ISO 两万六千两百六十二功能安全设计，例如冗余设计、故障诊断和降级策略。这对于提升系统性能、减小体积重量、降低能耗至关重要，是必须要投入的方向。
-   https://www.powerelectronicsnews.com/power-corner-inside-semiqs-wafer-level-qualification-process-for-sic-power-modules/
-
-5. 无稀土永磁电机新进展，电动车动力系统新选择（来源：EE Times）
-   应用分析：这项技术非常值得我们关注和评估。如果技术成熟且性能可靠，可用于下一代EPS电机。我们需要密切关注Vimag Labs这类无线励磁电机的技术进展，包括其转矩密度、效率、NVH特性、成本以及在不同转速和负载下的性能表现，并与现有PMSM进行详细对比。如果有可能，可以考虑采购原型电机进行台架测试，评估其与EPS控制策略的兼容性。将无稀土电机技术纳入长期电机选型和供应链战略规划中，是降低成本和风险的重要途径，值得初期投入进行技术跟踪和评估。
-   https://www.eetimes.com/indian-startup-vimag-labs-develops-wirelessly-excited-motor-without-rare-earth-magnets/
-
-6. 谷歌DeepMind发布Gemini Robotics 2，机器人全身智能控制迈向新纪元（来源：The Verge）
-   应用分析：这项技术对我们来说具有很强的直接技术迁移能力。人形机器人的关节执行器控制与EPS电机控制高度相关，其全身协同控制的思路对线控转向的整体系统控制架构设计有启发。我们可以借鉴Gemini Robotics 2的全身协调控制思路，思考如何设计线控转向系统的多执行器协同控制架构，以实现更精细的车辆姿态控制。此外，我们还可以研究其在复杂动作中如何处理鲁棒性和潜在故障，为线控转向的功能安全和冗余设计提供新的视角。这是值得我们密切关注和学习的前沿方向。
-   https://www.theverge.com/tech/973276/google-deepmind-gemini-robotics-2-whole-body
-
-7. 强化学习克服硬件挑战，低成本机器人实现鲁棒运动（来源：arXiv cs.RO）
-   应用分析：这项技术对我们来说非常关键。解决“仿真到现实的鸿沟”是强化学习在EPS领域落地的核心挑战之一。我们可以借鉴研究中的前向模型和时间感知神经网络，建立EPS电机的精确延迟模型，并将其融入到基于强化学习的电机控制或助力策略中，以提升控制精度和响应速度。同时，研究中处理噪声反馈的方法，也可以用于设计对传感器噪声更鲁棒的强化学习控制策略或状态观测器。这是将前沿AI控制研究转化为EPS工程方案的关键一步，对我们提升电机控制策略的性能和鲁棒性有直接帮助，绝对值得投入。
-   https://arxiv.org/abs/2607.26434</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260731-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260731-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260731-am.mp3" length="2494512" type="audio/mpeg"/>
-      <pubDate>Thu, 30 Jul 2026 22:42:09 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI驱动未来：从大模型推理到智能汽车与人形机器人</title>
       <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将一起聚焦AI前沿、汽车智能化以及机器人三大热门领域，精选出七条重磅资讯，看看它们将如何影响我们的研发工作，又能带来哪些新的机遇和挑战。准备好了吗？让我们开始今天的技术探索之旅！
@@ -1104,6 +1068,46 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260814-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260814-pm.mp3" length="4557744" type="audio/mpeg"/>
       <pubDate>Fri, 14 Aug 2026 09:39:55 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾、机器人与AI控制前沿：EPS工程师的今日早报</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热点，为您精选出七条最值得关注的资讯。内容涵盖了从AI模型在复杂约束下的表现，到自动驾驶卡车的落地进展，再到电动助力转向系统（EPS）核心技术——电机和验证方法的最新突破。希望今天的分享，能为您在EPS系统架构、电机控制策略、功能安全和智能化方案的探索中，带来新的思考和启发。话不多说，我们马上开始今天的播报。
+
+1. Improving Fast Charging Safety With Core Temperature Estimation Via Kolmogorov-Arnold Network（来源：arXiv eess.SY 控制系统）
+   应用分析：这个技术对我们EPS研发来说，非常能用，而且很有价值。EPS电机在长时间大电流工作，比如连续转向或者频繁打方向盘时，也会有显著温升，电机核心温度同样难以直接测量。但电机核心温度对性能、寿命和功能安全至关重要。目前我们主要依赖热模型和外部温度传感器进行估算和降额。我们可以借鉴KAN在电池核心温度估算上的成功经验，开发基于KAN的EPS电机核心温度软传感器。输入可以是电机外壳温度、绕组温度、控制器散热片温度、环境温度、实时电流、转速、转矩等。结合鲁棒控制屏障函数（rCBF）的思想，我们可以在助力控制策略中引入温度约束，确保电机在安全温度范围内工作，避免过热降额或损坏，同时优化助力输出。我认为这非常值得投入，高精度的电机核心温度估算能提升EPS系统的性能边界和鲁棒性，减少不必要的降额，优化用户体验。结合AI和鲁棒控制，有望解决传统热模型精度受限、参数漂移等问题，并为线控转向等对安全和性能要求更高的系统提供更可靠的温升管理方案。
+   https://arxiv.org/abs/2608.12638
+
+2. Large Language Models Can Follow Instructions, But Not Many at Once: Phase Transitions in Compositional Constraint Satisfaction（来源：arXiv cs.AI）
+   应用分析：大语言模型直接用于EPS底层控制目前还很不成熟，但这项研究对于我们评估任何基于复杂AI的决策系统在多约束环境下的鲁棒性至关重要。在设计基于AI的EPS辅助功能，比如自动标定、故障诊断、高级助力模式选择时，我们需要高度警惕同时施加过多约束可能带来的意外行为。例如，如果AI系统需要同时优化手感、降低NVH、减少功耗并满足功能安全阈值，其决策质量可能不如预期。我们应该将复杂约束分解，或者采用分层、模块化的AI设计，确保每个AI模块只处理有限且明确的约束集，并由传统的、经过严格验证的控制逻辑进行最终安全仲裁。对于AI自动生成代码或参数，也需要通过确定性的规则验证器进行严格的合规性检查，而不能仅仅依赖AI自身的判断。我认为这值得我们投入研究，不是投入大语言模型本身，而是投入对AI在多约束安全系统中的行为模式研究，以及如何设计更鲁棒、可验证的AI辅助决策系统。这有助于我们更理性地评估AI在EPS乃至线控转向功能中的应用边界和安全风险，避免盲目引入不成熟的AI技术。
+   https://arxiv.org/abs/2608.12426
+
+3. Self-driving trucks are officially testing on California highways（来源：TechCrunch）
+   应用分析：这虽然不是直接的技术，但对我们EPS研发来说，是一个非常重要的行业趋势信号。它意味着我们需要加速线控转向（Steer-by-Wire，简称SbW）技术的预研和产品化。我们可以深入研究自动驾驶卡车线控转向的架构设计，包括冗余方案、故障安全机制、电源管理等，这些对乘用车SbW的ISO 26262功能安全设计有直接参考价值。同时，需要分析自动驾驶卡车对转向执行器，也就是未来的SbW电机的性能要求，例如转矩输出、响应速度、精度、耐久性、NVH等，提前布局高性能EPS电机的选型和控制策略开发。此外，还可以借鉴卡车行业可能采用的更严格的HIL和SIL验证方法，提升EPS控制器的软件和系统级验证能力，为未来SbW的复杂场景测试做准备。我认为这非常值得投入。线控转向是EPS的未来方向，自动驾驶卡车的进展是该技术成熟度的风向标。提前布局能确保我们在未来汽车架构变革中保持竞争力。
+   https://techcrunch.com/2026/08/14/self-driving-trucks-are-officially-testing-on-california-highways/
+
+4. Li Auto's chip ambitions extend from assisted driving to data centers, report says（来源：CnEVPost）
+   应用分析：这同样不是直接的技术，而是车企的战略动向。但对于我们EPS研发来说，这提醒我们要关注上层系统对底层控制器的算力、通信和数据接口要求。随着车企自研芯片，未来可能会出现定制化的计算平台和通信协议。我们EPS团队需要提前研究主流车企的异构计算架构，比如CPU加GPU加NPU等，及其对底层控制器，如EPS MCU的接口规范和实时性要求，确保EPS控制器能高效地与上层智驾域控制器协同。此外，理想汽车对云端推理芯片的投入，预示着未来车辆会产生更多数据，并可能在云端进行模型训练和更新。EPS需要考虑如何高效地将运行数据上传、如何接收云端训练的AI模型更新，例如自动标定参数、异常检测模型，并在边缘侧，也就是EPS控制器上部署轻量化的AI推理。同时，随着芯片复杂度和集成度提升，功能安全ISO 26262的实现方式也会变化。我们需要研究如何在新一代车规芯片上实现EPS的功能安全，例如，是否需要考虑双核锁步、内存保护、故障诊断等更深层次的集成。我认为这值得我们投入关注和预研。车企自研芯片是未来趋势，这将重塑汽车电子供应链和技术栈。EPS作为关键执行器，必须紧跟这一变化，确保我们的产品能无缝集成到未来的汽车电子架构中。
+   https://cnevpost.com/2026/08/14/li-auto-chip-ambitions-extend-to-data-centers/
+
+5. YASA to develop two axial flux motor designs with less or no rare earth（来源：Charged EVs）
+   应用分析：这个技术对我们来说非常能用。EPS电机同样追求高转矩密度、高效率和低NVH，同时对成本和供应链稳定性敏感。轴向磁通电机可能成为未来EPS电机的有力候选。我们可以积极跟踪YASA等公司在无稀土或低稀土轴向磁通电机方面的进展，评估其在EPS应用中的可行性，包括转矩密度、效率、NVH特性、成本、制造工艺复杂性等。可以考虑与电机供应商合作，开发基于轴向磁通原理的EPS电机原型，并进行台架测试，验证其在不同助力工况下的性能表现。同时，轴向磁通电机的控制可能与我们目前常用的径向磁通永磁同步电机有所不同，需要预研和适配相应的FOC矢量控制、无传感器控制、转矩脉动抑制等策略，以充分发挥其优势。我们还需要关注新型磁性材料和制造工艺的发展，寻找替代稀土的方案，确保EPS电机供应链的韧性。我认为这非常值得投入。这是电机技术的前沿方向，直接关系到EPS产品的核心竞争力。提前布局能带来技术优势和成本优势，尤其是在未来稀土供应可能紧张或价格波动的情况下。
+   https://chargedevs.com/newswire/yasa-to-develop-two-axial-flux-motor-designs-with-less-or-no-rare-earth/
+
+6. RoboSynChallenge: Mastering Real-World Dexterity via Generalizing Synthesized Manipulation Skills（来源：arXiv cs.RO）
+   应用分析：这个技术对我们EPS研发非常能用，而且非常重要。EPS的开发和标定也面临真实路况数据获取成本高、复现性差的问题，而Sim-to-Real技术可以大幅提高开发效率。我们可以借鉴机器人领域构建物理仿真环境的经验，开发更精确的EPS系统数字孪生模型，包括电机、减速机构、转向柱、轮胎路面交互等，并集成车辆动力学模型。然后，利用仿真环境生成大规模的EPS运行数据，比如不同车速、路面摩擦、驾驶员输入下的助力转矩、电机电流、位置等，用于训练基于AI的控制策略、故障诊断模型或自动标定算法。同时，研究机器人领域中Sim-to-Real的迁移方法，例如领域随机化、领域适应等，以确保在仿真中训练的AI模型或控制策略能够在真实EPS系统上有效工作，减少真实车辆标定和测试的工作量。最后，也可以采用类似竞赛的评估机制，在多样化的、未见的真实测试场景中评估EPS控制策略的泛化能力。我认为这非常值得投入。Sim-to-Real是提高EPS研发效率、降低成本、提升控制策略鲁棒性和泛化能力的关键技术。尤其对于线控转向这种复杂系统，仿真验证的地位将更加突出。
+   https://arxiv.org/abs/2608.12416
+
+7. Webinar: High-fidelity FPGA motor models for real-time HIL validation（来源：Charged EVs）
+   应用分析：高保真FPGA电机模型对我们来说，是已经在使用或亟需加强的技术。HIL是EPS控制器验证的核心环节，高保真电机模型能显著提升验证效果。我们可以评估当前HIL平台中电机模型的精度和实时性，考虑引入或升级到基于FPGA的电机模型，以更精确地模拟永磁同步电机的非线性、饱和、温漂等复杂特性，以及高频谐波和转矩脉动。利用FPGA模型，可以对EPS控制器的微秒级动态响应进行深入测试，例如在急转弯、高速变道、路面冲击等工况下，验证FOC、电流环、速度环、位置环的响应速度和稳定性，以及故障诊断和降级策略的有效性。特别是对于无传感器控制算法，高保真电机模型能更好地模拟电机在低速、零速和换向时的实际工况，验证观测器和估算器的鲁棒性。此外，在HIL环境中，通过注入各种电机故障，例如相间短路、断路、传感器失效，验证EPS控制器在功能安全层面的响应和降级策略。我认为这非常值得投入。高保真FPGA电机模型是提升EPS电机控制策略验证深度和效率的关键。这不仅能缩短开发周期，还能提高产品的质量和可靠性，尤其对于线控转向这种对实时性和安全性有更高要求的系统，是不可或缺的验证手段。
+   https://chargedevs.com/newswire/webinar-high-fidelity-fpga-motor-models-for-real-time-hil-validation/
+
+8. Pony AI, Uber expand tie-up to deploy over 2,000 robotaxis in 5 European cities（来源：CnEVPost）
+   应用分析：这项进展对我们EPS研发部门来说，是市场和技术发展方向的重要指引。虽然不是直接的技术，但它预示着线控转向技术在未来几年内将从研发阶段加速走向规模化量产。我们必须加强在以下几个方面的投入：第一是线控转向系统的架构设计，特别是如何实现多重冗余和故障安全机制，以满足自动驾驶对最高等级功能安全的要求。第二是高精度、高带宽的转向执行器开发，包括优化PMSM电机设计，提升转矩密度和效率，并降低NVH，以满足自动驾驶车辆在任何工况下的平稳精准控制。第三是控制策略的智能化与鲁棒性，例如利用AI进行自适应控制和在线学习，以应对不同路况和驾驶场景，同时提升故障诊断和预测性维护能力。第四是与上层自动驾驶系统的接口标准化和协同优化，确保转向系统能够无缝接收和执行自动驾驶的控制指令。我认为这非常值得投入。自动驾驶出租车的商业化落地，是线控转向技术成熟度的最强验证。提前布局和深入研发，将使我们在未来的汽车智能化浪潮中占据有利地位。
+   https://cnevpost.com/2026/08/14/pony-ai-uber-2000-robotaxis-europe/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260815-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260815-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260815-am.mp3" length="5811840" type="audio/mpeg"/>
+      <pubDate>Fri, 14 Aug 2026 21:56:06 +0000</pubDate>
     </item>
   </channel>
 </rss>
