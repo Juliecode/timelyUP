@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 16 Aug 2026 09:00:28 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 21:50:35 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾与机器人的交汇：EPS工程师的今日科技早报</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，从中精选出七条最值得我们关注的重磅资讯。从AI模型的安全边界，到自动驾驶的噪音管理，再到人形机器人的关节控制如何启发我们的电动助力转向系统，每一条都与我们的日常研发工作息息相关。话不多说，让我们立刻进入今天的早报时间。
-
-1. OpenAI reportedly finds evidence that more of its agents ran amok（来源：TechCrunch）
-   应用分析：短期内，直接将通用AI代理用于EPS实时控制核心路径是不可行的，风险过高。但在辅助性、非安全关键领域，比如故障诊断、预测性维护的数据分析，我们可以尝试。具体来说，可以利用AI代理分析EPS系统运行大数据，识别异常模式或潜在故障，辅助工程师进行故障预测和健康管理。例如，开发AI模型来分析电机电流、位置、温度传感器数据，提前预警轴承磨损或控制参数漂移。我认为，这值得投入研究，重点在于如何构建AI的“安全围栏”和“可回滚机制”。探索AI模型在HIL/SIL环境下的极限测试和异常行为模拟，确保在真实系统中部署前，其行为可预测且受控。
-   https://techcrunch.com/2026/07/31/openai-reportedly-finds-evidence-that-more-of-its-agents-ran-amok/
-
-2. Explorative modeling: Train on the best of K guesses（来源：Hacker News）
-   应用分析：这项技术在EPS研发中是能用的，尤其在模型预测控制MPC的参数调优、或FOC控制器增益的自动调整、以及无传感器控制器的状态观测器参数优化等场景。我们可以将EPS电机控制中某些难以手动标定的参数，或多个可选控制策略的组合，作为“猜测”空间。利用这种探索性建模方法，结合仿真环境（MIL/SIL）或台架测试数据，快速迭代并自动寻找最优的参数组合或控制策略，以达到更好的转矩脉动抑制、NVH性能或效率。我认为这非常值得投入，因为它能显著提升我们模型化设计与自动标定的效率，减少工程师的手动调优工作量，并可能发现传统方法难以企及的优化解。
-   https://alexiglad.github.io/blog/2026/explorative_modeling/
-
-3. Scanning 7.6 Petabytes of HuggingFace Training Data for Secrets（来源：Hacker News）
-   应用分析：这条资讯虽然不是直接的技术应用，但它对AI应用的前提风险管理至关重要。在我们利用AI进行数据驱动的控制优化、故障诊断时，训练数据往往包含EPS系统的运行日志、传感器数据甚至车辆识别码等。因此，我们必须建立严格的数据脱敏、加密和访问控制流程，确保训练数据不含敏感信息。对于外部开源AI模型或预训练模型，要进行严格的安全审计，确保其训练数据来源的合规性与安全性。我认为这是必须投入的，它是AI在汽车领域应用的功能安全和信息安全前提。任何AI应用，其数据来源和模型安全性都需要被最高度重视。
-   https://trufflesecurity.com/blog/scanning-7-6-petabytes-of-ai-training-data-for-secrets
-
-4. Uber is building an autonomous vehicle empire, and here’s every company it’s using to do it（来源：TechCrunch）
-   应用分析：这条资讯是行业趋势的判断，不是具体技术。但通过了解Uber等巨头的战略布局，我们可以预测SBW的潜在市场规模和技术需求。这有助于我们提前规划EPS产品的演进方向，例如加强SBW架构设计、冗余控制、故障诊断与降级策略的研发投入。同时，关注这些自动驾驶公司对转向系统供应商的需求，寻找潜在的合作机会。我认为我们必须持续关注和投入，因为SBW是EPS的未来方向，把握住自动驾驶的趋势，才能确保我们的产品在未来市场中具备竞争力。
-   https://techcrunch.com/2026/08/01/ubers-autonomous-vehicle-deal-tracker/
-
-5. After noise complaints, judge orders Waymo to stop overnight charging in Santa Monica（来源：Ars Technica）
-   应用分析：这条资讯是提醒，不是直接技术。但它进一步强调了EPS电机NVH抑制的重要性。我们可以将Waymo的案例作为内部研发的警示，在电机选型时，除了转矩密度和效率，更要将NVH性能作为关键考量。在电机控制策略（如FOC）中，持续优化转矩脉动抑制、电流谐波抑制算法，确保电机在各种工况下都能保持低噪音、低振动运行。同时，在台架测试和整车标定阶段，增加更严格的NVH测试项和主观评价指标。我认为我们必须持续投入，因为NVH性能直接影响用户体验和产品竞争力，特别是在电动化和智能化趋势下，车辆内部环境更安静，任何微小噪音都会被放大。
-   https://arstechnica.com/tech-policy/2026/08/after-noise-complaints-judge-orders-waymo-to-stop-overnight-charging-in-santa-monica/
-
-6. Humanoid Manipulation at the Edge of Physical Interaction（来源：EE Times）
-   应用分析：这项技术能用，且高度相关。我们可以借鉴人形机器人关节控制领域的前沿技术。例如，研究其高精度位置/力矩控制算法、多传感器融合（如力矩传感器、编码器、惯性测量单元IMU）来提升EPS电机控制的鲁棒性和手感还原度。探索在EPS控制器中引入更强的边缘计算能力，实现更复杂的控制策略和实时故障诊断。此外，人形机器人对执行器小型化、高功率密度、高效率、低NVH的需求，也为我们PMSM电机选型和设计提供了参考方向。我强烈推荐投入，这是我们最关注的交叉点之一，机器人执行器控制技术是EPS电机控制未来演进的重要参考和技术迁移来源。
-   https://www.eetimes.com/humanoid-manipulation-at-the-edge-of-physical-interaction/
-
-7. Yokogawa Test &amp; Measurement Releases WT1500 Precision Power Analyzer（来源：Power Electronics News）
-   应用分析：这是硬件工具，我们必须用。我们应该立即评估WT1500的性能指标，特别是其带宽、采样率、测量精度以及对高压隔离和谐波分析的能力。如果性能优于现有设备，可以考虑采购用于电机台架测试和整车测试。利用其高精度测量数据，我们可以更准确地分析电机在不同工况下的效率曲线、评估弱磁控制效果、量化转矩脉动对功率损耗的影响，并为FOC控制策略的优化提供可靠的实验数据支撑。我认为这非常值得投入，高精度的测试测量设备是研发效率和产品性能提升的基础。尤其是在电动化趋势下，对效率和NVH的极致追求，使得对电机功率和损耗的精确分析变得前所未有的重要。
-   https://www.powerelectronicsnews.com/yokogawa-test-measurement-releases-wt1500-precision-power-analyzer/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260802-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260802-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260802-am.mp3" length="4138416" type="audio/mpeg"/>
-      <pubDate>Sat, 01 Aug 2026 22:32:50 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 研发早报：AI芯片成本效益新高，人形机器人驱动技术与自动驾驶生态新洞察</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是大家的老朋友，专注于汽车EPS系统的研发工程师兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最具信息量的资讯，并结合我们的工作背景，深入剖析这些技术趋势对我们EPS产品研发的潜在影响与应用价值。希望这些内容能为您的日常工作带来新的启发！
@@ -1108,6 +1072,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260816-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260816-pm.mp3" length="4314384" type="audio/mpeg"/>
       <pubDate>Sun, 16 Aug 2026 09:00:28 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾、AI与机器人：EPS工程师的今日洞察</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热门领域，为您精选出七条最有价值的资讯。从AI大模型的安全隐患，到汽车电驱动的新动向，再到机器人精密控制的启发，希望这些内容能为您的日常研发工作带来新的思考和灵感。接下来，让我们逐一深入分析。
+
+1. OpenAI reportedly disbanded its preparedness team（来源：The Verge）
+   应用分析：作为EPS工程师，我们正在探索AI在控制、诊断和预测性维护中的应用。如果未来引入基于大模型的AI组件，其内在的风险评估和安全保障机制将是核心考量。OpenAI此举提醒我们，不能盲目信任AI提供商的内部安全流程，必须建立自己的AI安全评估框架，特别是针对功能安全相关应用。在评估第三方AI工具或模型时，需要更深入地考察其风险缓解策略，并考虑自行实施额外的安全冗余和监控。短期内，对AI在ASIL-D级别的EPS核心控制中应用，我们仍需保持极度谨慎，优先考虑小模型、专用模型，并辅以严格的验证。
+   https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team
+
+2. The Case Against Formal Verification, 50 Years Later（来源：Hacker News）
+   应用分析：我们在EPS控制器软件开发中，功能安全要求高，部分关键模块会考虑使用形式化验证。这篇文章提醒我们，形式化验证并非万能，它对建模精度、假设条件以及验证范围有严格要求，且成本高昂。在实际应用中，我们应将其作为多种验证手段（例如MIL、SIL、HIL测试、台架测试、整车测试）之一，而非唯一。对于电机控制算法，如FOC或无传感器控制，其数学模型相对明确，形式化验证可能有效；但对于涉及复杂物理交互、环境不确定性或AI驱动的自适应控制策略，形式化验证的投入产出比可能不高，或需结合其他更灵活的验证方法。我们应根据ASIL等级和模块复杂度，审慎评估形式化验证的投入，将其用在最关键、最能发挥优势的地方。
+   https://ivan-gavran.github.io/0-social-processes-paper
+
+3. Models Are Getting Dumber on Purpose（来源：Hacker News）
+   应用分析：我们正在探索用AI提升电机控制策略的性能和鲁棒性，例如用神经网络进行参数辨识、状态观测，或用强化学习优化助力策略。如果通用AI模型能力下降，我们可能需要：第一，更专注于轻量级、专用化的AI模型开发，结合模型预测控制等传统方法，形成混合控制架构；第二，加强数据质量和特征工程，确保模型在有限智能下依然能捕捉关键信息；第三，对模型进行严格的泛化性、鲁棒性测试，确保其在各种工况下都能稳定工作，避免因“简化”带来的意外行为。这要求我们在AI应用上更务实，不盲目追求大模型，而是聚焦解决特定工程问题，确保其在EPS系统中的可靠落地。
+   https://w4g1.dev/blog/models-are-getting-dumber-on-purpose
+
+4. ChatGPT’s Computer History tracks your clicks and keystrokes（来源：The Verge）
+   应用分析：考虑到我们工作的敏感性，特别是控制算法的细节、电机参数、标定数据等，这些都是核心竞争力。我们绝对不能在未明确数据使用协议和安全保障的情况下，将任何敏感信息输入到如ChatGPT这类可能收集用户数据的通用AI工具中。即便有私有部署方案，也需仔细审查其数据处理机制。我们应该：第一，严格禁止在公共AI工具中输入任何公司专有或敏感信息；第二，探索建立本地化的、数据隔离的AI开发环境，例如部署内部的语言模型或代码生成工具，确保数据不出本地网络；第三，在使用AI辅助开发时（如代码生成、文档总结），只输入非敏感、通用或已脱敏的信息，并始终对AI生成的内容进行严格的人工审核和验证。数据安全无小事，务必提高警惕。
+   https://www.theverge.com/ai-artificial-intelligence/980742/chatgpts-computer-history-tracks-your-clicks-and-keystrokes
+
+5. GAC Aion to debut Ray 7, first model in Ray lineup, on August 19（来源：CnEVPost）
+   应用分析：华为电机在埃安车型上的应用，以及对运动操控的强调，对我们EPS研发有直接启示。我们需要：第一，关注华为电机及相关电控技术的发展，分析其在转矩密度、效率、NVH等方面的表现，以及其控制策略特点，为我们EPS电机选型和控制策略优化提供参考；第二，深入研究“运动操控”背后的EPS需求，如更精准的助力响应、更细腻的路感反馈、与整车域控制器的协同能力，特别是线控转向在未来如何更好地支持这种需求；第三，加强与整车厂在手感调校和系统集成方面的合作，确保EPS能充分发挥整车运动性能，满足高端电动车对驾驶体验的严苛要求。这表明市场对高性能、高集成度EPS的需求日益增长，值得我们加大投入。
+   https://cnevpost.com/2026/08/16/gac-aion-debut-ray-7-aug-19-2026/
+
+6. Ford to use its Universal EV Production System to produce the new Fathom electric pickup（来源：Charged EVs）
+   应用分析：福特的通用电动汽车生产系统意味着未来EPS产品在设计时，需要更强的平台适应性和可配置性。我们应该：第一，推动EPS产品向模块化、标准化方向发展，设计一套核心的软硬件平台，通过参数化配置和软件接口适配不同的车型（如C-EPS、P-EPS、DP-EPS、R-EPS），以降低开发和制造成本；第二，关注整车架构的变化，如线控转向如何更好地融入这种通用化平台，提供更灵活的布局和更简化的机械连接；第三，在功能安全设计上，也要考虑通用平台的兼容性，确保一套安全架构能适应多种车型，同时满足ISO 26262要求。值不值得投入？这是必然趋势，必须投入，而且要提前规划，确保我们的EPS方案能无缝集成到未来的通用化电动汽车平台中。
+   https://chargedevs.com/newswire/ford-to-use-its-universal-ev-production-system-to-produce-the-new-fathom-electric-pickup/
+
+7. How robotics is revolutionizing stroke rehabilitation（来源：The Robot Report）
+   应用分析：这条新闻为我们提供了机器人领域前沿技术在实际应用中的启发。我们可以从中借鉴：第一，柔顺控制和人机交互：康复机器人需要与人体自然协作，其柔顺控制、力/力矩传感器应用、安全限位等技术，可为我们线控转向系统中的手感调校、驾驶员意图识别、甚至紧急情况下的主动干预提供思路；第二，AI自适应控制：康复机器人可能通过AI学习患者的运动模式和康复进度，自适应调整助力。这与我们用AI改进EPS助力曲线、阻尼补偿，甚至实现个性化手感调校的方向一致；第三，高精度执行器：康复机器人对关节执行器的转矩密度、精度和NVH要求高，这与我们PMSM电机选型和控制策略优化的目标高度重合，可以关注其在电机控制、减速器设计方面的创新，看是否有可迁移到EPS的技术。这些交叉点技术值得我们长期投入研究和探索。
+   https://www.therobotreport.com/how-robotics-is-revolutionizing-stroke-rehabilitation/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260817-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260817-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260817-am.mp3" length="4096800" type="audio/mpeg"/>
+      <pubDate>Sun, 16 Aug 2026 21:50:35 +0000</pubDate>
     </item>
   </channel>
 </rss>
