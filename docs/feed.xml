@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 16 Aug 2026 21:50:35 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 09:12:56 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 研发早报：AI芯片成本效益新高，人形机器人驱动技术与自动驾驶生态新洞察</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是大家的老朋友，专注于汽车EPS系统的研发工程师兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最具信息量的资讯，并结合我们的工作背景，深入剖析这些技术趋势对我们EPS产品研发的潜在影响与应用价值。希望这些内容能为您的日常工作带来新的启发！
-
-1. Kimi K3大模型在MI355X芯片上实现了比B300更优的每美元性能，展示了边缘AI推理的成本效益新突破。（来源：Hacker News）
-   应用分析：能用，但要看具体型号和车规级认证情况。如果MI355X或类似架构的芯片能达到车规级，其性能密度非常吸引人。我们可以关注这类高能效比的边缘AI芯片，评估其在下一代EPS控制器或线控转向域控制器中的应用潜力。例如，将AI模型用于电机参数的在线辨识与自适应控制，或者通过强化学习优化助力曲线和手感，甚至实现更高级的故障预测。值得投入。AI芯片的成本效益是推动AI在汽车嵌入式系统落地的关键。我们需要持续跟踪这类芯片的技术进展、车规级路线图，并与芯片供应商建立合作，预研将AI推理能力集成到功能安全相关的EPS控制模块中。这能帮助我们提升控制器的智能化水平，解决传统控制策略难以应对的复杂问题。
-   https://www.wafer.ai/blog/kimi-k3-mi355x
-
-2. 人形机器人关节执行器正向智能化、传感器密集型子系统演进，强调边缘处理、紧密集成控制与通信。（来源：EE Times）
-   应用分析：技术思路和控制架构能用，甚至很多底层电机控制算法可以直接借鉴。我们可以密切关注人形机器人执行器在电机选型（如高转矩密度永磁同步电机）、控制策略（如先进力矩控制、无传感器位置/速度估计、振动抑制）、传感器融合（如多模态传感器在关节中的应用）以及边缘计算架构上的进展。这些技术可用于改进EPS的电机控制，例如提升FOC算法在极端工况下的鲁棒性，优化转矩脉动抑制，开发更精细的无传感器控制方案，或将分布式智能引入EPS系统，为线控转向的模块化冗余设计提供思路。非常值得投入。人形机器人是高性能电机控制的前沿阵地，其突破性技术往往能快速迁移到汽车执行器领域。投入研发力量跟踪并评估这些技术，甚至可以考虑与相关机器人公司进行技术交流，将有助于我们保持EPS电机控制技术的领先性，尤其是在线控转向这种对响应速度和精度要求更高的未来架构中。
-   https://www.eetimes.com/humanoid-manipulation-at-the-edge-of-physical-interaction/
-
-3. Uber在过去两年中与约30家自动驾驶公司建立了合作或直接投资，加速构建其自动驾驶生态系统。（来源：TechCrunch）
-   应用分析：这条资讯本身是行业动态，不能直接“用”在技术开发上，但能作为战略规划的输入。我们需要分析Uber合作伙伴中，哪些是专注于传感器、决策算法、还是执行器（如线控转向、线控制动）。理解这些公司的技术路线和合作模式，可以帮助我们评估自身在自动驾驶供应链中的定位，并思考如何与未来的零点五级供应商或一级供应商进行技术合作。例如，我们可以主动与这些自动驾驶公司建立联系，了解他们对下一代线控转向系统的具体需求，包括接口、性能、功能安全等级、冗余架构等，从而指导我们的产品路线图和技术预研方向。值得投入。这不是技术开发层面的投入，而是市场和战略层面的投入。了解自动驾驶生态的演变，能够帮助我们更准确地预测市场需求，提前布局线控转向技术，确保我们的EPS产品能无缝集成到未来的自动驾驶车辆中，避免被市场淘汰。
-   https://techcrunch.com/2026/08/01/ubers-autonomous-vehicle-deal-tracker/
-
-4. Waymo因夜间充电噪音问题，被法官勒令停止在圣莫尼卡进行通宵充电，凸显自动驾驶车辆部署的实际挑战。（来源：Ars Technica）
-   应用分析：不能直接“用”来改进EPS，但它强化了NVH在产品设计中的优先级。这条新闻为我们的NVH团队提供了有力的论据，强调NVH优化不仅是技术指标，更是市场接受度和法规合规性的重要组成部分。我们可以借此加强在电机选型、控制策略（如转矩脉动抑制、谐波注入）、机械结构设计（如减振降噪材料、安装方式）等方面的NVH优化投入。此外，对于线控转向而言，由于机械连接的解耦，NVH控制将变得更加复杂和关键，因为它直接影响驾驶员对路感的感知和整车静谧性。值得投入。NVH一直是EPS产品的重要竞争力之一。这条新闻从一个全新的角度（自动驾驶车辆的社区影响）再次验证了NVH的重要性。持续投入NVH性能优化，不仅能提升产品竞争力，也能为未来自动驾驶车辆的广泛部署扫清障碍，确保EPS系统在各种工况下都能提供卓越的静音和顺畅体验。
-   https://arstechnica.com/tech-policy/2026/08/after-noise-complaints-judge-orders-waymo-to-stop-overnight-charging-in-santa-monica/
-
-5. 蔚来首个第五代换电站将于八月初开放，同时也是其在中国部署的第4000座换电站，所有品牌将共享换电网络。（来源：CnEVPost）
-   应用分析：这条信息主要用于宏观趋势判断和预研，不直接用于具体EPS算法或硬件开发。我们需要关注换电模式对整车平台化、模块化设计的影响。例如，如果电池包能够快速更换，车辆的电源管理系统、通信接口、热管理系统等都可能需要重新考量。这些变化可能间接影响EPS控制器的供电稳定性、通信协议以及与整车其他域控制器的协调。我们可以参与到整车架构设计前期讨论中，确保EPS系统能够灵活适应各种补能模式下的整车需求，并考虑在未来的线控转向架构中，如何更好地与整车能源管理系统进行协同，以优化系统能耗。值得投入。理解电动汽车补能基础设施的演进，有助于我们更好地理解整车设计趋势。虽然不是直接的技术投入，但这种宏观视角的把握，能帮助我们预判未来EPS产品的需求，例如对更高集成度、更灵活接口、更强环境适应性的要求，从而指导我们的技术预研方向。
-   https://cnevpost.com/2026/08/01/nio-open-first-fifth-gen-swap-station-early-aug/
-
-6. 罗德尼·布鲁克斯提出技术开发和部署的四种时间尺度，帮助我们理解技术从研究到大规模应用的不同阶段。（来源：Hacker News）
-   应用分析：这是一个思维模型，能用来指导研发策略和项目管理。我们可以将EPS的各项技术，尤其是前瞻性技术（如线控转向的L四级冗余安全、AI驱动的自适应助力调校、无传感器高精度控制）按照这四种时间尺度进行分类和规划。例如，将AI在EPS中的强化学习控制视为长期研究（对应时间尺度一到二），而将基于模型的诊断算法落地视为短期开发（对应时间尺度三到四）。这有助于我们合理分配研发资源，避免盲目追求短期成果，同时也能确保有足够的前瞻性技术储备。值得投入。这种宏观的思考框架对于研发管理和个人职业发展都很有益。定期审视我们的技术路线图，并与这种时间尺度理论进行对照，可以帮助我们更好地平衡创新与落地，确保技术投入的有效性。
-   https://rodneybrooks.com/four-time-scales-for-technology-development-and-deployment/
-
-7. 七月机器人行业亮点包括大额融资、机器人训练新方法以及新型机器人模型。（来源：The Robot Report）
-   应用分析：这份总结提供了行业趋势，不能直接“用”在技术上，但可以作为进一步深入研究的指引。我们可以根据这份总结，进一步关注其中提到的“机器人训练新方法”。例如，如果其中有关于AI在机器人关节运动控制中的应用，或者基于数据的自适应控制方案，我们就可以深入研究其原理和实现方式。这些方法可能启发我们开发新的EPS助力策略自动标定工具、更智能的故障诊断系统，或者提升电机控制在复杂工况下的自适应能力。此外，新型机器人模型可能展示了电机、减速器、传感器和控制器的集成创新，这对于我们线控转向执行器的一体化设计具有参考价值。值得投入。机器人行业是电机控制、AI控制、传感器技术集成的“试验田”。跟踪其前沿动态，有助于我们发现潜在的技术迁移机会，加速将前沿研究成果转化为EPS的工程方案，尤其是在提升控制性能、降低成本和增强鲁棒性方面。
-   https://www.therobotreport.com/top-10-robotics-stories-july-2026/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260802-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260802-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260802-pm.mp3" length="3844368" type="audio/mpeg"/>
-      <pubDate>Sun, 02 Aug 2026 09:42:54 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI赋能机器人全身控制，汽车电动化无稀土新进展</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，看看有哪些值得我们深入探讨的重磅消息。从谷歌DeepMind的机器人全身控制突破，到马勒的无稀土电机，再到AI在嵌入式开发中的潜力，每一条都可能为我们的工作带来新的启发。话不多说，让我们立刻进入今天的早报时间。
@@ -1108,6 +1072,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260817-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260817-am.mp3" length="4096800" type="audio/mpeg"/>
       <pubDate>Sun, 16 Aug 2026 21:50:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI与智能汽车：从LLM成本曲线到线控转向安全新范式</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热点领域，精选出七条最值得关注的资讯。从大语言模型的成本效率提升，到AI代理的安全运行时，再到自动驾驶的智能控制策略，以及与EPS电机控制高度相关的机器人关节技术，今天的每一条都可能为我们的研发工作带来新的灵感和突破。准备好了吗？让我们一起开启今天的技术探索之旅！
+
+1. From BERT to Frontier Agents: Eight Years of Language-Model Progress, the Collapse of the Capability-Cost Curve, and the Rise of Task-Targeted Models（来源：arXiv cs.LG）
+   应用分析：这项进展对我们EPS产品研发团队来说，意味着可以更低成本地尝试和部署AI辅助工具。例如，我们可以利用那些在代码生成、数学推理方面表现突出的专业化模型，来辅助控制算法的开发，比如生成MATLAB/Simulink代码片段或辅助模型验证。成本的降低使得团队可以在内部进行小规模的PoC，探索AI在提升开发效率、减少重复性工作方面的潜力。现在是时候考虑将这些成本效益高的AI工具整合到我们的研发流程中了。
+   https://arxiv.org/abs/2608.13675
+
+2. Agentao: A Governed Local-First Runtime for Tool-Using LLM Agents（来源：arXiv cs.AI）
+   应用分析：如果未来我们在EPS研发流程中引入AI代理来协助诸如自动生成测试用例、分析台架测试日志、或辅助标定参数等任务，一个类似Agentao的受控运行时是不可或缺的。我们可以借鉴其“模型提议与主机授权分离”的理念，在内部搭建一个沙箱环境，严格限制AI代理对核心代码库、标定数据库等敏感资源的访问权限，并确保所有操作都可追溯、可审计。这能有效降低AI代理因误操作或恶意攻击而引入安全漏洞的风险。在初期，值得对Agentao或类似的安全运行时框架进行概念验证（PoC），为未来大规模部署AI工具奠定安全基础。
+   https://arxiv.org/abs/2608.13574
+
+3. Stable Miscalibration in Large Language Models: A Practical View of High-Confidence Errors（来源：arXiv cs.AI）
+   应用分析：在利用AI进行EPS故障诊断或预测性维护时，我们必须对AI给出的高置信度结果保持警惕。这项研究启发我们可以将“自批判提示”技术应用于AI辅助诊断系统，要求AI在给出诊断结果的同时，也评估其自身的置信度来源和潜在误判风险。这有助于工程师更好地判断AI输出的可靠性，避免盲目采信。例如，在基于AI的参数异常检测中，如果AI报告某个参数异常并给出高置信度，我们应进一步要求AI解释其推理过程并指出可能的误判条件。这直接关系到AI辅助决策的“信任度”和“可用性”，是提升AI在工程应用中鲁棒性的关键一环。
+   https://arxiv.org/abs/2608.13591
+
+4. Knowledge-Data-Dual-Driven Reinforcement Learning for Autonomous Vehicle Control in Mixed Traffic（来源：arXiv cs.RO）
+   应用分析：KDDRL框架在处理复杂、非平稳交通流方面展现出的能力，可以为我们设计下一代EPS系统提供重要启发。我们可以借鉴其“意图感知未来轨迹预测”机制，在EPS的上位控制层中，结合自动驾驶系统提供的车辆意图信息，动态调整助力曲线、阻尼和回正特性。例如，当系统预测到车辆即将进行紧急避让或车道保持时，EPS可以预先调整转向手感，使其更符合驾驶员或自动驾驶系统的预期，提供更平顺、更安全的转向体验。同时，其处理长尾安全事件的方法，也可用于提升EPS在极端工况下的鲁棒性和故障诊断能力。这项研究对于线控转向系统的架构、冗余与功能安全设计具有重要启发意义，值得我们深入研究和探索。
+   https://arxiv.org/abs/2608.13878
+
+5. Control Barrier--Value Functions under Partial Observability: Safety Guarantees via Conformal Prediction（来源：arXiv eess.SY 控制系统）
+   应用分析：这项研究的框架可以直接应用于EPS系统的功能安全分析和控制器设计，特别是在我们追求无传感器控制或多传感器融合以提升成本竞争力和安全性的场景。我们可以利用共形预测方法来量化电机位置或转矩传感器估计误差的边界，并将这些边界整合到基于CBVF的安全控制器设计中。这样，即使在传感器数据不完整或存在噪声的情况下，我们也能实时计算出满足概率安全约束的控制输入，从而提升EPS系统的鲁棒性和功能安全等级。例如，在某个传感器失效时，系统仍能在一定置信度下维持安全运行。这项技术具有极高的实用价值和理论深度，应立即评估其在EPS系统中的可行性，并考虑将其纳入高级控制算法的开发路线图。
+   https://arxiv.org/abs/2608.13819
+
+6. Communication in modular robotic motor control: Bilateral controllers under realistic constraints（来源：arXiv cs.RO）
+   应用分析：这项研究的模块化控制架构和在噪声、能耗约束下的性能优化经验，可以高度迁移到EPS的电机控制策略中。我们可以探索将EPS电机控制分解为多个“模块”（例如，一个模块专注于转矩密度和效率，另一个专注于NVH抑制和转矩脉动），并通过类似“学习型模块间通信”的机制进行协调。这有助于在保持高性能的同时，更好地管理信号依赖性噪声，优化能耗，并提升整体NVH表现。例如，在永磁同步电机（PMSM）的FOC控制中，可以引入一个专门的模块来预测和补偿由电机参数不确定性或PWM开关引起的转矩脉动，并通过与主控制模块的有效通信实现无缝集成。这与我们正在解决的电机控制策略性能与鲁棒性提升问题高度契合，是实现更精细、更高效、更安静EPS的关键技术方向，非常值得投入研究和概念验证。
+   https://arxiv.org/abs/2608.13904
+
+7. Vibration Suppression in Collaborative Flexible Payload Manipulation Using Passive Force Control（来源：arXiv eess.SY 控制系统）
+   应用分析：这项研究的被动力控制和导纳控制思想，可以创新性地应用于EPS系统的NVH优化和转矩脉动抑制。我们可以将EPS系统中的电机、齿轮箱、转向柱等视为一个复杂的“柔性负载”，并通过在电机控制回路中引入导纳控制的理念，实时调整电机电流或转矩指令。这种“被动”响应机制可以有效地吸收或抑制由路面冲击、齿轮啮合不均或电机自身转矩脉动引起的振动，从而显著改善驾驶员的转向手感和整车的NVH表现。例如，在助力策略中，可以设计一个虚拟阻抗模型，让EPS系统在感知到高频振动时，能够以更“柔顺”的方式响应，避免将振动传递给驾驶员。这可能需要更精细的力/转矩传感器或基于高精度模型的观测器来感知振动。这项技术值得深入研究和在台架上进行概念验证，以探索导纳控制在EPS电机控制中的实际应用潜力，并可能在提升转向手感和降低噪音方面带来突破。
+   https://arxiv.org/abs/2608.14244</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260817-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260817-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260817-pm.mp3" length="3865248" type="audio/mpeg"/>
+      <pubDate>Mon, 17 Aug 2026 09:12:56 +0000</pubDate>
     </item>
   </channel>
 </rss>
