@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 17 Aug 2026 09:12:56 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 21:55:37 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI赋能机器人全身控制，汽车电动化无稀土新进展</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，看看有哪些值得我们深入探讨的重磅消息。从谷歌DeepMind的机器人全身控制突破，到马勒的无稀土电机，再到AI在嵌入式开发中的潜力，每一条都可能为我们的工作带来新的启发。话不多说，让我们立刻进入今天的早报时间。
-
-1. Google DeepMind says Gemini Robotics 2 enables full body control（来源：The Robot Report）
-   应用分析：能用，且非常值得深入研究。我们可以关注Gemini Robotics 2在多关节协调控制、复杂环境适应性、以及对执行器力矩输出的精细控制方法。探索将这类基于AI的全局优化控制思想应用于EPS的电机控制策略，例如，在手感调校中，通过AI模型学习驾驶员意图和路面反馈，动态调整助力曲线和阻尼补偿，实现更智能、更个性化的手感。在线控转向架构中，AI模型可以作为高层控制器，协调多个冗余执行器的动作，确保系统鲁棒性与功能安全。投入优先级高，这是未来线控转向和智能驾驶的关键技术方向，尽早布局AI在底层执行器控制的应用，能抢占技术制高点。
-   https://www.therobotreport.com/google-deepmind-says-gemini-robotics-2-enables-full-body-control/
-
-2. MAHLE introduces a new range extender engine and a rare earth-free electric motor（来源：Charged EVs）
-   应用分析：能用，且是当前电机选型和成本优化的重要方向。我们应立即跟进马勒这款无稀土电机的具体技术细节，特别是其磁路设计、材料选择、以及性能参数（转矩密度、效率、NVH）。评估其是否能满足EPS对电机性能、尺寸、成本及可靠性的严苛要求。如果性能接近或达到永磁同步电机水平，可以考虑将其纳入下一代EPS电机的备选方案，甚至进行原型开发和测试。这有助于我们摆脱对稀土的依赖，提升产品竞争力。投入优先级高，这直接关系到EPS产品的成本控制和供应链安全，是可持续发展的关键技术。
-   https://chargedevs.com/newswire/mahle-introduces-a-new-range-extender-engine-and-a-rare-earth-free-electric-motor/
-
-3. Molicel’s INR-21700-P70X cell is designed to close the gap between Li-ion batteries and supercapacitors（来源：Charged EVs）
-   应用分析：间接有用，主要用于理解整车平台电气特性。我们可以关注这类兼具高能量密度和高功率输出特性的电池在电动汽车中的应用趋势。例如，线控转向系统对电源的瞬态响应要求很高，了解电池能提供的瞬时峰值电流和电压稳定性，有助于我们设计更鲁棒的功率级和更精确的电流采样电路。此外，如果未来EPS系统需要独立备用电源，这种高性能电芯也是一个潜在选择。投入优先级中等，虽然不是直接技术应用，但作为汽车智能化工程师，对核心部件如电池的演进保持关注是必要的，它影响我们系统的设计边界和安全策略。
-   https://chargedevs.com/newswire/molicels-inr-21700-p70x-cell-is-designed-to-close-the-gap-between-li-ion-batteries-and-supercapacitors/
-
-4. TechCrunch Mobility: Two roads diverged — for robotaxis（来源：TechCrunch）
-   应用分析：能用，是线控转向未来应用场景的重要参考。我们应深入分析Robotaxi在功能安全、冗余设计、以及故障诊断与降级处理上的技术方案，尤其是转向系统的冗余要求。思考线控转向如何更好地支持L4/L5自动驾驶的需求，例如，如何实现更高等级的转向系统冗余，如何与自动驾驶决策层进行更高效的接口定义，以及如何在极端故障下提供安全的降级操作。这会指导我们在线控转向架构设计和功能安全方案上的早期规划。投入优先级高，线控转向是L3+自动驾驶的基石，而Robotaxi是其终极应用场景之一，提前理解需求有助于我们技术路线的制定。
-   https://techcrunch.com/2026/08/02/techcrunch-mobility-two-roads-diverged-for-robotaxis/
-
-5. Sam Altman and AI’s decel debate（来源：TechCrunch）
-   应用分析：间接有用，用于指导AI在功能安全领域的应用策略。在考虑将AI/数据驱动方法引入EPS控制、标定或故障诊断时，必须将功能安全（ISO 26262）放在首位。奥特曼的呼吁提醒我们，AI的快速发展不能以牺牲安全性为代价。因此，我们需要在AI控制方案中，严格定义其运行边界、故障模式，并设计可解释性强、可验证的AI模型，同时建立完善的故障诊断与降级机制。例如，在自动标定中，AI模型生成的参数必须经过严格的物理约束和整车测试验证。投入优先级中等，这不是技术细节，而是战略层面的考量，但对于确保AI在汽车领域的安全落地至关重要。
-   https://techcrunch.com/2026/08/02/sam-altman-and-ais-decel-debate/
-
-6. Show HN: MicroCodex Coding Agent – OpenAI/codex reimplemented in C++ &lt;1MB binary（来源：Hacker News）
-   应用分析：能用，有潜力提升开发效率。我们可以关注其实现原理和模型压缩技术。虽然直接在EPS控制器上运行代码生成代理不现实，但可以探索将这类小型化AI模型用于辅助开发。例如，在嵌入式C代码编写中，利用其进行代码片段生成、Bug检测、代码重构建议。或者，在MATLAB/Simulink模型化设计中，辅助生成特定模块的C代码，或对生成的代码进行初步优化。这能显著提升开发和验证效率。投入优先级中等偏高，这属于开发工具链的优化，虽然不直接影响产品性能，但能大幅提升团队工作效率，间接加速产品迭代。
-   https://github.com/paoloanzn/microcodex
-
-7. New Mitsubishi Eclipse Sportback EV to offer both J1772 and NACS charging ports（来源：Charged EVs）
-   应用分析：间接有用，有助于理解整车电气架构和市场趋势。我们可以关注这种兼容性设计对整车电气系统复杂度的影响。例如，多充电接口可能意味着更复杂的电源管理单元和诊断逻辑。这提醒我们在EPS设计中，要确保我们的系统能稳定工作在多种整车电气环境和供电模式下。此外，了解充电标准的演变，能帮助我们预判未来电动汽车的市场走向，从而更好地规划EPS产品的适配性。投入优先级中等，这是市场策略而非核心技术，但对整车电气系统设计有间接影响，保持关注有助于我们更好地融入整车开发流程。
-   https://chargedevs.com/newswire/new-mitsubishi-eclipse-sportback-ev-to-offer-both-j1772-and-nacs-charging-ports/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260803-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260803-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260803-am.mp3" length="2249856" type="audio/mpeg"/>
-      <pubDate>Sun, 02 Aug 2026 22:32:38 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 智驾、机器人与无稀土电机：研发工程师的今日科技早报</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大方向，为您精选了七条最具价值的资讯。从无稀土电机的新突破，到谷歌DeepMind的机器人全身控制进展，再到AI在安全关键系统中的应用之道，每一条都可能点燃您工作中的新思路。准备好了吗？让我们一起开启今天的科技之旅！
@@ -1108,6 +1072,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260817-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260817-pm.mp3" length="3865248" type="audio/mpeg"/>
       <pubDate>Mon, 17 Aug 2026 09:12:56 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾新航向：AI、机器人与EPS的融合创新</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热门方向，为您精选出七条最具价值的资讯。我们将一起深入分析这些技术对我们汽车EPS产品研发工作的具体影响，看看它们是否能为我们的转向系统带来新的突破，以及我们应该如何务实地去应用和投入。话不多说，让我们立刻开始今天的早报时间！
+
+1. Contrastive Learning for Interpretable Anomaly Detection at Collider Experiments（来源：arXiv cs.LG）
+   应用分析：这种可解释的异常检测框架非常有价值，值得我们投入。我们可以利用EPS系统运行数据，如电机电流、电压、转速、扭矩传感器信号、温度等，进行对比学习。首先，收集大量不同工况下的正常运行数据和模拟/实际故障数据。然后，使用ORCA框架训练模型，将EPS系统的多传感器时序数据映射到低维可解释的嵌入空间。在运行时，新采集的数据点若偏离正常区域，即可标记为异常。通过分析其在嵌入空间中的位置和与已知故障模式的距离，我们可以推断故障类型，提高故障诊断的准确性和速度。例如，转矩脉动异常、无传感器控制中的位置估计漂移等。这将显著降低维护成本，提高系统可靠性，并满足功能安全对故障检测时间间隔的要求。
+   https://arxiv.org/abs/2608.13652
+
+2. From BERT to Frontier Agents: Eight Years of Language-Model Progress, the Collapse of the Capability-Cost Curve, and the Rise of Task-Targeted Models（来源：arXiv cs.LG）
+   应用分析：我们已经在使用或可以立即扩展LLM的应用。首先，利用通用LLM作为辅助工具，提高文档撰写、代码审查、测试用例生成等效率。其次，鉴于“编程能力每年提升近六倍”的趋势，我们应积极探索将特定任务模型，例如针对嵌入式C代码生成、功能安全文档辅助编写、Matlab/Simulink模型优化建议的AI工具，引入开发流程。例如，使用这些模型辅助生成FOC控制器的底层驱动代码、诊断代码，或对现有控制算法进行初步优化。此外，成本下降使得在本地部署或私有化部署特定模型变得可行，增强了数据安全性。投入是必然趋势且回报显著，这将直接解决我们“提高开发效率”的问题，并加速前沿研究向工程方案的转化。
+   https://arxiv.org/abs/2608.13675
+
+3. From AI Copilots to Agent Swarms（来源：IEEE Spectrum）
+   应用分析：这个案例表明AI工具可以为研发带来实实在在的收益，非常值得我们投入。我们可以借鉴AMD的经验，在EPS软件开发中更积极地引入AI助手。例如，利用AI进行需求分析和设计辅助，辅助生成ISO 26262功能安全概念文档；在代码生成与优化阶段，对基于Simulink模型自动生成的C代码进行初步优化、风格检查、潜在bug检测；在验证阶段，辅助分析MIL/SIL/HIL测试日志，快速定位问题根源，并自动生成边界条件、异常工况的测试用例，提高测试效率和覆盖率。未来的“智能体群体”概念，可以考虑让多个AI智能体分别负责电机控制参数的自动调优、故障模式的自动识别与分类，甚至初步的降级策略生成，并通过协作来提升系统整体性能和鲁棒性。30%的生产力提升对研发团队来说是巨大的，这有助于缓解工程师压力，加速产品迭代，并为线控转向等复杂系统打下AI辅助开发的基础。
+   https://spectrum.ieee.org/amd-agent-swarms
+
+4. Knowledge-Data-Dual-Driven Reinforcement Learning for Autonomous Vehicle Control in Mixed Traffic（来源：arXiv cs.RO）
+   应用分析：这项研究对我们线控转向的未来发展具有重要的启发意义，值得进行前瞻性研究和技术储备。我们可以将KDDRL的思想应用于线控转向系统的更高层级控制。例如，基于车辆感知到的交通流，利用KDDRL预测驾驶员意图和周围车辆行为，动态调整助力曲线和阻尼回正特性，以提供更安全、舒适的驾驶手感。在线控转向的冗余系统中，当主执行器出现异常时，备用执行器需要快速、平稳地接管，KDDRL可以用于训练降级模式下的控制策略，使其能应对各种复杂故障场景，保证功能安全。此外，还可以利用生成模型预测电机参数在不同温度下的变化，并通过强化学习自适应调整控制参数，提升电机控制策略的鲁棒性。虽然目前EPS主要还是执行层，但向线控转向演进是确定方向，掌握这种结合意图预测和强化学习的复杂控制方法，将为我们未来设计更智能、更安全的转向系统提供核心技术。
+   https://arxiv.org/abs/2608.13878
+
+5. Para Light launches ThermaFlat SiC MOSFETs designed for low on-resistance drift（来源：Charged EVs）
+   应用分析：这类低导通电阻温漂的SiC MOSFET对我们EPS设计来说非常重要，值得立即考虑引入。在EPS电机控制器设计中，我们应优先评估和选用这类产品。在新的控制器硬件平台开发中，将ThermaFlat系列SiC MOSFET纳入选型列表，进行详细的性能、热特性和成本评估。较低的温漂可以简化电机控制策略中对温度变化的补偿算法，减少因器件特性变化带来的控制精度下降和NVH问题，例如，减少FOC控制中对逆变器死区时间补偿的复杂性，或者减小无传感器控制中观测器对电压/电流测量误差的敏感性。同时，更好的热稳定性可能允许更紧凑或更低成本的散热设计，减轻系统整体重量和尺寸。这直接提升了EPS系统核心部件的性能和可靠性，降低了系统复杂性，是实实在在的工程优化。
+   https://chargedevs.com/newswire/para-light-launches-thermaflat-sic-mosfets-designed-for-low-on-resistance-drift/
+
+6. Communication in modular robotic motor control: Bilateral controllers under realistic constraints（来源：arXiv cs.RO）
+   应用分析：这项研究为EPS，特别是线控转向的架构设计提供了新的思路，值得我们深入研究和技术借鉴。我们可以从其模块化、双边控制器的设计中汲取灵感。例如，在线控转向中，可以将转向任务分解为多个子模块，比如左右转向轮各自的执行器控制，并通过类似“双侧控制器”的模式进行协调。我们需要研究其通信协议、延迟和数据同步机制，确保在单个模块故障时，系统仍能平稳运行。在电机控制策略层面，也可以将FOC、无传感器控制、NVH抑制等策略模块化，并设计它们之间的协作与通信机制，例如，一个模块专注于基础转矩控制，另一个模块专注于转矩脉动抑制，通过优化通信实现整体性能提升。理解其如何通过模块化架构应对信号依赖性噪声和能量成本，对于我们提升电机控制策略的鲁棒性、降低NVH、提高效率具有重要指导意义。这是推动EPS向更高级别智能控制演进的战略方向，值得中长期投入。
+   https://arxiv.org/abs/2608.13904
+
+7. Sensor-Driven Mission Synthesis for UAV/UGV Swarms: A TB-CSPN Coordination Architecture with Hardware-Enforced Safety（来源：arXiv eess.SY 控制系统）
+   应用分析：该研究的理论框架对线控转向功能安全和冗余设计具有重要借鉴意义，值得我们进行长期研究投入。我们可以借鉴其“硬件强制安全”的概念，在线控转向系统中设计独立的、基于硬件的故障监控和安全降级单元。例如，除了软件层面的功能安全诊断，还可以有独立的硬件看门狗、冗余传感器投票机制，甚至物理断开电路，以在最极端情况下确保系统安全。在多传感器融合与决策方面，如果未来EPS需要集成更多环境感知数据（如路面信息、车辆动态信息），可以借鉴其多模态传感器融合方法，为助力策略和手感调校提供更丰富、更可靠的输入。同时，针对线控转向的多个执行器之间的精确协调，TB-CSPN协调架构的概念可以启发我们设计更鲁棒的执行器间通信与同步机制，确保在部分故障下仍能维持系统功能。这种结合了复杂决策与硬件安全保障的思路，是未来汽车控制系统发展的关键方向。
+   https://arxiv.org/abs/2608.14306</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260818-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260818-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260818-am.mp3" length="2903040" type="audio/mpeg"/>
+      <pubDate>Mon, 17 Aug 2026 21:55:37 +0000</pubDate>
     </item>
   </channel>
 </rss>
