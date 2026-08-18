@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 18 Aug 2026 09:06:57 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2026 21:53:00 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 科技早报：AI智能体架构、物理信息AI与汽车机器人控制前沿</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们为您精选了七条重磅资讯，涵盖了AI前沿、汽车智能化和机器人技术三大方向。从AI智能体的新架构，到物理定律与神经网络的结合，再到汽车电动转向系统和机器人执行器的新突破，以及AI在复杂控制系统中的应用。内容丰富，干货满满，希望能为您的日常研发工作带来一些新的启发和思考。现在，就让我们一起进入今天的早报时间吧！
-
-1. OpenClaw and Ollama in Agentic AI: Toward Fully Autonomous and Scalable AI Agent Systems（来源：arXiv cs.AI）
-   应用分析：这种分层架构思想可以为我们EPS系统向线控转向演进提供借鉴。未来的线控转向系统将集成更多高层决策和感知功能。我们可以将EPS的控制任务分解为感知、决策和执行层。利用Agentic AI的编排思想，尝试构建一个“EPS智能体”，让LLM作为决策大脑，依据车辆状态和驾驶员意图生成高层指令，再由专门的控制模块转化为具体的电机控制信号。这有助于提升系统的智能化和适应性。短期内，直接在产品中应用有挑战，主要是计算资源、实时性、功能安全认证等问题。但其架构思想对线控转向的系统设计和软件架构演进具有指导意义，值得长期关注和初步探索，可以从离线模拟或辅助决策任务入手。
-   https://arxiv.org/abs/2607.28629
-
-2. LAWFUL: Law-Aligned Witness for Faithful Use of Latents（来源：arXiv cs.LG）
-   应用分析：这项技术对我们来说非常能用，且急需。EPS的电机控制策略（如FOC矢量控制）和助力特性都基于明确的物理定律和工程模型。我们可以利用LAWFUL框架，对基于神经网络的电机参数辨识、转矩脉动抑制、温漂补偿等AI辅助控制模块进行验证。例如，验证神经网络在预测电机参数时，是否真实地遵循了电磁学和热力学定律。这能帮助我们构建“物理信息增强”的AI控制模型，并为满足ISO两六两六二功能安全标准提供论证依据。这是解决AI在安全关键领域落地“信任危机”的关键技术之一，非常值得我们投入。
-   https://arxiv.org/abs/2607.28672
-
-3. Resilient Control of Switched Vehicle Platoons under False Data Injection Attacks（来源：arXiv eess.SY 控制系统）
-   应用分析：这项研究的核心思想对我们设计EPS控制器的故障诊断和降级策略非常有启发。EPS系统作为线控转向的关键执行器，未来将接收来自车辆高层控制器的转向指令，这些指令可能通过车内网络传输。如果关键转向指令或相关传感器数据被恶意篡改，将直接影响转向安全。该研究的“辅助系统加专用观测器”的攻击估计和缓解机制，可以作为我们设计冗余通道、数据一致性校验以及实时检测异常数据的参考。一旦发现攻击，系统可以立即切换到安全模式或执行降级操作。这是汽车网络安全和功能安全不可分割的实践，非常值得我们深入研究和投入。
-   https://arxiv.org/abs/2607.28794
-
-4. DART: Dual-Axis Airborne Reachability-Gated Torque-Reaction for Off-Road Vehicle Jumps（来源：arXiv cs.RO）
-   应用分析：虽然EPS通常不直接处理车辆跳跃，但其电机控制策略，尤其是转矩密度、响应速度和弱磁控制能力，对车辆在高速、急转弯或路面冲击等高动态场景下的手感和稳定性至关重要。DART研究揭示了扭矩输出对姿态调整的物理极限。这可以启发我们在线控转向系统中，如何更精确地分配和管理各执行器的扭矩，以应对车辆的瞬态工况。例如，在车辆高速过弯时，线控转向系统需要快速准确地响应，DART的“起飞前规划”思想，可以转化为“入弯前预判”，通过预先调整转向力矩或配合其他底盘执行器，优化车辆的动态响应。对于EPS电机本身，深入理解扭矩输出极限有助于优化弱磁控制策略，确保在宽速度范围内都能提供足够的转向助力。这项研究对线控转向系统的整体动力学控制策略有长期参考价值。
-   https://arxiv.org/abs/2607.29011
-
-5. MAHLE introduces a new range extender engine and a rare earth-free electric motor（来源：Charged EVs）
-   应用分析：我们目前EPS主要使用PMSM电机。马勒的稀土永磁材料替代方案，例如感应电机、同步磁阻电机或外部励磁同步电机等，是我们未来电机选型的重要方向。我们需要深入研究这些稀土永磁材料替代方案的转矩密度、效率、NVH特性、成本以及在汽车EPS严苛环境下的可靠性。这包括评估不同电机拓扑结构在EPS应用中的可行性，并针对非稀土电机特性，开发和优化磁场定向控制FOC、无传感器控制、弱磁控制等策略，以实现与PMSM相近的性能。同时，也要关注可能带来的NVH特性变化，并开发新的转矩脉动抑制和声学优化方案。这是EPS电机技术发展的关键趋势之一，非常值得投入，我们应立即启动对非稀土电机方案的预研和技术储备。
-   https://chargedevs.com/newswire/mahle-introduces-a-new-range-extender-engine-and-a-rare-earth-free-electric-motor/
-
-6. HEBI Robotics earns NASA SBIR grant to fast track miniaturized actuators（来源：The Robot Report）
-   应用分析：HEBI Robotics在小型化、高功率密度、高精度伺服电机和驱动器方面积累了丰富经验，我们可以从中学习其设计理念，关注HEBI如何平衡小型化与散热、功率密度、NVH以及可靠性。同时，研究其在电机本体、驱动器集成、传感器方案上的创新。例如，在EPS中，电机和控制器一体化是趋势，HEBI的经验可能提供参考。此外，机器人执行器常集成高带宽的力矩控制，这与EPS的磁场定向控制FOC目标一致。我们可以研究其在嵌入式控制算法、通信接口和功能安全方面的实现，以提升我们EPS控制器的集成度和性能。这项技术高度相关，值得我们持续关注和研究，因为小型化、高性能执行器是未来汽车底盘系统，包括线控转向的必然要求。
-   https://www.therobotreport.com/hebi-robotics-earns-nasa-sbir-grant-fast-track-miniaturized-actuators/
-
-7. CLIFT: Turning Gemini Robotics On-Device into Humanoid Specialists via Non-Invasive Closed-Loop Iterative Fine-Tuning（来源：arXiv cs.RO）
-   应用分析：CLIFT的“非侵入式闭环迭代微调”思路，可以借鉴到EPS的自动标定和手感调校中。虽然EPS并非人形机器人，但其控制系统同样面临将高层决策转化为底层电机控制指令，并适应不同车辆平台和驾驶员偏好的挑战。我们可以将驾驶员反馈，比如转向手感评分、路感清晰度，或者车辆动力学数据作为“奖励信号”，通过迭代微调EPS的助力曲线、阻尼补偿等高层参数，使其在不同驾驶场景下达到最佳性能。此外，在传感器故障或电机性能衰退时，也可以利用该框架，在不修改底层磁场定向控制FOC算法的前提下，通过微调上层控制参数，让系统依然能提供可接受的转向功能，实现鲁棒降级。这项方法提供了一种通用范式，值得我们深入研究和投入，对于提升EPS的智能标定效率、适应性以及在复杂工况下的鲁棒性具有重要价值。
-   https://arxiv.org/abs/2607.29172</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260804-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260804-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260804-am.mp3" length="4375728" type="audio/mpeg"/>
-      <pubDate>Mon, 03 Aug 2026 22:38:25 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI智能体架构新突破，自动驾驶安全基线确立，无稀土电机前景可期</title>
       <description>各位研发工程师，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能前沿、汽车智能化以及机器人三大热门领域，为您精选并深度解读七条重磅资讯，希望能为您的研发工作带来新的启发。话不多说，我们马上进入今天的早报时间。
@@ -1108,6 +1072,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260818-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260818-pm.mp3" length="4097520" type="audio/mpeg"/>
       <pubDate>Tue, 18 Aug 2026 09:06:57 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · EPS工程师必听：AI、线控转向与电机控制前沿突破</title>
+      <description>研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门领域，精选出七条最值得关注的重磅资讯，尤其是那些与我们的EPS系统研发息息相关的技术突破和行业动向。准备好了吗？让我们一起开启今天的技术探索之旅！
+
+1. 一项新研究提出了一种考虑通信和计算延迟的永磁同步电机（PMSM）离散时间联合控制模型，能直接合成具有带宽和延迟保证的PI电流控制器。（来源：arXiv cs.RO）
+   应用分析：这项研究对我们EPS电机控制的性能提升和鲁棒性增强具有极高的借鉴价值。首先，在EPS系统架构设计阶段，可以将这种“任务感知、延迟扩展离散时间联合模型”引入到仿真和分析中，更精确地评估系统性能。其次，在电机控制策略开发中，我们可以结合FOC矢量控制算法，显式建模并量化PWM更新、电流采样、CAN通信等引入的延迟，避免传统试错法。更重要的是，该框架能帮助我们分析最小采样频率、控制器增益和直流母线电压对控制带宽与延迟保证的影响，实现更科学、高效的PI参数离散化整定。对于未来线控转向（Steer-by-Wire）系统，控制信号的传输延迟和同步性至关重要，该方法能为执行器的精确协同控制提供理论和工具支持。投入产出比极高，值得重点投入研究和落地。
+   https://arxiv.org/abs/2608.14937
+
+2. EPC公司推出了一款参考设计，将氮化镓（GaN）功率级、传感、保护和反馈集成到机器人和无人机电机驱动器中，旨在将驱动器更靠近执行器。（来源：Power Electronics News）
+   应用分析：这项技术对我们EPS电机控制器硬件设计具有重要启发。首先，GaN器件的高频特性有助于减小无源元件尺寸，使EPS控制器更加紧凑，这对于R-EPS或DP-EPS这类对空间要求严格的架构尤为有利。我们可以评估将GaN功率器件引入下一代EPS控制器功率级设计的可行性，以实现更小的体积和更高的效率。其次，将电机驱动器与电机本体更紧密集成，能有效降低线束成本和电磁兼容（EMC）风险。此外，利用GaN的高开关频率，可以配合更精细的电机控制策略，进一步抑制电流纹波和转矩脉动，改善NVH性能。随着线控转向的发展，对功率级的冗余和故障降级能力要求更高，GaN的小型化优势可能为实现多通道冗余设计提供新的思路。虽然GaN目前成本相对较高，但其性能优势和集成潜力对EPS的未来发展至关重要，值得持续投入研究和跟踪。
+   https://www.powerelectronicsnews.com/epc-brings-gan-motor-drives-closer-to-the-actuator/
+
+3. 一种名为REACH的实时执行器控制和健康估计算法被开发出来，用于仿鳗鱼软体机器人，可在执行器退化和失效时估计其功能性，并支持任务执行或返航。（来源：arXiv cs.RO）
+   应用分析：REACH算法的概念和方法对我们EPS系统的“故障诊断与降级”以及“预测性维护”方向具有极强的借鉴意义。我们可以将REACH的思路应用于EPS电机和传感器的健康状态监控，例如通过实时监测电机电流、电压、转速与控制指令之间的偏差，结合EPS电机模型，利用卡尔曼滤波或西格玛点滤波器来估计电机绕组、轴承或位置传感器的潜在退化。这有助于实现预防性维修，避免突发故障。在功能安全降级方面，当系统检测到执行器性能退化时，可以根据REACH给出的健康评估，动态调整助力策略，从全功能模式降级到安全模式。此外，REACH的健康估计能力可以作为无传感器控制策略的补充，在主传感器失效时提供辅助信息，或作为冗余传感方案中的交叉验证机制，提升系统整体安全性。这项技术能显著提升EPS的功能安全等级和产品可靠性，非常值得投入研发。
+   https://arxiv.org/abs/2608.14865
+
+4. 据报道，特斯拉计划推出无方向盘、无踏板的自动驾驶出租车Cybercab，但其在公共道路上的实际准备情况仍存疑。（来源：The Verge）
+   应用分析：Cybercab不是一个可以直接“用”的技术，而是一个重要的行业风向标和技术演进的参考，直接关联到我们“向线控转向Steer-by-Wire演进”以及“线控转向的架构、冗余与功能安全设计”的方向。我们应密切关注Cybercab的技术细节、实际表现、安全报告和法规审批进展，分析其线控转向系统、冗余设计和故障处理策略，从中学习和汲取经验教训。同时，评估其商业模式和市场接受度，以及各国政府对这类L5级别自动驾驶车辆的政策和法规走向，这将直接影响我们线控转向EPS产品的研发路线图。Cybercab的无方向盘设计意味着对线控转向系统的安全性和冗余性要求达到前所未有的高度，我们可以深入研究其如何解决功能安全中的单点故障和故障降级问题。这项进展对我们制定长期研发策略和技术路线图至关重要，值得持续投入时间和精力进行战略性跟踪和分析。
+   https://www.theverge.com/transportation/981398/tesla-cybercab-launch-robotaxi-fsd-safe-ready
+
+5. 一项研究对比了欧盟、美国和中国在AI高风险用例的监管框架，强调AI治理正从自愿伦理转向可执行的、基于风险的法规。（来源：arXiv cs.AI）
+   应用分析：这项研究不是具体技术，而是指导我们AI应用方向和规范的重要参考。对于我们想用AI改进控制、标定、故障诊断的EPS系统以及未来的线控转向，必须考虑AI的功能安全和伦理合规性。在EPS项目中引入AI技术时，必须进行严格的风险评估，参考这些法规对“高风险AI系统”的定义，识别潜在的合规性问题。我们将AI功能（如神经网络观测器、自动标定算法）整合到ISO 26262流程中，明确AI系统的ASIL等级，并制定相应的验证和确认策略，尤其要关注法规中关于“可解释性（FAIR原则）”的要求。同时，确保用于训练AI模型的数据符合隐私保护和数据安全标准。与公司法务、合规部门以及标准制定机构保持沟通，了解最新法规动态，确保我们的AI在汽车应用中符合国际和国内的法律要求。规避法律风险和确保产品合规性是EPS产品的生命线，必须投入精力。
+   https://arxiv.org/abs/2608.14562
+
+6. 一项研究提出了一种基于超局部模型（ultra-local model）的模型无关递归控制障碍函数（CBF）框架，通过在线估计未知系统动力学来构建CBF约束，从而在存在显著模型不确定性或未知动力学时强制执行安全约束。（来源：arXiv eess.SY 控制系统）
+   应用分析：这项技术非常有潜力，可以尝试引入EPS控制策略的开发。EPS系统存在电机参数温漂、路面扰动、轮胎与路面摩擦系数变化等多种不确定性，模型不确定性是常态。我们可以在EPS助力策略中利用CBF来强制执行一些关键的安全约束，例如最大助力转矩限制、转向角速度限制，并结合这种模型无关的方法，即使在电机参数变化或遭遇未知路况时，也能保证这些约束不被违反。将“超局部模型”和“在线估计”的思想应用于FOC矢量控制或助力策略，可以提升鲁棒性，例如实时估计系统动态并调整CBF以保持控制性能和安全性。在线控转向系统中，模型无关CBF可以作为一种补充安全层，在主要控制系统性能受损或模型失配时，提供最后一层安全保障。此外，模型无关方法与AI驱动方法有共通之处，可以探索将神经网络观测器与CBF结合，实现更智能、更鲁棒的安全控制。这直接对应我们“电机控制策略的性能与鲁棒性提升”以及“线控转向的架构、冗余与功能安全设计”中的挑战，值得投入。
+   https://arxiv.org/abs/2608.15361
+
+7. 一款名为EARL的Python库被推出，用于在强化学习（RL）场景中生成反事实解释，通过探索“假设情境”来澄清智能体行为，提升RL策略的透明度和可验证性。（来源：arXiv cs.LG）
+   应用分析：对于我们未来在EPS或线控转向中引入AI/数据驱动方法（特别是强化学习控制、神经网络观测器、自动标定）来说，EARL这个工具和思路非常有价值。如果尝试使用RL来优化助力策略或电机控制参数，EARL可以帮助我们理解RL智能体在特定驾驶情境下做出决策的原因。例如，当RL控制器在某个场景下产生意外的助力曲线时，EARL能通过反事实分析，指出“如果输入信号稍有不同，控制器会做出何种预期行为”，从而帮助我们调试和改进RL模型。在AI辅助自动标定中，EARL可以解释为何某个参数组合被选择。如果AI用于故障诊断，EARL可以解释AI为何将某个异常归类为特定故障，这对于工程师理解和信任AI的诊断结果非常重要。在ISO 26262框架下，可解释性是高级自动驾驶和线控转向系统面临的挑战，EARL提供的反事实解释有助于满足对AI决策透明度的要求，从而更容易通过安全认证。它直接解决了AI在安全关键汽车领域落地中的“黑箱问题”，值得投入评估和集成。
+   https://arxiv.org/abs/2608.14620</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260819-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260819-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260819-am.mp3" length="3070656" type="audio/mpeg"/>
+      <pubDate>Tue, 18 Aug 2026 21:53:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
