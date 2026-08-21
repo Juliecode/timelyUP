@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 21 Aug 2026 09:11:58 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2026 21:56:08 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI赋能汽车转向：从神经符号到联邦学习，EPS研发新机遇</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦人工智能前沿、汽车智能化和机器人三大领域，为大家精选了七条重磅资讯。这些消息不仅揭示了最新的技术趋势，更重要的是，它们与我们汽车EPS产品研发的工作息息相关，希望能给大家带来一些启发和思考。
-
-1. The RAIL Principles for Neurosymbolic AI: Reasoning, Assurances, Interfacing and Learning（来源：arXiv cs.AI）
-   应用分析：能用。RAIL原则提供了一个评估和设计AI辅助控制系统（如故障诊断、自动标定）的框架。在设计基于AI的EPS故障诊断或线控转向冗余决策模块时，可将RAIL原则作为功能安全（ISO 26262）评估的补充。例如，利用符号推理层来解释神经网络的决策，提升诊断结果的可解释性；通过形式验证来确保AI决策的边界条件和安全属性。在算法开发初期就考虑这些原则，可以避免后期大规模返工。非常值得投入。功能安全是汽车行业的生命线，AI引入的黑盒问题是巨大挑战。RAIL原则提供了一条结合AI能力与工程严谨性的路径，是未来线控转向等高安全等级AI应用落地的关键。
-   https://arxiv.org/abs/2608.04285
-
-2. SafeCommit: Certifying When Memory-Grounded Agents May Safely Act（来源：arXiv cs.AI）
-   应用分析：能用。对线控转向系统而言，AI辅助的决策（如路径规划、助力模式选择）需要高度可靠。可以将SafeCommit的理念引入到线控转向的冗余决策或故障降级策略中。例如，当EPS系统引入AI进行更高级的助力决策时，SafeCommit可以作为AI决策与实际执行之间的“守门员”。它能评估AI决策所依赖的传感器数据、历史运行参数（即“记忆基础”）的“新鲜度”和“一致性”，只有通过认证的决策才允许执行。如果记忆基础不确定，则可以触发低风险的探测动作或回退到保守的降级策略。值得投入。这直接解决了AI在安全关键系统中“敢不敢用”的问题，为线控转向等复杂系统的AI决策提供了理论和工程实践上的安全保障。
-   https://arxiv.org/abs/2608.04289
-
-3. Robust and Personalized Federated Learning for Aircraft-Engine Prognostics under Benign and Adversarial Client Heterogeneity（来源：arXiv cs.LG）
-   应用分析：能用。可用于EPS电机及控制器组件的预测性维护和故障诊断。我们可以将EPS系统运行数据（如电流、电压、温度、转速、扭矩、控制指令等）进行局部训练，然后通过联邦学习聚合模型参数，构建一个更通用、更鲁棒的故障预测模型。针对不同车型、不同驾驶习惯带来的“良性异构性”，可采用“共享表示个性化”方法，让模型既能从全局知识中受益，又能适应特定车辆的特性。同时，研究中提到的“对抗性攻击”防范，对防止恶意数据污染、确保模型安全至关重要。非常值得投入。这不仅能提升EPS系统的预测性维护能力，减少非计划停机和召回，还能在保护用户数据隐私的前提下，实现大规模车辆数据的价值挖掘，降低开发和运维成本。
-   https://arxiv.org/abs/2608.04045
-
-4. An Explainable LLM Agent Layer for Open-World Anomaly Detection in Oil Wells（来源：arXiv cs.LG）
-   应用分析：能用。可以用于EPS系统的复杂故障诊断和分析。在EPS控制器中，可以部署轻量级的异常检测模型（如自编码器），当检测到异常时，将结构化的传感器数据和模型检测结果（如异常类型、异常分数）输入到一个本地或云端的LLM智能体层。这个LLM层可以结合EPS系统的故障树、维修手册、历史故障数据等知识库，生成自然语言的故障描述、可能原因、置信度评估，甚至给出初步的排查建议（比如“检查转向角传感器线路是否松动”）。这能显著提高维修效率，降低对高级诊断专家的依赖。值得探索。虽然直接在嵌入式MCU上部署大型LLM不现实，但可以考虑边缘AI和云端LLM结合的方案。尤其是在整车厂的售后诊断和研发阶段的故障分析中，这种可解释的AI诊断将是巨大的效率提升。
-   https://arxiv.org/abs/2608.04041
-
-5. AMD acquires Taalas to boost inference performance by etching models in silicon（来源：Hacker News）
-   应用分析：能用。为EPS系统未来集成高性能AI算法提供了硬件基础。随着线控转向系统对AI控制算法（如强化学习、神经网络观测器）的需求增长，传统的MCU可能不足以提供所需的计算能力。Taalas的技术提示我们，未来可能出现高度定制化的ASIC或FPGA解决方案，将EPS核心AI控制模型（如基于神经网络的转矩脉动抑制、无传感器观测器）直接硬化到芯片中，从而实现超低延迟、超高能效的推理。这要求我们在系统架构设计时，开始考虑AI加速器的集成，并与芯片供应商保持紧密合作，甚至参与定制芯片的定义。值得密切关注和适度投入预研。这是AI落地汽车边缘控制的长期趋势。虽然短期内可能无法直接应用，但理解并跟踪这种硬件加速方向，有助于我们提前规划未来EPS产品线控转向的计算平台。
-   https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344
-
-6. Toward Integrating Adaptive Experience Replay and Online Uncertainty Estimation in Safe Actor-Critic Optimal Control（来源：arXiv eess.SY 控制系统）
-   应用分析：能用。可将该框架的理念应用于EPS电机控制策略的鲁棒性提升和线控转向的AI控制。我们可以借鉴其“在线不确定性估计”来优化无传感器控制中的转子位置/速度估计，使其在电机参数漂移、外部干扰等不确定性下依然保持高精度和鲁棒性。同时，其“安全屏障函数”可用于为基于强化学习的转矩脉动抑制或NVH优化算法设置硬性安全约束，确保算法在学习过程中不会导致系统失稳或产生危险行为。自适应经验回放机制则能帮助算法更高效地从台架测试和整车标定数据中学习，加速控制策略的迭代。值得重点投入。这是将前沿AI控制（RL）应用于EPS核心控制问题的直接路径，有潜力解决我们目前面临的电机控制策略性能和鲁棒性难题，尤其在无传感器和参数辨识方面。
-   https://arxiv.org/abs/2608.04732
-
-7. Pony AI plans to deploy up to 1,000 Gen-4 autonomous heavy trucks in 2-3 years（来源：CnEVPost）
-   应用分析：能用。这是汽车智能化领域最前沿的实际应用，对EPS未来发展有直接指导意义。自动驾驶重卡对转向系统的要求是极致的可靠性和冗余。这意味着线控转向（Steer-by-Wire）将是必然趋势。我们需要关注这些L4级重卡如何解决转向系统的多重冗余、故障诊断、降级运行以及与自动驾驶决策系统（AD ECU）的接口和通信协议。特别是其对电机选型（高转矩密度、高效率、长寿命）、控制器功能安全等级（ASIL D）、以及线控转向架构（例如多路独立的电机和ECU）的需求，都将直接影响我们EPS产品线的技术路线图。极其值得。这代表了汽车智能化的最高等级应用之一。通过研究小马智行等公司的L4级卡车方案，我们可以提前布局线控转向技术，了解市场对EPS产品的未来需求和技术挑战，确保我们的EPS产品能够满足甚至超越未来自动驾驶的需求。
-   https://cnevpost.com/2026/08/06/pony-ai-1000-autonomous-heavy-trucks-2-3-years/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260807-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260807-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260807-am.mp3" length="3113424" type="audio/mpeg"/>
-      <pubDate>Thu, 06 Aug 2026 22:43:08 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 智驾与机器人：EPS研发的未来导航</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天我们将聚焦人工智能前沿、汽车智能化和机器人技术，从中精选出七条最值得我们EPS研发工程师关注的资讯，深入探讨它们对我们日常工作和未来技术路线的启发。希望今天的早报能为您的研发工作带来新的思路和动力。
@@ -1144,6 +1108,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260821-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260821-pm.mp3" length="3229488" type="audio/mpeg"/>
       <pubDate>Fri, 21 Aug 2026 09:11:58 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾与机器人：AI如何重塑我们的转向系统和生产线</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是大家的老朋友，今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，看看最新的技术进展如何影响我们的工作，尤其是对我们汽车EPS产品研发工程师来说，哪些是值得我们深入挖掘和转化的宝贵信息。今天我为大家精选了七条重磅资讯，希望能给大家带来一些新的启发。
+
+1. Towards On-Board Implementation of ML-Based Helicopter Weight Estimator（来源：arXiv cs.LG）
+   应用分析：非常值得借鉴。我们可以将这种学习保障流程应用于EPS系统中的AI/ML功能，比如基于数据驱动的故障诊断、预测性维护，甚至未来的AI辅助助力策略。具体来说，可以参考其提出的机器学习需求、模型描述和实现验证过程，建立EPS领域内ML模型的开发和认证规范。例如，在电机参数辨识或转矩脉动抑制中，如果引入ML模型，其性能的鲁棒性和安全性评估将是关键，此论文提供了框架。投入非常值得，这能为我们未来产品快速落地打下基础，尤其是在无传感器控制中利用ML进行状态观测或参数自适应时，这种保障流程将是必需品。
+   https://arxiv.org/abs/2608.19210
+
+2. Mechanistic Tomography: Designed Measurement for Control-Oriented Interpretability（来源：arXiv cs.LG）
+   应用分析：可以用于提高AI在EPS控制中的可信度。例如，如果使用神经网络作为电机控制器的状态观测器、故障诊断模块或助力策略中的非线性补偿器，我们急需理解这些网络在特定输入下的行为逻辑。通过“机械层析成像”方法，我们可以设计特定的激励信号，观察网络内部的响应，从而理解其对转矩脉动、NVH抑制或路感还原的影响，并发现潜在的失效模式。这有助于我们对AI模型进行更精细的调试和验证，尤其是在功能安全分析中。值得投入，AI控制在EPS中的落地需要解决可解释性问题，这是功能安全认证的潜在要求。可以先从离线分析工具链入手，逐步集成到MIL/SIL/HIL验证阶段。
+   https://arxiv.org/abs/2608.19338
+
+3. Improved Confidence Estimates for Black-Box Large Language Models（来源：arXiv cs.LG）
+   应用分析：虽然原文针对LLM，但其“利用现有数据集和相似查询来预测模型正确性”的核心思想可以迁移到EPS中基于AI/ML的诊断或控制任务。例如，在AI驱动的故障诊断模块中，当AI给出一个故障判断时，我们可以通过比对历史故障数据集中相似工况和其对应诊断的正确性，为当前判断提供一个置信度分数。这有助于操作员或上层控制系统决定是否采纳AI的诊断结果，或触发进一步的冗余校验。值得小规模投入研究，尤其是在故障诊断和预测性维护方面，引入AI后，如何评估其诊断的可靠性是实际应用中的痛点。这种低计算开销的置信度估计方法，可能成为AI诊断模块的有效补充，提升整体系统的鲁棒性和安全性。
+   https://arxiv.org/abs/2608.19323
+
+4. US government lab is probing Chinese lidar for security vulnerabilities（来源：TechCrunch）
+   应用分析：这不是一个可以直接“应用”的技术，而是一个重要的行业警示。作为EPS研发工程师，我们需要高度关注供应链中的关键部件，尤其是与功能安全等级相关的传感器和控制器。虽然EPS本身不直接使用激光雷达，但线控转向系统会与自动驾驶系统深度耦合。我们需要确保我们选用的MCU、功率器件、编码器等关键供应商，其产品具备足够的网络安全防护能力，并提供完整的安全认证报告。在系统架构设计时，要考虑传感器输入的可靠性和安全性，以及如何在检测到异常时进行安全降级。必须投入关注，在选择供应商时，除了性能和成本，功能安全和网络安全合规性应成为重要的考量因素。
+   https://techcrunch.com/2026/08/21/us-government-lab-is-probing-chinese-lidar-for-security-vulnerabilities/
+
+5. Geely recalls 93,000 vehicles over LiDAR defect that may disable driver assistance（来源：CnEVPost）
+   应用分析：同样，这不是直接应用的技术，而是极具参考价值的工程教训。对于EPS系统，我们使用的电机、传感器（如转矩传感器、位置传感器、电流传感器）和控制器中的MCU、功率器件，都可能面临类似的制造工艺缺陷风险。我们需要在设计阶段就加强对供应商的资质审查和过程控制（如APQP），对关键部件进行更严格的失效模式分析（FMEA）和鲁棒性设计验证（DRBFM）。特别是在ISO 26262功能安全流程中，对硬件随机失效和系统性失效的考量，需要结合此类实际案例进行深度反思和改进。必须投入关注和改进，强化供应链质量管理、提升部件的可靠性设计、完善功能安全架构中的故障诊断与降级策略，是EPS产品研发的重中之重。
+   https://cnevpost.com/2026/08/21/geely-recalls-lidar-defect/
+
+6. Schaeffler plans to mass produce gearboxes for humanoid robots in 2027（来源：The Robot Report）
+   应用分析：舍弗勒的谐波减速器虽然直接用于机器人关节，但其背后的精密制造技术、高集成度、高转矩密度和低齿隙特性，对EPS电机选型和线控转向执行器设计有直接的参考价值。当前EPS多采用齿轮减速，谐波减速器若能实现成本和NVH的突破，将为线控转向提供更紧凑、更精准的传动方案。我们可以关注这种成形技术能否降低成本，以及其NVH特性如何。同时，机器人关节执行器的伺服控制技术，特别是力矩控制和高精度位置控制，与EPS电机控制高度相关，其技术成果可互相迁移。值得持续关注和潜在的合作研究，这对于我们优化现有电机和减速器设计，以及探索未来线控转向的执行器方案，具有重要的战略意义。
+   https://www.therobotreport.com/schaeffler-plans-to-mass-manufacture-gearboxes-for-humanoids-in-2027/
+
+7. Learning the Right Abstraction: Neural Reduced Dynamics for Complex Robot Control（来源：arXiv cs.RO）
+   应用分析：这种思路非常适用于EPS的电机控制策略开发和线控转向系统的整体控制。我们可以将EPS系统（电机、减速器、转向柱、轮胎）视为一个复杂机器人系统。高精度的EPS系统模型计算量大，不适合大规模强化学习或模型预测控制的在线优化。NRD框架可以帮助我们从高精度模型中学习一个简化的、但保留关键控制物理特性的神经动力学模型。然后，在这个轻量级模型中进行大量的控制策略的训练和迭代，最后再回到高精度模型或HIL平台进行验证。这能显著提高开发效率。值得投入研究和概念验证，尤其是在线控转向的复杂系统架构下，NRD提供了一种有效途径，来平衡模型精度与计算效率，加速控制算法的开发和验证。
+   https://arxiv.org/abs/2608.19375</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260822-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260822-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260822-am.mp3" length="3103632" type="audio/mpeg"/>
+      <pubDate>Fri, 21 Aug 2026 21:56:08 +0000</pubDate>
     </item>
   </channel>
 </rss>
