@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 22 Aug 2026 09:00:47 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2026 21:52:12 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 研发工程师早报：AI赋能控制系统，智能汽车与机器人融合前沿</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。这些消息不仅能拓宽您的技术视野，更希望能为您正在进行的研发工作带来一些新的启发和思考。AI如何提升我们控制系统的鲁棒性？智能汽车的硬件趋势对线控转向有何影响？以及机器人领域的最新突破能否迁移到我们的电动助力转向系统？别走开，我们马上开始今天的播报。
-
-1. Decoupling Perception from Description: Computation-Grounded Representation Alignment between Multivariate Time Series and Language（来源：arXiv cs.LG）
-   应用分析：核心要点：新方法通过将感知与描述解耦，利用确定性代码计算多变量时间序列统计量，再由大语言模型进行语言化，提升了多模态模型在时间序列与语言对齐时的标签质量和可扩展性。应用分析：这项研究对我们EPS系统的研发非常有价值。我们每天处理大量的电机电流、电压、转速、力矩、车速、方向盘角度等多变量时间序列数据。如果能借鉴这种“计算与语言解耦”的思路，我们可以编写精确的确定性代码，自动从这些数据中提取关键的统计特征，比如FOC控制器的电流波动、转矩脉动、温度漂移等。然后，让一个经过微调的大语言模型，根据这些结构化特征生成自然语言的故障描述、性能分析报告或调校建议。这能大大提升我们故障诊断的效率和准确性，并为自动标定提供更具语义的反馈。投入产出比高，因为它可以减少人工分析数据的时间，提升AI辅助诊断的可靠性，非常值得我们团队深入研究和尝试。
-   https://arxiv.org/abs/2608.05238
-
-2. Oracle bans AI-generated code from OpenJDK（来源：Hacker News）
-   应用分析：核心要点：甲骨文公司禁止在OpenJDK项目中使用AI生成代码，凸显了在关键软件开发中对AI代码可靠性、安全性和知识产权的担忧。应用分析：在我们EPS这种安全关键领域，直接使用AI生成代码进行核心功能开发，风险巨大，目前不建议直接采用。但我们可以采取更审慎、辅助性的策略。例如，AI可以用于生成非安全相关或低安全等级的辅助代码，比如测试桩、日志模块，或者作为代码评审的辅助工具，检查代码风格、潜在的Bug模式。在算法层面，AI可以帮助生成MATLAB/Simulink模型，然后通过模型化设计和代码生成工具转换为C代码，但这依然需要严格的人工审核和验证。对于功能安全相关的代码，我们必须坚持传统的人工编写、严格评审、形式化验证等流程。所以，投入研究AI辅助开发工具是值得的，但重点应放在提升开发效率和质量，而非直接替代核心代码编写。
-   https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code
-
-3. When Do Corrective Features Help? An Agent for Corrective Feature Discovery on Black-Box Forecasters（来源：arXiv cs.LG）
-   应用分析：核心要点：针对黑盒预测模型，CRAFTER框架提出通过挖掘模型残差中的可解释特征来构建轻量级后处理校正器，有效修复模型结构性、重复性失效，而非通过昂贵的微调。应用分析：这项技术对我们EPS的AI辅助模块非常有用。例如，在基于AI的电机转矩脉动抑制、NVH优化或故障预测模型中，如果模型在某些特定转速、负载或温度区间出现预测偏差或误报，我们可以利用CRAFTER来分析这些“残差”，自动发现导致失败的“校正特征”。比如，在某个转速区间，当电机温度高于某个阈值时，模型输出总是偏低，这就是一个校正特征。然后，基于这些可解释的特征，构建一个轻量级的后处理校正器，在不改变原有复杂AI模型的前提下，提升其在特定边界条件下的性能和鲁棒性。这比重新收集数据、重新训练整个模型要高效得多，而且很适合嵌入式资源受限的场景。这项投入非常有价值。
-   https://arxiv.org/abs/2608.05207
-
-4. Deepal launches updated S05 electric SUV, starting at about $17,000（来源：CnEVPost）
-   应用分析：核心要点：深蓝S05电动SUV高配版搭载了128线激光雷达和两颗地平线J6M芯片，显示出高性能感知与计算平台向中低价位电动汽车普及的趋势。应用分析：这条新闻不是直接的技术应用，而是对未来趋势的预警和指导。它告诉我们，高性能感知和计算平台正加速普及，这将对我们EPS，尤其是线控转向系统提出更高的要求。例如，更精准的激光雷达数据意味着上层自动驾驶系统能生成更精细的路径和避障指令，这就要求我们的线控转向系统具备更高的响应速度、精度和鲁棒性。同时，地平线J6M芯片提供的强大算力，也预示着未来车端会有更多资源来运行复杂的AI控制算法，比如基于路面摩擦系数预估的自适应助力策略。我们必须密切关注这些平台发展，并将其纳入EPS未来架构设计的考量，提前布局，研究如何利用这些算力，将前沿的AI控制算法集成到EPS系统中，并确保与上层系统的无缝衔接和功能安全。这项投入是必须的。
-   https://cnevpost.com/2026/08/07/deepal-launches-updated-s05-suv/
-
-5. BorgWarner extends PHEV and 800 V BEV inverter programs with European OEM（来源：Charged EVs）
-   应用分析：核心要点：博格华纳与欧洲某主要OEM延长合作，将为插电混动和800伏纯电动汽车提供逆变器，标志着800伏高压平台在电动汽车领域的持续普及和深化。应用分析：800伏高压平台是电动汽车的未来趋势，虽然我们的EPS电机通常工作在较低电压，但高压平台对整个车辆的电气架构和EMC环境会产生影响。我们需要研究高压平台下EPS系统如何更好地与整车隔离，确保电磁兼容性。更重要的是，博格华纳在800伏逆变器上的技术积累，特别是在功率器件，比如碳化硅SiC、驱动电路、散热设计和控制算法方面的经验，对我们的EPS电机控制器开发具有直接借鉴意义。我们可以学习其在高压、高频开关场景下的FOC控制优化、损耗管理、NVH抑制等技术，并将其应用到PMSM电机的设计和控制中，以提升转矩密度、效率和NVH表现。此外，也需关注800伏系统对功能安全，也就是ISO 26262的影响，如绝缘要求、故障诊断与降级策略等。这项投入是非常值得的。
-   https://chargedevs.com/newswire/borgwarner-extends-phev-and-800-v-bev-inverter-programs-with-european-oem/
-
-6. Zero-Instruction Sensor Reads: Register-Mapped Peripherals and Hardware PWM on a Five-Stage Soft Processor（来源：arXiv eess.SY 控制系统）
-   应用分析：核心要点：新研究展示了定制化软核处理器通过寄存器映射外设和硬件PWM，实现“零指令”传感器读取和PWM输出，极大提升了嵌入式控制循环的效率。应用分析：这项技术对我们的EPS控制器软硬件设计具有直接的启发意义。在EPS系统中，电机控制的FOC算法需要高速、精确地读取电流、位置传感器数据，并生成PWM信号驱动功率级。传统上，这些操作会消耗宝贵的CPU指令周期。借鉴“零指令传感器读取”和“硬件PWM”的思路，我们可以与MCU供应商合作，或者在下一代控制器设计中，考虑定制化微控制器或FPGA方案，将核心控制循环中频繁访问的传感器输入，比如三相电流采样值、转子位置编码器数据，直接映射到CPU寄存器，并通过硬件逻辑实现PWM的自动输出。这样可以大幅减少中断开销和软件延迟，释放CPU资源用于更复杂的控制算法，同时确保FOC控制的实时性和确定性。这对于提升电机控制策略的性能与鲁棒性，以及满足ISO 26262功能安全对实时性的高要求，都具有显著价值。投入是值得的，尤其是在下一代控制器平台预研阶段。
-   https://arxiv.org/abs/2608.05638
-
-7. KILVO: Kinematic-Inertial-LiDAR-Visual Odometry with Robust Multimodal Adaptation for Humanoid Robots（来源：arXiv cs.RO）
-   应用分析：核心要点：KILVO提出了一种面向人形机器人的运动学-惯性-激光雷达-视觉多模态里程计系统，通过异步序列混合误差状态迭代卡尔曼滤波，并设计了多模态适应性以增强传感器故障下的鲁棒性。应用分析：这项研究对我们EPS系统的传感器融合和故障诊断策略具有极强的借鉴意义，是机器人领域前沿研究向汽车领域快速转化的典范。我们可以将KILVO的多模态融合思想应用于EPS，提升电机状态估计的精度和鲁棒性。例如，在无传感器控制方案中，除了反电动势观测器，我们还可以融合整车IMU的运动信息、轮速传感器信息，甚至未来线控转向系统中的冗余角度传感器，通过误差状态卡尔曼滤波等方法，进行更精确、更抗干扰的电机转子位置和速度估计。KILVO中针对传感器故障的“多模态适应性”设计尤其关键，我们可以借鉴其思路，为EPS设计故障诊断与降级策略：当某个传感器出现故障时，系统能自动切换到基于其他模态信息融合的估计方案，或进入降级运行模式，确保基本的助力功能和功能安全。这项投入产出比极高，是解决无传感器、冗余传感方案、提升安全性与成本竞争力、电机控制策略鲁棒性的直接路径。
-   https://arxiv.org/abs/2608.05647</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260808-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260808-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260808-am.mp3" length="3601872" type="audio/mpeg"/>
-      <pubDate>Fri, 07 Aug 2026 22:11:28 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 研发工程师早报：AI安全边界、800V功率器件与人形机器人执行器</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人技术这三大热门方向，精选了七条重磅资讯，希望能为您的日常研发工作带来启发。准备好了吗？让我们开始今天的早报时间！
@@ -1144,6 +1108,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260822-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260822-pm.mp3" length="3478752" type="audio/mpeg"/>
       <pubDate>Sat, 22 Aug 2026 09:00:47 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技早报：AI科研提速，汽车传感升级，机器人执行器展望</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿的最新突破、汽车智能化领域的硬件与系统深度解析，以及机器人执行器技术带来的启示。从AI智能体加速科学研究，到高精度电流传感器助力电动汽车测试，再到人形机器人核心部件的量产计划，每一条资讯都可能为我们的研发工作带来新的思路或工具。话不多说，让我们赶紧进入今天的早报时间。
+
+1. DeepMind校友公司Inherent称其AI智能体在复现科研成果上超越Anthropic和OpenAI（来源：TechCrunch）
+   应用分析：我个人认为这非常值得高度关注和投入。作为EPS工程师，我们经常需要研究新的电机控制策略、无传感器控制方法等。法拉第这类能复现科学论文的AI，可以作为我们的“AI科研助手”，快速消化大量学术文献，提炼核心算法思想，甚至模拟仿真论文中的实验结果。这能显著缩短我们调研和验证新技术可行性的周期，帮助我们更快地将前沿研究转化为实际的EPS工程方案。我们团队可以探索如何将这类AI工具集成到研究流程中，例如用于自动生成MATLAB/Simulink的模型草图，或者分析不同控制算法在特定工况下的优劣，以提升研发效率和技术创新能力。
+   https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/
+
+2. Anthropic似乎正在对Claude Code进行A/B测试，可能降低了其“努力程度”（来源：Hacker News）
+   应用分析：这对我日常使用AI辅助工具（如代码生成、规范文档编写）有直接影响。如果这类模型为了成本而降低输出质量，我们必须更加警惕其生成内容的准确性和完整性。例如，在嵌入式C代码生成或Simulink模型自动构建时，降低“努力程度”可能导致生成的代码存在更多逻辑错误或不符合功能安全要求。我们应保持警惕，对AI生成的内容进行严格的人工审查和验证。未来，如果这类AI在我们的工作流中变得更核心，我们可能需要投入资源去评估不同供应商AI模型的质量稳定性，甚至考虑自建或微调更可靠的本地模型，以确保关键任务的准确性。
+   https://twitter.com/argofowl/status/2091150597374537729
+
+3. 为什么你的本地LLM感觉比实际更笨（来源：Hacker News）
+   应用分析：对于我们EPS研发而言，如果考虑将AI用于故障诊断、预测性维护或自动标定等涉及敏感数据处理的场景，本地部署LLM是优选方案。这篇文章的洞察能帮助我们避免常见的“坑”，例如，可能不是模型本身差，而是我们的提示工程（Prompt Engineering）不够精细，或者推理参数设置不合理。我建议投入时间去理解其背后的原因和解决方案。这有助于我们更有效地利用本地LLM，提升数据安全性和系统响应速度。我们可以组织内部讨论，并针对性地优化我们本地AI工具的部署和使用策略，比如更注重高质量的训练数据、优化模型量化和推理引擎、以及开发更智能的提示模板。
+   https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917
+
+4. 横河电机新型CT500SA和CT200SA电流传感器，可夹持线缆用于狭窄电动汽车测试空间（来源：Charged EVs）
+   应用分析：这与我的工作非常相关，是EPS系统台架测试和整车标定中亟需的工具。EPS电机控制策略的优化，如转矩脉动抑制、弱磁控制等，都高度依赖精确的电流采样。在我们的台架测试中，经常会遇到空间狭窄、传统霍尔传感器难以安装的情况。这种分体式、高精度、宽量程的传感器能直接夹在电机电源线或控制器输出线上，简化测试接线，提高测试效率。我强烈建议团队评估并采购这些传感器，它们能帮助我们更准确地采集电机实际运行电流波形，从而更精细地分析控制算法性能，优化电流环参数，并验证转矩输出的精确性，最终提升EPS系统的NVH和手感表现。
+   https://chargedevs.com/newswire/yokogawas-ct500sa-and-ct200sa-current-sensors-clamp-onto-cables-in-tight-ev-test-spaces/
+
+5. 理解电池管理系统：关键组件和功能（来源：Charged EVs）
+   应用分析：尽管BMS并非EPS的直接组成部分，但作为汽车电子功能安全（ISO 26262）的实践者，BMS在安全、冗余、故障诊断与降级方面的设计理念与EPS控制器高度相似。我们可以借鉴BMS在无传感器（或冗余传感器）方案、温漂补偿、参数辨识以及故障诊断与降级策略上的经验，来提升我们EPS控制器的鲁棒性和安全性。例如，BMS如何通过多重传感器交叉验证、状态观测器进行电池状态估计，这些思路可以启发我们设计更可靠的无传感器位置估计算法。我认为值得投入时间去学习和研究这份白皮书，这有助于我们拓宽视野，从更广阔的汽车电子系统角度审视EPS的设计，尤其对线控转向（Steer-by-Wire）这种对功能安全要求极高的系统设计有重要参考价值。
+   https://chargedevs.com/whitepapers/understanding-battery-management-systems-key-components-and-functions/
+
+6. 舍弗勒计划于2027年量产人形机器人齿轮箱（来源：The Robot Report）
+   应用分析：这与我的工作背景高度相关，因为EPS系统同样是高性能的机电执行器。人形机器人关节执行器对转矩密度、效率、NVH和可靠性的极致追求，与EPS电机的选型和控制策略有极强的共通性。舍弗勒采用的“成型技术”实现量产，可能意味着更低成本、更高一致性的制造工艺。我们可以关注这种新型齿轮箱的设计思路和制造工艺，借鉴其在紧凑型、高精度、低噪音传动方面的经验，应用于未来EPS减速器的选型或定制设计，尤其是在线控转向（Steer-by-Wire）中，对执行器的要求会更高。我强烈建议投入时间和精力关注人形机器人关节执行器领域，通过跟踪舍弗勒这类头部企业的进展，我们可以获取关于电机与减速器集成、NVH优化、成本控制和可靠性设计的宝贵信息，这都可以直接启发我们优化现有EPS系统，并为线控转向等未来技术路线提前布局。
+   https://www.therobotreport.com/schaeffler-plans-to-mass-manufacture-gearboxes-for-humanoids-in-2027/
+
+7. 美国电池初创公司在国防领域找到生机（来源：TechCrunch）
+   应用分析：这不是直接的技术应用，而是宏观产业趋势的洞察。作为EPS工程师，我们需要关注电动汽车产业的整体健康状况。如果电池供应链因政策变动而受到冲击，或者转向国防等其他领域，可能会影响车规级电池的成本、供应稳定性和技术迭代速度，进而间接影响到电动汽车的整车成本和普及速度，最终传导到EPS系统的市场需求和技术演进。例如，更稳定的电池供应和更低的成本可能加速线控转向的普及。我认为值得投入少量精力关注，这有助于我们站在更高的维度理解汽车电动化转型的背景和挑战，对进行长期的技术路线规划和供应商评估有参考价值。
+   https://techcrunch.com/2026/08/22/us-battery-startups-have-found-a-lifeline-in-defense/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260823-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260823-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260823-am.mp3" length="2518560" type="audio/mpeg"/>
+      <pubDate>Sat, 22 Aug 2026 21:52:12 +0000</pubDate>
     </item>
   </channel>
 </rss>
