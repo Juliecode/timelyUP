@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 24 Aug 2026 21:59:08 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 09:13:07 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 智驾与机器人：AI如何重塑汽车转向与执行器控制</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门领域，为您精选出七条最具洞察力的资讯。这些内容不仅将带您了解最新的技术突破，更重要的是，我将结合我们汽车EPS，也就是电动助力转向系统的研发工作背景，深入分析这些技术对我们日常工作的具体应用价值。从AI如何提升电机控制的鲁棒性，到机器人执行器技术对线控转向的启示，再到AI智能体安全性的深刻思考，今天的早报内容将干货满满，希望能为大家的工作带来新的启发。话不多说，让我们立刻进入今天的正题！
-
-1. LyEvO: Lyapunov-Guided Evolutionary Optimization for Safe and Robust Sim-to-Real Policy Learning（来源：arXiv cs.RO）
-   应用分析：作为EPS研发工程师，这项技术对我们至关重要。EPS是功能安全ASIL-D级别的系统，安全性是首要考量。传统的标定和验证耗时巨大，且难以覆盖所有极端情况。LyEvO的优势在于其“安全认证”能力，能提供统计模型检查的保证，大幅提升从MIL、SIL、HIL到台架和整车测试的效率和可靠性。我们可以利用李雅普诺夫方法定义EPS系统的稳定域，例如，设定电机转速、电流、转矩的安全限制，然后在仿真环境中通过进化优化，寻找满足这些安全约束的控制参数或策略。尤其是在线控转向这种高度复杂的安全关键系统中，引入LyEvO这类能提供安全认证能力的工具，能够有效降低研发风险和成本，确保我们交付的产品达到最高的安全标准。
-   https://arxiv.org/abs/2608.06481
-
-2. Certified Feedforward Tracking for Unknown Nonlinear Systems via Invertible Neural Networks（来源：arXiv eess.SY 控制系统）
-   应用分析：这项研究对提升EPS电机控制策略的性能和鲁棒性具有巨大的潜力。我们的EPS系统常常受到电机参数温漂、齿槽转矩、摩擦等非线性因素的影响，传统的PI或FOC控制难以完全补偿。我们可以利用可逆神经网络学习EPS系统的逆动力学模型，生成精确的前馈控制信号。例如，在FOC控制环路中，除了常规的PI控制器外，可以增加一个由INN生成的前馈转矩补偿项，以显著抑制转矩脉动和抖动，提升助力手感。这项技术的最大亮点在于其“认证”能力，它能为基于AI的控制方案提供量化的安全边界和性能保证。在EPS这种ASIL-D级别的功能安全产品中，INN作为一种白盒AI模型，其可解释性和可逆性使其更容易满足ISO 26262等功能安全标准的要求，是AI在汽车底层控制中落地的一个重要方向，非常值得我们投入资源进行预研和探索。
-   https://arxiv.org/abs/2608.06419
-
-3. Correct Online Estimation of the Powertrain Time Constants in Adaptive Vehicular Platooning（来源：arXiv eess.SY 控制系统）
-   应用分析：这个在线估计算法可以直接迁移到我们EPS系统的电机参数辨识和控制策略自适应。EPS电机，特别是永磁同步电机，其转子电阻、电感等参数会随温度、老化等因素发生变化，这些变化会直接影响FOC控制的精度和效率。我们可以借鉴这种无需持续激励的在线估计算法，在车辆日常运行中实时辨识电机参数，并据此自适应调整FOC控制器的增益或弱磁策略，从而确保在各种工况下都能维持高精度的转矩控制和良好的动态响应。这项技术在提升EPS的温漂补偿能力和参数鲁棒性方面具有显著优势。更进一步，它也可以作为线控转向系统中冗余传感方案的补充，通过精确的模型估计来弥补物理传感器失效或降低传感器配置带来的潜在风险，从而提升系统的安全性和成本竞争力，是值得我们深入研究和投入的方向。
-   https://arxiv.org/abs/2608.06835
-
-4. Kite Magnetics secures A$2-million grant to scale Aeroperm motor core material（来源：Charged EVs）
-   应用分析：这项关于Aeroperm电机铁芯材料的进展对EPS电机的选型和设计具有直接影响。Aeroperm这类先进的软磁材料有望显著降低电机的铁损，从而提高电机效率，减少运行时的发热量，并可能提升EPS系统的功率密度和NVH性能。更高的效率也意味着在提供相同助力需求的情况下，可以采用更小体积的电机，或者在现有体积限制下提供更大的助力输出，这对C-EPS、DP-EPS等对空间和重量敏感的紧凑型系统尤其有利。虽然我们作为产品研发工程师不直接开发材料，但持续关注并评估新材料对电机性能的潜在提升，对于指导电机供应商进行选型、优化电机设计规格至关重要。如果这种材料能在性能、成本和可靠性方面达到汽车级要求，它将成为我们EPS产品在市场竞争中的一大优势。建议我们密切跟踪其汽车级验证进展，并与现有供应商探讨引入此类新材料的可能性。
-   https://chargedevs.com/newswire/kite-magnetics-secures-a2-million-grant-to-scale-aeroperm-motor-core-material/
-
-5. A Disturbance in the Force: Force Actuation on the RAVEN II Surgical Robot with Parallel Motor-Cable Units（来源：arXiv cs.RO）
-   应用分析：这项技术与我们线控转向（Steer-by-Wire，SBW）系统中的手感回馈模拟和冗余执行器设计高度相关。SBW系统需要精确模拟路感，并提供可靠、逼真的力反馈给驾驶员。这种并行电机-缆绳系统可以作为一种创新的试验台架，用于：第一，手感标定与优化，通过模拟各种路况下的外部反作用力，为SBW手感助力曲线、阻尼和回正策略的训练和优化提供真实且可控的实验数据。第二，冗余执行器研究，我们可以探索将类似原理的电机-缆绳单元作为SBW系统的冗余执行器，在主执行器失效时提供有限的转向力矩或力反馈，增强系统的功能安全。第三，HIL测试，将其作为HIL（硬件在环）测试中的力加载模块，模拟整车环境下的转向柱负载，提高测试的真实性和覆盖度。虽然直接将这类系统应用于量产EPS/SBW产品存在挑战，但作为前瞻性研究和试验平台，其在力反馈、冗余驱动和测试验证方面的潜力巨大，值得我们积极关注并考虑与高校或研究机构合作进行概念验证。
-   https://arxiv.org/abs/2608.06488
-
-6. The AI safety test is becoming a safety risk（来源：TechCrunch）
-   应用分析：这篇报道对我们在EPS和线控转向系统中引入AI或数据驱动方法敲响了警钟。如果未来我们的转向系统采用AI进行故障诊断、预测性维护，甚至是部分控制决策，我们必须确保这些AI智能体被严格限制在其操作边界之内，绝不能出现“逃逸”或不可控行为。这是一个必须高度重视并投入巨大资源解决的问题。我们需要：首先，加强隔离与沙箱机制，确保AI模型在开发和测试阶段与实际系统严格隔离，防止其影响真实硬件。其次，建立严格的验证与确认流程，引入形式化验证、对抗性样本生成等技术，确保AI在所有工况下行为可预测且安全。第三，设计鲁棒的降级策略，即使AI出现异常，系统也能安全降级到最小风险状态，保障行车安全。最后，我们应积极关注并参与AI功能安全相关的行业标准制定，例如ISO 26262在AI场景下的扩展，确保我们的研发工作符合最高安全要求。
-   https://techcrunch.com/2026/08/09/the-ai-safety-test-is-becoming-a-safety-risk/
-
-7. Risk-Aware Decision Policies for Agents Under Noisy Perception（来源：arXiv cs.LG）
-   应用分析：这项研究对EPS和线控转向的控制决策、故障诊断以及冗余传感方案设计具有重要的指导意义。例如，在自动泊车或低速转向等场景中，EPS系统需要整合来自多个传感器（如雷达、摄像头、超声波）的环境感知信息，而这些信息往往带有噪声和不确定性。我们可以借鉴“风险感知决策”的思想来优化我们的系统：第一，在故障诊断方面，当某些传感器数据出现异常或噪声过大时，不盲目信任其输出，而是结合其置信度、历史数据和模型预测进行综合判断，避免误诊断或漏诊断，提高诊断的鲁棒性。第二，在冗余传感与融合方面，在线控转向这种需要多路传感器冗余的系统中，该研究提示我们，在融合带有噪声的传感器数据时，需要采用风险感知的决策策略，例如，为不同传感器的输出分配不确定性权重，或者在感知不确定性高时，倾向于更保守的转向策略。总而言之，提升EPS和SBW在复杂、不确定环境下的鲁棒性和安全性是我们的核心目标，这项研究为我们优化现有算法提供了坚实的理论基础和实践方向，非常值得深入研究和落地。
-   https://arxiv.org/abs/2608.06420</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260810-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260810-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260810-pm.mp3" length="4104720" type="audio/mpeg"/>
-      <pubDate>Mon, 10 Aug 2026 09:43:02 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI驱动智能转向：从边缘LLM到认证控制的未来图景</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门领域，精选出7条重磅资讯。从超轻量级边缘AI模型到安全鲁棒的控制系统设计，再到新型电机材料的突破，每一条都可能为我们的电动助力转向（EPS）系统带来革命性的启发。让我们一起深入分析，看看这些前沿技术如何赋能我们的日常研发工作，以及它们未来的落地潜力。
@@ -1137,6 +1101,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260825-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260825-am.mp3" length="3128256" type="audio/mpeg"/>
       <pubDate>Mon, 24 Aug 2026 21:59:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技早报：AI赋能实时电机控制，智能驾驶法规与芯片新进展</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。其中，有两项关于AI在实时电机控制中的突破性进展，一项关于AI安全性的深度思考，两项关于智能汽车领域芯片和法规的重大更新，以及两项来自机器人领域，但对我们汽车控制大有裨益的前沿技术。希望这些内容能为您的日常研发工作带来启发。
+
+1. Real-Time Transient Response Optimization（来源：arXiv eess.SY 控制系统）
+   应用分析：这种AI辅助控制器的思路非常值得我们EPS工程师借鉴。我们可以在现有的FOC，也就是磁场定向控制环路外部，通过轻量级AI模型实时监测电机状态和负载变化，预测性地调整PI参数或前馈补偿，以应对突发负载变化或系统扰动，从而优化转矩响应和NVH性能。论文提到的模型推理周期在一百微秒到一毫秒之间，这与我们EPS主控MCU的算力及控制周期是完全匹配的。我认为投入价值极高，因为它直接关系到EPS系统的性能上限。通过AI优化瞬态响应，可以提升助力手感的一致性，减少路感还原中的抖动，并提高系统对外部扰动的抑制能力。特别是在线控转向中，对快速响应和高鲁棒性要求更高，AI辅助控制能提供关键优势。我们完全可以从Simulink模型层面开始，尝试将强化学习或神经网络模型作为辅助控制器集成到现有控制策略中进行MIL、SIL、HIL验证。
+   https://arxiv.org/abs/2608.21886
+
+2. A Simple and Extremely Efficient Predictive Control for Power Converters（来源：arXiv eess.SY 控制系统）
+   应用分析：对于EPS电机控制而言，有限控制集模型预测控制在转矩脉动抑制、电流谐波优化等方面有潜在优势，但其计算复杂度一直是痛点，难以在低成本MCU上实时部署。这种“确定性视觉图”和“拟合法则”的思路，可以将其转化为查表或简单函数计算，大幅降低MCU的计算负荷。这使得MPC有机会在高性能EPS电机控制中落地，例如用于PMSM永磁同步电机的FOC控制中替代部分PI控制器，或用于弱磁控制区域的优化。投入价值很高。如果能在保证控制性能的前提下，将MPC的计算复杂度降低百分之八十八，这将是EPS电机控制领域的一大突破。它能让我们在追求更高性能，如更低的转矩脉动、更好的效率时，不再受限于算力，从而提升产品的竞争力。我们可以尝试将其应用于高频电流环控制或转矩控制，并通过HIL和台架测试验证其在实际工况下的鲁棒性和性能。
+   https://arxiv.org/abs/2608.22416
+
+3. LLMs could control their host machines by exploiting inference engines（来源：Hacker News）
+   应用分析：虽然我们EPS系统目前主要依赖传统控制算法，但未来AI辅助标定、AI故障诊断甚至AI控制策略的引入是必然趋势。这项研究提醒我们，在设计包含AI模块的EPS控制器时，必须将AI模型的安全性纳入功能安全ISO 26262和网络安全的考量。我们需要特别关注AI推理引擎的沙箱机制、输入验证、异常行为检测，以及与AI模型交互的接口设计，确保即使AI模型出现异常，也无法对底层执行器，比如EPS电机，进行未经授权的控制。这项投入是必需的，不是“是否能用”的问题，而是“如何避免风险”的问题。在将任何AI技术引入到安全关键的EPS系统前，必须进行严格的安全评估和渗透测试。这需要与功能安全团队和网络安全团队紧密合作，建立一套针对AI系统独特风险的安全保障体系。
+   https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines
+
+4. Xiaomi unveils 3-nm Xring D100 smart-driving chip, plans commercial use in 2027（来源：CnEVPost）
+   应用分析：这款芯片的出现预示着汽车控制器算力的飞跃。对于EPS系统，这意味着可以承载更复杂的AI控制算法，例如基于深度强化学习的助力策略，或者更高精度的传感器融合，比如无传感器控制中的状态观测器，以及更精细的故障诊断模型。在线控转向场景下，高算力芯片能支持更复杂的冗余管理、实时路径规划和更精细的力反馈控制。我们必须持续关注并研究这类前沿车规级芯片。虽然小米的芯片可能不会直接用于我们的EPS产品，但其技术趋势，如高算力、低功耗、本地AI模型部署，是行业标准。我们需要了解这些新芯片的能力，以便在EPS系统架构演进，特别是向线控转向发展时，能提前规划所需的计算资源，并为AI算法的引入做好硬件准备。
+   https://cnevpost.com/2026/08/24/xiaomi-unveils-xring-d100-smart-driving-chip/
+
+5. China proposes automakers handle traffic violations in fully autonomous mode（来源：CnEVPost）
+   应用分析：对我们EPS工程师来说，这直接影响线控转向，也就是Steer-by-Wire，简称SBW系统的设计和验证。如果车辆处于完全自动驾驶模式，转向系统的任何故障或性能不足导致的事故，制造商都将承担责任。这意味着SBW系统需要达到更高的功能安全等级，通常是ASIL D，并且在冗余设计、故障诊断、降级运行策略上需做到极致。例如，需要考虑多通道冗余、异构冗余、故障透明切换等，并确保在极端情况下系统仍能提供安全转向能力。投入是必须的。这是强制性的法规要求。我们的EPS产品，尤其是未来的SBW系统，必须满足甚至超越这些法规对安全性的要求。我们需要将这些责任条款转化为具体的工程设计规范和验证标准，确保系统在任何工况下都能可靠、安全地运行。这将驱动我们在功能安全架构、软件鲁棒性、硬件可靠性以及故障诊断能力上持续深耕。
+   https://cnevpost.com/2026/08/25/china-proposes-automakers-traffic-violations-fully-autonomous/
+
+6. Mamba-based Selective State Space Modeling Improves the Accuracy-Complexity Tradeoff of SmolVLA Vision-Language-Action Experts（来源：arXiv cs.RO）
+   应用分析：机器人关节执行器控制与我们的EPS电机控制高度相关。Mamba在VLA模型中的应用，提示我们可以探索其在EPS电机控制策略中的潜力。例如，在FOC控制中，状态观测器或预测控制器可能需要处理较长的历史数据序列来预测电机状态或未来负载。Mamba的效率优势可以降低这些AI模块的计算负担，使其更容易集成到嵌入式MCU中。它也可以用于处理多传感器融合的数据流，提高处理效率和实时性。这项前沿研究值得我们投入研究。我们可以将其视为一种新型的序列建模和控制架构，与我们目前使用的RNN、LSTM或Transformer等模型进行比较。在MATLAB/Simulink环境中，可以构建原型模型，验证Mamba在电机参数辨识、无传感器控制中的状态估计或转矩脉动抑制等方面的性能和计算效率，评估其是否能转换为可落地的EPS工程方案。
+   https://arxiv.org/abs/2608.21407
+
+7. Active Interaction-Aware Model Predictive Path Integral via Ego-Conditioned Generative Predictions（来源：arXiv cs.RO）
+   应用分析：虽然这项技术主要处于自动驾驶的上层规划和决策层面，但它对EPS系统有间接且重要的影响。线控转向系统需要接收来自上层决策的精确、鲁棒的转向指令。这种“交互感知”的MPPI规划器能提供更平滑、更安全的转向路径，减少对EPS系统高频、剧烈转向的需求，从而提高EPS的工作效率和寿命，并改善乘坐舒适性。同时，其“主动探知”和“降低不确定性”的能力，也为线控转向系统的故障诊断和冗余管理提供了更优的输入。我认为间接投入是必要的。我们需要密切关注这类自动驾驶规划技术的发展，理解其对转向系统需求的变化。例如，如果上层规划能更早、更准确地预测交互，我们就可以为EPS系统设计更优化的助力曲线和阻尼控制，以匹配车辆的意图和驾驶员的期望手感。这有助于我们提前布局线控转向的控制接口和性能指标，确保EPS系统能够无缝对接未来的高级自动驾驶功能。
+   https://arxiv.org/abs/2608.21400</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260825-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260825-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260825-pm.mp3" length="4433328" type="audio/mpeg"/>
+      <pubDate>Tue, 25 Aug 2026 09:13:07 +0000</pubDate>
     </item>
   </channel>
 </rss>
