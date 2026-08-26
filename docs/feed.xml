@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 25 Aug 2026 21:57:34 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 09:22:02 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 科技早报：AI赋能驾驶情绪，SiC模块健康监测，机器人泛化控制...</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热门方向，为大家精选出七条最有价值的资讯。从理解驾驶员情绪，到SiC功率模块的健康监测，再到机器人执行器的泛化控制，这些内容都与我们电动助力转向，也就是EPS的研发工作息息相关。话不多说，让我们立刻进入今天的早报时间。
-
-1. Emotion in an active inference model of human driving（来源：arXiv cs.AI）
-   应用分析：这项研究为我们EPS系统的人机界面设计提供了新的视角。在高级辅助驾驶或线控转向系统中，我们可以尝试引入驾驶员情绪状态的感知与评估。例如，通过车内传感器获取驾驶员情绪数据，结合该模型分析情绪对驾驶意图的影响，从而自适应调整EPS的助力曲线和阻尼回正特性。比如，在驾驶员焦虑或疲劳时提供更平稳舒适的助力，而在专注时提供更清晰的路感反馈。这在短期内落地有挑战，需要跨学科合作，但作为未来线控转向系统个性化体验的前瞻性探索，非常值得在仿真和概念验证阶段进行适度投入。
-   https://arxiv.org/abs/2608.07480
-
-2. PhysAttNet: Enhancing Predictive Performance in Industrial and Astrophysical Time Series via Physics-Informed Attention（来源：arXiv cs.LG）
-   应用分析：PhysAttNet在EPS电机控制中有广阔的应用前景。我们可以将其应用于电机参数的实时辨识与温漂补偿，结合电机等效电路模型等物理知识，动态调整FOC控制器的参数。其次，在转矩脉动和NVH抑制方面，结合电机的谐波特性，训练模型进行预测和抑制。最重要的是，它能通过物理信息构建正常运行模型，进行异常检测，提前预警电机或功率器件的潜在故障，同时提高可解释性。这是解决电机控制策略性能与鲁棒性提升的关键，强烈建议投入研发资源进行深入探索和实践。
-   https://arxiv.org/abs/2608.07681
-
-3. From Benchmark Performance to Tool Deployment: Human-in-the-Loop Anomaly Detection（来源：arXiv cs.LG）
-   应用分析：这项研究对我们落地EPS的故障诊断和预测性维护方案有直接指导意义。我们应采纳“人机协同异常检测”框架。模型在车辆运行中实时监测传感器数据，发出潜在异常预警。对于高风险或不确定异常，引入人工专家，如维修技师或研发工程师，进行复核，分析故障根源，并将结果反馈给模型进行持续优化。同时，必须投入更多精力在传感器数据预处理和清洗上，确保输入模型的工业数据质量。这不仅能提升故障诊断的准确性和可靠性，也是满足ISO 二六二六二功能安全要求的务实路径，非常值得投入。
-   https://arxiv.org/abs/2608.07770
-
-4. Physics-Informed Condition Monitoring of SiC Power Modules（来源：arXiv eess.SY 控制系统）
-   应用分析：我们可以将这项研究的混合框架应用于EPS控制器中的功率级模块健康监测。结合SiC MOSFET的物理退化模型和实时运行数据，通过混合模型预测功率器件的剩余寿命和潜在故障模式。这对于我们提升EPS功率级的可靠性和功能安全等级至关重要。例如，一旦检测到功率模块性能下降，EPS系统可以触发降级运行策略，确保基本转向功能不受影响。在开发和验证阶段，可以通过HIL和台架测试，注入模拟故障和老化数据，验证监测框架的准确性和实时性。鉴于SiC器件是未来趋势，这项研究的落地价值极高，强烈建议投入资源。
-   https://arxiv.org/abs/2608.08363
-
-5. Parameter-Dependent LMI Synthesis for Semi-Global Differential ISS Trajectory Tracking of Nonholonomic Mobile Robots Under Multiplicative Wheel Slip（来源：arXiv eess.SY 控制系统）
-   应用分析：这项研究对我们线控转向系统的底层控制有很高的借鉴价值。在线控转向系统中，方向盘与车轮之间没有机械连接，转向完全依赖电子控制。该LMI框架可用于设计更鲁棒的车辆转向控制器，特别是在湿滑路面等车轮打滑情况下，通过精确控制前轮转角，保持车辆的轨迹稳定性。我们也可以借鉴其思想，在传统EPS的助力策略设计中，考虑车轮滑移率，设计参数依赖的助力策略，使其在不同路面附着系数下提供更稳定、可预测的驾驶手感。这项研究值得深入投入，从Simulink模型和HIL验证开始，探索其在车辆稳定性和转向手感方面的优势。
-   https://arxiv.org/abs/2608.08049
-
-6. LUCID: Latent-Skill Unified Control via Imagined Dynamics for Long-Horizon Humanoid Loco-Manipulation（来源：arXiv cs.LG）
-   应用分析：LUCID框架为线控转向系统的复杂任务规划与执行提供了新思路。我们可以将高层驾驶任务（如自动泊车、紧急避障）分解为低层原子技能。通过学习一个宏观的车辆动力学模型，高层控制器可以在“想象”中规划技能序列，并转化为EPS等底层执行器的具体指令。这也能启发人机共驾场景下的模式切换和辅助。虽然直接落地EPS尚需时日，但作为线控转向和L三加自动驾驶控制架构的前瞻性研究，值得在仿真环境中探索其在车辆运动控制中的潜力，进行概念性验证。
-   https://arxiv.org/abs/2608.07746
-
-7. Generalizing deep reinforcement learning across cable-driven parallel robot configurations with actuator-level policies（来源：arXiv cs.RO）
-   应用分析：这项研究为我们EPS电机控制策略的泛化提供了极具工程应用价值的思路。我们可以借鉴其“执行器层面策略”思想，开发一种通用的电机FOC或无传感器控制策略。该策略专注于控制单个永磁同步电机PMSM的转矩、转速和位置，而非依赖特定EPS的总扭矩输出。通过在不同电机型号、不同供电电压的EPS系统上进行训练和微调，有望实现一套能泛化到多款EPS产品的通用控制软件平台，大幅减少新项目的标定和开发工作量。在未来的线控转向系统中，这种策略也能作为基础，协调多个冗余电机执行器，并支持自动标定和参数适应。这是提升产品竞争力和解决核心痛点的关键，强烈建议投入研发。
-   https://arxiv.org/abs/2608.07546</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260811-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260811-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260811-pm.mp3" length="4441968" type="audio/mpeg"/>
-      <pubDate>Tue, 11 Aug 2026 09:36:33 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI驱动研究提速，智能汽车与机器人前沿技术交汇</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最具价值的资讯。从AI科学家如何加速机器人控制策略研发，到电动汽车SiC功率模块的可靠性监测，再到人形机器人和线控转向的最新进展，相信今天的内容能为您的工作带来新的启发。
@@ -1137,6 +1101,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260826-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260826-am.mp3" length="3150288" type="audio/mpeg"/>
       <pubDate>Tue, 25 Aug 2026 21:57:34 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI智能体解锁实验设计，汽车法规重塑责任，TI传感器提升转向精度</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为大家精选了7条最有价值的资讯。从AI智能体如何自主设计实验，到汽车自动驾驶责任归属的最新法规动向，再到电机控制的关键传感器技术，希望能为您的日常研发工作带来启发和思考。准备好了吗？让我们开始今天的早报播报。
+
+1. LLM Agents Perform Controlled Experiments Using Simulation Models（来源：arXiv cs.AI）
+   应用分析：能不能用：能用，但需要深度定制和集成。怎么用：我们可以构建一个多智能体框架，让LLM智能体基于EPS系统模型（如Simulink模型）自动设计电机控制参数的实验方案，例如FOC控制器中PI参数的组合，或者弱磁控制的切换点。LLM可以生成实验假设，调用Simulink执行仿真，然后分析仿真结果，迭代优化助力曲线、阻尼补偿等参数，甚至探索无传感器控制中的观测器参数鲁棒性。值不值得投入：值得投入。这能大幅提升EPS控制策略的开发和标定效率。当前标定工作高度依赖工程师经验和试错，引入LLM智能体可以自动化部分探索过程，加速参数优化，尤其是在多目标（如手感、NVH、效率）冲突时，LLM可以辅助权衡设计。这与我们“用AI改进控制、标定效率”的目标高度契合。
+   https://arxiv.org/abs/2608.23622
+
+2. A tale of perfect fit and phantom optima: how data-driven models can fail in real-time optimization（来源：arXiv eess.SY 控制系统）
+   应用分析：能不能用：不是直接“用”的技术，而是需要“警惕”的风险。怎么用：在将AI或数据驱动模型应用于EPS的实时控制（如自适应助力曲线、扭矩脉动抑制参数在线调整）或离线标定优化时，必须额外关注模型的泛化能力和外推行为。我们需要设计更严格的验证方法，例如在模型预测的最优操作点附近进行小范围的物理台架或整车测试，验证其真实性能，而不是仅仅依赖仿真结果。此外，可以考虑引入物理知识约束的混合模型，避免纯数据驱动模型陷入“幻影最优解”。值不值得投入：投入在于“规避风险”和“加强验证”。初期在关键决策环节谨慎使用纯数据驱动模型，并投入资源研究混合建模方法和鲁棒性验证。这直接关系到我们AI应用方案的可靠性。
+   https://arxiv.org/abs/2608.23885
+
+3. TI Introduces Multiaxial Hall-Effect Current Sensor for EV Inverters（来源：Power Electronics News）
+   应用分析：能不能用：能用，且非常值得关注。怎么用：在EPS控制器设计中，电流采样是FOC控制环路的核心。我们可以评估这款传感器在EPS电机电流测量中的应用潜力，尤其是在高动态响应和NVH要求严苛的场景。其降低位移误差的特性，有助于简化装配过程中的精度要求，并提升量产一致性。此外，对于无传感器控制方案，精确的电流测量也能为状态观测器提供更可靠的输入，从而提升无传感器控制的性能和鲁棒性。值不值得投入：值得投入。高精度、低误差的电流传感器是提升电机控制性能的根本，直接关系到EPS的手感、NVH和效率。应尽快联系TI获取样品和技术资料，进行台架测试评估其在不同工况（尤其是有磁场干扰、温度变化）下的表现。
+   https://www.powerelectronicsnews.com/ti-introduces-multiaxial-hall-effect-current-sensor-for-ev-inverters/
+
+4. The Flat Earth Error: Differential Geometry in Vehicle Dynamics（来源：arXiv eess.SY 控制系统）
+   应用分析：能不能用：能用，是提升仿真精度和控制策略鲁棒性的重要方向。怎么用：在线控转向系统架构设计和助力策略调校阶段，我们可以将微分几何引入车辆动力学模型，更精确地模拟车辆在复杂路面上的运动。例如，在路感还原方面，精确的路面曲率信息能帮助我们设计更真实的转向力反馈。在控制算法开发中，尤其是在高阶控制或预测控制（如MPC）中，考虑路面几何特性可以提高路径跟踪精度和稳定性。这需要与车辆动力学团队紧密合作，将高精度的路面模型集成到我们的MIL/SIL/HIL仿真环境中。值不值得投入：值得投入。随着线控转向和高级驾驶辅助系统（ADAS）的发展，对车辆动态的精确理解和控制变得越来越重要。早期引入这种更精确的建模方法，能为未来产品开发打下坚实基础，减少后期物理测试中的意外情况。
+   https://arxiv.org/abs/2608.24280
+
+5. China proposes automakers handle traffic violations in fully autonomous mode（来源：CnEVPost）
+   应用分析：能不能用：不是技术应用，而是重要的行业政策导向，需要严格遵循和应对。怎么用：这项政策将直接影响我们线控转向（Steer-by-Wire）系统的架构、冗余设计和功能安全认证。我们需要进一步加强ISO 26262功能安全流程的执行，确保EPS系统在设计、开发和验证的每个环节都能满足最高等级的安全要求，包括对潜在故障模式的全面分析、冗余通道的设计、故障诊断和降级策略的鲁棒性。此外，需要与法律、法规和质量部门密切合作，理解政策细节，并将其转化为具体的工程设计和验证标准。值不值得投入：必须投入。这是未来汽车智能化发展的基石性法规，直接关系到产品的合规性和公司的法律风险。任何线控转向或高级自动驾驶相关项目，都必须将此责任归属作为最高优先级考量。
+   https://cnevpost.com/2026/08/25/china-proposes-automakers-traffic-violations-fully-autonomous/
+
+6. Interpreting Control Latents for System Identification via Conditional Flow Matching（来源：arXiv cs.RO）
+   应用分析：能不能用：能用，且是提升AI控制可解释性的重要方向。怎么用：在EPS电机控制中，特别是当我们尝试引入强化学习或神经网络观测器等AI方法时，往往会遇到模型“黑箱”问题。我们可以借鉴这种“控制潜变量解释”的方法，将EPS控制策略中学习到的自适应参数或潜在状态映射到电机物理参数（如电阻、电感、磁链或摩擦力）的分布上。这能帮助我们在线辨识电机参数，并据此调整FOC控制器的增益或弱磁控制策略，以应对温度变化、老化等动态工况，提高性能和鲁棒性。值不值得投入：值得投入。这直接解决了AI在控制系统应用中“可解释性”和“可信赖性”的痛点，有助于将前沿的AI控制研究转化为可落地的EPS工程方案，并提升故障诊断能力。可以尝试在HIL或台架上进行概念验证。
+   https://arxiv.org/abs/2608.23887
+
+7. DreamLedger: Execution-Settled Credit Files for World-Model Imagination in Robot Decision Loops（来源：arXiv cs.RO）
+   应用分析：能不能用：能用，是为AI模型引入“信任机制”的实用框架。怎么用：在EPS系统中，我们可以将DreamLedger的概念应用于AI驱动的故障诊断和预测性维护模块。例如，我们的AI模型可能会预测某个电机轴承即将失效或某个传感器读数异常。我们可以为这些预测建立“信用文件”，记录每次预测的准确性、误报率等。当AI模型给出预测时，系统可以根据其历史信用分调整对预测的信任程度，例如，信用分低的预测可能需要更多传感器冗余信息验证，或触发更保守的降级策略。这有助于我们更安全地“用AI改进故障诊断与预测性维护”。值不值得投入：值得投入。将AI引入安全关键系统，如何建立信任机制是核心问题。DreamLedger提供了一个务实、可操作的思路，可以作为我们“AI在控制系统中的应用”的一个重要落地方向。
+   https://arxiv.org/abs/2608.23863</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260826-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260826-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260826-pm.mp3" length="3387888" type="audio/mpeg"/>
+      <pubDate>Wed, 26 Aug 2026 09:22:02 +0000</pubDate>
     </item>
   </channel>
 </rss>
