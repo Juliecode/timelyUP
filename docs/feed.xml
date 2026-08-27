@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 27 Aug 2026 09:42:21 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 19:15:52 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 科技早报：AI控制突破与汽车功率电子新进展</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人控制这三大热门方向。为大家精选了七条重磅资讯，从深度强化学习的可解释性，到数据瓶颈对物理AI的影响；从线控转向的AI治理架构，到电动汽车高压GaN功率器件的突破；再到安全关键系统的数据可靠性评估，以及非线性系统状态估计和先进预测控制的最新进展。相信这些内容能为您的日常研发工作带来新的启发和思考。
-
-1. SPOTting the Future: Lookahead Explanations for Deep Reinforcement Learning（来源：arXiv cs.AI）
-   应用分析：SPOT框架对我们非常有用。如果尝试用DRL优化EPS助力策略，我们可以用SPOT来分析DRL在不同工况下的转向力矩决策逻辑，比如它为什么会选择某个助力增益。这能帮助我们理解DRL行为，并应用于功能安全验证，确保DRL在故障模式下也能做出符合安全目标的决策。我们可以在MIL、SIL、HIL环境中，对基于DRL的实验性EPS控制策略进行初步分析，评估其解释能力，如果效果好，就值得投入到验证流程中。
-   https://arxiv.org/abs/2608.09967
-
-2. Inside the Data Bottleneck Slowing Visual and Physical AI（来源：IEEE Spectrum）
-   应用分析：这项研究并非直接工具，但对我们的工作有重要指导意义。我们需要重新审视EPS系统的数据采集方案，确保传感器数据（电流、电压、位置、转矩、NVH等）的丰富性、准确性和一致性。投资于数据标注、清洗和预处理的工具链和流程，减少“脏数据”对模型训练的影响。在利用历史数据训练故障诊断模型时，必须优先解决数据不平衡、故障样本稀缺等问题。数据是AI的“燃料”，解决数据瓶颈是必要投入。
-   https://content.knowledgehub.wiley.com/the-2026-state-of-visual-and-physical-ai-a-survey-of-700-practitioners-on-data-models-and-production/
-
-3. The CASE Framework: A Multi-Disciplinary Control Architecture for Governing Enterprise Agentic AI（来源：arXiv cs.AI）
-   应用分析：CASE框架是高层架构和治理理念，对线控转向的预研和未来架构设计非常有用。我们可以在线控转向系统架构设计中借鉴CASE框架，将不同的AI功能模块视为“代理”，并为每个代理定义其“设定点”、“护栏”和“反馈”。思考如何将ISO二六二六二的功能安全概念映射到AI代理的治理中，例如，确保AI代理在超出运行设计域时能安全降级。这对于未来线控转向和智能汽车的顶层设计具有战略指导意义，值得在预研项目中投入学习和讨论。
-   https://arxiv.org/abs/2608.10153
-
-4. Power Integrations rates PowiGaN technology at 2,200 V for high-voltage systems（来源：Charged EVs）
-   应用分析：这项技术我们能用，且非常值得关注。我们会立即关注Power Integrations这款二千二百伏 PowiGaN器件的详细规格，将其纳入我们下一代EPS控制器功率级方案的备选清单，特别是针对八百伏或更高电压平台的EPS产品。利用GaN的高开关频率特性，可以减小无源元件的尺寸和重量，提升EPS控制器的功率密度和整体效率。同时，需与供应商深入合作，评估其量产成本和车规级认证进展。GaN是未来汽车功率电子的核心技术，必须投入跟踪和引入。
-   https://chargedevs.com/newswire/power-integrations-rates-powigan-technology-at-2200-v-for-high-voltage-systems/
-
-5. The Impact of Operational-Data Fidelity when Assessing Safety-Critical Autonomous-Vehicle Software（来源：arXiv cs.RO）
-   应用分析：这是方法论上的启发，可以借鉴并应用于我们的功能安全验证和数据分析流程。在进行ISO二六二六二功能安全验证时，我们需要审视现有测试数据是否足够细致，能否充分反映潜在故障模式。在收集故障数据时，确保数据的颗粒度足够细，能捕捉故障发生前的关键特征。同时，我们可以探索将保守贝叶斯推理方法引入EPS软件的可靠性评估中，特别是在数据不确定时，给出更稳健、更安全的可靠性边界。这是提升功能安全严谨性和数据分析质量的关键投入。
-   https://arxiv.org/abs/2608.10025
-
-6. Topological Feasibility Guarantees for Differentiable Predictive Control（来源：arXiv eess.SY 控制系统）
-   应用分析：这项技术我们能用，且极度值得深入研究。在PMSM电机控制中，可以探索将DPC应用于转矩脉动抑制、弱磁控制或多目标优化。利用其确定性可行性保障，确保电机电流、电压等输出始终在安全工作区内。在线控转向场景下，DPC可用于车辆动力学控制、路径跟踪或故障容错控制。此研究解决了DPC在安全关键领域应用的信任问题，为线控转向控制器设计提供了新的解决方案。我们可以在MATLAB/Simulink中进行模型化设计，并将其部署到MCU上验证性能，这是将AI控制快速落地并满足ISO二六二六二功能安全要求的关键技术之一。
-   https://arxiv.org/abs/2608.10332
-
-7. KOOPMAN-Luenberger Observer Design for Nonlinear Systems with Application to the Monitoring of a Latent Thermal Energy Storage（来源：arXiv eess.SY 控制系统）
-   应用分析：这项技术我们能用，且极度值得深入研究和实验。在无传感器FOC控制中，基于Koopman的观测器可以用于更精确地估计PMSM的转子位置和速度，尤其是在低速或高动态工况下，提高控制精度和稳定性，并可能降低对昂贵位置传感器的依赖。我们还可以利用Koopman观测器估计电机内部参数变化，进行在线辨识和温漂补偿，从而提升电机控制策略的鲁棒性。Koopman理论在非线性系统控制和估计方面潜力巨大，这项工作提供了具体的工程实现路径。我们可以在模型化设计环境中构建Koopman算子模型，并在HIL和台架上验证其性能，这是提升EPS电机控制核心技术竞争力的重要方向。
-   https://arxiv.org/abs/2608.10746</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260813-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260813-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260813-am.mp3" length="3842064" type="audio/mpeg"/>
-      <pubDate>Wed, 12 Aug 2026 22:23:24 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI赋能汽车与机器人：从贝叶斯校准到神经符号安全卫士</title>
       <description>各位研发工程师朋友，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能前沿、汽车智能化和机器人技术这三大热门领域，为您精选出七条最值得关注的重磅资讯。从如何用人工智能加速模型校准，到自动驾驶的安全新范式，再到机器人如何高效学习新任务，每一条都可能为您的研发工作带来新思路和新突破。话不多说，让我们马上进入今天的早报时间。
@@ -1137,6 +1101,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260827-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260827-pm.mp3" length="3297744" type="audio/mpeg"/>
       <pubDate>Thu, 27 Aug 2026 09:42:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI与智能汽车新突破：从LLM仿真实验到双轴电流传感器，再到自适应刚度控制</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是大家的老朋友，专注于汽车电动助力转向系统，也就是EPS研发的工程师主播。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条重磅资讯。这些信息不仅是技术趋势的风向标，更可能直接影响我们未来的研发方向和工作效率。准备好了吗？让我们一起探索今天的科技热点！
+
+1. LLM Agents Perform Controlled Experiments Using Simulation Models（来源：arXiv cs.AI）
+   应用分析：这项技术对我们的EPS研发工作非常有用，因为我们严重依赖MATLAB、Simulink等仿真工具。我们可以训练LLM代理来辅助EPS控制策略的参数标定、优化和鲁棒性测试。例如，让LLM代理根据设定的手感目标和性能指标，比如转矩脉动、NVH，自动在Simulink模型中设计并运行一系列参数调整实验，分析结果，然后提出新的参数组合或控制算法改进建议。这能极大地加速设计迭代周期，减少人工试错。目前EPS的助力曲线和手感调校高度依赖经验和反复试验，效率低下，引入LLM代理进行自动化、智能化的仿真实验，能有效解决“自动标定”这一核心痛点，并提升电机控制策略的性能与鲁棒性。我认为这非常值得投入。
+   https://arxiv.org/abs/2608.23622
+
+2. Multi-Modal Anomaly Detection: A Survey（来源：arXiv cs.LG）
+   应用分析：多模态异常检测对EPS系统非常必要。EPS系统需要高可靠性和功能安全，异常检测是其重要组成部分。我们可以结合EPS系统中的电机电流、转速、位置、温度、转向角、车速等多种传感器数据，以及CAN总线诊断信息，共同训练MMAD模型。例如，当电机出现轻微的转矩脉动、异响或控制器温度异常时，单个传感器数据可能不足以触发警告，但MMAD能综合判断，提前发现潜在故障，实现预测性维护。这对于我们探索“故障诊断与预测性维护”以及“无传感器/冗余传感方案”具有重要意义。提升故障诊断的准确性和预警能力是EPS功能安全和可靠性的关键，MMAD有望弥补传统基于阈值或单一信号分析的不足，降低误报和漏报，因此非常值得投入。
+   https://arxiv.org/abs/2608.24937
+
+3. Why and When Neural Networks Improve Local Approximation in Optimization（来源：arXiv cs.LG）
+   应用分析：这项研究能指导我们更明智地选择和使用神经网络进行优化。在EPS控制策略的标定和优化过程中，例如，FOC参数、弱磁控制参数、助力曲线参数等，可以通过优化算法自动搜索。我们可以用神经网络作为这些复杂物理模型的替代模型，加速优化过程。这项研究提醒我们，在设计神经网络替代模型时，要关注它在优化中的“作用”，是提出候选解还是替代梯度；“半径”，即模型在多大范围内可靠；以及“空间”，即是否还有优化空间，而不仅仅是训练时的拟合精度。例如，我们可以设计分段或局部有效的神经网络模型，结合传统优化方法，在局部区域内进行精细化搜索。理解神经网络在优化中的局限和优势，能帮助我们避免盲目投入，更高效地利用AI技术改进“电机控制策略的性能与鲁棒性提升”和“自动标定”问题，因此值得投入。
+   https://arxiv.org/abs/2608.24963
+
+4. TI’s TMCS2100-Q1 sensor measures current on two axes in EV traction inverters（来源：Charged EVs）
+   应用分析：这款双轴电流传感器可以直接应用于EPS电机控制器中的功率级，是重要的硬件升级。在FOC矢量控制中，精确获取两相电流是核心。TMCS2100-Q1能减少因传感器机械安装、PCB布局或温度漂移导致的测量偏差，从而提升FOC的控制精度，降低转矩脉动和NVH。对于未来线控转向（Steer-by-Wire）系统，对冗余和鲁棒性要求更高，这种传感器能提供更可靠的电流反馈。电流传感器是电机控制系统中的关键器件，提升电流测量的精度和鲁棒性，可以直接改善电机控制性能、降低NVH、提高系统可靠性，并可能简化安装和标定过程。这直接关系到我们“电机选型”、“电机控制策略”和“无传感器/冗余传感方案”的核心需求，因此非常值得投入。
+   https://chargedevs.com/newswire/tis-tmcs2100-q1-sensor-measures-current-on-two-axes-in-ev-traction-inverters/
+
+5. Compiling Spatial Certificates into Temporal Contracts for Latency-Aware Control（来源：arXiv eess.SY 控制系统）
+   应用分析：这项技术能用，且是线控转向（Steer-by-Wire）系统功能安全设计的关键技术。在线控转向系统中，方向盘与车轮之间没有机械连接，完全依赖电信号和执行器。任何计算延迟或数据同步问题都可能导致严重安全事故。CIPS框架可以用于线控转向控制器的设计与验证，确保在各种实时调度和通信延迟下，系统仍能满足ASIL D级别的安全要求。例如，我们可以将转向角、电机转矩、车辆动态等“空间安全证书”转换为在特定时间窗口内必须满足的“时间契约”，并通过形式化方法进行验证。线控转向是EPS的未来演进方向，功能安全是其商业化的最大挑战。这项研究直接解决了实时控制系统中的延迟与安全问题，是实现高安全等级线控转向系统的理论和技术基石，与我们“线控转向的架构、冗余与功能安全设计”的痛点高度匹配，因此极其值得投入。
+   https://arxiv.org/abs/2608.25228
+
+6. Generative Action-Chunk Sampling for Adaptive Stiffness Control in Physical Human-Robot Collaboration（来源：arXiv cs.RO）
+   应用分析：这项技术能用，且与EPS的“助力策略与手感调校”高度相关。EPS系统的核心就是提供助力并调校转向手感。这个自适应刚度控制的理念可以直接借鉴到EPS的助力策略中。我们可以将“人类意图清晰度”类比为驾驶员的转向意图明确程度。当驾驶员转向意图不明确或轻微调整时，EPS可以提供更柔顺、阻尼更小的助力，允许驾驶员自由微调；当驾驶员意图明确地进行大角度转向时，则提供更坚定的助力和回正力矩，增强路感和操控稳定性。这能改进“助力策略与手感调校”，实现更智能、更个性化的转向手感，尤其对线控转向系统提供更自然的“力反馈”至关重要。提升转向手感和人机交互体验是EPS产品竞争力的重要方面，将这种自适应刚度控制的思想引入助力策略，有望实现更高级别的手感调校，并为未来的线控转向提供更接近真实物理反馈的解决方案。这与我们关注的“机器人关节执行器控制”技术迁移高度相关，非常值得投入。
+   https://arxiv.org/abs/2608.25284
+
+7. Li Auto reportedly hires world-model expert to bolster robot AI push（来源：CnEVPost）
+   应用分析：这项资讯能用，且是预示未来技术趋势的重要信号。“世界模型”能够让AI系统预测环境的未来状态，这对于自动驾驶和机器人控制至关重要。在EPS领域，虽然不是直接应用，但世界模型的理念可以启发我们构建更高级别的环境感知和预测模型。例如，结合车辆传感器数据和驾驶员意图，构建一个“转向行为世界模型”，预测车辆在当前转向输入下未来的运动轨迹和驾驶员的修正意图。这可以用于优化助力策略的预见性，或为线控转向系统提供更智能的路径规划和避障建议。此外，这种专家引入的趋势也表明，汽车公司正在将机器人执行器控制与汽车控制视为同源技术。虽然目前直接应用于EPS的路径尚不明确，但“世界模型”代表了AI控制的前沿方向，其在机器人和自动驾驶领域的突破最终会迁移到汽车底层控制。关注并探索其在“AI/数据驱动方法改进控制”中的潜力，尤其是在线控转向这种需要更高层次决策和预测能力的系统上，是保持技术前瞻性的关键，因此值得关注和适度投入。
+   https://cnevpost.com/2026/08/27/li-auto-hires-world-model-expert-robot-ai/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260828-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260828-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260828-pm.mp3" length="3041712" type="audio/mpeg"/>
+      <pubDate>Thu, 27 Aug 2026 19:15:52 +0000</pubDate>
     </item>
   </channel>
 </rss>
