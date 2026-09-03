@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 03 Sep 2026 09:42:54 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 22:43:00 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智行天下：AI赋能下的汽车与机器人新纪元</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热门方向，为您精选并深度解读七条重磅资讯。从如何在嵌入式芯片上运行大模型，到无稀土电机的突破，再到如何让机器人拥有类人般的灵巧，每一个进展都可能为我们的研发工作带来颠覆性的启发。让我们一起开启今天的科技之旅！
-
-1. Running Local LLMs on the Arduino® UNO™ Q Board: a Practical Guide（来源：EE Times）
-   应用分析：核心要点是：如何在资源受限的微控制器上运行本地大语言模型，并探讨模型量化、内存优化和边缘AI应用。这告诉我们，即使是Arduino这样的平台，也能跑LLM。具体到我们的EPS产品研发：首先，它提出的模型裁剪和量化技术，可以直接指导我们将用于转矩脉动抑制、无传感器控制的小型神经网络，部署到下一代车规级MCU上，优化模型尺寸和推理速度。其次，我们可以尝试利用这种本地AI能力，在ECU内部进行初步的故障模式识别和诊断，减少对云端算力的依赖，提高故障响应速度。最后，在实验室或台架测试中，甚至可以利用边缘LLM处理实时数据，提供标定参数的调整建议，加速助力曲线和阻尼参数的迭代优化。这是一个非常值得投入的方向，其核心技术是实现更智能、自适应控制的基础，能有效提升产品性能、降低成本，加速开发周期。
-   https://www.eetimes.com/running-local-llms-on-the-arduino-uno-q-board-a-practical-guide/
-
-2. Runtime Governance for Agentic AI: Action-Boundary Control with Trusted Provenance and Fail-Closed Execution（来源：arXiv cs.AI）
-   应用分析：核心要点是：一种运行时治理系统Aegis，通过可信决策层控制AI代理的行动边界，确保在不确定性下故障安全执行，解决AI操作的潜在危害。这个框架的理念可以被我们借鉴：在线控转向系统中，如果引入AI进行复杂路况下的助力控制，可以在AI输出的控制指令和底层执行器之间增加一个“可信决策层”。这个决策层由传统验证过的控制逻辑或功能安全模块构成，对AI提议的转向指令进行实时校验，确保其在安全包络线内。其次，AI代理可以提供高级故障诊断建议，但最终的降级或干预策略必须由一个经过严格验证的“治理模块”来决定。这个模块可以利用Aegis的“不确定性下故障安全执行”原则，在AI诊断不确定时，优先选择最保守的安全策略。这是将AI引入核心控制系统，特别是线控转向，绕不开的安全问题，非常值得投入研究。
-   https://arxiv.org/abs/2608.16891
-
-3. Physics-informed Reinforcement Learning for Stochastic Reach-Avoid Analysis（来源：arXiv eess.SY 控制系统）
-   应用分析：核心要点是：提出了一种物理信息强化学习PIRL框架，结合模型知识与强化学习，解决高维随机可达规避分析的计算难题，提升安全关键控制系统的性能。这项研究对我们提升EPS控制策略的鲁棒性和安全性非常有用。例如，在无传感器电机控制中，状态观测器的精度和鲁棒性至关重要，我们可以利用PIRL框架，将电机物理模型作为物理信息，结合RL进行状态观测器参数的自适应调整，使其在参数变化、温度漂移等不确定条件下保持高精度。同时，PIRL也能用于转矩脉动抑制与NVH优化，将电机转矩脉动模型作为物理信息，结合RL优化FOC控制器的电流指令。在线控转向的冗余与功能安全设计中，PIRL可用于分析不同故障模式下的系统可达性与规避性。这是一项值得投入的前沿研究，与我们核心问题高度契合。
-   https://arxiv.org/abs/2608.17117
-
-4. Niron Magnetics wins conditional $150-million loan commitment for rare earth-free magnets（来源：Charged EVs）
-   应用分析：核心要点是：Niron Magnetics获得1.5亿美元贷款，加速建设无稀土氮化铁永磁体工厂，有望降低永磁电机成本和供应链风险。这对于我们EPS的电机选型具有极高的潜在应用价值。我们应该密切关注氮化铁永磁体的性能参数、成本和量产时间表。一旦技术成熟，立即启动基于氮化铁永磁体的EPS电机设计和评估项目，探索其在转矩密度、效率、NVH和成本方面的潜力。同时，与Niron Magnetics或类似技术的供应商建立联系，将其纳入潜在供应商考察范围，为未来EPS电机供应链提供稀土替代方案，降低地缘政治风险。这是一个关乎EPS产品核心竞争力（成本、可靠性）和未来发展方向（无稀土化）的关键技术，非常值得投入。
-   https://chargedevs.com/newswire/niron-magnetics-wins-conditional-150-million-loan-commitment-for-rare-earth-free-magnets/
-
-5. A Hybrid End-to-End and Modular Control Architecture Toward Safe Vehicle Lateral Control: Combining Soft Actor-Critic with Model Predictive Control（来源：arXiv eess.SY 控制系统）
-   应用分析：核心要点是：一种混合控制架构，结合强化学习SAC的自适应性和模型预测控制MPC的安全约束，实现安全高效的车辆横向控制。这个思想非常适用于线控转向的助力策略与手感调校。MPC层可以提供基础的转向力矩和回正力矩，确保车辆横向稳定性和驾驶员基本手感。SAC层则可以根据驾驶员习惯、路况信息进行自适应学习，微调助力曲线和阻尼补偿，提供更个性化、更舒适或更运动的手感，同时MPC的安全约束确保转向力矩始终在安全范围内。此外，当SAC策略出现异常或不确定性时，可以通过混合系数平滑切换到MPC主导的控制，提高系统的容错能力。这是将AI和先进控制理论应用于线控转向的关键路径，能够解决当前EPS系统在智能性和自适应性方面的瓶颈，并为满足功能安全要求提供可行方案。需要投入算法工程师进行深入研究、仿真和HIL验证。
-   https://arxiv.org/abs/2608.17258
-
-6. Proactive Road Safety Intervention in Australia: Predicting Risky Driving Hotspots from Connected Vehicle Data（来源：arXiv cs.LG）
-   应用分析：核心要点是：利用联网车辆数据，通过G力阈值识别并预测危险驾驶热点区域，从被动响应转向主动预防交通事故。这个思路对我们EPS系统有很高的应用潜力。我们可以结合车辆定位和导航系统，如果车辆即将进入预测的“危险驾驶热点区域”，EPS系统可以预先调整助力曲线和阻尼补偿，例如增加阻尼，使转向手感更沉稳，减少驾驶员误操作的可能性。其次，EPS系统可以收集驾驶员的转向数据，结合车辆G力数据，通过类似的方法分析驾驶员的驾驶风格，从而在助力策略中融入个性化设置。此外，通过分析EPS电机和传感器在危险驾驶场景下的运行数据，结合AI模型，可以预测潜在的部件磨损或故障，提前预警和维护。这是一种利用大数据和AI提升汽车主动安全性能的实用方法，与EPS系统的智能功能扩展方向高度契合，值得投入。
-   https://arxiv.org/abs/2608.16913
-
-7. Lambda-Hold Control: Human-Like Movement Emerges from a Minimal Task Reward in Predictive Musculoskeletal Simulation（来源：arXiv cs.RO）
-   应用分析：核心要点是：一种名为Lambda-Hold的控制器，受人类运动控制启发，通过肌肉平衡点阈值λ作为控制变量，使肌肉驱动模型仅用极少奖励就能学习到类人运动。这个理念对EPS的助力手感调校有重要启发。我们可以借鉴“最小奖励”和“类人运动涌现”的思路，在仿真环境中，通过定义简洁的“自然手感”奖励，让EPS系统自动学习并优化助力曲线、阻尼补偿参数，以实现更接近人类驾驶习惯和生理感知的转向手感。其次，肌肉的平滑收缩与EPS电机对转矩脉动的抑制有相似之处，可以研究如何将Lambda-Hold控制中“平滑控制变量”的思想应用于FOC控制器的电流环或电压矢量控制，减少电机振动和噪声。在线控转向中，也可以利用这种类人运动的建模思想，构建更精确的驾驶员转向意图模型和方向盘力矩反馈模型，使驾驶员获得最直观、最自然的“路感还原”和“手感反馈”。虽然这不是直接的技术应用，但它提供了深层理解，对我们提升EPS手感调校的智能化和精细化水平有重要的理论指导意义，值得作为长期研究方向。
-   https://arxiv.org/abs/2608.17030</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260820-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260820-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260820-am.mp3" length="3630240" type="audio/mpeg"/>
-      <pubDate>Wed, 19 Aug 2026 21:56:19 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI前沿、汽车智能化与机器人技术融合：EPS工程师的今日早报</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门领域，精选出七条对我们EPS产品研发工程师特别有启发和借鉴意义的资讯。从AI模型如何安全落地，到稀土无磁材料的最新突破，再到人形机器人全身控制的先进理念，每一条都可能为我们的电动助力转向系统带来新的思考和实践方向。话不多说，让我们立刻进入今天的早报时间！
@@ -1133,6 +1097,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260903-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260903-pm.mp3" length="4608576" type="audio/mpeg"/>
       <pubDate>Thu, 03 Sep 2026 09:42:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技早报：GPT-6 Astra开启AGI时代，特斯拉Cybercab重塑转向，机器人步态新突破</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们为您精选了七条重磅科技资讯，涵盖了人工智能前沿、汽车智能化和机器人技术三大方向。OpenAI的GPT-6 Astra正式亮相，特斯拉的Cybercab取消了方向盘和踏板，而机器人的步态控制也迎来了新的探索。这些进展都将深刻影响我们的研发工作，尤其是对我们电动助力转向，也就是EPS的未来发展，有着直接的启示。接下来，让我们逐一深入分析。
+
+1. OpenAI 发布 GPT-6 Astra，称已进入 AGI 时代（来源：The Verge）
+   应用分析：能不能用：能用，且潜力巨大。怎么用：可以考虑将Astra作为辅助工具，用于控制算法优化与代码生成，辅助生成嵌入式C代码片段，或对Simulink模型生成的代码进行初步审查和优化建议。其次，在功能安全文档与验证方面，它可以辅助理解ISO 26262标准，生成部分安全分析文档草稿，或审查验证用例的完备性。再者，结合车载数据，利用其推理能力辅助分析故障模式，生成更智能的诊断逻辑。值不值得投入：值得投入。虽然目前直接应用于EPS核心控制回路仍需谨慎，但作为研发辅助工具，提升效率和质量的潜力巨大。可以从小范围试点开始，例如代码审查、文档生成等，逐步扩大应用范围。
+   https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release
+
+2. WMLLM：基于世界模型预测-行动的自进化优化智能体（来源：arXiv cs.LG）
+   应用分析：能不能用：能用，且非常契合需求。怎么用：将WMLLM应用于电机控制策略参数的自优化，把FOC、弱磁、转矩脉动抑制等控制器的增益参数、观测器参数等作为优化目标，利用WMLLM在仿真环境（MIL/SIL/HIL）中进行高效的自动调优。同时，在助力曲线与手感标定方面，可以将用户手感评价或客观性能指标作为优化目标，让WMLLM探索助力曲线、阻尼补偿等参数组合，加速标定过程。值不值得投入：非常值得投入。这直接对应了我们“用AI/数据驱动方法改进控制、标定效率、故障诊断与预测性维护”的核心问题。可以考虑与现有基于模型的设计（MATLAB/Simulink）和HIL平台结合，构建AI驱动的自动优化与标定闭环。
+   https://arxiv.org/abs/2609.01608
+
+3. AI 系统在推理时通过反馈驱动实现自我改进（来源：arXiv cs.LG）
+   应用分析：能不能用：能用，是未来EPS控制的重要发展方向。怎么用：可以设计自适应助力策略，根据驾驶员习惯、路况变化、车辆载荷等实时信息，动态调整助力曲线和阻尼补偿，实现更个性化和优化的手感。其次，利用TTI在运行中持续辨识电机参数，如电阻、电感、磁链，并补偿温漂等影响，提升FOC控制精度和效率。再者，实时监测电机和控制器状态，在异常发生前预测潜在故障，并根据系统反馈自动调整控制策略，实现平稳降级，提升功能安全。值不值得投入：长期来看非常值得投入。短期内可在非安全关键功能（如手感调校）上进行探索性研究，逐步向核心控制领域渗透。它要求强大的车载计算能力和可靠的数据反馈回路。
+   https://arxiv.org/abs/2609.01679
+
+4. 特斯拉推出 Cybercab，取消方向盘和踏板（来源：TechCrunch）
+   应用分析：能不能用：必须用，这是EPS的未来。怎么用：深入研究Cybercab的SBW系统架构，思考如何实现多重冗余（传感器、执行器、控制器、供电）以满足ISO 26262 ASIL D最高安全等级。针对SBW的需求（高精度、高带宽、高可靠性、低延时），重新评估电机选型和控制策略，可能需要更高转矩密度、更低NVH的定制化电机。在没有物理方向盘反馈的情况下，如何通过软件模拟路感、阻尼和回正力矩，提供自然、安全的驾驶体验也是关键。最后，设计更复杂的故障诊断和降级策略，确保在任何单点甚至多点故障下，系统仍能安全运行或停靠。值不值得投入：绝对值得投入，并且是刻不容缓的战略性投入。我们必须将线控转向作为核心研发方向，储备相关技术和人才。
+   https://techcrunch.com/2026/09/03/the-cybercab-is-teslas-fork-in-the-road-moment/
+
+5. DiDrive：自动驾驶中风险感知分层扩散框架（来源：arXiv cs.LG）
+   应用分析：能不能用：能用，可作为线控转向控制策略的顶层安全决策参考。怎么用：借鉴DiDrive的风险感知机制，将车辆动态、路况、驾驶员意图等信息作为风险输入，设计更智能的转向决策和助力分配策略，避免潜在危险。在线控转向的控制器中，当检测到可能导致OOD（Out-Of-Distribution）的动作时，能够提前预警或进行干预，提升系统鲁棒性。同时，将其理念应用于EPS的故障诊断和降级策略，对不同故障模式下的风险进行分层评估，并制定相应的安全响应。值不值得投入：值得投入。虽然DiDrive直接应用于EPS底层FOC控制可能复杂，但其风险评估和安全决策的理念，可以指导线控转向的整体系统设计和高层控制策略，尤其是在多执行器冗余和故障响应方面。
+   https://arxiv.org/abs/2609.01609
+
+6. 下一代xEV架构高低压电源转换优化（来源：Charged EVs）
+   应用分析：能不能用：必须关注和应用，直接影响EPS硬件设计。怎么用：评估不同高低压DC/DC转换器方案对EPS控制器功率级（如MOSFET/IGBT）选择、散热设计和集成度的影响。结合EPS电机效率和驱动器损耗，从系统层面优化HV/LV转换，降低整体能耗，提升续航里程。同时，考虑在800V平台下，如何设计更可靠的低压供电冗余，以满足线控转向等高安全等级系统的要求。与供应商合作，推动开发更紧凑、高效、低成本的集成式电源模块，以适应未来汽车对空间和成本的严苛要求。值不值得投入：绝对值得投入。这是EPS控制器硬件发展和系统集成的重要方向，直接关系到产品的竞争力。
+   https://chargedevs.com/newswire/optimizing-hv-lv-power-conversion-for-next-generation-xev-architecturess-webinar/
+
+7. 探索非线性身体振荡以实现自然四足步态（来源：arXiv cs.RO）
+   应用分析：能不能用：能用，提供新的设计思路。怎么用：探索通过优化EPS电机结构（如转子、定子、轴承）或减震环节，利用共振原理来抵消或衰减特定频率的振动和噪声，而非完全依赖软件算法进行主动抑制。思考是否可以通过机械设计或特定控制策略，将电机自身的振动模式引导到非工作频率，从而减少转矩脉动对驾驶手感的影响。如果能利用机械共振实现部分“智能”，就可以简化部分控制算法，降低MCU的计算负荷，或降低对高精度传感器的要求，从而降低成本。值不值得投入：值得投入，但可能需要跨学科合作（机械设计、材料科学）。可以在前期研究阶段评估其在EPS电机NVH和转矩脉动抑制上的潜力，作为长期技术储备和创新方向。
+   https://arxiv.org/abs/2609.00539</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260904-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260904-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260904-am.mp3" length="4364064" type="audio/mpeg"/>
+      <pubDate>Thu, 03 Sep 2026 22:43:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
