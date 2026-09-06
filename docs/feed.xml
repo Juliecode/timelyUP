@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 05 Sep 2026 22:43:40 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 09:42:27 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI、智能汽车与机器人：前沿技术如何驱动EPS未来</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人这三大热门领域，精选七条重磅资讯，一起探讨这些技术如何赋能我们的电动助力转向，也就是EPS系统，带来哪些新的机遇和挑战。准备好了吗？让我们立即开始！
-
-1. Stop Hunting, Start Solving: Accelerating Root Cause Analysis with Agentic AI（来源：IEEE Spectrum）
-   应用分析：能不能用：能用，而且高度相关。EPS系统在开发、测试和量产过程中会产生海量的电机控制器运行日志、传感器数据、台架测试曲线和整车标定数据。当出现电机抖动、异响或助力异常等复杂问题时，传统人工排查耗时耗力。怎么用：我们可以引入代理式AI，构建智能诊断平台，让AI代理自动从MIL/SIL/HIL、台架、整车测试以及生产线中抓取并关联数据，快速定位可能的硬件缺陷、软件算法问题或参数漂移。这能帮助我们从“大海捞针”转变为“精准打击”。值不值得投入：非常值得投入。这直接对应我团队“用AI/数据驱动方法改进故障诊断与预测性维护”的需求。投入可以从针对某一类典型电机控制故障模式的AI模型试点开始，逐步扩展。长期来看，这将极大提升故障排查效率，缩短产品上市周期，降低维护成本，甚至能实现预测性维护。
-   https://event.on24.com/wcc/r/5460332/DAFEFF7A68EE900DEA7A14356089B553?utm_source=IEEE&amp;utm_medium=site&amp;utm_campaign=922
-
-2. Nvidia just showed that the harness, not the AI model, is now the real hero（来源：TechCrunch）
-   应用分析：能不能用：绝对能用，这是AI在工程落地中的核心理念。怎么用：在EPS电机控制中，我们尝试用AI改进控制算法、状态观测器或实现自动标定。这则资讯提醒我们，不应盲目追求最新最复杂的神经网络模型，而应聚焦于如何将现有AI技术（哪怕是相对简单的模型）通过精巧的“线束”——即有效的训练数据、鲁棒的损失函数、合适的奖励机制（如果是强化学习），以及与传统控制方法的融合架构——使其在实际EPS系统中表现稳定、安全。例如，在基于强化学习的助力曲线自适应调校中，关键在于如何设计奖励函数来确保手感平滑性、回正性，并避免过调或欠调，同时满足功能安全要求。值不值得投入：非常值得。它为我们应用AI提供了一个务实的方向，即“以终为始”，从实际控制需求出发，而非被模型本身的能力所迷惑。这能帮助我们更高效地将AI前沿研究（如强化学习控制、神经网络观测器）转化为可落地的EPS工程方案，降低盲目投入高算力、大模型的风险。
-   https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/
-
-3. US government lab is probing Chinese lidar for security vulnerabilities（来源：TechCrunch）
-   应用分析：能不能用：这不是一个直接“用”的技术，而是一个重要的行业风险和趋势提示。怎么用：作为EPS工程师，虽然LiDAR不是我直接负责的部件，但它是线控转向（Steer-by-Wire）系统感知层的重要输入。LiDAR的数据输入质量和安全性，直接影响到高级别自动驾驶系统的决策，进而影响到线控转向的指令。我们需要关注：首先是供应商风险管理，确保EPS系统所依赖的感知层（包括LiDAR或其他传感器）的供应商，其产品满足严格的安全标准，并有清晰的供应链溯源机制。其次是接口安全与数据校验，在EPS与上层自动驾驶系统交互时，要加强数据接口的安全性设计，对接收到的感知数据进行多重校验，防止恶意篡改或误报导致转向系统误动作。最后是功能安全架构，线控转向系统需要极致的冗余和功能安全设计，必须有完备的降级策略，确保即使感知层受损，EPS也能提供安全的最小风险操作。值不值得投入：必须投入关注。这不是额外投入，而是功能安全和供应链风险管理的一部分，尤其是在线控转向演进中，对外部传感器依赖性会更高。这关乎系统的整体鲁棒性和合规性。
-   https://techcrunch.com/2026/08/21/us-government-lab-is-probing-chinese-lidar-for-security-vulnerabilities/
-
-4. Geely recalls 93,000 vehicles over LiDAR defect that may disable driver assistance（来源：CnEVPost）
-   应用分析：能不能用：这也是一个警示，而非直接可用的技术。怎么用：这起召回事件为我们EPS系统的开发提供了宝贵的经验教训。首先是全生命周期可靠性，LiDAR缺陷是由于供应商的“工艺变差”导致电源芯片损坏，这提醒我们在电机选型、功率器件选型、MCU以及相关传感器（如转角传感器、电流传感器）时，不仅要关注初始性能，更要注重其在整个生命周期内的鲁棒性和可靠性，包括制造工艺、环境适应性等。其次是故障诊断与降级策略，即使是间接影响，EPS作为底盘执行器，必须具备对上层ADAS系统故障的感知能力和完善的降级策略。当驾驶辅助系统因LiDAR缺陷失效时，EPS应能确保车辆仍能安全地由驾驶员接管，或进入安全停车状态。这要求EPS控制器与ADAS系统有清晰的故障通信协议和优先级处理机制。最后是ISO 26262功能安全，这次召回再次印证了ISO 26262功能安全标准实施的必要性。从需求分析、设计、实现到测试验证，每个环节都要确保关键零部件的可靠性。值不值得投入：必须高度重视并持续投入。这是功能安全和产品质量的基石，直接影响用户生命财产安全和企业声誉。投入体现在更严格的供应商管理、更完善的故障诊断算法、更全面的功能安全设计与验证流程上。
-   https://cnevpost.com/2026/08/21/geely-recalls-lidar-defect/
-
-5. Schaeffler plans to mass produce gearboxes for humanoid robots in 2027（来源：The Robot Report）
-   应用分析：能不能用：高度相关，技术可迁移。怎么用：EPS系统同样依赖高效、紧凑、低NVH的传动机构。人形机器人关节对力矩密度、NVH、寿命、成本的要求与EPS电机控制高度相似。舍弗勒的成形技术如果能有效降低精密减速器的成本并保证性能，这可能会启发我们在EPS传动机构（如滚珠丝杠、齿轮齿条）的设计和制造上寻找类似的创新。例如，可以研究这种成形技术能否应用于EPS的减速齿轮或滚珠丝杠的制造，以提升转矩密度、降低传动间隙，并优化NVH表现。此外，人形机器人关节的高精度控制策略、力矩控制算法，与EPS的转矩控制、助力手感调校有共通之处，我们可以借鉴机器人领域的最新进展。值不值得投入：值得持续关注和适度投入。这属于“机器人/人形机器人的关节执行器、伺服电机控制”这一关注点。可以组织技术研讨会，邀请传动机构专家进行技术交流，评估舍弗勒这项技术在EPS领域的潜在应用，甚至考虑与相关供应商合作进行预研。
-   https://www.therobotreport.com/schaeffler-plans-to-mass-manufacture-gearboxes-for-humanoids-in-2027/
-
-6. Nio autonomous driving chief Ren Shaoqing reportedly ventures into embodied robotics（来源：CnEVPost）
-   应用分析：能不能用：这不是一个直接“用”的技术，但是一个重要的行业趋势和人才流向的信号。怎么用：任少卿的背景是自动驾驶，转向具身智能机器人，这意味着自动驾驶在感知、决策、控制方面的经验可以直接迁移到机器人。对于EPS工程师，这强化了我们对“机器人/人形机器人的关节执行器、伺服电机控制”的关注。具身智能机器人需要高精度的运动控制、力控以及与环境交互的能力，这与EPS的电机控制策略（如FOC、无传感器控制、转矩脉动抑制）以及手感调校有大量共通之处。我们可以主动学习机器人领域的最新控制算法和架构，思考如何将其应用于线控转向的更精细、更智能的控制。此外，关注具身智能领域的人才和公司，未来可能成为EPS领域创新合作的伙伴。值不值得投入：值得持续关注。这属于“我特别关注的交叉点”之一，有助于我们保持技术前瞻性，理解行业大趋势。投入主要体现在技术跟踪、内部研讨和跨领域交流上，而非大规模的项目投资。
-   https://cnevpost.com/2026/08/21/nio-ren-shaoqing-ventures-into-embodied-robotics-report/
-
-7. PowerUP’s Data Center Panel, Monitoring the Output Current of Offboard LED Drivers, GaN Motor Drives: Electronics Week Insights（来源：Power Electronics News）
-   应用分析：能不能用：能用，且非常值得深入研究和应用。怎么用：GaN器件在EPS功率级中的应用潜力巨大。首先是提升效率和功率密度，GaN能够实现更高的开关频率，这意味着可以减小无源元件的尺寸，从而使EPS控制器更加紧凑，减轻重量，同时降低损耗，提升系统效率。这对于电动汽车的续航和整车空间布局都有益。其次是优化电机控制性能，更高的开关频率和更快的开关速度有助于减小电流纹波，从而改善FOC矢量控制的精度，降低电机转矩脉动，优化NVH性能。这直接对应我最想解决的“电机控制策略的性能与鲁棒性提升”问题。挑战与投入：引入GaN也带来新的挑战，如高频开关下的电磁兼容性（EMC）设计、驱动电路的复杂性、热管理以及成本。投入需要从器件选型、驱动电路设计、PCB布局、EMC测试等方面进行深入研究和验证。值不值得投入：非常值得投入。这直接关系到EPS功率级的未来发展方向，是提升产品核心竞争力的关键技术之一。可以从预研项目开始，评估GaN器件在下一代EPS控制器中的可行性，并与GaN供应商建立合作关系。
-   https://www.powerelectronicsnews.com/powerups-data-center-panel-monitoring-the-output-current-of-offboard-led-drivers-gan-motor-drives-electronics-week-insights/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260822-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260822-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260822-pm.mp3" length="3478752" type="audio/mpeg"/>
-      <pubDate>Sat, 22 Aug 2026 09:00:47 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 科技早报：AI科研提速，汽车传感升级，机器人执行器展望</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿的最新突破、汽车智能化领域的硬件与系统深度解析，以及机器人执行器技术带来的启示。从AI智能体加速科学研究，到高精度电流传感器助力电动汽车测试，再到人形机器人核心部件的量产计划，每一条资讯都可能为我们的研发工作带来新的思路或工具。话不多说，让我们赶紧进入今天的早报时间。
@@ -1097,6 +1061,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260906-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260906-am.mp3" length="5232384" type="audio/mpeg"/>
       <pubDate>Sat, 05 Sep 2026 22:43:40 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI赋能物理世界，智驾与机器人执行器技术前沿解析</title>
+      <description>各位研发工程师早上好，欢迎收听您的专属科技早报。我是您的主播兼技术分析师。今天，我们将聚焦人工智能在物理世界的应用、汽车智能化前沿以及机器人执行器技术的最新进展。精选出的七条资讯，希望能为您在电动助力转向，也就是EPS系统研发，以及未来线控转向的演进方向上，带来一些启发和思考。让我们一起来看看今天有哪些值得关注的头条。
+
+1. GPT-6 Astra on robot arms（来源：Hacker News）
+   应用分析：能不能用？潜在可用。虽然EPS系统对实时性、确定性和功能安全要求极高，直接部署GPT-6这样的通用模型可能不现实，但其内部的决策逻辑、模式识别能力可以被蒸馏或启发，用于优化现有的电机控制策略或助力策略。怎么用？一是在高级助力策略与手感调校上，利用大模型的理解能力，将驾驶员意图、路况信息、车辆动态等多维度数据融合，生成更细致、个性化的助力曲线和阻尼回正特性。二是在线控转向的冗余与自适应控制方面，AI模型可以作为故障诊断与降级策略的智能决策者，甚至在传感器失效时提供增强的无传感器控制方案。三是用于自动标定与优化，处理大量测试数据，自动学习并优化电机控制和助力特性参数，提高标定效率。值不值得投入？值得深入研究和小范围投入。短期内直接在安全关键的EPS上应用通用大模型风险较高，但其背后的AI控制思想和技术路径，如模仿学习、强化学习，对于提升EPS控制的智能化和鲁棒性具有长期战略价值。可以从离线仿真、模型蒸馏、以及辅助标定和诊断工具开始探索。
+   https://openai.robocurve.org/gpt-6-astra/
+
+2. Voyah Dream 9 MPV begins pre-sales in China, starting at about $63,420（来源：CnEVPost）
+   应用分析：能不能用？这是我们工作的直接应用场景和目标。我们的EPS产品必须能与这样的高阶智驾系统无缝对接。怎么用？首先要确保EPS控制器支持与华为ADS 5等智驾系统所需的高速通信协议，并提供高精度的转向角、转矩反馈。其次，针对自动驾驶模式，EPS需要提供更平稳、精确的转向控制，减少驾驶员感知到的干预感，同时在接管时能快速切换到人工驾驶模式。最重要的是，这类车型对智能驾驶的强调，预示着线控转向的需求会越来越迫切，我们需要提前布局线控转向的架构、冗余设计，确保在L3+自动驾驶中转向系统的功能安全达到ASIL D等级。值不值得投入？必须投入。这是EPS产品未来发展的核心方向和竞争力所在。与头部智能驾驶方案提供商，如华为，进行深度合作与技术适配是关键。
+   https://cnevpost.com/2026/09/05/voyah-dream-9-begins-pre-sales/
+
+3. Hikers rescued after using Google Gemini for planning（来源：TechCrunch）
+   应用分析：能不能用？直接将通用AI模型用于安全关键的EPS决策层不可行。但其背后的AI技术，如模式识别、异常检测，在辅助功能上仍有价值。怎么用？我们可以利用AI模型分析EPS系统运行数据，识别潜在故障模式和异常行为，进行早期预警，而不是直接控制。AI也可以辅助标定与优化，分析大量测试数据，给出参数优化建议，但最终决策和验证仍需工程师人工确认。如果要在某些非安全关键的辅助功能中尝试引入AI，必须设计严格的安全监控机制，一旦AI输出异常，立即切换到经过验证的传统控制策略或安全降级模式。值不值得投入？值得投入在AI的“辅助”和“监控”角色上，而非“主导”控制。对于安全关键系统，AI的引入必须遵循ISO 26262等功能安全标准，并证明其在所有可预见场景下的安全性和确定性。当前阶段，在EPS的核心控制环路中直接使用类似Gemini的生成式AI风险过高。
+   https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/
+
+4. OpenAI confirms ‘wiki incident,’ says it’s ‘working on a framework’ for more disclosure（来源：TechCrunch）
+   应用分析：能不能用？类似AI代理的自主行动能力，在EPS的核心控制领域是不允许的。但在辅助开发、测试和维护工具链中，或许可以借鉴。怎么用？可以利用AI代理模拟各种驾驶场景、故障模式，自动化执行测试用例，加速MIL、SIL、HIL验证过程，但其行为应严格受限于预设规则和测试目标。AI代理也可以辅助分析复杂的故障日志，识别故障模式，但不能自主修改系统行为。我们必须严格定义AI的运行边界和权限，任何可能影响系统安全或关键性能的决策，都必须由人工确认或经过严格的功能安全认证流程。此外，投入研究可解释性AI技术，确保即使是AI辅助的模块，其决策过程也能被工程师理解和追踪，满足功能安全的可解释性要求。值不值得投入？在辅助工具链和非安全关键的分析层面上值得探索，用于提高研发效率。但在EPS的实时控制和执行层面，AI代理的自主性必须被严格限制，并有完善的监督和降级机制。重点在于从这些事件中吸取教训，加强AI安全性和可控性的研究。
+   https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/
+
+5. Robotaxis enter their villain era（来源：The Verge）
+   应用分析：能不能用？这不是技术本身，而是市场和公众认知。但它对我们的技术研发方向有重要的指导意义。怎么用？我们必须持续强化功能安全设计，确保EPS系统符合ISO 26262 ASIL D等级要求，不仅在理论上，更要在实际运行中表现出极高的可靠性和鲁棒性，打消公众疑虑。特别是线控转向这种关键系统中，必须具备多重冗余机制，确保单一故障不会导致系统失效。当EPS与自动驾驶系统交互时，需要确保其行为可预测，并能在必要时提供清晰的故障诊断信息。同时，在自动驾驶接管或脱离时，EPS应能提供平稳、无感的过渡，避免驾驶员感到突兀或失控，从而提升用户信任。值不值得投入？必须高度重视。公众信任是智能汽车能否大规模普及的关键。我们的技术研发必须以“绝对安全可靠”为最高目标，避免任何可能导致系统被误解为“反派”的潜在缺陷。
+   https://www.theverge.com/transportation/989513/road-rage-short-film-robotaxi-autonomous-ai
+
+6. ARM Institute gets $90M for 10 projects to modernize military manufacturing（来源：The Robot Report）
+   应用分析：能不能用？间接可用，主要在于技术思路和高可靠性设计理念的借鉴。怎么用？我们可以关注军工领域对永磁同步电机在极端温度、振动、冲击下的性能要求，以及高转矩密度、高效率的设计思路，用于优化EPS电机。军事机器人可能需要在复杂、不确定的环境中运行，其电机控制策略，如自适应控制、抗干扰控制，对提升EPS在各种路况和温度变化下的性能和鲁棒性有参考价值。军工产品对故障诊断、降级和冗余设计有严格标准，这些经验可以直接应用于EPS的ISO 26262功能安全设计，提升系统在恶劣工况下的可靠性。值不值得投入？值得持续关注。虽然不是直接应用，但军工领域的先进制造和控制技术，尤其是与机器人执行器相关的，对提升EPS的性能、可靠性和成本竞争力具有长期的潜在价值。可以定期追踪相关技术报告和专利。
+   https://www.therobotreport.com/arm-institute-gets-90m-for-10-projects-to-modernize-military-manufacturing/
+
+7. Enovis to acquire surgical tech provider eCential Robotics for $180M（来源：The Robot Report）
+   应用分析：能不能用？高度相关，技术思路和具体控制算法可借鉴。怎么用？手术机器人需要毫米级甚至亚毫米级的运动精度，其FOC、无传感器控制、转矩脉动抑制等算法可能比现有EPS方案更先进，值得我们深入研究并迁移到EPS电机控制中。手术机器人需要感知并精确控制与人体的交互力，这对于线控转向系统中的路感还原、阻尼回正控制，以及未来的人机共驾场景中的力反馈交互具有直接借鉴意义。手术机器人是生命攸关的设备，其功能安全设计和冗余策略必然非常严格，这对于EPS，尤其是线控转向的ISO 26262设计提供了宝贵的参考案例。此外，我们还可以关注手术机器人执行器的微型化、高功率密度设计，这有助于EPS在有限空间内实现更优性能。值不值得投入？强烈值得投入。手术机器人领域的电机控制和执行器技术是与EPS最接近且要求最高的领域之一，其技术迁移价值巨大。可以主动研究其公开论文、专利，甚至考虑合作或引入相关人才。
+   https://www.therobotreport.com/enovis-to-acquire-ecential-robotics-for-180m/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260906-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260906-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260906-pm.mp3" length="4033152" type="audio/mpeg"/>
+      <pubDate>Sun, 06 Sep 2026 09:42:27 +0000</pubDate>
     </item>
   </channel>
 </rss>
