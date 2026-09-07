@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 06 Sep 2026 22:41:53 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 09:43:00 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI加速研发，线控转向的硬核与软实力</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们聚焦前沿AI、汽车智能化和机器人三大领域，精选了七条重磅资讯。从AI如何助力我们加速科研，到高功率电子的散热挑战，再到物理AI的落地考量，以及未来线控转向的通信基础，内容干货满满，希望能为大家的工作带来启发。
-
-1. Inherent, founded by DeepMind alumni, says its AI ‘teammate’ just outperformed Anthropic and OpenAI at replicating research（来源：TechCrunch）
-   应用分析：这款AI助手潜力巨大。我们可以尝试利用它来辅助理解和复现关于FOC、无传感器控制、弱磁控制等电机控制策略的最新论文。例如，让它分析论文中的数学模型、算法流程图，甚至尝试生成MATLAB/Simulink的初步代码框架。在研究AI控制（如强化学习在助力策略中的应用）时，它也能帮助我们快速理解其实现细节。这类工具如果真的能有效降低研究复现的门槛和时间，对于加速EPS新技术的预研和概念验证将是革命性的，值得高度关注和投入。
-   https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/
-
-2. Why your local LLM feels dumber than it is（来源：Hacker News）
-   应用分析：这篇文章提供了宝贵的实践指导。在考虑将AI模型（如用于故障诊断的异常检测模型、用于自动标定的预测模型）部署到EPS控制器或HIL/SIL环境时，我们需要深入研究如何优化模型、设计用户交互以及处理数据输入，以最大限度地发挥其潜力，避免“愚蠢感”。例如，在设计基于模型的标定工具时，要考虑如何通过有效的Prompt工程或数据预处理，让本地AI模型给出更精准的建议。这值得投入时间学习和消化，作为内部AI应用开发实践的指导原则。
-   https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917
-
-3. NanoGPT Speedrun Frontier（来源：Hacker News）
-   应用分析：这项挑战对我们有直接的借鉴意义。我们在开发基于AI的电机控制策略（如神经网络观测器、强化学习控制器）或智能故障诊断模块时，常常面临MCU算力、内存和存储的限制。NanoGPT的“速度跑”理念，可以启发我们如何选择轻量级模型架构、优化量化策略、甚至探索硬件加速方案，以实现在EPS控制器上高效运行AI。例如，可以研究如何将部分轻量级神经网络作为状态观测器或参数辨识模块，集成到现有的FOC控制环路中。这代表了AI模型小型化和边缘部署的前沿方向，值得密切关注。
-   https://www.primeintellect.ai/research/nanogpt-speedrun
-
-4. Exicom starts producing liquid-cooled power modules for EV chargers in India（来源：Charged EVs）
-   应用分析：液冷技术思路可以直接迁移到我们的EPS系统。当前EPS系统多采用风冷或自然冷却。但随着电机功率和转矩密度的提升，特别是在线控转向这种高集成度、高功率要求的系统中，热管理成为关键挑战。我们可以借鉴电动汽车充电器中的液冷功率模块设计，评估其在EPS控制器中的应用潜力，尤其是在功率级IGBT/MOSFET的散热上。这可能涉及到散热片的结构优化、冷却液循环系统的设计，以提升系统在极端工况下的性能和可靠性。这值得投入初步的研发探索，为下一代EPS/线控转向系统设计储备高功率密度和热管理技术。
-   https://chargedevs.com/newswire/exicom-starts-producing-liquid-cooled-power-modules-for-ev-chargers-in-india/
-
-5. Robots don’t run themselves: The workforce powering physical AI（来源：The Robot Report）
-   应用分析：这篇文章提供了设计和部署物理AI（包括智能EPS）时的重要视角。在设计EPS的智能诊断、预测性维护功能时，不能只考虑算法的智能化，还要考虑如何与实际的维护人员、标定人员高效协作。例如，AI系统可以提供故障预警和诊断建议，但最终的维修和确认仍需要人工。我们应该设计友好的诊断接口和工具，让AI的输出能够被工程人员有效利用和理解，而不是取代他们，而是赋能他们。这对于提升EPS产品的全生命周期价值和用户体验很重要，值得投入思考并在产品设计理念中体现。
-   https://www.therobotreport.com/robots-dont-run-themselves-workforce-powering-physical-ai/
-
-6. The technology that could bring robot mowers to one in two American lawns（来源：The Robot Report）
-   应用分析：这项技术原理和应用场景与我们有高度相似性。我们可以借鉴机器人割草机在复杂户外环境下（可能存在障碍物、不平地面）的定位、感知和控制策略。例如，其结合GNSS和机器视觉进行高精度定位和障碍物规避的方案，可以为线控转向系统在泊车、低速辅助驾驶时的环境感知和运动控制提供思路。在电机控制层面，这类机器人也需要高精度的伺服控制，这与EPS的FOC控制、转矩脉动抑制等技术有共通之处。我们可以研究这些系统如何处理传感器融合、路径跟踪和鲁棒控制，并将其经验迁移到EPS的助力策略和手感调校中。这值得深入研究和借鉴，能够拓宽我们的技术视野。
-   https://www.therobotreport.com/technology-could-bring-robot-mowers-one-half-american-lawns/
-
-7. Wi-Fi 8 is the first wireless upgrade in years that isn't chasing speed（来源：Hacker News）
-   应用分析：Wi-Fi 8对于未来线控转向和智能座舱的通信架构设计有潜在影响。虽然EPS核心控制环路通常使用CAN、FlexRay或以太网等有线总线，但在线控转向的冗余通信、OTA更新、诊断数据上传等方面，无线技术的重要性会凸显。如果Wi-Fi 8能提供工业级的可靠性和低延迟，我们可以在线控转向架构中考虑其作为非安全相关数据传输的补充，或者在需要高带宽诊断或标定数据传输时使用。例如，在车辆测试和标定阶段，能否通过高可靠的Wi-Fi 8进行实时数据流传输，减少线缆连接的复杂性？这值得初步关注其技术标准进展和实际性能指标。
-   https://www.xda-developers.com/wi-fi-8-first-wireless-upgrade-years-isnt-chasing-speed-home-networks-need-it/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260823-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260823-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260823-pm.mp3" length="3723264" type="audio/mpeg"/>
-      <pubDate>Sun, 23 Aug 2026 09:00:19 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 硬核早报：AI代码逆向工程、科研复现，Waymo定制芯片与EPS数字孪生</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的《硬核早报》，我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人技术，为您精选七条重磅资讯。从AI在代码分析和科研复现上的突破，到自动驾驶定制芯片的趋势，再到数字孪生在机器人领域的应用，我们将深入探讨这些技术对我们汽车EPS产品研发工程师的潜在影响和实际应用价值。准备好了吗？让我们开始今天的硬核之旅！
@@ -1097,6 +1061,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260907-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260907-am.mp3" length="3143088" type="audio/mpeg"/>
       <pubDate>Sun, 06 Sep 2026 22:41:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 智驾前沿：从类脑控制到现场自适应AI，EPS工程师如何把握未来转向</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的智驾前沿科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人三大领域，为您精选了七条重磅资讯。从数据驱动的非线性模型发现，到类脑神经元通信的鲁棒控制，再到无人驾驶出租车在现实世界的挑战，每一条都可能点亮您在汽车电动助力转向（EPS）系统研发中的新思路。准备好了吗？让我们一起探索这些科技浪潮中的关键节点，看看它们将如何影响我们的工作，以及我们能从中汲取哪些灵感。
+
+1. Data-Driven Learning of Unknown Nonlinear Differential Equations Using Functional Analysis（来源：arXiv cs.LG）
+   应用分析：这项技术对我们来说，非常值得尝试和投入。我们可以用它来更精确地建立永磁同步电机（PMSM）的非线性模型，例如考虑磁饱和、温度漂移对参数的影响，以及转向系统中的摩擦、间隙等非线性环节。通过采集EPS在不同工况下的转矩、转速、电流、角度等运行数据，学习非线性ODE，构建更精确的仿真模型和模型预测控制（MPC）预测器，直接提升电机控制策略性能与鲁棒性，如转矩脉动抑制和NVH优化。
+   https://arxiv.org/abs/2609.04329
+
+2. Modular Deep Recurrent Neural Network: Application to Quadrotors（来源：arXiv cs.LG）
+   应用分析：这项技术对我们EPS开发来说，有很高的迁移价值，值得投入。我们可以将这种模块化RNN应用于EPS的电机控制策略中，作为更先进的状态观测器或预测器，来处理电机在高速、大转矩切换、弱磁等复杂工况下的非线性动态。特别是在无传感器控制中，精确的电机模型对转子位置和速度的估计至关重要。此外，在助力策略的手感调校中，我们可以利用其建模高阶非线性的能力，实现更细腻、更符合驾驶员预期的转向手感。
+   https://arxiv.org/abs/2609.04339
+
+3. Robust stabilization with spiking neuronal communication（来源：arXiv eess.SY 控制系统）
+   应用分析：这项研究属于前瞻性范畴，短期内直接落地到量产EPS系统有挑战，但长期潜力巨大，值得我们进行预研。我们可以在未来的线控转向系统（Steer-by-Wire）的冗余通信和控制架构中探索这种可能性。例如，将关键传感器信号通过尖峰编码器传输到冗余控制器，再由尖峰解码器进行处理。这或许能提供一种全新的容错通信机制，同时降低数据传输带宽和功耗。在故障诊断方面，尖峰模式本身可能就携带了异常信息，有助于更早发现潜在故障。对于线控转向这种对安全性和冗余要求极高的未来架构，探索这种“类脑”的鲁棒通信与控制方案，具有重要的战略意义。
+   https://arxiv.org/abs/2609.05054
+
+4. When Quantization Breaks Memory: Recurrent-State Write-Back in Low-Precision Temporal Inference（来源：arXiv cs.AI）
+   应用分析：这篇文章给我们敲响了警钟，这不是一个“能用”的技术，而是一个必须规避和解决的挑战。在开发和部署任何基于RNN或类似时间序列模型的AI算法到EPS控制器时，我们必须特别关注量化策略对模型性能的影响。尤其是在电机无传感器控制中，如果使用RNN进行转子位置或速度的估计，低精度量化可能导致估计误差累积，从而影响控制精度甚至稳定性。我们需要在模型设计和量化过程中，额外进行针对性的验证，确保在目标量化精度下（例如四比特）不会出现这种“状态回写”引发的性能崩溃。这必须投入，因为量化是嵌入式部署的必经之路，理解并解决其潜在问题，是确保AI模型在EPS控制器中可靠运行的关键。
+   https://arxiv.org/abs/2609.04490
+
+5. Continual Field-Adaptive Models (CFAMs) for Post-Deployment Physical AI（来源：arXiv cs.RO）
+   应用分析：这项技术对我们来说非常值得投入和深入研究。我们可以将CFAMs应用于EPS的自适应控制和预测性维护。例如，在电机控制策略中，慢学习组件可以包含基础的FOC控制和通用助力曲线，而快学习的Capsule Field则可以学习并存储特定车辆、特定驾驶员或特定环境下的微调参数、摩擦补偿模型或异常检测规则。当车辆在不同工况下运行时，系统可以自主地更新这些快速学习组件，以适应电机参数漂移、机械磨损或路面变化，从而持续优化助力手感、抑制NVH。在故障诊断方面，CFAMs可以学习正常运行模式下的“能力胶囊”，一旦出现异常，能够快速识别并进行诊断。这是一种非常有前景的AI范式，能够将前沿研究快速转化为可落地的EPS工程方案，实现EPS系统的“自我进化”，显著提升用户体验和系统可靠性。
+   https://arxiv.org/abs/2609.04552
+
+6. Scalable Edge-assisted Fusion and Path Prediction for Connected Autonomous Vehicles（来源：arXiv cs.RO）
+   应用分析：这项技术对我们来说能用，且非常值得关注和投入。在未来的线控转向系统中，EPS控制器不仅需要执行转向指令，更可能需要接收来自上层决策的更丰富、更精确的路径信息。通过“Conductor”这样的边缘辅助平台，我们可以获取超视距的交通流和潜在碰撞风险信息，以及更准确的车辆轨迹预测。这些信息可以作为线控转向决策模块的输入，用于优化转向助力曲线、提供预警，甚至在紧急情况下辅助进行避障转向。例如，当边缘平台预测到前方路口有潜在碰撞风险时，可以提前调整转向系统响应特性，为驾驶员或自动驾驶系统提供更安全的冗余。这是线控转向向高级自动驾驶演进的必经之路，理解并参与边缘辅助感知和决策框架的研究，能够确保EPS在未来智能汽车架构中占据更核心、更智能的位置。
+   https://arxiv.org/abs/2609.04364
+
+7. TechCrunch Mobility: Tesla Cybercab hits the road — and a snag（来源：TechCrunch）
+   应用分析：这条新闻不是一个直接可用的技术，而是一个重要的行业案例和警示，必须高度关注。它提醒我们，在设计线控转向系统时，必须充分考虑各种极端情况和不确定性。例如，当自动驾驶系统遇到“障碍”时，线控转向系统需要具备强大的降级能力（Degradation Mode）、故障诊断和隔离能力，确保车辆仍能安全停车或被驾驶员接管。这促使我们在线控转向的冗余通道设计、故障安全机制以及与高层决策系统的接口定义上，采取更保守、更全面的策略，并加大MIL/SIL/HIL以及整车测试的投入，模拟更广泛的异常场景。这直接关系到EPS和线控转向系统的最终用户安全和市场接受度。
+   https://techcrunch.com/2026/09/06/techcrunch-mobility-tesla-cybercab-hits-the-road-and-a-snag/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260907-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260907-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260907-pm.mp3" length="3862944" type="audio/mpeg"/>
+      <pubDate>Mon, 07 Sep 2026 09:43:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
