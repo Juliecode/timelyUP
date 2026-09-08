@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 08 Sep 2026 09:42:34 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 22:42:43 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾芯片突破！具身智能驶入汽车，EPS研发如何迎风而上？</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人领域，为您精选七条重磅资讯。其中不乏三纳米智能驾驶芯片的震撼发布，汽车巨头在具身智能领域的重磅布局，以及如何利用AI重塑软件开发流程的洞见。这些都将与我们EPS研发的工作息息相关，帮助我们思考如何将最新的科技趋势转化为实际的工程解决方案。
-
-1. 小米发布三纳米智能驾驶芯片Xring D100，计划2027年商用，可本地运行2000亿参数模型（来源：CnEVPost）
-   应用分析：这类高性能车规级AI芯片是未来线控转向系统和集成式底盘控制的核心算力基础。我们可以利用其强大的本地AI推理能力，将目前在MCU上运行的FOC电机控制算法、状态观测器等，通过神经网络等AI模型进行优化和加速，甚至实现模型预测控制等复杂算法的实时部署。此外，它也能支持更先进的无传感器控制算法中复杂的特征提取和决策，提升鲁棒性和安全性。这非常值得我们投入关注，研究如何将现有控制算法与这类高性能AI芯片的架构相结合，探索AI模型在电机控制、故障诊断、参数辨识等方面的潜力，并提前学习AI模型部署和车规级AI软件开发流程。
-   https://cnevpost.com/2026/08/24/xiaomi-unveils-xring-d100-smart-driving-chip/
-
-2. 据报道，蔚来汽车将战略投资由其智能驾驶负责人任少卿创办的具身智能初创公司（来源：CnEVPost）
-   应用分析：具身智能的核心在于让AI理解和控制物理世界的交互。对于EPS而言，这意味着我们可以探索利用具身智能的理念来提升电机控制的“智能”水平。例如，通过强化学习让电机控制器自主学习在不同路况和驾驶风格下的最优助力策略和手感调校，实现更精细的转矩控制和更强的环境适应性。它还可以用于开发更先进的故障诊断和预测性维护系统。这非常值得持续关注和少量投入进行概念验证。具身智能的许多技术，如机器人关节控制、环境交互感知等，与EPS电机控制有高度的迁移性，有助于我们构建更智能、更鲁棒的EPS系统，并为线控转向的复杂控制奠定基础。
-   https://cnevpost.com/2026/08/24/nio-to-invest-in-startup-by-ren-shaoqing-report/
-
-3. SDAD框架：AI时代软件开发生命周期的新范式（来源：arXiv cs.AI）
-   应用分析：我们的EPS控制器软件开发高度依赖模型化设计和代码生成。SDAD的理念可以直接引入到我们的开发流程中：我们可以将助力策略、电机控制算法等需求，以更形式化、机器可读的方式定义；利用AI代理辅助生成Simulink模型、嵌入式C代码的初始版本，甚至辅助生成测试用例；并引入独立的AI代理对生成的模型和代码进行静态分析、动态仿真验证，检查功能安全要求（如ISO 26262）的符合性。这非常值得投入，可以显著提升开发效率、降低人为错误，并改善软件质量，尤其是在满足严苛功能安全标准方面。
-   https://arxiv.org/abs/2608.20341
-
-4. 研究揭示LLM“语义伪装”漏洞，有害意图可能被良性叙述绕过（来源：arXiv cs.AI）
-   应用分析：尽管我们EPS系统目前直接使用LLM的场景不多，但未来AI在汽车控制系统中的应用会越来越广，例如用于自动标定、异常检测、甚至高层决策。这项研究提醒我们，在这些应用中，AI模型的“信任度”和“可解释性”是核心。我们需要引入安全验证机制，关注AI的“意图”而非表面输出，并探索可解释AI（XAI）技术。这值得高度关注并作为AI应用安全策略的重要考量，在引入AI方案时，将类似“语义伪装”的潜在风险纳入功能安全分析和威胁分析与风险评估中，并提前规划应对策略。
-   https://arxiv.org/abs/2608.20378
-
-5. 通用汽车电动车刹车问题引联邦机构加强审查，有车主被迫撞击路缘避险（来源：TechCrunch）
-   应用分析：这个事件是EPS和线控转向系统设计的重要警示。我们必须持续投入，强化功能安全设计，严格遵循ISO 26262标准，确保EPS系统达到ASIL D等级，尤其是在向线控转向演进时，需要考虑多重冗余和异构冗余架构。同时，提升故障诊断与降级策略，针对电机、传感器、控制器软硬件的各种潜在故障模式，设计更快速、更鲁棒的故障诊断机制，并制定清晰可靠的降级策略，确保在系统失效时，驾驶员仍有足够的控制能力。我们应将此类真实事故作为案例，反思并改进设计和流程。
-   https://techcrunch.com/2026/08/24/brake-problems-in-gm-evs-draw-greater-federal-scrutiny/
-
-6. 可扩展分布式仿真测试框架：利用Kubernetes集群进行自动驾驶系统验证（来源：arXiv cs.RO）
-   应用分析：我们的EPS系统，特别是线控转向系统，其功能安全和性能验证需要大量场景测试。这个分布式仿真测试框架的理念可以直接借鉴。我们可以建立EPS/线控转向的数字孪生测试平台，将EPS/线控转向的模型集成到类似CARLA的虚拟环境中，与ADS系统协同仿真。通过自动化测试场景生成与执行，利用Kubernetes集群并行执行，覆盖各种极限工况、故障模式、环境扰动等，并收集仿真数据，利用AI进行自动分析和故障模式识别。这非常值得投入，能大幅缩短验证周期，提升产品质量，并为AI驱动的控制和标定提供数据支持。
-   https://arxiv.org/abs/2608.20904
-
-7. 小鹏汽车人形机器人公司Dogotix获9亿美元融资，估值达63亿美元，计划规模化生产（来源：The Robot Report）
-   应用分析：人形机器人的每一个关节都是一个高精度的伺服执行器，其控制要求与EPS电机的转矩控制有异曲同工之妙。我们可以从Dogotix等公司在以下方面的进展中汲取经验：学习人形机器人在有限空间内实现高功率密度、高效率电机的设计理念；研究其鲁棒的电机控制策略，以应对复杂动态环境中的稳定运动，并将其应用于EPS的FOC控制、无传感器控制以及转矩脉动抑制；探索强化学习、模型预测控制等AI算法在人形机器人步态生成中的应用，并迁移到EPS的助力策略和手感调校中。这非常值得投入关注和进行前瞻性研究，将跨领域技术融合转化为EPS的创新方案。
-   https://www.therobotreport.com/xpeng-motors-humanoid-robot-unit-dogotix-raises-900m/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260825-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260825-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260825-am.mp3" length="3128256" type="audio/mpeg"/>
-      <pubDate>Mon, 24 Aug 2026 21:59:08 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 科技早报：AI赋能实时电机控制，智能驾驶法规与芯片新进展</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。其中，有两项关于AI在实时电机控制中的突破性进展，一项关于AI安全性的深度思考，两项关于智能汽车领域芯片和法规的重大更新，以及两项来自机器人领域，但对我们汽车控制大有裨益的前沿技术。希望这些内容能为您的日常研发工作带来启发。
@@ -1097,6 +1061,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260908-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260908-pm.mp3" length="3559392" type="audio/mpeg"/>
       <pubDate>Tue, 08 Sep 2026 09:42:34 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI与智能出行共舞：Navier-Stokes突破、物理AI人才潮及线控转向新形态</title>
+      <description>早上好，各位研发工程师朋友！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师，在这里和大家一起洞察前沿科技，思考工程落地。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为大家精选了七条重磅资讯，希望能为您的日常研发工作带来新的启发。无论您是关注AI在控制系统中的应用，还是对线控转向、高性能电机技术充满兴趣，相信今天的分享都能让您有所收获。
+
+1. On the Navier–Stokes Millennium Prize Problem（来源：Hacker News）
+   应用分析：直接用于EPS电机控制策略的可能性不大，但对整个汽车设计，尤其是需要精细流体动力学计算的场景，如优化EPS散热结构、分析电机冷却液流动、甚至未来线控转向系统的液压备份（如果有），都可能受益于更精确的模型。短期内不值得直接投入研发资源，但值得持续关注，一旦有成熟的工程化解决方案或可集成到现有仿真工具的接口，应考虑引入。目前更多是知识储备和技术视野的拓展。
+   https://openai.com/index/navier-stokes-solution/
+
+2. Xiaomi's L3 autonomous driving lead exits for physical AI, joining auto executive exodus（来源：CnEVPost）
+   应用分析：物理AI强调AI与物理世界的交互和控制，这与EPS作为车辆底层执行器的工作模式高度契合。我们可以关注这些物理AI创业公司在机器人执行器控制、力矩控制、环境感知与决策方面的进展，例如他们如何利用强化学习或神经网络进行复杂动态系统的精确控制。这些经验可以直接用于优化EPS的FOC算法、无传感器控制、转矩脉动抑制，甚至为线控转向的功能安全和故障诊断提供新思路。值得密切关注和投入研究，有助于提升我们产品的性能和智能化水平。
+   https://cnevpost.com/2026/09/08/xiaomi-l3-lead-exits-for-physical-ai/
+
+3. The Security AI That Learns the Language of Movement（来源：EE Times）
+   应用分析：EPS系统需要实时监测电机状态、转矩输出、电流、位置等，并判断是否有异常。我们可以借鉴这种“学习正常运动语言”的思路，在EPS控制器中部署轻量级边缘AI模型。通过采集大量正常驾驶条件下的转向数据，训练模型识别EPS系统的“健康”运动模式。一旦检测到与正常模式显著偏离的信号，AI模型可以立即发出预警，甚至触发降级模式。这有助于解决电机控制策略的鲁棒性、温漂补偿、参数辨识以及故障诊断问题。值得立即投入小规模验证性研发，以提升EPS系统的智能化和可靠性。
+   https://www.eetimes.com/the-security-ai-that-learns-the-language-of-movement/
+
+4. Tesla Cybercab doesn’t have any manual controls — but it does have a virtual joystick（来源：The Verge）
+   应用分析：在我们的线控转向概念设计中，需要深入思考人机共驾和紧急介入的策略。如果未来线控转向系统完全取消机械连接，虚拟操纵杆或类似的“软控制”界面可以作为一种冗余或辅助控制手段。这涉及到如何设计直观且安全的虚拟接口，如何处理虚拟输入与底层电机执行器之间的映射，以及在什么情况下允许用户介入。同时，这也会对功能安全（ISO 26262）的危害分析和风险评估提出新的挑战。值得深入研究和概念验证，理解这种设计趋势，并思考EPS作为执行器如何适应这种“无物理连接”的控制模式，对我们的未来产品规划至关重要。
+   https://www.theverge.com/transportation/991400/tesla-cybercab-virtual-joystick-manual-control
+
+5. Rivian’s Gambit for Full Autonomy（来源：IEEE Spectrum）
+   应用分析：EPS是自动驾驶车辆实现精确路径控制和转向执行的核心部件。我们需要深入分析Rivian这类领先自动驾驶系统对底层执行器的性能指标要求。例如，在点对点自动驾驶中，转向系统需要提供极高的路径跟踪精度和快速响应能力。这促使我们思考如何进一步提升EPS电机的转矩控制精度、减小摩擦和迟滞、优化助力曲线，使其在不同速度和路况下都能提供最佳的转向性能。同时，与自动驾驶域控制器（AD ECU）的通信接口、数据交互协议以及故障安全机制也需要重新审视和优化，确保EPS能在最严苛的自动驾驶场景下可靠工作。值得深入研究和在产品规划中考虑。
+   https://spectrum.ieee.org/rivian-self-driving
+
+6. Fering selects Turntide axial flux motors and inverters for its hybrid off-road vehicle（来源：Charged EVs）
+   应用分析：这是直接的电机选型和设计借鉴。我们可以立即组织团队对轴向磁通电机进行深入评估，研究其结构特点、制造工艺、成本、NVH特性以及控制策略的差异。特别是关注Turntide的技术细节，例如其逆变器如何与轴向磁通电机协同工作。我们可以进行初步的仿真分析，比较轴向磁通电机与现有径向磁通PMSM在转矩密度、效率、尺寸和NVH方面的表现。这可能引导我们在下一代EPS产品中考虑引入轴向磁通电机，以实现更小、更轻、更高效的助力转向系统。值得投入中等程度的预研和评估，EPS作为核心执行器，必须紧跟这一趋势。
+   https://chargedevs.com/newswire/fering-selects-turntide-axial-flux-motors-and-inverters-for-its-hybrid-off-road-vehicle/
+
+7. Xpeng opens Iron humanoid robot production line, paving way for year-end mass production（来源：CnEVPost）
+   应用分析：人形机器人的关节执行器技术可以直接启发EPS的电机控制和执行器设计。我们可以密切关注小鹏人形机器人在关节执行器、伺服电机控制方面的技术细节，例如他们如何实现高精度、高带宽的力矩控制，如何处理多关节协调运动，如何进行故障诊断和安全降级。这些经验可以直接应用于我们EPS的电机控制策略，比如改进FOC算法的动态响应、提升转矩脉动抑制效果、探索更先进的无传感器控制方案，甚至为线控转向的冗余执行器设计提供思路。值得投入研究和技术交流，以显著提升EPS产品的性能和竞争力。
+   https://cnevpost.com/2026/09/08/xpeng-opens-iron-humanoid-robot-production-line/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260909-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260909-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260909-am.mp3" length="3460464" type="audio/mpeg"/>
+      <pubDate>Tue, 08 Sep 2026 22:42:43 +0000</pubDate>
     </item>
   </channel>
 </rss>
