@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 10 Sep 2026 22:42:42 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 09:42:42 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 智驾之舵：AI、机器人如何重塑汽车转向的未来</title>
-      <description>各位研发工程师朋友们，大家好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能前沿、汽车智能化以及机器人技术这三大热点领域，精选出七条对我们汽车EPS产品研发工程师特别有启发意义的资讯。这些技术趋势正深刻影响着从底层电机控制到顶层系统架构的方方面面，让我们一起来看看，如何将这些前沿研究转化为我们手中的EPS工程方案。
-
-1. LLM 代理通过模拟模型进行受控实验（来源：arXiv cs.AI）
-   应用分析：我们可以探索使用LLM代理来自动化EPS助力曲线和阻尼回正参数的调校。具体来说，可以将我们的Simulink仿真模型与LLM代理结合，让代理根据预设目标和约束设计实验工况，运行仿真，解释结果，并提出优化建议。这有望大幅提高调校效率，减少人工试错，并发现传统方法难以触及的优化空间。考虑到其在优化复杂系统方面的潜力，这是值得我们投入资源进行概念验证和初步研究的方向。
-   https://arxiv.org/abs/2608.23622
-
-2. 物理信息误差场学习：PINNs 的后训练优化框架（来源：arXiv cs.LG）
-   应用分析：在EPS电机控制中，特别是永磁同步电机（PMSM）的磁链模型、温度场模型或复杂非线性摩擦模型等，都可以用PINNs来构建。通过PIEFL框架，我们可以在FOC算法中引入更精确的电机模型，或者用于无传感器控制中的状态观测器，通过学习误差场来补偿模型不确定性或传感器漂移。这能提升控制策略的鲁棒性和性能，特别是在转矩脉动抑制和温漂补偿方面。这是前沿控制算法落地到我们EPS产品中的一个有效路径，值得投入资源进行研究和原型开发。
-   https://arxiv.org/abs/2608.24970
-
-3. 加速物理 AI 的芯片设计（来源：EE Times）
-   应用分析：在线控转向演进中，我们需要在边缘侧实现更复杂的AI控制算法，例如基于神经网络的助力策略或故障诊断与预测性维护。这项研究提醒我们，在设计下一代EPS控制器时，不仅要关注MCU的算力，更要从系统层面考虑物理AI的实时性、功耗和功能安全。我们需要预先布局高性能异构计算架构，并与芯片供应商紧密合作，共同定义满足ISO 26262功能安全要求的物理AI芯片方案。这需要中长期投入，但对于实现线控转向的性能和安全目标至关重要。
-   https://www.eetimes.com/accelerating-silicon-design-for-physical-ai/
-
-4. 将空间证书编译为时间契约以实现延迟感知控制（来源：arXiv eess.SY 控制系统）
-   应用分析：在Steer-by-Wire系统中，控制回路的延迟和同步性是确保安全的关键。我们可以借鉴CIPS框架，将EPS控制器内部的各种安全机制（如扭矩限制、故障诊断、冗余切换）转化为时间契约，在离线阶段就严格定义其时间预算，并在运行时由调度器进行管理。这有助于在复杂分布式架构下，形式化验证系统的时间行为和安全性，降低集成风险，并简化功能安全认证过程。这是一项高价值的理论工具，值得深入研究其在车规级系统中的适用性，尤其是在线控转向的架构设计中。
-   https://arxiv.org/abs/2608.25228
-
-5. 沃尔沃汽车将互相警告路面危险（来源：The Verge）
-   应用分析：如果我们的EPS系统能提前获取到V2V传来的路面危险信息，例如湿滑路面、前方障碍物或突发行人等，我们可以预先调整助力曲线、阻尼参数，甚至在极端情况下，为驾驶员提供更积极的转向辅助或方向盘震动反馈。例如，在检测到前方有潜在碰撞风险时，EPS可以预加载（pre-load）一定的转向力矩，帮助驾驶员更快响应。这需要与整车厂的V2X团队紧密合作，共同定义EPS与网联系统的接口和协同策略。短期内可进行概念验证，长期看是提升用户体验和安全性的重要方向。
-   https://www.theverge.com/transportation/985070/volvo-connected-safety-hazard-alert-animal-cyclist
-
-6. 面向控制的学习：软体气动执行器的动态跟踪与稳定性分析（来源：arXiv cs.RO）
-   应用分析：EPS电机也是一个复杂的机电系统，存在非线性、不确定性、温漂等问题。我们可以借鉴这种分解建模思路，将PMSM的复杂动态分解为主要的线性部分和残差非线性部分。残差动力学模型可以通过EDMDc等数据驱动方法识别，用于补偿FOC控制中未能完全建模的动态特性，例如高频振动、转矩脉动。这有助于提升电机控制策略的性能和鲁棒性，尤其是在高动态响应和NVH抑制方面。这是一个值得深入研究并尝试应用于电机控制算法优化的方向。
-   https://arxiv.org/abs/2608.25171
-
-7. 人机协作中自适应刚度控制的生成式动作块采样（来源：arXiv cs.RO）
-   应用分析：在EPS手感调校中，我们一直追求如何提供“人车合一”的转向体验。这项研究提供了一个新思路：通过感知驾驶员的转向意图（例如，通过方向盘转角变化率、驾驶员施加的扭矩、甚至通过驾驶员视线或表情等多模态信息），并结合车辆状态，动态调整EPS的助力刚度和阻尼。当驾驶员意图模糊时，系统可以更柔顺（低刚度），允许驾驶员自由引导；当意图明确（如快速变道）时，系统可以提供更坚定（高刚度）的辅助。这能显著提升EPS的自适应性和用户体验。可以利用车载传感器数据进行驾驶员意图建模，并结合强化学习等方法实现自适应策略。这是一个非常有前景的创新方向，值得投入资源进行原型验证。
-   https://arxiv.org/abs/2608.25284</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260827-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260827-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260827-pm.mp3" length="3297744" type="audio/mpeg"/>
-      <pubDate>Thu, 27 Aug 2026 09:42:21 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI与智能汽车新突破：从LLM仿真实验到双轴电流传感器，再到自适应刚度控制</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是大家的老朋友，专注于汽车电动助力转向系统，也就是EPS研发的工程师主播。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条重磅资讯。这些信息不仅是技术趋势的风向标，更可能直接影响我们未来的研发方向和工作效率。准备好了吗？让我们一起探索今天的科技热点！
@@ -1097,6 +1061,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260911-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260911-am.mp3" length="3613680" type="audio/mpeg"/>
       <pubDate>Thu, 10 Sep 2026 22:42:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI智能体解锁复杂任务，汽车线控转向安全验证与前沿控制技术洞察</title>
+      <description>各位研发工程师朋友们，大家早上好！今天是九月十一日星期五，欢迎收听由我，您的专属 AI 科技早报主播兼技术分析师，为您带来的每日科技资讯。今天，我们将聚焦 AI 智能体的前沿进展，探讨汽车智能化领域的最新政策与核心技术，以及机器人在实时控制方面的突破。这些内容都与我们电动助力转向系统，也就是 EPS 的研发工作息息相关，希望能给大家带来一些启发。话不多说，我们马上开始今天的早报。
+
+1. OpenAI Agents API（来源：Hacker News）
+   应用分析：能不能用：能用，且值得尝试。怎么用：我们可以利用这个 API 来构建自动化工具，比如设计辅助智能体，协助完成 EPS 系统架构设计中的初步方案生成、组件选型参数匹配等重复性高但需专业知识的任务。也可以用于代码生成与优化，结合我们的嵌入式 C 和 MATLAB/Simulink 模型，让智能体协助生成控制算法代码片段，或根据性能指标进行初步优化。值不值得投入：值得投入。通过标准化 API 接入前沿 AI 能力，可以有效提升研发效率，减少工程师在重复性工作上的时间消耗，将精力集中在创新和核心技术攻关上。初期可从辅助性、非安全关键任务入手，逐步验证其可靠性。
+   https://developers.openai.com/api/docs/guides/agents-api/overview
+
+2. Subagents vs Agent Skills: Executing Reusable Knowledge for Long-Horizon Agentic Tasks（来源：arXiv cs.AI）
+   应用分析：能不能用：能用，对于构建复杂的 EPS 研发辅助智能体至关重要。怎么用：我们可以将 EPS 系统开发流程分解为多个子任务，例如“电机选型子智能体”、“FOC 控制器设计子智能体”、“功能安全分析子智能体”等。每个子智能体拥有独立的上下文和专业知识库。主智能体负责协调这些子智能体，将复杂任务分解并分发，然后集成各子智能体的输出，从而提升整个系统的鲁棒性。值不值得投入：值得投入。这种架构思想与我们模块化、分层解耦的工程实践高度契合。通过这种方式，可以构建更稳定、更易于维护和扩展的 AI 辅助系统，尤其适用于像 EPS 这样对可靠性要求极高的产品开发。
+   https://arxiv.org/abs/2609.09233
+
+3. Do Agents Know When They Succeed? Calibrating Agent Confidence from Internal Representations（来源：arXiv cs.AI）
+   应用分析：能不能用：能用，且非常关键。怎么用：我们可以构建一个 EPS 故障诊断智能体，当它识别出潜在故障或推荐降级方案时，能同时输出其判断的置信度。如果置信度低，系统可以触发人工复核或切换到更保守的冗余模式。在 AI 辅助的助力曲线或电机控制参数自动标定过程中，智能体可以报告其对当前标定结果“最佳”的置信度。低置信度时，提示工程师介入调整或增加测试工况。值不值得投入：绝对值得投入。这是 AI 落地安全关键领域的基石。理解并利用 AI 的置信度，能为 EPS 系统的功能安全设计提供新的思路和技术手段，提升系统的整体安全性和鲁棒性。
+   https://arxiv.org/abs/2609.09448
+
+4. China unveils five-year NEV plan, targets 70% share of passenger-car sales by 2030（来源：CnEVPost）
+   应用分析：能不能用：这是政策导向，不是直接技术，但对研发方向有决定性影响。怎么用：立即调整 EPS 产品路线图，将线控转向系统的研发优先级提升到最高，并加大资源投入。针对线控转向所需的高精度电机控制、多冗余架构、功能安全 ISO 二六二六二 ASIL D 级要求、以及与自动驾驶系统的接口技术，进行深入预研和技术储备。同时，培养具备 AI 控制、功能安全、线控转向系统设计能力的复合型人才。值不值得投入：必须投入，而且是战略性、全方位的投入。不适应这一趋势，企业将面临被市场淘汰的风险。
+   https://cnevpost.com/2026/09/11/china-unveils-five-year-nev-plan/
+
+5. Inside TI’s Multiaxial Approach to Coreless Current Sensing（来源：Power Electronics News）
+   应用分析：能不能用：能用，且非常值得深入评估和应用。怎么用：在下一代 EPS 控制器设计中，考虑引入 TMCS2100-Q1 或类似的多轴无磁芯电流传感器，以替代现有分流器或有磁芯霍尔传感器方案。对新传感器在不同工况下的电流采样精度、噪声抑制能力、温漂特性，以及对 FOC 控制性能（如转矩脉动、NVH）的影响进行测试与对比。同时，评估无磁芯方案在降低物料成本、缩小 PCB 尺寸方面的潜力，并分析其故障模式及对功能安全的影响。值不值得投入：值得投入。电流传感器的性能提升是电机控制性能提升的基础。TI 的方案如果能有效抑制串扰，将为我们优化电机控制策略、提升产品竞争力带来直接的硬件支持。
+   https://www.powerelectronicsnews.com/inside-tis-multiaxial-approach-to-coreless-current-sensing/
+
+6. Testing Between the Test Cases: Proving End-to-End Steering in Conditions You Never Drove（来源：arXiv cs.RO）
+   应用分析：能不能用：能用，且对于线控转向的安全性认证和开发效率提升至关重要。怎么用：将形式化验证引入线控转向控制器的 V&amp;V 流程，特别是在 AI 辅助或端到端控制模块中，利用该方法快速识别潜在的危险工况或性能瓶颈。在设计阶段，使用形式化验证工具探索 EPS 助力曲线、阻尼参数在各种环境干扰下的性能边界，确保在极端条件下仍能保持安全裕度。这将有助于减少对大量实际或仿真驾驶测试的依赖，显著缩短测试周期和成本。值不值得投入：绝对值得投入。这是从根本上解决 AI 驱动的线控转向系统安全性和可信赖性问题的关键技术之一，是未来线控转向大规模商业化的必经之路。
+   https://arxiv.org/abs/2609.10951
+
+7. IMLE-VLA: Fast Single-Step Action Generation for Vision-Language-Action Policies（来源：arXiv cs.RO）
+   应用分析：能不能用：能用，其核心思想对 EPS 电机控制有直接启发。怎么用：借鉴单步生成思想，优化 FOC 矢量控制中的电流环或转矩环。例如，探索使用基于神经网络的单步预测器，直接从当前状态和目标生成最优电压矢量，替代传统的 PI 调节器或多步模型预测控制，以减少计算延迟，提高响应速度。在助力策略中，根据驾驶员的意图和车辆状态，快速生成最优助力转矩，通过训练一个模型，直接从多模态输入生成平滑且快速响应的助力输出。值不值得投入：值得投入。实时性是 EPS 性能的关键指标。这项研究提供了一种在保证性能的同时显著提升实时性的新范式，有望在电机控制和助力策略上带来突破。可以先进行小规模的模型验证和概念验证。
+   https://arxiv.org/abs/2609.10915</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260911-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260911-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260911-pm.mp3" length="2958912" type="audio/mpeg"/>
+      <pubDate>Fri, 11 Sep 2026 09:42:42 +0000</pubDate>
     </item>
   </channel>
 </rss>
