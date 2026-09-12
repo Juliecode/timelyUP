@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 11 Sep 2026 22:42:35 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 09:42:39 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI与智能汽车深度融合：EPS系统的新机遇与挑战</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选了七条最具洞察力的资讯。从AI代理如何驱动仿真实验，到线控转向系统的安全新范式，再到理想汽车在机器人AI的战略布局，每一条都可能为我们汽车EPS系统的未来发展带来新的思考和启发。准备好了吗？让我们一起探索今天的科技热点！
-
-1. LLM Agents Perform Controlled Experiments Using Simulation Models（来源：arXiv cs.AI）
-   应用分析：完全可以用，而且潜力巨大。我们可以构建一个EPS系统的仿真模型，包括电机、控制器、转向柱、路面载荷等。然后，利用LLM代理作为“虚拟工程师”，让它来理解助力策略需求、电机控制目标（如转矩脉动抑制、NVH优化），并自主设计仿真实验（例如，调整FOC参数、PI控制器增益、助力曲线参数）。代理可以运行MIL/SIL/HIL仿真，分析仿真结果（例如，转矩响应时间、手感评分、NVH频谱），并根据结果迭代优化参数。这非常值得投入，可以显著加速我们的控制算法开发和标定过程，尤其是在线控转向这种高度复杂的系统中，参数空间巨大，人工调优效率低下。长远来看，这甚至能帮助我们探索更先进的、数据驱动的控制策略，例如强化学习控制的自动训练和评估。初期投入可能在构建高质量仿真模型和LLM代理接口上，但回报将是效率的指数级提升和产品性能的突破。
-   https://arxiv.org/abs/2608.23622
-
-2. Compiling Spatial Certificates into Temporal Contracts for Latency-Aware Control（来源：arXiv eess.SY 控制系统）
-   应用分析：必须用，而且是线控转向的关键技术。在线控转向系统中，方向盘和车轮之间没有机械连接，完全依赖电信号传输和执行。这意味着任何控制算法的延迟、数据包丢失或计算资源不足都可能导致严重的安全问题。我们可以将EPS控制器的安全运行区间（如最大转矩输出、响应时间、故障模式下的降级行为）定义为空间安全证书。CIPS框架能帮助我们将这些空间证书转化为时间契约，明确每个控制周期内允许的最大计算延迟和数据刷新间隔。这能指导我们进行MCU选型、实时操作系统（RTOS）调度设计、通信协议优化，并在设计阶段就确保系统满足ASIL-D等功能安全等级要求。这是线控转向走向成熟的必要投入，能从根本上提升系统设计的严谨性和安全性，减少后期验证和迭代的成本，并为未来更复杂的自动驾驶功能集成打下坚实基础。
-   https://arxiv.org/abs/2608.25228
-
-3. Physics-Informed Error Field Learning: A Post-Training Optimization Framework for Physics-Informed Neural Networks（来源：arXiv cs.LG）
-   应用分析：可以，且能显著提升现有模型精度。我们可以利用PINNs来构建更精确的永磁同步电机（PMSM）模型，包括电磁特性、热特性等。PIEFL可以在主PINN模型（例如，预测电机转矩、反电动势）训练到一定精度后，引入误差网络去学习实际测量数据与主模型预测之间的残差。这能帮助我们更精确地辨识电机参数，补偿温度漂移带来的模型失配，从而改善FOC控制的精度和动态响应，有效抑制转矩脉动。针对EPS系统的故障诊断，PIEFL可以学习正常工作状态下的物理模型偏差。当实际系统出现异常时，误差网络将捕捉到显著的、超出正常范围的误差模式，从而实现更早期、更精确的故障检测，并支持预测性维护。这非常值得投入，通过提高模型的精度和鲁棒性，我们可以直接提升EPS产品的性能，降低NVH，提高可靠性，减少因模型不准导致的标定工作量。这比重新设计整个控制算法的成本要低，但效果可能非常显著。
-   https://arxiv.org/abs/2608.24970
-
-4. TI’s TMCS2100-Q1 sensor measures current on two axes in EV traction inverters（来源：Charged EVs）
-   应用分析：完全可以用，而且很可能带来直接的性能提升。EPS控制器中的功率级需要高精度、低延迟的电流采样来执行FOC。TMCS2100-Q1的双轴测量可以提供更准确的电流反馈，减少传感器非理想特性对控制环路的影响。这意味着我们可以实现更精细的转矩控制，降低电机在不同工况下的转矩脉动，从而改善转向手感和NVH表现。传统上为了提升安全性（符合ISO 26262），可能需要多路电流传感器或复杂的软件诊断。如果这款传感器本身具有更高的鲁棒性和自诊断能力，可能在一定程度上简化冗余设计或提升单路传感器的可靠性，从而降低成本。对于无传感器控制方案，精确的电流信息对于状态观测器（如滑模观测器、扩展卡尔曼滤波器）的性能至关重要。这款传感器能提供更纯净的电流信号，有望提升无传感器控制在低速和启动阶段的性能和鲁棒性。这非常值得关注和测试。作为EPS研发工程师，对新的功率器件和传感器技术保持跟踪是必须的。初期投入是评估样品和进行台架测试，如果性能提升明显，引入到下一代产品设计中将是水到渠成。
-   https://chargedevs.com/newswire/tis-tmcs2100-q1-sensor-measures-current-on-two-axes-in-ev-traction-inverters/
-
-5. China launches yearlong auto quality campaign focused on connected-car safety（来源：CnEVPost）
-   应用分析：这不是一个“用”的技术，而是一个必须“遵守”的政策和“强化”的流程。我们需要强化功能安全流程，严格遵循ISO 26262标准，从概念阶段到生产发布，对EPS及线控转向系统进行危害分析和风险评估，制定安全目标，并落实到硬件和软件设计中，确保ASIL等级要求得到满足。同时，提升网络安全能力，评估潜在的攻击面，引入加密通信、安全启动、固件更新认证等机制，防止恶意控制指令或数据篡改。优化研发验证体系，增加MIL/SIL/HIL仿真测试覆盖率，加强台架和整车测试的场景多样性，特别是针对智能网联特有的故障模式和边界条件。引入AI辅助的故障诊断和预测性维护方案，提升系统自检测和自修复能力。最后，提升生产一致性，确保生产过程中的关键参数控制、测试和追溯，保证批量产品的一致性和可靠性。这是强制性投入，是产品进入市场的前提。不投入将面临巨大的合规风险和市场竞争力下降。长期来看，高质量、高安全性的产品才能赢得市场信任。
-   https://cnevpost.com/2026/08/27/china-launches-yearlong-auto-quality-campaign/
-
-6. Control-Oriented Learning for Dynamic Tracking and Stability Analysis of Soft Pneumatic Actuators（来源：arXiv cs.RO）
-   应用分析：借用其方法论，可以应用于EPS电机控制。EPS系统包含电机、减速机构、转向柱等，存在摩擦、间隙、柔性等非线性因素。我们可以尝试将整个EPS执行器系统（从电流到转向手感）分解为：一个描述主要静态特性的非线性模型（例如，助力曲线、摩擦补偿），以及一个捕捉残余动态特性和扰动的线性模型。利用台架或整车测试数据，通过扩展动态模式分解（EDMDc）或其他数据驱动方法，学习残余动态模型。这可以帮助我们更精确地补偿未建模动态，例如高频振动、转矩脉动等。基于这种混合模型，我们可以设计更先进的预测控制或自适应控制策略，例如前馈补偿、弱磁控制、转矩脉动抑制。通过对线性残余模型的稳定性分析，可以确保在引入数据驱动成分后，整个系统的闭环稳定性得到保证，从而提升助力手感、降低NVH。这值得深入研究和探索。它提供了一种处理复杂非线性系统的新范式，有望在不大幅增加计算资源的情况下，提升电机控制策略的性能和鲁棒性，解决转矩脉动和NVH等棘手问题。这属于前沿研究向工程落地的转化。
-   https://arxiv.org/abs/2608.25171
-
-7. Li Auto reportedly hires world-model expert to bolster robot AI push（来源：CnEVPost）
-   应用分析：这不是直接应用于EPS的技术，但它预示了未来EPS系统需要适应和支持的高层级AI能力。如果高层级的自动驾驶系统（基于世界模型）能够更精确地预测驾驶员意图和车辆未来运动状态，EPS系统就可以提前准备，提供更平顺、更自然的预测性助力，提升手感和乘坐舒适性。例如，在车辆即将进入弯道前，EPS可以根据预测的路况和驾驶员意图，提前调整助力曲线和阻尼，提供更流畅的转向体验。同时，世界模型可以建立车辆整体的动态模型，包括EPS在内的各个子系统。通过对比预测与实际行为，世界模型可以更早地发现EPS系统的潜在异常，实现更高级别的故障预测和诊断，甚至在故障发生前进行预警或自适应调整，提升系统鲁棒性。在线控转向场景下，世界模型可以提供更全局、更长期的决策信息，例如车辆在复杂交通流中的行为预测，EPS系统可以据此生成更优的转向轨迹和力矩控制，实现更安全、高效的自动驾驶。这间接但战略性地值得关注和投入。虽然我们不会直接开发世界模型，但理解其工作原理和潜在应用，能够指导我们EPS系统在接口设计、数据交互、控制策略预留方面，更好地适应未来智能汽车的AI架构，保持技术领先性。这属于对未来技术趋势的战略性布局。
-   https://cnevpost.com/2026/08/27/li-auto-hires-world-model-expert-robot-ai/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260828-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260828-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260828-am.mp3" length="5328000" type="audio/mpeg"/>
-      <pubDate>Thu, 27 Aug 2026 22:43:21 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI、智能汽车与机器人前沿：EPS工程师的今日洞察</title>
       <description>各位研发同仁，早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人这三大热门领域，精选出七条最值得我们EPS工程师关注的重磅资讯，并深入分析它们对我们日常工作和未来技术路线的启发。无论你是在攻克电机控制的噪声难题，还是在规划线控转向的冗余架构，相信今天的分享都能给你带来新的视角和灵感。
@@ -1097,6 +1061,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260912-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260912-am.mp3" length="3681216" type="audio/mpeg"/>
       <pubDate>Fri, 11 Sep 2026 22:42:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI赋能芯片设计与汽车控制：今日研发早报</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最具价值的资讯。从AI加速芯片设计到智能体持续学习的验证挑战，再到电动汽车功率半导体的新进展，以及机器人高精度传动系统对我们转向技术的启发，希望能为大家带来新的思考和启发。话不多说，我们马上进入今天的正题。
+
+1. Inside Architect Labs’ Two-Week Chip Design（来源：EE Times）
+   应用分析：短期内我们无法直接使用此AI工具，但需要密切关注其发展和商业化进程。我们可以与现有芯片供应商合作，推动他们引入此类AI设计工具，加速定制化MCU或ASIC的开发。例如，在定义下一代EPS控制器芯片需求时，可以探讨引入AI辅助设计流程，以实现更快的定制化功能集成、更优的性能功耗比以及更严格的功能安全验证。从长远来看，这绝对值得我们持续关注和进行预研投入，理解其潜力并与供应链伙伴共同探索，将为我们未来的产品迭代争取巨大优势。可以在团队内部设立一个专门的AI for Hardware Design关注小组，定期追踪进展。
+   https://www.eetimes.com/inside-architect-labs-two-week-chip-design/
+
+2. When Validation Stops Learning: Auditing Update Admission for Continual Embodied Agents（来源：arXiv cs.AI）
+   应用分析：这项研究的理念对我们来说非常能用，是解决AI在车规级控制系统中落地挑战的关键。我们可以将研究中提出的“错误控制与学习机会平衡”的理念引入EPS的自适应控制策略设计和验证流程。例如，在开发基于AI的自动标定或故障诊断模块时，需要定义清晰的“更新准入”机制，不仅要确保新策略的安全性，也要评估其对旧任务性能的保持能力以及在新场景下的学习潜力。可以考虑采用“历史参考晋升”和“回合级遗漏机会”等指标，在MIL、SIL、HIL以及台架测试中进行评估，确保持续学习在满足ISO 26262功能安全要求的前提下，能有效提升系统性能和鲁棒性。这值得我们高优先级投入，是开发下一代自适应EPS系统和线控转向学习型控制器的核心难点之一。
+   https://arxiv.org/abs/2609.10873
+
+3. A Multi-Stage Rule-Chaining Framework for Compositional and Interpretable Cognitive Reasoning（来源：arXiv cs.AI）
+   应用分析：这项技术有潜力应用于我们的工作，但需要将通用推理能力与EPS领域的专业知识结合。我们可以探索将这种可解释的认知推理框架应用于EPS的智能故障诊断系统。例如，结合电机电流、位置、扭矩传感器数据、整车CAN信号以及驾驶员操作等信息，构建多层次的故障模式。利用框架中的“确定性规则发现模块”自动从历史故障数据和专家知识中提取诊断规则；通过“模式组合引擎”识别复杂的故障关联模式；最后通过“结构抽象层”理解故障的深层原因和影响。关键在于如何将抽象的推理结果映射到具体的EPS故障代码和降级策略上，并且保证推理过程的透明和可验证性。这值得我们中等优先级投入，虽然直接应用有一定难度，但其可解释性对于功能安全是巨大优势，可以从故障特征提取和诊断逻辑的自动化生成入手，探索原型验证。
+   https://arxiv.org/abs/2609.10654
+
+4. Nexperia and Aurobay to explore GaN and SiC power devices for electrified powertrains（来源：Charged EVs）
+   应用分析：这项技术非常能用，是下一代EPS功率级升级的重要方向。我们已经在使用或计划使用SiC或GaN器件替换传统硅基IGBT或MOSFET。需要深入研究其在EPS电机控制中的具体应用，包括：首先是功率级设计，优化拓扑结构、栅极驱动电路、散热方案，以充分发挥SiC或GaN的高频特性。其次是电机控制策略，针对高开关频率带来的挑战，例如更快的电流变化率和电磁干扰，调整FOC等控制算法，确保系统稳定性、NVH表现和电磁兼容性。再者是功能安全，评估SiC或GaN器件在汽车环境下的可靠性、故障模式及诊断能力，确保符合ISO 26262标准。最后是与供应商合作，积极与Nexperia等供应商沟通，获取最新的车规级SiC或GaN产品信息和技术支持。这必须是我们高优先级投入的方向，是提升EPS系统性能、降低成本、满足未来电动化和智能化需求的关键技术。
+   https://chargedevs.com/newswire/nexperia-and-aurobay-to-explore-gan-and-sic-power-devices-for-electrified-powertrains/
+
+5. Multiaxial Coreless Current Sensing, Improved GaN HEMT SEE Radiation Hardness, Measurement Hardware for Grid Digital Twins: Power Electronics Week Insights（来源：Power Electronics News）
+   应用分析：这两项技术对我们来说都非常能用，是提升EPS电机控制性能和功率级可靠性的直接手段。在电流传感方面，我们可以积极评估和测试多轴无磁芯电流传感器，对比其与传统分流器或霍尔传感器的性能，包括精度、带宽、噪声和温漂，以及成本。考虑将其集成到下一代EPS控制器设计中，以优化电机电流环控制，提升转矩控制精度和NVH表现。在GaN HEMT可靠性方面，结合我们采用SiC或GaN的计划，这项研究提供了关键的可靠性信心。在选择GaN器件时，需要重点关注其车规级认证和抗辐射性能报告。与供应商合作，进行更严格的失效模式分析和测试，确保GaN器件在EPS的长期可靠运行。这些技术直接关系到EPS核心性能和功能安全，必须是我们高优先级投入的方向，是提升产品竞争力的关键。
+   https://www.powerelectronicsnews.com/multiaxial-coreless-current-sensing-improved-gan-hemt-see-radiation-hardness-measurement-hardware-for-grid-digital-twins-power-electronics-week-insights/
+
+6. How to select the right rack and pinion system for high-precision linear motion（来源：The Robot Report）
+   应用分析：这项技术非常能用，是EPS机械设计和性能优化的直接参考。在EPS机械结构设计和优化中，我们可以借鉴机器人领域对齿轮齿条系统的选型和优化经验。首先是齿轮尺寸优化，针对不同的EPS类型和线控转向需求，重新评估小齿轮尺寸对传动精度、传动比、NVH和寿命的影响。其次是传动链优化，学习机器人执行器如何通过机械设计来减少间隙、提高刚度，从而提升运动控制的精度和响应速度。再者是NVH优化，齿轮齿条啮合是EPS噪声的重要来源之一，机器人领域在精密传动中的NVH控制经验，比如齿形优化、材料选择和润滑方案，可以直接应用于我们的EPS产品。这值得我们中高优先级投入，对于提升产品核心竞争力有直接帮助。
+   https://www.therobotreport.com/how-to-select-the-right-rack-and-pinion-system-for-high-precision-linear-motion/
+
+7. Towards a Deterministic Math Solver for Clinical Language Models（来源：arXiv cs.AI）
+   应用分析：这项技术有潜力应用在我们的工作中，尤其是在AI辅助设计和验证工具链中。我们可以借鉴这种“大语言模型生成代码，然后由确定性执行器运行”的模式，来开发AI辅助的EPS工程工具。例如，在自动标定参数生成方面，可以让大语言模型根据工程师输入的标定目标、约束和历史数据，生成一段Python或MATLAB代码，用于计算初始标定参数或调整策略。然后由一个沙盒环境执行这段代码，确保计算的确定性和准确性。在功能安全分析辅助方面，可以让大语言模型根据功能安全需求，生成形式化的逻辑判断或验证脚本，辅助进行危害分析、风险评估或测试用例生成，并通过确定性执行器验证其逻辑。这值得我们中等优先级投入，它为大语言模型在安全关键型工程领域的应用打开了新的思路，有助于提升设计和验证效率，同时规避大语言模型本身的缺陷。我们可以在现有工具链中尝试集成小型原型来验证其可行性。
+   https://arxiv.org/abs/2609.10728</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260912-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260912-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260912-pm.mp3" length="4556304" type="audio/mpeg"/>
+      <pubDate>Sat, 12 Sep 2026 09:42:39 +0000</pubDate>
     </item>
   </channel>
 </rss>
