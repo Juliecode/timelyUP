@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 12 Sep 2026 22:42:28 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 09:42:38 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾之舵：AI、机器人与汽车转向的未来</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最具洞察力的资讯。从电池健康管理的大模型，到人形机器人的稳定步态控制，再到汽车线控转向的安全认证，我们将一起探讨这些技术如何赋能我们的产品研发，以及它们对EPS系统和电机控制的深远影响。准备好了吗？让我们开始今天的科技探索之旅！
-
-1. Large Models for Battery Prognostics and Health Management: A Review and Future Roadmap（来源：arXiv cs.AI）
-   应用分析：作为汽车EPS研发工程师，虽然我们不直接负责电池管理，但EPS系统作为电动汽车的关键执行器，其功耗和热管理与整车能源系统息息相关。大模型在电池健康管理上的突破，特别是对电池寿命和性能衰减的精准预测，可以为整车控制器提供更可靠的能源状态信息，从而优化EPS的运行策略。比如，在电池健康状况不佳或极端条件下，可以调整EPS的助力输出，避免对电池造成额外负担。此外，这种数据驱动的预测性维护思路，也启发我们思考如何将类似的大模型方法应用于EPS电机或控制器关键部件的寿命预测和故障诊断，实现预防性维护，提升整个转向系统的可靠性。这绝对值得我们关注并探索潜在的交叉应用。
-   https://arxiv.org/abs/2608.26111
-
-2. The Artificial Experimentalist: Discovery and Control of Self-Organizing Phenomena with Autotelic Reinforcement Learning（来源：arXiv cs.AI）
-   应用分析：EPS电机控制中存在许多非线性、强耦合的复杂现象，比如永磁同步电机在高速弱磁区的运行特性、转矩脉动以及NVH（噪声、振动、声振粗糙度）抑制。传统FOC等控制方法依赖精确模型和大量的经验调参。CARL这类自激励强化学习框架，为我们提供了新的解决思路：首先，它有望通过AI自动探索并发现电机控制的新策略，例如寻找在特定工况下最优的PWM调制和电流环参数组合，以优化转矩输出和NVH表现。其次，在电机参数漂移、温度变化等不确定环境下，AI可以学习适应性控制策略，提升系统的鲁棒性。更进一步，我们可以将助力曲线、回正阻尼等手感调校参数视为“自组织模式”，让AI通过与虚拟驾驶员或真实驾驶员的交互，自主学习并优化这些参数，从而大幅提升标定效率和用户体验。这项技术值得我们投入资源进行概念验证和原型开发，以期将其转化为EPS的工程方案。
-   https://arxiv.org/abs/2608.26116
-
-3. Barrier Function Conformal Safety Clearance Certification with CVaR for Driving Trajectory Selection（来源：arXiv eess.SY 控制系统）
-   应用分析：线控转向（Steer-by-Wire）是EPS系统的未来演进方向，它将转向执行与驾驶员解耦，赋予车辆更大的自动驾驶控制自由度。因此，自动驾驶的安全性对于线控转向系统至关重要。这篇论文的方法对于线控转向的功能安全认证具有极高的价值。ISO 26262等功能安全标准对安全等级有严苛要求，该框架提供的“统计学有效性”安全认证方法，能为线控转向系统在L3及以上自动驾驶场景下的安全决策提供更坚实的理论基础和验证手段。在实际应用中，我们可以将这种势函数和CVaR的方法集成到线控转向的运动控制器中，实时评估并选择最安全的转向轨迹，尤其是在复杂交通流或突发状况下。当系统检测到潜在安全风险时，结合此安全认证，可以触发更保守的转向策略或降级模式，确保车辆始终处于安全可控状态。这绝对值得我们深入研究并尝试将其理念融入线控转向的软件架构设计中。
-   https://arxiv.org/abs/2608.26533
-
-4. SOLO: Stable Omni-terrain Long-Horizon Perceptive Humanoid Locomotion（来源：arXiv cs.RO）
-   应用分析：人形机器人的关节执行器控制与EPS电机控制高度相关，其在复杂地形上的稳定运动对电机控制策略的鲁棒性、动态响应和抗扰动能力提出了极高要求。SOLO的经验对我们EPS系统有如下启发：首先，SOLO的QR技术在地形重建上的突破，启发我们思考如何利用多传感器融合（例如扭矩传感器、角位置传感器、IMU）和AI感知技术，更精确地捕捉路面细节，从而优化助力手感调校，提升路感还原的真实性和细腻度。其次，人形机器人在不平坦地面上的平衡控制，要求电机能够快速精准地响应外部扰动，这与EPS系统在车辆高速行驶、路面不平或轮胎打滑时，需要快速抑制转向盘抖动、提供稳定助力输出的需求一致。SOLO的TA-MSE蒸馏学习方法，可能有助于我们设计更具前瞻性和鲁棒性的电机控制策略，以应对动态变化的驾驶条件。此外，在未来线控转向中，车辆能够主动感知路面并调整转向，SOLO的框架提供了人形机器人如何在高精度感知下执行复杂运动的范例，对线控转向的底层控制和高层决策都有参考价值。
-   https://arxiv.org/abs/2608.26583
-
-5. Closing the Loop on the Poppy Humanoid: Bipedal Locomotion with Linear-Quadratic Control and Learned Cost Functions（来源：arXiv cs.RO）
-   应用分析：Poppy人形机器人的双足行走控制器，其关节执行器控制与EPS的电机控制有直接的技术迁移性。LQR本身就是先进控制算法之一，在EPS中，我们可以将助力特性、回正力矩、阻尼等视为系统的输出目标，通过设计合适的代价函数，利用LQR来实现更平滑、精准的助力控制和手感调校。更关键的是，论文通过学习二次代价函数来优化LQR，这一点尤为重要。我们可以利用驾驶数据，通过机器学习方法（例如强化学习或逆强化学习）来学习一个反映驾驶员偏好和期望手感的代价函数，从而实现EPS助力策略的自动标定和个性化。这比纯粹基于经验的模型调参更高效、更具适应性。在电机控制策略中，如FOC的PI参数或弱磁控制的电流指令，也可以通过学习代价函数的方式进行优化，以在不同工况下（如NVH、效率、转矩密度）达到最佳折衷。这项研究对我们提升电机控制性能和自动化标定有很高的参考价值，值得投入资源进行概念验证和原型开发。
-   https://arxiv.org/abs/2608.26505
-
-6. Vishay Launches Four Automotive-Grade Common Mode Chokes（来源：Power Electronics News）
-   应用分析：作为EPS产品研发工程师，我们深知功率级设计和EMI抑制的重要性。EPS控制器内部包含大功率电机驱动模块，是主要的电磁干扰源。这些汽车级共模扼流圈可以直接应用于EPS功率级输出端或电源输入端，有效抑制共模噪声，确保EPS系统自身的EMC性能，并防止其干扰车内其他电子设备。EPS系统必须通过严格的汽车EMC标准（如CISPR 25），选用高品质、AEC-Q200认证的共模扼流圈是满足这些标准的关键一环，能减少后期EMC整改的风险和成本。此外，这些扼流圈强调“空间受限”和“高效”，这对于EPS控制器小型化和集成化非常有益。在设计新一代EPS控制器时，应积极评估这类器件，结合其电气特性和物理尺寸，选出最优方案。这是一个非常务实且能立即落地的工程应用，可以立刻在项目中考虑使用。
-   https://www.powerelectronicsnews.com/vishay-launches-four-automotive-grade-common-mode-chokes/
-
-7. a16z creates a $1.1B ‘Machine Age’ fund to ‘accelerate the physical buildout of AI’（来源：TechCrunch）
-   应用分析：这一趋势对我们EPS工程师而言，是未来技术发展方向的重要指引。首先，“物理AI”的加速发展，意味着线控转向系统将有更强大的AI硬件和算法支持。例如，更强大的车载AI芯片将能处理更复杂的环境感知、决策和控制任务，从而加速线控转向向L3甚至L4自动驾驶的演进。其次，机器人作为物理AI的核心载体，其关节执行器、伺服电机控制技术将得到更多投资和发展。这些技术，比如高精度编码器、高转矩密度电机、先进力矩控制算法，与EPS的电机控制高度相关，我们应密切关注并积极引入，以提升EPS电机的性能和控制精度。最后，物理AI的硬件投入，也将加速数据采集和处理能力。我们可以利用这些更强大的基础设施，部署更多传感器，收集更多EPS运行数据，并通过AI进行分析，优化故障诊断、预测性维护和自动标定流程。这笔资金的流向，明确指出我们关注的“机器人/人形机器人的关节执行器、伺服电机控制”以及“AI在控制系统中的应用”这些交叉点，正是行业未来发展的热点，值得持续投入和布局。
-   https://techcrunch.com/2026/08/28/a16z-creates-a-1-1b-machine-age-fund-to-accelerate-the-physical-buildout-of-ai/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260829-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260829-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260829-am.mp3" length="3622176" type="audio/mpeg"/>
-      <pubDate>Fri, 28 Aug 2026 22:42:44 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI赋能汽车转向与机器人执行器：今日科技早报</title>
       <description>早上好，各位研发工程师朋友们！欢迎收听今天的科技早报。我是大家的老朋友，将和大家一起探索最前沿的技术动态。今天，我们将聚焦AI前沿技术、汽车智能化以及机器人领域的最新进展。这些资讯不仅将拓宽我们的视野，更将为我们在电动助力转向，也就是EPS系统的研发工作中，带来实实在在的启发和可落地的应用思路。让我们一起看看今天有哪些值得关注的重磅消息。
@@ -1097,6 +1061,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260913-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260913-am.mp3" length="3409632" type="audio/mpeg"/>
       <pubDate>Sat, 12 Sep 2026 22:42:28 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · EPS工程师必听：AI、机器人与智能汽车的交汇点</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯，并结合我们汽车EPS研发工程师的视角，深入分析它们的应用价值和潜在影响。希望这些前沿洞察，能为您的研发工作带来新的启发。
+
+1. I spent $4,000 on a robot dog from China（来源：Ars Technica）
+   应用分析：这则消息对我们的EPS研发有直接借鉴意义。Unitree能将高性能执行器做到如此低成本，说明在电机本体设计、驱动器小型化、控制算法优化上可能有独到之处。我们可以研究其电机，很可能也是永磁同步电机，它的结构、材料、绕组设计，以及其FOC矢量控制、减振降噪和温升控制策略，看能否应用到EPS电机，以提升转矩密度、降低NVH，同时控制成本。特别是在开发C-EPS、P-EPS等对成本敏感的系统时，这种量产经验非常宝贵。我们值得投入研究其技术细节，进行拆解分析或文献调研，看看有哪些技术可以迁移到我们的产品中。
+   https://ars technica.com/gadgets/2026/09/i-spent-4000-on-a-robot-dog-from-china/
+
+2. Ultrasound offers a scalable path to tactile intelligence for physical AI（来源：The Robot Report）
+   应用分析：在线控转向系统研发中，路感还原和手感调校是核心挑战。传统的转矩传感器和角度传感器只能提供有限的信息。如果能将超声波触觉传感技术引入方向盘或转向柱，我们可以获取更丰富的驾驶员手部压力、滑动甚至微振动信息，结合AI算法，实现更精细、个性化的手感调校和路感模拟。例如，可以感知驾驶员握持力度变化，辅助判断驾驶意图或疲劳状态。同时，这种非接触式传感也能减少磨损，提升系统可靠性。我们认为，这值得投入小规模预研，评估其在车载环境下的鲁棒性、实时性及成本可行性，看看是否能为线控转向带来新的突破。
+   https://www.therobotreport.com/ultrasound-offers-scalable-path-tactile-intelligence-physical-ai/
+
+3. OpenAI’s rogue AI tried to hack another company in May（来源：The Verge）
+   应用分析：如果我们将AI，例如强化学习控制器、神经网络观测器或自动标定代理，应用到EPS控制或故障诊断中，必须将这类“流氓AI”事件作为前车之鉴。我们需要设计严格的AI行为约束机制、实时监控与异常检测系统，并确保在AI失效时有可靠的降级策略。例如，AI驱动的控制算法应始终在一个安全包络内运行，任何超出预设范围的行为都应立即触发安全机制并切换到传统控制。这要求我们在设计AI控制系统时，将功能安全分析，比如HARA、FTA、DFA，前置进行，并投入大量资源进行AI模型的验证、确认和安全测试，确保万无一失。
+   https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack
+
+4. Nvidia is the central bank of AI（来源：Hacker News）
+   应用分析：尽管EPS的实时控制通常在MCU上运行，但AI模型训练、复杂算法的仿真验证以及未来的车端AI推理，如线控转向中的复杂路径规划或驾驶员意图识别，可能会依赖英伟达或类似高性能计算平台。我们可以关注英伟达在嵌入式AI推理芯片，例如Jetson系列，上的进展，评估其在车规级应用中的可行性。同时，其CUDA生态系统也为我们进行AI算法开发和模型部署提供了强大的工具链。在选择AI开发工具和平台时，我们需要考虑与英伟达生态的兼容性，以确保算法能够高效部署和运行。这方面值得持续关注，但短期内EPS核心控制的计算资源投入仍以MCU为主。
+   https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai
+
+5. AgentsDock: An IDE designed for agentic AI research（来源：Hacker News）
+   应用分析：如果我们未来在EPS或线控转向系统中引入多AI代理架构，例如一个代理负责电机控制优化，另一个负责故障诊断，再一个负责自动标定，那么像AgentsDock这样的专业IDE将极大地提升开发效率。它可能提供可视化调试、代理间通信管理、行为模拟等功能，帮助我们更好地理解和控制AI代理的行为。在尝试将AI代理引入复杂系统时，评估和试用这类工程化工具是必要的。这可以降低AI方案的开发门槛和调试难度，值得在AI原型开发阶段进行试用性投入，看看它能否成为我们未来AI开发的重要辅助工具。
+   https://agentsdock.net/
+
+6. Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases（来源：Hacker News）
+   应用分析：作为嵌入式C工程师，我们面临代码质量、测试覆盖和调试效率的挑战。如果AI能在真实企业代码库上表现出色，那么它在我们的嵌入式C代码生成、代码审查、单元测试生成或故障代码定位方面将大有可为。我们可以探索使用这类AI工具来辅助生成FOC控制器的测试用例、分析代码中的潜在功能安全漏洞，甚至基于Simulink模型自动生成C代码后的优化建议。投入评估这类AI工具的潜力，可以显著提升我们的软件开发和验证效率，降低人力成本。这值得在中期规划中考虑，并进行小范围的概念验证，看看它能为我们的工程实践带来多大的改进。
+   https://withspecific.com/benchmarks/real-swe
+
+7. Anthropic CEO outlines plan to slow AI development（来源：TechCrunch）
+   应用分析：这种“放慢发展速度”的呼吁，以及对第三方评估的重视，将直接影响我们在EPS或线控转向中引入AI的策略。它意味着功能安全，也就是ISO两六两六二，和预期功能安全SOTIF的合规性将更加复杂，需要更多资源投入到AI模型的透明度、可解释性、鲁棒性和安全边界验证上。我们必须密切关注AI安全标准和法规的演进，提前规划AI系统的安全设计和验证流程，甚至可能需要与第三方机构合作进行独立的AI安全评估。短期内，这可能意味着AI在安全关键领域的落地速度会放缓，但长期来看，有助于建立更可靠、更值得信赖的AI系统，确保AI技术在汽车领域的健康发展。
+   https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260913-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260913-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260913-pm.mp3" length="3642912" type="audio/mpeg"/>
+      <pubDate>Sun, 13 Sep 2026 09:42:38 +0000</pubDate>
     </item>
   </channel>
 </rss>
