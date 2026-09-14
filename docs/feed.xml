@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 13 Sep 2026 22:42:58 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 09:42:22 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 技术早报：AI代理、系统级算力与汽车Hypervisor的未来</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听《技术早报》，我是你们的主播兼技术分析师。今天，我们将聚焦人工智能前沿、汽车智能化和机器人技术这三大热点，为大家精选了七条重磅资讯。这些信息不仅能帮助我们洞察行业趋势，更能启发我们在电动助力转向，也就是EPS系统研发中的实际应用。让我们马上开始今天的技术之旅！
-
-1. The Rise and Fall of Agent Civilizations（来源：Hacker News）
-   应用分析：这篇文章本身是理论探讨，但其理念可启发我们。我们可以将AI代理的理念应用于EPS系统的复杂决策层。例如，设计一个“系统健康代理”来监控电机、传感器和控制器状态，自主诊断故障，并根据路况、驾驶员意图和车辆动态，智能调整助力策略。在未来的线控转向（Steer-by-Wire）系统中，可以有多个协同工作的代理，分别负责转向执行、安全冗余管理和人机交互，通过协作来提升系统鲁棒性和智能化水平。初期投入是知识学习和概念验证，长期来看，这种多代理协同的AI架构可能是解决线控转向复杂性、冗余性和功能安全挑战的关键方向之一，值得投入对相关概念的关注和研究。
-   https://www.dwarkesh.com/p/openai-huggingface
-
-2. Nvidia’s AI advantage is moving beyond the GPU（来源：TechCrunch）
-   应用分析：这篇文章提示我们，在设计下一代EPS或线控转向控制器时，不仅要关注MCU/GPU的算力，更要考虑整体系统架构的效率。例如，在选择用于AI控制算法（如强化学习控制器、神经网络观测器）的计算平台时，除了核心处理器，还需要关注内存带宽、数据传输路径、以及片上互联网络的优化。对于我们正在研究的AI自动标定和故障诊断，这类系统级优化能显著加速训练和推理过程，让系统在实时性要求严格的汽车环境中更好地运行。因此，值得高度关注和投入。理解这些趋势有助于我们与芯片供应商、Tier 1供应商沟通时，提出更符合未来AI应用需求的硬件和系统设计要求，确保我们设计的EPS方案在算力、延迟和效率上保持竞争力。
-   https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/
-
-3. Hy4 preview（来源：Hacker News）
-   应用分析：我们可以研究Hy4这类开源Hypervisor在汽车域控制器中的应用潜力。例如，在Steer-by-Wire系统中，可以将转向执行控制（ASIL D）运行在一个隔离的实时分区，而将辅助功能（如人机交互、OTA更新）运行在另一个非实时分区，并通过Hypervisor实现严格的资源隔离和调度。这有助于简化功能安全认证流程，提升系统的整体可靠性和灵活性。虽然从开源项目到车规级应用有很长的路要走，但了解其架构和性能，甚至尝试在非安全原型系统上进行概念验证，对于我们未来线控转向的架构设计和功能安全方案选型具有前瞻性价值。可以作为技术预研项目启动，值得深入评估和投入。
-   https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/
-
-4. Xcena and Samsung's Near Memory Compute CXL Device（来源：Hacker News）
-   应用分析：这类技术目前可能还未直接应用于车规级MCU或SoC，但它们代表了高性能计算的发展方向。我们应密切关注这些技术在汽车芯片中的集成进展。在未来线控转向系统或集中式计算架构中，需要处理来自多个传感器、执行器的大量数据，并实时进行复杂的控制计算。CXL和近内存计算有助于解决数据瓶颈，提升FOC等复杂电机控制算法的并行处理能力，以及AI算法的推理速度，从而保证系统在极端工况下的性能和响应速度。虽然短期内无法直接应用，但理解其原理和潜在优势，有助于我们与芯片供应商沟通，影响未来车规级芯片的设计，确保其满足高性能EPS和线控转向系统的需求，值得持续关注和技术储备。
-   https://chipsandcheese.com/p/hot-chips-2026-xcena-and-samsungs
-
-5. Lawmakers added $1 to car insurance policies. That money paid for Flock cameras（来源：Hacker News）
-   应用分析：对于EPS的直接研发，这类摄像头的数据不直接相关。但从更广阔的智能汽车生态来看，这些摄像头的数据可以作为补充信息源，用于城市交通管理、事故分析，甚至在未来为高级辅助驾驶系统（ADAS）提供超视距信息，例如前方路况异常、交通流预测等。这可以间接影响车辆的行驶策略，进而对EPS的助力曲线和手感调校提出新的要求，以适应不同的驾驶场景和外部环境信息。我们不需要直接开发利用Flock摄像头数据的技术，但理解其存在和潜在的数据流向，有助于我们更全面地思考智能汽车的外部环境感知能力和未来数据融合的可能性。投入主要是对行业趋势的了解和背景知识储备。
-   https://www.texastribune.org/2026/08/28/texas-flock-cameras-auto-insurance-fee-mvcpa-grants/
-
-6. The differences between decentralized and centralized power in swarm robotics（来源：The Robot Report）
-   应用分析：这篇文章的思路可以直接应用于线控转向（Steer-by-Wire）系统的冗余电源和控制架构设计。例如，在我们的R-EPS或未来线控转向系统中，可以考虑采用混合式的电源管理方案：关键的电机驱动和控制器电源采用中心化管理，确保高可靠性；而部分非安全关键的传感器或辅助单元则采用去中心化或局部分布式电源，以提高系统的灵活性和故障隔离能力。对于多电机冗余的EPS系统，可以借鉴群体机器人中分布式控制的思想，设计更鲁棒的故障诊断和降级运行策略。这是将机器人前沿研究快速转化为EPS工程方案的典型交叉点，值得我们高度投入和深入研究。我们可以组织内部讨论，研究如何将这些电源和控制架构理念应用到下一代产品开发中，甚至可以进行小规模的原理验证。
-   https://www.therobotreport.com/differences-between-decentralized-centralized-power-swarm-robotics/
-
-7. Sony Music, Warner sue Anthropic, alleging a “brazen campaign” of intellectual property theft（来源：TechCrunch）
-   应用分析：在我们探索AI / 数据驱动方法改进控制、标定效率、故障诊断时，可能会用到各种AI模型和工具。这条新闻提醒我们，在使用这些工具时，必须审慎评估其训练数据的来源和版权合规性。例如，如果我们考虑使用AI辅助代码生成，需要确保所使用的模型没有侵犯任何开源协议或商业版权，避免引入潜在的法律风险。在内部开发AI模型时，也要确保训练数据的获取和使用符合公司政策和法律法规。投入主要是风险管理和合规性意识的提升。不需要直接投入技术研发，但需要组织内部讨论，建立使用AI工具的风险评估和合规性指南，确保研发过程的合法合规。
-   https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260830-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260830-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260830-pm.mp3" length="3467952" type="audio/mpeg"/>
-      <pubDate>Sun, 30 Aug 2026 09:42:43 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI、智驾与机器人：EPS工程师的今日洞察</title>
       <description>早上好，各位研发工程师朋友！欢迎收听今天的科技早报。我是大家的老朋友，将和您一起洞察科技前沿。今天，咱们重点关注人工智能、汽车智能化和机器人这三大热门方向的最新进展，看看这些消息如何影响我们的研发工作，以及我们能从中汲取哪些灵感。
@@ -1097,6 +1061,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260914-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260914-am.mp3" length="3756240" type="audio/mpeg"/>
       <pubDate>Sun, 13 Sep 2026 22:42:58 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技早报：AI赋能安全控制与智能汽车数据治理</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能的前沿突破、汽车智能化的最新进展，以及机器人技术在实际应用中的创新。从AI模型如何在物理系统中提供可靠的不确定性估计，到自动驾驶车辆如何更安全地识别弱势道路使用者，再到嵌入式控制器如何高效运行复杂算法，以及智能汽车数据隐私的挑战，每一条都与我们的研发工作息息相关。话不多说，让我们立即进入今天的科技世界！
+
+1. Physics-Informed Conformal Prediction: Embedding PDE Consistency into Distribution-Free Uncertainty Quantification for Neural Operators（来源：arXiv cs.LG）
+   应用分析：对于我们EPS工程师来说，如果未来在电机控制策略中引入AI模型，比如用于FOC参数自适应、无传感器观测器或转矩脉动抑制，PI-CP框架能让这些AI模型给出的预测带上可靠的不确定性区间。这能帮助我们判断AI模型的置信度，当不确定性过高时，可以触发降级模式或切换到传统的基于模型的控制，从而满足ISO 26262等功能安全要求。这是一个非常值得投入研究的方向，尤其是在提升无传感器控制方案可靠性方面潜力巨大。
+   https://arxiv.org/abs/2609.11935
+
+2. Efficient AI Model Deployment Using Quantization Analysis Tool（来源：arXiv cs.LG）
+   应用分析：如果我们要将基于神经网络的转矩脉动抑制、NVH优化或故障诊断模型部署到EPS的MCU上，这个量化分析工具将非常实用。它能帮助我们评估不同量化方案对模型精度和性能的影响，指导我们进行模型剪枝、量化到INT8甚至更低精度，确保在满足实时性要求的同时，尽可能减少精度损失。这能直接提升AI方案在嵌入式产品上的落地能力，非常值得关注和实践。
+   https://arxiv.org/abs/2609.11954
+
+3. Scenario-Independent Criticality Assessment and Prediction for Vulnerable Road Users in Autonomous Driving（来源：arXiv cs.RO）
+   应用分析：尽管EPS本身不直接负责VRU识别，但作为线控转向的执行端，我们需要理解上层决策系统（如自动驾驶域控制器）如何评估危险并下达指令。这项研究有助于我们理解未来线控转向系统在紧急避障场景下需要满足的响应时间、精度要求，以及对助力曲线、阻尼控制和最大转向角速度的潜在需求。可以作为未来线控转向系统需求定义和性能验证的参考，指导我们提前布局相关的控制策略预研，确保系统在极端情况下的安全性和鲁棒性。
+   https://arxiv.org/abs/2609.11947
+
+4. Multi-Objective Agent-Based Model Predictive Controller for Plug-and-Play Vehicle Control（来源：arXiv cs.RO）
+   应用分析：线控转向系统需要同时满足助力手感、回正、路感反馈、功能安全等多个目标，同时还要与车辆稳定性控制（ESP/ESC）、自动驾驶路径跟踪等上层功能协调。AMPC的分布式和多目标优化能力，可以为线控转向系统内部的多个控制模块（如助力控制、阻尼控制）以及与外部系统的协调提供新的思路。尤其是在线控转向向更高级别演进时，这种架构能提高系统的灵活性和可维护性。我们值得深入研究其在EPS/SBW系统中的应用潜力，例如将EPS的不同控制子任务视为Agent，通过AMPC进行协调优化。
+   https://arxiv.org/abs/2609.12108
+
+5. Pelican-Sim 1.0: A General World Model Simulator for Embodied Intelligence（来源：arXiv cs.RO）
+   应用分析：我们可以借鉴这种世界模型和统一动作表示的理念，构建更高级别的EPS或线控转向系统仿真平台。例如，在Simulink/dSPACE HIL环境中，结合车辆动力学模型、路面模型和驾驶员模型，建立一个更具泛化能力的世界模型，用于快速迭代和测试不同的助力策略、故障注入和恢复逻辑。这可以显著提高开发效率，减少对真实台架和整车测试的依赖，尤其是在线控转向这种复杂交互系统中，通过预测性仿真来验证安全性和鲁棒性非常关键。值得深入研究其在提高仿真保真度和泛化性方面的技术。
+   https://arxiv.org/abs/2609.12036
+
+6. An Adaptive Multi-Parameter ADMM Algorithm for Embedded MPC（来源：arXiv eess.SY 控制系统）
+   应用分析：EPS电机控制中，FOC、弱磁控制等都需要高实时性。如果能将MPC应用于更复杂的电机控制策略（如转矩脉动抑制、温漂补偿、多目标优化），或者线控转向的力反馈控制，那么解决其在MCU上的计算效率是关键。这种优化的ADMM算法可以直接集成到我们的嵌入式MPC求解器中，提升算法的收敛速度和实时性，使得MPC在EPS控制器中的应用成为可能。这对于我们提升电机控制策略的性能和鲁棒性，以及探索线控转向的先进控制方案都非常有帮助，非常值得投入精力进行原理研究和代码实现验证。
+   https://arxiv.org/abs/2609.12992
+
+7. Data collected by cars and sold to third parties（来源：Hacker News）
+   应用分析：作为EPS研发工程师，我们需要关注数据流向和使用规范。EPS控制器产生的数据，如转向角、助力扭矩、电机运行参数等，都是敏感数据。在设计系统架构和软件功能时，必须考虑数据的采集、存储、传输和使用是否符合数据隐私法规（如GDPR、国内相关法规）。这要求我们在功能安全（ISO 26262）之外，额外引入信息安全（Cybersecurity）的考量，确保EPS系统产生的数据不会被未经授权地访问或滥用。虽然不是直接的技术开发，但关乎产品合规性和用户信任，是不可回避的课题，需要将其纳入产品需求和设计考量中。
+   https://www.theverge.com/column/994172/your-car-is-selling-your-data</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260914-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260914-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260914-pm.mp3" length="3358224" type="audio/mpeg"/>
+      <pubDate>Mon, 14 Sep 2026 09:42:22 +0000</pubDate>
     </item>
   </channel>
 </rss>
