@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 14 Sep 2026 22:42:40 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 22:42:22 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 研发工程师早报：AI、汽车智能化与机器人前沿技术速递</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为大家精选了七条最值得关注的重磅资讯。从强化学习的探索效率到汽车功能安全，从新型功率器件到机器人数据管道，内容丰富，干货满满，希望能为您的日常研发工作带来新的启发。
-
-1. Marginal Coverage Credit Reduces Redundant Exploration in Parallel State-Entropy Optimization（来源：arXiv cs.LG）
-   应用分析：在EPS电机控制策略的AI自动调优中，特别是当我们尝试使用强化学习来优化助力曲线、阻尼回正等复杂手感参数时，探索效率直接影响开发周期。MCC-PGPSE能帮助我们更高效地探索手感参数空间，避免在已知或重复区域浪费计算资源。这值得我们持续关注，并可在模型预测控制（MPC）或自适应控制的仿真环境中尝试集成，评估其在实际物理模型上的收敛速度和性能提升，特别是对于减少台架测试次数和加速标定流程有潜在价值。
-   https://arxiv.org/abs/2608.27507
-
-2. Backup Control Barrier Function Synthesis using Sum-of-Squares Reachability（来源：arXiv eess.SY 控制系统）
-   应用分析：在线控转向（Steer-by-Wire）系统中，功能安全是重中之重。当EPS系统向线控转向演进时，需要确保在任何故障模式下（如传感器失效、电机过载）系统都能保持安全可控。这个bCBF合成方法可以用于设计和验证EPS在极端工况或降级模式下的安全控制器。我们可以将其理论应用于故障诊断与降级策略的数学建模和形式化验证，例如，在电机弱磁控制或过温保护场景下，如何确保转向力矩的输出安全边界。投入研究其在嵌入式系统中的计算复杂度和实时性，如果可行，可作为未来线控转向功能安全设计的重要工具链一环。
-   https://arxiv.org/abs/2608.27916
-
-3. China's new rules give smart-vehicle sensors more design freedom（来源：CnEVPost）
-   应用分析：虽然EPS本身不直接使用这些感知传感器，但作为线控转向的未来执行器，EPS的性能和功能会受到整车智能化水平的影响。更大的设计自由度意味着更精准、更可靠的环境感知，这对于线控转向系统进行高级路径规划、避障和协同控制至关重要。我们可以关注这些新传感器带来的整车架构变化，以及它们如何为更高等级的自动驾驶提供支持，进而思考EPS在其中扮演的角色，例如，如何与更精确的路径规划算法配合，提供更细腻、更快速的转向响应。这是一个需要我们保持关注的政策和技术趋势。
-   https://cnevpost.com/2026/08/31/china-new-rules-smart-vehicle-sensors-more-design-freedom/
-
-4. Advanced Cooling Technologies Address the Automotive Heat Challenge（来源：EE Times）
-   应用分析：对于EPS而言，电机和功率级（如IGBT或MOSFET）的散热是核心设计挑战之一。永磁同步电机（PMSM）在追求高转矩密度和效率的同时，温升控制至关重要，特别是弱磁控制在高转速下会加剧发热。先进冷却技术，如微通道冷却、两相流冷却或更高效的液冷方案，可以直接提升EPS电机和功率器件的性能边界和可靠性。这值得我们深入研究，特别是针对高功率密度EPS电机和集成式控制器，可以评估不同冷却方案对电机温升、效率和NVH表现的影响，并探索将其集成到下一代EPS产品中的可行性。
-   https://www.eetimes.com/advanced-cooling-technologies-address-the-automotive-heat-challenge/
-
-5. ROHM Unveils 4th-Generation 650V IGBTs（来源：Power Electronics News）
-   应用分析：EPS系统中的功率级需要高效、可靠的功率器件来驱动电机。罗姆新一代IGBT的特性，如低导通损耗和七微秒的短路耐受时间，可以直接提升EPS控制器的效率和功能安全性。更低的损耗可以减少发热，简化散热设计，或者在相同散热条件下实现更高的功率输出。高短路耐受时间则对故障诊断与降级策略设计提供了更大的裕度，例如在电机短路故障发生时，为保护电路争取更多响应时间。我们应密切关注这类新型功率器件，并在电机控制器硬件设计和仿真阶段进行选型评估，特别是在追求高效率和高功能安全等级的EPS产品中，其价值非常高。
-   https://www.powerelectronicsnews.com/rohm-unveils-4th-generation-650v-igbts/
-
-6. Beyond Relative Geometry: Metric-Aware Geometry Perception for Robotics（来源：arXiv cs.RO）
-   应用分析：尽管EPS本身不直接进行几何感知，但线控转向系统作为未来智能汽车的核心执行器，需要与高精度的环境感知系统紧密配合。MAGP这类技术能为车辆提供更精确的周围环境“度量”信息，例如前方障碍物的精确尺寸和距离，这能让线控转向系统在自动泊车、狭窄空间机动、甚至紧急避障时，做出更精准、更自信的转向决策。虽然目前不是EPS工程师直接的工作，但了解这种上层感知能力的提升，有助于我们预判线控转向在未来高精度操作场景下的需求，并思考如何优化EPS的响应速度和控制精度以匹配这些需求。值得长期关注，作为线控转向技术路线图的一部分。
-   https://arxiv.org/abs/2608.27497
-
-7. Launch HN: Hebbian Robotics (YC S26) – Build scalable robotics data pipelines（来源：Hacker News）
-   应用分析：我们正在探索用AI/数据驱动方法改进EPS的控制、标定效率和故障诊断。这需要大量的电机运行数据、传感器数据以及对应的控制指令和环境参数。Hebbian Robotics发布的HFlow提供的标准化、质量受控的数据管道，正是我们目前最想解决的问题之一——如何高效地管理和利用海量的EPS台架测试数据、整车标定数据和实际运行数据。通过HFlow，我们可以更好地对电机控制算法的仿真数据、HIL/SIL数据进行管理，加速模型训练和验证。这非常值得投入研究和尝试，可以考虑在内部搭建一个类似的数据管理平台，用于对电机控制策略的实验数据进行规范化处理，提升数据利用率和算法迭代速度。
-   https://github.com/Hebbian-Robotics/hflow</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260901-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260901-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260901-pm.mp3" length="3054528" type="audio/mpeg"/>
-      <pubDate>Mon, 31 Aug 2026 16:21:58 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI、智能汽车与机器人前沿：EPS工程师的今日洞察</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦人工智能前沿、汽车智能化和机器人技术这三大热点方向，为您精选了七条最有价值的资讯。这些进展不仅预示着未来的技术趋势，更可能为我们正在从事的汽车电动助力转向，也就是EPS系统的研发，带来颠覆性的思路和解决方案。让我们一起看看今天有哪些值得关注的亮点吧！
@@ -1097,6 +1061,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260915-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260915-am.mp3" length="3890304" type="audio/mpeg"/>
       <pubDate>Mon, 14 Sep 2026 22:42:40 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI驱动智能控制：从物理智能体到EPS电机精细化</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们聚焦人工智能前沿、汽车智能化和机器人三大领域，为您精选了七条重磅资讯。从大型语言模型如何管理物理任务，到多目标优化在工程中的高效应用，再到电动汽车驱动桥的最新进展，以及机器人执行器控制和安全协作的突破，每一条都与我们的智能控制系统息息相关。接下来，就让我们一起深入探讨这些技术如何赋能我们的研发工作。
+
+1. Toward Self-Adaptive Physical AI: Can LLM Agents Manage Long-Horizon Physical Tasks?（来源：arXiv cs.AI）
+   应用分析：这项技术潜力巨大。目前EPS/SbW的控制策略和手感调校需要大量人工经验和基于模型的参数调整。如果LLM智能体能理解“驾驶意图”和“路况”，结合车辆动力学模型，自主生成或调整助力曲线、阻尼补偿等策略，将是颠覆性的。初期可用于自动标定：LLM智能体分析驾驶员反馈、路测数据，结合车辆模型，自动调整助力曲线参数，减少人工标定周期。长期来看，有望实现线控转向的自适应控制，例如在不同路面附着力、车速、驾驶风格下，LLM智能体实时调整转向手感和响应特性，甚至在传感器失效等异常情况下，通过“工具调用”和“验证”机制，切换到降级模式或冗余方案。投入非常值得，这是未来智能驾驶控制系统的核心方向之一。
+   https://arxiv.org/abs/2609.13436
+
+2. Converge Then Diversify: Decoupling Convergence and Diversity in Multi-Objective Bayesian Optimisation（来源：arXiv cs.AI）
+   应用分析：这项技术非常能用，是我们日常工作中的痛点。它可以立即应用于：一、电机控制参数优化，比如利用该方法优化FOC控制器中的PI参数、弱磁控制参数，以同时满足效率、转矩脉动、NVH等目标。二、助力策略与手感调校，在整车标定阶段，将驾驶员对不同手感参数组合的评价作为目标函数，利用MOBO高效探索帕累托最优解集。三、无传感器控制鲁棒性优化，使其在满足位置/速度估计精度的同时，对温漂、参数变化等具有更好的鲁棒性。投入产出比高，贝叶斯优化本身就是高效的黑盒优化工具，这项改进使其在有限资源下表现更好，非常适合我们实验资源有限、评估成本高的场景。
+   https://arxiv.org/abs/2609.13396
+
+3. Predicted-Flow Control Barrier Functions for Non-Control-Affine Systems（来源：arXiv eess.SY 控制系统）
+   应用分析：这项技术绝对能用，并且是线控转向发展的关键技术。线控转向系统需要严格避免任何可能导致失控的危险状态。P-CBF可应用于：一、线控转向冗余与功能安全，确保在各种正常及故障情况下，转向系统始终保持在安全操作区域内，例如在传感器异常、电机过热时限制转向指令。二、助力限制与防抖，在极端驾驶条件下，如高速急转弯或路面附着力突变，P-CBF可以限制助力输出或转向角速率，防止系统振荡。三、人机共驾安全，作为安全层确保自动驾驶系统在接管或驾驶员干预时，转向行为始终安全。投入非常值得，这是将高级控制理论转化为实际工程安全方案的重要路径。我们需要深入研究其理论基础，并结合Simulink或嵌入式C实现，通过MIL/SIL/HIL验证其在EPS/SbW系统中的有效性和计算效率。
+   https://arxiv.org/abs/2609.13591
+
+4. Bosch’s new rigid e-axle integrates motor and transmission for heavy electric trucks（来源：Charged EVs）
+   应用分析：这项技术虽然是间接相关，但能提供重要的设计参考。重型卡车的电驱动桥，其电机控制、效率、NVH、可靠性等方面的工程挑战与EPS的电机有相似之处。我们可以研究博世电驱动桥中永磁同步电机（PMSM）的设计思路，例如其转矩密度、散热、NVH优化方案，以及电机与变速箱的集成方式，从中寻找EPS电机小型化、轻量化、高效率、低NVH的灵感。尤其是在R-EPS等直接驱动车轮的转向系统中，这种集成化趋势更具参考价值。了解这种深度集成方案有助于我们拓宽视野，为EPS/SbW的未来发展方向提供输入，值得适度关注。
+   https://chargedevs.com/newswire/boschs-new-rigid-e-axle-integrates-motor-and-transmission-for-heavy-electric-trucks/
+
+5. IMM-based Multiple Object Tracking using a State Prediction Neural Network（来源：arXiv cs.RO）
+   应用分析：这项技术可以作为线控转向决策的输入。PR-IMM提供的高精度目标预测信息，可以作为线控转向系统进行路径规划和轨迹跟踪的输入。例如，在自动泊车场景中，精确预测周边障碍物的运动轨迹，可以使转向系统更流畅、更安全地完成泊车动作。在紧急避障场景中，对前方障碍物位置和速度的准确预测，能让线控转向系统更快、更精准地做出避让决策，提升车辆安全性。同时，Transformer模型的引入，可能对复杂交通场景下的预测鲁棒性有帮助，减少误判。值得关注。虽然不是我们直接开发，但了解和评估这类先进感知算法的性能边界，能帮助我们更好地定义线控转向系统的输入需求，并为未来的高级别自动驾驶功能提供支持。
+   https://arxiv.org/abs/2609.13307
+
+6. Extending the Speed Limit of Quadrupedal Locomotion via Refined Actuator Modeling and Adaptive Command Scheduling（来源：arXiv cs.RO）
+   应用分析：这项研究的思路和方法极度能用，可以直接借鉴到EPS的电机控制策略开发中。我们可以借鉴其“精细化执行器模型”，将EPS电机的高速电压耦合、磁饱和等非线性特性更精确地纳入控制模型。这有助于提升FOC和弱磁控制在高速、大转矩工况下的性能，减少转矩脉动和损耗。同时，将“自适应指令调度”的思想引入EPS的电机控制，例如在不同温度、负载或电机老化程度下，通过自适应算法调整FOC参数或转矩脉动抑制策略，确保系统性能和NVH的一致性。探索将强化学习引入电机控制策略的开发，特别是在难以建立精确数学模型的复杂工况下，通过RL自主学习最优控制策略。这是机器人领域最前沿的执行器控制技术，与EPS电机控制有直接的理论和工程共性，非常值得投入。
+   https://arxiv.org/abs/2609.13289
+
+7. Agility’s new humanoid robot will stop, squat to avoid harming human coworkers（来源：Ars Technica）
+   应用分析：这项研究的安全交互理念和技术可以借鉴。虽然EPS本身不是主动与人进行物理接触的机器人，但其控制的转向柱或方向盘是驾驶员直接接触的部件。线控转向系统在未来可能需要应对驾驶员意外触碰、儿童误操作等场景。我们可以借鉴Digit 5的“感知-判断-安全响应”模式，为线控转向系统设计更智能的人机安全交互机制。例如，在自动驾驶模式下，如果驾驶员意外触碰方向盘，系统应能识别这是无意干预还是紧急接管，并做出安全且符合预期的响应。将人形机器人的人机安全设计原则引入ISO 26262功能安全分析，在设计故障诊断与降级策略时，最大限度地减少对驾驶员的物理冲击和心理影响。人机共融是未来智能系统的重要趋势，安全是其基石，值得重点关注。
+   https://arstechnica.com/ai/2026/09/agilitys-new-humanoid-robot-will-stop-squat-to-avoid-harming-human-coworkers/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260916-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260916-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260916-am.mp3" length="3180816" type="audio/mpeg"/>
+      <pubDate>Tue, 15 Sep 2026 22:42:22 +0000</pubDate>
     </item>
   </channel>
 </rss>
