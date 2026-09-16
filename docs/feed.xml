@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 15 Sep 2026 22:42:22 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 09:42:45 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI、智能汽车与机器人前沿：EPS工程师的今日洞察</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦人工智能前沿、汽车智能化和机器人技术这三大热点方向，为您精选了七条最有价值的资讯。这些进展不仅预示着未来的技术趋势，更可能为我们正在从事的汽车电动助力转向，也就是EPS系统的研发，带来颠覆性的思路和解决方案。让我们一起看看今天有哪些值得关注的亮点吧！
-
-1. Marginal Coverage Credit Reduces Redundant Exploration in Parallel State-Entropy Optimization（来源：arXiv cs.LG）
-   应用分析：对于EPS研发，我们可以考虑将助力曲线调校、路感还原等复杂非线性控制策略，或电机参数自适应辨识，建模为强化学习任务。利用这项新算法，可以在HIL仿真或多台架并行测试中，同时探索多种助力特性或电机控制参数组合，减少重复探索，加速找到最优策略。例如，让多个智能体并行学习在不同路况、车速下的最佳助力输出，以实现更优手感和NVH表现。传统调校效率低，AI自动调校是未来趋势，提升RL探索效率是实现此目标的关键，值得投入研究。
-   https://arxiv.org/abs/2608.27507
-
-2. Unsupervised Continual Learning with Growing Self-Organizing Maps and Synthetic Replay（来源：arXiv cs.LG）
-   应用分析：这项技术非常适合应用于EPS的自适应控制和故障诊断。EPS系统需要适应电机参数温漂、机械磨损、驾驶员个体差异等。我们可以利用该框架训练一个无监督模型来学习EPS的正常工作模式，并持续更新对“正常”的理解。通过学习到的分布统计信息生成合成样本，可以用于模拟不同故障模式，辅助故障诊断模型的训练，提升其对未知故障的识别能力，实现预测性维护。这对于提升无传感器控制的鲁棒性，应对参数不确定性有巨大潜力。鉴于其解决了嵌入式AI部署的资源和隐私痛点，尤其对于线控转向这种安全性要求极高的系统，是值得投入的。
-   https://arxiv.org/abs/2608.27662
-
-3. PHR-VLA: Planning Horizon Reasoning for Vision-Language-Action Models（来源：arXiv cs.RO）
-   应用分析：在线控转向中，方向盘与路面的反馈是典型的接触密集型交互。我们可以将PHR-VLA的思想应用于线控转向的控制策略，通过感知车辆内外信息，结合驾驶员意图，预测车辆与路面的未来交互力，并据此规划转向执行器的精细动作。例如，在通过湿滑路面或碎石路时，模型可以预测轮胎抓地力变化和路面冲击，提前调整助力曲线和阻尼，提供更平稳、安全的手感。此外，它也能用于自动标定：通过观察人类专家在特定场景下的操作视频和口头解释，模型能够学习并复现精细的转向手感。线控转向的难点之一就是精确模拟路感和提供恰当助力，PHR-VLA为解决此问题提供了新思路，值得投入。
-   https://arxiv.org/abs/2608.27609
-
-4. Advanced Cooling Technologies Address the Automotive Heat Challenge（来源：EE Times）
-   应用分析：我们的EPS系统设计必须将先进冷却技术纳入考量。在电机选型和封装设计时，要考虑采用浸入式冷却、微通道散热器或热电冷却等方案，以提升电机在高负载下的连续输出能力，并避免过热导致的性能衰减和NVH恶化。对于控制器功率级，需要评估新型散热材料、热管技术或液冷方案，确保IGBT/MOSFET等关键器件工作在安全温度范围内，提高功能安全等级（ISO 26262）。热管理是EPS系统性能、可靠性和成本的关键制约因素，必须持续投入。
-   https://www.eetimes.com/advanced-cooling-technologies-address-the-automotive-heat-challenge/
-
-5. China's new rules give smart-vehicle sensors more design freedom（来源：CnEVPost）
-   应用分析：作为EPS研发工程师，我们需要理解这些政策变化对整车架构和线控转向系统输入的影响。更大的传感器设计空间意味着我们可以期待更强大的感知数据流，例如更高分辨率的摄像头、更远探测距离的雷达。我们需要与感知团队紧密合作，了解其技术路线图，并提前规划线控转向系统如何利用这些增强的感知数据。例如，利用更精确的路面信息，可以动态调整助力策略和手感，提供更优的操纵稳定性和安全性。同时，也需关注V2X天线带来的车路协同信息，这对于提升线控转向在复杂交通环境下的预见性控制能力至关重要。充分利用政策利好，推动系统融合，值得投入。
-   https://cnevpost.com/2026/08/31/china-new-rules-smart-vehicle-sensors-more-design-freedom/
-
-6. Skild AI unveils S1 flagship robot foundation model（来源：The Robot Report）
-   应用分析：这项技术在自动化测试、生产装配和自动标定方面有巨大潜力。我们可以将经验丰富的工程师进行EPS手感调校的视频录制下来，作为S1这类模型学习的“示范”。机器人通过分析视频中的操作，结合车辆运行数据，自动学习并生成一套接近专家水平的助力曲线或控制参数，极大减少台架和整车标定时间。在生产线上，也能训练机器人观看人工操作视频，快速学习并执行精细装配或检测任务。通过视频学习是机器人从示教走向自主学习的重要途径，有望彻底改变EPS的标定流程和生产自动化水平，值得我们投入研究。
-   https://www.therobotreport.com/skild-ai-unveils-s1-flagship-robot-foundation-model/
-
-7. Backup Control Barrier Function Synthesis using Sum-of-Squares Reachability（来源：arXiv eess.SY 控制系统）
-   应用分析：这项技术非常适合用于线控转向的功能安全设计和故障降级策略。我们需要确保即使在主控制器故障或传感器失效的情况下，车辆也能保持可控。bCBF可以用于设计一个“备用”控制器，该控制器在主系统失效时能够接管，并将系统引导至一个已知的安全状态。通过这项研究提出的“和平方可达性”方法，我们可以更精确地计算出这个“备用安全集”以及对应的控制器，使其在满足安全约束的同时，提供尽可能多的操作裕度。这对于线控转向这种Safety-of-the-Safety-System的应用，形式化验证和安全保障是不可或缺的，是必须投入的。
-   https://arxiv.org/abs/2608.27916</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260901-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260901-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260901-am.mp3" length="4196736" type="audio/mpeg"/>
-      <pubDate>Mon, 31 Aug 2026 22:43:15 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI赋能转向，智能汽车安全与机器人执行器前沿</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿技术在控制系统中的应用、汽车智能化在极限操控和安全防护上的最新进展，以及机器人领域在低成本硬件和安全保障方面的突破。这些资讯都与我们的电动助力转向，也就是EPS系统的研发工作息息相关，希望能给大家带来一些启发。
@@ -1097,6 +1061,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260916-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260916-am.mp3" length="3180816" type="audio/mpeg"/>
       <pubDate>Tue, 15 Sep 2026 22:42:22 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 研发工程师科技早报：AI推理与控制安全，机器人精细操作与汽车电动化新趋势</title>
+      <description>大家好，欢迎收听今天的研发工程师科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，精选七条重磅资讯，深入分析它们对我们电动助力转向，也就是EPS产品研发工作的具体影响和落地潜力。准备好了吗？让我们一起开启今天的科技之旅！
+
+1. AI推理已成为当前AI发展的焦点，其硬件和软件优化正推动AI模型在实际应用中更高效落地。（来源：IEEE Spectrum）
+   应用分析：非常能用。对我们EPS研发工程师而言，在MCU上实现高级故障诊断、预测性维护，甚至自适应助力曲线时，推理效率是核心。我们需要关注模型量化、剪枝和专用推理加速器等优化技术，选择具备强大AI推理能力的MCU。这是AI在汽车嵌入式系统落地的必经之路，投入研究和学习推理优化技术，将直接决定EPS系统AI功能的广度和深度，也是未来产品差异化的重要方向。
+   https://spectrum.ieee.org/inference-hardware-revolution
+
+2. 一项新研究综述探讨了如何将大型语言模型（LLM）安全、稳定地集成到网络化控制系统、信息物理系统和多智能体系统的控制回路中。（来源：arXiv eess.SY 控制系统）
+   应用分析：能用，但需要谨慎。LLM不适合直接用于EPS的实时FOC控制环，但可以作为高层监督和优化工具。例如，我们可以利用LLM处理复杂的自然语言指令，结合车辆数据和驾驶员偏好，生成或优化EPS的助力曲线参数，实现更个性化、更高效的自动标定。在故障诊断和预测性维护中，LLM也能分析传感器数据和故障码，提供更智能的诊断报告。在线控转向的架构设计中，LLM可以辅助工程师进行冗余架构和功能安全分析。投入探索是值得的，但必须明确LLM的边界，确保核心安全功能仍由可预测、可验证的传统算法实现，符合ISO 26262的要求。
+   https://arxiv.org/abs/2609.16599
+
+3. 一项新研究提出基于Fisher信息距离的神经网络剪枝新方案，能更有效地移除不重要参数，提升模型性能和效率。（来源：arXiv cs.AI）
+   应用分析：非常能用。无论是在线控转向的复杂控制模型中，还是在EPS的传感器融合、故障诊断等AI辅助功能中，都需要部署轻量级、高效的神经网络。在将AI模型部署到EPS控制器MCU（如英飞凌Aurix系列）时，剪枝是减少模型大小、降低内存占用、提高推理速度的有效手段。我们可以尝试将此方法应用于我们正在开发的神经网络状态观测器、参数辨识模型，或用于NVH抑制的神经网络补偿器。剪枝后的模型在满足性能要求的前提下，可以显著降低计算资源需求和功耗，这对于车规级产品至关重要。这绝对是值得投入的，能够让我们在有限的硬件资源下，实现更复杂、更智能的EPS功能，提升产品竞争力。
+   https://arxiv.org/abs/2609.16129
+
+4. 宁德时代发布了Tectrans II商用车电池，为重型卡车提供高达1000公里续航，并支持兆瓦级快充。（来源：CnEVPost）
+   应用分析：间接能用。虽然不是直接用于EPS的开发，但它反映了电动汽车，尤其是重型电动汽车的技术发展趋势。兆瓦级快充的普及，意味着车辆电气系统需要承受更高的电流和功率。这会影响到我们EPS系统的电源管理、EMC设计，以及大功率电机（特别是R-EPS或线控转向中的高功率电机）的散热和功率级器件选型。同时，高压电池系统和充电技术的发展，也为线控转向等功能安全所需的电源冗余提供了更多设计空间。作为汽车工程师，需要持续关注整个电动汽车生态的技术演进，以便提前规划我们的系统架构和器件选择。
+   https://cnevpost.com/2026/09/15/catl-launches-tectrans-ii-commercial-vehicle-battery/
+
+5. 2028款沃尔沃XC60插电混动车型纯电续航里程大幅提升至78英里（约125公里），是美国市场PHEV中最长的。（来源：Charged EVs）
+   应用分析：间接能用。对EPS系统本身无直接影响，但对我们理解市场趋势和未来EPS产品的集成环境有帮助。纯电续航的增加可能意味着车辆在纯电模式下运行的时间更长，这可能导致EPS系统在纯电模式下的运行工况数据积累更多，有助于我们针对纯电模式下的NVH、能耗进行优化。同时，随着整车对能耗的关注度提高，EPS系统也需要持续优化自身的能耗表现。线控转向系统由于其灵活性，在纯电模式下可以通过更精细的控制实现进一步的节能。值得持续关注市场趋势，以便在EPS系统设计时更好地匹配整车性能目标和用户体验。
+   https://chargedevs.com/newswire/2028-volvo-xc60-long-range-phev-gets-whopping-78-miles-of-electric-range/
+
+6. 一项新框架Bi-MoDe通过“修改器条件解码”实现双边控制的模仿学习，允许操作者在推理时调整机器人执行速度和接触强度。（来源：arXiv cs.RO）
+   应用分析：非常能用，这是与EPS电机控制高度相关的技术。EPS的手感调校目前主要依赖人工经验和反复试验。Bi-MoDe的思想可以借鉴：将驾驶员对“运动”、“舒适”、“轻柔”等手感偏好的自然语言描述，通过某种“修改器”映射到FOC控制器的参数（如助力曲线、阻尼系数、回正力矩）上。通过模仿学习或强化学习，让系统学习不同驾驶风格与控制参数之间的关系，实现更个性化、更高效的自动标定。在线控转向中，方向盘与车轮之间没有机械连接，力反馈需要完全由电机模拟。Bi-MoDe中对“接触强度”的调制，可以直接启发我们如何更精细地模拟路感、回正力矩，甚至提供“虚拟”的力反馈。这是将机器人前沿控制技术迁移到EPS领域的绝佳案例，极度值得投入，有望解决EPS手感调校效率低、个性化不足等痛点。
+   https://arxiv.org/abs/2609.16040
+
+7. Agility Robotics的新型人形机器人Digit 5具备在与人类同事互动时，通过停止或下蹲来避免伤害的安全功能。（来源：Ars Technica）
+   应用分析：非常能用。机器人安全与汽车功能安全有大量共通之处。Digit 5的“停止”和“下蹲”行为是针对特定风险场景（与人碰撞）设计的安全响应。这启发我们在EPS系统，尤其是线控转向系统中，如何设计和验证安全状态及降级策略。例如，当检测到系统潜在故障或异常时，EPS系统应如何安全地降级（如提供最小助力、保持当前转向角、或切换到冗余通道），以避免突然失控。同时，机器人要实现这些安全行为，需要高精度的环境感知和人体姿态识别，这与自动驾驶和ADAS系统中EPS接收的车辆状态、环境信息非常相似。我们可以将Agility机器人展示的安全理念融入到我们功能安全需求分析、安全概念设计等环节。这是极度值得我们借鉴来提升EPS功能安全水平的。
+   https://arstechnica.com/ai/2026/09/agilitys-new-humanoid-robot-will-stop-squat-to-avoid-harming-human-coworkers/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260916-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260916-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260916-pm.mp3" length="4493808" type="audio/mpeg"/>
+      <pubDate>Wed, 16 Sep 2026 09:42:45 +0000</pubDate>
     </item>
   </channel>
 </rss>
