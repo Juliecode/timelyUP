@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 16 Sep 2026 09:42:45 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 22:43:15 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI赋能转向，智能汽车安全与机器人执行器前沿</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿技术在控制系统中的应用、汽车智能化在极限操控和安全防护上的最新进展，以及机器人领域在低成本硬件和安全保障方面的突破。这些资讯都与我们的电动助力转向，也就是EPS系统的研发工作息息相关，希望能给大家带来一些启发。
-
-1. Learning neural controllers for nonlinear systems from data（来源：arXiv eess.SY 控制系统）
-   应用分析：这项研究对我们EPS的电机控制策略性能提升非常有用。在PMSM电机控制中，我们经常面临转矩脉动、NVH以及温漂等非线性挑战。我们可以借鉴这种数据驱动的神经网络控制器框架，利用台架或整车采集的离线数据，识别电机在不同工况下的非线性特性。然后，将神经网络控制器与我们现有的FOC矢量控制或无传感器控制策略结合，通过学习来补偿这些非线性因素，从而提升转矩输出的平滑性和精度，改善NVH表现，并增强在宽温度范围内的鲁棒性。研究中提到的输入约束和鲁棒合成条件，对我们工程落地时的安全性和可靠性设计有直接指导意义。我建议投入资源，在MATLAB/Simulink环境中搭建原型，并通过MIL/SIL/HIL测试验证其效果。
-   https://arxiv.org/abs/2608.29303
-
-2. Stochastic Nonlinear Model Predictive Control with Gaussian Mixture Uncertainty Propagation（来源：arXiv eess.SY 控制系统）
-   应用分析：这个SNMPC框架对我们线控转向系统的架构和助力策略设计具有重要参考价值。线控转向面临的最大挑战之一就是如何有效处理路面不确定性、驾驶员意图变化以及系统自身的噪声和模型误差。通过将高斯混合分布引入到不确定性传播中，SNMPC能够更精准地预测系统未来状态，并在存在多模态扰动的情况下，优化转向执行器的输出。这可以帮助我们设计出更平稳、响应更快的力反馈控制，并提升路感还原的真实性，同时有效抑制抖动。其形式化的正确性和渐近最优性保证，对于满足ISO 26262功能安全要求至关重要。我们可以将SNMPC作为线控转向核心控制算法的备选方案进行深入研究，在HIL平台进行算法验证和性能评估。
-   https://arxiv.org/abs/2608.29272
-
-3. Vehicle Drift Emergence: Continuous Evolution from Grip Driving to the Handling Limit via Boundary Exploration Learning Model Predictive Control（来源：arXiv cs.RO）
-   应用分析：这项研究为我们助力策略和手感调校，特别是在车辆极限工况下的表现，提供了新的思路。虽然EPS通常不直接控制车辆漂移，但其助力特性在车辆接近操控极限时，对驾驶员的信心和车辆可控性有着决定性影响。我们可以借鉴BE-LMPC中“边界探索学习”和“保持可恢复性”的概念，在整车标定阶段，通过数据驱动方法，学习车辆在高速变道、紧急避让等极限场景下的动态响应。然后，在助力曲线和阻尼/回正策略中引入智能补偿，确保驾驶员在这些工况下仍能获得清晰的路感反馈，避免转向力矩的突变，从而提升车辆的整体操控安全性和驾驶乐趣。这值得我们投入时间和资源，通过台架和整车测试进行深入研究和应用探索。
-   https://arxiv.org/abs/2608.28723
-
-4. Adversarial Calibration Attack on Autonomous Vehicles（来源：arXiv cs.RO）
-   应用分析：这项研究对我们线控转向系统中的功能安全和鲁棒性设计敲响了警钟。线控转向依赖多个传感器（如方向盘角度、转矩、电机位置、车速等）进行精确控制。如果这些传感器的校准数据被恶意篡改或受到非预期干扰，将导致整个系统的感知、决策和控制出现严重偏差。我们必须将“对抗性校准攻击”这类威胁纳入线控转向的威胁模型和风险评估中。除了传统的传感器故障诊断，还需要引入更强大的数据完整性校验、多源异构数据融合一致性检查，以及基于AI的异常行为检测算法，来识别和应对潜在的校准攻击。例如，通过实时监测不同传感器之间的关联性和冗余性，一旦发现不一致或可疑的校准漂移，系统应立即触发功能安全降级机制，甚至切换到紧急操作模式。这是满足ISO 26262和ISO/SAE 21434标准，确保线控转向系统安全性的关键投入。
-   https://arxiv.org/abs/2608.28778
-
-5. Launch HN: Nori Robotics (YC S26) – A low-cost humanoid robot for development（来源：Hacker News）
-   应用分析：Nori Robotics这款低成本人形机器人对我们EPS电机控制和执行器设计有很强的借鉴意义。它的19个自由度、双臂1.5公斤负载以及55公斤升降能力，在1688美元的价位上，展示了在成本和性能之间取得平衡的可能性。我们可以将这类机器人视为一个“活体”的电机控制实验平台。它的关节执行器面临的转矩密度、效率、NVH和成本挑战，与我们EPS电机选型和控制策略所关注的重点高度一致。我们可以研究Nori机器人的电机驱动和控制方案，例如其如何实现多关节协调控制、力反馈或阻抗控制，这些技术都可以迁移到线控转向的力反馈手感调校中。通过分析其硬件架构和软件栈，我们可以获取关于低成本、高性能电机控制解决方案的宝贵经验。我建议关注其开源进展，甚至可以考虑采购一台进行拆解和学习，以探索新的电机控制技术和成本优化方案。
-   https://www.norirobotics.com/
-
-6. The Missing Layer in Robot Safety Assurance（来源：The Robot Report）
-   应用分析：这篇文章深刻提醒我们，在设计EPS和线控转向系统时，不能仅仅关注传统的功能安全（ISO 26262），还必须将“攻击”这一维度纳入考量。机器人可能被攻击改变感知、决策和行动方式，同样，我们的线控转向系统也可能面临类似的网络安全威胁，例如恶意篡改转向指令、注入虚假传感器数据或破坏控制算法。为了应对这一“缺失层”，我们需要在系统架构中内建更强的安全防护。具体措施包括：引入更严格的软件完整性验证、加密通信链路、对关键控制参数进行实时监测和异常检测（可以利用AI技术），以及设计多层冗余和故障降级机制，确保即使在遭受攻击时，系统也能保持在安全状态或平稳降级。这是一个必须投入资源的方向，因为它直接关系到产品的安全性和市场竞争力。
-   https://www.therobotreport.com/the-missing-layer-in-robot-safety-assurance/
-
-7. Navitas and GF Launch U.S.-Made Gen 5 GaNFast Power Devices（来源：Power Electronics News）
-   应用分析：Navitas和GF推出的第五代GaNFast功率器件，虽然目前主要面向数据中心和工业应用，但其高效率和高开关频率特性，对我们EPS和线控转向的功率级设计具有巨大的潜在价值。目前我们的电机控制器主要采用硅基的IGBT或CoolMOS，但GaN器件在提升功率密度、降低损耗和减小体积方面具有显著优势。如果GaN器件能达到车规级可靠性和成本要求，它将是EPS功率级升级的理想选择。更小的功率级意味着可以为控制器节省宝贵的安装空间，降低热管理难度，并可能通过更高的开关频率来改善电机电流纹波，从而间接提升NVH性能。我们应该持续关注GaN器件的车规认证进展和成本曲线，并开始在下一代EPS和线控转向控制器预研阶段，评估其在功率级设计中的可行性，例如进行仿真分析和小批量样品测试，为未来的技术迭代做准备。这是一个值得持续投入关注的方向。
-   https://www.powerelectronicsnews.com/navitas-and-gf-launch-u-s-made-gen-5-ganfast-power-devices/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260902-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260902-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260902-am.mp3" length="2518272" type="audio/mpeg"/>
-      <pubDate>Tue, 01 Sep 2026 22:42:32 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI赋能汽车与机器人，线控转向与芯片前沿洞察</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。今天的亮点包括智己汽车在线控转向技术上的新进展，比亚迪自研4D雷达芯片的量产，以及多款AI和机器人前沿技术，它们将如何影响我们未来的EPS系统设计和电机控制策略？让我们一起来看看。
@@ -1097,6 +1061,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260916-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260916-pm.mp3" length="4493808" type="audio/mpeg"/>
       <pubDate>Wed, 16 Sep 2026 09:42:45 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技早报：AI深度融入汽车与机器人，软硬协同构筑未来安全</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人领域，为您精选出七条最有价值的资讯。从AI模型如何更高效地运行在嵌入式设备上，到大型语言模型如何安全地参与控制决策，再到汽车电动执行器的系统级演进，以及机器人如何实现更精密的物理交互与安全避障，每一条都可能为您的研发工作带来新的灵感和突破。让我们一起来看看今天的精彩内容。
+
+1. 大型语言模型融入控制回路，稳定性与网络感知成关键（来源：arXiv eess.SY 控制系统）
+   应用分析：在线控转向（Steer-by-Wire）架构中，我们可以考虑引入大型语言模型作为高层决策或自适应控制策略的监督者。比如，LLM根据驾驶员意图、路况和车辆状态，动态调整助力曲线、阻尼参数，甚至在故障发生时提供降级策略建议。我们现有的MCU和FOC内循环可以作为快速、经过认证的物理层控制，而LLM则作为慢速决策层。挑战在于如何将LLM的输出（如自然语言指令）转化为可执行的控制参数，并保证在LLM推理延迟或“幻觉”（不确定输出）下，系统仍能满足ISO 26262功能安全要求。这是一个非常值得投入的方向，因为它是未来AI与汽车控制深度融合的必经之路，能显著提升系统智能化和自适应能力。初期可从离线分析、故障诊断辅助决策等低风险场景入手，逐步验证其在实时控制中的可行性。
+   https://arxiv.org/abs/2609.16599
+
+2. 基于费雪信息几何距离的神经网络剪枝新方法，提升AI模型效率（来源：arXiv cs.AI）
+   应用分析：如果我们在EPS控制器中引入神经网络用于电机参数辨识、转矩脉动抑制或无传感器位置估计，这些模型通常需要轻量化才能在MCU上实时运行。这项研究提出的剪枝方法可以用来优化这些神经网络模型，显著减小其内存占用和计算量。例如，在FOC控制环路中，若使用神经网络观测器估计转子位置或速度，通过这种剪枝方法，可以使其更高效地运行，降低MCU负载，从而为更复杂的控制算法腾出计算资源，同时降低成本。这是实现AI边缘部署的关键技术之一，非常值得我们深入研究和投入，以提升EPS系统中的AI应用效率。
+   https://arxiv.org/abs/2609.16129
+
+3. 飞机执行器电气化重塑系统级架构，为线控转向提供借鉴（来源：EE Times）
+   应用分析：线控转向是EPS的终极形态，其核心就是将机械连接替换为电动执行器。飞机执行器电气化面临的挑战，如高功率密度电机选型、多余度电源管理、故障诊断与降级策略、电磁兼容性（EMC）以及严格的功能安全（如ISO 26262 ASIL D）要求，都与线控转向高度重合。我们可以借鉴航空领域在冗余执行器、分布式控制、电源架构（如48V/800V系统）以及故障容错设计上的经验，来优化线控转向的系统架构，提升其安全性与可靠性。这不仅是EPS未来发展的关键方向，也是我们作为研发工程师必须重点关注和投入的领域。
+   https://www.eetimes.com/aircraft-actuator-electrification-redefines-system-level-architecture/
+
+4. 旭化成无磁芯电流传感器结合ML实现电弧故障本地化检测（来源：Charged EVs）
+   应用分析：EPS系统中的电机控制同样需要高精度、高带宽的电流采样，并对故障（如电机绕组短路、断路、功率器件故障等）进行快速准确的诊断。我们可以借鉴这种思路，将AKM的无磁芯电流传感器引入EPS，并结合dsPIC33A或类似的MCU/DSC，开发基于机器学习的电机异常行为检测算法。例如，通过分析电机电流波形特征，实时识别转矩脉动异常、绕组间短路或轴承磨损等早期故障迹象，从而实现预测性维护，甚至在故障发生前进行预警或降级处理，提升系统鲁棒性。这对于提升EPS的功能安全等级（ASIL）和降低质保成本具有重要意义，非常值得投入研发。
+   https://chargedevs.com/newswire/asahi-kasei-microdevices-current-sensors-go-into-microchips-arc-fault-detection-design/
+
+5. 双边控制模仿学习新进展：精确调节机器人执行速度与接触强度（来源：arXiv cs.RO）
+   应用分析：EPS手感调校的核心就是精确控制电机输出力矩，以提供驾驶员期望的助力和路感。Bi-MoDe中对“执行速度”和“接触强度”的调节，可以类比为EPS助力曲线中的速度依赖特性和阻尼/摩擦补偿。我们可以借鉴其“modifier-conditioned decoding”的思想，将驾驶员的驾驶风格、路面条件等“修饰符”作为输入，动态生成或调整FOC控制器的参数，实现更精细化、个性化的助力手感。例如，在运动模式下，增加回正力矩和阻尼感；在泊车模式下，降低转向力。这也有助于优化转矩脉动抑制算法，使其在不同工况下都能保持最佳NVH表现。这对于提升EPS产品的差异化竞争力和用户体验至关重要，是值得长期投入的方向。
+   https://arxiv.org/abs/2609.16040
+
+6. Agility人形机器人实现安全避障，可在无围栏环境与人共作（来源：Ars Technica）
+   应用分析：尽管EPS不直接与行人交互，但线控转向系统作为车辆控制的核心，其功能安全设计必须考虑所有可能的危险场景。人形机器人通过“停止、下蹲”等动作来规避风险，这是一种基于环境感知和行为预测的主动安全策略。我们可以将这种“主动避险”的理念引入线控转向系统，例如，当传感器预测到车辆即将与行人发生碰撞，除了紧急制动外，转向系统能否在微观层面（毫秒级）进行微调，以最小化碰撞后果？或者在自动泊车等低速场景下，转向系统如何与感知系统协同，确保在极近距离内与行人安全共存。这促使我们思考EPS在更高级别自动驾驶中的角色，以及如何通过软件策略实现更智能、更主动的物理安全保障。这是一个值得我们关注和借鉴的趋势，特别是其在功能安全设计和风险规避策略上的思路。
+   https://arstechnica.com/ai/2026/09/agilitys-new-humanoid-robot-will-stop-squat-to-avoid-harming-human-coworkers/
+
+7. 领域随机化结合策略梯度，提升LQR控制器模拟到现实的鲁棒性（来源：arXiv eess.SY 控制系统）
+   应用分析：在EPS的控制算法开发和标定过程中，我们大量依赖MIL/SIL/HIL仿真。通过领域随机化，可以在仿真环境中生成更广泛、更真实的工况（如电机参数变化、摩擦特性、路面扰动等），然后利用强化学习训练出对这些变化更鲁棒的FOC或助力控制策略。这有助于提升控制算法的泛化能力，减少实际车辆标定工作量。特别是对于无传感器控制，其鲁棒性对参数变化敏感，领域随机化结合强化学习可以帮助我们训练出更强的状态观测器。这是一个值得投入研究的方向，尤其是在控制策略的鲁棒性验证和自动标定方面，可以显著提高开发效率和产品质量。
+   https://arxiv.org/abs/2609.16300</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260917-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260917-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260917-am.mp3" length="4591872" type="audio/mpeg"/>
+      <pubDate>Wed, 16 Sep 2026 22:43:15 +0000</pubDate>
     </item>
   </channel>
 </rss>
