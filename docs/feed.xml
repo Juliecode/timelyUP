@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 17 Sep 2026 22:42:42 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 09:42:53 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 智驾芯片入局，GaN功率IC量产，AI自演进优化代理助推控制系统新变革</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您带来7条精选资讯。从自动驾驶的AI芯片供应链，到强化学习在安全决策中的应用；从AI原生SoC的崛起，到GaN功率IC的量产；再到AI自演进优化代理和机器人非线性动力学的启示，这些都将为我们EPS系统研发带来新的思考和机遇。让我们一起来看看今天的精彩内容。
-
-1. Nio's Shenji M97 chip may enter Geely's supply chain, report says（来源：CnEVPost）
-   应用分析：能用，且非常值得关注。高性能车规级AI芯片是未来线控转向（Steer-by-Wire）系统实现L3+自动驾驶的关键基础设施之一。在EPS向线控转向演进的架构设计中，需要提前考虑与这类高性能域控制器或中央计算平台的接口定义、通信协议（如以太网、CAN FD等）以及功能安全设计（ISO 26262 ASIL-D）。M97芯片的算力将直接影响自动驾驶系统发出转向控制指令的频率、精度和复杂性，EPS需要有足够快的响应速度和高带宽的控制能力来执行这些指令。此外，也可以探索将部分线控转向的AI增强型控制算法部署到这类高性能芯片上，减轻EPS本体MCU的计算负担。深入了解这类AI芯片的能力、生态和车企应用路线图，对于EPS产品未来架构规划和技术预研至关重要。
-   https://cnevpost.com/2026/09/02/nio-shenji-m97-chip-may-enter-geely-supply-chain/
-
-2. DiDrive: A Risk-Aware Hierarchical Diffusion Framework for Safe Offline Reinforcement Learning in Autonomous Driving（来源：arXiv cs.LG）
-   应用分析：能借鉴其方法论。DiDrive提出的风险感知、分层扩散模型和策略优化思想，可以直接启发我们提升EPS控制策略的鲁棒性和安全性。对于EPS助力策略的自动调校，可以尝试使用离线强化学习。DiDrive的框架能帮助解决离线数据质量不高、分布偏移等问题，提高学习效率和策略的泛化能力。例如，通过学习海量驾驶数据，自动生成更符合用户习惯和路况的助力曲线，并确保在各种极端工况下的安全性和稳定性。其处理高维状态冗余的思路，或许能为无传感器或冗余传感方案中的多模态信息融合与降维提供新的视角，从而提升系统安全性和成本竞争力。值得深入研究其核心思想和算法细节。
-   https://arxiv.org/abs/2609.01609
-
-3. WMLLM: Self-Evolving Optimization Agents via Predict-Then-Act World Modeling（来源：arXiv cs.LG）
-   应用分析：核心思想非常有用，是AI赋能控制系统优化的前沿方向。EPS的助力曲线、阻尼回正参数等标定工作非常耗时。可以尝试将标定问题建模为黑盒优化，利用WMLLM构建一个“EPS世界模型”，基于历史数据（MIL/SIL/HIL仿真数据、台架数据、少量整车数据）预测不同参数组合下的手感、NVH、功耗等指标。LLM作为“优化代理”，根据预测结果和优化目标迭代调整参数，实现自动或半自动标定。此外，对于电机控制参数的自适应调整，WMLLM也可以根据实时运行数据和环境变化自适应调整这些参数，提升控制性能和鲁棒性。非常值得投入，探索如何将EPS系统的物理模型和仿真数据融入LLM驱动的世界模型中。
-   https://arxiv.org/abs/2609.01608
-
-4. Indian Startup HrdWyr Builds AI-Native SoCs for the Physical World（来源：EE Times）
-   应用分析：极具潜力。这类AI原生SoC是未来EPS控制器，特别是线控转向执行器控制器的理想选择。在EPS系统架构设计中，特别是在向线控转向演进时，需要密切关注这类AI原生SoC的进展。它们有望集成高实时性、低延迟的AI加速器，支持更复杂的电机控制算法（如基于神经网络的观测器、模型预测控制）、AI驱动的故障诊断和预测性维护功能。同时，关注这些SoC在ISO 26262功能安全方面的认证和支持。非常值得投入关注和进行技术预研，与这类芯片公司建立联系，了解其技术路线图。
-   https://www.eetimes.com/indian-startup-hrdwyr-builds-ai-native-socs-for-the-physical-world/
-
-5. A Survey on Self-Improving Test-Time Intelligence: Feedback-Driven Adapting, Learning, and Scaling at Inference（来源：arXiv cs.LG）
-   应用分析：核心思想非常实用，可以指导EPS的软件设计和未来功能开发。EPS系统可以集成“测试时智能”模块，通过收集实际驾驶数据（如驾驶员操作习惯、路况信息、车辆动态），实时调整助力曲线和手感参数，实现个性化和自适应的转向体验。利用车辆传感器数据作为反馈，AI系统可以实时监测EPS各部件的运行状态，识别异常模式，并触发相应的降级策略，确保转向安全。此外，通过“测试时学习”在线辨识电机参数变化，并自适应调整控制器参数，补偿温漂影响，提升鲁棒性。值得作为EPS软件架构和控制策略演进的重要参考，投入资源进行概念验证和原型开发。
-   https://arxiv.org/abs/2609.01679
-
-6. EPC Begins Mass Production of 100V Integrated GaN Power ICs（来源：Power Electronics News）
-   应用分析：完全能用，且是EPS功率级设计的重要升级方向。将现有的硅基MOSFET或IGBT替换为GaN功率IC，可以显著提升EPS电机驱动器的效率，降低发热，从而减小散热器体积和重量。GaN的高开关频率允许控制器使用更高的PWM频率，这有助于降低电流纹波，抑制电机转矩脉动，从而改善EPS系统的NVH性能和转向手感。在线控转向系统中，对执行器的功率密度和响应速度要求更高，GaN功率IC将是实现这些高性能指标的关键技术之一。非常值得投入。应立即启动GaN功率级在EPS控制器中的应用研究，进行选型、测试和验证，并考虑将其纳入下一代EPS产品的设计规划。
-   https://www.powerelectronicsnews.com/epc-begins-mass-production-of-100v-integrated-gan-power-ics/
-
-7. Exploring Nonlinear Body Oscillations for Natural Quadruped Gaits（来源：arXiv cs.RO）
-   应用分析：可以借鉴其核心思想和研究方法。EPS电机在工作时会产生振动和噪声。我们可以借鉴机器人利用机械共振的思想，通过优化电机结构设计（如定转子齿槽配合）、控制器参数（如PWM频率、死区补偿）和系统安装方式，使系统在特定频率下利用或避免共振，从而抑制有害的转矩脉动和机械振动，改善NVH性能。转向手感与系统的刚度、阻尼、惯量等机械特性密切相关。通过更深入地理解EPS系统的非线性动力学，可以设计出更精细的助力策略和回正控制，更好地模拟自然、线性的转向手感，并还原路感。值得关注和借鉴，可以鼓励团队研究相关论文，探索将非线性动力学分析和共振利用的思路应用于EPS系统优化。
-   https://arxiv.org/abs/2609.00539</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260903-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260903-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260903-pm.mp3" length="4608576" type="audio/mpeg"/>
-      <pubDate>Thu, 03 Sep 2026 09:42:54 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 科技早报：GPT-6 Astra开启AGI时代，特斯拉Cybercab重塑转向，机器人步态新突破</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们为您精选了七条重磅科技资讯，涵盖了人工智能前沿、汽车智能化和机器人技术三大方向。OpenAI的GPT-6 Astra正式亮相，特斯拉的Cybercab取消了方向盘和踏板，而机器人的步态控制也迎来了新的探索。这些进展都将深刻影响我们的研发工作，尤其是对我们电动助力转向，也就是EPS的未来发展，有着直接的启示。接下来，让我们逐一深入分析。
@@ -1136,6 +1100,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260918-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260918-am.mp3" length="4506048" type="audio/mpeg"/>
       <pubDate>Thu, 17 Sep 2026 22:42:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 智驾之锚：AI安全、SiC芯片与机器人执行器前沿</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦人工智能前沿、汽车智能化和机器人三大领域，为您精选了七条重磅资讯。从AI模型的安全验证，到电动汽车核心功率器件的革新，再到机器人执行器的最新突破，每一条都可能为我们的产品研发带来新的思路和机会。废话不多说，让我们立刻进入今天的早报时间。
+
+1. Bend：一种通过形式化证明阻止AI错误的编程语言（来源：Hacker News）
+   应用分析：这项技术非常值得投入和探索。我们可以研究如何将 Bend 语言或其背后的形式化验证思想，应用到 EPS 电机控制策略的开发中。例如，在基于模型预测控制（MPC）或强化学习（RL）的助力策略中，利用 Bend 为关键决策路径提供数学上的安全保证，确保在各种工况下，AI 模型的输出不会导致系统失效或不安全行为。初期可以尝试将其集成到现有嵌入式 C 语言开发流程中，为某些非安全关键的辅助控制功能（如高级NVH抑制）构建形式化验证原型，以评估其在性能、开发效率和功能安全认证方面的潜力。
+   https://bend-lang.com/
+
+2. 正则化强调时序差分学习：常数步长下的稳定性（来源：arXiv cs.AI）
+   应用分析：这项研究成果对我们有直接的应用价值，非常值得投入。在 EPS 电机控制中，我们可以利用 RETD 算法来优化 FOC 矢量控制的参数，实现不同驾驶场景下的自适应助力曲线调整，或者在无传感器控制中提升状态观测器的精度和鲁棒性。RETD 改进的稳定性意味着在面对电机参数变化、传感器噪声或外部扰动时，RL 代理能够更稳定地收敛到最优策略，减少我们进行大量台架测试和整车标定时的调参工作量。初期可以在 MATLAB/Simulink 的 MIL/SIL 环境中，利用 RETD 训练一个电机控制器，并与现有 PI 或 MPC 算法进行性能对比验证。
+   https://arxiv.org/abs/2609.19170
+
+3. Bonsai 2 27B：以9倍更小的体积实现近乎无损的压缩（来源：Hacker News）
+   应用分析：这项技术能用，且非常值得关注和评估。我们可以考虑将 Bonsai 2 或类似的高效模型压缩技术，应用到 EPS 系统的智能诊断模块或在线标定辅助功能中。例如，训练一个轻量化的神经网络模型，实时分析电机电流、转速、温度等数据，识别潜在的故障模式或预测电机性能衰退，甚至辅助进行电机参数的在线辨识和校正。通过大幅压缩，这些 AI 模型有可能在现有 MCU 算力下运行，避免额外的高成本 AI 专用硬件。初步可以搭建一个概念验证原型，将我们现有的一些小型 AI 模型用 Bonsai 2 进行压缩，并在台架测试环境中评估其性能和资源占用情况。
+   https://prismml.com/news/bonsai-2-27b
+
+4. DB HiTek 成功认证8英寸SiC MOSFET工艺，预计2027年量产（来源：Charged EVs）
+   应用分析：这项技术对我们来说非常重要，能用且值得立即投入关注。SiC MOSFET 的应用可以直接提升 EPS 电机控制器的效率，减少能量损耗，并降低发热量，从而有可能减小散热器体积，提升整个 EPS 系统的功率密度和紧凑性。对于永磁同步电机（PMSM）控制，更快的开关速度有助于减小电流纹波，改善电机的 NVH 性能。我们应该积极与 DB HiTek 或其他 SiC 供应商沟通，评估其 8 英寸晶圆生产的 1200 伏 SiC MOSFET 样品，并在下一代 EPS 产品，特别是 DP-EPS 或 R-EPS 等高功率密度的方案中，优先考虑引入 SiC 功率器件，以提升产品竞争力并优化成本。
+   https://chargedevs.com/newswire/db-hitek-qualifies-its-1200-v-sic-mosfet-process-on-8-inch-wafers/
+
+5. 4D 毫米波雷达感知算法综述：自动驾驶的关键技术（来源：arXiv cs.RO）
+   应用分析：这项技术值得持续关注，但短期内不直接投入研发资源，而是作为技术储备和架构预研。4D 雷达提供的精确环境信息（如前方障碍物的高程、相对速度、运动轨迹）可以作为线控转向系统的高级输入，用于改进助力策略，实现更智能的避障辅助或紧急转向干预。例如，系统可以根据雷达数据预测路面不平或障碍物，提前调整助力曲线以提供更平稳的驾乘体验，或在紧急情况下提供更精准的转向辅助。我们需要了解 4D 雷达的数据格式、延迟和精度，为未来线控转向与感知系统的深度融合打下基础，尤其是在冗余传感方案和功能安全设计方面。
+   https://arxiv.org/abs/2609.19216
+
+6. AthenaZero：低惯量、双臂机器人实现动态操控（来源：arXiv cs.RO）
+   应用分析：这项研究非常值得我们深入学习和借鉴。AthenaZero 的设计思路可以直接启发我们下一代 EPS 电机的结构优化和控制策略开发。我们可以研究如何将准直驱执行器的理念应用于 EPS 电机，例如优化电机绕组设计、转子结构，以进一步降低转动惯量，同时提升转矩密度和 NVH 性能。在电机控制策略上，可以借鉴其在动态操作中实现的精确控制方法，优化 FOC、无传感器控制、转矩脉动抑制以及弱磁控制算法，以实现更灵敏、更精确的助力手感和路感还原。这属于前沿研究向工程方案的快速转化，可以组织内部技术研讨会，并关注相关机器人执行器和电机控制领域的技术论文。
+   https://arxiv.org/abs/2609.19194
+
+7. Arm Total Design for Physical AI：汇聚80+开发者，构建物理AI生态（来源：The Robot Report）
+   应用分析：这项举措对我们有长期战略意义，值得持续关注并积极参与。随着 EPS 系统智能化程度的提升，对 MCU 算力、实时性及确定性计算能力的要求越来越高，例如在无传感器控制的复杂算法、AI 辅助的自动标定，乃至未来线控转向系统的冗余和功能安全设计中。Arm 的这一项目将加速高性能、低功耗、且具备功能安全特性的 MCU 的发展，并提供更完善的嵌入式 AI 部署支持。我们应该密切关注 Arm 发布的工具链、参考设计和合作伙伴方案，评估其对我们控制器硬件选型、嵌入式 AI 框架集成以及 ISO 26262 功能安全认证的潜在帮助。与 Arm 生态伙伴的合作，有望加速我们的创新落地。
+   https://www.therobotreport.com/arm-total-design-for-physical-ai-brings-more-than-80-developers-together/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260918-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260918-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260918-pm.mp3" length="4155984" type="audio/mpeg"/>
+      <pubDate>Fri, 18 Sep 2026 09:42:53 +0000</pubDate>
     </item>
   </channel>
 </rss>
