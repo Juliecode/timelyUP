@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 19 Sep 2026 09:42:35 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 22:41:53 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 科技早报：AI加速代理、因果模型、自适应控制与汽车区域架构深度解析</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦人工智能前沿、汽车智能化趋势以及机器人技术的新进展，精选出七条最值得关注的资讯。内容涵盖了如何利用AI提升研发效率，未来汽车架构的演变，以及机器人控制理论对我们EPS系统设计的启发。希望今天的分享能为您的工作带来新的思路和灵感。
-
-1. Speculative Macro Commit for Faster Tool-Using Agents（来源：arXiv cs.AI）
-   应用分析：这项名为“推测宏提交”的新机制，通过并行预测和提交预执行的动作链，能显著加速大型语言模型工具代理的执行速度。在我们EPS的研发工作中，AI辅助开发工具的响应速度是关键。我们可以关注主流AI开发平台或工具链是否集成了类似机制，并在选型时将其作为重要考量指标。例如，在基于模型的开发中，让AI代理快速预测Simulink模型修改后的影响，或者在代码生成后进行初步的静态分析和单元测试。对于复杂的故障诊断，AI代理可以快速迭代推理，提供初步的解决方案或排查路径。提升AI工具的效率，能够直接缩短研发周期，降低人力成本，因此非常值得我们长期关注和投入。
-   https://arxiv.org/abs/2609.03236
-
-2. Causal Foundation Models（来源：arXiv cs.LG）
-   应用分析：因果基础模型将因果推断与基础模型结合，能够在新数据集上直接估计因果关系，无需为每个新问题定制管道或微调模型。这对于理解EPS系统在不同工况下的行为、故障模式以及控制参数对输出的影响至关重要。我们可以利用它来分析从整车或台架测试中采集的传感器数据、电机电流、电压、转速、扭矩等，识别异常振动、异响、助力失效等故障的根本原因。同时，评估不同电机控制参数或助力曲线调整对NVH、手感、效率的影响，并量化这些影响的因果关系。此外，基于历史运行数据，预测EPS电机或控制器关键部件的寿命，提前预警潜在故障。因果分析是解决复杂工程问题的高级手段，CFM提供了一个更易于部署和扩展的路径，非常值得我们投入研究和探索，甚至与相关研究机构合作，将其集成到我们的数据分析和故障诊断平台中。
-   https://arxiv.org/abs/2609.03003
-
-3. Taylor-Informed Indirect Adaptive Predictive Control Using Jacobian-Frozen Affine Predictors（来源：arXiv eess.SY 控制系统）
-   应用分析：这项研究提出了一种基于泰勒展开和雅可比冻结仿射预测器的间接自适应预测控制框架，能有效控制非线性采样数据系统，并在线辨识模型参数。这对我们EPS工程师来说高度相关，是核心电机控制策略的直接增强。我们可以将其应用于PMSM电机的FOC控制中，通过在线辨识电机参数，结合预测控制，实现更精确的电流和转矩控制，从而有效抑制转矩脉动，降低NVH。此外，由于EPS系统在不同温度和负载下电机参数会发生变化，该方法可以实时自适应这些变化，保持控制性能的稳定性。在无传感器控制中，它也可以改进状态观测器的性能。这项技术能带来显著的产品竞争力提升，非常值得投入。我们可以先在Simulink/MATLAB环境中进行模型化设计和仿真验证，然后逐步在HIL和台架上进行测试，以期获得高性能、高鲁棒性的产品优势。
-   https://arxiv.org/abs/2609.03348
-
-4. Rivian CEO RJ Scaringe has thoughts（来源：Charged EVs）
-   应用分析：Rivian首席执行官RJ Scaringe强调了区域架构在电动汽车设计中的重要性，它能简化线束、降低成本、提升效率，并为软件定义汽车铺平道路。这对我们EPS工程师来说，是必须紧跟的行业趋势。我们应立即启动EPS系统架构的重构研究，重新思考ECU布局，从传统的独立控制器向区域控制器集成或接口标准化方向发展，通过高速以太网或CAN FD与中央计算单元通信。这将有助于优化EPS与整车其他模块的线束连接，减少线缆数量和复杂性，降低整体制造成本。同时，区域架构为线控转向提供了良好的硬件基础，通过中央计算平台实现更灵活的助力策略和手感调校，支持OTA更新和个性化定制。此外，我们还需要重新评估区域架构下的功能安全概念，确保EPS在新的E/E架构中仍能满足ISO 26262要求，特别是冗余和故障降级策略。这项投入极其值得，是决定未来产品竞争力的关键。
-   https://chargedevs.com/newswire/rivian-ceo-rj-scaringe-has-thoughts/
-
-5. Nexperia, Aurobay Explore GaN and SiC Solutions for Powertrains（来源：Power Electronics News）
-   应用分析：Nexperia和Aurobay正在合作探索氮化镓（GaN）和碳化硅（SiC）解决方案在汽车动力总成中的应用。这对我们EPS系统的功率级设计至关重要，能帮助我们实现更小体积、更高效率、更低损耗的电机驱动器。我们应该考虑将现有的硅基MOSFET或IGBT替换为SiC或GaN器件，设计更紧凑、更高效的功率级模块，这将直接提升电机驱动效率，减少发热，并允许在更恶劣的环境下工作。GaN/SiC器件支持更高的开关频率，这有助于将PWM载波频率提升到人耳听不到的范围，降低可闻噪声，同时减小无源元件的体积。线控转向对执行器的响应速度和功率密度要求更高，GaN/SiC是实现这些性能指标的关键技术。这项技术是功率电子领域的重要发展方向，直接影响EPS产品的核心竞争力，非常值得我们投入资源进行选型、驱动电路设计、热管理优化以及电磁兼容测试。
-   https://www.powerelectronicsnews.com/nexperia-aurobay-explore-gan-and-sic-solutions-for-powertrains/
-
-6. Real-Time Shape Control of Multi-Segment Soft Robotic Arms Using Koopman Operators with Global and Local Observables（来源：arXiv cs.RO）
-   应用分析：这项研究提出了一种基于Koopman算子的模型预测控制框架，结合全局和局部观测值，实现了多节软体机器人手臂的实时形状控制。Koopman算子能够将复杂的非线性动力学系统线性化，这对我们处理EPS电机的非线性、摩擦、谐波等复杂动态，以及提升控制器的鲁棒性和预测能力具有重要借鉴意义。我们可以将Koopman算子应用于EPS电机的FOC控制中，构建一个线性化的预测模型，用于补偿电机非线性、摩擦效应、齿槽转矩等，从而更精确地抑制转矩脉动和抖动，优化NVH性能。结合Koopman模型，还可以设计更有效的模型预测控制器，提升手感调校的精细度和响应速度。这项技术是前沿控制理论的潜在应用，值得我们投入研究，可以先进行理论研究、仿真验证，并与高校或研究机构合作，探索其在实际EPS系统中的落地。
-   https://arxiv.org/abs/2609.03175
-
-7. BRIDGE: An Open-Source Humanoid Platform via Morphology-Control Co-Design for Physical AI（来源：arXiv cs.RO）
-   应用分析：BRIDGE是一个开源人形机器人平台，通过形态-控制协同设计框架优化机器人形态以实现类人运动，并量化了形态保真度。人形机器人关节执行器的设计与控制与EPS电机有高度相似性。这个形态-控制协同设计的理念，即硬件结构与控制算法同时优化，对我们EPS电机选型、结构设计与控制策略的整体优化具有极强的指导意义。我们可以不再孤立地选择电机或设计减速器，而是将电机、减速器（或直驱结构）的几何形态、材料特性与FOC等电机控制算法作为一个整体进行协同设计和优化，以达到最佳的转矩输出、效率和NVH性能。这将帮助我们从源头控制NVH性能，而非仅仅通过控制算法进行后期补偿。在线控转向这种颠覆性技术方向上，协同设计是成功的关键。这是一种更系统、更前瞻的研发方法论，非常值得投入，虽然可能需要跨学科团队协作，但能从根本上提升EPS产品的性能和竞争力。
-   https://arxiv.org/abs/2609.03497</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260905-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260905-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260905-am.mp3" length="2766528" type="audio/mpeg"/>
-      <pubDate>Fri, 04 Sep 2026 22:42:15 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 智驾、机器人与AI芯：EPS工程师的未来赛道</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师，专注于汽车电动助力转向系统，也就是EPS的研发。今天我们将聚焦AI前沿、汽车智能化和机器人三大方向，精选出七条与我们工作息息相关、极具启发性的资讯。从AI如何助力硬件设计，到宽禁带半导体在电动汽车中的深度应用，再到线控转向的最新趋势，以及机器人系统中的AI安全，这些都将是构建未来智能驾驶和高效能EPS系统的关键拼图。话不多说，让我们立刻进入今天的早报时间。
@@ -1136,6 +1100,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260919-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260919-pm.mp3" length="3833856" type="audio/mpeg"/>
       <pubDate>Sat, 19 Sep 2026 09:42:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI与机器人前沿：EPS工程师的智能转向未来</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化以及机器人三大领域，看看有哪些值得我们深入思考和实践的新技术和新趋势。尤其对于我们EPS产品研发的工程师来说，今天的几条资讯，可能会直接启发我们如何提升电机控制性能、强化功能安全，并更有效地将AI引入工程实践。
+
+1. I built non-autoregressive decision models with RL a year ago（来源：Hacker News）
+   应用分析：我们可以考虑将基于强化学习的非自回归决策模型，用于优化FOC（磁场定向控制）参数的自适应调整，或提升无传感器控制中状态观测器的性能。更进一步，它有潜力帮助我们更智能地抑制转矩脉动、优化NVH（噪声、振动与声振粗糙度）表现。这绝对值得我们投入时间和精力进行预研和探索，以提升EPS系统的性能和用户体验。
+   https://laya.convaiinnovations.com/
+
+2. Show HN: CUA-S1 – A System One Model for Computer Use（来源：Hacker News）
+   应用分析：对于EPS控制器来说，其MCU资源有限，无法承载大型通用AI模型。但CUA-S1这种轻量级AI模型，非常适合处理系统中的局部决策。例如，我们可以探索用它进行故障诊断中的异常模式识别，或者在特定驾驶场景下（如低速泊车）对助力曲线进行更精细、更直觉的微调。这种务实的小模型方案，相比于部署庞大的LLM，落地性更强，投入产出比也更高。
+   https://github.com/trycua/cua
+
+3. A startup that builds other startups raised $100M and is all-in on physical AI（来源：TechCrunch）
+   应用分析：EPS系统本身就是一个典型的物理AI执行器，其电机控制、力矩输出以及与车辆动力学的交互，都属于这个范畴。我们应该密切关注Vantora孵化的初创公司，看他们是否会涉足线控转向（Steer-by-Wire）、下一代电机控制方案，或者开发出能提升功能安全验证效率的新工具。这可能是我们寻找潜在技术合作伙伴，或者发现前沿技术落地机会的重要渠道，值得持续关注其发展方向。
+   https://techcrunch.com/2026/09/18/a-startup-that-builds-other-startups-raised-100m-and-is-all-in-on-physical-ai/
+
+4. AI hallucination nearly triggers US military operation（来源：TechCrunch）
+   应用分析：EPS作为ISO 26262 ASIL D级别的重要安全件，任何引入AI的控制或诊断模块，都必须对误判（“AI幻觉”）的风险抱以最高的警惕。我们绝不能允许AI的“幻觉”导致转向失效或误操作。我们需要建立比现有更严格的AI验证与确认（V&amp;V）流程，将其与传统的ISO 26262功能安全方法相结合。同时，必须设计多层冗余和降级策略，确保即使AI出现错误，系统也能安全地降级，保证驾驶员对车辆的控制权。这是一个极其严肃的问题，不容有失。
+   https://techcrunch.com/2026/09/18/ai-hallucination-nearly-triggers-us-military-operation/
+
+5. Google’s Gemini is the latest AI model to hack other companies（来源：TechCrunch）
+   应用分析：汽车系统面临日益严峻的网络安全威胁。如果EPS引入AI进行故障诊断、预测性维护或自适应控制，就必须充分考虑到AI模型本身可能成为新的攻击面，或者产生不可控的行为。我们必须在嵌入式AI模型部署前，进行严苛的红队测试，确保AI模型运行在严格的沙盒环境中，它的行为边界清晰、可控。避免任何“自主攻击”或“越狱”的潜在风险，这是汽车电子系统不可逾越的红线，需要投入大量资源进行安全设计和验证。
+   https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/
+
+6. Hirebotics adds line tracking and linear rail capabilities to its cobots（来源：The Robot Report）
+   应用分析：产线追踪和线性导轨功能对EPS生产线的自动化装配和测试工序具有借鉴意义。更重要的是，这些功能依赖于高精度的电机控制和传感器融合。我们可以深入研究这些cobot是如何在动态负载下实现平稳运动和精确位置控制的，比如它们采用了哪些先进的FOC（磁场定向控制）或MPC（模型预测控制）策略，如何实现无传感器控制，以及它们在NVH（噪声、振动与声振粗糙度）抑制方面的经验。这些技术完全有可能迁移到我们的EPS电机控制中，帮助我们提升转矩密度、效率和NVH表现，实现更好的电机选型和控制策略。
+   https://www.therobotreport.com/hirebotics-adds-line-tracking-linear-rail-capabilities-cobots/
+
+7. Vals, backed by Andreessen Horowitz, is looking to become the gold standard for AI benchmarking（来源：TechCrunch）
+   应用分析：当我们在EPS项目中考虑引入AI时，无论是用于控制算法、故障诊断还是自动标定，我们都需要一套标准化的方法来评估这些AI模型的性能和鲁棒性。Vals AI的尝试可以为我们提供宝贵的参考，帮助我们建立更完善的内部AI模型评估框架，确保我们选用的AI模型真正满足汽车功能安全和高可靠性的严苛要求，避免盲目投入和潜在风险。建立这样的基准测试能力，是确保AI在EPS中可靠落地的关键一步。
+   https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260920-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260920-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260920-am.mp3" length="2583216" type="audio/mpeg"/>
+      <pubDate>Sat, 19 Sep 2026 22:41:53 +0000</pubDate>
     </item>
   </channel>
 </rss>
