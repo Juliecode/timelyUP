@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 18 Sep 2026 22:43:18 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 09:42:35 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI与智能汽车机器人：EPS工程师的今日洞察</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最值得关注的资讯。从特斯拉Cybercab的商业化落地，到人形机器人电机控制的最新突破，再到AI在控制系统中的创新应用，这些都与我们EPS电动助力转向系统的未来发展息息相关。话不多说，让我们立刻进入今天的早报时间。
-
-1. 方程重构：参数化偏微分方程的规范算子学习（来源：arXiv cs.LG）
-   应用分析：这项技术对我们解决电机控制策略的性能与鲁棒性提升问题有巨大潜力。例如，我们可以用它来构建更高效、更鲁棒的电机热模型，预测不同环境温度和负载循环下的电机温升及性能衰减，从而优化弱磁控制和过热保护策略。在NVH抑制方面，也能通过参数外推，快速适应不同电机批次或装配公差引起的特性差异。我认为非常值得投入早期研究，评估其在EPS物理建模和自动标定场景中的实际效果。
-   https://arxiv.org/abs/2609.02982
-
-2. ObserverBench：评估控制系统内部估计器的基准框架（来源：arXiv cs.LG）
-   应用分析：我们可以借鉴ObserverBench的思想，设计一套针对EPS控制系统内部状态观测器和故障诊断模块的评估体系。例如，在MIL/SIL/HIL测试中，通过注入特定扰动或模拟传感器故障，评估观测器在极限工况下的估计误差，并分析这些误差如何影响助力性能和功能安全降级策略。这对于提升无传感器/冗余传感方案的安全性与成本竞争力至关重要，是值得我们内部测试方法学改进的重要参考。
-   https://arxiv.org/abs/2609.03026
-
-3. “永不遗忘”的新算法：受果蝇启发的稀疏编码（来源：Ars Technica）
-   应用分析：这项技术可以探索应用于EPS的自适应助力曲线调整或路感补偿模块。例如，根据驾驶员的特定驾驶风格（如运动模式、舒适模式）和长期驾驶习惯，系统能快速调整助力特性，同时不会忘记对其他工况或路况的适应能力。此外，对于提升电机控制策略的鲁棒性，如在线辨识转矩脉动或温漂参数，也能避免因新数据导致旧模型失效。这是一个值得投入小规模研究的方向，可以通过MATLAB/Simulink进行初步仿真，验证其在EPS特定场景下的效果。
-   https://arstechnica.com/science/2026/09/just-like-a-fruit-fly-a-new-algorithm-never-forgets-old-scents/
-
-4. 特斯拉Cybercab在美国投入运营，九月中旬中国首秀（来源：CnEVPost）
-   应用分析：这是未来汽车发展的一个里程碑，我们必须将线控转向的架构、冗余与功能安全设计作为当前研发的重中之重。需要加大对多重冗余执行器、故障安全机制、以及如何在无物理连接情况下确保转向系统可靠性的研究投入。同时，要评估现有EPS电机和控制器在纯执行器模式下的性能边界和成本优化空间，并关注其对MCU算力、通信接口（如车载以太网）和控制算法解耦带来的影响。这是一个必须积极投入、甚至引领的战略方向。
-   https://cnevpost.com/2026/09/04/tesla-cybercab-begins-us-operations-china-debut-sept/
-
-5. Rivian CEO RJ Scaringe谈及“分区架构”（来源：Charged EVs）
-   应用分析：我们需要深入研究分区架构对EPS控制器硬件集成和软件解耦的要求。这意味着EPS的控制功能可能不再完全集中在一个ECU内，而是被拆分到不同的区域控制器甚至中央计算平台。我们需要重新思考EPS的功能安全设计、通信协议（如车载以太网）、以及如何确保整个分布式系统的高实时性和鲁棒性。这是一个中长期布局的关键点，我们应该持续跟踪行业标准，并积极参与内部架构讨论，为未来的线控转向系统做好准备。
-   https://chargedevs.com/newswire/rivian-ceo-rj-scaringe-has-thoughts/
-
-6. StyleDrive：提升自动驾驶世界模型的长期一致性和交互感知能力（来源：arXiv cs.RO）
-   应用分析：这项研究有助于我们理解未来线控转向系统上层控制的需求，并为我们AI/数据驱动方法改进控制、标定效率提供了新思路。我们可以将“世界模型”的思想引入到线控转向的助力策略和手感调校中，例如，通过预测车辆与环境的未来交互，动态调整转向阻尼和回正力矩，以提供更自然、更安全的驾驶体验。这需要我们与自动驾驶团队紧密合作，探索数据驱动方法在助力策略中的应用，是值得中等投入研究的方向。
-   https://arxiv.org/abs/2609.03225
-
-7. BRIDGE：开源人形机器人平台，通过形态-控制协同设计实现物理AI（来源：arXiv cs.RO）
-   应用分析：我们可以深入研究Bridge平台公布的电机控制策略、结构设计细节以及形态-控制协同优化方法。例如，其在永磁同步电机（PMSM）控制中的FOC（磁场定向控制）变体、谐波抑制技术，以及如何量化“类人运动”并将其反馈到设计中的思路，对我们提升EPS电机的NVH性能、优化助力手感有直接启发。特别是其对转矩密度、效率和NVH的关注，与我们电机选型和控制策略的目标高度一致。这是一个值得积极投入的交叉点，可以从复现其部分控制算法、分析其电机选型数据开始。
-   https://arxiv.org/abs/2609.03497</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260904-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260904-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260904-pm.mp3" length="3212496" type="audio/mpeg"/>
-      <pubDate>Fri, 04 Sep 2026 09:42:18 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 科技早报：AI加速代理、因果模型、自适应控制与汽车区域架构深度解析</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦人工智能前沿、汽车智能化趋势以及机器人技术的新进展，精选出七条最值得关注的资讯。内容涵盖了如何利用AI提升研发效率，未来汽车架构的演变，以及机器人控制理论对我们EPS系统设计的启发。希望今天的分享能为您的工作带来新的思路和灵感。
@@ -1136,6 +1100,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260919-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260919-am.mp3" length="4420080" type="audio/mpeg"/>
       <pubDate>Fri, 18 Sep 2026 22:43:18 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI设计芯片，转向系统安全警示，全固态电池量产，空中机器人自主飞行</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报，我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最具洞察力的资讯。从AI如何设计芯片，到电动汽车转向安全隐患，再到全固态电池的量产突破，以及空中机器人自主飞行的里程碑，每一条都可能触动我们研发工作的神经。准备好了吗？让我们一起开启今天的技术探索之旅！
+
+1. How OpenAI Used Its Own LLMs to Design Its Jalapeño Chip（来源：Hacker News）
+   应用分析：这对我作为EPS控制器硬件设计工程师来说是振奋人心的信号。如果AI能辅助设计芯片，那它也完全可能辅助我们进行MCU选型、功率器件布局、电路板布线优化，甚至散热设计。我们可以探索利用LLM辅助分析不同功率器件（如IGBT/MOSFET）的特性，评估其在FOC控制下的性能表现，或生成符合ISO 26262功能安全要求的初步硬件架构。短期内，可以尝试用内部数据训练轻量级模型，辅助生成或优化控制器的硬件设计规范和测试用例，提升设计效率和质量。长期来看，值得投入研究AI辅助硬件设计工具链，甚至考虑与芯片供应商合作，探索定制化ASIC或FPGA在EPS电机控制中的应用潜力，以达到更高的集成度和性能。
+   https://spectrum.ieee.org/llms-for-chip-design
+
+2. A startup that builds other startups raised $100M and is all-in on physical AI（来源：TechCrunch）
+   应用分析：“物理AI”与我们EPS的电机控制、线控转向等方向高度契合。EPS本质上就是物理世界中的一个执行器。我们可以借鉴物理AI的理念，将AI更深层次地融入到电机控制策略中，例如用强化学习优化助力策略，使其更好地适应路况和驾驶员意图；或者利用神经网络进行更精准的无传感器位置估计，提升鲁棒性。Vantora的模式也提示我们，可以主动寻求与专注于物理AI的创业公司合作，或者在内部孵化小型团队，专门研究如何将前沿的AI控制算法（如机器人关节控制中的先进算法）快速迁移并应用于EPS系统，例如解决转矩脉动、NVH问题，或者提升线控转向的响应速度和力矩精度。这绝对值得投入，是未来EPS技术演进的关键方向。
+   https://techcrunch.com/2026/09/18/a-startup-that-builds-other-startups-raised-100m-and-is-all-in-on-physical-ai/
+
+3. GPT-6 Astra Solves a WWI German Radio Cipher（来源：Hacker News）
+   应用分析：虽然直接与EPS电机控制关联不大，但其展现的“复杂模式识别”和“逻辑推理”能力对我们用AI改进故障诊断和预测性维护有重要参考价值。我们可以考虑将GPT-like模型或其核心思想应用于分析EPS系统海量的运行数据、传感器信号，识别早期故障模式、异常行为，甚至预测潜在的硬件失效。例如，通过学习历史故障数据和维修记录，AI模型可以更精确地判断电机异响、助力异常等复杂现象的原因，并给出维护建议。这比传统的基于规则的诊断更智能、更高效。投入成本可能较高，但可以从小规模数据集和特定故障场景开始验证，如果效果显著，将极大提升EPS系统的可靠性和维护效率。
+   https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio
+
+4. Nio recalls 686 Firefly EVs in China over steering safety risk（来源：CnEVPost）
+   应用分析：这条新闻对我们EPS研发工程师来说是当头棒喝，直接警示了转向系统的功能安全重要性。我们正在做的EPS系统架构设计，特别是向线控转向演进，必须将冗余传感方案、故障诊断与降级策略放在首位。我们需要深入分析蔚来此次召回的具体原因，是硬件故障、软件Bug还是环境干扰？这促使我们重新审视当前的转向传感器（如转矩传感器、角度传感器）的选型、安装、信号处理和诊断逻辑。我们需要进一步强化针对传感器故障、信号漂移、噪声干扰的鲁棒性设计，提升故障诊断的准确性和降级模式的安全性。这不仅值得投入，更是我们日常工作的重中之重，直接关系到产品质量和用户生命安全。
+   https://cnevpost.com/2026/09/18/nio-recalls-686-firefly-evs-steering-safety-risk/
+
+5. ProLogium starts mass production of its Gen 3.5 all-solid-state lithium ceramic cell（来源：Charged EVs）
+   应用分析：虽然电池本身不是EPS的直接研发方向，但作为汽车电动化核心部件，它对整车架构和性能有深远影响。高能量密度意味着更轻的电池包、更长的续航，可能允许整车在配重、空间布局上有更多自由度，从而影响EPS系统的安装位置和集成方式。更重要的是，固态电池的安全性提升，可能降低整车对热管理系统的要求，释放更多能量用于驱动，或简化线束布局。作为EPS工程师，我们需要关注这些整车层面的变化，以便更好地与整车厂协同，优化EPS的供电、通信接口，并为未来更紧凑、更高性能的EPS模块预留设计空间。虽然无需直接投入电池研发，但持续关注其进展，并将其纳入EPS系统设计考量，是必要的战略性投入。
+   https://chargedevs.com/newswire/prologium-starts-mass-production-of-its-gen-3-5-all-solid-state-lithium-ceramic-cell/
+
+6. Onsemi’s Embedded Power Platform (EPP)（来源：Power Electronics News）
+   应用分析：这对我们EPS的功率级设计和电机控制器硬件至关重要。EPS系统中的电机驱动需要高效、紧凑、可靠的功率模块。安森美的EPP技术通过取代引线键合和DBC基板，有望大幅减少寄生电感、提升散热性能，这直接利于我们优化FOC矢量控制的电流环响应速度，抑制转矩脉动，并提高系统整体效率。更小的模块尺寸也为EPS控制器在有限空间内的集成提供了便利。我们应该密切关注这类先进功率模块封装技术，积极与安森美等供应商沟通，评估其EPP产品在EPS电机驱动中的应用潜力，包括600V等级的逆变器。初期可以进行技术调研和样品测试，验证其在转矩密度、效率、NVH和可靠性方面的优势，并评估集成到我们现有控制器架构中的可行性。这绝对值得投入，是提升EPS电机控制性能和硬件竞争力的关键。
+   https://www.powerelectronicsnews.com/onsemis-embedded-power-platform-epp/
+
+7. Joby Aviation’s 3,100-mile autonomous flight signals its push beyond electric air taxis（来源：TechCrunch）
+   应用分析：尽管是航空器，但其“自主飞行”、“先进飞行控制”和“冗余系统”与我们线控转向（Steer-by-Wire）的核心挑战高度相似。航空器对功能安全和可靠性的要求甚至更高。我们可以从Joby Aviation的经验中学习其在多传感器融合、故障检测与隔离、容错控制策略以及冗余执行器管理方面的设计理念。例如，其自主控制算法可能包含了应对未知环境扰动、系统参数变化的能力，这可以借鉴到我们EPS的无传感器控制和鲁棒性提升中。此外，其长距离飞行的挑战也意味着对执行器（如舵面电机）的寿命、温漂、可靠性有极高要求，这与我们EPS电机选型和控制策略关注点一致。虽然不能直接应用，但作为线控转向技术的前瞻性研究，持续关注并分析这类先进航空器的控制系统架构和技术细节，对我们设计高安全等级的EPS和线控转向系统非常有价值。这是一种高价值的知识投入。
+   https://techcrunch.com/2026/09/18/joby-aviations-3100-mile-autonomous-flight-signals-its-push-beyond-electric-air-taxis/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260919-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260919-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260919-pm.mp3" length="3833856" type="audio/mpeg"/>
+      <pubDate>Sat, 19 Sep 2026 09:42:35 +0000</pubDate>
     </item>
   </channel>
 </rss>
