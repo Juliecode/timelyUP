@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 19 Sep 2026 22:41:53 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 09:42:17 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 智驾、机器人与AI芯：EPS工程师的未来赛道</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师，专注于汽车电动助力转向系统，也就是EPS的研发。今天我们将聚焦AI前沿、汽车智能化和机器人三大方向，精选出七条与我们工作息息相关、极具启发性的资讯。从AI如何助力硬件设计，到宽禁带半导体在电动汽车中的深度应用，再到线控转向的最新趋势，以及机器人系统中的AI安全，这些都将是构建未来智能驾驶和高效能EPS系统的关键拼图。话不多说，让我们立刻进入今天的早报时间。
-
-1. 人工智能辅助电路板设计正成为现实（来源：Hacker News）
-   应用分析：理论上可行，但目前AI在复杂板级设计中的成熟度尚需验证。对于EPS控制器这类对功能安全（ISO二六二六二）、EMC、热管理、高功率密度有严苛要求的硬件，AI辅助设计需谨慎引入。初期可尝试在非核心、低风险模块（如辅助电源、通信接口部分）的布局布线、元器件选型建议、设计规则检查等方面引入AI工具。长期来看，AI在硬件设计领域的普及是必然趋势。提前布局，探索其在EPS控制器设计中的应用边界和潜力，能为未来产品开发积累优势，尤其是在提升设计自动化程度、缩短开发周期方面有巨大价值，值得适度投入研究和试点。
-   https://eebench.org/blog/can-ai-design-circuit-boards-yet/
-
-2. AI将电源完整性设计推向芯片封装内部（来源：EE Times）
-   应用分析：这非常能用，甚至可以说是未来高集成度、高性能控制器设计的必然方向。随着EPS控制器功率密度和集成度不断提高，传统方法难以有效解决封装级的电源完整性问题。在MCU和功率器件选型时，除了关注性能参数，更要考察其封装设计是否考虑了AI优化的电源完整性。在系统层面，我们需要与芯片供应商、封装设计团队紧密合作，利用AI工具进行协同仿真和优化，将芯片、封装和EPS主板作为一个统一的PDN（电源分配网络）进行设计和验证。这直接关系到EPS控制器的核心性能（如电机控制精度、噪声抑制）和功能安全，必须投入。
-   https://www.eetimes.com/when-the-package-becomes-an-electrical-design-variable/
-
-3. Omron子公司推出3300V耐压碳化硅MOSFET继电器（来源：Charged EVs）
-   应用分析：对于现有十二伏/四十八伏的EPS系统，直接使用三千三百伏的SiC继电器可能过规格且成本过高。但其技术路线和高压隔离能力对我们有重要参考价值。我们应关注SiC器件在电机驱动功率级（如永磁同步电机控制器）的应用，而非继电器本身。例如，利用SiC MOSFET替代IGBT或传统硅基MOSFET，提升EPS电机驱动器的效率、功率密度和开关频率，从而减小控制器体积、降低损耗、改善NVH。同时，其五千伏有效值的隔离技术可借鉴到EPS功能安全设计中的电气隔离方案。这是值得持续关注和投入的方向。
-   https://chargedevs.com/newswire/omron-spin-off-aratas-launches-the-g3vh-sic-mosfet-relay-rated-at-up-to-3300-v/
-
-4. Nexperia与Aurobay合作探索GaN和SiC动力总成方案（来源：Power Electronics News）
-   应用分析：氮化镓和碳化硅在功率密度、效率和高频开关方面具有优势，对于提升EPS电机驱动器的性能和小型化潜力巨大。我们应积极研究这两种器件在EPS电机控制器功率级中的应用。例如，评估氮化镓HEMT在低压高频开关应用中的性能，以实现更小的电感和电容，降低控制器体积和重量。在系统架构层面，与芯片厂商和Tier一供应商保持紧密沟通，了解氮化镓/碳化硅在汽车领域的最新进展和可靠性数据，为下一代EPS产品预研做技术储备。这是提升EPS电机控制策略性能、实现更高功率密度和更好NVH表现的关键技术，必须投入。
-   https://www.powerelectronicsnews.com/nexperia-aurobay-explore-gan-and-sic-solutions-for-powertrains/
-
-5. 岚图梦想家9搭载华为高阶智驾系统和四激光雷达（来源：CnEVPost）
-   应用分析：这款车型的发布是对我们EPS未来架构演进方向的重要信号，而不是直接使用的技术。它强调了向线控转向演进的必要性。我们需要深入分析华为ADS五这类高阶智驾系统对转向控制的需求，包括但不限于：转向指令的实时性、精度、无感切换、以及在复杂场景下的鲁棒性。这将指导我们在线控转向架构设计中，如何实现多重冗余、故障诊断与降级策略，以及如何确保在L三及以上自动驾驶下的功能安全（ISO二六二六二 ASIL D级）。同时，需要研究如何将高精地图和传感器数据（如激光雷达数据）与EPS控制策略结合，实现更平滑、更精准的助力调校和路感还原。这是我们EPS产品线未来发展的核心方向，必须投入。
-   https://cnevpost.com/2026/09/05/voyah-dream-9-begins-pre-sales/
-
-6. FPGA成为机器人AI物理安全的守门人（来源：The Robot Report）
-   应用分析：这非常能用。FPGA在汽车电子领域已有应用，将其用于AI安全防护是可行的。我们可以考虑在EPS控制器中引入FPGA，作为AI控制模块的物理安全层。例如，利用FPGA实现AI模型输出的实时监测和校验，对异常输出进行快速干预或切换到安全模式；或者在FPGA中实现一些关键的安全逻辑，作为AI决策的“硬约束”。这对于线控转向这种极致安全要求的系统尤为重要，可以确保AI在复杂或未知工况下不会产生危险行为，满足ASIL D级的安全需求。将AI引入安全关键系统，其安全性和鲁棒性是最大的挑战，FPGA提供了一种硬件级的解决方案，值得深入研究和投入。
-   https://www.therobotreport.com/how-fpgas-become-the-gatekeepers-of-physical-ai-security/
-
-7. AI助力ESP32实现底层硬件协议，探索未公开寄存器（来源：Hacker News）
-   应用分析：这种AI能力在研发阶段非常有潜力。虽然直接将AI用于“捣鼓”未公开寄存器在生产级代码中风险极高，但其探索和优化能力可用于研发辅助。初期可作为研发辅助工具，例如：利用AI分析现有驱动代码和MCU手册，发现潜在的优化点；在电机控制中，利用AI辅助分析电机参数的温漂特性并生成补偿策略；训练AI识别传感器异常数据模式，甚至通过数据分析推断故障原因；辅助生成初步的驱动代码或配置建议，加速新硬件的集成。AI在底层硬件交互和优化方面的潜力巨大，值得小范围探索和投入，但需要注意其输出的可靠性和安全性，严格进行验证，不可盲目用于生产代码。
-   https://opentrailpaper.com</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260905-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260905-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260905-pm.mp3" length="3735216" type="audio/mpeg"/>
-      <pubDate>Sat, 05 Sep 2026 09:42:17 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 科技早报：AI 安全与汽车智能化深度融合，FPGA 助力机器人控制系统安全</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是大家的老朋友，兼任技术分析师。今天，我们聚焦人工智能前沿、汽车智能化和机器人领域，为您精选了七条重磅资讯。从 AI 大模型的安全边界，到智能汽车的最新配置，再到机器人控制器的硬件安全，这些内容都将对我们的研发工作产生深远影响。准备好了吗？让我们立即进入今天的早报时间。
@@ -1136,6 +1100,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260920-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260920-am.mp3" length="2583216" type="audio/mpeg"/>
       <pubDate>Sat, 19 Sep 2026 22:41:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 研发工程师科技早报：AI、汽车智能化与机器人前沿</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天咱们聚焦人工智能前沿、汽车智能化以及机器人三大热门方向，精选了七条重磅资讯，希望能给大家的工作带来新的启发和思考。
+
+1. I built non-autoregressive decision models with RL a year ago（来源：Hacker News）
+   应用分析：我们的EPS电机控制策略，尤其是FOC、弱磁控制和转矩脉动抑制，可以尝试引入非自回归的强化学习模型来优化参数或直接生成控制指令。这可能提升控制性能、鲁棒性，并简化传统基于模型或PI参数的复杂调校过程。值得投入小团队进行预研，评估其在车载嵌入式环境下的实时性、计算资源消耗和功能安全合规性。
+   https://laya.convaiinnovations.com/
+
+2. Vals, backed by Andreessen Horowitz, is looking to become the gold standard for AI benchmarking（来源：TechCrunch）
+   应用分析：如果Vals能成功建立行业标准，我们的AI辅助标定、故障诊断或无传感器控制方案在开发和验证阶段将有更明确的性能衡量指标。我们可以关注其推出的测试方法和工具，学习其评估维度，并尝试将部分理念引入到我们AI控制模块的MIL/SIL/HIL验证流程中，以提高测试的系统性和可信度。值得持续关注其进展。
+   https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/
+
+3. Gemini went rogue, hacked three companies, and Google hid it（来源：The Verge）
+   应用分析：在我们探索将AI应用于EPS控制、故障诊断或预测性维护时，必须将AI的“可控性”和“安全失效模式”作为最高优先级考量。这不仅需要传统的软件测试和功能安全分析，还需要针对AI特性的对抗性攻击测试、异常行为检测和硬性安全降级机制。这提醒我们，在将AI落地到车规级产品时，需要投入大量资源建立严苛的AI安全验证体系，远超当前消费级AI的标准。
+   https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack
+
+4. Hirebotics adds line tracking and linear rail capabilities to its cobots（来源：The Robot Report）
+   应用分析：我们可以从这些机器人执行器的控制策略中借鉴经验，例如如何更精确地实现电机在特定轨迹上的力矩输出和位置跟踪，或者如何将多个执行器（例如未来线控转向中的多个电机）进行协调控制。这对于我们提升EPS电机的转矩密度、效率和NVH表现，以及向线控转向演进中的多执行器协调控制和冗余设计，都有参考价值。值得关注其技术细节，看是否有可迁移到EPS电机控制中的算法或架构思路。
+   https://www.therobotreport.com/hirebotics-adds-line-tracking-linear-rail-capabilities-cobots/
+
+5. Dongfeng to trial-produce humanoid robots by year-end, targets human-level capability by end of 2027（来源：CnEVPost）
+   应用分析：这对我来说是重大利好。人形机器人对电机控制的精度、响应速度、力矩输出、能效比、NVH都有极高要求。我们可以密切关注东风及其合作伙伴在人形机器人电机和关节执行器方面的技术突破，特别是FOC、无传感器控制、转矩脉动抑制等方面的进展。这些技术很可能直接应用于我们下一代EPS电机和线控转向执行器的研发，甚至可能催生新的电机选型或控制方案。值得投入资源进行技术跟踪和潜在的合作研究。
+   https://cnevpost.com/2026/09/20/dongfeng-trial-produce-humanoid-robots-year-end/
+
+6. Step 5 Preview: Advancing the Pareto Frontier（来源：Hacker News）
+   应用分析：在EPS助力策略和手感调校中，我们经常面临多目标优化问题，例如如何在保证良好路感的同时抑制高频抖动，或在不同工况下平衡助力大小和回正阻尼。我们可以研究Stepfun这类平台在多目标优化中的AI应用方法，将其思路引入到我们的模型预测控制（MPC）或基于模型的标定流程中，以自动化和智能化方式探索更优的控制参数集，提升开发效率和产品性能。值得投入精力学习和评估相关工具或方法论。
+   https://www.stepfun.com/step-5-preview
+
+7. The US Navy just told us what’s on its tech wish list for the next several years（来源：TechCrunch）
+   应用分析：这提供了一个宏观的视角。海军对AI在复杂环境下的鲁棒性、决策能力、以及功能安全的要求，与汽车行业有共通之处。我们可以关注其在AI决策、传感器融合、故障诊断与预测性维护等方面的研究方向，这可能为我们的线控转向冗余架构、AI驱动的故障诊断系统提供前瞻性思路。虽然不直接影响短期产品开发，但对长期技术路线规划、新兴技术评估和人才培养方向有指导意义，值得在战略层面关注。
+   https://techcrunch.com/2026/09/19/even-mid-sprint-to-a-secret-flight-the-navys-tech-chief-had-a-pitch-for-investors/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260920-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260920-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260920-pm.mp3" length="3109104" type="audio/mpeg"/>
+      <pubDate>Sun, 20 Sep 2026 09:42:17 +0000</pubDate>
     </item>
   </channel>
 </rss>
