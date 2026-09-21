@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 21 Sep 2026 09:42:52 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 16:30:16 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI与智能出行：从Robotaxi挑战到EPS技术前瞻</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术，为您精选了七条重磅资讯。从Robotaxi的实路挑战，到FPGA在机器人安全中的应用，再到OpenAI对未来AI的深度思考，以及AI在现实世界中犯下的“小错误”，每一条都与我们电动助力转向，也就是EPS的研发工作息息相关。话不多说，让我们立即进入今天的早报时间。
-
-1. Travis Kalanick’s Atoms might be getting into the robotaxi business（来源：TechCrunch）
-   应用分析：Atoms进入Robotaxi市场，意味着未来线控转向系统将是其核心需求之一。我们作为EPS研发工程师，需要密切关注这类新进入者的技术路线和对转向系统的具体要求，尤其是在冗余设计、功能安全等级（ISO 26262 ASIL D）以及高性能电机控制方面的需求。这非常值得投入，我们需要提前布局，将现有的EPS技术向高集成度、高功能安全等级的线控转向执行器方向演进，特别关注成本优化和批量生产能力。
-   https://techcrunch.com/2026/09/06/travis-kalanicks-atoms-might-be-getting-into-the-robotaxi-business/
-
-2. TechCrunch Mobility: Tesla Cybercab hits the road — and a snag（来源：TechCrunch）
-   应用分析：特斯拉Cybercab的“小插曲”提醒我们，即使是成熟的自动驾驶公司，其车辆控制系统，尤其是底层执行器，仍需极高的鲁棒性和故障诊断能力。这直接影响我们EPS系统的功能安全设计和故障降级策略。我们需要将更多的精力投入到EPS的故障诊断精度、快速响应的降级模式以及冗余安全设计上，确保在极端或异常情况下，转向系统仍能提供可控的助力。这是线控转向系统走向大规模应用前必须解决的痛点，投入是必须的，需要加强ISO 26262功能安全等级D的开发流程和测试验证。
-   https://techcrunch.com/2026/09/06/techcrunch-mobility-tesla-cybercab-hits-the-road-and-a-snag/
-
-3. Eric Sivertson discusses FPGAs and robot security（来源：The Robot Report）
-   应用分析：FPGA的硬件级并行处理能力和低延迟特性，使其非常适合用于EPS电机控制中的高速电流环、位置环等关键控制任务，提供比传统MCU更快的响应速度和确定性。同时，其可编程性也为实现硬件级别的功能安全和网络安全提供了可能。我们可以研究将部分核心控制逻辑或功能安全监控模块集成到FPGA中，与主MCU协同工作。这值得探索和小规模投入，尤其是在实现ASIL D级别的功能安全和应对潜在的网络攻击时，FPGA提供的硬件隔离和实时性是MCU难以比拟的。
-   https://www.therobotreport.com/eric-sivertson-discusses-fpgas-robot-security/
-
-4. Pressure sensors can help improve robotic gripping accuracy（来源：The Robot Report）
-   应用分析：机器人抓取对力反馈的精细控制，与EPS中对转向力矩的精确控制和路感还原有异曲同工之妙。我们可以借鉴其思路，在EPS系统中，除了现有的转矩传感器和电机位置传感器，是否能引入更精细的压力或力传感器，以更直接地感知路面反馈或驾驶员意图？这有助于优化助力策略，更精确地补偿摩擦、抑制抖动，甚至在无传感器控制方案中提供额外的冗余信息。这值得研究和小范围尝试，如果能显著提升手感调校的精度和鲁棒性，尤其是在线控转向中实现更自然的力反馈，那么这项投入是值得的。
-   https://www.therobotreport.com/pressure-sensors-can-help-improve-robotic-gripping-accuracy/
-
-5. An Alien Mind（来源：Hacker News）
-   应用分析：OpenAI的这篇思考提醒我们在将AI（如强化学习控制、神经网络观测器）引入EPS系统时，必须高度关注其可解释性、可验证性和鲁棒性。AI的“黑箱”特性可能导致其在特定未知工况下做出非预期行为，这在ASIL D级别的EPS系统中是不可接受的。因此，我们不能简单地将AI模型直接用于闭环控制，而应将其作为辅助工具，例如用于离线优化控制参数、自动标定、故障诊断数据分析或预测性维护。值得持续关注和在非安全关键领域投入，但对于直接闭环控制，目前不宜大规模投入不可解释的AI模型。
-   https://openai.com/index/an-alien-mind/
-
-6. Hikers rescued after using Google Gemini for planning（来源：TechCrunch）
-   应用分析：这起事件再次敲响警钟：AI的输出并非总是可靠的，特别是在缺乏足够约束和验证机制时。对于EPS系统，我们若考虑使用AI进行故障诊断、预测性维护或辅助标定，必须建立严格的验证和回溯机制。例如，AI建议的故障诊断结果必须通过传统方法进行交叉验证。这值得投入，但需谨慎。在故障诊断和预测性维护方面，AI可以提升效率，但其输出必须被视为“建议”，而非“指令”，最终决策仍需人类工程师或经过严格验证的传统算法确认。投入方向应侧重于AI模型的鲁棒性训练和与现有诊断方法的融合。
-   https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/
-
-7. Research acceleration: The view inside OpenAI（来源：Hacker News）
-   应用分析：OpenAI的经验告诉我们，在EPS研发中，提升数据处理能力（如台架测试数据、整车标定数据）、优化计算资源（HIL仿真、模型预测控制的优化求解）、以及提高工程效率（MATLAB/Simulink模型化设计与代码生成、自动化测试框架）是加速技术落地的关键。我们可以审视当前的开发流程，找出数据孤岛、计算瓶颈和手动操作环节，引入自动化工具和平台。这非常值得投入。提高研发效率是长期竞争力的核心，优化数据管理和计算资源可以显著缩短开发周期，降低试错成本，并加速前沿控制算法的验证和部署。
-   https://openai.com/index/research-acceleration-view-inside-openai</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260907-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260907-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260907-am.mp3" length="3143088" type="audio/mpeg"/>
-      <pubDate>Sun, 06 Sep 2026 22:41:53 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 智驾前沿：从类脑控制到现场自适应AI，EPS工程师如何把握未来转向</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的智驾前沿科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人三大领域，为您精选了七条重磅资讯。从数据驱动的非线性模型发现，到类脑神经元通信的鲁棒控制，再到无人驾驶出租车在现实世界的挑战，每一条都可能点亮您在汽车电动助力转向（EPS）系统研发中的新思路。准备好了吗？让我们一起探索这些科技浪潮中的关键节点，看看它们将如何影响我们的工作，以及我们能从中汲取哪些灵感。
@@ -1136,6 +1100,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260921-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260921-pm.mp3" length="3063744" type="audio/mpeg"/>
       <pubDate>Mon, 21 Sep 2026 09:42:52 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI、汽车、机器人：从芯片到控制的未来技术洞察</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大热门领域，精选七条重磅资讯。从芯片设计到电机控制，从大模型幻觉到人形机器人量产，每一条都可能深刻影响我们的未来技术路线。准备好了吗？让我们立即开始！
+
+1. Infineon’s TLE9744QK PMIC integrates resolver excitation and safety logic for EV inverters（来源：Charged EVs）
+   应用分析：非常能用，而且是EPS系统发展的重要方向。EPS控制器需要为MCU、传感器（特别是旋变）、通信模块提供稳定的供电，同时满足ISO 26262功能安全要求。TLE9744QK将旋变激励和安全逻辑集成，直接降低了物料清单成本和PCB面积，简化了功能安全设计。绝对值得投入研究和评估。这可能是未来EPS控制器设计的标准组件。我们需要深入分析其功能安全特性、集成度带来的电磁兼容性挑战、以及与现有MCU和功率级器件的兼容性。特别是在线控转向（SBW）中，旋变作为核心位置传感器，其激励电路的可靠性和安全性至关重要。
+   https://chargedevs.com/newswire/infineons-tle9744qk-pmic-integrates-resolver-excitation-and-safety-logic-for-ev-inverters/
+
+2. Tesla audits China suppliers to push Optimus into mass production, report says（来源：CnEVPost）
+   应用分析：非常值得关注，且技术可高度迁移。人形机器人关节对电机、减速器、控制策略（如转矩密度、效率、NVH、动态响应、鲁棒性）的要求极高，很多方面甚至超越了EPS。值得密切关注和学习。特斯拉的量产经验，尤其是在电机选型（可能包括PMSM）、FOC控制、无传感器控制、转矩脉动抑制等方面的突破，可以直接为我们的EPS电机控制策略和硬件选型提供宝贵参考。人形机器人执行器对小型化、高功率密度、高动态响应的需求，可能会催生新的电机设计和控制算法，这些都可以借鉴到EPS向高性能、小型化方向的演进，特别是在线控转向执行器方面。
+   https://cnevpost.com/2026/09/21/tesla-audits-china-suppliers-optimus-mass-production/
+
+3. Detecting Hallucination in LLMs: Tracing the Topological Signatures of Impaired Context Sharing（来源：arXiv cs.AI）
+   应用分析：间接相关，但未来AI辅助EPS开发和故障诊断中可能有用。如果我们将LLM用于自动生成测试用例、分析故障日志、辅助控制参数标定或提供预测性维护建议，其输出的可靠性（无幻觉）是基础。初期可保持关注，无需立即投入。但如果未来我们在EPS开发流程中引入AI辅助代码生成、智能诊断助手等工具，这项技术可以作为评估这些AI工具可靠性的一个潜在维度。例如，通过分析AI生成的标定参数或诊断报告是否存在“幻觉”，提高自动化工具的安全性。
+   https://arxiv.org/abs/2609.21096
+
+4. Can Agents Design Better Chips with a Higher Level Abstraction?（来源：arXiv cs.AI）
+   应用分析：间接相关，但长期来看影响巨大。EPS控制器依赖于高性能、高可靠性的MCU和功率器件。如果AI能加速这些芯片的设计，我们就能更快地获得更优化的硬件平台，从而提升EPS系统的性能和功能。无需直接投入，但应密切关注。未来我们的硬件团队在选型或参与定制芯片设计时，可能会受益于这类AI工具。作为EPS研发工程师，我们需要了解AI在芯片设计领域的发展，以便在选择或定义下一代控制器硬件时，能更好地评估和利用这些AI带来的优势。
+   https://arxiv.org/abs/2609.21157
+
+5. Efficient Bayes-Adaptive Reinforcement Learning with Temporal Logic Specifications（来源：arXiv cs.LG）
+   应用分析：非常能用，是AI在EPS控制领域落地的重要路径。我们可以尝试将这种方法应用于线控转向的冗余控制策略设计，或者电机故障降级策略的优化。例如，在面对传感器故障、电机参数漂移等不确定性时，RL算法可以学习自适应控制策略，而LTL规范则能确保系统始终满足转向手感、助力范围、回正性能等安全性和功能性要求。值得深入研究和投入。这与我们“用AI/数据驱动方法改进控制、标定效率、故障诊断与预测性维护”以及“线控转向的架构、冗余与功能安全设计”的目标高度契合。可以尝试用MATLAB/Simulink进行原型开发和HIL仿真验证，探索其在EPS助力曲线自适应优化、故障模式下的安全降级控制等场景的应用。
+   https://arxiv.org/abs/2609.20954
+
+6. Do Spinning Radar Doppler Velocity Measurements Improve Vehicle Detection and Tracking?（来源：arXiv cs.RO）
+   应用分析：间接相关，但对未来线控转向系统至关重要。EPS作为执行器，其控制策略和性能直接受上层自动驾驶系统感知和决策的影响。更精准的车辆检测和追踪，意味着上层系统能提供更准确的意图和路径规划，从而让EPS更好地执行转向指令。无需直接投入到雷达技术本身，但应关注其发展和数据接口。我们需要了解新一代雷达传感器能提供哪些更丰富、更精确的信息（如径向速度、角速度等），以便在设计线控转向系统的感知层接口和控制算法时，能充分利用这些增强的数据，优化系统的响应和鲁棒性。
+   https://arxiv.org/abs/2609.21000
+
+7. Boston Dynamics opens Metaplant Application Center to train Atlas humanoids（来源：The Robot Report）
+   应用分析：高度相关，可借鉴人形机器人的电机和控制技术。人形机器人的关节执行器对高转矩密度、高动态响应、低NVH、高精度控制的需求，与EPS电机控制面临的挑战有很多共通之处。他们的训练方法、模拟器应用、以及如何将复杂任务分解为底层运动控制，都值得我们学习。值得持续关注和学习。特别是人形机器人在复杂环境下的运动控制算法、故障诊断与恢复机制、以及如何通过数据驱动进行性能优化，这些经验对我们提升EPS电机控制策略的鲁棒性、手感调校的效率，甚至探索无传感器或冗余传感方案都有启发意义。可以关注其公开的论文、技术分享，甚至考虑参与相关开源项目。
+   https://www.therobotreport.com/boston-dynamics-opens-metaplant-application-center-train-atlas-humanoid-robots/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260922-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260922-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260922-pm.mp3" length="4059504" type="audio/mpeg"/>
+      <pubDate>Mon, 21 Sep 2026 16:30:16 +0000</pubDate>
     </item>
   </channel>
 </rss>
