@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 21 Sep 2026 16:30:16 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 22:42:56 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 智驾前沿：从类脑控制到现场自适应AI，EPS工程师如何把握未来转向</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的智驾前沿科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人三大领域，为您精选了七条重磅资讯。从数据驱动的非线性模型发现，到类脑神经元通信的鲁棒控制，再到无人驾驶出租车在现实世界的挑战，每一条都可能点亮您在汽车电动助力转向（EPS）系统研发中的新思路。准备好了吗？让我们一起探索这些科技浪潮中的关键节点，看看它们将如何影响我们的工作，以及我们能从中汲取哪些灵感。
-
-1. Data-Driven Learning of Unknown Nonlinear Differential Equations Using Functional Analysis（来源：arXiv cs.LG）
-   应用分析：这项技术对我们来说，非常值得尝试和投入。我们可以用它来更精确地建立永磁同步电机（PMSM）的非线性模型，例如考虑磁饱和、温度漂移对参数的影响，以及转向系统中的摩擦、间隙等非线性环节。通过采集EPS在不同工况下的转矩、转速、电流、角度等运行数据，学习非线性ODE，构建更精确的仿真模型和模型预测控制（MPC）预测器，直接提升电机控制策略性能与鲁棒性，如转矩脉动抑制和NVH优化。
-   https://arxiv.org/abs/2609.04329
-
-2. Modular Deep Recurrent Neural Network: Application to Quadrotors（来源：arXiv cs.LG）
-   应用分析：这项技术对我们EPS开发来说，有很高的迁移价值，值得投入。我们可以将这种模块化RNN应用于EPS的电机控制策略中，作为更先进的状态观测器或预测器，来处理电机在高速、大转矩切换、弱磁等复杂工况下的非线性动态。特别是在无传感器控制中，精确的电机模型对转子位置和速度的估计至关重要。此外，在助力策略的手感调校中，我们可以利用其建模高阶非线性的能力，实现更细腻、更符合驾驶员预期的转向手感。
-   https://arxiv.org/abs/2609.04339
-
-3. Robust stabilization with spiking neuronal communication（来源：arXiv eess.SY 控制系统）
-   应用分析：这项研究属于前瞻性范畴，短期内直接落地到量产EPS系统有挑战，但长期潜力巨大，值得我们进行预研。我们可以在未来的线控转向系统（Steer-by-Wire）的冗余通信和控制架构中探索这种可能性。例如，将关键传感器信号通过尖峰编码器传输到冗余控制器，再由尖峰解码器进行处理。这或许能提供一种全新的容错通信机制，同时降低数据传输带宽和功耗。在故障诊断方面，尖峰模式本身可能就携带了异常信息，有助于更早发现潜在故障。对于线控转向这种对安全性和冗余要求极高的未来架构，探索这种“类脑”的鲁棒通信与控制方案，具有重要的战略意义。
-   https://arxiv.org/abs/2609.05054
-
-4. When Quantization Breaks Memory: Recurrent-State Write-Back in Low-Precision Temporal Inference（来源：arXiv cs.AI）
-   应用分析：这篇文章给我们敲响了警钟，这不是一个“能用”的技术，而是一个必须规避和解决的挑战。在开发和部署任何基于RNN或类似时间序列模型的AI算法到EPS控制器时，我们必须特别关注量化策略对模型性能的影响。尤其是在电机无传感器控制中，如果使用RNN进行转子位置或速度的估计，低精度量化可能导致估计误差累积，从而影响控制精度甚至稳定性。我们需要在模型设计和量化过程中，额外进行针对性的验证，确保在目标量化精度下（例如四比特）不会出现这种“状态回写”引发的性能崩溃。这必须投入，因为量化是嵌入式部署的必经之路，理解并解决其潜在问题，是确保AI模型在EPS控制器中可靠运行的关键。
-   https://arxiv.org/abs/2609.04490
-
-5. Continual Field-Adaptive Models (CFAMs) for Post-Deployment Physical AI（来源：arXiv cs.RO）
-   应用分析：这项技术对我们来说非常值得投入和深入研究。我们可以将CFAMs应用于EPS的自适应控制和预测性维护。例如，在电机控制策略中，慢学习组件可以包含基础的FOC控制和通用助力曲线，而快学习的Capsule Field则可以学习并存储特定车辆、特定驾驶员或特定环境下的微调参数、摩擦补偿模型或异常检测规则。当车辆在不同工况下运行时，系统可以自主地更新这些快速学习组件，以适应电机参数漂移、机械磨损或路面变化，从而持续优化助力手感、抑制NVH。在故障诊断方面，CFAMs可以学习正常运行模式下的“能力胶囊”，一旦出现异常，能够快速识别并进行诊断。这是一种非常有前景的AI范式，能够将前沿研究快速转化为可落地的EPS工程方案，实现EPS系统的“自我进化”，显著提升用户体验和系统可靠性。
-   https://arxiv.org/abs/2609.04552
-
-6. Scalable Edge-assisted Fusion and Path Prediction for Connected Autonomous Vehicles（来源：arXiv cs.RO）
-   应用分析：这项技术对我们来说能用，且非常值得关注和投入。在未来的线控转向系统中，EPS控制器不仅需要执行转向指令，更可能需要接收来自上层决策的更丰富、更精确的路径信息。通过“Conductor”这样的边缘辅助平台，我们可以获取超视距的交通流和潜在碰撞风险信息，以及更准确的车辆轨迹预测。这些信息可以作为线控转向决策模块的输入，用于优化转向助力曲线、提供预警，甚至在紧急情况下辅助进行避障转向。例如，当边缘平台预测到前方路口有潜在碰撞风险时，可以提前调整转向系统响应特性，为驾驶员或自动驾驶系统提供更安全的冗余。这是线控转向向高级自动驾驶演进的必经之路，理解并参与边缘辅助感知和决策框架的研究，能够确保EPS在未来智能汽车架构中占据更核心、更智能的位置。
-   https://arxiv.org/abs/2609.04364
-
-7. TechCrunch Mobility: Tesla Cybercab hits the road — and a snag（来源：TechCrunch）
-   应用分析：这条新闻不是一个直接可用的技术，而是一个重要的行业案例和警示，必须高度关注。它提醒我们，在设计线控转向系统时，必须充分考虑各种极端情况和不确定性。例如，当自动驾驶系统遇到“障碍”时，线控转向系统需要具备强大的降级能力（Degradation Mode）、故障诊断和隔离能力，确保车辆仍能安全停车或被驾驶员接管。这促使我们在线控转向的冗余通道设计、故障安全机制以及与高层决策系统的接口定义上，采取更保守、更全面的策略，并加大MIL/SIL/HIL以及整车测试的投入，模拟更广泛的异常场景。这直接关系到EPS和线控转向系统的最终用户安全和市场接受度。
-   https://techcrunch.com/2026/09/06/techcrunch-mobility-tesla-cybercab-hits-the-road-and-a-snag/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260907-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260907-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260907-pm.mp3" length="3862944" type="audio/mpeg"/>
-      <pubDate>Mon, 07 Sep 2026 09:43:00 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 智驾未来：AI赋能转向，机器人演进与电动车材料新突破</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您带来七条精选资讯。从数据驱动的控制优化，到数字孪生在汽车研发中的应用，再到电动车核心部件的材料创新，以及机器人领域的自适应学习，每一条都可能为您的研发工作带来新的启发。让我们一起探索这些前沿技术，看看它们将如何塑造未来的工程实践。
@@ -1136,6 +1100,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260922-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260922-pm.mp3" length="4059504" type="audio/mpeg"/>
       <pubDate>Mon, 21 Sep 2026 16:30:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾前沿早报：AI赋能安全控制与机器人执行器新突破</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的《智驾前沿》科技早报。我是你们的主播兼技术分析师，小智。今天，我们将聚焦 AI 前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯，并结合咱们汽车电动助力转向，也就是 EPS 的研发工作，深入分析这些技术能带来哪些实实在在的应用。希望今天的分享，能为您的技术探索和项目落地提供一些新的思路和灵感。
+
+1. OpenAI forms math advisory group as its AI resolves more than 100 open problems（来源：TechCrunch）
+   应用分析：能用，且潜力巨大。我们可以探索利用这类 AI 模型来辅助复杂的控制算法设计与优化，例如，让 AI 协助推导多变量、非线性系统的最优控制律，或者在现有 FOC、MPC 算法基础上，提出新的扰动观测器或参数辨识方法。它甚至可能帮助我们进行功能安全（ISO 26262）的逻辑验证，自动生成测试用例，或者对复杂的故障诊断逻辑进行形式化验证。此外，在电机选型和系统架构设计阶段，AI 也许能辅助进行多目标优化，权衡转矩密度、效率、NVH 和成本。所以，这绝对值得我们高度关注和适度投入。初期可以从形式化验证、自动测试用例生成等辅助工具入手。
+   https://techcrunch.com/2026/09/21/openai-forms-math-advisory-group-as-its-ai-resolves-more-than-100-open-problems/
+
+2. Efficient Bayes-Adaptive Reinforcement Learning with Temporal Logic Specifications（来源：arXiv cs.LG）
+   应用分析：理论上可行，但工程落地挑战大，值得深入研究。我们可以尝试将这种方法应用于 EPS 的特定子系统，例如，电机故障诊断后的降级运行策略，或者线控转向系统在传感器冗余失效后的备用控制策略。利用强化学习的自适应能力来应对电机参数漂移、路面条件变化等不确定性，同时通过时序逻辑规范来确保转向助力、回正力矩等关键性能指标始终满足 ISO 26262 的安全要求。值得中长期投入。短期内，直接在量产产品上应用有很高风险。但作为前瞻性研究，探索如何将这种带有安全约束的强化学习应用于 EPS 的自适应控制、故障容错和线控转向系统，是提升系统智能化和鲁棒性的重要方向。可以先从 MIL/SIL 环境下的仿真验证开始。
+   https://arxiv.org/abs/2609.20954
+
+3. Scaling Physical AI Deployment Beyond the Demo（来源：EE Times）
+   应用分析：非常能用，而且是未来方向。对于线控转向（Steer-by-Wire）系统，我们需要将更多环境感知（视觉、雷达）和驾驶意图（语言指令或高级驾驶辅助系统决策）融入转向控制。这就要求在 EPS 控制器或其协同处理器上实现高效的 AI 推理。例如，利用轻量化神经网络模型进行路感还原的自适应调整，或者在转向手感调校中，通过 AI 模型学习驾驶员偏好并实时调整助力曲线。文章提到的“异构计算”意味着我们需要关注带有 NPU 或 DSP 模块的下一代 MCU，以及如何优化模型部署到这些边缘硬件上，实现毫秒级的实时控制响应。所以，这非常值得我们大力投入，是 EPS 向线控转向和更高级别智能驾驶演进的必经之路。
+   https://www.eetimes.com/scaling-physical-ai-deployment-beyond-the-demo/
+
+4. Infineon’s TLE9744QK PMIC integrates resolver excitation and safety logic for EV inverters（来源：Charged EVs）
+   应用分析：直接可用，且应积极评估。我们的 EPS 系统广泛使用永磁同步电机（PMSM），需要精确的位置反馈。旋变传感器作为一种常用的位置传感器，其激励与信号处理电路是控制器硬件设计的关键部分。这款 PMIC 将激励电路和安全逻辑集成，可以简化 EPS 控制器板级设计，减少外部元件，降低 EMI 风险。更重要的是，其内置的专用安全引擎可以辅助实现 ISO 26262 功能安全要求，比如监测旋变信号完整性、电源轨异常等，减轻 MCU 的负担，提高故障诊断的实时性和可靠性。这对于 C-EPS、P-EPS 等不同架构的 EPS 系统都具有通用价值。所以，极度值得投入。立即进行技术评估和供应商沟通，将其纳入咱们下一代 EPS 控制器硬件平台或线控转向执行器的备选方案。
+   https://chargedevs.com/newswire/infineons-tle9744qk-pmic-integrates-resolver-excitation-and-safety-logic-for-ev-inverters/
+
+5. Tesla audits China suppliers to push Optimus into mass production（来源：CnEVPost）
+   应用分析：间接可用，需关注其供应链和技术趋势。我们应密切关注特斯拉 Optimus 供应链中电机、减速器、驱动器和传感器等核心部件的技术选型和成本结构。人形机器人关节对转矩密度、效率、响应速度和 NVH 有极高要求，这些与 EPS 电机控制面临的问题高度相似。例如，Optimus 可能会采用紧凑型、高功率密度的永磁同步电机，并可能在 FOC 控制、转矩脉动抑制、无传感器控制等方面有独到之处。我们可以从特斯拉的供应链中寻找潜在的创新供应商，或者学习其在电机控制和执行器集成上的工程经验，将其应用于我们的 EPS 电机选型和控制策略优化。这值得持续关注和适度投入情报收集。
+   https://cnevpost.com/2026/09/21/tesla-audits-china-suppliers-optimus-mass-production/
+
+6. Boston Dynamics opens Metaplant Application Center to train Atlas humanoids（来源：The Robot Report）
+   应用分析：高度相关，技术可迁移。我们应重点关注 Atlas 在关节执行器（伺服电机）、高精度力矩控制、多关节协调控制、以及在复杂动态环境下（如行走、搬运）的鲁棒性控制策略。例如，其如何实现高带宽的力矩控制以模拟人手感，如何抑制电机在复杂负载下的振动和噪声，以及如何进行参数自适应。这些经验对于我们优化 EPS 的助力手感调校、转矩脉动抑制、以及为线控转向（Steer-by-Wire）设计高性能执行器都具有直接的指导意义。特别是对于无传感器或冗余传感方案，人形机器人在功耗、成本和可靠性方面的权衡，也能提供宝贵参考。这值得深入研究和学习。
+   https://www.therobotreport.com/boston-dynamics-opens-metaplant-application-center-train-atlas-humanoid-robots/
+
+7. ForeTac-VLA: A Forecasting-Based Tactile-Vision-Language-Action Model for Contact-Rich Robotic Manipulation（来源：arXiv cs.RO）
+   应用分析：具有前瞻性应用潜力，特别是在线控转向领域。在 EPS 的手感调校中，我们可以借鉴其“触觉预测”思想，将路面反馈、轮胎抓地力等信息转化为“预期触觉状态”，并用 AI 模型来预测这些状态，从而更精细地调整助力曲线、阻尼和回正补偿。对于线控转向，这可以帮助系统在复杂路况或即将失控的边缘，提前预测接触力的变化，并主动调整转向响应，提升驾驶员的信心和安全性。此外，结合语言指令，未来可以通过语音指令调整转向模式（如运动模式、舒适模式），实现更智能的人机交互。这值得我们中长期关注和研究，可以从仿真环境中构建类似模型开始，探索自动优化手感调校的可能性。
+   https://arxiv.org/abs/2609.20980</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260922-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260922-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260922-am.mp3" length="3444624" type="audio/mpeg"/>
+      <pubDate>Mon, 21 Sep 2026 22:42:56 +0000</pubDate>
     </item>
   </channel>
 </rss>
