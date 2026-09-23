@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 22 Sep 2026 22:42:15 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 09:42:43 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 研发工程师早报：人形机器人、物理AI与EPS前沿技术</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门领域，为您精选出七条最具价值的资讯。从人形机器人的量产线，到汽车L3自动驾驶人才流向物理AI，再到EPS系统可能用到的新型电机、传感器、功率器件，以及数字孪生和微型冷却技术，每一条都可能触及您日常工作的痛点或未来的方向。希望今天的分享能给您的研发工作带来新的灵感和启发。
-
-1. Xpeng opens Iron humanoid robot production line, paving way for year-end mass production（来源：CnEVPost）
-   应用分析：人形机器人关节执行器对电机转矩密度、效率、NVH和控制精度都有极高要求，这些正是我们EPS电机控制策略需要持续优化的方向。我们可以深入研究小鹏Iron机器人所采用的电机类型和控制方案，了解其在极限工况下的性能、散热、成本控制。特别关注其在无传感器控制、高精度位置/转矩控制、以及功能安全方面的实现思路，这些经验可以借鉴到线控转向（Steer-by-Wire）的冗余和安全设计中。这非常值得我们投入，是机电控制领域的前沿，其突破很可能对汽车EPS，尤其是线控转向的电机和控制方案带来启发和技术迁移的机会。
-   https://cnevpost.com/2026/09/08/xpeng-opens-iron-humanoid-robot-production-line/
-
-2. Xiaomi's L3 autonomous driving lead exits for physical AI, joining auto executive exodus（来源：CnEVPost）
-   应用分析：物理AI在EPS中的应用潜力巨大。我们可以探索如何将AI（如强化学习）应用于助力策略的自适应调校，实现更精细、个性化的手感；利用神经网络观测器提升无传感器控制的精度和鲁棒性；通过AI进行故障诊断和预测性维护，提高系统可靠性。此外，物理AI在感知、决策到执行的闭环控制中，可以帮助我们优化线控转向的整体架构，提升系统对复杂路况和驾驶意图的理解与响应能力。这是战略性投入方向，不仅仅是技术趋势，更是解决当前EPS面临的复杂问题和线控转向实现高级功能的潜在突破口。建议建立物理AI相关的预研团队，并寻求与外部合作。
-   https://cnevpost.com/2026/09/08/xiaomi-l3-lead-exits-for-physical-ai/
-
-3. Fering selects Turntide axial flux motors and inverters for its hybrid off-road vehicle（来源：Charged EVs）
-   应用分析：当前EPS多采用径向磁通永磁同步电机。轴向磁通电机在相同体积下能提供更大转矩，且扁平化结构更利于集成。我们可以研究Turntide轴向磁通电机在越野车上的应用，重点关注其在恶劣工况下的可靠性、散热设计以及与逆变器的匹配。这能为我们未来的EPS电机选型提供新思路，尤其是在追求更高转矩密度、更紧凑布局的线控转向执行器方面。其配套的逆变器技术也值得研究，看是否有更优的控制算法或功率器件应用。虽然直接替换可能成本较高，但作为下一代EPS电机方案的储备技术，进行可行性分析和关键技术攻关是必要的。
-   https://chargedevs.com/newswire/fering-selects-turntide-axial-flux-motors-and-inverters-for-its-hybrid-off-road-vehicle/
-
-4. Melexis Targets Small Motor Applications with 5-V Pico-Resolver（来源：Power Electronics News）
-   应用分析：当前EPS系统普遍使用磁编码器或旋转变压器作为位置传感器。Melexis这款Pico-Resolver的特点是“小型化”、“高刷新率”、“高转速支持”。我们可以评估其在EPS电机中的实际应用效果，特别是在高速弱磁控制场景下能否保持高精度，以及在恶劣车规环境下（温度、震动、电磁兼容）的鲁棒性。其5伏供电也符合汽车电子的趋势。这有助于我们实现更精准的FOC控制，优化转矩脉动和NVH表现，同时可能降低传感器的集成难度和成本。传感器是电机控制的核心部件，性能提升能直接反馈到产品竞争力，非常值得投入验证，可以采购样品进行台架测试和性能评估。
-   https://www.powerelectronicsnews.com/melexis-targets-small-motor-applications-with-5-v-pico-resolver/
-
-5. Improved GaN HEMT SEE Radiation Hardness with Gate Termination Extension（来源：Power Electronics News）
-   应用分析：虽然辐射硬度不是EPS的直接要求，但GaN HEMT本身在功率密度、效率和开关频率上的优势，使其成为线控转向（Steer-by-Wire）执行器功率级的理想选择。更高的开关频率可以缩小无源器件尺寸，降低控制器体积和重量，同时提升控制带宽。我们需要持续关注GaN器件在汽车领域的成熟度、成本、可靠性（包括热管理和抗瞬态冲击能力），以及是否已有车规级产品推出。该技术对EPS功率级的小型化、高效化和集成化有重要指导意义。值得持续关注和预研，作为未来功率电子的重要方向，但目前在汽车EPS领域仍处于早期应用阶段，需要等待更成熟的车规级产品和供应链。
-   https://www.powerelectronicsnews.com/improved-gan-hemt-see-radiation-hardness-with-gate-termination-extension/
-
-6. Why Holistic Digital Twins are Needed to Accelerate SDV Development（来源：EE Times）
-   应用分析：我们目前已在MIL/SIL/HIL中使用数字孪生（即EPS系统模型）进行控制器软硬件验证和标定。文章提出的“全局数字孪生”意味着将EPS系统模型与整车动力学、环境感知、驾驶员模型甚至云端服务进行更紧密的集成。这可以极大地加速助力策略、故障诊断、功能安全（ISO 26262）等方面的开发和验证，实现“左移”开发，在物理样机出现前就发现并解决问题。我们可以将EPS的电机、控制器、转向柱模型与整车模型、虚拟测试场景结合，进行更全面的性能、鲁棒性、功能安全验证，并利用数据驱动的方法优化模型。数字孪生是SDV时代提升研发效率、降低成本、保障功能安全的核心方法，值得加大投入，从局部数字孪生走向全局，是EPS开发团队必须迈出的一步。
-   https://www.eetimes.com/why-holistic-digital-twins-are-needed-to-accelerate-sdv-development/
-
-7. Why Microcooling Will Be a Critical Enabler of Agentic AI（来源：EE Times）
-   应用分析：随着AI在EPS控制中的深入应用，例如使用深度强化学习进行实时助力策略优化，或者运行复杂的神经网络进行状态观测和故障预测，控制器内部的AI计算模块可能会产生大量热量。传统的被动散热或风扇散热可能无法满足小型化、车规级模块的需求。微型冷却技术（如微流道冷却、热电冷却）的进展，将直接决定未来AI芯片在EPS控制器中的集成度、性能和可靠性。我们需要关注微型冷却技术在成本、可靠性、尺寸和车规认证方面的进展，为未来AI驱动的EPS控制器设计做技术储备。这属于前瞻性技术，目前可能不是立即投入研发的阶段，但作为未来AI在嵌入式控制系统中的使能技术，值得持续保持关注和进行初步的技术跟踪。
-   https://www.eetimes.com/why-microcooling-will-be-a-critical-enabler-of-agentic-ai/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260908-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260908-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260908-pm.mp3" length="3559392" type="audio/mpeg"/>
-      <pubDate>Tue, 08 Sep 2026 09:42:34 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI与智能出行共舞：Navier-Stokes突破、物理AI人才潮及线控转向新形态</title>
       <description>早上好，各位研发工程师朋友！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师，在这里和大家一起洞察前沿科技，思考工程落地。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为大家精选了七条重磅资讯，希望能为您的日常研发工作带来新的启发。无论您是关注AI在控制系统中的应用，还是对线控转向、高性能电机技术充满兴趣，相信今天的分享都能让您有所收获。
@@ -1136,6 +1100,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260923-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260923-am.mp3" length="3200400" type="audio/mpeg"/>
       <pubDate>Tue, 22 Sep 2026 22:42:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI赋能汽车转向：从电机控制到线控安全</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人三大领域，为您精选了7条重磅资讯。这些消息不仅揭示了技术发展的新趋势，更与我们汽车EPS，也就是电动助力转向系统的未来演进息息相关。话不多说，让我们立刻进入今天的早报时间。
+
+1. Model-Free Current Control of Permanent Magnet Synchronous Motors via ESO-Based Disturbance Feedforward and Data-Driven H-infinity Residual Feedback（来源：arXiv eess.SY 控制系统）
+   应用分析：这项技术对我们EPS产品研发具有高度实用性。传统的PMSM控制需要精确建模，而无模型控制和ESO在工业界已有应用基础，结合数据驱动的H-infinity反馈，有望显著提升EPS电机控制的鲁棒性和精度。我们可以在电流环设计中应用该方法，利用ESO实时估计电机运行中的各种广义扰动，并进行前馈补偿；同时，针对补偿后的残差系统，利用车载运行数据，通过强化学习训练一个H-infinity控制器来进一步抑制残差。这能有效减少对精确电机参数模型的依赖，简化标定工作，并提升不同工况下的手感一致性。考虑到其直接解决核心痛点，并有望提升产品竞争力，这项技术非常值得我们投入，可以先在MIL、SIL、HIL环境下进行验证，逐步过渡到台架和整车测试。
+   https://arxiv.org/abs/2609.25759
+
+2. High-Performance Sensorless Control for High-Speed PMSM with Current Source Inverters（来源：arXiv eess.SY 控制系统）
+   应用分析：这项技术对我们来说具有重要的前瞻性价值。虽然目前EPS多采用VSI，但CSI的优势，特别是其谐波抑制和电磁兼容性，对NVH敏感的EPS系统很有吸引力。无传感器方案能够降低传感器数量，直接符合我们降本增效和提升系统冗余度的需求。我们可以评估CSI在EPS应用中的可行性，包括其功率密度、效率、成本和功能安全兼容性。如果CSI被证明有优势，该研究提出的弱谐振近似方法可用于开发无传感器转子位置估计器。在设计阶段，可在Simulink中建立CSI-PMSM模型进行仿真验证，然后过渡到HIL和台架测试，重点关注在不同转速、负载下的位置估计精度和鲁棒性，以及在故障工况下的表现。这项研究值得深入投入，因为它可能带来EPS系统架构的革新。
+   https://arxiv.org/abs/2609.25878
+
+3. Capability-Aware Arbitration for Semantic Intent-Based Shared Control（来源：arXiv cs.RO）
+   应用分析：这项技术对我们实现线控转向和L三加级别辅助驾驶的手感调校和人机共驾策略具有高度应用价值。在线控转向系统中，EPS不再直接与方向盘机械连接，使得人机共享控制变得更加灵活。我们可以将该框架应用于：第一，意图识别，利用车内摄像头和驾驶员监测系统结合VLM，识别驾驶员的转向意图。第二，能力评估，结合车辆传感器和VLA策略，评估线控转向系统在当前环境下的自主转向能力和置信度。第三，权限仲裁，基于驾驶员意图置信度和系统能力置信度，动态调整EPS的助力大小和转向响应，实现驾驶员主导与系统辅助之间的平滑过渡。这项技术能够解决人机共驾中“系统过度干预”或“辅助不足”的问题，是未来EPS向线控转向演进的战略性方向，非常值得投入。
+   https://arxiv.org/abs/2609.25369
+
+4. Learning Neural Feedback Linearization for Data-driven Systems via Augmented Lagrangian（来源：arXiv cs.LG）
+   应用分析：这项技术对我们EPS系统的非线性补偿和控制具有很高的潜在应用价值。EPS系统内部存在复杂的非线性特性，如电机磁饱和、摩擦力、齿槽转矩等。传统方法需要精确建模，而该数据驱动方法可以减轻建模负担。我们可以探索将此方法应用于EPS，例如，将EPS电机或整个转向系统的输入-输出数据作为训练数据，让神经网络学习一个近似的反馈线性化控制器。这可以替代或增强现有的非线性补偿模块，如摩擦补偿、回正曲线，从而实现更平滑、更精准的助力输出和手感调校。当然，在车规级MCU上的部署效率和功能安全认证是需要重点关注的问题。这项研究值得深入进行前期投入，如果能成功落地，将显著提升EPS控制性能和开发效率。
+   https://arxiv.org/abs/2609.25163
+
+5. HOTICE: Whole-Body Humanoid Object Transportation in Cluttered Environments（来源：arXiv cs.RO）
+   应用分析：这项研究对我们而言具有重要的启发和借鉴意义。我们可以将人形机器人的全身控制和避障策略，特别是其“解耦电势场”和“双智能体强化学习”的思想，应用于线控转向系统的架构设计和控制策略优化。例如，将车辆视为一个多自由度系统，在线控转向下，通过学习框架在复杂交通环境（如拥堵、狭窄车道）中规划最优的转向和车身姿态，实现平稳避障。此外，这也能启发我们设计一个更高级的整车级运动控制器，结合EPS、驱动和制动，实现整车的全身协调控制，提升乘坐舒适性和安全性。这项研究值得我们关注，并在概念验证阶段进行探索性研究，以期将其先进的方法论迁移到我们的EPS和线控转向方案中。
+   https://arxiv.org/abs/2609.25363
+
+6. VLAQuantBench: Closed-Loop Evaluation of Post-Training Quantization for Vision-Language-Action Models（来源：arXiv cs.RO）
+   应用分析：这项技术对我们AI模型部署优化具有高度实用性。无论是未来EPS中应用的AI观测器、AI控制器，还是用于自动标定、故障诊断与预测性维护的AI模型，都需要在车规级MCU上高效运行。VLAQuantBench的经验表明，我们需要进行严格的闭环评估，而不仅仅是离线指标，以确保量化后的模型在实际控制中表现可靠。研究中提到的“保护关键输出层”的发现非常重要：在为EPS系统中的AI模型进行量化时，我们可以优先保护对控制精度和响应速度影响最大的层（例如，输出转矩或电流指令的层），而对其他层进行更激进的量化，以在性能和计算资源之间取得平衡。将量化评估集成到MIL、SIL、HIL测试流程中，能确保量化后的模型满足功能安全要求。高效地将AI模型部署到嵌入式控制器是AI落地的关键瓶颈之一，因此这项工作非常值得投入。
+   https://arxiv.org/abs/2609.25376
+
+7. On the Observability and Redundancy of Intelligent Transportation Networks（来源：arXiv eess.SY 控制系统）
+   应用分析：这项研究对我们线控转向系统的架构设计和功能安全分析具有高度实用性。线控转向系统本身就是一个高度冗余、强调可观测性的系统，以应对任何可能的故障。我们可以借鉴其关于“强连通网络与最小链路数”的结论，设计EPS线控转向系统内部的传感器网络、控制器网络和执行器网络。确保关键信息在不同通道之间有足够的冗余和可观测性，即使部分传感器或通信链路失效，系统仍能维持基本功能或安全降级。在ISO二六二六二流程中，进行故障模式及影响分析（FMEA）和故障树分析（FTA）时，可以利用该研究的图论方法，系统性地评估不同传感器组合、通信链路失效对系统可观测性和安全性的影响，从而设计更合理的冗余方案和故障诊断策略。这是确保线控转向系统功能安全和高可靠性的理论基础和方法论，非常值得投入。
+   https://arxiv.org/abs/2609.26053</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260923-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260923-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260923-pm.mp3" length="4489056" type="audio/mpeg"/>
+      <pubDate>Wed, 23 Sep 2026 09:42:43 +0000</pubDate>
     </item>
   </channel>
 </rss>
