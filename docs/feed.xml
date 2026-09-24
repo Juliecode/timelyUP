@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 24 Sep 2026 09:43:08 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 22:43:54 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI与汽车机器人：硬件与算法共舞的时代</title>
-      <description>各位研发同仁，早上好！欢迎收听今天的科技早报。我是大家的老朋友，兼任技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最值得关注的资讯。今天的重点，无论是AI在数学难题上的突破，还是人形机器人对硬件的依赖，亦或是电动汽车三电机技术和新型电机材料的进展，都指向一个核心：硬件与软件、物理世界与智能算法的深度融合，正在重塑我们的工程实践。让我们一起来看看这些新趋势对我们EPS产品研发工程师的工作，究竟意味着什么。
-
-1. AI can’t outrun a humanoid’s hardware（来源：The Robot Report）
-   应用分析：作为EPS工程师，我们深知电机、传感器和机械传动是系统的基石。即使有再先进的AI控制算法，如果电机转矩密度不够、效率不高、NVH表现差，或者电流/位置采样精度不足，都无法实现最佳的转向手感和性能。这条消息提醒我们，在追求AI赋能控制策略的同时，绝不能忽视电机选型、功率级设计、高精度传感器的持续投入。AI可以用于优化硬件设计参数，甚至进行预测性维护，但它不能取代一个坚实可靠的硬件平台。因此，在无传感器控制或冗余传感方案的探索中，硬件的鲁棒性更是重中之重，值得我们持续投入和优化。
-   https://www.therobotreport.com/ai-cant-outrun-a-humanoids-hardware/
-
-2. OpenAI’s sly mathematical breakthrough sends a chill through academia（来源：The Verge）
-   应用分析：EPS系统中的电机控制策略，如磁场定向控制（FOC）、模型预测控制（MPC）等，都基于复杂的数学模型和算法。AI在解决数学难题上的突破，启发我们思考是否能利用AI来发现全新的、更优的控制算法，或者自动优化现有算法的参数。例如，我们可以探索基于AI的强化学习方法，来自动整定FOC的PI控制器参数，以适应不同的电机温升和负载变化；或者在模型预测控制中，利用神经网络进行更深层次的状态观测和预测，从而提升控制的性能和鲁棒性。这绝对值得我们投入资源进行前瞻性研究和概念验证。
-   https://www.theverge.com/ai-artificial-intelligence/992953/openai-math-millennium-prize-navier-stokes
-
-3. Procedural Graphs: Self-Evolving Execution Structures for LLM Agents（来源：Hacker News）
-   应用分析：我们可以借鉴这种“自主演化执行结构”的思想，将其应用于EPS的故障诊断与降级策略，特别是在线控转向这种高冗余、高安全要求的系统中。例如，当系统检测到某个传感器出现故障时，一个基于程序图的AI智能体可以根据预设的故障模式和当前驾驶状态，自动调整控制策略，切换到无传感器控制模式，或者激活冗余路径，甚至能根据路况和驾驶员意图动态调整助力曲线。这能够显著提升系统的鲁棒性和用户体验。投入研究这类基于AI的自适应系统，对于未来线控转向的复杂故障管理和提升系统自主性具有重要意义。
-   https://arxiv.org/abs/2609.09153
-
-4. Growing proof that autonomous cars save lives（来源：Hacker News）
-   应用分析：自动驾驶的安全性提升，直接推动了线控转向（Steer-by-Wire）的商业化落地进程。对于我们EPS研发团队而言，这意味着：第一，功能安全必须达到ISO 26262 ASIL D的最高等级，我们需要设计更完善的冗余系统，确保在任何单点故障下系统仍能安全运行；第二，线控转向对转向的精准性、响应速度和一致性要求更高，这就要求我们在电机控制策略、传感器精度、通信延迟等各个方面进行全面优化；第三，如何在满足高安全和高性能的前提下，探索更具成本效益的方案，例如提升无传感器方案的可靠性和精度。因此，将研发重心放在线控转向的架构设计、冗余方案和功能安全验证上，是我们当前最值得投入的方向。
-   https://spectrum.ieee.org/are-self-driving-cars-safe
-
-5. EU-funded AM2SoftMag project 3D-prints metallic glass electric motor components（来源：Charged EVs）
-   应用分析：EPS电机的性能对转向手感、整车NVH和系统效率至关重要。如果金属玻璃这种新材料能在成本和制造工艺上成熟，并结合3D打印技术，将对我们的电机选型和设计产生革命性影响。我们可以利用其高磁导率和低损耗特性，设计出更小巧、更轻量、效率更高且转矩脉动更小的EPS电机，从源头提升NVH表现。同时，3D打印技术能加速新电机原型的开发和测试周期。短期内，我们应密切关注这项技术的产业化进展，评估其在EPS电机中的实际应用潜力、成本效益和长期可靠性，作为我们未来电机迭代和性能提升的技术储备。
-   https://chargedevs.com/newswire/eu-funded-am2softmag-project-3d-prints-metallic-glass-electric-motor-components/
-
-6. BYD Denza adds Z9GT variant, lowering entry price for e3 tri-motor tech（来源：CnEVPost）
-   应用分析：三电机车辆的动态性能控制会远比单电机或双电机复杂，例如扭矩矢量控制、能量回收等。作为EPS工程师，我们需要确保EPS系统能与这些多电机系统紧密配合，实现更精细的车辆姿态控制和驾驶体验。这包括：第一，确保EPS控制器与整车域控制器（通常负责多电机协同）的通信接口和协议兼容，实现高效、低延迟的数据交换；第二，深入研究EPS如何与三电机系统进行协同控制，例如在极限驾驶或故障降级时，转向系统如何配合动力系统维持车辆稳定；第三，针对三电机带来的不同驾驶模式和动力特性，进行定制化的助力策略与手感调校。这值得我们投入研发资源，尤其是在线控转向的演进方向上，多电机系统将是重要的集成对象。
-   https://cnevpost.com/2026/09/09/denza-adds-z9gt-variant-e3-tri-motor/
-
-7. AGIBOT to explain how to scale humanoids from the lab to the real world at RoboBusiness（来源：The Robot Report）
-   应用分析：人形机器人的关节执行器控制是EPS电机控制的“孪生兄弟”，两者都追求高转矩密度、高精度、低NVH、高可靠性和成本效益。AGIBOT在人形机器人规模化过程中积累的经验，在多个方面对我们具有重要的参考价值：第一，他们可能发展出更先进的FOC、无传感器或抗扰动控制策略，我们可以学习借鉴并尝试应用于EPS；第二，人形机器人在复杂环境中工作，其冗余设计和故障诊断方案，尤其是如何确保在多模态传感器失效下的系统鲁棒性，对我们的线控转向冗余和功能安全设计有重要启发；第三，机器人的传感器融合技术，特别是如何利用非接触式或多冗余传感器实现高精度控制，对我们提升EPS无传感器/冗余传感方案的性能和安全性非常有帮助。因此，我们应该持续关注机器人领域的执行器控制和系统集成方案，积极参加相关技术交流，寻找可迁移的工程方案，加速我们的技术落地。
-   https://www.therobotreport.com/agibot-share-plans-scale-humanoids-from-lab-to-real-world-at-robobusiness/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260910-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260910-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260910-am.mp3" length="3264768" type="audio/mpeg"/>
-      <pubDate>Wed, 09 Sep 2026 22:42:22 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 科技早报：AI世界模型行动排序缺陷、多智能体强化学习新进展、沃尔沃集成Gemini AI、非晶态金属电机部件与FPGA加速MPC</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是大家的老朋友，兼职技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为大家精选出七条最具价值的资讯。我们将一起深入探讨这些技术热点，并结合我们汽车电动助力转向，也就是EPS产品研发工程师的工作背景，分析它们对我们具体工作的影响和潜在应用价值。准备好了吗？让我们开始今天的科技探索之旅！
@@ -1164,6 +1128,46 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260924-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260924-pm.mp3" length="3883104" type="audio/mpeg"/>
       <pubDate>Thu, 24 Sep 2026 09:43:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI与智能汽车的交汇点：从LLM优化控制到SiC线控底盘</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大领域，为您精选出七条最值得关注的科技资讯，深入分析它们对我们研发工作的潜在影响和应用价值。从大语言模型赋能控制器优化，到碳化硅在电动汽车动力总成的深度应用，再到线控底盘的最新进展，以及机器人领域对能效和控制的精妙探索，希望今天的分享能为您带来新的启发。
+
+1. Merging Large Language Models and Battery Physics for User-Aware Electric Vehicle Driving Management（来源：arXiv eess.SY 控制系统）
+   应用分析：这项技术在EPS领域有很大的潜力，尤其是在“助力策略与手感调校”的自动化和智能化方面。我们设想，可以将大语言模型作为“手感调校专家”，让驾驶员或测试工程师通过自然语言描述期望的转向手感，比如“低速时更轻盈，高速时更沉稳，路感更清晰”，LLM结合车辆当前状态和驾驶环境，推荐一套助力曲线、阻尼补偿等参数组合。这些参数再经过我们已有的物理模型验证和安全滤波器约束后，部署到控制器进行测试。这能显著提升传统依赖经验和大量迭代的标定效率，减少人力投入。初期可以作为辅助工具，帮助工程师快速探索参数空间，而避免直接参与实时控制。但功能安全是重中之重，LLM的任何输出都必须经过严格的物理模型验证和安全约束。所以，这项技术值得我们小规模投入研究，它能为智能标定带来新的突破。
+   https://arxiv.org/abs/2609.27050
+
+2. ROHM’s SiC MOSFETs go into BMW’s Neue Klasse electric powertrain（来源：Charged EVs）
+   应用分析：SiC器件在EPS控制器功率级中的应用是必然趋势，我们已经在积极评估和引入。相比传统的硅基IGBT或MOSFET，SiC MOSFETs能实现更高的开关频率，这意味着我们可以减小电感、电容等无源器件的体积和重量，从而设计出更紧凑、更轻量化的控制器。同时，SiC的高效率特性也能降低功率损耗和发热，提升EPS系统的整体能效和可靠性，尤其是在高功率输出或高温环境下。此外，随着800伏高压平台在电动车中的普及，SiC器件的耐高压特性也使其成为理想选择。我们当前需要持续关注SiC器件的可靠性验证、成本控制，以及与之匹配的驱动电路和散热设计，并加强与主流SiC供应商的技术合作。这方面我们必须持续投入。
+   https://chargedevs.com/newswire/rohms-sic-mosfets-go-into-bmws-neue-klasse-electric-powertrain/
+
+3. IM Motors launches next-gen LS6 from $29,320 with up to 782 km range（来源：CnEVPost）
+   应用分析：这不是一个直接可用的技术，而是我们必须紧密跟踪和布局的行业发展方向。对于EPS研发而言，我们需要深入研究线控底盘的整体系统架构，尤其是线控转向作为其关键执行部件，对冗余设计和功能安全（ISO 26262 ASIL D级别）的极致要求。线控转向意味着方向盘与车轮之间完全解耦，EPS将从一个“助力”系统转变为一个独立的“执行器”，需要具备高带宽、高精度力矩生成和位置控制能力，以及多重异构冗余以应对任何可能的失效。同时，800伏高压平台要求我们对电机绕组绝缘、功率器件、传感器和控制器整体的耐压能力进行全面提升。所以，我们必须投入，提前布局相关技术储备，包括新的控制算法、硬件平台和验证方法，以确保我们的EPS方案能够无缝融入未来的线控底盘架构。
+   https://cnevpost.com/2026/09/24/im-motors-launches-next-gen-ls6-suv/
+
+4. GA-Agent: Large Language Models as Hyperparameter Optimizers for Evolutionary Controller Synthesis（来源：arXiv eess.SY 控制系统）
+   应用分析：这项技术在我们的EPS研发中具有非常高的实用价值和落地潜力，尤其是在“助力策略与手感调校”和“电机控制策略”的参数优化方面。我们可以构建一个基于LLM的智能辅助调校系统。LLM可以根据驾驶员或测试工程师的自然语言反馈（例如“转向力矩在低速时偏重”、“回正性不足”、“电机有点抖动”）或者结合MIL/SIL/HIL仿真结果，智能地推荐遗传算法的超参数（比如种群大小、变异率、适应度函数权重），甚至直接建议调整PID、FOC等控制策略的增益参数。这能将传统上耗时且高度依赖经验的标定过程部分自动化，加速找到最优解，并提升跨项目、跨平台参数迁移的效率。这与我们“用AI/数据驱动方法改进控制、标定效率、故障诊断与预测性维护”的目标高度契合，是实现智能标定和自适应控制的关键一步，非常值得我们投入研发。
+   https://arxiv.org/abs/2609.27725
+
+5. OpenAI agent “didn’t accept no for an answer” in Australian government breach（来源：Ars Technica）
+   应用分析：这不是一个具体的技术应用，而是一个极为重要的警示。在我们引入AI或数据驱动方法改进EPS控制、标定、故障诊断乃至未来的线控转向系统时，必须将“功能安全”置于核心位置，并严格遵循以下原则：
+1.  **明确AI边界与权限：** 严格限制AI代理的自主行动范围和权限，尤其是在涉及车辆操控和安全的关键决策链路中。AI应作为辅助工具，而非无限制的决策者。
+2.  **可解释性与可控性：** 确保AI的决策过程是可解释、可审计的，并且在任何时候都能被人类操作员接管或干预，提供“人机共驾”的控制权。
+3.  **冗余与降级机制：** 建立多层冗余和失效安全机制。当AI系统出现任何异常或“越界”行为时，能够迅速切换到安全模式或降级运行，确保车辆基本转向功能不受影响。
+4.  **对抗性测试与验证：** 针对AI的潜在“越界”行为进行对抗性测试和极限工况验证，确保其在各种复杂、甚至恶意场景下的鲁棒性和安全性。我们必须高度重视并持续投入到这些功能安全保障措施中，这是确保自动驾驶和线控转向系统安全可靠的基石。
+   https://arstechnica.com/ai/2026/09/openai-agent-didnt-accept-no-for-an-answer-in-australian-government-breach/
+
+6. MSK-Bench: Benchmarking Full-Body Musculoskeletal Motor Control Across Tasks, Control Paradigms, and Physiological Metrics（来源：arXiv cs.RO）
+   应用分析：这项研究虽然不直接应用于EPS，但其提出的方法和挑战与我们提升“电机控制策略的性能与鲁棒性”高度相关。我们可以借鉴MSK-Bench中评估“高维肌肉驱动、延迟激活动力学、冗余肌腱结构”的方法，来优化EPS电机控制策略。例如，学习其处理复杂非线性系统的方法，改进FOC、无传感器控制等算法，提升在极端工况下的性能和鲁棒性，应对电机参数温漂、负载变化等。其次，可以借鉴其在“姿态稳定、常见运动行为、接触式环境交互”等任务下的多目标控制方法，应用于EPS的助力特性、回正性能、NVH（噪声、振动、声振粗糙度）等多个相互制约指标的综合优化，寻找最佳平衡点。最后，探索将仿生学中对肌肉控制的理解应用于电机控制，例如如何通过更精细、更平滑的力矩控制来模拟人类肌肉的输出，从而改善转向手感和抑制转矩脉动。这是“把前沿研究快速转成可落地的EPS工程方案”的一个有价值的交叉点，值得我们投入研究性关注和技术迁移探索。
+   https://arxiv.org/abs/2609.26872
+
+7. Spiderbot: An Open-Source Energy-Efficient Hexapod with Passive Gravity Compensation（来源：arXiv cs.RO）
+   应用分析：被动补偿的理念在EPS中可借鉴。我们通常通过优化电机设计（如高转矩密度永磁同步电机PMSM）、提高控制器效率（如采用SiC功率器件、优化FOC算法）来降低能耗。Spiderbot的案例提示我们，还可以从机械结构层面入手。例如，在线控转向系统中，如果能设计出某种巧妙的机械结构，在特定工况下，如车辆静止、低速转弯，对转向力矩进行部分被动补偿，可以有效降低电机持续输出的功耗。这不仅能减小电机尺寸和发热，从而降低成本，还能提升系统可靠性，延长电池续航。这需要我们与机械设计团队紧密合作，探索EPS齿条或转向柱中的力矩传递机制是否能引入类似的被动补偿结构。这种概念性探索和初期可行性研究是值得投入的，特别是对于线控转向这种需要极致能效和紧凑设计的系统。
+   https://arxiv.org/abs/2609.26989</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260925-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260925-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260925-am.mp3" length="5199552" type="audio/mpeg"/>
+      <pubDate>Thu, 24 Sep 2026 22:43:54 +0000</pubDate>
     </item>
   </channel>
 </rss>
