@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 25 Sep 2026 09:42:55 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 22:43:05 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 研发工程师科技早报：AI模型能效部署、V2X新进展与机器人MPC控制突破</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们为您精选了七条重磅资讯，涵盖了人工智能前沿、汽车智能化和机器人技术三大方向。在AI领域，我们将关注如何更有效地评估和部署大模型；在汽车智能化方面，V2X技术和关键电子元件的突破值得我们深入探讨；而在机器人领域，高性能控制和学习策略的最新进展也将为我们的EPS系统研发带来新的灵感。
-
-1. CriticGen: Generation-Aware Evaluation as Actionable Feedback（来源：arXiv cs.AI）
-   应用分析：我在用 AI/数据驱动方法改进控制、标定效率、故障诊断时，经常面临模型输出（比如诊断建议、标定参数）的质量评估问题。CriticGen 的思路可以借鉴，用于评估我开发的 AI 模型的输出质量。例如，在自动标定中，AI 生成的助力曲线参数是否合理？CriticGen 的方法可以帮助我们定义细粒度的评估标准（如平顺性、响应速度、力矩精度），并自动给出改进方向，甚至生成修正后的参数，而不是只给一个笼统的分数。这值得投入研究，可以显著减少人工标定和验证的工作量，提升开发效率。
-   https://arxiv.org/abs/2609.05439
-
-2. Reasoning-Aware Compression: Identifying and Protecting Vulnerable Reasoning Circuits for Energy-Efficient LLM Deployment（来源：arXiv cs.AI）
-   应用分析：我们的 EPS 控制器对功耗和算力资源非常敏感，未来线控转向和更高级别的自动驾驶功能会集成更多 AI 算法。如果要在 MCU 或专门的边缘 AI 芯片上部署 AI 模型来优化电机控制策略、实现无传感器控制或故障诊断，就需要极致的效率。这项研究的“推理感知压缩”方法，可以指导我们对用于 EPS 的神经网络模型（如观测器、诊断模型）进行剪枝和量化时，优先保护对控制精度、鲁棒性影响最大的“推理电路”，确保核心功能不受损。这值得深入研究和尝试，能帮助我们将前沿的 AI 控制研究成果更快地落地到实际产品中，同时满足车规级对功耗、性能和功能安全的要求。
-   https://arxiv.org/abs/2609.05512
-
-3. PG&amp;E expands its California V2X program（来源：Charged EVs）
-   应用分析：V2X 技术是电动汽车发展的重要趋势，但与我当前 EPS 系统的核心电机控制、转向手感调校等直接关联度较低。不过，从系统层面看，V2X 意味着电动汽车的整车电能管理将更加复杂，对车载电源系统、电池管理系统（BMS）以及整车控制器（VCU）的需求会提高。在 V2X 模式下，整车电源波动或负载变化可能对 EPS 系统的供电质量提出更高要求，需要我在 EPS 系统架构设计时考虑更强的电源抗扰动能力。所以，直接投入有限，但需保持关注。
-   https://chargedevs.com/newswire/pge-expands-its-california-v2x-program/
-
-4. TDK’s soft-termination CN series MLCCs reach 10 μF at 100 V in the 3225 case size（来源：Charged EVs）
-   应用分析：这款新的 MLCC 对我的 EPS 控制器硬件设计非常有用。在功率级、MCU 供电、电流/位置采样电路中，都需要高性能的去耦电容和滤波电容。高容量、高耐压且小尺寸的 MLCC 意味着我们可以在有限的 PCB 空间内实现更稳定的电源滤波和更强的抗干扰能力，同时软端子设计能够提升产品在汽车严苛环境下的可靠性（如振动、温度冲击）。这有助于优化控制器软硬件设计，满足 ISO 26262 功能安全对硬件鲁棒性的要求。这属于值得关注并评估的硬件设计优化。
-   https://chargedevs.com/newswire/tdks-soft-termination-cn-series-mlccs-reach-10-%ce%bcf-at-100-v-in-the-3225-case-size/
-
-5. AccelMPC: High-Rate, Low-Power FPGA-Accelerated Model Predictive Control for Tiny Drones（来源：arXiv cs.RO）
-   应用分析：这项技术与我正在做的电机控制策略和线控转向架构设计高度相关。MPC 在 EPS 电机控制中具有提升性能和鲁棒性的潜力，例如在转矩脉动抑制、弱磁控制等复杂场景。传统 MPC 计算负担重，难以在 EPS 控制器（通常是 MCU）上实现高控制频率。AccelMPC 的 FPGA 加速思路为我们提供了将 MPC 引入 EPS 的可行路径。我们可以研究如何将 EPS 电机控制中的 MPC 算法进行优化，并探索在 EPS 控制器中引入 FPGA 或更强大的嵌入式处理器（如异构多核 MCU）来加速 MPC 的计算，从而实现更高的控制频率（例如，从目前的几十微秒一个控制周期，缩短到几微秒），大幅提升助力手感和响应速度。这对于线控转向这种对响应速度和精度要求极高的系统，是极具投入价值的关键技术。
-   https://arxiv.org/abs/2609.09380
-
-6. Actuator Dynamics Curricula for Narrow-Viability Tasks in Legged Robot Learning（来源：arXiv cs.RO）
-   应用分析：这项研究与我正在做的电机控制策略性能提升和机器人关节执行器控制高度相关。EPS 电机控制中，电机参数（如转矩常数、电感、电阻）的温漂和不确定性会影响控制性能和鲁棒性。该“执行器动力学课程”的思路可以借鉴到 EPS 电机控制的强化学习中：我们可以通过在仿真或台架测试中，逐步调整电机模型的参数（例如，从一个理想的、高刚度的模型，逐渐过渡到包含温漂、非线性摩擦等复杂特性的实际模型），来训练出对参数变化更鲁棒的 FOC 或无传感器控制算法。这有助于解决电机控制策略的性能与鲁棒性提升问题，并减少对精确参数辨识的依赖。这是一个值得投入研究和概念验证的方向。
-   https://arxiv.org/abs/2609.09492
-
-7. Identifying Habit, Physics, and Nuisance in Robot World Models（来源：arXiv cs.RO）
-   应用分析：这项研究对我们利用 AI/数据驱动方法改进 EPS 助力策略与手感调校非常有启发。当前手感调校高度依赖经验丰富的工程师进行大量路试和参数调整。如果能通过遥操作或人类驾驶数据来训练 AI 模型进行自动标定，那么如何从驾驶数据中区分出驾驶员的“操作习惯”（如特定驾驶风格下的转向输入）、车辆的“物理特性”（如转向系统本身的机械特性、轮胎与路面作用力）以及“观察噪声”（传感器误差、数据采集误差），将是关键。通过分离这些因素，我们可以构建更纯粹的车辆物理模型和更精准的驾驶员意图模型，从而让 AI 更有效地学习和优化助力曲线、阻尼/回正/摩擦补偿等策略，实现更个性化、更舒适、更安全的转向手感。这值得投入研究和探索。
-   https://arxiv.org/abs/2609.09210</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260911-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260911-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260911-am.mp3" length="3613680" type="audio/mpeg"/>
-      <pubDate>Thu, 10 Sep 2026 22:42:42 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI智能体解锁复杂任务，汽车线控转向安全验证与前沿控制技术洞察</title>
       <description>各位研发工程师朋友们，大家早上好！今天是九月十一日星期五，欢迎收听由我，您的专属 AI 科技早报主播兼技术分析师，为您带来的每日科技资讯。今天，我们将聚焦 AI 智能体的前沿进展，探讨汽车智能化领域的最新政策与核心技术，以及机器人在实时控制方面的突破。这些内容都与我们电动助力转向系统，也就是 EPS 的研发工作息息相关，希望能给大家带来一些启发。话不多说，我们马上开始今天的早报。
@@ -1168,6 +1132,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260925-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260925-pm.mp3" length="4553568" type="audio/mpeg"/>
       <pubDate>Fri, 25 Sep 2026 09:42:55 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技早报：AI大模型再进化，机器人与汽车控制迎来新突破</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将一起聚焦人工智能的前沿进展、汽车智能化的最新动态，以及机器人领域的创新应用。特别是对于我们汽车电动助力转向，也就是 EPS 系统的研发工程师来说，有几条重磅消息，直接关系到我们未来的技术路线和产品竞争力。话不多说，我们马上开始！
+
+1. Pistis 技术报告：多模态大模型与交错蒸馏强化学习（来源：arXiv cs.AI）
+   应用分析：这项技术目前还无法直接用于 EPS 控制器，但其训练思想非常值得我们关注。在 EPS 的数据驱动应用中，比如利用 AI 进行自动标定、故障诊断或预测性维护，如果需要处理多模态数据（例如电机电流、转向角度、车辆速度、驾驶员意图等），并进行复杂决策，我们可以研究 IDRL 如何提升强化学习模型的鲁棒性和收敛性。例如，训练一个智能体来识别 EPS 系统的潜在故障模式，并选择最优的降级策略。虽然短期内主要停留在理论研究和概念验证阶段，但对于提升 AI 辅助控制系统的可靠性，这种训练范式提供了新的思路，长期来看值得投入精力进行跟踪和探索。
+   https://arxiv.org/abs/2609.28554
+
+2. DEEPO：双熵增强策略优化，解决多模态大语言模型“幻觉”问题（来源：arXiv cs.AI）
+   应用分析：直接将 DEEPO 应用于 EPS 控制器是不现实的，但其解决“幻觉”的思路对我们开发 AI 辅助功能有重要启发。在 EPS 中，AI 可能用于故障诊断、异常检测或辅助标定。如果这些 AI 模型在面对不确定或模糊的输入时产生误判（也就是我们常说的“幻觉”），其后果可能是严重的。DEEPO 的方法提示我们，在训练 AI 辅助系统时，需要特别关注模型在“高不确定性”场景下的输出可靠性，并引入机制来抑制错误自信的预测。例如，在自动标定中，我们需要确保 AI 对特定工况下的参数推荐不会出现“幻觉”式的错误，从而避免影响转向手感和安全。针对 AI 模型的可靠性和鲁棒性是核心问题，DEEPO 提供了一种在强化学习层面抑制幻觉的通用方法，这值得我们在评估 AI 辅助控制方案时，将其作为设计或评估的关键指标之一。
+   https://arxiv.org/abs/2609.28570
+
+3. KnowBody：通过“身体模型”实现机器人直接控制与自我改进（来源：arXiv cs.RO）
+   应用分析：VLM 直接控制 EPS 尚处于早期阶段，但 KnowBody 提出的“身体模型”和“自我改进”理念对线控转向系统架构有重要启发。我们可以将 EPS 系统，尤其是线控转向系统，视为一个“身体”，其内部组件（电机、传感器、控制器）构成“身体模型”。当系统出现轻微故障或部件磨损导致参数漂移时，KnowBody 的思路可以用于让线控转向系统“自我诊断”并“适应性调整”其控制策略，例如通过学习到的“身体模型”修正助力曲线或阻尼补偿，以维持一致的手感和性能。这是一个非常有前景的方向。在线控转向的冗余和功能安全设计中，自适应能力和故障自诊断是核心。KnowBody 提出的机制，为 EPS 系统的长期鲁棒性和可靠性提供了新思路，非常值得我们深入研究和探索。
+   https://arxiv.org/abs/2609.28530
+
+4. OSRAM：在线仿真到真实世界的适应性框架，提升控制器跟踪精度（来源：arXiv cs.RO）
+   应用分析：这项技术对我们来说非常能用，因为它直接解决了我们日常开发中的一个痛点。在 EPS 或线控转向的开发中，我们通常会在 MATLAB/Simulink 中建立详细的电机模型和车辆动力学模型进行 MIL、SIL、HIL 仿真。然而，真实世界中的电机参数、摩擦、路面反馈等与仿真模型总存在差异。OSRAM 的方法可以用于：第一，**自动标定优化**，在台架测试或整车标定阶段，利用 OSRAM 学习到的命令-响应行为差异，自动微调助力曲线、阻尼参数等，以弥补仿真与实际的差距，大幅提高标定效率和精度。第二，**在线性能修正**，对于已部署的 EPS 系统，在特定工况下（如高温、低温、磨损等），通过 OSRAM 在线学习并调整给控制器的参考转矩指令，以补偿电机或机械结构的变化，维持一致的转向手感和性能。Sim-to-Real 的鸿沟是工程实践中的大问题，OSRAM 提供了一种务实、高效的在线适应方案，投入价值极高，可能大幅减少后期标定工作量，并提升产品在各种实际工况下的鲁棒性和一致性。
+   https://arxiv.org/abs/2609.28878
+
+5. 基于时间回归的永磁同步电机无传感器控制（来源：arXiv eess.SY 控制系统）
+   应用分析：这项技术对我们 EPS 工程师来说，非常能用，而且是我们正在努力的方向之一。首先，它可以**降低成本和复杂性**，通过替换 EPS 中的物理位置传感器，降低物料成本和装配复杂性。其次，它能**提升鲁棒性**，传统无传感器控制对电机参数（如电感、电阻）的温漂、制造公差敏感，而 TFC 的模型无关特性，意味着其对这些参数变化的鲁棒性更强，可以减少标定工作量，提高系统在各种环境条件下的稳定性和性能。最后，它还能作为**冗余传感方案**，作为物理位置传感器的冗余备份，在主传感器失效时提供降级运行能力，从而提升功能安全等级。无传感器/冗余传感方案是 EPS 产品的重要竞争力，TFC 的模型无关特性，有望解决现有无传感器方案的参数敏感性问题，投入价值极高，是未来 EPS 电机控制策略演进的关键技术之一。
+   https://arxiv.org/abs/2609.29290
+
+6. 参数不匹配下永磁同步电机无传感器控制的等效磁链补偿（来源：arXiv eess.SY 控制系统）
+   应用分析：这项技术对我们 EPS 工程师来说，同样非常能用，与上一条共同构成无传感器控制的核心技术。它可以**提升现有无传感器方案性能**，对于我们目前已有的基于观测器的无传感器控制算法（如滑模观测器、扩展卡尔曼滤波等），EFC 可以作为一种附加模块，实时补偿电机参数（如电阻、电感、磁链）随温度、饱和等因素的变化，显著提升位置估计的精度和动态响应，从而抑制转矩脉动和噪声。它还能**解决温漂问题**，在 EPS 应用中，电机在不同工作负载下温度变化大，参数温漂是常见问题。EFC 有望大幅削弱温漂对无传感器控制性能的影响，减少复杂的温度补偿曲线标定。最后，与 TFC 类似，EFC 可以增强无传感器备份方案的可靠性，确保在主传感器失效后，系统仍能提供足够精确的助力。投入价值极高，这是解决无传感器控制工程化挑战的直接方案，对于提升 EPS 系统的鲁棒性、降低成本和满足 ISO 26262 功能安全要求都具有重要意义。
+   https://arxiv.org/abs/2609.29313
+
+7. 中国电动汽车快充技术领先，4.5 分钟充至 70%（来源：Ars Technica）
+   应用分析：这项技术本身我们无法直接应用，但它对我们 EPS 产品的宏观技术路线和产品规划有重要的参考价值。快速充电技术的发展会促进电动汽车的普及，进而影响线控转向等更先进 EPS 系统的需求增长。我们需要关注整车厂对高压平台、高功率充电的需求，这可能对我们 EPS 控制器功率级的设计提出更高要求，例如对耐压等级、散热能力等。此外，磷酸铁锂电池的快充突破，可能涉及新的电极材料、电解液技术，虽然不是 EPS 核心，但关注电池技术发展有助于理解未来整车设计方向，并可能间接影响 EPS 电机选型时对永磁材料供应、成本的考量。虽然不是直接的技术研发投入，但作为 EPS 工程师，了解电动汽车市场和技术发展方向，有助于我们更好地规划产品路线图，确保 EPS 技术与未来汽车发展方向保持同步，这是一个非常值得关注的行业趋势。
+   https://arstechnica.com/cars/2026/09/us-being-left-behind-in-ev-charging-speeds-as-china-goes-sub-5-min-to-70/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260926-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260926-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260926-am.mp3" length="4910544" type="audio/mpeg"/>
+      <pubDate>Fri, 25 Sep 2026 22:43:05 +0000</pubDate>
     </item>
   </channel>
 </rss>
