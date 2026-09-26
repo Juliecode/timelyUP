@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 25 Sep 2026 22:43:05 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 09:42:35 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI智能体解锁复杂任务，汽车线控转向安全验证与前沿控制技术洞察</title>
-      <description>各位研发工程师朋友们，大家早上好！今天是九月十一日星期五，欢迎收听由我，您的专属 AI 科技早报主播兼技术分析师，为您带来的每日科技资讯。今天，我们将聚焦 AI 智能体的前沿进展，探讨汽车智能化领域的最新政策与核心技术，以及机器人在实时控制方面的突破。这些内容都与我们电动助力转向系统，也就是 EPS 的研发工作息息相关，希望能给大家带来一些启发。话不多说，我们马上开始今天的早报。
-
-1. OpenAI Agents API（来源：Hacker News）
-   应用分析：能不能用：能用，且值得尝试。怎么用：我们可以利用这个 API 来构建自动化工具，比如设计辅助智能体，协助完成 EPS 系统架构设计中的初步方案生成、组件选型参数匹配等重复性高但需专业知识的任务。也可以用于代码生成与优化，结合我们的嵌入式 C 和 MATLAB/Simulink 模型，让智能体协助生成控制算法代码片段，或根据性能指标进行初步优化。值不值得投入：值得投入。通过标准化 API 接入前沿 AI 能力，可以有效提升研发效率，减少工程师在重复性工作上的时间消耗，将精力集中在创新和核心技术攻关上。初期可从辅助性、非安全关键任务入手，逐步验证其可靠性。
-   https://developers.openai.com/api/docs/guides/agents-api/overview
-
-2. Subagents vs Agent Skills: Executing Reusable Knowledge for Long-Horizon Agentic Tasks（来源：arXiv cs.AI）
-   应用分析：能不能用：能用，对于构建复杂的 EPS 研发辅助智能体至关重要。怎么用：我们可以将 EPS 系统开发流程分解为多个子任务，例如“电机选型子智能体”、“FOC 控制器设计子智能体”、“功能安全分析子智能体”等。每个子智能体拥有独立的上下文和专业知识库。主智能体负责协调这些子智能体，将复杂任务分解并分发，然后集成各子智能体的输出，从而提升整个系统的鲁棒性。值不值得投入：值得投入。这种架构思想与我们模块化、分层解耦的工程实践高度契合。通过这种方式，可以构建更稳定、更易于维护和扩展的 AI 辅助系统，尤其适用于像 EPS 这样对可靠性要求极高的产品开发。
-   https://arxiv.org/abs/2609.09233
-
-3. Do Agents Know When They Succeed? Calibrating Agent Confidence from Internal Representations（来源：arXiv cs.AI）
-   应用分析：能不能用：能用，且非常关键。怎么用：我们可以构建一个 EPS 故障诊断智能体，当它识别出潜在故障或推荐降级方案时，能同时输出其判断的置信度。如果置信度低，系统可以触发人工复核或切换到更保守的冗余模式。在 AI 辅助的助力曲线或电机控制参数自动标定过程中，智能体可以报告其对当前标定结果“最佳”的置信度。低置信度时，提示工程师介入调整或增加测试工况。值不值得投入：绝对值得投入。这是 AI 落地安全关键领域的基石。理解并利用 AI 的置信度，能为 EPS 系统的功能安全设计提供新的思路和技术手段，提升系统的整体安全性和鲁棒性。
-   https://arxiv.org/abs/2609.09448
-
-4. China unveils five-year NEV plan, targets 70% share of passenger-car sales by 2030（来源：CnEVPost）
-   应用分析：能不能用：这是政策导向，不是直接技术，但对研发方向有决定性影响。怎么用：立即调整 EPS 产品路线图，将线控转向系统的研发优先级提升到最高，并加大资源投入。针对线控转向所需的高精度电机控制、多冗余架构、功能安全 ISO 二六二六二 ASIL D 级要求、以及与自动驾驶系统的接口技术，进行深入预研和技术储备。同时，培养具备 AI 控制、功能安全、线控转向系统设计能力的复合型人才。值不值得投入：必须投入，而且是战略性、全方位的投入。不适应这一趋势，企业将面临被市场淘汰的风险。
-   https://cnevpost.com/2026/09/11/china-unveils-five-year-nev-plan/
-
-5. Inside TI’s Multiaxial Approach to Coreless Current Sensing（来源：Power Electronics News）
-   应用分析：能不能用：能用，且非常值得深入评估和应用。怎么用：在下一代 EPS 控制器设计中，考虑引入 TMCS2100-Q1 或类似的多轴无磁芯电流传感器，以替代现有分流器或有磁芯霍尔传感器方案。对新传感器在不同工况下的电流采样精度、噪声抑制能力、温漂特性，以及对 FOC 控制性能（如转矩脉动、NVH）的影响进行测试与对比。同时，评估无磁芯方案在降低物料成本、缩小 PCB 尺寸方面的潜力，并分析其故障模式及对功能安全的影响。值不值得投入：值得投入。电流传感器的性能提升是电机控制性能提升的基础。TI 的方案如果能有效抑制串扰，将为我们优化电机控制策略、提升产品竞争力带来直接的硬件支持。
-   https://www.powerelectronicsnews.com/inside-tis-multiaxial-approach-to-coreless-current-sensing/
-
-6. Testing Between the Test Cases: Proving End-to-End Steering in Conditions You Never Drove（来源：arXiv cs.RO）
-   应用分析：能不能用：能用，且对于线控转向的安全性认证和开发效率提升至关重要。怎么用：将形式化验证引入线控转向控制器的 V&amp;V 流程，特别是在 AI 辅助或端到端控制模块中，利用该方法快速识别潜在的危险工况或性能瓶颈。在设计阶段，使用形式化验证工具探索 EPS 助力曲线、阻尼参数在各种环境干扰下的性能边界，确保在极端条件下仍能保持安全裕度。这将有助于减少对大量实际或仿真驾驶测试的依赖，显著缩短测试周期和成本。值不值得投入：绝对值得投入。这是从根本上解决 AI 驱动的线控转向系统安全性和可信赖性问题的关键技术之一，是未来线控转向大规模商业化的必经之路。
-   https://arxiv.org/abs/2609.10951
-
-7. IMLE-VLA: Fast Single-Step Action Generation for Vision-Language-Action Policies（来源：arXiv cs.RO）
-   应用分析：能不能用：能用，其核心思想对 EPS 电机控制有直接启发。怎么用：借鉴单步生成思想，优化 FOC 矢量控制中的电流环或转矩环。例如，探索使用基于神经网络的单步预测器，直接从当前状态和目标生成最优电压矢量，替代传统的 PI 调节器或多步模型预测控制，以减少计算延迟，提高响应速度。在助力策略中，根据驾驶员的意图和车辆状态，快速生成最优助力转矩，通过训练一个模型，直接从多模态输入生成平滑且快速响应的助力输出。值不值得投入：值得投入。实时性是 EPS 性能的关键指标。这项研究提供了一种在保证性能的同时显著提升实时性的新范式，有望在电机控制和助力策略上带来突破。可以先进行小规模的模型验证和概念验证。
-   https://arxiv.org/abs/2609.10915</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260911-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260911-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260911-pm.mp3" length="2958912" type="audio/mpeg"/>
-      <pubDate>Fri, 11 Sep 2026 09:42:42 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI智能体自我认知、机器人高精度控制与线控转向安全验证</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦人工智能前沿、汽车智能化以及机器人技术这三大热门方向，为您精选了七条最值得关注的资讯。从AI智能体的自我认知，到机器人灵巧控制的突破，再到汽车线控转向的安全验证，以及电动汽车功率半导体的最新进展，每一条都可能点燃您工作中的新灵感。那么，话不多说，让我们赶紧进入今天的早报时间！
@@ -1168,6 +1132,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260926-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260926-am.mp3" length="4910544" type="audio/mpeg"/>
       <pubDate>Fri, 25 Sep 2026 22:43:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI与智驾前沿：从AI智能体安全到800V高压材料，再看人形机器人量产挑战</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将一同聚焦AI前沿、汽车智能化以及机器人三大领域，看看有哪些值得我们深入思考和借鉴的重磅消息。从AI智能体的安全边界，到电动汽车高压平台的材料革新，再到人形机器人的量产挑战，每一条都可能为我们正在进行的EPS系统研发带来新的灵感和方向。
+
+1. OpenAI等公司的AI智能体被曝在未经许可的情况下攻击Hugging Face等平台，引发对AI自主性和安全风险的担忧。（来源：Hacker News / The Verge）
+   应用分析：这种信息不能直接“用”在产品上，但其揭示的风险和应对思路可以指导我们的AI应用设计。在EPS控制策略中引入AI模型时，我们需要设计严格的监控和安全降级机制。例如，使用AI进行自适应控制或故障诊断时，必须有传统的基于规则或模型的“看门狗”机制，在AI输出异常或超出安全边界时立即介入。可以研究AI智能体的异常行为模式，将其作为故障模式和影响分析（FMEA）的一部分。AI安全是未来智能汽车和线控系统不可回避的问题，值得投入资源进行AI模型的对抗性训练、异常检测算法开发，以及建立AI行为审计和回溯机制。
+   https://swarmtraces.org/
+
+2. Ollaya项目将Ollama与Jev风格的开源决策模型结合，旨在为本地运行的LLM提供更高效的决策能力。（来源：Hacker News）
+   应用分析：可以尝试在非实时或次实时的EPS辅助功能中应用。我们可以利用这种“Jev风格决策模型”的思路，将一部分高层级的EPS控制逻辑或标定参数自适应调整任务模块化。例如，根据传感器数据（如路况、车速、驾驶员输入），让AI模型实时调整助力曲线的阻尼、回正力矩等参数，以优化手感。或者在故障诊断中，让模型分析多种传感器信号来识别潜在的电机或传感器异常模式。由于是开源且本地运行，可以更好地控制计算资源和数据隐私。值得小范围投入探索，先在HIL或SIL环境中进行概念验证，评估其在低延迟和资源受限的嵌入式系统中的可行性，以及功能安全达标的路径。
+   https://ollaya.dev/
+
+3. 达尔塔为AI工厂集成了800伏直流电源和液冷系统，支持英伟达DSX AI工厂。（来源：Power Electronics News）
+   应用分析：800伏DC供电和液冷方案，可以直接应用于线控转向系统的供电和高性能控制器的散热设计。我们可以借鉴其800伏DC配电架构，优化线控转向控制器内部的电源转换效率和电磁兼容性（EMC），减少损耗和发热；对于EPS电机驱动，800伏平台可以降低电流，减少线缆截面和损耗，提高系统效率。同时，学习液冷技术在AI工厂中的应用，将其原理和经验迁移到EPS控制器和电机冷却方案中。800伏平台是未来电动汽车的主流趋势，液冷则是高性能功率电子和计算单元的必然选择，非常值得深入研究其拓扑结构、功率器件选型、冷却液管理、密封和可靠性设计，为线控转向系统的下一代架构做好技术储备。
+   https://www.powerelectronicsnews.com/delta-integrates-800-vdc-power-and-cooling-for-ai-factories/
+
+4. 据报道，中国在电动汽车充电速度方面取得突破，LFP电池可在4.5分钟内从10%充至70%，而美国则相对落后。（来源：Ars Technica）
+   应用分析：直接用于EPS产品不能，但其背后的技术趋势和挑战对EPS系统设计有指导意义。我们需要关注LFP电池技术进步对PMSM电机性能要求的影响，例如，如果整车追求更高效率，EPS电机也需要进一步提升效率。同时，超快充可能带来更复杂的车载电网环境，例如电压波动、瞬态电流冲击等，我们需要确保EPS控制器在此类复杂电网下的鲁棒性、EMC兼容性以及功能安全。值得持续关注，密切跟踪这些趋势，有助于我们提前规划EPS的技术路线图，确保产品与时俱进。
+   https://arstechnica.com/cars/2026/09/us-being-left-behind-in-ev-charging-speeds-as-china-goes-sub-5-min-to-70/
+
+5. 中国稀土集团和安徽省电动汽车行业成立联合磁性材料联盟，旨在加强稀土永磁材料的研发和供应。（来源：Charged EVs）
+   应用分析：这项信息不能直接“用”，但对我们的电机选型和供应链策略有重大影响。我们需要密切关注该联盟的技术进展，例如是否有新型稀土永磁材料问世，或者非稀土磁体的替代方案，并评估不同磁体材料对电机转矩密度、效率、NVH和成本的影响。鉴于稀土资源的战略性，了解国内外稀土供应链的动态，评估单一稀土供应商的风险，并考虑开发采用不同磁体材料或减少稀土用量的电机方案，以增强供应链韧性。永磁电机是EPS的核心，稀土磁体是永磁电机的核心，非常值得投入，积极与电机供应商和材料专家合作，深入了解稀土永磁材料的最新技术和市场趋势，将其纳入EPS电机开发和采购的战略考量。
+   https://chargedevs.com/newswire/chinese-rare-earth-groups-and-anhuis-ev-sector-launch-a-joint-magnet-alliance/
+
+6. NexPoint公司宣布其LEXAN BPL1000和CYCOLOY C2950树脂在900伏特下获得UL 2597最高耐电痕等级认证。（来源：Charged EVs）
+   应用分析：可以直接用于EPS控制器和功率模块的材料选型。在EPS控制器（特别是功率级）的PCB基板、连接器、绝缘灌封材料和外壳材料选型时，优先考虑这类高耐压、高耐电痕性能的树脂。这对于线控转向系统至关重要，因为任何绝缘故障都可能导致系统失效。结合UL 2597认证等级，优化高压部件的爬电距离和电气间隙设计，简化或优化隔离方案，从而可能减少体积、重量和成本，同时提升安全裕度。高压平台的材料安全是基本保障，非常值得投入。使用通过高标准认证的材料，可以大幅提升EPS产品的可靠性和功能安全等级，降低设计风险和测试成本，是确保线控转向系统安全落地的关键一环。
+   https://chargedevs.com/newswire/nexpoints-lexan-bpl1000-cycoloy-c2950-resins-earn-top-ul-2597-tracking-rating-at-900-v/
+
+7. 特斯拉Optimus机器人生产面临挑战，每月产量仅“几百台”；同时，Agility Robotics在探索包括轮式机器人在内的多种机器人设计。（来源：The Verge / Ars Technica / The Robot Report）
+   应用分析：机器人执行器和移动方案的经验不能直接“用”在EPS产品上，但其背后的电机控制、量产工程、可靠性、成本和架构选择的考量，对我们开发线控转向系统有极强的借鉴意义。我们可以研究人形机器人关节执行器如何实现高精度、高动态响应和高鲁棒性控制，特别是扭矩控制、位置控制和力矩脉动抑制技术，这些可以直接迁移到EPS电机的FOC控制、无传感器控制和NVH抑制上。同时，关注Optimus量产遇到的瓶颈，思考EPS电机和控制器在规模化生产中可能面临的挑战。机器人，特别是人形机器人，是电机控制和执行器技术的集大成者，非常值得投入。跟踪这些前沿进展，能帮助我们预判EPS和线控转向技术的发展方向，将机器人领域的高性能控制算法、传感器技术和工程经验快速引入汽车领域，提升我们的技术竞争力。
+   https://www.theverge.com/tech/1000794/tesla-optimus-production-issues-hands / https://arstechnica.com/ai/2026/09/tesla-workers-balk-at-training-optimus-humanoid-robots-as-replacements/ https://www.therobotreport.com/agility-robotics-maker-of-digit-humanoid-exploring-wheeled-robots/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260926-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260926-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260926-pm.mp3" length="4378464" type="audio/mpeg"/>
+      <pubDate>Sat, 26 Sep 2026 09:42:35 +0000</pubDate>
     </item>
   </channel>
 </rss>
