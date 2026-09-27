@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 27 Sep 2026 09:42:20 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2026 22:42:38 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI、机器人与汽车：从芯片设计到市场价格战的七大前沿洞察</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。从AI如何加速芯片设计，到机器人执行器的最新突破，再到电动汽车市场的价格战，以及AI安全发展的行业思考，相信今天的每一条内容都能给您带来新的启发，助您在技术创新的道路上更进一步。
-
-1. When Validation Stops Learning: Auditing Update Admission for Continual Embodied Agents（来源：arXiv cs.AI）
-   应用分析：{'能不能用': '能用，但需要深入研究和适配。', '怎么用': '我们可以借鉴其提出的“更新准入”概念，为基于AI的EPS控制策略（如强化学习调优的助力曲线、神经网络观测器等）设计更精细的在线学习与更新机制。例如，在车辆行驶过程中，如果AI模型需要更新其内部参数或策略，可以采用类似“配对二项式检验”的方法，在确保不影响现有功能安全基线的前提下，逐步引入并验证新策略的有效性。这有助于在不中断服务、不影响驾驶体验的情况下，实现EPS性能的持续提升。', '值不值得投入': '值得投入。尤其是在线控转向（Steer-by-Wire）这类高冗余、高安全要求的系统中，策略的持续学习与安全更新是核心挑战。这篇研究为我们提供了新的思路，解决AI在实际车载系统中“边学边用”的安全性和鲁棒性问题。'}
-   https://arxiv.org/abs/2609.10873
-
-2. Towards a Deterministic Math Solver for Clinical Language Models（来源：arXiv cs.AI）
-   应用分析：{'能不能用': '能用，且很有潜力。', '怎么用': '在EPS开发中，AI可以辅助生成复杂的控制参数、标定值或诊断逻辑。例如，AI可以根据车辆数据和驾驶员习惯，生成定制化的助力曲线参数，但最终的参数计算和验证可以交由一个独立的、经过ISO 26262功能安全认证的数学求解器来执行。这样，我们既能利用AI的强大泛化能力，又能保证核心计算的确定性和安全性。这对于自动标定、故障诊断的规则生成等场景特别有价值。', '值不值得投入': '值得投入。这是一种务实且安全的AI落地路径，尤其适合对确定性和功能安全有严格要求的汽车领域。可以作为未来AI辅助设计和实时诊断的底层架构之一。'}
-   https://arxiv.org/abs/2609.10728
-
-3. Inside Architect Labs’ Two-Week Chip Design（来源：EE Times）
-   应用分析：{'能不能用': '潜在能用，但需要验证其在汽车电子领域的适用性和功能安全合规性。', '怎么用': '如果这项技术成熟并能满足车规级要求，我们可以考虑与芯片设计公司合作，利用AI辅助设计定制化的EPS专用MCU。例如，针对PMSM电机FOC控制的特定计算需求、无传感器控制的复杂观测器、或者线控转向所需的超低延迟与高冗余处理能力，AI可以帮助我们快速迭代不同的硬件架构，优化ASIC或FPGA设计，从而缩短产品开发周期，降低成本。', '值不值得投入': '长期来看非常值得关注和投入。虽然目前可能还处于早期阶段，但这种趋势将深刻影响未来汽车电子的硬件开发模式。及早关注并评估其在功能安全、可靠性方面的潜力，对我们保持技术领先性至关重要。'}
-   https://www.eetimes.com/inside-architect-labs-two-week-chip-design/
-
-4. I spent $4,000 on a robot dog from China（来源：Ars Technica）
-   应用分析：{'能不能用': '技术原理和部分解决方案能直接借鉴。', '怎么用': '我们可以深入研究宇树机器人狗所采用的电机类型、驱动器设计、以及其控制策略（如如何实现高精度力控、步态规划中的电机协同），尤其是其在NVH、效率和成本方面的平衡。这有助于我们优化EPS的PMSM电机选型，探索更先进的FOC控制、无传感器控制算法，甚至在在线控转向中考虑更紧凑、响应更快的执行器设计。例如，其可能采用的高效功率级设计和先进的电流环控制，可直接为我们的EPS控制器硬件和软件优化提供灵感。', '值不值得投入': '非常值得投入。机器人执行器控制是EPS电机控制的“交叉点”之一，宇树的成功经验为我们提供了宝贵的工程实践参考，有助于将前沿研究快速落地。'}
-   https://arstechnica.com/gadgets/2026/09/i-spent-4000-on-a-robot-dog-from-china/
-
-5. Ultrasound offers a scalable path to tactile intelligence for physical AI（来源：The Robot Report）
-   应用分析：{'能不能用': '间接启发，需要创新性转化。', '怎么用': '我们可以思考超声波传感是否能用于EPS系统的特定场景。例如，能否用于检测转向柱内部的微小振动、异物入侵，或者作为一种非接触式传感器，辅助判断驾驶员手握方向盘的力度和意图，从而更精细地调整助力输出，提升手感调校的精准度。虽然它可能不会直接替代现有的转矩传感器，但可以作为一种冗余或辅助传感方案，提升系统的安全性与成本竞争力。比如在无传感器控制的背景下，探索超声波对电机状态或外部负载的间接感知能力。', '值不值得投入': '值得探索性投入。这属于前瞻性研究，可能带来新的传感方案和功能，尤其是在提升EPS系统智能化和人机交互体验方面。'}
-   https://www.therobotreport.com/ultrasound-offers-scalable-path-tactile-intelligence-physical-ai/
-
-6. VW Anhui refreshes ID. UNYX 08 SUV with lower prices just 5 months after launch（来源：CnEVPost）
-   应用分析：{'能不能用': '这是市场信号，需要转化为内部工程目标。', '怎么用': '这要求我们从系统架构、电机选型、控制器软硬件等各个环节，重新审视和优化成本结构。例如，在电机选型上，除了性能，成本和供应链风险的权重将进一步提升；在控制器软硬件方面，我们需要更积极地探索高集成度、低成本的MCU和功率器件方案，并优化控制算法，减少对昂贵传感器的依赖（如推广无传感器控制方案）。同时，提升开发效率，缩短产品上市周期，也是应对价格战的有效手段。', '值不值得投入': '这是核心业务投入，必须投入。成本竞争力是产品生存的关键，技术降本是工程师的职责。'}
-   https://cnevpost.com/2026/09/12/vw-anhui-refreshes-id-unyx-08-suv/
-
-7. Anthropic CEO outlines plan to slow AI development（来源：TechCrunch）
-   应用分析：{'能不能用': '这是行业思潮，需要融入我们的AI应用策略。', '怎么用': '在EPS系统中引入AI时，我们必须将功能安全和伦理考量置于核心地位。这意味着对AI模型的训练数据、决策逻辑、鲁棒性、可解释性以及故障模式分析需要更加严格。例如，对于基于AI的故障诊断或预测性维护功能，其决策必须是可追溯、可验证的，并能提供足够的置信度。在线控转向等高安全等级系统，AI的引入需要严格遵循ISO 26262的V模型开发流程，并考虑引入第三方安全评估机制，确保AI模型不会引入新的系统性风险。', '值不值得投入': '必须投入。安全是汽车行业的生命线，AI安全是未来发展不可逾越的红线。将AI安全和负责任的开发原则融入EPS和线控转向的研发流程，是确保产品可靠性和市场接受度的基石。'}
-   https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260913-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260913-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260913-am.mp3" length="3409632" type="audio/mpeg"/>
-      <pubDate>Sat, 12 Sep 2026 22:42:28 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · EPS工程师必听：AI、机器人与智能汽车的交汇点</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯，并结合我们汽车EPS研发工程师的视角，深入分析它们的应用价值和潜在影响。希望这些前沿洞察，能为您的研发工作带来新的启发。
@@ -1168,6 +1132,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260927-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260927-pm.mp3" length="2689344" type="audio/mpeg"/>
       <pubDate>Sun, 27 Sep 2026 09:42:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · EPS工程师的AI与智能汽车早报：从芯片安全到AI代理行为</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能的前沿进展、汽车智能化的最新动态以及机器人领域的安全思考。作为一名汽车电动助力转向，也就是EPS的研发工程师，我特别关注这些技术如何与我们的电机控制、线控转向以及功能安全设计相结合。话不多说，马上进入今天的资讯精选。
+
+1. Full-Stack Semiconductor Solutions for Smart, Secure Industry and Digital Energy（来源：EE Times）
+   应用分析：能不能用：非常能用，这类MCU是EPS控制器硬件平台的潜在候选。怎么用：在下一代EPS控制器设计中，可以评估N32系列MCU的性能（如600兆赫兹频率、ADC采样率和精度）、外设集成度（CAN-FD、EtherCAT接口对线控转向架构的兼容性）、以及功能安全特性（TPM 2.0用于安全启动和固件认证）。特别是其宽温和EFT抗扰能力，对汽车级应用环境非常重要。值不值得投入：值得深入研究和评估。选择合适的MCU是EPS系统性能、成本和功能安全的关键。如果其性能和安全特性满足ISO 26262 ASIL D等级要求，并能提供有竞争力的成本，将是值得投入资源进行原型开发和测试的。
+   https://www.eetimes.com/full-stack-semiconductor-solutions-for-industry-and-digital-energy-applications/
+
+2. TechCrunch Mobility: AV companies pick their lanes（来源：TechCrunch）
+   应用分析：能不能用：这是宏观趋势，不能直接“用”，但必须密切关注，作为我们EPS产品路线图规划的重要输入。怎么用：需要持续跟踪主流AV公司（如Waymo、Cruise、百度Apollo等）的技术路线和商业模式。特别是它们对线控转向系统冗余、功能安全、以及与AI决策层接口的具体要求。例如，如果未来AV系统更强调AI的端到端控制，我们EPS可能需要提供更灵活的扭矩/角度指令接口，并具备更强的故障自诊断和降级能力。值不值得投入：值得持续投入资源进行行业分析和技术预研。理解AV公司的“选道”能帮助我们提前布局线控转向技术，确保我们的EPS产品能无缝集成到未来的智能驾驶生态中。
+   https://techcrunch.com/2026/09/27/techcrunch-mobility-av-companies-pick-their-lanes/
+
+3. Asimov’s laws are not enough to keep robotics and AI safe（来源：The Robot Report）
+   应用分析：能不能用：这是安全理念的警示，不能直接“用”，但必须作为AI引入EPS控制系统的设计原则。怎么用：在探索AI用于改进EPS控制策略、自动标定或故障诊断时，必须将AI模型的可解释性、鲁棒性、故障模式分析以及降级策略作为核心设计环节。例如，如果使用神经网络进行电机参数辨识或转矩脉动抑制，需要对其在各种工况下的性能边界、异常输入响应进行严格验证，并设计传统的安全监控层作为冗余，确保AI失效时系统仍能安全运行。值不值得投入：值得投入大量资源进行AI安全研究和验证方法论的建立。这不仅是技术问题，更是工程伦理和社会责任问题。在EPS这类安全关键产品中，AI的安全性是其能否落地的决定性因素。
+   https://www.therobotreport.com/asimovs-laws-are-not-enough-keep-robotics-ai-safe/
+
+4. Ember-1（来源：Hacker News）
+   应用分析：能不能用：尚不确定，需要进一步了解Ember-1的具体特性和应用领域。怎么用：尽快查阅Fireworks AI官方博客和技术文档，了解Ember-1的架构、性能指标（如模型大小、推理速度、能耗）、以及它擅长解决的问题。如果它在处理序列数据、预测控制或优化方面有优势，并且对计算资源要求不高，可以尝试将其用于EPS的非线性控制策略优化、电机状态观测器改进、或者故障诊断模型的部署。值不值得投入：初期值得投入少量时间进行调研和概念验证。如果Ember-1能显著提升现有AI方案的性能或降低部署成本，那么投入更多资源进行深入研究和集成是值得的。
+   https://fireworks.ai/blog/ember-1
+
+5. Elektrotrucker sets off to circumnavigate the globe in a Mercedes eActros 600 electric truck（来源：Charged EVs）
+   应用分析：能不能用：这是实车测试案例，不能直接“用”，但其反馈数据和经验教训对我们的电机选型、控制策略鲁棒性设计非常有参考价值。怎么用：密切关注这位“电动卡车司机”的旅程更新和技术博客（如果有），特别是关于车辆性能、故障、充电基础设施、以及在不同气候和路况下的表现。我们可以从中学习到EPS在严苛工况下可能遇到的问题，如电机控制在极端温度下的性能漂移、传感器可靠性、以及系统在长时间运行后的耐久性表现，从而在设计和测试阶段针对性地进行优化。值不值得投入：值得投入少量精力关注其进展和官方发布的数据。这些真实世界的极端测试数据比实验室数据更能反映实际挑战，有助于提升我们的产品鲁棒性。
+   https://chargedevs.com/newswire/elektrotrucker-sets-off-to-circumnavigate-the-globe-in-a-mercedes-eactros-600-electric-truck/
+
+6. OpenAI agents tried to ‘bruteforce’ a UN website（来源：The Verge）
+   应用分析：能不能用：这是关于AI代理行为的警示，不能直接“用”，但对设计AI辅助的工程工具和控制系统具有指导意义。怎么用：如果我们考虑使用AI代理进行自动标定或系统优化，必须对其行为范围进行严格限定和持续监控。例如，在自动标定中，AI代理只能在预设的安全参数范围内调整控制参数，并对每一次调整进行记录和验证。同时，需要建立完善的“人工在环”机制，确保关键决策仍由工程师审核。这促使我们思考如何设计安全的AI沙箱环境和权限管理。值不值得投入：值得投入资源研究AI代理的安全边界、行为审计和异常检测技术。在EPS这类安全关键领域，任何引入AI的自动化都必须将潜在的意外行为纳入风险评估和缓解策略中。
+   https://www.theverge.com/ai-artificial-intelligence/1001178/openai-agents-bruteforce-un-website
+
+7. Imp is a full port of DSPy to the BEAM（来源：Hacker News）
+   应用分析：能不能用：间接能用，作为我们探索LLM在工程领域应用时的潜在工具。怎么用：我们可以研究DSPy结合BEAM的特性，评估其在以下方面的潜力：1. 辅助开发：利用LLM生成嵌入式C代码片段、测试用例或文档，加速开发流程。2. 故障诊断知识库：构建基于LLM的系统，分析EPS故障代码、传感器数据和维修记录，提供更智能的故障诊断建议。3. 自动标定策略优化：结合领域知识和LLM的推理能力，辅助设计更高效的标定策略或参数调整规则。由于BEAM的实时性和并发性，可能适合在HIL或SIL环境中进行快速原型验证。值不值得投入：值得投入少量时间了解DSPy和Imp，并进行概念性探索。如果能在辅助开发、知识管理或智能诊断方面找到突破口，将有助于提升我们的研发效率和产品智能化水平。
+   https://github.com/deepfates/imp</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260928-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260928-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260928-am.mp3" length="4336992" type="audio/mpeg"/>
+      <pubDate>Sun, 27 Sep 2026 22:42:38 +0000</pubDate>
     </item>
   </channel>
 </rss>
