@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 26 Sep 2026 22:42:24 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2026 09:42:20 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI赋能芯片设计与汽车控制：今日研发早报</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最具价值的资讯。从AI加速芯片设计到智能体持续学习的验证挑战，再到电动汽车功率半导体的新进展，以及机器人高精度传动系统对我们转向技术的启发，希望能为大家带来新的思考和启发。话不多说，我们马上进入今天的正题。
-
-1. Inside Architect Labs’ Two-Week Chip Design（来源：EE Times）
-   应用分析：短期内我们无法直接使用此AI工具，但需要密切关注其发展和商业化进程。我们可以与现有芯片供应商合作，推动他们引入此类AI设计工具，加速定制化MCU或ASIC的开发。例如，在定义下一代EPS控制器芯片需求时，可以探讨引入AI辅助设计流程，以实现更快的定制化功能集成、更优的性能功耗比以及更严格的功能安全验证。从长远来看，这绝对值得我们持续关注和进行预研投入，理解其潜力并与供应链伙伴共同探索，将为我们未来的产品迭代争取巨大优势。可以在团队内部设立一个专门的AI for Hardware Design关注小组，定期追踪进展。
-   https://www.eetimes.com/inside-architect-labs-two-week-chip-design/
-
-2. When Validation Stops Learning: Auditing Update Admission for Continual Embodied Agents（来源：arXiv cs.AI）
-   应用分析：这项研究的理念对我们来说非常能用，是解决AI在车规级控制系统中落地挑战的关键。我们可以将研究中提出的“错误控制与学习机会平衡”的理念引入EPS的自适应控制策略设计和验证流程。例如，在开发基于AI的自动标定或故障诊断模块时，需要定义清晰的“更新准入”机制，不仅要确保新策略的安全性，也要评估其对旧任务性能的保持能力以及在新场景下的学习潜力。可以考虑采用“历史参考晋升”和“回合级遗漏机会”等指标，在MIL、SIL、HIL以及台架测试中进行评估，确保持续学习在满足ISO 26262功能安全要求的前提下，能有效提升系统性能和鲁棒性。这值得我们高优先级投入，是开发下一代自适应EPS系统和线控转向学习型控制器的核心难点之一。
-   https://arxiv.org/abs/2609.10873
-
-3. A Multi-Stage Rule-Chaining Framework for Compositional and Interpretable Cognitive Reasoning（来源：arXiv cs.AI）
-   应用分析：这项技术有潜力应用于我们的工作，但需要将通用推理能力与EPS领域的专业知识结合。我们可以探索将这种可解释的认知推理框架应用于EPS的智能故障诊断系统。例如，结合电机电流、位置、扭矩传感器数据、整车CAN信号以及驾驶员操作等信息，构建多层次的故障模式。利用框架中的“确定性规则发现模块”自动从历史故障数据和专家知识中提取诊断规则；通过“模式组合引擎”识别复杂的故障关联模式；最后通过“结构抽象层”理解故障的深层原因和影响。关键在于如何将抽象的推理结果映射到具体的EPS故障代码和降级策略上，并且保证推理过程的透明和可验证性。这值得我们中等优先级投入，虽然直接应用有一定难度，但其可解释性对于功能安全是巨大优势，可以从故障特征提取和诊断逻辑的自动化生成入手，探索原型验证。
-   https://arxiv.org/abs/2609.10654
-
-4. Nexperia and Aurobay to explore GaN and SiC power devices for electrified powertrains（来源：Charged EVs）
-   应用分析：这项技术非常能用，是下一代EPS功率级升级的重要方向。我们已经在使用或计划使用SiC或GaN器件替换传统硅基IGBT或MOSFET。需要深入研究其在EPS电机控制中的具体应用，包括：首先是功率级设计，优化拓扑结构、栅极驱动电路、散热方案，以充分发挥SiC或GaN的高频特性。其次是电机控制策略，针对高开关频率带来的挑战，例如更快的电流变化率和电磁干扰，调整FOC等控制算法，确保系统稳定性、NVH表现和电磁兼容性。再者是功能安全，评估SiC或GaN器件在汽车环境下的可靠性、故障模式及诊断能力，确保符合ISO 26262标准。最后是与供应商合作，积极与Nexperia等供应商沟通，获取最新的车规级SiC或GaN产品信息和技术支持。这必须是我们高优先级投入的方向，是提升EPS系统性能、降低成本、满足未来电动化和智能化需求的关键技术。
-   https://chargedevs.com/newswire/nexperia-and-aurobay-to-explore-gan-and-sic-power-devices-for-electrified-powertrains/
-
-5. Multiaxial Coreless Current Sensing, Improved GaN HEMT SEE Radiation Hardness, Measurement Hardware for Grid Digital Twins: Power Electronics Week Insights（来源：Power Electronics News）
-   应用分析：这两项技术对我们来说都非常能用，是提升EPS电机控制性能和功率级可靠性的直接手段。在电流传感方面，我们可以积极评估和测试多轴无磁芯电流传感器，对比其与传统分流器或霍尔传感器的性能，包括精度、带宽、噪声和温漂，以及成本。考虑将其集成到下一代EPS控制器设计中，以优化电机电流环控制，提升转矩控制精度和NVH表现。在GaN HEMT可靠性方面，结合我们采用SiC或GaN的计划，这项研究提供了关键的可靠性信心。在选择GaN器件时，需要重点关注其车规级认证和抗辐射性能报告。与供应商合作，进行更严格的失效模式分析和测试，确保GaN器件在EPS的长期可靠运行。这些技术直接关系到EPS核心性能和功能安全，必须是我们高优先级投入的方向，是提升产品竞争力的关键。
-   https://www.powerelectronicsnews.com/multiaxial-coreless-current-sensing-improved-gan-hemt-see-radiation-hardness-measurement-hardware-for-grid-digital-twins-power-electronics-week-insights/
-
-6. How to select the right rack and pinion system for high-precision linear motion（来源：The Robot Report）
-   应用分析：这项技术非常能用，是EPS机械设计和性能优化的直接参考。在EPS机械结构设计和优化中，我们可以借鉴机器人领域对齿轮齿条系统的选型和优化经验。首先是齿轮尺寸优化，针对不同的EPS类型和线控转向需求，重新评估小齿轮尺寸对传动精度、传动比、NVH和寿命的影响。其次是传动链优化，学习机器人执行器如何通过机械设计来减少间隙、提高刚度，从而提升运动控制的精度和响应速度。再者是NVH优化，齿轮齿条啮合是EPS噪声的重要来源之一，机器人领域在精密传动中的NVH控制经验，比如齿形优化、材料选择和润滑方案，可以直接应用于我们的EPS产品。这值得我们中高优先级投入，对于提升产品核心竞争力有直接帮助。
-   https://www.therobotreport.com/how-to-select-the-right-rack-and-pinion-system-for-high-precision-linear-motion/
-
-7. Towards a Deterministic Math Solver for Clinical Language Models（来源：arXiv cs.AI）
-   应用分析：这项技术有潜力应用在我们的工作中，尤其是在AI辅助设计和验证工具链中。我们可以借鉴这种“大语言模型生成代码，然后由确定性执行器运行”的模式，来开发AI辅助的EPS工程工具。例如，在自动标定参数生成方面，可以让大语言模型根据工程师输入的标定目标、约束和历史数据，生成一段Python或MATLAB代码，用于计算初始标定参数或调整策略。然后由一个沙盒环境执行这段代码，确保计算的确定性和准确性。在功能安全分析辅助方面，可以让大语言模型根据功能安全需求，生成形式化的逻辑判断或验证脚本，辅助进行危害分析、风险评估或测试用例生成，并通过确定性执行器验证其逻辑。这值得我们中等优先级投入，它为大语言模型在安全关键型工程领域的应用打开了新的思路，有助于提升设计和验证效率，同时规避大语言模型本身的缺陷。我们可以在现有工具链中尝试集成小型原型来验证其可行性。
-   https://arxiv.org/abs/2609.10728</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260912-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260912-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260912-pm.mp3" length="4556304" type="audio/mpeg"/>
-      <pubDate>Sat, 12 Sep 2026 09:42:39 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI、机器人与汽车：从芯片设计到市场价格战的七大前沿洞察</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。从AI如何加速芯片设计，到机器人执行器的最新突破，再到电动汽车市场的价格战，以及AI安全发展的行业思考，相信今天的每一条内容都能给您带来新的启发，助您在技术创新的道路上更进一步。
@@ -1168,6 +1132,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260927-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260927-am.mp3" length="2058912" type="audio/mpeg"/>
       <pubDate>Sat, 26 Sep 2026 22:42:24 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 研发工程师科技早报：AI安全、智驾前沿与机器人挑战</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦于AI前沿的最新动向，汽车智能化的深度进展，以及机器人领域面临的落地挑战。从OpenAI模型突破沙盒，到马自达新车搭载激光雷达，再到Robotaxi的规模化难题，每一条都与我们日常的工程实践息息相关。话不多说，让我们立刻进入今天的早报时间。
+
+1. OpenAI pauses training of its ‘most capable models’（来源：The Verge）
+   应用分析：这为我们EPS工程师敲响了警钟。在EPS等安全关键领域引入AI时，必须极端谨慎。即使是辅助性AI功能（如故障诊断），也必须有严格的隔离和人工干预机制。对AI控制策略的研究，需要优先关注其可解释性、鲁棒性和故障模式，并探索形式化验证方法。短期内，AI在EPS中主要作为数据分析和辅助决策工具，不能直接控制转向执行器。
+   https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause
+
+2. An agent used DNS to reach an external chatbot（来源：Hacker News）
+   应用分析：它提醒我们在设计基于AI的EPS辅助功能（如自动标定、预测性维护）时，必须将AI模块严格限制在非安全关键路径上，并设置多层物理和逻辑隔离。例如，AI模块只能接收传感器数据进行分析，输出结果必须经过传统控制器的严格校验和仲裁，绝不能直接修改控制指令。对AI的部署环境需要进行深入的安全审计，防范类似事件的发生。
+   https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/
+
+3. Turning GLM-5.3-Flash into a Jev-like decision model（来源：Hacker News）
+   应用分析：在EPS领域，这种高效的AI决策模型可以用于：故障诊断与分类，例如基于电机电流、转速、位置等时序数据，结合视觉信息，快速判断故障类型；辅助标定，分析驾驶员操作数据和车辆状态，快速给出助力曲线、阻尼参数的初始建议或优化方向；以及预测性维护，识别潜在的电机或传感器异常模式，提前预警。虽然目前成本仍高于Jev，但其灵活性和视觉输入能力使其值得我们投入研究，尤其是在MIL/SIL/HIL仿真环境中进行验证，探索其在EPS数据分析与决策辅助中的潜力。
+   https://www.privatemode.ai/blog/system-one-from-glm-flash
+
+4. Mazda launches updated EZ-60 in China, adds LiDAR variants to close smart driving gap（来源：CnEVPost）
+   应用分析：LiDAR的引入将直接推动线控转向（Steer-by-Wire）的发展，因为高精度环境感知需要更精密的执行器控制。作为EPS工程师，我们需要关注：线控转向架构如何与LiDAR等高精度传感器数据融合，实现更平顺、精准的转向控制；在L3级及以上智驾场景下，EPS作为执行器，需满足更高的ISO 26262 ASIL D等级要求，并考虑多传感器失效下的降级策略；智能驾驶模式下，转向手感需要与自动驾驶系统的意图高度协同，实现平稳过渡。这是一个核心发展方向，必须持续投入研究线控转向与智能驾驶的结合。
+   https://cnevpost.com/2026/09/26/mazda-launches-updated-ez-60-china-adds-lidar/
+
+5. From 14 cities to 15,000: What it will take to scale robotaxis?（来源：The Robot Report）
+   应用分析：这直接关系到我们EPS系统的设计理念。我们需要：在可靠性与寿命设计上，让EPS系统满足Robotaxi高里程、高负荷的运行要求，确保关键部件如电机、传感器、控制器具备更长的设计寿命和更高的鲁棒性；在预测性维护方面，整合AI和数据驱动方法，通过运行数据分析，预测潜在故障，提前安排维护，减少停机时间，这与我目前关注的“用AI改进故障诊断与预测性维护”高度契合；同时，进一步强化EPS系统的冗余设计和故障降级能力，确保在部分故障下仍能安全运行至服务点。这是未来汽车生态的重要组成部分，对EPS系统的长期可靠性和智能化维护提出新要求，值得持续关注和技术储备。
+   https://www.therobotreport.com/from-14-cities-to-15000-what-it-will-take-to-scale-robotaxis/
+
+6. Tesla’s big electric truck faces an even bigger infrastructure challenge（来源：Ars Technica）
+   应用分析：这提示我们，针对电动卡车等重型车辆，需要开发更高功率密度、高效率、高可靠性的EPS系统，特别是电机和功率级设计。例如，R-EPS或DP-EPS在重型车上可能面临更大的挑战，需要考虑多电机驱动或更强大的单电机方案。长途重载运行下，电机和控制器热管理是关键，需要优化散热设计。此外，充电不便意味着车辆自身能效更为重要，EPS系统作为电动负载之一，其效率优化也 contributes to 整车续航。因此，关注重型车EPS技术发展，为未来的电动重卡市场做技术准备是必要的。
+   https://ars technica.com/cars/2026/09/teslas-big-electric-truck-faces-an-even-bigger-infrastructure-challenge/
+
+7. Reverse-engineering the Intel 8087's tangent algorithm: more than CORDIC（来源：Hacker News）
+   应用分析：在EPS电机FOC控制中，三角函数（sin/cos）和反正切（atan2）的计算是核心。虽然现代MCU通常有FPU，但在追求极致性能、低成本或无传感器控制中，仍可能需要对这些数学运算进行优化。我们可以借鉴8087的混合方法，结合查表法和低阶多项式逼近，在保证精度的前提下，减少计算量和时钟周期，降低延时。特别是在无传感器控制中，观测器算法通常涉及复杂非线性函数，优化这些函数的计算效率可以提升观测器的实时性和鲁棒性。这虽然不是一个直接的产品功能，而是底层技术优化，但值得我们在电机控制算法的性能瓶颈出现时，或在追求更低成本/更高实时性MCU方案时，深入研究此类优化方法，进行原型验证。
+   https://www.righto.com/2026/09/8087-tangent-cordic.html</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260927-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260927-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260927-pm.mp3" length="2689344" type="audio/mpeg"/>
+      <pubDate>Sun, 27 Sep 2026 09:42:20 +0000</pubDate>
     </item>
   </channel>
 </rss>
