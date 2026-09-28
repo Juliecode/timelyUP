@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 28 Sep 2026 09:42:45 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 16:59:47 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 科技早报：AI安全警钟长鸣，自动驾驶加速落地，农业机器人赋能转向系统</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能的前沿进展、汽车智能化的最新动态，以及机器人技术如何跨界影响我们的工作。从AI的潜在风险，到自动驾驶的现实挑战，再到农业机器人的技术启示，内容非常丰富。话不多说，我们马上进入今天的精选资讯。
-
-1. OpenAI’s rogue AI tried to hack another company in May（来源：The Verge）
-   应用分析：考虑到EPS是功能安全等级最高的ASIL-D系统，AI在其中扮演的角色必须严格受限且经过严苛验证。短期内，AI可用于非实时、非关键的辅助功能，例如利用AI分析历史数据，来预测电机或传感器故障，进行预测性维护；或者用于优化助力曲线参数，减少人工标定工作量，但标定结果仍需人工审核和台架验证。此外，AI也能用于监控EPS系统运行数据，发现潜在异常模式，触发报警或降级，而不是直接干预控制。投入是值得的，但需采取防御性AI设计策略，重点关注AI的可解释性、可预测性和鲁棒性。投入方向应是AI辅助工具链的开发，而不是直接将AI用于核心控制环路。
-   https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack
-
-2. Anthropic CEO outlines plan to slow AI development（来源：TechCrunch）
-   应用分析：这种放缓趋势对EPS这样的安全关键领域其实是利好。它给了我们更多的时间去研究和验证AI在控制系统中的应用，而不是被快速迭代的新模型牵着走。我们可以利用这段“缓冲期”深化对AI控制算法的基础研究和MIL、SIL、HIL等仿真验证。更重要的是，这促使我们从一开始就将AI的“可控性”和“安全性”作为核心设计目标。因此，投入是值得的，但方向要从“追逐最新模型”转向“深耕AI在控制领域的安全与鲁棒性”。例如，投入资源研究如何将AI与传统控制方法相结合，形成混合智能控制系统，利用AI的自适应能力，同时保留传统控制的确定性和可解释性。
-   https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/
-
-3. AI recursive self-improvement might not come so quickly after all (August 2026)（来源：Hacker News）
-   应用分析：这个信息有助于稳定团队对AI技术前景的预期，避免过度恐慌或盲目乐观。我们可以继续专注于将AI作为解决特定工程问题的高效工具，例如优化FOC参数、改进无传感器控制的鲁棒性、或者通过机器学习识别和抑制电机NVH。这鼓励我们采取增量式、模块化的AI引入策略，将AI视为现有控制系统的“增强剂”，而非颠覆者。例如，在助力曲线调校中，AI可以作为辅助优化工具，生成更平滑、更符合人机工程学的手感，但最终仍需工程师的专业判断。因此，投入是值得的，重点是利用AI的特定能力来提升现有EPS系统的性能和开发效率。
-   https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/
-
-4. Your car is selling your data（来源：The Verge）
-   应用分析：这不再是一个技术应用点，而是一个我们必须遵守的设计约束。首先，要明确EPS系统产生的数据哪些是敏感的、哪些是非敏感的。对敏感数据必须进行匿名化、加密处理，并确保数据流的合规性。其次，在设计诊断接口和远程OTA更新时，需要严格控制数据访问权限和传输协议，防止数据泄露或被滥用。对于任何基于数据的AI模型，其训练数据和推理数据都必须遵循严格的隐私保护协议。因此，这方面必须投入，因为它关乎企业合规和用户信任的底线。投入方向包括数据脱敏和加密技术、建立符合ISO 两万六千两百六十二和数据隐私法规的数据治理框架，以及定期的安全审计和渗透测试。
-   https://www.theverge.com/column/994172/your-car-is-selling-your-data
-
-5. Waymo pulls over, calls cops on riders with a ghost gun（来源：The Verge）
-   应用分析：这个案例给我们提供了宝贵的系统级功能安全和冗余设计的思考。在线控转向系统中，需要设计多层冗余和故障降级策略。如果车辆检测到异常，例如乘客行为异常，或系统自身故障，它必须能够安全停车，并可能需要触发外部援助。未来的EPS系统，特别是与自动驾驶深度融合的系统，可能需要集成传感器融合和AI算法来识别车内外的异常情况，并触发相应的安全响应。因此，这方面必须投入，这是未来高度自动驾驶的必经之路。投入方向包括多层冗余和异构冗余设计，系统级安全架构，以及AI辅助的异常检测。
-   https://www.theverge.com/transportation/994405/waymo-pulls-over-calls-cops-on-riders-with-a-ghost-gun
-
-6. TechCrunch Mobility: Lyft has entered the robotaxi chat（来源：TechCrunch）
-   应用分析：这是对未来市场趋势的确认，指导我们的R&amp;D方向。Robotaxi对转向系统的高可靠性、高冗余度、高精度控制有极高要求，传统机械连接的EPS难以满足。我们应将Steer-by-Wire作为核心战略方向，加速其架构设计、功能安全、电机与控制算法的开发。同时，随着Robotaxi的规模化，Steer-by-Wire的成本将成为重要考量，需要提前规划供应链和生产工艺。此外，虽然Robotaxi是无人驾驶，但车辆的NVH性能和紧急情况下的操控响应依然重要，这需要更精细的控制和AI辅助调校。因此，这方面必须投入，这是EPS未来演进的核心方向。
-   https://techcrunch.com/2026/09/13/techcrunch-mobility-lyft-has-entered-the-robotaxi-chat/
-
-7. How autonomous fleets are changing what’s possible in American agriculture（来源：The Robot Report）
-   应用分析：这是我们特别关注的“机器人关节执行器、伺服电机控制”交叉点的重点。农业机械的重载、低速高扭矩、复杂地形作业等特点，对电机控制的鲁棒性、转矩脉动抑制、无传感器控制等提出了很高要求。我们可以借鉴这些领域的先进控制策略和传感器方案，反哺到EPS电机控制中，例如进一步提升永磁同步电机PMSM在FOC控制中，低速大扭矩下的精度和NVH表现。同时，农业机械的故障可能导致巨大经济损失，对冗余和功能安全要求也很高，与汽车的ISO 两万六千两百六十二有相似之处。因此，这方面值得大力投入。我们可以积极关注工业机器人、农业机械等领域的电机控制和执行器技术进展，开发一套更通用、可配置的电机控制算法库，为未来EPS向多样化应用扩展打下基础。
-   https://www.therobotreport.com/how-autonomous-fleets-are-changing-whats-possible-american-agriculture/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260914-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260914-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260914-am.mp3" length="3756240" type="audio/mpeg"/>
-      <pubDate>Sun, 13 Sep 2026 22:42:58 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 科技早报：AI赋能安全控制与智能汽车数据治理</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能的前沿突破、汽车智能化的最新进展，以及机器人技术在实际应用中的创新。从AI模型如何在物理系统中提供可靠的不确定性估计，到自动驾驶车辆如何更安全地识别弱势道路使用者，再到嵌入式控制器如何高效运行复杂算法，以及智能汽车数据隐私的挑战，每一条都与我们的研发工作息息相关。话不多说，让我们立即进入今天的科技世界！
@@ -1168,6 +1132,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260928-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260928-pm.mp3" length="3251952" type="audio/mpeg"/>
       <pubDate>Mon, 28 Sep 2026 09:42:45 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 智驱未来：AI安全、线控转向与永磁电机新进展</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们从海量信息中精选出了七条干货，涵盖了人工智能前沿、汽车智能化以及机器人技术三大方向。这些资讯不仅将带你了解行业最新动态，更重要的是，我将结合我们汽车EPS，也就是电动助力转向系统的研发工作背景，为大家深入分析它们的应用价值和潜在影响。希望这些内容能为你在日常工作中带来新的启发和思考。
+
+1. Bringing AI to Autonomous Systems -- From Cognition to Collective Intelligence（来源：arXiv cs.AI）
+   应用分析：能不能用？能用，但不是直接的工程方案，而是提供高层设计理念和技术路线参考。怎么用？在我们规划线控转向（Steer-by-Wire）或更高级别EPS系统架构时，可以借鉴其通用智能体架构，思考如何将EPS的控制决策（例如助力曲线自适应、故障降级策略）从传统的基于规则升级为AI驱动的认知功能。例如，可以探索如何利用AI构建一个“长期记忆”来存储历史驾驶数据和用户偏好，以便在不同驾驶场景下智能调整EPS手感。同时，关注其提到的联结主义AI（深度学习）和符号AI（规则、知识图谱）的结合，这可能为实现更鲁棒、可解释的控制策略提供思路。值不值得投入？值得投入学习和思考。这属于战略层面的技术方向探索，有助于我们拓展视野，为未来产品定义和技术预研提供理论指导，确保我们的EPS系统能更好地融入未来的智能汽车生态。
+   https://arxiv.org/abs/2609.30291
+
+2. Nvidia says its new AI safety platform can contain rogue agents within ‘milliseconds’（来源：The Verge）
+   应用分析：能不能用？能用，但需要结合自身系统特性进行定制和集成。怎么用？如果我们尝试将AI（例如强化学习控制器、神经网络观测器）引入EPS的控制或故障诊断中，这个平台提供了“运行时安全监控”的思路。我们可以设计类似的轻量级监控模块，实时监测AI模型的输出（例如转矩指令、故障诊断结果）是否在预设的安全边界内。一旦检测到异常或“越界”行为，立即触发降级模式或切换到传统鲁棒控制策略。这对于实现ASIL D级别的功能安全至关重要。例如，可以利用英伟达的思路设计一个“安全仲裁器”，当AI模型输出的助力转矩超过物理极限或预期范围时，立即介入并限制输出。值不值得投入？值得深入研究和投入。AI安全是AI落地汽车控制系统的生命线。学习这种毫秒级响应的AI安全平台设计理念，对于提升我们AI辅助控制方案的功能安全等级和市场接受度具有直接价值。
+   https://www.theverge.com/tech/1001287/nvidia-ai-safety-platform-rogue-agents
+
+3. WALT: Learning World-Model-Aligned Latent Trajectories for Autonomous Driving（来源：arXiv cs.RO）
+   应用分析：能不能用？能用，作为线控转向系统上游规划模块的参考和潜在集成点。怎么用？虽然WALT本身是针对自动驾驶规划的，但其核心思想——“将低层执行指令（如原始转向角或转矩）与高层环境语义（如路面状况、车辆意图）对齐”——对我们线控转向的手感调校和助力策略设计有启发。我们可以探索如何利用车辆的感知数据（作为简化的“世界模型”）来动态调整助力曲线，使其更符合当前路况和驾驶员意图。例如，在识别到高速弯道或复杂路况时，通过WALT类似的思路，让EPS系统能更早、更智能地调整阻尼和回正力矩，提供更精确、更安全的转向手感。这可以作为自动标定和自适应控制策略的一部分。值不值得投入？值得投入学习和关注。它代表了自动驾驶规划与控制结合的前沿方向，对未来线控转向系统如何更好地响应上层决策、如何实现更高级的“智能手感”具有重要指导意义。
+   https://arxiv.org/abs/2609.30436
+
+4. Neo Performance Materials starts commercial EV traction magnet production in Estonia（来源：Charged EVs）
+   应用分析：能不能用？能用，作为我们电机供应链管理和未来电机设计选型的重要参考信息。怎么用？密切关注Neo Performance Materials这类新兴永磁材料供应商的技术路线和产品性能。在进行PMSM电机选型时，除了传统的性能指标（如剩磁、矫顽力、最大磁能积）外，还应考虑其材料的成本竞争力、供应链的地理分散性以及可持续性。如果他们的产品在成本和性能上具有优势，可以考虑将其纳入我们的潜在供应商列表，或在与现有供应商谈判时作为筹码，推动现有供应商提升产品竞争力。这有助于我们降低EPS系统的电机成本，并优化电机的NVH性能。值不值得投入？值得投入关注。这直接关系到我们EPS产品成本控制和性能优化的核心部件，对电机选型策略有直接影响。
+   https://chargedevs.com/newswire/neo-performance-materials-starts-commercial-ev-traction-magnet-production-in-estonia/
+
+5. VkVIO: Cross-platform GPU Acceleration for Visual-Inertial Odometry with Vulkan（来源：arXiv cs.RO）
+   应用分析：能不能用？能用，作为线控转向系统未来感知模块的潜在技术栈。怎么用？鉴于EPS系统对实时性和计算资源有限的要求，VIO技术本身在EPS主控上直接运行可能过于复杂，但其背后的“高效、低功耗、跨平台状态估计”思想可以借鉴。我们可以研究Vulkan API在嵌入式GPU上的应用，优化我们电机控制算法中的复杂计算（如模型预测控制MPC、高级状态观测器）。更直接地，如果未来线控转向系统需要集成更多传感器（如摄像头、IMU）来实现更精细的路感还原或故障诊断，VkVIO的技术路线可以为我们提供高性能、低延迟的融合感知方案。例如，利用其思想开发一个轻量级的车辆姿态估计模块，用于补偿路面不平整导致的转向抖动，或作为无传感器控制的冗余信息源。值不值得投入？值得投入学习和技术跟踪。VIO和GPU加速技术是未来汽车智能化不可或缺的一部分，虽然不直接用于当前EPS的核心控制，但对线控转向和更高级别的功能拓展有潜在价值。
+   https://arxiv.org/abs/2609.30459
+
+6. Practical Algebraic Parameter Estimation for Noisy Data via Gaussian Process Regression（来源：arXiv eess.SY 控制系统）
+   应用分析：能不能用？能用，且非常值得投入。怎么用？我们可以将这种结合GPR的代数参数估计方法应用于EPS系统中的PMSM电机参数在线或离线辨识。例如，在车辆运行过程中，通过采集电机电压、电流、转速等含噪声数据，利用GPR对数据进行平滑和导数估计，然后应用代数方法实时辨识电机参数（如定子电阻、d/q轴电感、反电动势常数）。这将显著提升电机控制算法对温漂和参数变化的适应性，减少转矩脉动，优化FOC控制器的性能。同时，这也能支持无传感器控制中的转子位置估计器对参数变化的鲁棒性，甚至用于产线末端标定效率的提升。值不值得投入？非常值得投入。这直接解决了我们当前最想解决的问题之一——“电机控制策略的性能与鲁棒性提升：温漂、参数辨识”。其务实性和可操作性都很强，有望显著提升EPS产品的核心竞争力。
+   https://arxiv.org/abs/2609.30451
+
+7. Data-Driven Switched State Estimation with Sparse Sensor Scheduling for Nonlinear Networked Systems（来源：arXiv eess.SY 控制系统）
+   应用分析：能不能用？能用，且非常值得投入。怎么用？我们可以借鉴这个框架来改进EPS系统的无传感器控制（例如，在低速或零速下对转子位置的估计）和故障诊断。通过对EPS电机系统进行数据采集，利用子空间状态空间系统辨识（4SID）在线学习不同工作点下的局部线性模型，并结合正交普洛克鲁斯特对齐来平滑模型切换。更重要的是，稀疏传感器调度思想可以指导我们优化EPS系统中的电流/位置传感器配置。例如，在某些工况下，可以减少对昂贵物理传感器的依赖，转而通过数据驱动的估计器来提供冗余信息，从而降低成本或作为故障传感器的替代方案。这对于实现更经济、更安全的冗余传感方案具有直接指导意义。值不值得投入？非常值得投入。这直接回应了我们“无传感器/冗余传感方案，提升安全性与成本竞争力”以及“用AI/数据驱动方法改进控制、故障诊断”的需求，具有高度的实用价值。
+   https://arxiv.org/abs/2609.31172</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260929-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260929-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260929-pm.mp3" length="5273136" type="audio/mpeg"/>
+      <pubDate>Mon, 28 Sep 2026 16:59:47 +0000</pubDate>
     </item>
   </channel>
 </rss>
