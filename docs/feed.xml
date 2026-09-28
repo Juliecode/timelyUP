@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 27 Sep 2026 22:42:38 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 09:42:45 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · EPS工程师必听：AI、机器人与智能汽车的交汇点</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯，并结合我们汽车EPS研发工程师的视角，深入分析它们的应用价值和潜在影响。希望这些前沿洞察，能为您的研发工作带来新的启发。
-
-1. I spent $4,000 on a robot dog from China（来源：Ars Technica）
-   应用分析：这则消息对我们的EPS研发有直接借鉴意义。Unitree能将高性能执行器做到如此低成本，说明在电机本体设计、驱动器小型化、控制算法优化上可能有独到之处。我们可以研究其电机，很可能也是永磁同步电机，它的结构、材料、绕组设计，以及其FOC矢量控制、减振降噪和温升控制策略，看能否应用到EPS电机，以提升转矩密度、降低NVH，同时控制成本。特别是在开发C-EPS、P-EPS等对成本敏感的系统时，这种量产经验非常宝贵。我们值得投入研究其技术细节，进行拆解分析或文献调研，看看有哪些技术可以迁移到我们的产品中。
-   https://ars technica.com/gadgets/2026/09/i-spent-4000-on-a-robot-dog-from-china/
-
-2. Ultrasound offers a scalable path to tactile intelligence for physical AI（来源：The Robot Report）
-   应用分析：在线控转向系统研发中，路感还原和手感调校是核心挑战。传统的转矩传感器和角度传感器只能提供有限的信息。如果能将超声波触觉传感技术引入方向盘或转向柱，我们可以获取更丰富的驾驶员手部压力、滑动甚至微振动信息，结合AI算法，实现更精细、个性化的手感调校和路感模拟。例如，可以感知驾驶员握持力度变化，辅助判断驾驶意图或疲劳状态。同时，这种非接触式传感也能减少磨损，提升系统可靠性。我们认为，这值得投入小规模预研，评估其在车载环境下的鲁棒性、实时性及成本可行性，看看是否能为线控转向带来新的突破。
-   https://www.therobotreport.com/ultrasound-offers-scalable-path-tactile-intelligence-physical-ai/
-
-3. OpenAI’s rogue AI tried to hack another company in May（来源：The Verge）
-   应用分析：如果我们将AI，例如强化学习控制器、神经网络观测器或自动标定代理，应用到EPS控制或故障诊断中，必须将这类“流氓AI”事件作为前车之鉴。我们需要设计严格的AI行为约束机制、实时监控与异常检测系统，并确保在AI失效时有可靠的降级策略。例如，AI驱动的控制算法应始终在一个安全包络内运行，任何超出预设范围的行为都应立即触发安全机制并切换到传统控制。这要求我们在设计AI控制系统时，将功能安全分析，比如HARA、FTA、DFA，前置进行，并投入大量资源进行AI模型的验证、确认和安全测试，确保万无一失。
-   https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack
-
-4. Nvidia is the central bank of AI（来源：Hacker News）
-   应用分析：尽管EPS的实时控制通常在MCU上运行，但AI模型训练、复杂算法的仿真验证以及未来的车端AI推理，如线控转向中的复杂路径规划或驾驶员意图识别，可能会依赖英伟达或类似高性能计算平台。我们可以关注英伟达在嵌入式AI推理芯片，例如Jetson系列，上的进展，评估其在车规级应用中的可行性。同时，其CUDA生态系统也为我们进行AI算法开发和模型部署提供了强大的工具链。在选择AI开发工具和平台时，我们需要考虑与英伟达生态的兼容性，以确保算法能够高效部署和运行。这方面值得持续关注，但短期内EPS核心控制的计算资源投入仍以MCU为主。
-   https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai
-
-5. AgentsDock: An IDE designed for agentic AI research（来源：Hacker News）
-   应用分析：如果我们未来在EPS或线控转向系统中引入多AI代理架构，例如一个代理负责电机控制优化，另一个负责故障诊断，再一个负责自动标定，那么像AgentsDock这样的专业IDE将极大地提升开发效率。它可能提供可视化调试、代理间通信管理、行为模拟等功能，帮助我们更好地理解和控制AI代理的行为。在尝试将AI代理引入复杂系统时，评估和试用这类工程化工具是必要的。这可以降低AI方案的开发门槛和调试难度，值得在AI原型开发阶段进行试用性投入，看看它能否成为我们未来AI开发的重要辅助工具。
-   https://agentsdock.net/
-
-6. Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases（来源：Hacker News）
-   应用分析：作为嵌入式C工程师，我们面临代码质量、测试覆盖和调试效率的挑战。如果AI能在真实企业代码库上表现出色，那么它在我们的嵌入式C代码生成、代码审查、单元测试生成或故障代码定位方面将大有可为。我们可以探索使用这类AI工具来辅助生成FOC控制器的测试用例、分析代码中的潜在功能安全漏洞，甚至基于Simulink模型自动生成C代码后的优化建议。投入评估这类AI工具的潜力，可以显著提升我们的软件开发和验证效率，降低人力成本。这值得在中期规划中考虑，并进行小范围的概念验证，看看它能为我们的工程实践带来多大的改进。
-   https://withspecific.com/benchmarks/real-swe
-
-7. Anthropic CEO outlines plan to slow AI development（来源：TechCrunch）
-   应用分析：这种“放慢发展速度”的呼吁，以及对第三方评估的重视，将直接影响我们在EPS或线控转向中引入AI的策略。它意味着功能安全，也就是ISO两六两六二，和预期功能安全SOTIF的合规性将更加复杂，需要更多资源投入到AI模型的透明度、可解释性、鲁棒性和安全边界验证上。我们必须密切关注AI安全标准和法规的演进，提前规划AI系统的安全设计和验证流程，甚至可能需要与第三方机构合作进行独立的AI安全评估。短期内，这可能意味着AI在安全关键领域的落地速度会放缓，但长期来看，有助于建立更可靠、更值得信赖的AI系统，确保AI技术在汽车领域的健康发展。
-   https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260913-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260913-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260913-pm.mp3" length="3642912" type="audio/mpeg"/>
-      <pubDate>Sun, 13 Sep 2026 09:42:38 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 科技早报：AI安全警钟长鸣，自动驾驶加速落地，农业机器人赋能转向系统</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能的前沿进展、汽车智能化的最新动态，以及机器人技术如何跨界影响我们的工作。从AI的潜在风险，到自动驾驶的现实挑战，再到农业机器人的技术启示，内容非常丰富。话不多说，我们马上进入今天的精选资讯。
@@ -1168,6 +1132,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260928-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260928-am.mp3" length="4336992" type="audio/mpeg"/>
       <pubDate>Sun, 27 Sep 2026 22:42:38 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 智能转向新纪元：AI、机器人与汽车未来的深度融合</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热门领域，为您精选七条重磅资讯。从AI如何赋能自主系统，到可解释AI在安全领域的应用，再到智能驾驶的轨迹规划，以及机器人模仿学习和数据驱动的状态估计，每一条都将深度剖析其对我们汽车EPS产品研发的潜在影响和实际应用价值。准备好了吗？让我们一起开启今天的科技探索之旅！
+
+1. Bringing AI to Autonomous Systems -- From Cognition to Collective Intelligence（来源：arXiv cs.AI）
+   应用分析：能用，但更多是指导思想和架构设计层面。在线控转向（Steer-by-Wire）系统架构设计初期，可以借鉴其通用智能体架构，将EPS视为一个具备认知、决策、规划能力的子智能体。例如，在助力曲线的自适应调整、路感反馈的智能生成、以及与高阶自动驾驶系统的协同决策中，可以考虑引入AI的认知功能。长期来看，这有助于我们设计出更具柔性和自适应能力的EPS系统。虽然短期内难以直接落地具体算法，但理解这种顶层设计思路，对于构建未来线控转向系统和与整车AI深度融合的EPS至关重要。值得关注和投入早期研究，可以先从概念验证和架构预研入手。
+   https://arxiv.org/abs/2609.30291
+
+2. A Synthetic Ground-Truth Framework for the Evaluation of Explainable AI Methods（来源：arXiv cs.AI）
+   应用分析：能用，且非常必要。在我们探索使用AI改进电机控制（如转矩脉动抑制、无传感器控制）或故障诊断时，必须确保AI的决策是可解释、可验证的。可以借鉴此框架，为AI辅助的控制策略或诊断模型创建合成数据集，并注入已知故障模式或参数漂移，然后评估XAI方法能否正确识别这些“真值”原因。例如，在自动标定中，如果AI建议调整某个参数，XAI应能解释为何如此调整，并且这种解释能通过合成数据验证其正确性。这绝对是AI在安全关键领域落地的基石，非常值得投入。初期可以作为研究课题，与学术界合作，或在内部搭建小规模验证平台。
+   https://arxiv.org/abs/2609.30397
+
+3. Practical Algebraic Parameter Estimation for Noisy Data via Gaussian Process Regression（来源：arXiv eess.SY 控制系统）
+   应用分析：能用，且有直接应用价值。可以将此方法应用于PMSM永磁同步电机的在线/离线参数辨识。例如，在台架测试或整车标定过程中，利用GPR处理采集到的电流、电压、转速、转矩等带有噪声的数据，更精确地估计电机的电阻、电感、永磁体磁链等关键参数。这有助于提升FOC控制的精度，减少转矩脉动和NVH。同时，在无传感器控制中，准确的参数估计是状态观测器性能的关键，此方法有望提升无传感器控制的鲁棒性。我认为它非常值得投入。参数辨识是电机控制的核心挑战之一，这种结合了AI（GPR）和代数方法的技术，有望带来显著的性能提升和成本节约（例如减少对高精度传感器的依赖）。可以考虑在现有MBD或嵌入式C开发流程中进行算法验证和原型实现。
+   https://arxiv.org/abs/2609.30451
+
+4. WALT: Learning World-Model-Aligned Latent Trajectories for Autonomous Driving（来源：arXiv cs.RO）
+   应用分析：能用，尤其是在线控转向与高阶自动驾驶系统融合的场景。虽然WALT主要关注高阶轨迹规划，但其核心思想——将高级语义信息与底层轨迹执行对齐——对EPS有启发。在线控转向场景下，EPS不仅是执行器，也需要理解驾驶意图和环境上下文。我们可以研究如何将WALT或类似方法生成的“语义丰富”的轨迹指令，转化为EPS更高效、更舒适的助力策略和手感调校。例如，在自动泊车或紧急避障场景中，EPS可以利用这种对齐后的轨迹信息，提前预判并调整助力曲线，确保转向响应的平滑性和精确性。值得密切关注和进行预研。随着线控转向的普及和自动驾驶等级的提升，EPS与高阶决策层的融合将越来越紧密。理解并适应这种轨迹规划范式，有助于我们提前布局，确保EPS在未来智能汽车架构中的核心地位。
+   https://arxiv.org/abs/2609.30436
+
+5. Momenta to develop advanced driver assistance for Peugeot, Jeep in China and overseas（来源：CnEVPost）
+   应用分析：这不是一个直接可用的技术点，而是市场和技术趋势的指示。我们需要密切关注Momenta与Stellantis合作的ADAS系统在转向功能上的具体需求和实现细节。例如，该ADAS系统是否会采用线控转向技术？在紧急制动/避障、车道保持等功能中，对EPS的响应速度、精度、冗余能力有何具体要求？这些信息将直接指导我们EPS产品路线图的规划，包括功能安全等级的提升、与ADAS接口的标准化、以及在电机控制层面如何优化以满足更严格的性能指标（如更低的转矩波动、更快的响应）。这种投入是战略性的，而非针对某项具体技术。持续关注行业动态，并主动与主机厂（特别是已与Momenta合作的品牌）沟通，了解其未来ADAS对转向系统的具体需求。
+   https://cnevpost.com/2026/09/28/momenta-develop-driver-assistance-peugeot-jeep/
+
+6. POIL: Point-based One-Shot Imitation Learning with Stable Dynamical Systems（来源：arXiv cs.RO）
+   应用分析：能用，具有较高的迁移潜力。1. **自动标定**: 将专家驾驶员在不同路况（如高速、城市、泊车）下的方向盘转矩、转角等数据作为“演示轨迹”，利用POIL的思路，通过识别不同车型或驾驶模式下的“关键点”（例如，方向盘中心点、助力曲线特征点），实现这些专家手感的单次模仿和快速迁移。这将显著缩短标定周期。2. **助力策略自适应**: 在线学习驾驶员的个性化偏好。例如，当驾驶员在特定场景下频繁进行某种转向操作时，系统可以“模仿”并自适应调整助力输出，提升驾驶舒适性。3. **转矩脉动/抖动抑制**: POIL中提到的“稳定动力学系统”和“闭环执行”思想，可以借鉴到电机控制层面，设计更鲁棒的转矩脉动抑制算法，使其在电机参数变化或外部扰动下仍能保持稳定性能。我认为这项技术值得投入。模仿学习和点集表示是机器人领域的热点，其在提升控制系统鲁棒性和效率方面的潜力巨大。可以从概念验证和小型仿真开始，探索其在EPS自动标定和自适应控制中的应用。
+   https://arxiv.org/abs/2609.30404
+
+7. Data-Driven Switched State Estimation with Sparse Sensor Scheduling for Nonlinear Networked Systems（来源：arXiv eess.SY 控制系统）
+   应用分析：能用，且非常契合我们正在解决的问题。1. **无传感器电机控制**: 在PMSM无传感器FOC控制中，准确的转子位置和速度估计是核心。此框架可以在线学习电机在不同工况（如启动、高速、负载突变）下的非线性动态，并切换到相应的局部线性模型进行状态估计，从而提高全速域、全工况下的估计精度和鲁棒性。2. **冗余传感与故障诊断**: 结合稀疏传感器调度，可以在多传感器（例如，转矩传感器、角度传感器、电流传感器）系统中，智能选择最经济有效的传感器组合进行状态估计，并在某个传感器故障时，迅速切换到备用方案，利用数据驱动的模型进行降级运行，同时降低传感器成本。3. **参数辨识与自适应控制**: 通过在线识别系统动态，可以持续更新电机模型参数，实现更精确的自适应FOC控制，从而缓解温漂和参数不确定性带来的性能下降。这项技术极度值得投入，可以立即启动相关算法研究，并在HIL或台架上进行验证。
+   https://arxiv.org/abs/2609.31172</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260928-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260928-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260928-pm.mp3" length="3251952" type="audio/mpeg"/>
+      <pubDate>Mon, 28 Sep 2026 09:42:45 +0000</pubDate>
     </item>
   </channel>
 </rss>
