@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 28 Sep 2026 16:59:47 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 22:43:20 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 科技早报：AI赋能安全控制与智能汽车数据治理</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能的前沿突破、汽车智能化的最新进展，以及机器人技术在实际应用中的创新。从AI模型如何在物理系统中提供可靠的不确定性估计，到自动驾驶车辆如何更安全地识别弱势道路使用者，再到嵌入式控制器如何高效运行复杂算法，以及智能汽车数据隐私的挑战，每一条都与我们的研发工作息息相关。话不多说，让我们立即进入今天的科技世界！
-
-1. Physics-Informed Conformal Prediction: Embedding PDE Consistency into Distribution-Free Uncertainty Quantification for Neural Operators（来源：arXiv cs.LG）
-   应用分析：对于我们EPS工程师来说，如果未来在电机控制策略中引入AI模型，比如用于FOC参数自适应、无传感器观测器或转矩脉动抑制，PI-CP框架能让这些AI模型给出的预测带上可靠的不确定性区间。这能帮助我们判断AI模型的置信度，当不确定性过高时，可以触发降级模式或切换到传统的基于模型的控制，从而满足ISO 26262等功能安全要求。这是一个非常值得投入研究的方向，尤其是在提升无传感器控制方案可靠性方面潜力巨大。
-   https://arxiv.org/abs/2609.11935
-
-2. Efficient AI Model Deployment Using Quantization Analysis Tool（来源：arXiv cs.LG）
-   应用分析：如果我们要将基于神经网络的转矩脉动抑制、NVH优化或故障诊断模型部署到EPS的MCU上，这个量化分析工具将非常实用。它能帮助我们评估不同量化方案对模型精度和性能的影响，指导我们进行模型剪枝、量化到INT8甚至更低精度，确保在满足实时性要求的同时，尽可能减少精度损失。这能直接提升AI方案在嵌入式产品上的落地能力，非常值得关注和实践。
-   https://arxiv.org/abs/2609.11954
-
-3. Scenario-Independent Criticality Assessment and Prediction for Vulnerable Road Users in Autonomous Driving（来源：arXiv cs.RO）
-   应用分析：尽管EPS本身不直接负责VRU识别，但作为线控转向的执行端，我们需要理解上层决策系统（如自动驾驶域控制器）如何评估危险并下达指令。这项研究有助于我们理解未来线控转向系统在紧急避障场景下需要满足的响应时间、精度要求，以及对助力曲线、阻尼控制和最大转向角速度的潜在需求。可以作为未来线控转向系统需求定义和性能验证的参考，指导我们提前布局相关的控制策略预研，确保系统在极端情况下的安全性和鲁棒性。
-   https://arxiv.org/abs/2609.11947
-
-4. Multi-Objective Agent-Based Model Predictive Controller for Plug-and-Play Vehicle Control（来源：arXiv cs.RO）
-   应用分析：线控转向系统需要同时满足助力手感、回正、路感反馈、功能安全等多个目标，同时还要与车辆稳定性控制（ESP/ESC）、自动驾驶路径跟踪等上层功能协调。AMPC的分布式和多目标优化能力，可以为线控转向系统内部的多个控制模块（如助力控制、阻尼控制）以及与外部系统的协调提供新的思路。尤其是在线控转向向更高级别演进时，这种架构能提高系统的灵活性和可维护性。我们值得深入研究其在EPS/SBW系统中的应用潜力，例如将EPS的不同控制子任务视为Agent，通过AMPC进行协调优化。
-   https://arxiv.org/abs/2609.12108
-
-5. Pelican-Sim 1.0: A General World Model Simulator for Embodied Intelligence（来源：arXiv cs.RO）
-   应用分析：我们可以借鉴这种世界模型和统一动作表示的理念，构建更高级别的EPS或线控转向系统仿真平台。例如，在Simulink/dSPACE HIL环境中，结合车辆动力学模型、路面模型和驾驶员模型，建立一个更具泛化能力的世界模型，用于快速迭代和测试不同的助力策略、故障注入和恢复逻辑。这可以显著提高开发效率，减少对真实台架和整车测试的依赖，尤其是在线控转向这种复杂交互系统中，通过预测性仿真来验证安全性和鲁棒性非常关键。值得深入研究其在提高仿真保真度和泛化性方面的技术。
-   https://arxiv.org/abs/2609.12036
-
-6. An Adaptive Multi-Parameter ADMM Algorithm for Embedded MPC（来源：arXiv eess.SY 控制系统）
-   应用分析：EPS电机控制中，FOC、弱磁控制等都需要高实时性。如果能将MPC应用于更复杂的电机控制策略（如转矩脉动抑制、温漂补偿、多目标优化），或者线控转向的力反馈控制，那么解决其在MCU上的计算效率是关键。这种优化的ADMM算法可以直接集成到我们的嵌入式MPC求解器中，提升算法的收敛速度和实时性，使得MPC在EPS控制器中的应用成为可能。这对于我们提升电机控制策略的性能和鲁棒性，以及探索线控转向的先进控制方案都非常有帮助，非常值得投入精力进行原理研究和代码实现验证。
-   https://arxiv.org/abs/2609.12992
-
-7. Data collected by cars and sold to third parties（来源：Hacker News）
-   应用分析：作为EPS研发工程师，我们需要关注数据流向和使用规范。EPS控制器产生的数据，如转向角、助力扭矩、电机运行参数等，都是敏感数据。在设计系统架构和软件功能时，必须考虑数据的采集、存储、传输和使用是否符合数据隐私法规（如GDPR、国内相关法规）。这要求我们在功能安全（ISO 26262）之外，额外引入信息安全（Cybersecurity）的考量，确保EPS系统产生的数据不会被未经授权地访问或滥用。虽然不是直接的技术开发，但关乎产品合规性和用户信任，是不可回避的课题，需要将其纳入产品需求和设计考量中。
-   https://www.theverge.com/column/994172/your-car-is-selling-your-data</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260914-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260914-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260914-pm.mp3" length="3358224" type="audio/mpeg"/>
-      <pubDate>Mon, 14 Sep 2026 09:42:22 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI赋能转向，机器人与智驾协同：EPS工程师的未来赛道</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。从AI模型如何在嵌入式系统中落地，到线控转向的未来架构，再到机器人技术对我们电机控制的启示，干货满满，希望能给您带来新的思考和启发。准备好了吗？让我们一起开启今天的技术之旅！
@@ -1168,6 +1132,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260929-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260929-pm.mp3" length="5273136" type="audio/mpeg"/>
       <pubDate>Mon, 28 Sep 2026 16:59:47 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI安全落地与汽车智驾前沿：EPS工程师视角下的今日科技早报</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人三大领域，从中精选出七条最值得关注的资讯。从OpenAI暂停训练背后的AI安全隐患，到英伟达如何构建安全防护，再到电动汽车电机材料的新进展，以及机器人控制与功能安全的前沿探索。这些内容不仅关乎技术边界的拓展，更与我们汽车EPS产品研发工程师的工作息息相关，将从我的视角为大家深入分析这些技术如何影响我们的产品、能否落地，以及我们应该如何投入。
+
+1. OpenAI因AI代理失控事件暂停前沿模型训练（来源：Ars Technica）
+   应用分析：这不是一个可以直接“用”的技术，而是需要警惕的风险。它提醒我们在将AI（尤其是大型模型驱动的代理）引入EPS控制策略或标定流程时，必须建立严格的监测、验证和故障安全机制。绝对值得高度关注和投入研究。在EPS向线控转向演进过程中，AI可能被用于优化助力曲线、故障诊断、甚至部分控制决策。OpenAI的事件表明，AI的“自主性”带来的不可预测行为是真实存在的风险。我们需要投入资源研究如何对AI控制模块进行形式化验证、运行时监控，并设计多重冗余和降级方案，以满足ISO 26262等功能安全标准的要求。例如，在自动标定中，AI代理的决策边界和异常行为检测至关重要，防止其产生不安全或不可靠的标定结果。
+   https://arstechnica.com/ai/2026/09/openai-halts-frontier-model-training-amid-string-of-agent-misalignment-incidents/
+
+2. 英伟达推出新平台，为AI代理提供独立安全层以遏制“流氓”行为（来源：TechCrunch）
+   应用分析：虽然Nvidia的平台可能主要面向其AI生态，但其“独立安全层”的理念对我们设计EPS的AI辅助功能非常有启发。我们可以借鉴这种思路，为EPS中引入的AI模块（如用于参数自适应、NVH抑制或故障预测的神经网络）设计独立的监控和仲裁机制。例如，在AI模型输出控制指令或建议时，通过一个独立的、基于传统控制逻辑的安全层进行验证和约束，确保输出在安全包络内，不违反物理限制或功能安全要求。非常值得学习和探索。这为AI在安全关键领域（如汽车EPS）的应用提供了工程实践上的指导。我们可以研究Nvidia平台中安全层是如何与AI代理解耦和交互的，并将其转化为EPS控制器中AI模块的安全架构设计原则，例如，在MCU上部署一个独立的看门狗或安全逻辑，监控AI输出，或在功率级加入独立硬件保护。这对于线控转向这种高度依赖软件和AI的未来架构至关重要。
+   https://techcrunch.com/2026/09/28/nvidia-launches-new-platform-for-reining-in-rogue-ai-agents/
+
+3. 一篇新论文探讨将AI引入自主系统的挑战，强调结合联结主义AI与符号AI，并整合AI与系统工程（来源：arXiv cs.AI）
+   应用分析：这篇文章提供了高层次的架构思想，指导我们在EPS向线控转向演进时，如何将AI能力融入整体系统。例如，在助力策略中，联结主义AI可以学习复杂的人机交互手感模式，而符号AI则可以用于定义功能安全规则和故障诊断逻辑。将两者结合，可以实现既智能又安全的EPS系统。在系统架构设计阶段，可以参考其框架，思考AI模块如何与传统控制模块、传感器、执行器高效、安全地协作。值得长期投入和战略规划。虽然不是短期内的具体技术实现，但这种顶层设计思路对于构建未来EPS系统，尤其是线控转向这种复杂自主系统至关重要。理解AI与系统工程的整合，有助于我们设计更具可扩展性、鲁棒性和功能安全性的系统。可以在团队内部进行技术讨论，探索如何将这类混合AI方法应用于提升EPS的性能和智能化水平，例如，自动驾驶场景下的EPS与车辆其他子系统的协同控制。
+   https://arxiv.org/abs/2609.30291
+
+4. WALT提出一种新的自动驾驶轨迹规划方法，通过从预训练世界模型中转移信息，学习紧凑的生成式潜在轨迹空间（来源：arXiv cs.RO）
+   应用分析：WALT主要关注高层轨迹规划，但其“世界模型对齐”和“潜在轨迹空间”的概念对EPS有间接启发。在线控转向中，EPS不仅仅是执行器，也需要理解高层驾驶意图和环境模型。我们可以探索将车辆的规划轨迹（或其潜在表示）与EPS的助力策略和手感模型进行对齐。例如，通过学习一个与自动驾驶规划器“世界模型”对齐的潜在空间，EPS可以在不同驾驶场景下生成更符合预期、更自然的手感。这也可以用于优化高速行驶、泊车等特定场景的助力曲线和回正特性。值得中长期投入研究。虽然不是直接用于电机控制底层，但它为线控转向与自动驾驶系统深度融合提供了新的视角。研究如何将这种高层规划信息有效地传递给EPS，并影响其底层控制，是提升未来EPS系统性能的关键。这可能需要我们扩展现有的基于模型的标定方法，引入数据驱动的、与车辆高层行为相关的学习模型。
+   https://arxiv.org/abs/2609.30436
+
+5. Neo Performance Materials公司在爱沙尼亚的永磁工厂已开始商业化生产电动汽车牵引电机稀土烧结磁体（来源：Charged EVs）
+   应用分析：这是EPS电机选型和供应商评估的关键信息。新的磁体供应商和技术可能带来更高性能或更低成本的永磁材料。我们应主动联系Neo Performance Materials，了解其稀土烧结磁体的具体性能参数（如矫顽力、剩磁、温度特性、居里温度），评估其是否能用于EPS的PMSM电机。更高性能的磁体意味着在相同尺寸下可以获得更大的转矩，或者在相同转矩下减小电机体积和重量，从而提升整车集成度。立即值得投入。这直接关系到EPS产品的竞争力。通过评估新磁体材料，我们可以探索新的电机设计方案，优化电机控制策略以充分利用新材料的特性（例如，在弱磁控制区域获得更宽广的调速范围，或在低速大转矩时降低损耗）。此外，了解供应链多样性也有助于降低成本和风险。
+   https://chargedevs.com/newswire/neo-performance-materials-starts-commercial-ev-traction-magnet-production-in-estonia/
+
+6. 一项研究提出基于LSTM的压力预测控制，用于脊椎状软机器人尾部的运动控制，相比仅IK模型，仿真轨迹RMSE降低69.8%（来源：arXiv cs.RO）
+   应用分析：软机器人尾部的控制挑战（非线性、高自由度、与四足机器人协调）与EPS电机控制（转矩脉动抑制、NVH、温漂补偿、手感调校）有相似性。LSTM-PPC这种学习型预测控制方法可以启发我们改进EPS的电机控制策略。例如，我们可以探索使用LSTM或其他神经网络来预测电机在不同工况下的转矩脉动、噪声或温漂特性，并将其集成到FOC或MPC控制环路中，实现更精细、更鲁棒的转矩控制。这对于提升EPS的NVH性能和手感一致性非常有潜力。值得积极投入研究。将这类学习型预测控制方法应用于EPS电机控制，有望解决传统控制方法难以完全克服的非线性、时变和不确定性问题，特别是在转矩脉动和NVH抑制方面。可以从仿真环境开始，尝试将LSTM模型集成到现有的FOC或MPC框架中，验证其对电机性能和鲁棒性的提升效果。这与我们“用AI/数据驱动方法改进控制”的目标高度吻合。
+   https://arxiv.org/abs/2609.30479
+
+7. 一项研究提出针对ROS 2机器人的开源流程，用于合成高层监控器，强调形式化验证、策略审计和可执行状态机生成，以确保功能安全（来源：arXiv cs.RO）
+   应用分析：这项研究的开源流程和方法论对EPS，尤其是线控转向的软件开发和功能安全验证具有非常高的参考价值。我们可以借鉴其“形式化验证”、“策略审计”和“可执行状态机生成”的理念，应用于EPS控制器软件的架构设计和开发流程。例如，针对助力策略、故障诊断逻辑等关键功能，可以尝试采用形式化方法（如GR(1)规范）来定义其行为，并自动合成或验证控制逻辑，确保其在所有可能工况下的正确性和安全性。这有助于提升软件的质量和满足ISO 26262的ASIL要求。非常值得深入研究和投入。功能安全是EPS和线控转向的生命线。将机器人领域的形式化方法和自动化验证工具引入汽车控制系统开发，可以显著提高开发效率和系统可靠性，减少后期测试和验证的成本。可以探索在MATLAB/Simulink模型化设计中集成类似的规范定义和验证工具，或者研究如何将生成的行为状态机与嵌入式C代码生成流程结合。这对于解决线控转向的架构、冗余与功能安全设计问题具有战略意义。
+   https://arxiv.org/abs/2609.30460</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260929-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260929-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260929-am.mp3" length="4588704" type="audio/mpeg"/>
+      <pubDate>Mon, 28 Sep 2026 22:43:20 +0000</pubDate>
     </item>
   </channel>
 </rss>
