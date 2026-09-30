@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 29 Sep 2026 22:42:49 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 16:25:39 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI驱动智能控制：从物理智能体到EPS电机精细化</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们聚焦人工智能前沿、汽车智能化和机器人三大领域，为您精选了七条重磅资讯。从大型语言模型如何管理物理任务，到多目标优化在工程中的高效应用，再到电动汽车驱动桥的最新进展，以及机器人执行器控制和安全协作的突破，每一条都与我们的智能控制系统息息相关。接下来，就让我们一起深入探讨这些技术如何赋能我们的研发工作。
-
-1. Toward Self-Adaptive Physical AI: Can LLM Agents Manage Long-Horizon Physical Tasks?（来源：arXiv cs.AI）
-   应用分析：这项技术潜力巨大。目前EPS/SbW的控制策略和手感调校需要大量人工经验和基于模型的参数调整。如果LLM智能体能理解“驾驶意图”和“路况”，结合车辆动力学模型，自主生成或调整助力曲线、阻尼补偿等策略，将是颠覆性的。初期可用于自动标定：LLM智能体分析驾驶员反馈、路测数据，结合车辆模型，自动调整助力曲线参数，减少人工标定周期。长期来看，有望实现线控转向的自适应控制，例如在不同路面附着力、车速、驾驶风格下，LLM智能体实时调整转向手感和响应特性，甚至在传感器失效等异常情况下，通过“工具调用”和“验证”机制，切换到降级模式或冗余方案。投入非常值得，这是未来智能驾驶控制系统的核心方向之一。
-   https://arxiv.org/abs/2609.13436
-
-2. Converge Then Diversify: Decoupling Convergence and Diversity in Multi-Objective Bayesian Optimisation（来源：arXiv cs.AI）
-   应用分析：这项技术非常能用，是我们日常工作中的痛点。它可以立即应用于：一、电机控制参数优化，比如利用该方法优化FOC控制器中的PI参数、弱磁控制参数，以同时满足效率、转矩脉动、NVH等目标。二、助力策略与手感调校，在整车标定阶段，将驾驶员对不同手感参数组合的评价作为目标函数，利用MOBO高效探索帕累托最优解集。三、无传感器控制鲁棒性优化，使其在满足位置/速度估计精度的同时，对温漂、参数变化等具有更好的鲁棒性。投入产出比高，贝叶斯优化本身就是高效的黑盒优化工具，这项改进使其在有限资源下表现更好，非常适合我们实验资源有限、评估成本高的场景。
-   https://arxiv.org/abs/2609.13396
-
-3. Predicted-Flow Control Barrier Functions for Non-Control-Affine Systems（来源：arXiv eess.SY 控制系统）
-   应用分析：这项技术绝对能用，并且是线控转向发展的关键技术。线控转向系统需要严格避免任何可能导致失控的危险状态。P-CBF可应用于：一、线控转向冗余与功能安全，确保在各种正常及故障情况下，转向系统始终保持在安全操作区域内，例如在传感器异常、电机过热时限制转向指令。二、助力限制与防抖，在极端驾驶条件下，如高速急转弯或路面附着力突变，P-CBF可以限制助力输出或转向角速率，防止系统振荡。三、人机共驾安全，作为安全层确保自动驾驶系统在接管或驾驶员干预时，转向行为始终安全。投入非常值得，这是将高级控制理论转化为实际工程安全方案的重要路径。我们需要深入研究其理论基础，并结合Simulink或嵌入式C实现，通过MIL/SIL/HIL验证其在EPS/SbW系统中的有效性和计算效率。
-   https://arxiv.org/abs/2609.13591
-
-4. Bosch’s new rigid e-axle integrates motor and transmission for heavy electric trucks（来源：Charged EVs）
-   应用分析：这项技术虽然是间接相关，但能提供重要的设计参考。重型卡车的电驱动桥，其电机控制、效率、NVH、可靠性等方面的工程挑战与EPS的电机有相似之处。我们可以研究博世电驱动桥中永磁同步电机（PMSM）的设计思路，例如其转矩密度、散热、NVH优化方案，以及电机与变速箱的集成方式，从中寻找EPS电机小型化、轻量化、高效率、低NVH的灵感。尤其是在R-EPS等直接驱动车轮的转向系统中，这种集成化趋势更具参考价值。了解这种深度集成方案有助于我们拓宽视野，为EPS/SbW的未来发展方向提供输入，值得适度关注。
-   https://chargedevs.com/newswire/boschs-new-rigid-e-axle-integrates-motor-and-transmission-for-heavy-electric-trucks/
-
-5. IMM-based Multiple Object Tracking using a State Prediction Neural Network（来源：arXiv cs.RO）
-   应用分析：这项技术可以作为线控转向决策的输入。PR-IMM提供的高精度目标预测信息，可以作为线控转向系统进行路径规划和轨迹跟踪的输入。例如，在自动泊车场景中，精确预测周边障碍物的运动轨迹，可以使转向系统更流畅、更安全地完成泊车动作。在紧急避障场景中，对前方障碍物位置和速度的准确预测，能让线控转向系统更快、更精准地做出避让决策，提升车辆安全性。同时，Transformer模型的引入，可能对复杂交通场景下的预测鲁棒性有帮助，减少误判。值得关注。虽然不是我们直接开发，但了解和评估这类先进感知算法的性能边界，能帮助我们更好地定义线控转向系统的输入需求，并为未来的高级别自动驾驶功能提供支持。
-   https://arxiv.org/abs/2609.13307
-
-6. Extending the Speed Limit of Quadrupedal Locomotion via Refined Actuator Modeling and Adaptive Command Scheduling（来源：arXiv cs.RO）
-   应用分析：这项研究的思路和方法极度能用，可以直接借鉴到EPS的电机控制策略开发中。我们可以借鉴其“精细化执行器模型”，将EPS电机的高速电压耦合、磁饱和等非线性特性更精确地纳入控制模型。这有助于提升FOC和弱磁控制在高速、大转矩工况下的性能，减少转矩脉动和损耗。同时，将“自适应指令调度”的思想引入EPS的电机控制，例如在不同温度、负载或电机老化程度下，通过自适应算法调整FOC参数或转矩脉动抑制策略，确保系统性能和NVH的一致性。探索将强化学习引入电机控制策略的开发，特别是在难以建立精确数学模型的复杂工况下，通过RL自主学习最优控制策略。这是机器人领域最前沿的执行器控制技术，与EPS电机控制有直接的理论和工程共性，非常值得投入。
-   https://arxiv.org/abs/2609.13289
-
-7. Agility’s new humanoid robot will stop, squat to avoid harming human coworkers（来源：Ars Technica）
-   应用分析：这项研究的安全交互理念和技术可以借鉴。虽然EPS本身不是主动与人进行物理接触的机器人，但其控制的转向柱或方向盘是驾驶员直接接触的部件。线控转向系统在未来可能需要应对驾驶员意外触碰、儿童误操作等场景。我们可以借鉴Digit 5的“感知-判断-安全响应”模式，为线控转向系统设计更智能的人机安全交互机制。例如，在自动驾驶模式下，如果驾驶员意外触碰方向盘，系统应能识别这是无意干预还是紧急接管，并做出安全且符合预期的响应。将人形机器人的人机安全设计原则引入ISO 26262功能安全分析，在设计故障诊断与降级策略时，最大限度地减少对驾驶员的物理冲击和心理影响。人机共融是未来智能系统的重要趋势，安全是其基石，值得重点关注。
-   https://arstechnica.com/ai/2026/09/agilitys-new-humanoid-robot-will-stop-squat-to-avoid-harming-human-coworkers/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260916-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260916-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260916-am.mp3" length="3180816" type="audio/mpeg"/>
-      <pubDate>Tue, 15 Sep 2026 22:42:22 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 研发工程师科技早报：AI推理与控制安全，机器人精细操作与汽车电动化新趋势</title>
       <description>大家好，欢迎收听今天的研发工程师科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，精选七条重磅资讯，深入分析它们对我们电动助力转向，也就是EPS产品研发工作的具体影响和落地潜力。准备好了吗？让我们一起开启今天的科技之旅！
@@ -1168,6 +1132,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260930-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260930-am.mp3" length="3060432" type="audio/mpeg"/>
       <pubDate>Tue, 29 Sep 2026 22:42:49 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI前沿、汽车智能化与机器人技术：EPS工程师的今日洞察</title>
+      <description>各位研发工程师早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们聚焦人工智能前沿、汽车智能化和机器人技术这三大热点，为您精选了七条最值得关注的资讯。希望这些内容能为您的研发工作带来新的灵感和思考。
+
+1. OpenAI发布GPT 6.1 Sol，智能水平接近Astra但成本仅为五分之一（来源：Hacker News）
+   应用分析：这款高性能低成本的LLM，可以作为我们AI辅助工具的后端大脑，例如用于代码生成、需求分析、文档总结、测试用例生成等。具体来说，可以结合本地代码库，辅助生成嵌入式C代码片段或MATLAB/Simulink模型脚本；自动分析客户需求文档和ISO 26262功能安全规范，提取关键信息，识别潜在冲突或遗漏；整合历史故障数据、传感器数据和维修手册，构建智能问答系统，辅助工程师快速诊断EPS系统问题；甚至基于历史标定数据和车辆性能反馈，提供初步的助力曲线、阻尼参数建议。如果性能确实能达到“接近Astra”而成本大幅降低，这会显著提升研发效率。投入主要在数据安全、私有化部署（或安全API调用）和特定领域知识的精调上。可以从小范围试点开始，评估其在代码生成和文档分析上的实际效益，非常值得投入。
+   https://openai.com/index/introducing-gpt-6-1-sol/
+
+2. OpenAI因安全漏洞暂停发布GPT 6.1模型（来源：Ars Technica）
+   应用分析：这条新闻本身不是技术，而是重要的警示。它对我们考虑AI应用有指导作用。在引入任何AI模型到EPS研发流程（特别是故障诊断、预测性维护、自动标定辅助等可能影响系统决策的环节）时，必须进行严格的安全评估，包括数据隐私、模型鲁棒性、对抗性攻击、意外行为等。我们应积极追踪AI功能安全相关的行业标准和最佳实践（例如ISO 26262如何扩展到AI），确保我们使用的AI工具和方案符合未来的汽车功能安全要求。对于核心控制或关键诊断，优先选择在边缘设备上运行、可解释性强、行为可预测的小型模型，避免过度依赖黑盒的云端大型模型。安全性是汽车行业的生命线，对AI安全性的关注和投入，是确保未来产品可靠性和符合法规的必要条件，而不是选择性投入。
+   https://arstechnica.com/ai/2026/09/openai-says-planned-gpt-6-1-is-too-insecure-to-release/
+
+3. 神经符号路由：在资源受限边缘设备上实现可靠推理（来源：arXiv cs.AI）
+   应用分析：这项技术非常能用，这正是我们在线控转向（Steer-by-Wire）或更高级EPS控制中，希望引入边缘AI的关键技术。我们可以将EPS系统的某些决策逻辑，如故障诊断（确定性规则）、助力模式切换（基于规则）、手感调校参数微调（开放式学习），通过神经符号路由进行分配。例如，标准的故障码诊断走符号引擎，而复杂、模糊的异响或轻微抖动模式识别和补偿则交给SLM。在无传感器电机控制中，电机参数辨识、状态观测器等可能需要精确计算，可由符号引擎处理；而环境变化导致的参数漂移补偿，或复杂工况下的自适应调整，可由SLM辅助。通过这种方式，关键安全路径由确定性符号逻辑保障，而非安全关键但需要智能优化的任务则由SLM处理，实现性能提升。这是将AI落地到EPS这种安全关键、资源受限的嵌入式系统的关键技术方向，应立即关注该技术，并评估其在现有FOC、无传感器控制、故障诊断等模块中的潜在应用，甚至考虑与研究机构合作。
+   https://arxiv.org/abs/2609.35833
+
+4. L&amp;T半导体技术推出1200伏碳化硅MOSFET平台，面向电动汽车快充和牵引逆变器（来源：Charged EVs）
+   应用分析：这项技术能用，且是我们EPS系统功率级进化的重要方向。当前EPS系统多采用低压（12伏/48伏）直流电机或永磁同步电机（PMSM）。随着车辆电压平台向400伏/800伏发展，SiC MOSFET将是高压EPS电机驱动（特别是线控转向）的关键功率器件。它能提高电机控制器的效率，减少发热，实现更紧凑的封装，降低系统损耗。SiC器件的高开关频率特性，有助于提升FOC控制的电流纹波抑制能力，减小电机尺寸，改善NVH性能。在线控转向等功能安全要求极高的系统中，高压SiC器件的引入，配合高效的电源管理，可以为多路冗余电源提供更可靠、更紧凑的解决方案。SiC技术是未来汽车电气化和高压系统不可逆的趋势，我们必须持续投入研究和评估其在EPS控制器中的应用可行性，与SiC供应商建立合作，争取在下一代EPS产品中引入。这不仅是技术升级，更是成本和性能竞争力的体现，非常值得投入。
+   https://chargedevs.com/newswire/lt-semiconductor-technologies-unveils-a-1200-v-sic-mosfet-platform-for-ev-fast-chargers/
+
+5. 通过包络定理梯度实现控制与估计的协同设计（来源：arXiv eess.SY 控制系统）
+   应用分析：这项技术非常能用，是提升EPS控制算法核心性能的理论基础。在PMSM FOC控制中，转子位置和速度的精确估计至关重要。传统的观测器（如滑模观测器、卡尔曼滤波器）与PI控制器是分开设计的。通过ContEst框架，我们可以联合优化FOC控制器参数和无传感器观测器参数（如滤波器增益、模型参数），以最小化转矩脉动、提升高低速性能和鲁棒性。针对无传感器控制的难点（低速性能差、参数敏感、温漂），通过协同设计，可以更好地平衡估计精度和控制器的响应速度，尤其是在极端工况下。在线控转向（Steer-by-Wire）等功能安全要求极高的系统中，ContEst可以用于优化多模态传感器融合算法（估计器）和多执行器协调控制（控制器），以在传感器失效或执行器降级时，仍能保持最优或次优的系统性能，满足ISO 26262要求。这是控制系统设计的前沿，直接解决我们当前面临的电机控制策略性能与鲁棒性提升、无传感器方案优化等核心问题。极其值得投入，应立即组织团队深入研究，并尝试在MATLAB/Simulink环境中进行模型化验证，评估其在FOC和无传感器控制中的实际效果。
+   https://arxiv.org/abs/2609.36090
+
+6. 机器人策略在执行器退化下的测试时自适应方法（来源：arXiv cs.RO）
+   应用分析：这项技术非常能用，且对EPS系统有直接且巨大的潜在价值。EPS电机在长期运行中，永磁体可能退磁，轴承磨损，导致转矩输出降低、摩擦增大、NVH特性变化。TeAR方法可以通过监测电机温度、电流、电压、运行时间等遥测数据，结合一个轻量级Transformer网络，实时调整FOC控制器的输出转矩指令，补偿电机性能衰减，保持一致的手感和助力性能。遥测数据不仅用于补偿，还可以作为预测性维护的输入。通过TeAR模型学习到的执行器退化模式，可以提前预警潜在故障，指导预防性维护。执行器退化还会影响电机模型参数，进而影响无传感器控制的精度，TeAR可以辅助修正模型参数漂移，提升无传感器控制的鲁棒性。这直接契合我们“电机控制策略的性能与鲁棒性提升”以及“故障诊断与预测性维护”的需求。极其值得投入开发基于EPS遥测数据的TeAR类似系统，有望大幅提升EPS产品的全生命周期性能和用户体验，并为线控转向的冗余和安全设计提供新思路。
+   https://arxiv.org/abs/2609.36182
+
+7. KPI：人形机器人物理交互的可提示核心（来源：arXiv cs.RO）
+   应用分析：这项技术非常能用，这是线控转向和高级EPS手感调校的未来方向。在线控转向中，方向盘与车轮之间没有机械连接，手感完全由电信号模拟。KPI的“可提示契约”理念可以用于设计高级手感调校模块：例如，在高速时，发送“跟踪”契约，增强路感反馈和回正力矩；在低速泊车时，发送“顺从”契约，降低转向力，提供轻盈手感；在特定路况下，通过“保持力范围”契约模拟路面冲击，但限制其传递给驾驶员的力。结合车辆状态（速度、加速度、侧向力）和驾驶员意图，EPS系统可以动态调整助力曲线和阻尼补偿。KPI的理念可以帮助我们构建一个更智能的助力策略核心，根据驾驶场景（如运动模式、舒适模式）“提示”不同的交互契约，实现更细腻、个性化的手感。通过自适应调整电机控制器的刚度和阻尼，KPI的理念还可以用于实时抑制电机转矩脉动和齿槽转矩引起的抖动，提供更平顺的转向体验。线控转向是EPS的终极演进方向，而手感调校和物理交互是其核心竞争力，KPI的理念为我们提供了实现更高级、更智能、更个性化转向手感的全新思路。极其值得投入进行概念验证和算法开发，将其与我们的助力策略和手感调校技术相结合。
+   https://arxiv.org/abs/2609.36151</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261001-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261001-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261001-pm.mp3" length="2337264" type="audio/mpeg"/>
+      <pubDate>Wed, 30 Sep 2026 16:25:39 +0000</pubDate>
     </item>
   </channel>
 </rss>
