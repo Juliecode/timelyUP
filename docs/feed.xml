@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 30 Sep 2026 22:41:55 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 16:32:57 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 科技早报：AI深度融入汽车与机器人，软硬协同构筑未来安全</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人领域，为您精选出七条最有价值的资讯。从AI模型如何更高效地运行在嵌入式设备上，到大型语言模型如何安全地参与控制决策，再到汽车电动执行器的系统级演进，以及机器人如何实现更精密的物理交互与安全避障，每一条都可能为您的研发工作带来新的灵感和突破。让我们一起来看看今天的精彩内容。
-
-1. 大型语言模型融入控制回路，稳定性与网络感知成关键（来源：arXiv eess.SY 控制系统）
-   应用分析：在线控转向（Steer-by-Wire）架构中，我们可以考虑引入大型语言模型作为高层决策或自适应控制策略的监督者。比如，LLM根据驾驶员意图、路况和车辆状态，动态调整助力曲线、阻尼参数，甚至在故障发生时提供降级策略建议。我们现有的MCU和FOC内循环可以作为快速、经过认证的物理层控制，而LLM则作为慢速决策层。挑战在于如何将LLM的输出（如自然语言指令）转化为可执行的控制参数，并保证在LLM推理延迟或“幻觉”（不确定输出）下，系统仍能满足ISO 26262功能安全要求。这是一个非常值得投入的方向，因为它是未来AI与汽车控制深度融合的必经之路，能显著提升系统智能化和自适应能力。初期可从离线分析、故障诊断辅助决策等低风险场景入手，逐步验证其在实时控制中的可行性。
-   https://arxiv.org/abs/2609.16599
-
-2. 基于费雪信息几何距离的神经网络剪枝新方法，提升AI模型效率（来源：arXiv cs.AI）
-   应用分析：如果我们在EPS控制器中引入神经网络用于电机参数辨识、转矩脉动抑制或无传感器位置估计，这些模型通常需要轻量化才能在MCU上实时运行。这项研究提出的剪枝方法可以用来优化这些神经网络模型，显著减小其内存占用和计算量。例如，在FOC控制环路中，若使用神经网络观测器估计转子位置或速度，通过这种剪枝方法，可以使其更高效地运行，降低MCU负载，从而为更复杂的控制算法腾出计算资源，同时降低成本。这是实现AI边缘部署的关键技术之一，非常值得我们深入研究和投入，以提升EPS系统中的AI应用效率。
-   https://arxiv.org/abs/2609.16129
-
-3. 飞机执行器电气化重塑系统级架构，为线控转向提供借鉴（来源：EE Times）
-   应用分析：线控转向是EPS的终极形态，其核心就是将机械连接替换为电动执行器。飞机执行器电气化面临的挑战，如高功率密度电机选型、多余度电源管理、故障诊断与降级策略、电磁兼容性（EMC）以及严格的功能安全（如ISO 26262 ASIL D）要求，都与线控转向高度重合。我们可以借鉴航空领域在冗余执行器、分布式控制、电源架构（如48V/800V系统）以及故障容错设计上的经验，来优化线控转向的系统架构，提升其安全性与可靠性。这不仅是EPS未来发展的关键方向，也是我们作为研发工程师必须重点关注和投入的领域。
-   https://www.eetimes.com/aircraft-actuator-electrification-redefines-system-level-architecture/
-
-4. 旭化成无磁芯电流传感器结合ML实现电弧故障本地化检测（来源：Charged EVs）
-   应用分析：EPS系统中的电机控制同样需要高精度、高带宽的电流采样，并对故障（如电机绕组短路、断路、功率器件故障等）进行快速准确的诊断。我们可以借鉴这种思路，将AKM的无磁芯电流传感器引入EPS，并结合dsPIC33A或类似的MCU/DSC，开发基于机器学习的电机异常行为检测算法。例如，通过分析电机电流波形特征，实时识别转矩脉动异常、绕组间短路或轴承磨损等早期故障迹象，从而实现预测性维护，甚至在故障发生前进行预警或降级处理，提升系统鲁棒性。这对于提升EPS的功能安全等级（ASIL）和降低质保成本具有重要意义，非常值得投入研发。
-   https://chargedevs.com/newswire/asahi-kasei-microdevices-current-sensors-go-into-microchips-arc-fault-detection-design/
-
-5. 双边控制模仿学习新进展：精确调节机器人执行速度与接触强度（来源：arXiv cs.RO）
-   应用分析：EPS手感调校的核心就是精确控制电机输出力矩，以提供驾驶员期望的助力和路感。Bi-MoDe中对“执行速度”和“接触强度”的调节，可以类比为EPS助力曲线中的速度依赖特性和阻尼/摩擦补偿。我们可以借鉴其“modifier-conditioned decoding”的思想，将驾驶员的驾驶风格、路面条件等“修饰符”作为输入，动态生成或调整FOC控制器的参数，实现更精细化、个性化的助力手感。例如，在运动模式下，增加回正力矩和阻尼感；在泊车模式下，降低转向力。这也有助于优化转矩脉动抑制算法，使其在不同工况下都能保持最佳NVH表现。这对于提升EPS产品的差异化竞争力和用户体验至关重要，是值得长期投入的方向。
-   https://arxiv.org/abs/2609.16040
-
-6. Agility人形机器人实现安全避障，可在无围栏环境与人共作（来源：Ars Technica）
-   应用分析：尽管EPS不直接与行人交互，但线控转向系统作为车辆控制的核心，其功能安全设计必须考虑所有可能的危险场景。人形机器人通过“停止、下蹲”等动作来规避风险，这是一种基于环境感知和行为预测的主动安全策略。我们可以将这种“主动避险”的理念引入线控转向系统，例如，当传感器预测到车辆即将与行人发生碰撞，除了紧急制动外，转向系统能否在微观层面（毫秒级）进行微调，以最小化碰撞后果？或者在自动泊车等低速场景下，转向系统如何与感知系统协同，确保在极近距离内与行人安全共存。这促使我们思考EPS在更高级别自动驾驶中的角色，以及如何通过软件策略实现更智能、更主动的物理安全保障。这是一个值得我们关注和借鉴的趋势，特别是其在功能安全设计和风险规避策略上的思路。
-   https://arstechnica.com/ai/2026/09/agilitys-new-humanoid-robot-will-stop-squat-to-avoid-harming-human-coworkers/
-
-7. 领域随机化结合策略梯度，提升LQR控制器模拟到现实的鲁棒性（来源：arXiv eess.SY 控制系统）
-   应用分析：在EPS的控制算法开发和标定过程中，我们大量依赖MIL/SIL/HIL仿真。通过领域随机化，可以在仿真环境中生成更广泛、更真实的工况（如电机参数变化、摩擦特性、路面扰动等），然后利用强化学习训练出对这些变化更鲁棒的FOC或助力控制策略。这有助于提升控制算法的泛化能力，减少实际车辆标定工作量。特别是对于无传感器控制，其鲁棒性对参数变化敏感，领域随机化结合强化学习可以帮助我们训练出更强的状态观测器。这是一个值得投入研究的方向，尤其是在控制策略的鲁棒性验证和自动标定方面，可以显著提高开发效率和产品质量。
-   https://arxiv.org/abs/2609.16300</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260917-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260917-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260917-am.mp3" length="4591872" type="audio/mpeg"/>
-      <pubDate>Wed, 16 Sep 2026 22:43:15 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 智驾与机器人前沿：AI赋能EPS的七大机遇</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人三大领域，为您精选了7条最值得关注的重磅资讯。这些信息不仅能帮助我们洞察行业趋势，更重要的是，它们与我们汽车EPS产品研发工程师的工作息息相关，有望为我们解决当前面临的挑战，指引未来的技术方向。从物理约束的数字孪生到安全强化学习，再到线控转向的AI赋能，让我们一起看看这些技术将如何改变我们的工作。
@@ -1168,6 +1132,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261001-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261001-am.mp3" length="2427408" type="audio/mpeg"/>
       <pubDate>Wed, 30 Sep 2026 22:41:55 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技早报：AI智能体突破、SiC功率新进展与机器人学习新范式</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦人工智能前沿、汽车智能化和机器人三大领域，为您精选了七条重磅资讯。从AI智能体的自我改进，到电动汽车功率器件的革新，再到机器人学习与设计的新思路，希望这些内容能为您的日常研发工作带来新的启发。
+
+1. AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks（来源：arXiv cs.AI）
+   应用分析：作为EPS研发工程师，我正寻求用AI改进控制和标定效率。AREX-2的自我改进型智能体概念，启发我们可以尝试构建一个“自动标定智能体”。例如，在EPS助力策略调校中，智能体可以在HIL（硬件在环）或整车仿真环境中，根据预设的手感目标（如回正性、阻尼感），迭代调整助力曲线、阻尼补偿等参数。通过模拟驾驶员反馈和路况数据，智能体能像工程师一样“反思”并“优化”当前策略，最终生成更优、更鲁棒的调校方案，大大减少人工标定耗时和成本。这值得投入，因为它有望解决传统标定效率低、依赖专家经验的痛点。
+   https://arxiv.org/abs/2609.38288
+
+2. Forward-Invariant Policy Classes for Safe Reinforcement Learning in Multicopter Control（来源：arXiv eess.SY 控制系统）
+   应用分析：线控转向（Steer-by-Wire）系统对功能安全（ISO 26262）有极高要求，任何控制策略的失误都可能导致灾难性后果。这项研究提出的“前向不变性策略类”概念，可以用于设计线控转向的冗余控制系统。我们可以构建一个经过形式化验证的安全控制器库，RL智能体只允许在这些安全策略之间进行切换或组合。这样，即使AI在探索过程中，也始终被限制在已知安全的操作空间内，避免引入新的安全风险。这对于提升线控转向系统的鲁棒性和功能安全等级，实现安全可靠的AI辅助控制是值得投入的方向。
+   https://arxiv.org/abs/2609.38655
+
+3. Extreme Learning Machine-based Barrier Function Synthesis（来源：arXiv eess.SY 控制系统）
+   应用分析：在EPS电机控制策略中，我们面临转矩脉动抑制、NVH优化等非线性控制问题。ELM作为一种计算效率高且收敛性好的机器学习方法，可以用于快速合成和验证复杂控制策略（如基于模型的预测控制MPC）的安全障碍函数。例如，我们可以利用ELM来证明在特定运行包络内，电机电流、转矩或转向角度等关键状态变量不会超出安全限制，即使系统存在未知扰动或参数漂移。这种方法能有效辅助ISO 26262功能安全认证中的分析和验证环节，尤其对于评估AI在控制回路中引入的潜在风险。相较于传统神经网络，ELM的凸优化特性可能使其更容易落地，值得投入研究。
+   https://arxiv.org/abs/2609.39221
+
+4. L&amp;T Semiconductor Technologies unveils a 1,200 V SiC MOSFET platform for EV fast chargers（来源：Charged EVs）
+   应用分析：作为EPS电机选型和控制器软硬件工程师，我对SiC MOSFET的进展高度关注。EPS系统中的电机驱动功率级是关键部分，SiC器件能带来显著优势。例如，使用1200伏SiC MOSFET可以大幅提高功率级效率，减少发热，从而降低散热需求，使EPS控制器更加紧凑、轻量化。这对于提升EPS系统的转矩密度、降低NVH（噪音、振动、声振粗糙度）和提高可靠性至关重要。特别是在线控转向向更高性能演进时，需要更快的响应和更高的功率输出，SiC器件是实现这些目标的关键技术。我们应该积极评估新一代SiC器件在EPS控制器中的应用潜力，并与供应商建立合作，推动其在产品中的落地。
+   https://chargedevs.com/newswire/lt-semiconductor-technologies-unveils-a-1200-v-sic-mosfet-platform-for-ev-fast-chargers/
+
+5. SynIL: Leveraging Synergy for Offline Imitation Learning from Imperfect Demonstration Datasets（来源：arXiv cs.RO）
+   应用分析：在EPS助力策略与手感调校中，我们常常需要收集大量驾驶员的转向数据。然而，这些数据往往包含不同熟练程度驾驶员的操作，甚至一些次优或带有噪声的动作。SynIL的方法可以帮助我们从这些“不完美”的驾驶数据中，识别并学习出更符合人体工程学和驾驶习惯的“运动协同模式”，进而优化助力曲线、阻尼/回正/摩擦补偿等策略。例如，我们可以利用SynIL来分析不同驾驶员在特定场景下的转向输入和车辆响应，提取出高质量的“协同”特征，并将其用于自动生成或微调助力参数。这能有效提升手感调校的效率和效果，减少对昂贵且难以获取的完美专家数据的依赖，值得投入研究和概念验证。
+   https://arxiv.org/abs/2609.38225
+
+6. Draft: A Parametric Tool for Robot Design Exploration（来源：arXiv cs.RO）
+   应用分析：EPS系统架构设计，尤其是向线控转向（Steer-by-Wire）演进时，需要高度协同地考虑电机选型、机械结构、传感器布局和控制策略。Draft工具的理念，即“形态与控制协同设计”，可以迁移到我们的工作中。我们可以在早期设计阶段，利用参数化模型（如MATLAB/Simulink）快速搭建不同电机（如PMSM）、减速比、转向器结构和控制器参数的EPS系统模型。通过定义关键性能指标（如转矩密度、效率、NVH、手感响应），并结合真实电机和材料的参数趋势，快速评估不同设计方案对电机控制策略（FOC、弱磁控制）性能的影响。这有助于我们在实际投入硬件开发前，在虚拟环境中进行大量的探索和优化，显著缩短研发周期，提高设计质量，值得持续关注和尝试建立类似的模型化协同设计流程。
+   https://arxiv.org/abs/2609.38405
+
+7. Qnovo pilots Battery Genome application to assess EV batteries for EU battery passports（来源：Charged EVs）
+   应用分析：虽然EPS系统本身不直接涉及整车动力电池，但作为整车电子电气架构中的一个重要执行器，EPS的运行也受到整车电源管理和工况的影响。Qnovo的“电池基因组”概念，即通过数据驱动和AI分析来评估复杂系统（电池）的健康状况和预测性维护，可以为EPS系统自身的健康管理提供借鉴。我们可以将类似思路应用于EPS电机、传感器、控制器等关键部件的运行数据分析，建立“EPS部件基因组”。通过收集电机电流、温度、位置传感器数据、故障诊断码等信息，利用AI算法分析部件的磨损、老化趋势和潜在故障模式，实现对EPS系统的预测性维护，而非被动维修。这有助于提升EPS的可靠性，降低车辆召回和维修成本，对于提升产品竞争力具有长期价值，值得投入资源探索。
+   https://chargedevs.com/newswire/qnovo-pilots-battery-genome-application-to-assess-ev-batteries-for-eu-battery-passports/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261002-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261002-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261002-pm.mp3" length="3033792" type="audio/mpeg"/>
+      <pubDate>Thu, 01 Oct 2026 16:32:57 +0000</pubDate>
     </item>
   </channel>
 </rss>
