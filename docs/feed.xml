@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 05 Oct 2026 17:22:04 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 22:43:05 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI、汽车与机器人：从边缘AI到线控转向，前沿技术如何赋能EPS研发</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大热门领域，精选出七条对咱们EPS产品研发特别有价值的资讯。从大语言模型如何跑在小算力芯片上，到线控转向的安全策略，再到机器人执行器控制的最新突破，希望今天的分享能为您的日常工作和技术选型带来新的启发。
-
-1. RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models（来源：arXiv cs.AI）
-   应用分析：这项研究提出RBS-Attention，这是一种训练无关的稀疏预填充方法，旨在显著提升长上下文大语言模型的推理速度，据报道在H一百GPU上实现了二十点六五倍的独立预填充注意力加速。这对于咱们EPS的研发来说，潜力巨大。咱们现在很多复杂的助力策略、手感调校，以及故障诊断逻辑，如果能通过小型化、高效的神经网络来实现，就能大大提升计算效率。比如，我们可以考虑用它来部署一些轻量级的AI模型，用于预测性维护的异常检测，或者基于驾驶员行为的自适应助力曲线调整。这些模型目前可能需要更强的算力，但如果能用RBS-Attention这类方法在咱们现有的MCU上高效运行，那价值就非常大了。所以，我认为咱们值得少量投入，跟踪这项技术，并在HIL或SIL环境中进行初步的概念验证，看看它在线控转向决策层和控制层的应用潜力。
-   https://arxiv.org/abs/2609.20971
-
-2. Efficient Bayes-Adaptive Reinforcement Learning with Temporal Logic Specifications（来源：arXiv cs.LG）
-   应用分析：这项研究提出了一种新的端到端模型强化学习算法，它能在未知环境下高效地合成满足时序逻辑规范的策略，非常适用于咱们EPS这样的安全关键型控制系统。想象一下，线控转向系统对功能安全的要求有多高，任何故障都可能导致灾难性后果。这项技术可以将贝叶斯强化学习和时序逻辑规范结合起来，为咱们在不确定环境中保证控制系统的安全性和鲁棒性，提供了一个全新的思路。我们可以用它来开发线控转向系统的故障诊断和降级策略，比如在传感器失效或执行器性能下降时，这个RL智能体能根据咱们预设的“在任何情况下都不能失去转向能力”这样的安全规范，快速调整控制策略，确保车辆安全。所以，这项研究非常值得咱们深入投入研究和概念验证，在HIL或SIL环境中进行仿真验证，探索它在线控转向中的巨大潜力。
-   https://arxiv.org/abs/2609.20954
-
-3. AI, Crypto Mining Expose Global Compute Infrastructure Constraints（来源：EE Times）
-   应用分析：这篇来自《电子工程时报》的报道提醒我们，AI和加密货币挖矿需求的激增，正在导致全球计算基础设施面临半导体瓶颈和晶圆厂交货周期拉长等供应链限制。虽然这不是一个直接的技术点，但它直接影响咱们获取高性能AI芯片、MCU以及功率器件的成本和周期。咱们作为EPS研发工程师，在做EPS控制器硬件选型时，就不能只看性能指标，更要将芯片的供应稳定性、交货周期和成本作为关键考量因素。例如，选择MCU时，要考虑多家供应商的供货能力，避免因单一供应商受限导致项目延期或成本飙升。同时，这也促使咱们更关注AI算法的轻量化和优化，以便在现有或更容易获取的硬件平台上实现所需功能。所以，投入时间进行市场调研和供应链风险评估，并将其纳入硬件平台规划和采购策略中，这是非常值得的。
-   https://www.eetimes.com/ai-crypto-mining-expose-global-compute-infrastructure-constraints/
-
-4. Chinese automotive chipmaker SemiDrive secures fresh funding（来源：CnEVPost）
-   应用分析：来自CnEVPost的消息，中国汽车芯片制造商芯擎科技获得新一轮融资，据报道其累计汽车芯片出货量已超1400万片，产品覆盖超过九成中国车企。这对于咱们来说是个好消息，芯擎科技是国内重要的汽车芯片供应商，它的进步意味着国产车规级芯片的成熟度和可靠性都在提升，为咱们的EPS控制器提供了更多本土化、自主可控的硬件选择。在未来的EPS控制器硬件平台迭代中，咱们应该积极评估芯擎科技等国产车规级MCU的性能、功能安全支持，比如ISO二六二六二相关的IP、功耗以及成本优势。特别是它在电机控制IP和实时性方面的表现，需要进行详细的技术对标。如果满足要求，使用国产芯片不仅能降低供应链风险，还可能带来成本优势。所以，值得投入资源进行技术评估和合作对接，争取在早期项目或原型开发中进行试用。
-   https://cnevpost.com/2026/09/21/semidrive-secures-fresh-funding/
-
-5. Tesla audits China suppliers to push Optimus into mass production, report says（来源：CnEVPost）
-   应用分析：据CnEVPost报道，特斯拉正在审计中国供应商，以推动其人形机器人Optimus进入大规模生产，部分中国供应商已获得订单。这可不是个小消息，Optimus的大规模量产，意味着人形机器人关节执行器、伺服电机控制、功能安全和供应链管理都在走向成熟。这些技术，比如高精度、高转矩密度、低NVH的电机控制，以及功能安全和冗余设计，都和咱们EPS的电机选型、控制策略和可靠性有高度的互通性。咱们可以学习它在FOC、转矩脉动抑制、无传感器控制等方面的最新进展和工程实践。同时，了解特斯拉如何解决大规模量产中的质量控制和成本优化问题，对咱们未来EPS产品，尤其是线控转向这种新架构的量产，也有重要的借鉴意义。所以，持续关注和间接投入，研究Optimus的技术细节和供应链策略，能为咱们EPS的电机控制和线控转向的工程化提供前瞻性思路。
-   https://cnevpost.com/2026/09/21/tesla-audits-china-suppliers-optimus-mass-production/
-
-6. Adapting Rigid-Body Dynamics Derivatives for Constraint Embedding Closed-Chain Models（来源：arXiv cs.RO）
-   应用分析：这项新研究扩展了刚体动力学导数算法，能处理使用约束嵌入建模的闭环运动学系统。这对咱们EPS工程师来说，非常重要。EPS系统，尤其是线控转向，本质上就是一个复杂的机电一体化系统，内部机械结构、电机和传感器之间存在复杂的动力学耦合。准确的动力学建模和导数计算，是实现高精度、高鲁棒性电机控制和助力手感调校的基础，也是功能安全分析的重要一环。这个方法可以直接应用于咱们EPS和线控转向系统的模型开发和控制算法设计。比如，在设计FOC和转矩脉动抑制策略时，更精确的系统动力学模型，包括电机和转向机构的耦合，能帮助咱们设计出更优的控制器参数，提升控制精度和NVH性能。对于线控转向，这更是构建精确模型、进行功能安全分析的关键。所以，这项技术非常值得咱们深入投入，在MATLAB/Simulink等环境中，结合Simscape Multibody等工具，尝试将其应用于EPS系统的精细化动力学建模和控制仿真。
-   https://arxiv.org/abs/2609.21024
-
-7. Catch Me If You Can: Real-Time Feedback Denoising for Responsive VLAs（来源：arXiv cs.RO）
-   应用分析：最后一则消息，来自机器人领域，一项新研究提出了VLA-Feedback架构，它结合了低频扩散规划与高频视觉反馈，通过将最后一个去噪步骤作为轻量级反馈接口，实现了机器人操作中的实时响应能力。这个核心思想，也就是在执行过程中快速修正动作，和咱们EPS控制环路的实时性要求高度契合。咱们可以借鉴这种“低频规划加上高频反馈修正”的思路，将复杂的助力手感模型，比如基于驾驶员意图的自适应模型，作为低频规划，然后将高频的转矩、角度、电流等传感器反馈用于实时去噪和修正，确保转向手感的即时性和平顺性，同时抑制抖动和噪声。在线控转向中，这种架构也能启发咱们设计更鲁棒的控制系统，即使在外部扰动或内部参数变化时，也能通过快速反馈调整保持性能。所以，这项研究的控制架构思想，非常值得咱们投入研究和概念验证，去思考如何将咱们的复杂模型，无论是AI还是传统控制，与高带宽控制环路更好地结合，实现高性能、高响应的EPS系统。
-   https://arxiv.org/abs/2609.21022</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260921-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260921-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260921-pm.mp3" length="3063744" type="audio/mpeg"/>
-      <pubDate>Mon, 21 Sep 2026 09:42:52 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI、汽车、机器人：从芯片到控制的未来技术洞察</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大热门领域，精选七条重磅资讯。从芯片设计到电机控制，从大模型幻觉到人形机器人量产，每一条都可能深刻影响我们的未来技术路线。准备好了吗？让我们立即开始！
@@ -1175,6 +1139,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261006-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261006-pm.mp3" length="3409776" type="audio/mpeg"/>
       <pubDate>Mon, 05 Oct 2026 17:22:04 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI前沿、汽车智能化与机器人技术：EPS研发的未来洞察</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦人工智能前沿、汽车智能化和机器人技术这三大热点领域，精选了七条重磅资讯。这些资讯不仅展示了最新的技术突破，更重要的是，它们将如何影响我们汽车电动助力转向系统，也就是EPS的研发工作。从AI算法的底层革新，到车规级芯片的新进展，再到机器人领域的仿真与寿命管理，每一条都与我们的日常工作息息相关。话不多说，让我们马上进入今天的早报时间。
+
+1. Dust: Pretraining Transformers Without Backpropagation（来源：arXiv cs.AI）
+   应用分析：对EPS系统而言，我们关注AI在控制、标定、故障诊断中的应用。如果Dust能有效降低AI模型训练和推理的资源消耗，意味着我们可以将更复杂的AI算法部署到车规级MCU上。例如，在电机控制中引入轻量级神经网络观测器或预测模型，其训练和更新成本将大大降低。这个方向值得密切关注，长期看有潜力，短期内仍需等待成熟的框架和工具链。
+   https://qlabs.sh/research/dust
+
+2. Trusted AI: Why Intelligence Alone Isn’t Enough（来源：EE Times）
+   应用分析：在EPS中，AI可用于改进控制、标定和故障诊断。例如，用神经网络实现无传感器控制器的状态观测器，或用强化学习优化助力曲线。但这些AI模块必须满足ISO 26262等功能安全标准。这意味着需要设计专门的验证方法，结合传统控制理论的确定性保障，而不是盲目相信AI的“智能”。我们需要研究如何为AI模型建立“信任边界”，例如通过形式化验证、运行时监控、或将AI作为辅助决策而非直接控制的环节。这非常值得投入，是未来AI在车规级系统落地的关键。
+   https://www.eetimes.com/trusted-ai-why-intelligence-alone-isnt-enough/
+
+3. SD-DPC: Sparse Dictionary Differentiable Predictive Control（来源：arXiv eess.SY 控制系统）
+   应用分析：EPS电机控制中，FOC、弱磁、转矩脉动抑制等策略复杂度高，MPC是优化方向之一。SD-DPC的“稀疏可解释”特性，使得将AI集成到电机控制策略中变得可行。我们可以尝试用它来优化助力曲线、阻尼补偿，甚至在一定程度上处理NVH问题。其训练过程通过闭环性能而非模仿预训练控制器来选择项，有望生成更优的、且易于理解和验证的控制律。这值得在Simulink/MATLAB环境中进行原型验证，探索其在转矩脉动抑制、无传感器控制等方面的应用潜力。
+   https://arxiv.org/abs/2610.02466
+
+4. Microchip’s LAN8679 and LAN8680 transceivers extend 10BASE-T1S to zonal edge nodes（来源：Charged EVs）
+   应用分析：线控转向是EPS的终极演进方向。当前EPS多采用CAN/CAN FD通信，但线控转向需要更高的带宽和确定性。10BASE-T1S能够将以太网延伸到EPS的边缘节点，实现控制器与传感器、执行器之间的高速、低延迟通信。这对于设计线控转向的冗余通信链路、实时数据传输和功能安全架构至关重要。我们应积极研究和评估这类芯片，将其纳入线控转向EE架构的预研方案中，甚至进行早期硬件在环（HIL）测试，以验证其在实际工况下的性能和可靠性。
+   https://chargedevs.com/newswire/microchips-lan8679-and-lan8680-transceivers-extend-10base-t1s-to-zonal-edge-nodes/
+
+5. Model-Based Disturbance Rejection via Sliding-Mode Control: Continuous-Time Formulation and Proper Implicit Discretization（来源：arXiv eess.SY 控制系统）
+   应用分析：EPS电机控制面临转矩脉动、噪声、温漂等多种干扰。滑模控制是解决这些问题的重要工具。该论文提出的改进方法，特别是隐式离散化，对于在MCU上实现高性能、高鲁棒性的电机控制算法具有直接指导意义。我应该深入研究其连续时间公式和离散化方案，将其应用于FOC、弱磁控制中的电流环控制，或转矩脉动抑制。在MATLAB/Simulink中进行建模和仿真，并在台架上进行验证，看能否在实际工况下提升性能和鲁棒性，减少抖动和噪声。
+   https://arxiv.org/abs/2610.02890
+
+6. Awomo-SimDataEngine: Agentic Simulation-ReadyWorld Generation（来源：arXiv cs.RO）
+   应用分析：EPS的开发和验证大量依赖MIL/SIL/HIL仿真。尤其是在线控转向这种复杂系统中，需要验证在各种极端场景下的功能安全和性能。Awomo-SimDataEngine的理念可以借鉴到EPS的虚拟验证中：例如，自动生成多样化的驾驶场景、路面条件、故障模式，用于测试助力策略和功能安全降级方案；生成带标注的传感器数据，用于训练AI辅助的故障诊断或参数辨识模型；为HIL平台提供更真实、更具挑战性的输入。这值得投入研究，评估其工具链和接口，看能否与现有的Simulink/dSPACE/Vector等工具链集成，提升我们验证工作的效率和覆盖度。
+   https://arxiv.org/abs/2610.02274
+
+7. RUL-Aware RRT*: Degradation-Balanced Motion Planning for Robotic Manipulators（来源：arXiv cs.RO）
+   应用分析：EPS电机是核心执行器，其寿命和可靠性直接影响整车安全性。目前我们主要通过耐久测试和故障诊断来保证。RUL-aware RRT*的思路可以迁移到EPS领域：结合电机运行数据（电流、温度、振动），建立EPS电机的RUL模型；在助力策略调校时，除了考虑手感和性能，还可以引入电机RUL作为优化目标之一，在满足驾驶需求的前提下，尽量平衡电机各部件的磨损，延长整体寿命；基于RUL预测，提前预警潜在故障，指导经销商进行预防性维护。这非常值得投入，从电机RUL模型建立到控制策略的结合，都是可以落地的方向。
+   https://arxiv.org/abs/2610.02469</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261006-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261006-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261006-am.mp3" length="2524176" type="audio/mpeg"/>
+      <pubDate>Mon, 05 Oct 2026 22:43:05 +0000</pubDate>
     </item>
   </channel>
 </rss>
