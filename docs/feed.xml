@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 06 Oct 2026 16:02:46 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 22:42:25 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾前沿早报：AI赋能安全控制与机器人执行器新突破</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的《智驾前沿》科技早报。我是你们的主播兼技术分析师，小智。今天，我们将聚焦 AI 前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯，并结合咱们汽车电动助力转向，也就是 EPS 的研发工作，深入分析这些技术能带来哪些实实在在的应用。希望今天的分享，能为您的技术探索和项目落地提供一些新的思路和灵感。
-
-1. OpenAI forms math advisory group as its AI resolves more than 100 open problems（来源：TechCrunch）
-   应用分析：能用，且潜力巨大。我们可以探索利用这类 AI 模型来辅助复杂的控制算法设计与优化，例如，让 AI 协助推导多变量、非线性系统的最优控制律，或者在现有 FOC、MPC 算法基础上，提出新的扰动观测器或参数辨识方法。它甚至可能帮助我们进行功能安全（ISO 26262）的逻辑验证，自动生成测试用例，或者对复杂的故障诊断逻辑进行形式化验证。此外，在电机选型和系统架构设计阶段，AI 也许能辅助进行多目标优化，权衡转矩密度、效率、NVH 和成本。所以，这绝对值得我们高度关注和适度投入。初期可以从形式化验证、自动测试用例生成等辅助工具入手。
-   https://techcrunch.com/2026/09/21/openai-forms-math-advisory-group-as-its-ai-resolves-more-than-100-open-problems/
-
-2. Efficient Bayes-Adaptive Reinforcement Learning with Temporal Logic Specifications（来源：arXiv cs.LG）
-   应用分析：理论上可行，但工程落地挑战大，值得深入研究。我们可以尝试将这种方法应用于 EPS 的特定子系统，例如，电机故障诊断后的降级运行策略，或者线控转向系统在传感器冗余失效后的备用控制策略。利用强化学习的自适应能力来应对电机参数漂移、路面条件变化等不确定性，同时通过时序逻辑规范来确保转向助力、回正力矩等关键性能指标始终满足 ISO 26262 的安全要求。值得中长期投入。短期内，直接在量产产品上应用有很高风险。但作为前瞻性研究，探索如何将这种带有安全约束的强化学习应用于 EPS 的自适应控制、故障容错和线控转向系统，是提升系统智能化和鲁棒性的重要方向。可以先从 MIL/SIL 环境下的仿真验证开始。
-   https://arxiv.org/abs/2609.20954
-
-3. Scaling Physical AI Deployment Beyond the Demo（来源：EE Times）
-   应用分析：非常能用，而且是未来方向。对于线控转向（Steer-by-Wire）系统，我们需要将更多环境感知（视觉、雷达）和驾驶意图（语言指令或高级驾驶辅助系统决策）融入转向控制。这就要求在 EPS 控制器或其协同处理器上实现高效的 AI 推理。例如，利用轻量化神经网络模型进行路感还原的自适应调整，或者在转向手感调校中，通过 AI 模型学习驾驶员偏好并实时调整助力曲线。文章提到的“异构计算”意味着我们需要关注带有 NPU 或 DSP 模块的下一代 MCU，以及如何优化模型部署到这些边缘硬件上，实现毫秒级的实时控制响应。所以，这非常值得我们大力投入，是 EPS 向线控转向和更高级别智能驾驶演进的必经之路。
-   https://www.eetimes.com/scaling-physical-ai-deployment-beyond-the-demo/
-
-4. Infineon’s TLE9744QK PMIC integrates resolver excitation and safety logic for EV inverters（来源：Charged EVs）
-   应用分析：直接可用，且应积极评估。我们的 EPS 系统广泛使用永磁同步电机（PMSM），需要精确的位置反馈。旋变传感器作为一种常用的位置传感器，其激励与信号处理电路是控制器硬件设计的关键部分。这款 PMIC 将激励电路和安全逻辑集成，可以简化 EPS 控制器板级设计，减少外部元件，降低 EMI 风险。更重要的是，其内置的专用安全引擎可以辅助实现 ISO 26262 功能安全要求，比如监测旋变信号完整性、电源轨异常等，减轻 MCU 的负担，提高故障诊断的实时性和可靠性。这对于 C-EPS、P-EPS 等不同架构的 EPS 系统都具有通用价值。所以，极度值得投入。立即进行技术评估和供应商沟通，将其纳入咱们下一代 EPS 控制器硬件平台或线控转向执行器的备选方案。
-   https://chargedevs.com/newswire/infineons-tle9744qk-pmic-integrates-resolver-excitation-and-safety-logic-for-ev-inverters/
-
-5. Tesla audits China suppliers to push Optimus into mass production（来源：CnEVPost）
-   应用分析：间接可用，需关注其供应链和技术趋势。我们应密切关注特斯拉 Optimus 供应链中电机、减速器、驱动器和传感器等核心部件的技术选型和成本结构。人形机器人关节对转矩密度、效率、响应速度和 NVH 有极高要求，这些与 EPS 电机控制面临的问题高度相似。例如，Optimus 可能会采用紧凑型、高功率密度的永磁同步电机，并可能在 FOC 控制、转矩脉动抑制、无传感器控制等方面有独到之处。我们可以从特斯拉的供应链中寻找潜在的创新供应商，或者学习其在电机控制和执行器集成上的工程经验，将其应用于我们的 EPS 电机选型和控制策略优化。这值得持续关注和适度投入情报收集。
-   https://cnevpost.com/2026/09/21/tesla-audits-china-suppliers-optimus-mass-production/
-
-6. Boston Dynamics opens Metaplant Application Center to train Atlas humanoids（来源：The Robot Report）
-   应用分析：高度相关，技术可迁移。我们应重点关注 Atlas 在关节执行器（伺服电机）、高精度力矩控制、多关节协调控制、以及在复杂动态环境下（如行走、搬运）的鲁棒性控制策略。例如，其如何实现高带宽的力矩控制以模拟人手感，如何抑制电机在复杂负载下的振动和噪声，以及如何进行参数自适应。这些经验对于我们优化 EPS 的助力手感调校、转矩脉动抑制、以及为线控转向（Steer-by-Wire）设计高性能执行器都具有直接的指导意义。特别是对于无传感器或冗余传感方案，人形机器人在功耗、成本和可靠性方面的权衡，也能提供宝贵参考。这值得深入研究和学习。
-   https://www.therobotreport.com/boston-dynamics-opens-metaplant-application-center-train-atlas-humanoid-robots/
-
-7. ForeTac-VLA: A Forecasting-Based Tactile-Vision-Language-Action Model for Contact-Rich Robotic Manipulation（来源：arXiv cs.RO）
-   应用分析：具有前瞻性应用潜力，特别是在线控转向领域。在 EPS 的手感调校中，我们可以借鉴其“触觉预测”思想，将路面反馈、轮胎抓地力等信息转化为“预期触觉状态”，并用 AI 模型来预测这些状态，从而更精细地调整助力曲线、阻尼和回正补偿。对于线控转向，这可以帮助系统在复杂路况或即将失控的边缘，提前预测接触力的变化，并主动调整转向响应，提升驾驶员的信心和安全性。此外，结合语言指令，未来可以通过语音指令调整转向模式（如运动模式、舒适模式），实现更智能的人机交互。这值得我们中长期关注和研究，可以从仿真环境中构建类似模型开始，探索自动优化手感调校的可能性。
-   https://arxiv.org/abs/2609.20980</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260922-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260922-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260922-am.mp3" length="3444624" type="audio/mpeg"/>
-      <pubDate>Mon, 21 Sep 2026 22:42:56 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI与智能出行前沿：GPT-6、高通AI芯、自动驾驶世界模型及机器人新进展</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们聚焦人工智能前沿、汽车智能化和机器人三大领域，为您精选了七条重磅资讯。从OpenAI最新旗舰模型的发布，到高通芯片的AI能力跃升，再到自动驾驶世界模型的重大突破和丰田在人形机器人领域的布局，每一条都可能深刻影响我们的研发方向。话不多说，让我们立刻进入今天的早报时间。
@@ -1175,6 +1139,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261007-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261007-pm.mp3" length="2862000" type="audio/mpeg"/>
       <pubDate>Tue, 06 Oct 2026 16:02:46 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾未来：AI芯片、碳化硅与可信赖控制的深度融合</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是您的人工智能主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最值得关注的重磅资讯。从AI自研芯片的颠覆性突破，到汽车功率电子核心器件的材料升级，再到AI在物理世界应用中的安全与合规挑战，每一条都可能深刻影响我们未来的研发方向。话不多说，让我们立刻进入今天的早报时间。
+
+1. OpenTPU：一个由AI自行设计并开源的AI加速器问世（来源：Hacker News）
+   应用分析：能不能用：能用，且潜力巨大。OpenTPU的开源特性和AI设计理念，对我们EPS这种对成本、功耗和实时性有严格要求的嵌入式系统，提供了新的硬件加速思路。怎么用：我们可以研究其架构和设计流程，探索将EPS电机控制中的AI算法，比如神经网络观测器、强化学习控制器等，移植到这类定制化、开源的AI加速器上。通过硬件定制，可以优化特定控制任务的算力与能效比。长远来看，甚至可以尝试利用类似AI辅助设计工具，针对EPS的特定AI计算需求，例如NVH抑制的实时频谱分析、复杂状态估计，设计我们自己的轻量级AI加速模块。值不值得投入：值得早期关注和小范围投入研究。虽然离直接量产应用还有距离，但这是未来AI硬件发展的重要方向。理解并掌握这种趋势，对提升我们线控转向，也就是Steer-by-Wire系统中的AI计算能力、降低成本、提高鲁棒性至关重要。可以考虑在预研项目中投入少量资源进行技术跟踪和概念验证。
+   https://github.com/FeSens/openTPU
+
+2. Axelera AI：在嵌入式系统功耗下实现数据中心级推理性能（来源：EE Times）
+   应用分析：能不能用：能用，且非常值得关注。我们EPS系统对功耗和算力都有严格要求。线控转向未来会集成更多AI功能，例如路况感知、驾驶员意图识别、更精细的助力手感调校等。这种高能效比的AI芯片正是我们所需。怎么用：可以考虑将其作为下一代EPS控制器或线控转向域控制器中AI模块的备选方案。例如，用于实现更复杂的电机控制策略，比如基于深度学习的转矩脉动抑制、实时参数辨识、高级故障诊断与预测性维护算法。其高算力可以支持在本地进行更复杂的传感器数据融合，例如来自方向盘力矩传感器、车速、环境感知等，以实现更智能、更个性化的助力输出。值不值得投入：值得密切跟踪并考虑在下一代产品预研中进行评估和集成测试。这种芯片直接满足了我们在边缘侧部署高性能AI的需求，有助于提升EPS系统的智能化水平和竞争力。
+   https://www.eetimes.com/axelera-ai-data-center-inference-performance-in-the-power-envelope-of-embedded-systems/
+
+3. 可信赖AI：智能本身并不足够（来源：EE Times）
+   应用分析：能不能用：这是指导原则和方法论，必须融入到我们的AI应用开发流程中。怎么用：在我们引入AI改进电机控制策略、故障诊断、自动标定等环节时，必须将“可信赖AI”的理念贯穿始终。这意味着：第一，领域专业知识结合：AI模型的设计和训练必须深度结合EPS系统的物理模型、电机控制原理和功能安全需求，避免AI成为“黑箱”。第二，确定性验证：针对AI模型的输出，需要开发严格的验证方法，包括形式化验证、鲁棒性测试、边界条件分析等，确保在各种工况下都能达到预期的安全和性能要求。比如，在自动标定中，AI输出的参数必须通过传统方法验证其物理合理性和系统稳定性。第三，故障诊断与降级：AI系统必须设计有完善的故障诊断机制，并在检测到异常时，能安全地降级到传统控制或安全状态。值不值得投入：这是必须投入的。对于汽车安全件如EPS，功能安全是生命线。在AI引入初期就建立可信赖AI的开发与验证体系，能避免后期巨大的返工成本和安全风险。可以考虑成立专门的跨部门小组，研究AI在ISO 26262框架下的认证路径。
+   https://www.eetimes.com/trusted-ai-why-intelligence-alone-isnt-enough/
+
+4. Wolfspeed推出高级200毫米N型碳化硅衬底，提升器件良率（来源：Charged EVs）
+   应用分析：能不能用：能用，且是未来EPS功率级发展的重要方向。SiC MOSFETs或IGBTs比传统硅基器件具有更高的开关频率、更低的损耗和更好的热性能，非常适合我们PMSM永磁同步电机控制的功率级。怎么用：我们可以积极评估和导入基于Wolfspeed新一代200毫米SiC衬底制造的功率模块。通过SiC器件，可以实现EPS控制器功率级的小型化、轻量化，提高电机控制的效率，减少发热，从而优化NVH表现和提升系统可靠性。高开关频率还能减少电感、电容的体积，进一步集成。这对于线控转向中对功率密度和快速响应的要求尤为重要。值不值得投入：值得持续投入和深度研究。SiC是电动汽车和高性能电机控制的必然趋势。与上游供应商保持紧密合作，尽早掌握并应用最新SiC技术，能显著提升我们EPS产品的技术领先性和成本竞争力。
+   https://chargedevs.com/newswire/wolfspeed-adds-premium-200-mm-n-type-silicon-carbide-substrate-to-its-materials-line/
+
+5. TDK推出耐温高达135°C的DC-link薄膜电容器（来源：Charged EVs）
+   应用分析：能不能用：能用，且对我们的EPS控制器硬件设计有直接益处。EPS控制器通常安装在发动机舱附近，环境温度较高。怎么用：可以将这款高耐温DC-link电容器直接集成到我们EPS控制器或线控转向功率级设计中。它能提高控制器在高温环境下的可靠性，减少对额外散热措施的依赖，从而可能缩小控制器体积，降低整体成本。在电机控制策略中，稳定的DC-link电压对FOC等算法的性能至关重要，高耐温电容能保证在极端工况下电压纹波的稳定性和滤波效果。值不值得投入：值得投入。这属于关键无源器件的升级，直接影响产品可靠性和设计灵活性。在评估新一代功率级设计时，应优先考虑这类高规格的汽车级组件，这能有效降低系统在极端工况下的故障率，提升产品竞争力。
+   https://chargedevs.com/newswire/tdks-new-dc-link-film-capacitors-are-rated-for-up-to-135-c/
+
+6. Pegasus 1.6：TwelveLabs为物理AI带来视频理解能力（来源：The Robot Report）
+   应用分析：能不能用：间接能用，对线控转向的未来演进方向有指导意义。虽然EPS本身不直接处理视频，但线控转向作为车辆控制的核心执行层，会接收来自感知系统，包括视频理解的指令。怎么用：我们可以关注这种视频理解能力如何转化为高层级的驾驶意图、路况预测或驾驶员状态评估。例如，未来的线控转向系统可能需要根据车辆对前方道路的视频理解，比如识别到湿滑路面、障碍物，结合驾驶员的微小操作意图，提供更智能、更匹配的助力曲线和手感反馈。此外，这种技术也可能用于生产线上的机器人，进行EPS产品的视觉检测和质量控制，提升制造效率和一致性。值不值得投入：值得保持关注，但目前无需直接投入研发。这属于更上层的感知和决策范畴。我们应理解其发展趋势，以便在未来线控转向系统架构设计时，能更好地与这些高级感知能力对接，确保EPS执行层能有效地响应和利用这些智能信息。
+   https://www.therobotreport.com/pegasus-1-6-brings-video-understanding-physical-ai-says-twelvelabs/
+
+7. FCC机器人限制可能加速AI向本地边缘侧转移（来源：The Robot Report）
+   应用分析：能不能用：这是外部环境和趋势，我们必须适应并利用。怎么用：这进一步强化了我们在EPS和线控转向系统中发展本地AI，也就是边缘AI的策略。为了满足未来可能更严格的法规要求，我们需要优先考虑：第一，本地化AI推理：将AI模型部署在EPS控制器或域控制器内部，进行实时推理，减少对云端连接的依赖。第二，数据隐私保护：确保EPS系统收集的敏感数据，例如驾驶员操作习惯、车辆运动状态等，在本地处理，并符合数据隐私法规。第三，功能安全与鲁棒性：边缘AI的部署需要更强的硬件鲁棒性和软件可靠性，以应对复杂的物理环境和潜在的故障。这与我们ISO 26262的功能安全设计理念高度契合。值不值得投入：必须投入。这不仅是技术趋势，更是法规合规性的要求。投入资源研发和部署本地AI解决方案，确保EPS系统在满足功能安全和性能要求的同时，也能符合日益严格的隐私和安全法规，是提升产品竞争力的关键。
+   https://www.therobotreport.com/fcc-robot-restrictions-could-accelerate-shift-to-local-ai/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261007-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261007-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261007-am.mp3" length="2816064" type="audio/mpeg"/>
+      <pubDate>Tue, 06 Oct 2026 22:42:25 +0000</pubDate>
     </item>
   </channel>
 </rss>
