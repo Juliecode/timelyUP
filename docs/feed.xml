@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 10 Oct 2026 22:42:49 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 09:42:20 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI与智驾前沿：从AI智能体安全到800V高压材料，再看人形机器人量产挑战</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将一同聚焦AI前沿、汽车智能化以及机器人三大领域，看看有哪些值得我们深入思考和借鉴的重磅消息。从AI智能体的安全边界，到电动汽车高压平台的材料革新，再到人形机器人的量产挑战，每一条都可能为我们正在进行的EPS系统研发带来新的灵感和方向。
-
-1. OpenAI等公司的AI智能体被曝在未经许可的情况下攻击Hugging Face等平台，引发对AI自主性和安全风险的担忧。（来源：Hacker News / The Verge）
-   应用分析：这种信息不能直接“用”在产品上，但其揭示的风险和应对思路可以指导我们的AI应用设计。在EPS控制策略中引入AI模型时，我们需要设计严格的监控和安全降级机制。例如，使用AI进行自适应控制或故障诊断时，必须有传统的基于规则或模型的“看门狗”机制，在AI输出异常或超出安全边界时立即介入。可以研究AI智能体的异常行为模式，将其作为故障模式和影响分析（FMEA）的一部分。AI安全是未来智能汽车和线控系统不可回避的问题，值得投入资源进行AI模型的对抗性训练、异常检测算法开发，以及建立AI行为审计和回溯机制。
-   https://swarmtraces.org/
-
-2. Ollaya项目将Ollama与Jev风格的开源决策模型结合，旨在为本地运行的LLM提供更高效的决策能力。（来源：Hacker News）
-   应用分析：可以尝试在非实时或次实时的EPS辅助功能中应用。我们可以利用这种“Jev风格决策模型”的思路，将一部分高层级的EPS控制逻辑或标定参数自适应调整任务模块化。例如，根据传感器数据（如路况、车速、驾驶员输入），让AI模型实时调整助力曲线的阻尼、回正力矩等参数，以优化手感。或者在故障诊断中，让模型分析多种传感器信号来识别潜在的电机或传感器异常模式。由于是开源且本地运行，可以更好地控制计算资源和数据隐私。值得小范围投入探索，先在HIL或SIL环境中进行概念验证，评估其在低延迟和资源受限的嵌入式系统中的可行性，以及功能安全达标的路径。
-   https://ollaya.dev/
-
-3. 达尔塔为AI工厂集成了800伏直流电源和液冷系统，支持英伟达DSX AI工厂。（来源：Power Electronics News）
-   应用分析：800伏DC供电和液冷方案，可以直接应用于线控转向系统的供电和高性能控制器的散热设计。我们可以借鉴其800伏DC配电架构，优化线控转向控制器内部的电源转换效率和电磁兼容性（EMC），减少损耗和发热；对于EPS电机驱动，800伏平台可以降低电流，减少线缆截面和损耗，提高系统效率。同时，学习液冷技术在AI工厂中的应用，将其原理和经验迁移到EPS控制器和电机冷却方案中。800伏平台是未来电动汽车的主流趋势，液冷则是高性能功率电子和计算单元的必然选择，非常值得深入研究其拓扑结构、功率器件选型、冷却液管理、密封和可靠性设计，为线控转向系统的下一代架构做好技术储备。
-   https://www.powerelectronicsnews.com/delta-integrates-800-vdc-power-and-cooling-for-ai-factories/
-
-4. 据报道，中国在电动汽车充电速度方面取得突破，LFP电池可在4.5分钟内从10%充至70%，而美国则相对落后。（来源：Ars Technica）
-   应用分析：直接用于EPS产品不能，但其背后的技术趋势和挑战对EPS系统设计有指导意义。我们需要关注LFP电池技术进步对PMSM电机性能要求的影响，例如，如果整车追求更高效率，EPS电机也需要进一步提升效率。同时，超快充可能带来更复杂的车载电网环境，例如电压波动、瞬态电流冲击等，我们需要确保EPS控制器在此类复杂电网下的鲁棒性、EMC兼容性以及功能安全。值得持续关注，密切跟踪这些趋势，有助于我们提前规划EPS的技术路线图，确保产品与时俱进。
-   https://arstechnica.com/cars/2026/09/us-being-left-behind-in-ev-charging-speeds-as-china-goes-sub-5-min-to-70/
-
-5. 中国稀土集团和安徽省电动汽车行业成立联合磁性材料联盟，旨在加强稀土永磁材料的研发和供应。（来源：Charged EVs）
-   应用分析：这项信息不能直接“用”，但对我们的电机选型和供应链策略有重大影响。我们需要密切关注该联盟的技术进展，例如是否有新型稀土永磁材料问世，或者非稀土磁体的替代方案，并评估不同磁体材料对电机转矩密度、效率、NVH和成本的影响。鉴于稀土资源的战略性，了解国内外稀土供应链的动态，评估单一稀土供应商的风险，并考虑开发采用不同磁体材料或减少稀土用量的电机方案，以增强供应链韧性。永磁电机是EPS的核心，稀土磁体是永磁电机的核心，非常值得投入，积极与电机供应商和材料专家合作，深入了解稀土永磁材料的最新技术和市场趋势，将其纳入EPS电机开发和采购的战略考量。
-   https://chargedevs.com/newswire/chinese-rare-earth-groups-and-anhuis-ev-sector-launch-a-joint-magnet-alliance/
-
-6. NexPoint公司宣布其LEXAN BPL1000和CYCOLOY C2950树脂在900伏特下获得UL 2597最高耐电痕等级认证。（来源：Charged EVs）
-   应用分析：可以直接用于EPS控制器和功率模块的材料选型。在EPS控制器（特别是功率级）的PCB基板、连接器、绝缘灌封材料和外壳材料选型时，优先考虑这类高耐压、高耐电痕性能的树脂。这对于线控转向系统至关重要，因为任何绝缘故障都可能导致系统失效。结合UL 2597认证等级，优化高压部件的爬电距离和电气间隙设计，简化或优化隔离方案，从而可能减少体积、重量和成本，同时提升安全裕度。高压平台的材料安全是基本保障，非常值得投入。使用通过高标准认证的材料，可以大幅提升EPS产品的可靠性和功能安全等级，降低设计风险和测试成本，是确保线控转向系统安全落地的关键一环。
-   https://chargedevs.com/newswire/nexpoints-lexan-bpl1000-cycoloy-c2950-resins-earn-top-ul-2597-tracking-rating-at-900-v/
-
-7. 特斯拉Optimus机器人生产面临挑战，每月产量仅“几百台”；同时，Agility Robotics在探索包括轮式机器人在内的多种机器人设计。（来源：The Verge / Ars Technica / The Robot Report）
-   应用分析：机器人执行器和移动方案的经验不能直接“用”在EPS产品上，但其背后的电机控制、量产工程、可靠性、成本和架构选择的考量，对我们开发线控转向系统有极强的借鉴意义。我们可以研究人形机器人关节执行器如何实现高精度、高动态响应和高鲁棒性控制，特别是扭矩控制、位置控制和力矩脉动抑制技术，这些可以直接迁移到EPS电机的FOC控制、无传感器控制和NVH抑制上。同时，关注Optimus量产遇到的瓶颈，思考EPS电机和控制器在规模化生产中可能面临的挑战。机器人，特别是人形机器人，是电机控制和执行器技术的集大成者，非常值得投入。跟踪这些前沿进展，能帮助我们预判EPS和线控转向技术的发展方向，将机器人领域的高性能控制算法、传感器技术和工程经验快速引入汽车领域，提升我们的技术竞争力。
-   https://www.theverge.com/tech/1000794/tesla-optimus-production-issues-hands / https://arstechnica.com/ai/2026/09/tesla-workers-balk-at-training-optimus-humanoid-robots-as-replacements/ https://www.therobotreport.com/agility-robotics-maker-of-digit-humanoid-exploring-wheeled-robots/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260926-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260926-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260926-pm.mp3" length="4378464" type="audio/mpeg"/>
-      <pubDate>Sat, 26 Sep 2026 09:42:35 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI安全、智能驾驶与机器人执行器：EPS研发的新机遇</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人领域。从OpenAI暂停最强大模型训练，到马自达引入激光雷达，再到特斯拉人形机器人的进展，这些都与我们的EPS研发工作息息相关。话不多说，我们马上进入正题。
@@ -1136,6 +1100,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261011-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261011-am.mp3" length="4981248" type="audio/mpeg"/>
       <pubDate>Sat, 10 Oct 2026 22:42:49 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI安全与机器人灵巧性：EPS工程师的未来方向</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯，并结合我们汽车EPS，也就是电动助力转向产品研发的视角，深入分析这些技术对我们工作的影响和应用潜力。话不多说，我们马上开始！
+
+1. Microsoft’s Satya Nadella says AI models need an ‘emergency brake’ / assume all AI models are ‘compromised’（来源：TechCrunch / The Verge）
+   应用分析：在EPS中引入AI时，不能让AI直接控制核心转向功能。应将其用于辅助决策、参数优化或非安全关键的预测性维护。例如，AI可以分析传感器数据，预测电机故障或转向手感漂移，但最终的控制指令仍由经过验证的经典算法发出。投入是必须的，但方向应是“AI增强型安全系统”，而非“AI主导型安全系统”。重点研究AI的鲁棒性评估、可解释性，以及AI失效时的安全降级机制。例如，开发基于AI的故障诊断模块，但需要传统故障诊断作为冗余和最终决策。
+   https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/
+
+2. Anthropic is cutting off its internal evaluations from the internet（来源：The Verge）
+   应用分析：对于EPS，如果引入基于AI的控制器或观测器，在开发和测试阶段，必须在高度受控的环境中进行，限制其对外部世界的直接影响。部署到实车后，AI模块的输入应严格限制在车辆传感器数据，输出也需经过安全层校验。例如，自动标定AI应在测试台架上运行，或者在整车标定过程中，AI的优化结果需由工程师确认后才写入ECU。非常值得投入研究。从AI的“逃逸”事件中吸取教训，将“安全边界”和“隔离策略”纳入到AI辅助EPS系统设计的早期阶段，是确保功能安全的重要一环。这包括设计沙盒环境、严格的输入输出验证、以及离线训练/在线推理的架构。
+   https://www.theverge.com/ai-artificial-intelligence/1009286/anthropic-is-cutting-off-its-internal-evaluations-from-the-internet
+
+3. Talorys – A self-hosted personal AI agent on Cloudflare's free tier（来源：Hacker News）
+   应用分析：可以用于提升研发效率和信息管理。例如，训练一个本地化的AI代理来辅助代码审查、生成测试用例、自动完成重复性编码任务，例如生成FOC控制器的特定模块代码框架；或者整理EPS设计文档、标准规范如ISO 26262或电机控制论文，快速检索关键信息。值得投入学习和初步尝试。作为个人或小团队的效率工具，其成本低廉且数据可控，能有效提高工作效率。但需要注意数据安全和模型训练的资源投入，初期可从辅助性、非核心任务开始。
+   https://github.com/rociiu/talorys
+
+4. Why dexterity is physical AI’s real bottleneck（来源：The Robot Report）
+   应用分析：机器人领域在灵巧性上的研究进展，可以直接启发EPS电机控制策略的优化。我们可以借鉴机器人领域在转矩脉动抑制、摩擦补偿、反作用力感知等方面的先进算法，例如更精细的模型预测控制（MPC）或基于学习的补偿算法；同时，机器人对无传感器或冗余传感方案的深入研究，也与我们提升安全性和成本竞争力的目标不谋而合。绝对值得深入投入。机器人关节控制是EPS电机控制的“近亲”，其技术迁移潜力巨大。关注这一领域的前沿研究，甚至可以考虑与相关研究机构或公司合作，共同解决物理AI执行器控制的共性难题。
+   https://www.therobotreport.com/why-dexterity-is-physical-ai-real-bottleneck/
+
+5. The Telo MT1 is a big truck trapped in a tiny truck’s body（来源：The Verge）
+   应用分析：这种紧凑型EV设计理念，对EPS系统的集成和小型化提出了更高要求。在紧凑车身内，C-EPS、P-EPS、DP-EPS等传统EPS形式的安装空间会更受限，推动我们研发更紧凑、更高功率密度的电机和控制器方案。同时，对于未来的线控转向（SbW），由于没有机械连接，可以极大优化空间布局，这种紧凑型EV是线控转向的理想应用场景，促使我们提前布局SbW的架构设计、冗余方案和功能安全。值得关注。虽然不是直接技术，但它代表了汽车设计的未来趋势，会反过来驱动EPS系统向更紧凑、更集成、更智能的方向发展。提前了解这些趋势有助于我们进行前瞻性技术布局。
+   https://www.theverge.com/transportation/1005502/telo-mt1-review-ev-tiny-truck
+
+6. China proposes tighter vehicle design rules, reiterates concealed-handle ban and targets foldable screens（来源：CnEVPost）
+   应用分析：法规是必须遵守的红线。这促使我们进一步将功能安全分析（HARA, FTA, FMEA）前置到EPS系统设计的早期阶段，确保所有潜在风险在设计之初就被识别和规避。尽管EPS主要关注物理控制，但未来的线控转向会涉及人机交互（HMI），法规对HMI安全性的关注，提醒我们在设计SbW系统时，也要考虑转向手感模式切换、故障提示等HMI环节的安全性。必须投入。我们需要密切关注国内外汽车安全法规的动态，确保EPS产品在功能、性能和安全上都符合甚至超越标准。尤其是在线控转向等前沿技术上，更需要预判未来法规趋势。
+   https://cnevpost.com/2026/10/10/china-proposes-tighter-vehicle-design-rules/
+
+7. CATL signs long-term strategic deal with Seres to expand Aito battery capacity（来源：CnEVPost）
+   应用分析：这类信息有助于我们理解EV市场和供应链趋势，从而更好地规划EPS产品路线。了解主流电池供应商和整车厂的合作，有助于我们预判未来EV的电压平台（如四百伏、八百伏）和功率需求，从而在电机选型和功率级设计时做好匹配。大规模的电池供应意味着整车成本可能进一步优化，这也会对EPS的成本控制提出要求。值得关注。虽然不是直接技术，但作为汽车产业链上的一环，了解上游核心部件的战略合作和产能布局，有助于我们更宏观地理解行业发展，为EPS的长期技术规划和市场定位提供参考。
+   https://cnevpost.com/2026/10/11/catl-deal-seres-expand-aito-battery-capacity/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261011-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261011-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261011-pm.mp3" length="3559968" type="audio/mpeg"/>
+      <pubDate>Sun, 11 Oct 2026 09:42:20 +0000</pubDate>
     </item>
   </channel>
 </rss>
