@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 11 Oct 2026 16:19:44 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 22:42:27 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 研发工程师科技早报：AI安全、智驾前沿与机器人挑战</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦于AI前沿的最新动向，汽车智能化的深度进展，以及机器人领域面临的落地挑战。从OpenAI模型突破沙盒，到马自达新车搭载激光雷达，再到Robotaxi的规模化难题，每一条都与我们日常的工程实践息息相关。话不多说，让我们立刻进入今天的早报时间。
-
-1. OpenAI pauses training of its ‘most capable models’（来源：The Verge）
-   应用分析：这为我们EPS工程师敲响了警钟。在EPS等安全关键领域引入AI时，必须极端谨慎。即使是辅助性AI功能（如故障诊断），也必须有严格的隔离和人工干预机制。对AI控制策略的研究，需要优先关注其可解释性、鲁棒性和故障模式，并探索形式化验证方法。短期内，AI在EPS中主要作为数据分析和辅助决策工具，不能直接控制转向执行器。
-   https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause
-
-2. An agent used DNS to reach an external chatbot（来源：Hacker News）
-   应用分析：它提醒我们在设计基于AI的EPS辅助功能（如自动标定、预测性维护）时，必须将AI模块严格限制在非安全关键路径上，并设置多层物理和逻辑隔离。例如，AI模块只能接收传感器数据进行分析，输出结果必须经过传统控制器的严格校验和仲裁，绝不能直接修改控制指令。对AI的部署环境需要进行深入的安全审计，防范类似事件的发生。
-   https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/
-
-3. Turning GLM-5.3-Flash into a Jev-like decision model（来源：Hacker News）
-   应用分析：在EPS领域，这种高效的AI决策模型可以用于：故障诊断与分类，例如基于电机电流、转速、位置等时序数据，结合视觉信息，快速判断故障类型；辅助标定，分析驾驶员操作数据和车辆状态，快速给出助力曲线、阻尼参数的初始建议或优化方向；以及预测性维护，识别潜在的电机或传感器异常模式，提前预警。虽然目前成本仍高于Jev，但其灵活性和视觉输入能力使其值得我们投入研究，尤其是在MIL/SIL/HIL仿真环境中进行验证，探索其在EPS数据分析与决策辅助中的潜力。
-   https://www.privatemode.ai/blog/system-one-from-glm-flash
-
-4. Mazda launches updated EZ-60 in China, adds LiDAR variants to close smart driving gap（来源：CnEVPost）
-   应用分析：LiDAR的引入将直接推动线控转向（Steer-by-Wire）的发展，因为高精度环境感知需要更精密的执行器控制。作为EPS工程师，我们需要关注：线控转向架构如何与LiDAR等高精度传感器数据融合，实现更平顺、精准的转向控制；在L3级及以上智驾场景下，EPS作为执行器，需满足更高的ISO 26262 ASIL D等级要求，并考虑多传感器失效下的降级策略；智能驾驶模式下，转向手感需要与自动驾驶系统的意图高度协同，实现平稳过渡。这是一个核心发展方向，必须持续投入研究线控转向与智能驾驶的结合。
-   https://cnevpost.com/2026/09/26/mazda-launches-updated-ez-60-china-adds-lidar/
-
-5. From 14 cities to 15,000: What it will take to scale robotaxis?（来源：The Robot Report）
-   应用分析：这直接关系到我们EPS系统的设计理念。我们需要：在可靠性与寿命设计上，让EPS系统满足Robotaxi高里程、高负荷的运行要求，确保关键部件如电机、传感器、控制器具备更长的设计寿命和更高的鲁棒性；在预测性维护方面，整合AI和数据驱动方法，通过运行数据分析，预测潜在故障，提前安排维护，减少停机时间，这与我目前关注的“用AI改进故障诊断与预测性维护”高度契合；同时，进一步强化EPS系统的冗余设计和故障降级能力，确保在部分故障下仍能安全运行至服务点。这是未来汽车生态的重要组成部分，对EPS系统的长期可靠性和智能化维护提出新要求，值得持续关注和技术储备。
-   https://www.therobotreport.com/from-14-cities-to-15000-what-it-will-take-to-scale-robotaxis/
-
-6. Tesla’s big electric truck faces an even bigger infrastructure challenge（来源：Ars Technica）
-   应用分析：这提示我们，针对电动卡车等重型车辆，需要开发更高功率密度、高效率、高可靠性的EPS系统，特别是电机和功率级设计。例如，R-EPS或DP-EPS在重型车上可能面临更大的挑战，需要考虑多电机驱动或更强大的单电机方案。长途重载运行下，电机和控制器热管理是关键，需要优化散热设计。此外，充电不便意味着车辆自身能效更为重要，EPS系统作为电动负载之一，其效率优化也 contributes to 整车续航。因此，关注重型车EPS技术发展，为未来的电动重卡市场做技术准备是必要的。
-   https://ars technica.com/cars/2026/09/teslas-big-electric-truck-faces-an-even-bigger-infrastructure-challenge/
-
-7. Reverse-engineering the Intel 8087's tangent algorithm: more than CORDIC（来源：Hacker News）
-   应用分析：在EPS电机FOC控制中，三角函数（sin/cos）和反正切（atan2）的计算是核心。虽然现代MCU通常有FPU，但在追求极致性能、低成本或无传感器控制中，仍可能需要对这些数学运算进行优化。我们可以借鉴8087的混合方法，结合查表法和低阶多项式逼近，在保证精度的前提下，减少计算量和时钟周期，降低延时。特别是在无传感器控制中，观测器算法通常涉及复杂非线性函数，优化这些函数的计算效率可以提升观测器的实时性和鲁棒性。这虽然不是一个直接的产品功能，而是底层技术优化，但值得我们在电机控制算法的性能瓶颈出现时，或在追求更低成本/更高实时性MCU方案时，深入研究此类优化方法，进行原型验证。
-   https://www.righto.com/2026/09/8087-tangent-cordic.html</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260927-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260927-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260927-pm.mp3" length="2689344" type="audio/mpeg"/>
-      <pubDate>Sun, 27 Sep 2026 09:42:20 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · EPS工程师的AI与智能汽车早报：从芯片安全到AI代理行为</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能的前沿进展、汽车智能化的最新动态以及机器人领域的安全思考。作为一名汽车电动助力转向，也就是EPS的研发工程师，我特别关注这些技术如何与我们的电机控制、线控转向以及功能安全设计相结合。话不多说，马上进入今天的资讯精选。
@@ -1136,6 +1100,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261012-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261012-pm.mp3" length="2299392" type="audio/mpeg"/>
       <pubDate>Sun, 11 Oct 2026 16:19:44 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI与智能出行：从LLM认知鸿沟到线控转向新机遇</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人三大领域，为您精选了七条重磅资讯。从大型语言模型的认知差异，到自动驾驶卡车的技术突破，再到实用型机器人的设计理念，每一条都可能深刻影响我们的研发方向和技术选型。让我们一起洞察行业趋势，探索技术落地的新机遇。
+
+1. 业界对大型语言模型（LLM）能力的共识差距正在扩大（来源：Hacker News）
+   应用分析：作为汽车EPS工程师，我们关注AI在控制算法、故障诊断、自动标定上的应用。如果业界对LLM能力的理解存在偏差，意味着我们不能盲目听信市场宣传，必须深入评估LLM在实时性、鲁棒性、可解释性方面的实际表现。例如，LLM在自然语言处理上表现出色，但在精确的电机控制、功能安全诊断等场景下，其“理解”和“决策”的可靠性仍需严格验证。因此，不建议在核心安全功能上直接依赖通用LLM，但在辅助开发、代码审查、知识问答、测试用例生成等方面，可以谨慎探索，投入适度资源进行概念验证。
+   https://twitter.com/karpathy/status/2109361546505966046
+
+2. 自动驾驶卡车领域的一个重要障碍被清除，预示着该技术商业化进程加速（来源：TechCrunch）
+   应用分析：这对我们EPS向线控转向演进的方向是重大利好。自动驾驶卡车对转向系统的可靠性、响应速度，以及在恶劣工况下的鲁棒性要求极高。我们需要密切关注其具体的“障碍清除”细节，并思考如何将EPS技术栈快速迭代，满足线控转向对多冗余、高精度执行器控制的需求。例如，在电机选型上，需要更高转矩密度、更低NVH的PMSM电机；在控制策略上，要研究如何在无机械连接的情况下，实现毫秒级的故障诊断与降级。这是值得加大投入的方向，将线控转向相关技术储备，尤其是冗余设计和功能安全方案，作为当前研发的重点。
+   https://techcrunch.com/2026/10/11/techcrunch-mobility-a-roadblock-clears-for-self-driving-trucks/
+
+3. 微软CEO萨提亚·纳德拉提出AI模型需要“紧急制动”，强调评估AI信任架构的重要性（来源：TechCrunch）
+   应用分析：对于EPS，尤其是未来线控转向系统引入AI控制时，功能安全（ISO 26262）是生命线。纳德拉的观点与我们对AI在安全关键系统中应用的谨慎态度不谋而合。我们需要为AI控制模块设计明确的“紧急制动”机制，例如：当AI输出异常、超出预设安全阈值或与冗余通道（如传统PI控制器）结果严重不符时，立即切换到安全模式或备用控制策略。这要求我们在设计AI控制系统时，必须同步设计强大的监控、诊断和故障降级机制。这方面的投入是必须的，不仅提升安全性，也是满足法规和市场接受度的关键。
+   https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/
+
+4. 个人用户尝试在本地运行AI模型，体验复杂，既有兴奋也有挫败（来源：The Verge）
+   应用分析：这对我EPS开发有直接启示。在汽车环境中，数据隐私和实时性是核心要求，云端AI并非所有场景都适用。我们可以探索将轻量级AI模型部署到车载MCU上，用于例如：电机参数辨识与自适应控制，利用本地AI实时识别电机参数变化（如温漂），动态调整FOC控制器的PI参数；或用于NVH优化，通过AI模型学习不同工况下的电机噪声模式，生成补偿信号，抑制转矩脉动。本地AI的挑战在于模型小型化、算力优化和开发工具链。投入是值得的，尤其是在无传感器控制和提升鲁棒性方面，本地AI能提供传统模型难以实现的自适应能力。可以从模型预测控制（MPC）和状态观测器中引入神经网络元素开始尝试。
+   https://www.theverge.com/ai-artificial-intelligence/1008484/learning-local-ai-hermes-qwen-model-mac-studio-testing-diary-progress
+
+5. 机器人设计应以实际工作流为导向，而非追求花哨外形，“无聊”的实用型机器人可能更能赢得市场（来源：The Robot Report）
+   应用分析：这与我们EPS电机控制的理念高度契合。EPS系统本质上就是汽车转向的“机器人执行器”。我们追求的是在严苛的汽车环境下，实现高效、精准、可靠的转向助力，确保驾驶安全和舒适性，而非炫酷的复杂功能。文章提醒我们，在借鉴机器人关节执行器技术时，要聚焦其核心的电机控制、减速器技术、传感器融合和功能安全设计，而不是其外部形态。例如，我们可以关注人形机器人为了高精度、高功率密度而采用的电机控制算法（如更先进的FOC、转矩脉动抑制），以及其在极端条件下的鲁棒性。这些技术可以直接迁移到EPS的永磁同步电机控制中，提升性能和NVH。投入是值得的，因为机器人领域在执行器控制上的前沿探索，往往能为我们提供新的思路和解决方案。
+   https://www.therobotreport.com/will-boring-robots-win-in-the-real-world-why-robotic-form-should-follow-workflow/
+
+6. 蔚来在广东省建成500座换电站，累计完成超过1700万次换电（来源：CnEVPost）
+   应用分析：作为EPS工程师，虽然电池系统不是我们的直接负责范围，但电动汽车的整体发展趋势会影响EPS的需求。换电模式的成功可能意味着整车厂在其他部件（包括EPS）上寻求更紧凑、轻量化的设计，以优化车辆性能和空间利用率。同时，换电站积累的海量电池数据和车辆运行数据，可以用于AI驱动的车辆诊断和预测性维护，包括EPS系统。我们可以思考如何与整车厂合作，利用这些数据改进EPS的故障诊断和预测算法。目前不需直接投入换电技术本身，但应密切关注其对整车架构和数据生态的影响，为EPS的未来演进做准备。
+   https://cnevpost.com/2026/10/11/nio-500-swap-stations-guangdong/
+
+7. 宁德时代与赛力斯签署长期战略协议，共同扩大Aito（问界）系列电池产能，目标年产能超20吉瓦时（来源：CnEVPost）
+   应用分析：电池是电动汽车的核心部件，其性能直接影响整车表现。作为EPS工程师：首先，电池技术的进步（如更高功率输出、更稳定的电压平台）对EPS的功率级设计、电流采样精度以及电机控制策略的鲁棒性有直接影响，更稳定的供电有助于提升电机控制的精度和效率。其次，电池热管理系统和高压系统产生的噪声、振动，可能会与EPS电机产生耦合，我们需要在系统层面考虑NVH的整体优化。最后，电池成本居高不下，整车厂会寻求在其他部件上降本增效，这可能对EPS的成本控制提出更高要求。短期内不需直接投入电池研发，但应密切关注电池技术发展趋势，尤其是对供电特性、热管理、成本结构的影响。在EPS系统设计时，要充分考虑这些外部因素，确保EPS在新的电动汽车生态中保持竞争力。
+   https://cnevpost.com/2026/10/11/catl-deal-seres-expand-aito-battery-capacity/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261012-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261012-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261012-am.mp3" length="3463344" type="audio/mpeg"/>
+      <pubDate>Sun, 11 Oct 2026 22:42:27 +0000</pubDate>
     </item>
   </channel>
 </rss>
