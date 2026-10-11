@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 11 Oct 2026 09:42:20 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 16:19:44 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI安全、智能驾驶与机器人执行器：EPS研发的新机遇</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人领域。从OpenAI暂停最强大模型训练，到马自达引入激光雷达，再到特斯拉人形机器人的进展，这些都与我们的EPS研发工作息息相关。话不多说，我们马上进入正题。
-
-1. OpenAI pauses training of its ‘most capable models’（来源：The Verge）
-   应用分析：AI用于EPS的故障诊断、预测性维护或辅助功能（如个性化手感推荐）是可行的。但直接接管核心控制回路风险极高，投入需谨慎。我们必须设计多层安全冗余，让模型输出作为建议，最终执行仍需传统安全机制验证和仲裁，以避免不可控行为对功能安全造成影响。
-   https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause
-
-2. Court rules Pentagon can blacklist Anthropic for refusing to enable Claude features（来源：Ars Technica）
-   应用分析：EPS中AI辅助功能需平衡“能力”与“限制”。过度受限可能无法应对复杂路况，不加限制则有安全隐患。例如，自动标定中AI探索参数，但最终参数需功能安全验证。在AI外部构建强大的安全监控和降级机制，确保系统维持基本功能，这项投入是必要的，以满足ISO 26262标准要求。
-   https://arstechnica.com/tech-policy/2026/09/court-rules-trump-can-blacklist-anthropic-for-refusing-to-enable-claude-features/
-
-3. Astra and Opus just passed Turing’s other test（来源：TechCrunch）
-   应用分析：这为EPS中的AI应用打开了新想象空间。我们可以将这类高级AI应用于：高精度状态观测器，提升无传感器控制的精度和鲁棒性；自适应助力策略，实时调整手感；以及故障预测与健康管理，识别早期故障迹象。投入研究将这些能力转化到EPS的控制、感知和诊断中，将非常有价值，有助于解决电机控制策略的性能与鲁棒性难题。
-   https://techcrunch.com/2026/09/25/astra-and-opus-just-passed-turings-other-test/
-
-4. Mazda launches updated EZ-60 in China, adds LiDAR variants to close smart driving gap（来源：CnEVPost）
-   应用分析：LiDAR引入意味着车辆感知能力大幅提升，对EPS系统提出了更高要求。LiDAR数据可优化自适应巡航、车道保持等转向控制。在线控转向演进中，高精度感知是实现安全冗余的关键。将LiDAR数据融入EPS控制决策链，是未来EPS发展的必经之路，绝对值得投入。这能帮助我们设计更平滑、更精准的转向轨迹跟踪控制算法。
-   https://cnevpost.com/2026/09/26/mazda-launches-updated-ez-60-china-adds-lidar/
-
-5. From 14 cities to 15,000: What it will take to scale robotaxis?（来源：The Robot Report）
-   应用分析：对EPS这类关键执行器，Robotaxi意味着极致可靠性、长寿命、易诊断和维护，以及故障安全降级能力。我们需要深入研究预测性维护，通过AI分析预测EPS部件寿命；开发远程诊断和OTA更新；强化EPS冗余设计。必须投入，以满足Robotaxi最高标准，并提升我们产品的整体竞争力，也为未来线控转向的冗余设计提供参考。
-   https://www.therobotreport.com/from-14-cities-to-15000-what-it-will-take-to-scale-robotaxis/
-
-6. Tesla workers balk at training Optimus humanoid robots as replacements（来源：Ars Technica）
-   应用分析：人形机器人关节执行器和伺服电机控制技术与EPS电机控制高度相关。我们可以深入研究Optimus的电机选型（如高功率密度PMSM）、高级FOC算法、无传感器控制、高精度力矩控制和抖动抑制。这些技术可直接应用于EPS电机，提升转矩密度、效率和NVH。同时，机器人领域的多模态融合和故障诊断策略也值得学习。这绝对值得投入，能帮助我们将前沿研究快速转为EPS工程方案。
-   https://arstechnica.com/ai/2026/09/tesla-workers-balk-at-training-optimus-humanoid-robots-as-replacements/
-
-7. General Robotics is betting on modular intelligence, not one robot brain（来源：The Robot Report）
-   应用分析：这种‘模块化智能’理念与构建复杂系统，如EPS的思路高度契合。EPS不同工况需不同助力策略，功能安全也要求模块化设计。我们可以借鉴此思路，将EPS控制系统分解为更小的、专用的智能模块，如针对不同驾驶模式的助力策略模块，或多AI组成的故障诊断系统。这有助于提高系统可维护性、可扩展性和功能安全，也更吻合ISO 26262标准。投入研究此理念应用于EPS软硬件架构设计，特别是控制算法和故障诊断模块，将非常有益。
-   https://www.therobotreport.com/general-robotics-is-betting-on-modular-intelligence-not-one-robot-brain/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260927-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260927-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260927-am.mp3" length="2058912" type="audio/mpeg"/>
-      <pubDate>Sat, 26 Sep 2026 22:42:24 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 研发工程师科技早报：AI安全、智驾前沿与机器人挑战</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦于AI前沿的最新动向，汽车智能化的深度进展，以及机器人领域面临的落地挑战。从OpenAI模型突破沙盒，到马自达新车搭载激光雷达，再到Robotaxi的规模化难题，每一条都与我们日常的工程实践息息相关。话不多说，让我们立刻进入今天的早报时间。
@@ -1136,6 +1100,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261011-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261011-pm.mp3" length="3559968" type="audio/mpeg"/>
       <pubDate>Sun, 11 Oct 2026 09:42:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI安全需“紧急制动”，线控转向再提速，机器人灵巧操控是瓶颈</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化以及机器人领域，为大家精选了七条重磅资讯，希望能为您的研发工作带来新的灵感和思考。
+
+1. Microsoft’s Satya Nadella says AI models need an ‘emergency brake’（来源：TechCrunch）
+   应用分析：如果我们要将AI引入EPS的助力策略、故障诊断或预测性维护中，例如使用强化学习控制器或神经网络观测器，那么必须设计一套可靠的“紧急制动”机制。这可能包括AI输出的置信度评估、基于规则的安全兜底逻辑，以及在AI模型失效或输出异常时能快速切换到传统控制或安全降级模式。这需要投入研究AI模型的可解释性、鲁棒性验证方法，并将其纳入ISO 26262的危害分析与风险评估(HARA)中。这是AI在车规级应用的前提，值得我们持续投入和深入研究。
+   https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/
+
+2. TechCrunch Mobility: A roadblock clears for self-driving trucks（来源：TechCrunch）
+   应用分析：这条消息提醒我们线控转向的研发必须加速，特别是在冗余架构设计（如双机或多机热备份）、传感器融合以及与整车自动驾驶系统的数据交互和决策接口方面。我们需要关注SbW系统的故障诊断与降级策略，确保在任何情况下都能保持转向能力。同时，自动驾驶对转向手感的要求可能从“驾驶员体验”转向更注重“系统响应性”，这会影响助力策略的调校逻辑。这是EPS的未来，值得我们大量投入进行前瞻性布局。
+   https://techcrunch.com/2026/10/11/techcrunch-mobility-a-roadblock-clears-for-self-driving-trucks/
+
+3. Why dexterity is physical AI’s real bottleneck（来源：The Robot Report）
+   应用分析：这篇文章印证了我们对电机控制策略性能与鲁棒性提升的关注是正确的。我们可以积极从机器人领域借鉴更先进的电机控制算法，例如针对非线性、摩擦、不确定性的自适应控制或模型预测控制。同时，在无传感器控制或冗余传感方案中，如何提升“感知”的灵巧性和可靠性也是关键。这值得持续投入，通过跨领域学习，有望为解决EPS电机控制难题带来新的突破口。
+   https://www.therobotreport.com/why-dexterity-is-physical-ai-real-bottleneck/
+
+4. Learning to use local AI is exciting, overwhelming, and frustrating（来源：The Verge）
+   应用分析：如果我们计划将AI模型（如用于故障诊断、参数辨识或自动标定的神经网络）部署到EPS的嵌入式控制器上，我们需要深入评估其在车规级MCU上的运行效率、内存占用和实时性。本地AI意味着数据隐私得到保障，这在汽车领域至关重要。我们可以从文中提到的“令人沮丧”的经验中吸取教训，例如选择轻量化、易于部署的AI模型，并提前考虑算力、功耗和散热。这是一个值得探索的方向，但需要务实的投入和充分的验证。
+   https://www.theverge.com/ai-artificial-intelligence/1008484/learning-local-ai-hermes-qwen-model-mac-studio-testing-diary-progress
+
+5. Talorys – A self-hosted personal AI agent on Cloudflare's free tier（来源：Hacker News）
+   应用分析：这给了我们启发：是否可以在EPS的开发、测试或售后服务工具链中，构建基于边缘计算的“自托管AI代理”？例如，在诊断仪上运行一个轻量级AI模型，根据实时数据进行初步故障判断或预测性维护建议，而无需依赖云端。这可以提升诊断效率和数据安全性。在EPS标定过程中，也可以探索本地AI辅助标定。这种低成本、本地化的部署方式值得小范围验证和概念验证，以探索其在工程工具链中的潜力。
+   https://github.com/rociiu/talorys
+
+6. Valen's Memory Safety: A New Kind of Borrow Checking（来源：Hacker News）
+   应用分析：尽管Valen的“借用检查”可能是一种特定于新语言或框架的机制，但其背后提升内存安全的理念对我们非常重要。在EPS控制器软件开发中，我们需要持续关注内存管理、指针使用和并发访问的安全问题。可以研究这种新机制的原理，看是否能将其思想或最佳实践融入到我们现有的嵌入式C语言开发规范、代码审查流程或静态分析工具中，以减少内存相关的缺陷。这值得我们在软件开发流程和工具链层面进行研究和评估，以提升软件质量和功能安全。
+   https://verdagon.dev/blog/valen-group-borrowing
+
+7. China proposes tighter vehicle design rules, reiterates concealed-handle ban and targets foldable screens（来源：CnEVPost）
+   应用分析：虽然EPS本身没有隐藏式门把手，但这条法规提示我们，在设计EPS系统与整车其他电子电气部件的交互时，要充分考虑法规要求和潜在的用户安全风险。例如，线控转向系统需要确保在极端情况下（如碰撞或断电）仍能提供基本的转向能力，并且其操作逻辑要符合直觉和安全规范。这促使我们在系统架构设计和功能安全分析时，更全面地考虑整车层面的法规符合性和用户体验影响。持续关注行业法规动态，并将其纳入EPS系统的需求分析和风险评估中，非常重要。
+   https://cnevpost.com/2026/10/10/china-proposes-tighter-vehicle-design-rules/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261012-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261012-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261012-pm.mp3" length="2299392" type="audio/mpeg"/>
+      <pubDate>Sun, 11 Oct 2026 16:19:44 +0000</pubDate>
     </item>
   </channel>
 </rss>
