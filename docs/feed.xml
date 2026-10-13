@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 11 Oct 2026 22:42:27 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 16:21:15 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · EPS工程师的AI与智能汽车早报：从芯片安全到AI代理行为</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能的前沿进展、汽车智能化的最新动态以及机器人领域的安全思考。作为一名汽车电动助力转向，也就是EPS的研发工程师，我特别关注这些技术如何与我们的电机控制、线控转向以及功能安全设计相结合。话不多说，马上进入今天的资讯精选。
-
-1. Full-Stack Semiconductor Solutions for Smart, Secure Industry and Digital Energy（来源：EE Times）
-   应用分析：能不能用：非常能用，这类MCU是EPS控制器硬件平台的潜在候选。怎么用：在下一代EPS控制器设计中，可以评估N32系列MCU的性能（如600兆赫兹频率、ADC采样率和精度）、外设集成度（CAN-FD、EtherCAT接口对线控转向架构的兼容性）、以及功能安全特性（TPM 2.0用于安全启动和固件认证）。特别是其宽温和EFT抗扰能力，对汽车级应用环境非常重要。值不值得投入：值得深入研究和评估。选择合适的MCU是EPS系统性能、成本和功能安全的关键。如果其性能和安全特性满足ISO 26262 ASIL D等级要求，并能提供有竞争力的成本，将是值得投入资源进行原型开发和测试的。
-   https://www.eetimes.com/full-stack-semiconductor-solutions-for-industry-and-digital-energy-applications/
-
-2. TechCrunch Mobility: AV companies pick their lanes（来源：TechCrunch）
-   应用分析：能不能用：这是宏观趋势，不能直接“用”，但必须密切关注，作为我们EPS产品路线图规划的重要输入。怎么用：需要持续跟踪主流AV公司（如Waymo、Cruise、百度Apollo等）的技术路线和商业模式。特别是它们对线控转向系统冗余、功能安全、以及与AI决策层接口的具体要求。例如，如果未来AV系统更强调AI的端到端控制，我们EPS可能需要提供更灵活的扭矩/角度指令接口，并具备更强的故障自诊断和降级能力。值不值得投入：值得持续投入资源进行行业分析和技术预研。理解AV公司的“选道”能帮助我们提前布局线控转向技术，确保我们的EPS产品能无缝集成到未来的智能驾驶生态中。
-   https://techcrunch.com/2026/09/27/techcrunch-mobility-av-companies-pick-their-lanes/
-
-3. Asimov’s laws are not enough to keep robotics and AI safe（来源：The Robot Report）
-   应用分析：能不能用：这是安全理念的警示，不能直接“用”，但必须作为AI引入EPS控制系统的设计原则。怎么用：在探索AI用于改进EPS控制策略、自动标定或故障诊断时，必须将AI模型的可解释性、鲁棒性、故障模式分析以及降级策略作为核心设计环节。例如，如果使用神经网络进行电机参数辨识或转矩脉动抑制，需要对其在各种工况下的性能边界、异常输入响应进行严格验证，并设计传统的安全监控层作为冗余，确保AI失效时系统仍能安全运行。值不值得投入：值得投入大量资源进行AI安全研究和验证方法论的建立。这不仅是技术问题，更是工程伦理和社会责任问题。在EPS这类安全关键产品中，AI的安全性是其能否落地的决定性因素。
-   https://www.therobotreport.com/asimovs-laws-are-not-enough-keep-robotics-ai-safe/
-
-4. Ember-1（来源：Hacker News）
-   应用分析：能不能用：尚不确定，需要进一步了解Ember-1的具体特性和应用领域。怎么用：尽快查阅Fireworks AI官方博客和技术文档，了解Ember-1的架构、性能指标（如模型大小、推理速度、能耗）、以及它擅长解决的问题。如果它在处理序列数据、预测控制或优化方面有优势，并且对计算资源要求不高，可以尝试将其用于EPS的非线性控制策略优化、电机状态观测器改进、或者故障诊断模型的部署。值不值得投入：初期值得投入少量时间进行调研和概念验证。如果Ember-1能显著提升现有AI方案的性能或降低部署成本，那么投入更多资源进行深入研究和集成是值得的。
-   https://fireworks.ai/blog/ember-1
-
-5. Elektrotrucker sets off to circumnavigate the globe in a Mercedes eActros 600 electric truck（来源：Charged EVs）
-   应用分析：能不能用：这是实车测试案例，不能直接“用”，但其反馈数据和经验教训对我们的电机选型、控制策略鲁棒性设计非常有参考价值。怎么用：密切关注这位“电动卡车司机”的旅程更新和技术博客（如果有），特别是关于车辆性能、故障、充电基础设施、以及在不同气候和路况下的表现。我们可以从中学习到EPS在严苛工况下可能遇到的问题，如电机控制在极端温度下的性能漂移、传感器可靠性、以及系统在长时间运行后的耐久性表现，从而在设计和测试阶段针对性地进行优化。值不值得投入：值得投入少量精力关注其进展和官方发布的数据。这些真实世界的极端测试数据比实验室数据更能反映实际挑战，有助于提升我们的产品鲁棒性。
-   https://chargedevs.com/newswire/elektrotrucker-sets-off-to-circumnavigate-the-globe-in-a-mercedes-eactros-600-electric-truck/
-
-6. OpenAI agents tried to ‘bruteforce’ a UN website（来源：The Verge）
-   应用分析：能不能用：这是关于AI代理行为的警示，不能直接“用”，但对设计AI辅助的工程工具和控制系统具有指导意义。怎么用：如果我们考虑使用AI代理进行自动标定或系统优化，必须对其行为范围进行严格限定和持续监控。例如，在自动标定中，AI代理只能在预设的安全参数范围内调整控制参数，并对每一次调整进行记录和验证。同时，需要建立完善的“人工在环”机制，确保关键决策仍由工程师审核。这促使我们思考如何设计安全的AI沙箱环境和权限管理。值不值得投入：值得投入资源研究AI代理的安全边界、行为审计和异常检测技术。在EPS这类安全关键领域，任何引入AI的自动化都必须将潜在的意外行为纳入风险评估和缓解策略中。
-   https://www.theverge.com/ai-artificial-intelligence/1001178/openai-agents-bruteforce-un-website
-
-7. Imp is a full port of DSPy to the BEAM（来源：Hacker News）
-   应用分析：能不能用：间接能用，作为我们探索LLM在工程领域应用时的潜在工具。怎么用：我们可以研究DSPy结合BEAM的特性，评估其在以下方面的潜力：1. 辅助开发：利用LLM生成嵌入式C代码片段、测试用例或文档，加速开发流程。2. 故障诊断知识库：构建基于LLM的系统，分析EPS故障代码、传感器数据和维修记录，提供更智能的故障诊断建议。3. 自动标定策略优化：结合领域知识和LLM的推理能力，辅助设计更高效的标定策略或参数调整规则。由于BEAM的实时性和并发性，可能适合在HIL或SIL环境中进行快速原型验证。值不值得投入：值得投入少量时间了解DSPy和Imp，并进行概念性探索。如果能在辅助开发、知识管理或智能诊断方面找到突破口，将有助于提升我们的研发效率和产品智能化水平。
-   https://github.com/deepfates/imp</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20260928-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20260928-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20260928-am.mp3" length="4336992" type="audio/mpeg"/>
-      <pubDate>Sun, 27 Sep 2026 22:42:38 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 智能转向新纪元：AI、机器人与汽车未来的深度融合</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热门领域，为您精选七条重磅资讯。从AI如何赋能自主系统，到可解释AI在安全领域的应用，再到智能驾驶的轨迹规划，以及机器人模仿学习和数据驱动的状态估计，每一条都将深度剖析其对我们汽车EPS产品研发的潜在影响和实际应用价值。准备好了吗？让我们一起开启今天的科技探索之旅！
@@ -1136,6 +1100,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261012-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261012-am.mp3" length="3463344" type="audio/mpeg"/>
       <pubDate>Sun, 11 Oct 2026 22:42:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技早报：AI赋能线控转向，SiC与高温电容革新EPS控制器</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化以及机器人三大领域，从海量资讯中精选出7条最值得关注的重磅消息。从AI如何改进我们的控制策略，到线控转向的关键技术突破，再到电动助力转向（EPS）系统中的功率器件革新，每一条都与我们的工作息息相关。话不多说，让我们立刻开始今天的早报速览！
+
+1. EliteTable: Self-Improving Program Search for Executable Control Policies（来源：arXiv cs.AI）
+   应用分析：在EPS电机控制策略开发中，我们可以借鉴EliteTable的思路，利用LLM辅助生成和优化FOC矢量控制、无传感器控制、弱磁控制、转矩脉动抑制等算法代码。例如，针对电机NVH或转矩脉动抑制这类非线性、多变量、调优复杂的难题，传统基于模型的标定和人工经验迭代耗时耗力。通过LLM辅助生成候选策略，并在MIL/SIL/HIL等仿真环境中进行自动评估和迭代改进，可以大幅加速优化过程。这绝对是值得投入的方向，可以先在仿真层面进行概念验证，探索其在特定控制难题上的潜力。
+   https://arxiv.org/abs/2610.12536
+
+2. VEPA: Verified Evolving Formal Policy for Lifelong LLM Agent Guardrails（来源：arXiv cs.AI）
+   应用分析：在线控转向系统的功能安全设计中，特别是当AI算法被用于故障诊断、降级模式选择，或者自动标定等环节时，其决策逻辑必须严格且可追溯。我们可以借鉴VEPA框架，为AI辅助决策部分设计形式化的安全策略，例如，定义在何种异常情况下AI可以触发降级，或者何时需要人工干预。这些策略需要像ISO 26262标准要求那样，能够被验证、被测试，并且在系统运行中能够根据新发现的风险进行受控的演化。这不仅值得投入，更是AI在安全关键汽车系统落地的基石性工作。
+   https://arxiv.org/abs/2610.12813
+
+3. Launch HN: Consus (YC F24) – LLM gateway for companies handling sensitive data（来源：Hacker News）
+   应用分析：在EPS产品研发流程中，从系统架构设计到电机控制策略优化，再到故障诊断与预测性维护，LLM都有巨大的应用潜力。例如，LLM可以辅助进行需求分析、生成设计文档、智能检索海量技术资料、辅助代码审查，甚至基于历史故障数据生成诊断报告。但前提是，这些AI工具必须保证我们本地私有数据的安全性和隐私性。采用Consus这类安全LLM网关，可以确保敏感数据不离开受控环境，同时又能利用外部先进AI模型的能力。这非常值得投入，是我们在确保符合ISO 26262等功能安全规范和公司数据保护政策的前提下，提升研发效率的关键一步。
+   https://news.ycombinator.com/item?id=50073471
+
+4. Wolfspeed gets conditional commitment for up to $1.5 billion US Department of War loan（来源：Charged EVs）
+   应用分析：EPS的电机控制器功率级，正逐步从传统的硅基IGBT或MOSFET转向SiC MOSFET。SiC器件具有高效率、高功率密度、高耐温性和更小的尺寸等优势，有助于减小控制器体积、减轻重量，并简化散热设计，从而降低系统成本并提升可靠性。Wolfspeed的这一巨额投资将加速SiC器件在汽车行业的普及，尤其是在对功率密度和效率要求更高的高性能R-EPS和未来的线控转向系统中。我们应持续关注SiC器件的最新技术进展和市场动态，将其作为下一代EPS控制器功率级设计的首选方案，并进行充分的技术评估和验证。这不仅值得投入，更是提升EPS产品竞争力的必经之路。
+   https://chargedevs.com/newswire/wolfspeed-gets-conditional-commitment-for-up-to-1-5-billion-us-department-of-war-loan/
+
+5. Toray tests a prototype film capacitor in an inverter at 150° C（来源：Charged EVs）
+   应用分析：EPS电机控制器中的逆变器部分，通常是系统中的主要热源之一，对电容器的耐温性要求很高。目前，为了确保电容器在工作温度范围内可靠运行，往往需要复杂的液冷或风冷散热方案。如果能将这种可在150°C下工作的薄膜电容器商业化并应用于EPS控制器，我们可以大幅简化甚至取消部分散热结构，从而减小控制器体积，减轻重量，降低整体成本，并提升在严苛工况下的可靠性。这对于空间受限的C-EPS和P-EPS，以及追求极致性能的R-EPS和线控转向系统都具有巨大价值。我们应该密切关注这类高性能无源器件的商业化进程，并在下一代产品开发中积极评估其应用潜力。投入验证是值得的。
+   https://chargedevs.com/newswire/toray-tests-a-prototype-film-capacitor-in-an-inverter-at-150-c/
+
+6. Einride’s driverless, cabless electric trucks are moving freight on Ohio roads（来源：Charged EVs）
+   应用分析：作为EPS研发工程师，我们正致力于向线控转向（Steer-by-Wire）系统演进。Einride的无人驾驶卡车为我们提供了绝佳的参考，可以深入研究其线控转向系统的架构设计、多重冗余方案、功能安全实现、以及与整车其他控制系统（如动力、制动）的集成方式。这包括如何处理转向执行器的故障、如何确保在无驾驶员情况下系统的绝对可靠性。我们可以追踪其技术报告和安全案例，学习其在极端工况下的鲁棒性表现。这不仅值得投入精力去研究，更是我们定义未来线控转向产品技术路线图和验证方案的重要依据。
+   https://chargedevs.com/newswire/einrides-driverless-cabless-electric-trucks-are-moving-freight-on-ohio-roads/
+
+7. EvoBelief: Falsifiable World Models for Self-Improving LLM Agents（来源：arXiv cs.AI）
+   应用分析：在EPS中，电机参数（如电阻、电感、永磁体磁链）会随温度、老化等因素漂移，影响FOC控制性能；路面状况、轮胎磨损、甚至驾驶员手感偏好也会动态变化。EvoBelief的自演化世界模型可以应用于：1) 实时辨识电机参数并自适应更新FOC等控制策略，以补偿温漂和老化效应；2) 通过学习驾驶员的转向输入和反馈，动态调整助力曲线、阻尼和回正补偿，实现更个性化和适应性的手感调校；3) 基于EPS运行数据，形成关于潜在故障（如传感器异常、电机磨损）的诊断假设，并通过系统自检或特定工况验证，提升预测性维护的准确性。这是一个前沿但潜力巨大的方向，可从结合模型预测控制（MPC）和自适应参数辨识入手进行探索，逐步将其转变为可落地的工程方案。值得投入，以提升EPS系统的智能性、鲁棒性和用户体验。
+   https://arxiv.org/abs/2610.12789</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261014-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261014-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261014-pm.mp3" length="3461328" type="audio/mpeg"/>
+      <pubDate>Tue, 13 Oct 2026 16:21:15 +0000</pubDate>
     </item>
   </channel>
 </rss>
