@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 17 Oct 2026 22:41:52 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 09:41:59 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾新篇章：AI自进化、安全控制与机器人协同设计</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选了7条最有价值的资讯。从AI代理的自我进化，到安全强化学习在控制系统中的应用，再到电动汽车电池的智能健康管理，以及机器人形态与控制的协同设计，每一条都可能为您的研发工作带来新的启发。话不多说，让我们立刻进入今天的早报时间。
-
-1. 新研究AREX-2显著提升了LLM代理在长时间任务中通过迭代反思自我改进的能力。（来源：arXiv cs.AI）
-   应用分析：作为一名EPS研发工程师，我认为这项技术很有潜力。我们可以尝试构建一个EPS控制策略的自我改进代理，让它在HIL或台架测试中，根据如转矩脉动、NVH等性能指标进行自我评估和反思，然后迭代调整FOC参数或助力曲线。这种数据驱动的自我优化，能大幅缩短我们的标定和优化周期，减少对人工经验的依赖，非常值得我们投入研究和实践。
-   https://arxiv.org/abs/2609.38288
-
-2. 一种新的框架让AI代理能够作为自身的优化器，在多任务环境中自主改进其运行代码和“线束”。（来源：arXiv cs.AI）
-   应用分析：在我们的EPS软件开发和维护中，Harness可以理解为控制算法的封装、工具链的调用、测试脚本的生成等。如果能引入这种自进化代理，它就能根据新的需求或故障报告，自主修改和优化EPS控制器的嵌入式C代码生成逻辑，甚至调整Simulink模型参数，并自动进行验证。这会极大地加速我们的软件开发和功能安全验证流程，提升产品迭代速度和质量，绝对是值得深入探索的方向。
-   https://arxiv.org/abs/2609.38372
-
-3. 新的强化学习框架通过在策略类中嵌入前向不变性，并结合Lyapunov证书，实现了多旋翼飞行器控制中的固有安全性。（来源：arXiv eess.SY 控制系统）
-   应用分析：对于EPS系统，尤其是在向线控转向（Steer-by-Wire）演进时，功能安全是核心。我们可以将EPS电机控制视为一个动态系统，利用此框架，我们可以设计一个基于强化学习的EPS助力策略或电机控制参数自适应模块。通过定义EPS系统的安全工作区域（例如，最大转矩、电流限制、温度阈值），将前向不变性和Lyapunov证书作为约束嵌入到RL策略的训练中。这样，无论RL代理如何探索，它生成的控制动作都能保证系统不会超出安全边界，从而避免过热、过流或失控等故障。这种将安全保障内嵌到AI控制中的方法，是我们实现高可靠性、高功能安全等级EPS系统的必由之路，必须高度重视。
-   https://arxiv.org/abs/2609.38655
-
-4. 一种新方法利用B-spline曲面和正则化技术，为自动驾驶车辆在不确定环境中移动障碍物的轨迹规划提供基于概率的碰撞风险评估。（来源：arXiv eess.SY 控制系统）
-   应用分析：尽管EPS主要负责转向执行，但其控制策略的设定需要紧密配合上层自动驾驶系统的轨迹规划。特别是在线控转向架构下，EPS直接接收高层控制指令。我们可以借鉴这种碰撞风险评估方法，为EPS提供更丰富的环境信息。例如，当自动驾驶系统规划出一条带有一定碰撞概率的轨迹时，EPS可以根据这个风险信息，预留更大的安全裕度，或者在感知到潜在风险时，通过调整助力输出，微调车辆的转向响应，以辅助规避风险。这有助于我们深入理解和集成自动驾驶决策，提升线控转向系统的整体安全性。
-   https://arxiv.org/abs/2609.38534
-
-5. Qnovo公司正在试点一项名为“电池基因组”的应用，用于评估电动汽车电池的健康状况和价值，以满足欧盟电池护照要求。（来源：Charged EVs）
-   应用分析：虽然与EPS电机控制本身不直接相关，但这项技术思路——即通过数据驱动方法对关键部件进行“基因组”级别的健康评估和预测性维护——与我提升EPS系统可靠性的长期目标高度一致。我们可以借鉴其理念，为EPS系统开发类似的“电机基因组”或“控制器基因组”应用。通过收集电机（PMSM）运行数据（电流、电压、温度、振动、转速等），利用AI模型分析其健康状况、预测寿命，并诊断潜在故障。这能帮助我们实现更精准的预测性维护，降低召回风险，值得我们初步探索。
-   https://chargedevs.com/newswire/qnovo-pilots-battery-genome-application-to-assess-ev-batteries-for-eu-battery-passports/
-
-6. Draft工具通过参数化生成，实现了机器人形态与控制器的协同设计探索，并结合真实硬件数据进行验证。（来源：arXiv cs.RO）
-   应用分析：EPS系统中的电机选型、结构设计与电机控制策略、助力手感之间存在紧密耦合。Draft的理念完美契合我“电机选型”和“快速转成可落地工程方案”的需求。我们可以借鉴Draft的参数化协同设计思路，开发一个EPS的“形态-控制协同设计平台”。例如，输入不同的PMSM电机参数或机械结构参数，系统能自动生成对应的仿真模型，并快速评估不同FOC控制策略和助力手感调校下的性能。这样可以大幅减少物理样机制作和台架测试的次数，加速迭代。这项技术思路对我们意义重大，非常值得深入研究和应用。
-   https://arxiv.org/abs/2609.38405
-
-7. BIND提出了一种新的视觉运动机器人动作表示方法，将三维机器人动作绑定到二维图像特征，显著提升了数据效率和对物体位置、相机视角的鲁棒性。（来源：arXiv cs.RO）
-   应用分析：虽然EPS本身不是视觉运动系统，但线控转向或未来的高级自动驾驶功能会高度依赖视觉感知。我们可以借鉴BIND的“特征绑定”思想，将车辆感知到的路况、障碍物等视觉特征，与EPS需要执行的转向动作进行更紧密的关联学习。例如，在自动泊车或低速辅助驾驶中，通过绑定车位线、障碍物边界等视觉特征与EPS的精准转向控制，可以减少对大量特定场景数据的依赖，提高在复杂环境下的转向精度和鲁棒性。这项技术为我们融合多模态感知与EPS精准控制提供了新的思路，值得中长期关注和探索。
-   https://arxiv.org/abs/2609.38443</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261002-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261002-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261002-am.mp3" length="2618208" type="audio/mpeg"/>
-      <pubDate>Thu, 01 Oct 2026 22:42:51 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI、汽车智能化与机器人前沿技术早报</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能的前沿突破、汽车智能化的最新进展，以及机器人领域的创新应用。从强化学习优化控制，到无数据物理信息神经网络，再到汽车系统验证新范式，这些资讯都将为我们带来新的思考和启发。希望今天的早报能帮助您在忙碌的工作中，捕捉到最前沿的技术脉动。
@@ -1136,6 +1100,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261018-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261018-am.mp3" length="3110832" type="audio/mpeg"/>
       <pubDate>Sat, 17 Oct 2026 22:41:52 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 智驾AI动向：DeepSeek新模型、AI代码审查与VFD电机控制新思路</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门领域，为您精选了七条重磅资讯。从DeepSeek最新AI模型的发布，到AI代码审查的创新工具，再到高性能电动车的最新动态，以及电机控制效率的深层思考，希望能给您的研发工作带来新的启发。
+
+1. DeepSeek-v4.1-Flash-1017（来源：Hacker News）
+   应用分析：可以用于辅助代码生成、文档总结、需求分析，甚至初步的控制策略代码片段生成。例如，让它分析现有FOC控制器的C代码，提出优化建议，或者根据Simulink模型自动生成部分说明文档。作为工程师，利用这类模型提升日常研发效率，如快速原型验证、查找规范，是值得小范围投入尝试的。
+   https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017
+
+2. Show HN: Sphinx – A hook that quizzes you on your AI's code before shipping（来源：Hacker News）
+   应用分析：完全可以借鉴甚至直接引入。我们可以将AI生成的控制算法（例如，强化学习得到的策略代码）集成到EPS控制器中之前，使用类似Sphinx的机制来问答审查。例如，系统可以询问：“这段弱磁控制代码在何种工况下可能失效？”或者“这个转矩脉动抑制的阈值是如何确定的？”在ISO 26262功能安全体系下，AI生成代码的验证和理解是巨大挑战，这种工具能有效补充现有代码审查流程，非常值得投入。
+   https://sphinx-six-theta.vercel.app/
+
+3. ADI explains the race to make AI physical（来源：The Robot Report）
+   应用分析：这不是一个具体工具，而是战略方向指引。我们可以参考ADI白皮书中的观点，思考如何在EPS系统设计中更好地融合AI。例如，在电机控制策略中引入AI进行自适应参数辨识、故障诊断、或者优化NVH性能。将AI模型部署到MCU上，需要考虑算力、内存、实时性、以及模型的可解释性。这是未来EPS乃至线控转向演进的关键方向，必须投入研究。
+   https://www.therobotreport.com/adi-explains-the-race-to-make-ai-physical/
+
+4. Mercedes-AMG’s first ground-up SUV is a 1,150hp electric beast（来源：The Verge）
+   应用分析：这不是一个直接可用的技术，而是市场和技术趋势的信号。我们需要关注高性能电动车对EPS的性能要求：例如，更大的助力扭矩范围、更精准的路感反馈、更快的响应速度。对于线控转向，这种高性能车型会是率先应用和验证的平台，其冗余架构和功能安全设计对我们有重要参考价值。因此，必须持续关注，为未来的高性能、线控转向汽车做技术储备。
+   https://www.theverge.com/transportation/1013088/mercedes-amg-gt-suv-price-specs-performance
+
+5. VW updates ID. UNYX 06 and 07 in China with LiDAR, lower entry prices（来源：CnEVPost）
+   应用分析：LiDAR的普及意味着EPS系统需要更好地与ADAS/AD域控制器协同工作，接收更精细的路径规划指令，并提供更精准的转向执行。同时，成本的下降也促使我们思考如何在保证性能和安全的前提下，优化EPS系统的成本。我们必须投入，深入研究线控转向与L3/L4级自动驾驶的接口标准、冗余设计，以及故障诊断与降级策略，同时探索无传感器或冗余传感方案的创新，以平衡性能、安全与成本。
+   https://cnevpost.com/2026/10/17/vw-updates-id-unyx-06-07-china/
+
+6. This Hidden Device Could Free Up Gigawatts of Grid Power（来源：IEEE Spectrum）
+   应用分析：VFD的原理和FOC控制策略与EPS电机控制高度一致。我们可以借鉴工业VFD在效率优化、谐波抑制、以及鲁棒性方面的经验，将其应用于EPS电机的FOC控制策略优化。例如，研究更先进的无传感器控制算法、参数自适应算法，以应对电机参数变化和温漂，进一步提升EPS电机的效率和NVH性能。EPS电机效率直接影响整车能耗，因此非常值得投入研究。
+   https://spectrum.ieee.org/variable-frequency-drives
+
+7. Show HN: Esp32sim – Run ESP32 firmware in the browser（来源：Hacker News）
+   应用分析：虽然EPS的MCU通常是汽车级芯片，不能直接使用ESP32sim，但其“浏览器内仿真”的理念非常值得我们思考。我们可以探索开发或引入类似的Web-based仿真环境，用于EPS控制器的部分模块（如通信协议栈、非功能安全相关的诊断逻辑）的快速原型验证和单元测试。这能减少对昂贵HIL设备的依赖，尤其是在早期开发阶段。提升MIL/SIL的效率是我们一直追求的目标，因此值得投入研究和借鉴。
+   https://github.com/mikroverk/esp32sim</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261018-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261018-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261018-pm.mp3" length="2764944" type="audio/mpeg"/>
+      <pubDate>Sun, 18 Oct 2026 09:41:59 +0000</pubDate>
     </item>
   </channel>
 </rss>
