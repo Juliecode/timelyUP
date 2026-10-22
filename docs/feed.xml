@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 22 Oct 2026 09:43:11 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 22:43:05 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 智驾之锚：AI与功率电子如何重塑EPS未来</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报，我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最具分量、最有信息量的资讯。我们将深入分析这些技术如何影响我们的EPS产品研发，探讨它们的应用潜力、落地难度以及投入价值。今天的话题特别丰富，从最新AI大模型到汽车功率电子新突破，再到软件可靠性血淋淋的教训，相信能给在座的各位带来不少启发。那么，话不多说，让我们立刻进入今天的早报时间。
-
-1. Mistral Large 4: "Le Chonk"（来源：Hacker News）
-   应用分析：直接用于EPS实时控制目前不现实，但其强大的理解和生成能力可用于离线场景。我们可以利用其代码生成和逻辑推理能力，辅助设计与优化FOC、MPC等复杂控制算法的伪代码或Simulink模型草案，甚至进行初步的参数寻优。此外，通过分析EPS系统运行数据，结合历史故障模式，大型模型有望提升故障诊断和预测性维护的效率。我认为值得关注和投入研究，可以从小规模实验开始，例如用其进行代码重构建议、文档生成，逐步探索控制策略辅助设计。
-   https://mistral.ai/news/mistral-large-4/
-
-2. 6 Guidelines for Governing AI（来源：IEEE Spectrum）
-   应用分析：这些是指导原则，不能直接“用”在代码中，但必须作为AI应用开发的基础。在设计AI辅助的助力控制、无传感器控制或故障诊断算法时，需将AI治理原则融入ISO 26262的流程中，例如对AI模型进行可解释性分析、鲁棒性测试，确保在各种工况和故障模式下都能安全降级。此外，数据管理与隐私也需严格遵循。建立严格的AI模型验证与确认流程，确保其决策逻辑透明、可追溯，并满足功能安全完整性等级（ASIL）要求。这是在EPS中安全落地AI的基石，必须投入。
-   https://spectrum.ieee.org/6-guidelines-governing-ai
-
-3. FCC robot restrictions could accelerate shift to local AI（来源：The Robot Report）
-   应用分析：这是技术趋势和设计理念。我们可以考虑在下一代EPS控制器中集成更高算力的MCU或专用AI芯片，用于运行轻量级AI模型，实现无传感器控制中的状态观测、电机参数自适应辨识，或更高级的助力手感自适应调校。在线控转向架构中，关键AI决策应具备本地冗余计算能力，以应对通信延迟或云端故障，确保功能安全。同时，积极研究AI模型剪枝、量化等技术，使复杂控制模型能在有限的EPS控制器资源上高效运行。必须高度关注并投入，本地AI是提升EPS系统性能、鲁棒性、安全性和成本竞争力的关键方向。
-   https://www.therobotreport.com/fcc-robot-restrictions-could-accelerate-shift-to-local-ai/
-
-4. TDK’s new DC-link film capacitors are rated for up to 135° C（来源：Charged EVs）
-   应用分析：这类高耐温电容可以直接用于EPS功率级设计。利用其高温特性，我们可以优化功率级布局与散热，减少对主动散热的依赖，或者在相同散热条件下实现更高的功率密度。在极端工况或长期运行中，高耐温电容能有效降低故障率，提升EPS系统的寿命和可靠性。对于线控转向的执行器，这类高耐温组件能提供更大的设计灵活性。值得密切关注并评估，在选择EPS功率级组件时，应优先考虑这类高性能、高可靠性的产品，以提升EPS整体竞争力。
-   https://chargedevs.com/newswire/tdks-new-dc-link-film-capacitors-are-rated-for-up-to-135-c/
-
-5. Wolfspeed adds Premium 200 mm n-type silicon carbide substrate to its materials line（来源：Charged EVs）
-   应用分析：这是上游材料的进步，不能直接“用”，但会影响我们未来可选择的功率器件。我们需要持续关注基于200毫米SiC衬底生产的功率MOSFET/IGBT产品，评估其在EPS电机控制器中的应用潜力，特别是在追求更高效率、更小体积和更低热损耗的场景。随着SiC衬底良率提高，SiC器件成本有望下降，使其在EPS中取代部分硅基器件变得更具经济性，从而推动EPS系统向更高性能演进。对于线控转向，SiC器件是实现高功率密度的关键。必须高度关注，SiC材料和器件的进步直接决定了EPS和EV电机控制器的性能边界和成本竞争力。
-   https://chargedevs.com/newswire/wolfspeed-adds-premium-200-mm-n-type-silicon-carbide-substrate-to-its-materials-line/
-
-6. F1 in Bahrain... in Malaysia: The race needed a software update to start（来源：Ars Technica）
-   应用分析：这是宝贵的教训，用于指导我们的开发流程。我们需要进一步强化MIL/SIL/HIL测试的覆盖率和深度，引入更多极端工况和故障注入测试，确保软件在所有可能场景下的鲁棒性。严格执行代码评审、静态分析、动态测试，尤其关注并发、中断、内存管理等易出错环节，减少潜在bug。同时，考虑EPS系统未来可能支持OTA更新，必须设计安全可靠的更新机制，包括严格的验证流程和故障回滚能力，确保更新过程中不影响功能安全。持续推广和优化MATLAB/Simulink等模型化设计工具，利用自动代码生成减少手动编码错误。必须持续投入，软件质量和功能安全是EPS的生命线。
-   https://arstechnica.com/cars/2026/10/f1-in-bahrain-in-malaysia-the-race-needed-a-software-update-to-start/
-
-7. Hybrid Thyristor/SiC JFET Solid-State Contactors for Induction Motors（来源：Power Electronics News）
-   应用分析：固态接触器技术可以直接研究并应用于EPS的电源管理单元或功率级。我们可以评估在EPS电源回路中用SiC基固态接触器替代机械继电器，以提高开关速度、降低损耗、延长寿命，并减少机械噪声。固态接触器能提供更精细的电流控制，在电机启动时实现更平滑的软启动，并提供更快速、更可靠的过流保护。在EPS系统部分助力（低负载）工况下，通过优化固态接触器的开关特性和导通损耗，可以进一步提升整体效率，减少热损耗。值得研究和小规模验证。虽然成本可能高于传统继电器，但在追求高性能、高可靠性、长寿命和高效率的线控转向或高端EPS系统中，固态接触器结合SiC的方案具有显著优势。
-   https://www.powerelectronicsnews.com/hybrid-thyristor-sic-jfet-solid-state-contactors-for-induction-motors/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261007-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261007-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261007-pm.mp3" length="2862000" type="audio/mpeg"/>
-      <pubDate>Tue, 06 Oct 2026 16:02:46 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 智驾未来：AI芯片、碳化硅与可信赖控制的深度融合</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是您的人工智能主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最值得关注的重磅资讯。从AI自研芯片的颠覆性突破，到汽车功率电子核心器件的材料升级，再到AI在物理世界应用中的安全与合规挑战，每一条都可能深刻影响我们未来的研发方向。话不多说，让我们立刻进入今天的早报时间。
@@ -1108,6 +1072,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261022-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261022-pm.mp3" length="3019248" type="audio/mpeg"/>
       <pubDate>Thu, 22 Oct 2026 09:43:11 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 智驾与机器人：AI如何重塑汽车转向和工业控制</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能、汽车智能化和机器人三大前沿领域，为您精选七条重磅资讯。从AI驱动的智能制造、硬件优化，到线控转向的核心技术突破，再到机器人领域的传感器与学习迁移，每一条都可能触及我们EPS工程师的未来工作方向。事不宜迟，让我们马上进入今天的早报时间。
+
+1. Industrial Agentic AI: LLM-Driven New-Generation Agents for Smart Manufacturing（来源：arXiv cs.AI）
+   应用分析：这项技术很有潜力，可以考虑将其应用于EPS生产线的智能诊断和预测性维护。例如，当测试台架出现异常时，Agent可以根据历史数据和故障描述，自主分析可能的原因，并生成排查步骤或建议调整参数。短期内，直接将通用大型语言模型Agent部署到核心控制或生产流程有风险，因为其可靠性、实时性仍需验证。但我们可以从辅助性任务入手，如故障排查知识库问答、自动化报告生成、生产参数优化建议等，逐步验证其在工业场景的实用性。对于提升标定效率，大型语言模型Agent或许能辅助我们分析海量标定数据，发现潜在的关联性，甚至基于语言描述自动生成初步的标定曲线或策略参数。总体而言，值得长期投入关注和初步探索。
+   https://arxiv.org/abs/2610.26941
+
+2. Reinforcement learning for hardware acceleration and system-level optimization on FPGA and integrated-circuit platforms: A survey（来源：arXiv cs.LG）
+   应用分析：这项技术潜力巨大。在MCU选型和硬件设计阶段，我们可以探索使用强化学习进行寄存器配置、内存分配、任务调度等优化，以在有限的资源下最大化FOC等控制算法的执行效率和实时性。例如，针对永磁同步电机控制的FOC算法，强化学习可以帮助我们找到最优的PWM频率、采样周期与计算任务分配，以减少控制延迟和提高系统响应速度。这是将AI应用于底层硬件和系统级优化的前沿方向，对提升EPS产品核心竞争力有战略意义，非常值得投入。可以先从仿真环境或FPGA原型验证开始，逐步积累经验，长期来看有助于我们设计出更高效、更紧凑、更可靠的EPS控制器。
+   https://arxiv.org/abs/2610.28699
+
+3. Learning-Enhanced Observer for Sensorless Task-Null-Space Compliant Control（来源：arXiv cs.RO）
+   应用分析：这项技术可以直接应用于我们的EPS系统。我们可以将这种“神经网络增强观测器”应用于EPS电机的无传感器位置/速度估计，或用于改进FOC控制中的电流/转矩观测器。通过神经网络学习和补偿电机内部摩擦、磁链饱和、温度变化等非线性动态，可以显著提高无传感器控制的精度和鲁棒性，减少对物理传感器的依赖，从而降低成本并提升系统可靠性。这是解决EPS核心痛点——无传感器/冗余传感方案、提升电机控制性能和鲁棒性——的直接途径，极度值得投入。可以立即组织团队进行预研和原型开发，结合MIL、SIL、HIL平台进行验证。
+   https://arxiv.org/abs/2610.28769
+
+4. Rivian buys world model startup to accelerate self-driving ambitions（来源：TechCrunch）
+   应用分析：这项收购对我们EPS工程师来说是间接有用，主要体现在系统级。Rivian的举动提醒我们，在开发线控转向时，需要考虑如何与整车的世界模型和仿真环境对接。例如，我们的EPS模型和控制策略需要能无缝集成到这些高级仿真器中，以便进行联合验证、故障诊断和性能优化。虽然无需直接投入世界模型技术本身，但值得我们持续关注。我们应该积极参与到公司内部的自动驾驶团队合作中，确保EPS系统能够满足未来高级别自动驾驶对转向性能、冗余和功能安全的要求。了解世界模型和仿真技术，有助于我们更好地设计EPS在虚拟环境中的验证方法。
+   https://techcrunch.com/2026/10/22/rivian-buys-world-model-startup-to-accelerate-self-driving-ambitions/
+
+5. China advances second batch of Level 3 approvals after Changan and BAIC（来源：CnEVPost）
+   应用分析：这则新闻是一个重要的市场和政策信号，而非具体技术。它强调了我们在EPS系统架构设计、冗余设计和ISO 26262功能安全上的投入是正确的。我们需要密切关注L3级自动驾驶对转向系统的具体性能指标、故障安全机制和人机共驾切换策略的要求，并将其转化为EPS的产品需求。L3级自动驾驶是汽车行业的大趋势，我们的EPS产品必须紧跟其发展，因此必须持续投入。这意味着要加强线控转向相关技术的预研，包括冗余电机、冗余传感器、多通道控制器，以及更复杂的故障诊断和降级策略。同时，与整车厂紧密合作，理解其L3系统对EPS的具体集成需求。
+   https://cnevpost.com/2026/10/22/china-advances-2nd-batch-level-3-approvals/
+
+6. Allegro Introduces 48V Power and Precision Sensors for Robotics（来源：Power Electronics News）
+   应用分析：Allegro的48伏电源管理方案和高精度位置传感器可以直接作为EPS电机控制器的参考或潜在供应商。48伏系统能降低电流，减少损耗，提高效率，尤其对于R-EPS和未来的线控转向系统，功率需求更大，48伏可能成为主流。这些高精度传感器，例如磁编码器或旋转变压器，的进步，可以直接提升我们电机位置检测的精度和鲁棒性，从而优化FOC控制和转矩脉动抑制效果。这项技术值得立即关注和评估。我们可以联系供应商获取样品进行测试，了解其在汽车级温度、振动、EMC等环境下的性能表现。特别是其在机器人领域的功能安全设计，对我们满足ISO 26262有借鉴意义。
+   https://www.powerelectronicsnews.com/allegro-introduces-48v-power-and-precision-sensors-for-robotics/
+
+7. Dream Labs raises $90M and launches Dream API（来源：The Robot Report）
+   应用分析：这项技术具有重要的启发意义，可能间接应用于我们的工作。虽然Dream-1是针对通用机器人任务，但其核心理念——“学习迁移”和“跨平台控制”——与我们希望通过人工智能改进EPS控制和标定效率的目标一致。我们可以借鉴这种思路，研究如何构建一个通用的EPS电机控制模型，使其能够快速适应不同车型、不同电机参数的EPS系统，减少重复标定工作。例如，通过迁移学习，将一个车型的助力曲线和手感调校经验，快速迁移到新车型上，然后进行微调。目前可能无需直接投入其API，但其背后学习迁移和通用控制的理念，值得我们在内部人工智能控制策略研究中进行探索和实验。这有助于我们构建更高效、更具适应性的EPS开发流程，因此值得持续关注其技术进展和潜在的开源合作。
+   https://www.therobotreport.com/dream-labs-raises-90m-and-launches-dream-api/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261023-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261023-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261023-am.mp3" length="4026384" type="audio/mpeg"/>
+      <pubDate>Thu, 22 Oct 2026 22:43:05 +0000</pubDate>
     </item>
   </channel>
 </rss>
