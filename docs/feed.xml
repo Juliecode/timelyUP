@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 22 Oct 2026 22:43:05 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 09:43:23 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾未来：AI芯片、碳化硅与可信赖控制的深度融合</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是您的人工智能主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最值得关注的重磅资讯。从AI自研芯片的颠覆性突破，到汽车功率电子核心器件的材料升级，再到AI在物理世界应用中的安全与合规挑战，每一条都可能深刻影响我们未来的研发方向。话不多说，让我们立刻进入今天的早报时间。
-
-1. OpenTPU：一个由AI自行设计并开源的AI加速器问世（来源：Hacker News）
-   应用分析：能不能用：能用，且潜力巨大。OpenTPU的开源特性和AI设计理念，对我们EPS这种对成本、功耗和实时性有严格要求的嵌入式系统，提供了新的硬件加速思路。怎么用：我们可以研究其架构和设计流程，探索将EPS电机控制中的AI算法，比如神经网络观测器、强化学习控制器等，移植到这类定制化、开源的AI加速器上。通过硬件定制，可以优化特定控制任务的算力与能效比。长远来看，甚至可以尝试利用类似AI辅助设计工具，针对EPS的特定AI计算需求，例如NVH抑制的实时频谱分析、复杂状态估计，设计我们自己的轻量级AI加速模块。值不值得投入：值得早期关注和小范围投入研究。虽然离直接量产应用还有距离，但这是未来AI硬件发展的重要方向。理解并掌握这种趋势，对提升我们线控转向，也就是Steer-by-Wire系统中的AI计算能力、降低成本、提高鲁棒性至关重要。可以考虑在预研项目中投入少量资源进行技术跟踪和概念验证。
-   https://github.com/FeSens/openTPU
-
-2. Axelera AI：在嵌入式系统功耗下实现数据中心级推理性能（来源：EE Times）
-   应用分析：能不能用：能用，且非常值得关注。我们EPS系统对功耗和算力都有严格要求。线控转向未来会集成更多AI功能，例如路况感知、驾驶员意图识别、更精细的助力手感调校等。这种高能效比的AI芯片正是我们所需。怎么用：可以考虑将其作为下一代EPS控制器或线控转向域控制器中AI模块的备选方案。例如，用于实现更复杂的电机控制策略，比如基于深度学习的转矩脉动抑制、实时参数辨识、高级故障诊断与预测性维护算法。其高算力可以支持在本地进行更复杂的传感器数据融合，例如来自方向盘力矩传感器、车速、环境感知等，以实现更智能、更个性化的助力输出。值不值得投入：值得密切跟踪并考虑在下一代产品预研中进行评估和集成测试。这种芯片直接满足了我们在边缘侧部署高性能AI的需求，有助于提升EPS系统的智能化水平和竞争力。
-   https://www.eetimes.com/axelera-ai-data-center-inference-performance-in-the-power-envelope-of-embedded-systems/
-
-3. 可信赖AI：智能本身并不足够（来源：EE Times）
-   应用分析：能不能用：这是指导原则和方法论，必须融入到我们的AI应用开发流程中。怎么用：在我们引入AI改进电机控制策略、故障诊断、自动标定等环节时，必须将“可信赖AI”的理念贯穿始终。这意味着：第一，领域专业知识结合：AI模型的设计和训练必须深度结合EPS系统的物理模型、电机控制原理和功能安全需求，避免AI成为“黑箱”。第二，确定性验证：针对AI模型的输出，需要开发严格的验证方法，包括形式化验证、鲁棒性测试、边界条件分析等，确保在各种工况下都能达到预期的安全和性能要求。比如，在自动标定中，AI输出的参数必须通过传统方法验证其物理合理性和系统稳定性。第三，故障诊断与降级：AI系统必须设计有完善的故障诊断机制，并在检测到异常时，能安全地降级到传统控制或安全状态。值不值得投入：这是必须投入的。对于汽车安全件如EPS，功能安全是生命线。在AI引入初期就建立可信赖AI的开发与验证体系，能避免后期巨大的返工成本和安全风险。可以考虑成立专门的跨部门小组，研究AI在ISO 26262框架下的认证路径。
-   https://www.eetimes.com/trusted-ai-why-intelligence-alone-isnt-enough/
-
-4. Wolfspeed推出高级200毫米N型碳化硅衬底，提升器件良率（来源：Charged EVs）
-   应用分析：能不能用：能用，且是未来EPS功率级发展的重要方向。SiC MOSFETs或IGBTs比传统硅基器件具有更高的开关频率、更低的损耗和更好的热性能，非常适合我们PMSM永磁同步电机控制的功率级。怎么用：我们可以积极评估和导入基于Wolfspeed新一代200毫米SiC衬底制造的功率模块。通过SiC器件，可以实现EPS控制器功率级的小型化、轻量化，提高电机控制的效率，减少发热，从而优化NVH表现和提升系统可靠性。高开关频率还能减少电感、电容的体积，进一步集成。这对于线控转向中对功率密度和快速响应的要求尤为重要。值不值得投入：值得持续投入和深度研究。SiC是电动汽车和高性能电机控制的必然趋势。与上游供应商保持紧密合作，尽早掌握并应用最新SiC技术，能显著提升我们EPS产品的技术领先性和成本竞争力。
-   https://chargedevs.com/newswire/wolfspeed-adds-premium-200-mm-n-type-silicon-carbide-substrate-to-its-materials-line/
-
-5. TDK推出耐温高达135°C的DC-link薄膜电容器（来源：Charged EVs）
-   应用分析：能不能用：能用，且对我们的EPS控制器硬件设计有直接益处。EPS控制器通常安装在发动机舱附近，环境温度较高。怎么用：可以将这款高耐温DC-link电容器直接集成到我们EPS控制器或线控转向功率级设计中。它能提高控制器在高温环境下的可靠性，减少对额外散热措施的依赖，从而可能缩小控制器体积，降低整体成本。在电机控制策略中，稳定的DC-link电压对FOC等算法的性能至关重要，高耐温电容能保证在极端工况下电压纹波的稳定性和滤波效果。值不值得投入：值得投入。这属于关键无源器件的升级，直接影响产品可靠性和设计灵活性。在评估新一代功率级设计时，应优先考虑这类高规格的汽车级组件，这能有效降低系统在极端工况下的故障率，提升产品竞争力。
-   https://chargedevs.com/newswire/tdks-new-dc-link-film-capacitors-are-rated-for-up-to-135-c/
-
-6. Pegasus 1.6：TwelveLabs为物理AI带来视频理解能力（来源：The Robot Report）
-   应用分析：能不能用：间接能用，对线控转向的未来演进方向有指导意义。虽然EPS本身不直接处理视频，但线控转向作为车辆控制的核心执行层，会接收来自感知系统，包括视频理解的指令。怎么用：我们可以关注这种视频理解能力如何转化为高层级的驾驶意图、路况预测或驾驶员状态评估。例如，未来的线控转向系统可能需要根据车辆对前方道路的视频理解，比如识别到湿滑路面、障碍物，结合驾驶员的微小操作意图，提供更智能、更匹配的助力曲线和手感反馈。此外，这种技术也可能用于生产线上的机器人，进行EPS产品的视觉检测和质量控制，提升制造效率和一致性。值不值得投入：值得保持关注，但目前无需直接投入研发。这属于更上层的感知和决策范畴。我们应理解其发展趋势，以便在未来线控转向系统架构设计时，能更好地与这些高级感知能力对接，确保EPS执行层能有效地响应和利用这些智能信息。
-   https://www.therobotreport.com/pegasus-1-6-brings-video-understanding-physical-ai-says-twelvelabs/
-
-7. FCC机器人限制可能加速AI向本地边缘侧转移（来源：The Robot Report）
-   应用分析：能不能用：这是外部环境和趋势，我们必须适应并利用。怎么用：这进一步强化了我们在EPS和线控转向系统中发展本地AI，也就是边缘AI的策略。为了满足未来可能更严格的法规要求，我们需要优先考虑：第一，本地化AI推理：将AI模型部署在EPS控制器或域控制器内部，进行实时推理，减少对云端连接的依赖。第二，数据隐私保护：确保EPS系统收集的敏感数据，例如驾驶员操作习惯、车辆运动状态等，在本地处理，并符合数据隐私法规。第三，功能安全与鲁棒性：边缘AI的部署需要更强的硬件鲁棒性和软件可靠性，以应对复杂的物理环境和潜在的故障。这与我们ISO 26262的功能安全设计理念高度契合。值不值得投入：必须投入。这不仅是技术趋势，更是法规合规性的要求。投入资源研发和部署本地AI解决方案，确保EPS系统在满足功能安全和性能要求的同时，也能符合日益严格的隐私和安全法规，是提升产品竞争力的关键。
-   https://www.therobotreport.com/fcc-robot-restrictions-could-accelerate-shift-to-local-ai/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261007-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261007-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261007-am.mp3" length="2816064" type="audio/mpeg"/>
-      <pubDate>Tue, 06 Oct 2026 22:42:25 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 智驾新视界：AI、智驾与机器人前沿技术速览</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的智驾新视界科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能前沿、汽车智能化以及机器人三大核心领域，为您精选七条重磅资讯。从AI智能体的自我进化到边缘设备上的轻量级AI，从安全关键系统的预测控制到高功率SiC器件的最新突破，再到机器人学习与复杂地形下的全身控制，每一条都可能触及您当前工作的痛点，或为您未来的研发方向提供宝贵灵感。准备好了吗？让我们立即开始！
@@ -1108,6 +1072,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261023-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261023-am.mp3" length="4026384" type="audio/mpeg"/>
       <pubDate>Thu, 22 Oct 2026 22:43:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI加速工程研发，智能汽车与机器人控制前沿洞察</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三个热门方向，为您精选七条重磅资讯。从大语言模型如何赋能软件验证和科学发现，到自动驾驶和机器人控制的最新突破，这些进展都与我们工程师的日常工作息息相关。希望今天的分享能为您带来新的启发，助您在研发的道路上更进一步。
+
+1. LLMs are making formal software verification feasible at a much larger scale（来源：Hacker News）
+   应用分析：这项技术对我们汽车EPS产品研发工程师来说，具有极高的应用价值。我们可以在微控制器（MCU）固件开发中，利用大语言模型辅助生成控制算法（比如FOC矢量控制、状态观测器）的形式化规约，或者对C语言代码进行初步的形式化验证检查，发现潜在的安全漏洞和逻辑错误。尤其是在模型化设计与代码生成后，大语言模型可以作为额外的一层验证手段。投入产出比非常高，因为它能显著减少人工验证时间，提升软件的可靠性和功能安全等级，加速ISO 26262功能安全认证过程。对于线控转向这类高安全等级系统，这能提供更强的保障，是值得我们重点投入的方向。
+   https://news.ycombinator.com/item?id=50202217
+
+2. SpecEvo: Speculative Evolution with Large Language Models for Cost-Efficient Scientific Discovery（来源：arXiv cs.AI）
+   应用分析：SpecEvo框架对我们EPS工程师来说，有巨大的应用潜力。我们可以将它应用于EPS控制器的自动标定。例如，在FOC矢量控制中，利用它自动搜索最优的PI控制器参数、弱磁控制阈值等，以实现转矩脉动最小化、效率最大化和NVH噪声振动与声振粗糙度优化。轻量级模型可以进行快速小范围探索，而前沿模型则在遇到瓶颈时进行更深度的干预。这也能用于助力曲线的自动调校，根据我们预设的手感目标生成并优化助力参数。这项技术如果能有效降低标定周期和成本，将是EPS产品开发的重要突破，也能帮助我们解决电机控制策略的温漂和参数辨识难题，非常值得投入。
+   https://arxiv.org/abs/2610.28706
+
+3. DiffResearch: Accelerating Deep Research with Diffusion Language Models（来源：arXiv cs.AI）
+   应用分析：DiffResearch框架的加速能力对我们的研发工作非常有吸引力。我们可以在EPS新控制算法（比如无传感器控制、转矩脉动抑制）的早期研究阶段，利用扩散语言模型辅助进行文献综述、模型构建、初步算法设计和仿真代码生成。例如，在探索新的状态观测器时，dLLM可以快速生成不同观测器的数学模型和Simulink实现草图，并辅助分析其收敛性和鲁棒性。虽然直接应用于生产代码可能还有距离，但在研究和概念验证阶段，其带来的效率提升可以加速技术积累和方案筛选，有助于我们将机器人执行器控制等前沿研究快速迁移到EPS领域。这值得我们初步投入探索。
+   https://arxiv.org/abs/2610.28909
+
+4. Integrated Longitudinal and Lateral Control for High-Speed Platooning of Articulated Vehicles（来源：arXiv cs.RO）
+   应用分析：这项集成控制框架对我们EPS工程师来说，指明了未来EPS发展的方向。该研究的纵向PID框架和横向路径跟踪算法，可以直接作为线控转向（Steer-by-Wire）系统中的高级控制输入。我们EPS系统需要确保能精确执行这些指令，并提供足够的冗余和功能安全保障。例如，EPS的电机控制策略需要针对高频、小幅度转向调整进行优化，以减少抖动和噪声，提升乘坐舒适性。同时，EPS的故障诊断和降级策略也需充分考虑队列行驶这类复杂场景。线控转向是EPS的未来，而队列行驶是高级自动驾驶的核心场景之一，因此，理解并支持这种集成控制，是EPS向更高阶智能驾驶演进的关键，我们必须持续投入。
+   https://arxiv.org/abs/2610.30437
+
+5. TerraTransfer++: Demonstration-Free End-to-End Planner（来源：arXiv cs.RO）
+   应用分析：TerraTransfer++的自博弈训练理念对我们EPS和线控转向的控制策略开发非常有借鉴意义。我们可以在Simulink或CarSim等仿真环境中，利用强化学习进行无监督训练。例如，让EPS控制策略通过自博弈学习，优化助力手感、回正性能或故障降级策略，使其在各种复杂路况和车辆动态下都能表现出色。尤其是在线控转向的冗余设计中，我们可以模拟各种传感器或执行器故障，训练系统自主学习故障应对策略。这种数据生成和训练范式能显著降低对真实驾驶数据的依赖，加速线控转向等复杂系统的验证和迭代，提升系统的鲁棒性和安全性，非常值得关注和借鉴。
+   https://arxiv.org/abs/2610.30319
+
+6. MPBRS: Multi-Potential-Based Reward Shaping for Unified Reward Configuration in Humanoid Locomotion（来源：arXiv cs.RO）
+   应用分析：多势能奖励塑形（MPBRS）的思想对我们EPS电机控制的优化有很高的迁移价值。在设计FOC矢量控制器的参数自适应或无传感器控制器的状态观测器时，我们可以构建包含转矩精度、能耗、NVH、响应速度等多个目标函数的势能函数，通过MPBRS进行奖励塑形，指导强化学习代理快速找到最优控制策略。这有助于解决电机控制策略性能与鲁棒性提升中的多目标冲突问题，例如在确保低转矩脉动的同时，保持高效率和良好的NVH特性。机器人执行器控制是EPS电机控制的重要交叉点，MPBRS有望为EPS的复杂控制问题提供一套更高效、更通用的强化学习解决方案，非常值得深入研究和投入。
+   https://arxiv.org/abs/2610.30334
+
+7. PhysibleMDM: Enforcing Inference-Time Physical Feasibility Constraints on Motion Diffusion Models via Noise Optimization（来源：arXiv cs.RO）
+   应用分析：PhysibleMDM框架的核心思想对我们EPS控制器的设计有重要借鉴意义。在基于AI的EPS控制策略（如神经网络观测器、强化学习控制器）中，我们可以借鉴其思路，引入物理可行性约束。例如，在训练或推理阶段，通过优化输入噪声或中间参数，确保输出的电机转矩、电流、转速等参数始终在物理允许范围内，避免过载、过热或系统失稳。这对于线控转向系统的功能安全设计尤其重要，可以确保在各种输入指令下，转向系统都能保持物理上的安全性和稳定性。在AI控制系统日益复杂的今天，如何确保其输出符合物理世界规律是一个核心挑战。PhysibleMDM提供了一个优雅的解决方案，可以增强AI控制器的安全性和可靠性，减少潜在的故障风险，值得我们投入研究。
+   https://arxiv.org/abs/2610.30500</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261023-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261023-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261023-pm.mp3" length="3841776" type="audio/mpeg"/>
+      <pubDate>Fri, 23 Oct 2026 09:43:23 +0000</pubDate>
     </item>
   </channel>
 </rss>
