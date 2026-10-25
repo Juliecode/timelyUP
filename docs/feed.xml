@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 24 Oct 2026 22:42:43 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 09:42:42 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI赋能汽车转向：从安全到控制的前沿探索</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选了七条重磅资讯。从AI代理的安全验证，到英伟达的物理AI布局，再到电动卡丁车的牵引力控制，以及人形机器人的全身力控技术，这些都与我们的汽车EPS，也就是电动助力转向系统息息相关。让我们一起看看这些前沿技术将如何赋能我们的转向系统，带来更安全、更智能的驾驶体验。
-
-1. AI代理的“可验证安全性”框架：BRaVeS（来源：arXiv cs.LG）
-   应用分析：这个框架能用，且非常值得我们EPS团队深入研究和应用。我们可以将线控转向（Steer-by-Wire）系统中的关键安全约束，比如最大转向角、最大转向力矩、回正力矩曲线、故障响应模式等，定义为AI控制层的“不变锚点”。同时，在AI控制策略开发中，引入“深度感知访问”机制，确保AI模型在推理过程中始终能够“看见”并尊重这些安全约束。当AI控制系统出现“认知漂移”或不确定性增加时，我们可以利用“状态层级”设计其自主性降级路径，比如从高级AI模式切换到预设的物理模型模式，甚至提示驾驶员接管。初期投入可能需要AI和功能安全领域的交叉人才，但长期来看，这是将AI从实验室带入车规级安全应用的关键路径，投入研究和原型验证，能为未来的线控转向和L3+自动驾驶的AI控制系统提供坚实的安全基石和认证依据，极度值得投入。
-   https://arxiv.org/abs/2610.08815
-
-2. 英伟达重注“物理AI”，赋能更安全的自动驾驶出租车和人形机器人（来源：Ars Technica）
-   应用分析：这项技术能用，且必须高度关注。NVIDIA的技术栈往往成为行业标准之一。我们可以评估NVIDIA的Jetson平台或其物理AI工具链，作为未来EPS控制器或与自动驾驶域控制器协同的算力平台。物理AI对实时性、低延迟和高可靠性要求极高，这与EPS的实时控制需求完全一致。在线控转向系统中，我们可以利用物理AI进行更精细的路径规划、避障和力矩反馈控制，例如，让AI实时预测路面摩擦系数、车辆动态，并输出更精准的转向力矩指令，从而提升驾驶手感和安全性。同时，采用NVIDIA的物理AI工具链进行大规模、高保真的硬件在环（HIL）仿真，测试EPS系统在各种极端物理条件下的鲁棒性和安全性，也能加速故障诊断和验证。英伟达在汽车AI领域的影响力巨大，与其生态系统保持同步，可以确保EPS产品在未来的线控转向和更高阶自动驾驶架构中保持竞争力，非常值得投入。
-   https://arstechnica.com/ai/2026/10/nvidias-big-bet-on-physical-ai-aims-for-safer-robotaxis-humanoid-robots/
-
-3. Synopsys探讨代理式AI在“自主工程”中的应用，提升芯片设计可信度（来源：EE Times）
-   应用分析：这项技术能用，而且是提高我们研发效率的有效途径。我们可以探索使用代理式AI来自动生成FOC、无传感器控制等电机控制算法的初始模型或参数，并根据仿真结果进行迭代优化。AI可以结合模型预测控制（MPC）等复杂算法，自动调整参数以满足转矩脉动、NVH、效率等目标。同时，将AI代理集成到MATLAB/Simulink的模型化设计流程中，让AI辅助进行模型验证、代码生成优化，甚至自动诊断模型中的潜在问题。此外，利用AI代理分析历史故障数据和运行数据，自动生成故障诊断规则或预测性维护策略，也能提高EPS系统的可靠性。最重要的是，AI代理有望学习专家标定经验，结合车辆动力学模型，自动调整助力曲线、阻尼补偿等参数，大幅缩短EPS系统巨大的标定工作周期并提升一致性。长期来看，这是从根本上提升EPS研发效能、降低成本、加速产品上市的关键，非常值得投入。
-   https://www.eetimes.com/can-ai-be-trusted-synopsys-on-agentic-ai-and-autonomous-engineering/
-
-4. 电动卡丁车：BLDC驱动、牵引力控制与再生制动（来源：arXiv eess.SY 控制系统）
-   应用分析：这项研究的核心技术和控制思路可以直接用于我们的EPS开发。我们可以深入研究其BLDC驱动的FOC控制和弱磁控制策略，看是否有可借鉴之处以提升EPS电机的转矩密度和效率。同时，借鉴其滑移率估计和控制思路，考虑在EPS电机控制中引入类似的动态补偿机制，以抑制极端工况下的转矩脉动和NVH，尤其是在线控转向中对路面反馈的精细控制。此外，研究其使用三个霍尔效应轮速传感器进行滑移率估计的方法，这可能为EPS无传感器或冗余传感方案提供灵感，降低成本并提升安全性，例如，通过融合电机转速和车辆动态信息（如IMU数据），在EPS中实现更鲁棒的转角或转矩估算。这项研究值得投入，虽然是卡丁车，但底层的电机控制和车辆动力学控制原理是相通的，可以作为技术预研和概念验证的参考，快速将前沿研究转化为EPS工程方案。
-   https://arxiv.org/abs/2610.09006
-
-5. 华为智选品牌Maextro V800刹车踏板支架失效，引发安全争议（来源：CnEVPost）
-   应用分析：这不是一个“技术”可以“用”的资讯，而是一个重要的警示案例，用于指导我们的工程实践。我们应该将此案例作为内部功能安全审查和FMEA（故障模式与影响分析）的参考。特别要关注EPS系统中的机械结构件，如转向柱、减速器壳体、安装支架等，在极端载荷下的强度和耐久性，以及与整车其他系统（如制动系统）的接口安全。同时，强化EPS台架测试和整车标定中的极端工况测试覆盖度，确保包括紧急制动、转向回正、路沿冲击等场景下，EPS的所有机械和电气部件都能承受预期载荷，不发生结构性失效。此外，还要加强对EPS零部件供应商的质量审核和来料检验。最后，我们必须思考，如果EPS内部发生类似结构性失效，系统能否及时诊断、向驾驶员发出警告，并安全地降级到最小风险状态。这是保证EPS产品质量和品牌声誉的底线，我们必须投入，吸取教训，避免重蹈覆辙。
-   https://cnevpost.com/2026/10/08/maextro-v800-brake-test-controversy-jac-shares-fall/
-
-6. HULK：人形机器人全身强力运动操作的强化学习框架（来源：arXiv cs.RO）
-   应用分析：这项技术能用，且是提升EPS核心控制技术水平的重要方向。我们可以将HULK中MPC结合强化学习的思路应用于线控转向系统。MPC可以用于预估驾驶员意图和车辆动态，而强化学习则可以学习和优化助力曲线、阻尼补偿等手感调校参数，实现更细腻、更个性化的转向手感。同时，借鉴其在复杂动力学下进行力矩跟踪和平衡控制的方法，开发更先进的FOC控制策略，有效抑制电机在不同工况下的转矩脉动和噪声，提升EPS系统的NVH表现。此外，我们还可以探索如何将HULK中用于平衡和载荷预测的传感器融合技术，如惯性测量单元IMU、力传感器等，应用于EPS，提升无传感器控制的精度和鲁棒性，或增强故障诊断能力。这项技术极度值得投入，它是将机器人前沿控制技术迁移到EPS，实现高性能、高鲁棒性、高安全性线控转向系统的关键。我们需要投入时间学习MPC、强化学习及其在物理系统中的应用。
-   https://arxiv.org/abs/2610.08970
-
-7. AWS发布开源“物理AI工具链”，赋能机器人开发（来源：The Robot Report）
-   应用分析：这项工具链能用，且其开源特性降低了尝试成本。我们可以利用工具链中的合成数据生成能力，为EPS的AI控制算法，如自动标定、故障诊断等，生成大量的训练数据，尤其是难以获取的极端工况或故障数据，弥补真实数据采集的不足。同时，将AWS的物理AI工具链与我们现有的MATLAB/Simulink等模型化设计（MBD）工具链进行集成，实现从模型设计、仿真、代码生成到AI模型训练和部署的端到端流程。利用其仿真验证功能，构建更高效、更全面的EPS控制系统验证平台，尤其是在线控转向这种高度依赖软件和AI的复杂系统中。最后，我们还可以学习如何在边缘设备，比如EPS控制器MCU上部署AI模型，并利用工具链支持的持续改进机制，实现EPS控制算法的OTA（空中下载）更新和性能迭代。这项工具链值得投入，开源工具可以帮助我们快速实验和验证物理AI在EPS领域的潜力，降低初期投入风险。长期来看，掌握这类工具链是未来EPS开发工程师必备的技能。
-   https://www.therobotreport.com/aws-launches-open-source-physical-ai-toolchain-for-robotics/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261009-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261009-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261009-am.mp3" length="5077008" type="audio/mpeg"/>
-      <pubDate>Thu, 08 Oct 2026 22:43:24 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI、汽车、机器人前沿：EPS工程师的智能转向未来</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热点，为您精选出七条最值得关注的资讯。从AI驱动的实时安全控制，到线控转向的核心硬件革新，再到机器人领域的最新突破，每一条都可能深刻影响我们电动助力转向，也就是EPS系统的未来发展。准备好了吗？让我们一起探索这些科技浪潮如何助力我们打造更智能、更安全的转向系统。
@@ -1122,6 +1086,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261025-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261025-am.mp3" length="3062880" type="audio/mpeg"/>
       <pubDate>Sat, 24 Oct 2026 22:42:43 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI与智能汽车：从万亿参数到线控转向的未来</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将一起聚焦AI前沿、汽车智能化和机器人领域的最新动态。从AI模型规模的指数级增长，到脑机接口的突破性进展，再到智能驾驶的普及和机器人控制的创新，这些都与我们汽车EPS，也就是电动助力转向系统的未来息息相关。今天我们精选了七条重磅资讯，希望能给大家带来一些启发，让我们一起来看看。
+
+1. Cerebras Deploys Trillion-Parameter AI Models（来源：Hacker News）
+   应用分析：直接将万亿参数模型部署到EPS产品上目前还非常遥远，因为EPS对实时性、功耗、成本和功能安全要求极高，目前车载MCU无法支持。但我们应关注这种大规模AI模型的训练和优化方法，例如模型剪枝、量化、知识蒸馏等，研究如何将大型模型的“智能”压缩到资源受限的车载硬件上。同时，关注Cerebras这类专用AI芯片在数据中心侧的训练能力，这有助于我们开发更强大的离线AI模型，用于自动标定、故障诊断或生成更优的控制策略，再通过模型转换或轻量化部署到车载MCU。这值得我们投入关注和前瞻性研究，为线控转向等前沿技术储备AI能力。
+   https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras
+
+2. Neural chip decodes interactions between brain regions（来源：Hacker News）
+   应用分析：当前阶段，直接应用于EPS产品不现实，技术尚处于基础研究阶段，且汽车行业对安全性、可靠性和伦理有极高要求。但作为前瞻性技术，我们可以持续关注脑机接口（BCI）和神经芯片在“人机交互”方面的进展。例如，未来线控转向系统可能会引入更先进的人机界面，通过驾驶员的意图或生理信号来微调助力手感或进行某些非安全关键的辅助操作。这项技术可以为我们提供理解人脑决策和控制机制的视角，从而设计出更符合人类直觉和习惯的助力策略与手感调校算法。值得保持关注，但目前不宜进行大量研发投入。
+   https://actu.epfl.ch/news/neural-chip-decodes-interactions-between-brain-r-2/
+
+3. Block’s new voice model sounds eerily human（来源：TechCrunch）
+   应用分析：语音模型本身对EPS系统没有直接应用，但其“本地高效运行”的特性对我们的车载控制器开发有重要启示。我们可以借鉴这种在本地芯片上高效运行AI模型的思路，研究如何将EPS系统中基于AI的控制算法（如神经网络观测器、预测控制器、自动标定模块）进行优化，使其能在车载MCU或域控制器上以更低的功耗、更小的延迟运行。例如，探索使用更轻量级的神经网络架构、更高效的推理框架，或者利用专用DSP/NPU加速AI计算。这值得投入研究，有助于我们提升EPS控制器的智能化水平。
+   https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/
+
+4. China has about 15 million passenger cars with NOA as driver assistance adoption expands（来源：CnEVPost）
+   应用分析：这是我们EPS产品研发的直接市场需求和技术方向。我们需要持续优化EPS的控制精度和响应速度，以满足NOA系统对车道保持、自动变道等功能的需求。特别是在线控转向（Steer-by-Wire）演进中，需要重新定义EPS与ADAS系统的接口和协同逻辑，确保系统冗余和功能安全。此外，与NOA相关的助力策略调校也变得更加重要，需要兼顾驾驶员手感和自动驾驶系统的平顺性。这必须持续投入，L2/NOA的普及是我们EPS产品发展的核心驱动力之一。
+   https://cnevpost.com/2026/10/24/china-15-million-cars-with-noa/
+
+5. VW targets China's electric sedan market with Xpeng-powered ID. UNYX 09（来源：CnEVPost）
+   应用分析：这不是直接的技术，但反映了市场和技术合作趋势，对我们的产品策略有指导意义。这种合作模式表明，未来EPS产品可能需要更开放的接口和更强的适配性，以便快速集成不同合作伙伴的智能驾驶系统。我们应关注合作双方在智能驾驶软件栈和域控制器设计上的进展，思考如何设计EPS系统以更好地支持此类跨品牌、跨平台的技术集成。此外，价格竞争激烈也意味着EPS需要不断优化成本，同时保证性能和功能安全。这值得投入关注，有助于我们规划EPS产品的平台化和模块化设计。
+   https://cnevpost.com/2026/10/24/vw-anhui-launches-id-unyx-09/
+
+6. Eka Robotics raises $150M to scale its vision-force-action model for robots（来源：The Robot Report）
+   应用分析：高度相关，技术可迁移性强。这是我们正在积极探索的方向。我们可以深入研究Eka Robotics的VFA模型和大规模强化学习方法。例如，将强化学习应用于EPS的电机控制策略开发，以优化转矩脉动抑制、NVH特性，或者实现更鲁棒的无传感器控制。通过RL训练，EPS系统可以学习在不同路况、车速和驾驶员操作下的最优助力曲线和回正策略，甚至应对电机参数变化或部分故障情况。这也能用于自动标定，大幅提高效率。这必须大力投入，其前沿进展对我们解决电机控制策略性能、鲁棒性、无传感器控制、故障诊断等核心问题有巨大帮助。
+   https://www.therobotreport.com/eka-robotics-raises-150m-scale-vision-force-action-model-robots/
+
+7. Will AI expose the rickety infrastructure of the internet?（来源：TechCrunch）
+   应用分析：这不是直接的技术，而是一种系统设计理念和风险规避的提醒。在我们设计线控转向架构、功能安全（ISO 26262）和故障诊断系统时，需要时刻保持警惕。不能盲目追求AI的“智能”，而忽略底层系统的健壮性。例如，在引入AI控制策略时，必须有可靠的传统控制作为冗余备份；在设计通信网络时，要考虑带宽、延迟和抗干扰能力；在选择MCU和功率器件时，要确保其可靠性和故障模式的安全性。这促使我们重新审视现有EPS系统的基础架构，确保其能够承受未来AI和更复杂功能带来的压力。这值得投入思考和审视，提醒我们在追求技术创新的同时，更要注重工程的严谨性和系统的可靠性，确保EPS作为安全关键部件的万无一失。
+   https://techcrunch.com/2026/10/24/will-ai-expose-the-rickety-infrastructure-of-the-internet/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261025-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261025-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261025-pm.mp3" length="4203216" type="audio/mpeg"/>
+      <pubDate>Sun, 25 Oct 2026 09:42:42 +0000</pubDate>
     </item>
   </channel>
 </rss>
