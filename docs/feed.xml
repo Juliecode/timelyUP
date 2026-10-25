@@ -13,40 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 25 Oct 2026 09:42:42 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 22:43:02 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI、汽车、机器人前沿：EPS工程师的智能转向未来</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热点，为您精选出七条最值得关注的资讯。从AI驱动的实时安全控制，到线控转向的核心硬件革新，再到机器人领域的最新突破，每一条都可能深刻影响我们电动助力转向，也就是EPS系统的未来发展。准备好了吗？让我们一起探索这些科技浪潮如何助力我们打造更智能、更安全的转向系统。
-
-1. Plan-and-Patch: Diffusion Language Models for Agentic Planning（来源：arXiv cs.AI）
-   应用分析：这项技术短期内直接应用于EPS底层电机控制的价值有限，但对于线控转向系统的高层“意图规划”或“行为决策”很有启发。例如，在自动泊车或紧急避障等复杂场景中，可以尝试用AI生成转向、制动等协同策略序列（规划），当实际环境反馈与预期不符时，通过“修补”机制快速局部调整策略，而非完全重新计算。这能提升线控转向系统的鲁棒性和在线修正能力。值得我们研发工程师持续关注，并可从小规模仿真环境入手，探索其在复杂手感调校或助力模式切换中的应用潜力。
-
-2. Compute-Constrained Safety Filters with Neuromorphic Event Triggering（来源：arXiv eess.SY 控制系统）
-   应用分析：这项技术非常适合EPS系统。我们可以将LIF事件触发安全滤波器集成到EPS控制器的功能安全架构中，作为核心助力控制算法的并行安全监控模块。它能实时监控电机指令、电流、位置等关键参数，并与预设的安全边界（Control Barrier Function, CBF）进行比较，只在必要时才进行复杂的安全验证或决策计算，从而降低MCU计算负荷。当检测到系统状态接近安全边界或控制输入异常时，立即启动故障诊断和降级策略，例如切换到冗余模式或降低助力等级。这是提升EPS系统鲁棒性和满足严格功能安全要求的重要方向，非常值得我们投入研究和开发。
-
-3. Temporal transformer CAN encoder with federated lightweight heads for anomaly detection（来源：arXiv cs.LG）
-   应用分析：这项技术直接适用于我们的车载网络。我们可以考虑将轻量级Transformer编码器部署在EPS控制器或网关ECU上，实时监测EPS相关的CAN报文，例如转向角、车速、扭矩传感器信号和电机电流指令。通过学习这些信号正常的时序模式，系统就能识别出异常的报文序列，比如转向角信号的微小抖动、CAN报文发送延迟或频率异常，这些都可能预示着传感器故障或线束问题。长期来看，结合联邦学习可以训练出更鲁棒的模型，用于预测EPS部件老化，实现预防性维护。对于线控转向系统，这更是增强网络安全、及时发现入侵尝试的关键防线。这项技术值得重点投入，以提升EPS系统的鲁棒性、可靠性并满足未来的网络安全要求。
-
-4. Skyworks Qualifies Si829x Automotive Isolated Gate Driver（来源：Power Electronics News）
-   应用分析：这是EPS控制器功率级设计的核心器件，必须关注并评估。在开发支持更高电压（比如八百伏平台）、更高功率密度的EPS系统时，我们应优先考虑采用SiC基功率模块，并搭配Si829x这类高性能汽车级隔离栅极驱动器。其十五安培可变电流控制能力有助于优化功率器件的开关速度和损耗，直接提升电机驱动效率，并减小控制器体积和散热需求。同时，汽车级认证和隔离特性也是功能安全设计的重要保障，有助于防止高压功率级故障传导到低压控制级。此外，通过精确控制开关特性，还能有效抑制电机电流脉动和转矩纹波，直接提升EPS系统的NVH性能。这项技术对于提升EPS产品竞争力、满足未来电动汽车和线控转向的性能需求至关重要，我们应立即将其纳入硬件选型和设计考量。
-
-5. Worlds First Single Chip Multiturn Position Sensor in Smaller Form Factor（来源：EE Times）
-   应用分析：这项技术对我们EPS研发来说，是极其值得投入的。我们可以将ADMT4000作为EPS电机位置传感器的冗余备份，或与现有主传感器（如磁编码器）进行互补。其无源跟踪多圈的能力，在线控转向系统主电源或主传感器失效时，仍能提供转向柱的绝对位置信息，显著提升功能安全等级。此外，单芯片设计和小尺寸可以降低EPS系统的整体成本，简化机械结构，减少布线，提升组装效率。在电机启动、低速或特殊工况下，无源多圈跟踪能力可以提供更可靠的初始位置信息，结合FOC等控制策略，提升电机控制的精度和鲁棒性。我们应立即评估其在EPS电机位置检测中的可行性，并考虑将其纳入下一代产品线的规划中，尤其是在冗余传感和功能安全方面。
-
-6. NavGPT-3: Harnessing Context in a Hierarchical Navigation Runtime（来源：arXiv cs.RO）
-   应用分析：NavGPT-3的理念和架构非常契合线控转向的未来发展方向。我们可以借鉴其分层架构思想，将LLM作为线控转向系统中的高层“驾驶意图理解器”和“策略规划器”，根据驾驶员指令、导航信息和环境感知数据等，生成宏观转向策略。同时，EPS控制器作为底层“动作策略执行器”，将LLM生成的抽象指令转化为精确的电机转矩指令。NavGPT-3的“OS-like runtime”调度和线程切换机制，可用于管理不同优先级任务，确保紧急避障等关键操作的低延迟响应。这项技术能让人机共驾更自然，通过上下文理解自适应调整助力特性和手感。虽然直接部署LLM需要巨大计算资源，但其分层架构和AI与实时控制结合的理念，是设计下一代线控转向系统架构的指导性原则。我们应立即开展相关预研，探索AI在EPS高层决策和功能安全中的应用。
-
-7. Informationally Decoupled Trajectory Design for Sim-to-Real System Identification（来源：arXiv cs.RO）
-   应用分析：这项技术非常能用，直接应用于EPS的系统辨识和模型校准。在EPS台架或整车标定过程中，我们可以利用IDTD框架设计激励轨迹。例如，在进行电机参数（如电阻、电感、磁链）、摩擦力模型参数、转向柱惯量等辨识时，不再使用简单的阶跃或正弦输入，而是生成能够最大化不同参数影响区分度的复杂轨迹。这将使辨识结果更准确，减少对专家经验的依赖，并提高自动标定效率。对于模型预测控制（MPC）来说，更精确的模型参数将直接提高EPS电机控制的性能和鲁棒性，例如在转矩脉动抑制和温漂补偿方面。此外，优化辨识轨迹有助于构建更接近真实物理特性的仿真模型，从而加速MIL/SIL/HIL验证的迭代速度。这项技术对于实现“把前沿研究快速转成可落地的EPS工程方案”的目标具有直接推动作用，我们应立即评估该方法，并尝试在现有的台架或HIL环境中进行验证。</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261010-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261010-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261010-pm.mp3" length="3377664" type="audio/mpeg"/>
-      <pubDate>Fri, 09 Oct 2026 16:21:15 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI与机器人赋能汽车转向：从样本效率到安全边界</title>
       <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大领域，为您精选七条重磅资讯。今天的亮点包括AI模型如何用更少数据解决复杂控制问题，车载网络的安全新范式，以及汽车巨头进军人形机器人背后的技术融合趋势。这些都将为我们电动助力转向，也就是EPS系统的未来发展，带来不少启发。
@@ -1122,6 +1093,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261025-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261025-pm.mp3" length="4203216" type="audio/mpeg"/>
       <pubDate>Sun, 25 Oct 2026 09:42:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 研发工程师科技早报：AI成本骤降，智能汽车提速，机器人物理AI落地</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热门方向。AI大模型价格跳水，预示着应用门槛的降低；同时，我们也看到传统AI模型在特定领域的强大生命力，以及超大规模AI模型的部署新进展。在汽车领域，自动驾驶的蓝图正日益清晰，而机器人则在物理世界中加速落地。当然，我们也会对AI投资的现实回报和项目风险保持清醒。
+
+1. OpenAI和Anthropic的大语言模型（LLM）价格在几个月内下降高达80%（来源：Hacker News）
+   应用分析：这绝对值得我们关注并投入。作为EPS工程师，我们可以利用更便宜的LLM服务来辅助研发工作。例如，在需求分析阶段进行文档智能摘要、代码辅助生成与审查、构建故障诊断知识库，或者自动生成测试用例。尤其是在自动标定方面，可以尝试用LLM处理大量标定数据，发现模式，甚至辅助生成标定参数建议。成本的降低使得这些尝试的投入产出比更高，可以扩大试点范围，用数据驱动的方式提升我们的效率。
+   https://minimaxir.com/2026/10/cheap-llms/
+
+2. 一个十年前的卷积神经网络（CNN）在皮肤癌诊断方面超越了前沿的大语言模型（LLM）（来源：Hacker News）
+   应用分析：这项发现对我们有很强的指导意义。在EPS领域，我们关注电机控制策略的性能与鲁棒性。可以考虑在电机状态监测、故障诊断、传感器数据异常检测等任务中，继续深耕并优化传统的CNN或其他轻量级神经网络。例如，利用CNN分析电机电流、振动或声学信号，识别转矩脉动、轴承磨损等问题。这比直接引入LLM更务实、成本更低、更容易在MCU上实现，且能更快落地，带来明确的性能提升。
+   https://lynchlab.net/llm-skin-cancer
+
+3. Cerebras公司部署万亿参数AI模型（来源：Hacker News）
+   应用分析：暂时不直接投入，但需密切关注。尽管EPS的嵌入式环境无法直接运行万亿参数模型，但这类技术发展可以为我们提供思路。例如，未来线控转向系统可能需要更复杂的环境感知与决策模型，这类模型可以在云端或边缘高性能计算单元上运行，并将其决策指令下发给EPS执行器。我们应关注专用AI芯片和边缘计算的发展，思考如何将复杂AI模型的“智能”通过模型压缩、知识蒸馏等方式，下沉到EPS控制器可执行的轻量级模型中，实现更智能的助力策略或故障预测。
+   https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras
+
+4. 据Apollo经济学家称，AI并未给大多数公司带来财务回报（来源：TechCrunch）
+   应用分析：务必重视并贯彻。在EPS领域引入AI，必须紧密围绕“解决现在最想解决的问题”。例如，AI在提升电机控制策略性能、鲁棒性（如转矩脉动抑制、NVH优化）、自动标定效率、故障诊断与预测性维护等方面的应用，都需要量化其带来的收益：降低成本、缩短开发周期、提升产品质量、减少召回风险。任何AI方案都应先在小范围试点，验证其真实价值，而不是为了AI而AI，避免盲目投入。
+   https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/
+
+5. TechCrunch Mobility：自动驾驶的颜色是蓝绿色（来源：TechCrunch）
+   应用分析：我们必须高度关注并战略性投入。线控转向的架构设计、冗余与功能安全是我们的核心任务。我们需要深入研究自动驾驶系统对转向执行器的需求，包括高精度路径跟踪、快速响应、故障安全降级模式等。将AI引入助力策略优化、路感模拟、以及与自动驾驶决策层的协同控制，是提升线控转向性能的关键。这需要我们与自动驾驶团队紧密协作，共同定义接口和功能，确保EPS系统能够无缝支持未来的自动驾驶车辆。
+   https://techcrunch.com/2026/10/25/techcrunch-mobility-blue-green-is-the-color-of-autonomy/
+
+6. Teradyne Robotics与Sereact合作，在零售和物流领域推广物理AI（来源：The Robot Report）
+   应用分析：这项合作值得深度研究和借鉴。我们可以从机器人执行器控制中学习先进的电机控制策略，如更精细的力矩控制、更鲁棒的扰动抑制，以及无传感器或冗余传感方案。例如，机器人领域对伺服电机的FOC控制、模型预测控制（MPC）和状态观测器等算法的最新进展，可以直接迁移到EPS电机控制中，以提升转矩脉动抑制、NVH性能和无传感器控制的精度与鲁棒性。甚至可以探索将AI强化学习应用于EPS的电机控制，以适应不同的路况和驾驶员偏好，提升用户体验。
+   https://www.therobotreport.com/teradyne-robotics-partners-sereact-scale-physical-ai-retail-logistics/
+
+7. AI项目“墓地”：一份失败项目和初创公司的清单（来源：TechCrunch）
+   应用分析：我们务必吸取教训。在EPS中引入AI，我们必须避免“为了AI而AI”的陷阱。在设计AI辅助的控制策略、标定工具或故障诊断系统时，要从实际痛点出发，审慎评估技术成熟度、工程化难度和潜在风险。例如，在尝试用AI改进控制算法时，要确保其可验证性、可解释性，并满足ISO 26262功能安全要求。不要盲目追求前沿但尚未成熟的AI技术，而是要聚焦那些能带来明确、可控收益的AI应用，并做好充分的验证和风险管理，确保我们的投入能够真正落地并产生价值。
+   https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261026-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261026-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261026-am.mp3" length="3618576" type="audio/mpeg"/>
+      <pubDate>Sun, 25 Oct 2026 22:43:02 +0000</pubDate>
     </item>
   </channel>
 </rss>
