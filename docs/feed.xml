@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 25 Oct 2026 22:43:02 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 09:42:27 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI与机器人赋能汽车转向：从样本效率到安全边界</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大领域，为您精选七条重磅资讯。今天的亮点包括AI模型如何用更少数据解决复杂控制问题，车载网络的安全新范式，以及汽车巨头进军人形机器人背后的技术融合趋势。这些都将为我们电动助力转向，也就是EPS系统的未来发展，带来不少启发。
-
-1. 柯尔莫哥洛夫-阿诺德网络（KANs）提升强化学习样本效率与可解释性（来源：arXiv cs.LG）
-   应用分析：KANs作为一种新型神经网络架构，可以尝试替代传统的多层感知机，用于EPS的电机控制策略，比如永磁同步电机FOC控制中的参数自适应，或者无传感器控制中的状态观测器。我们也可以用KANs来学习复杂的助力曲线，其更好的可解释性有助于工程师理解模型的决策逻辑，从而加速手感调校过程，并更容易满足ISO 26262等功能安全标准对透明度的要求。考虑到其显著的样本效率提升，非常值得我们投入研究资源进行预研和概念验证，以期降低台架测试和整车标定的数据成本和时间。
-   https://arxiv.org/abs/2610.10627
-
-2. 基于时间Transformer的CAN总线异常检测技术，提升车载网络安全（来源：arXiv cs.LG）
-   应用分析：这项技术可以直接应用于EPS控制器与整车其他ECU通信的CAN总线数据监控。我们可以在EPS控制器或相关域控制器中集成这个轻量级Transformer编码器，实时分析CAN报文的时序和内容模式。通过联邦学习，可以利用来自不同车辆的匿名数据训练模型，提升对转矩请求、电机状态、传感器信号等异常的检测能力，例如识别出转向系统内部或外部的潜在故障、网络攻击或传感器漂移。这对于保障EPS的功能安全，实现线控转向的冗余和故障诊断设计，以及提升预测性维护能力，都具有非常高的实用价值和投入回报。
-   https://arxiv.org/abs/2610.10613
-
-3. AI代理在时间预算下高效运行的研究，助力实时控制系统（来源：arXiv cs.AI）
-   应用分析：虽然目前EPS的核心控制环路AI应用较少，但随着更高级别自动驾驶和线控转向的演进，AI代理进行复杂决策的需求会增加。我们可以借鉴其提出的“基于Harness的机制暴露时间信息并强制截止日期”以及“基于预算感知的强化学习”方法，为EPS的AI模块设计实时性保障机制。例如，在自动标定过程中，确保AI在规定时间内完成参数优化，避免因超时导致标定失败。在线控转向中，AI决策代理必须在毫秒级内完成路径规划和指令生成。这项研究值得我们长期关注和适度投入进行技术预研，为未来EPS系统架构和功能安全设计提供前瞻性参考。
-   https://arxiv.org/abs/2610.10833
-
-4. 特斯拉在欧洲将“完全自动驾驶”更名为“辅助驾驶”，反映行业与监管审慎趋势（来源：TechCrunch）
-   应用分析：这并非一项直接的技术方案，而是市场和监管趋势的风向标。它提醒我们，在推进线控转向等自动驾驶相关技术时，产品命名、功能宣传和实际能力之间必须保持高度一致性，避免过度承诺。同时，我们需要密切关注欧洲等主要市场的法规变化，确保我们EPS产品的设计和认证符合当地最严格的要求。特别是在线控转向的架构设计、冗余方案和故障降级策略上，必须以最高的功能安全标准来考量，并清晰界定人机共驾的责任边界。理解这些趋势，将有助于我们更务实地制定EPS产品路线图和市场导入策略，降低潜在的合规风险。
-   https://techcrunch.com/2026/10/09/tesla-renames-full-self-driving-to-tesla-assisted-driving-in-europe/
-
-5. IEEE推出AI芯片设计新项目，应对AI模型复杂性与“内存墙”挑战（来源：IEEE Spectrum）
-   应用分析：我们应该密切关注专用AI芯片在边缘侧，例如车载域控制器或EPS控制器中的应用进展。在EPS下一代控制器架构设计中，可以考虑引入支持AI加速的MCU或异构计算单元，以满足更复杂的AI控制算法，如神经网络观测器或模型预测控制的算力需求。特别要关注低功耗、高实时性的边缘AI芯片设计，这对于EPS的成本控制和NVH性能至关重要。与主流芯片供应商保持紧密合作，了解他们未来AI芯片的路线图，确保我们的EPS系统架构能够适应未来AI算法的算力需求，并为线控转向的冗余计算提供硬件支撑。
-   https://spectrum.ieee.org/master-ai-chip-principles-ieee
-
-6. 比亚迪人形机器人设计专利图曝光，汽车巨头进军机器人领域（来源：CnEVPost）
-   应用分析：这项资讯对我们来说非常重要，它直接印证了“机器人/人形机器人的关节执行器、伺服电机控制”与“EPS电机控制”之间的高度相关性。我们应积极关注比亚迪及其他汽车厂商在人形机器人关节执行器（包括伺服电机、减速器和驱动器）上的技术进展。研究其高精度力矩控制策略、高带宽响应、无传感器或冗余传感器方案，以及如何有效抑制振动和噪声。这些前沿技术可以直接启发我们改进EPS的电机选型、优化FOC矢量控制策略、提升转矩脉动抑制效果和NVH性能。甚至，人形机器人执行器在冗余设计上的探索，也可能为线控转向的冗余执行器方案提供新的思路。这是非常值得我们投入精力去研究和学习的交叉领域。
-   https://cnevpost.com/2026/10/09/byd-humanoid-robot-design-emerges/
-
-7. 信息解耦的轨迹设计，提高Sim-to-Real系统辨识可靠性（来源：arXiv cs.RO）
-   应用分析：这项技术可以直接应用于EPS永磁同步电机（PMSM）的参数辨识，以及整车层面的助力特性、阻尼特性等关键参数辨识。在台架测试或整车标定过程中，我们可以利用该框架设计更优的激励轨迹，例如特定的转向角速度、转向力矩组合，以最大化不同电机参数或助力特性参数之间的信息解耦度。这将使得辨识出的参数更加准确，建立的模型更加可靠，从而直接提升FOC控制的精度、无传感器控制的鲁棒性，以及助力手感调校的效率。这是解决我们“电机控制策略的性能与鲁棒性提升”和“把前沿研究快速转成可落地的EPS工程方案”核心问题的有效途径，非常值得我们高度投入和实践。
-   https://arxiv.org/abs/2610.10905</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261010-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261010-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261010-am.mp3" length="3861648" type="audio/mpeg"/>
-      <pubDate>Fri, 09 Oct 2026 22:42:30 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI安全边界与边缘智能：EPS工程师的今日早报</title>
       <description>各位研发工程师朋友，早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大方向，为您精选七条重磅资讯。从AI模型的安全与信任危机，到边缘AI芯片的最新进展；从机器人执行器的灵巧性瓶颈，到功率电子的硬核突破，每一条都可能深刻影响我们的EPS产品研发。让我们一起看看，这些技术浪潮如何与我们的转向系统擦出火花。
@@ -1129,6 +1093,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261026-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261026-am.mp3" length="3618576" type="audio/mpeg"/>
       <pubDate>Sun, 25 Oct 2026 22:43:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI智能体自学习、线控转向新机遇与模型无关控制</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报，我是你们的老朋友，技术分析师。今天，我们将聚焦AI前沿、智能汽车和机器人这三大热门方向，为您精选了七条最具价值的资讯。从AI智能体如何从错误中学习、到L4级自动驾驶的最新进展，再到机器人领域的力感知控制和模型无关控制策略，这些都与我们的汽车电动助力转向系统，也就是EPS的未来发展息息相关。话不多说，让我们马上进入今天的早报时间！
+
+1. Don't Forget What You Just Learned: Self-Directed Repair Turns Agent Mistakes Into Lasting Lessons（来源：arXiv cs.AI）
+   应用分析：这项技术对我们EPS系统基于AI的控制策略优化、自动标定和故障诊断模块来说，非常有前景。比如，当EPS系统在极端路况下表现不佳时，AI控制代理可以学习这些“错误”，并生成轻量级的适配器来修正策略，而无需重新训练整个模型。这些适配器可以存储并应用于类似的新车型或更新场景。在自动标定中，如果AI代理发现参数导致性能不佳，它也能记录并学习如何调整，提升标定效率。在故障诊断中，AI代理在诊断出误报或漏报时，能将错误转化为经验，提升诊断模型的准确性和鲁棒性。我认为这项技术非常值得投入，因为它直接关系到AI在EPS这种安全关键系统中的落地可行性，能显著降低AI模型部署和维护成本，并提升系统的安全性和用户体验。
+   https://arxiv.org/abs/2610.31846
+
+2. TACS-RF: Tool-driven Agentic Circuit Synthesis of RF and mmWave Modules（来源：arXiv cs.AI）
+   应用分析：这项技术对我们EPS的控制器硬件设计、功率级优化或电机电磁设计都具有启发性。我们可以借鉴其思路，开发类似的AI代理，驱动Altium Designer或Allegro等EDA工具，根据ISO 二六二六二功能安全要求、成本、尺寸、散热等约束，自动生成EPS控制器电路原理图或PCB布局的初步方案，并进行初步的信号完整性、电源完整性分析。在电机电磁设计方面，结合Ansys Maxwell或Motor-CAD等仿真工具，AI代理可以根据永磁同步电机（PMSM）的转矩密度、效率、NVH、成本等目标，自动探索不同的电机拓扑结构和绕组方案。长远来看，这种AI驱动的自动化设计和优化能力能显著缩短EPS产品的研发周期，降低开发成本，并提升设计质量，非常值得投入。
+   https://arxiv.org/abs/2610.31882
+
+3. Xpeng wins Guangzhou robotaxi trial approval in step toward public service（来源：CnEVPost）
+   应用分析：这项资讯对EPS研发方向有决定性影响。我们必须加速线控转向系统的架构研究和开发，包括机械解耦后的双冗余或多冗余执行器设计，以及对应的ISO 二六二六二 ASIL D功能安全认证路径。L四级自动驾驶对转向精度、响应速度和NVH要求极高，需要我们进一步提升永磁同步电机（PMSM）的FOC控制精度，开发更先进的转矩脉动抑制和纹波抖动抑制策略，确保转向的平顺性和准确性。此外，即使是L四，仍需考虑极端情况下的驾驶员接管，EPS系统需要设计平滑、安全的接管逻辑。L四级自动驾驶是汽车产业的未来方向之一，线控转向是其核心使能技术，我们必须紧跟这一趋势，投入是必然的。
+   https://cnevpost.com/2026/10/26/xpeng-wins-guangzhou-robotaxi-trial-approval/
+
+4. Model-Free Generative Stealthy Attacks on Safety-Critical Vehicle Cyber-Physical Systems（来源：arXiv eess.SY 控制系统）
+   应用分析：这项研究是对我们的风险警示，而非直接应用。我们需要利用其成果来增强防御。首先，必须开发更先进的故障诊断和异常检测算法，不仅关注系统内部参数的物理一致性，还要利用AI/机器学习方法，实时分析传感器数据流的统计特征和时序模式，识别出“看似正常但行为异常”的隐蔽攻击信号。其次，引入更多传感器数据进行多源数据融合，通过冗余信息交叉验证来提高数据信任度，例如，EPS控制器的电流/位置采样数据可以与车辆运动学数据进行比对。最后，设计更鲁棒的电机控制策略，使其在面对一定程度的传感器数据偏差时仍能保持系统稳定性，并完善故障降级策略。这是功能安全和网络安全的重要组成部分，必须投入。
+   https://arxiv.org/abs/2610.31864
+
+5. SEVI: Safe Evidential Real-World Reinforcement Learning（来源：arXiv cs.RO）
+   应用分析：SEVI框架对我们而言非常急需且能用。在EPS助力策略的强化学习优化过程中，SEVI可以作为安全层，实时监控转向力矩、转向角速度、电机电流等关键参数，预测潜在的“不安全”手感或超调风险。一旦预测到风险，就调用预设的传统PID控制器或安全区间内的RL策略进行干预，防止系统进入不稳定状态。在开发无传感器控制算法时，RL可能用于优化状态观测器，SEVI可以评估观测器输出的不确定性，当不确定性过高或预测有失稳风险时，触发冗余传感器切换或安全降级模式。这项技术非常值得投入，因为它是将AI，特别是强化学习，引入EPS等安全关键控制系统的关键一步，解决了RL在实际应用中最核心的安全顾虑，使得我们能够更放心地探索AI在性能提升和成本优化方面的潜力。
+   https://arxiv.org/abs/2610.31829
+
+6. FORCA: A Force-Aware Coding Agent for Contact-Rich Robot Manipulation（来源：arXiv cs.RO）
+   应用分析：FORCA的技术理念对我们EPS的助力手感调校、转矩脉动抑制以及路感还原等方面具有重要的启发性。我们可以借鉴其思路，让AI代理接收驾驶员的“手感反馈”（例如通过模拟器或真实驾驶员的评分），以及EPS电机输出力矩、转向角等数据，然后由AI代理自动生成或调整助力曲线、阻尼/回正/摩擦补偿等参数，优化转向手感。此外，AI代理还可以分析电机运行时的力矩脉动和振动数据，自动生成或优化FOC控制中的电流环参数、谐波注入策略，以抑制不必要的力矩纹波，提升NVH性能。当车辆行驶在不同路况时，AI代理也可以根据路面反馈的力矩变化，自适应地调整EPS的助力特性。FORCA展示了AI在力反馈控制领域的强大潜力，这正是EPS的核心竞争力，非常值得投入研究和应用。
+   https://arxiv.org/abs/2610.31841
+
+7. Stability Enhancement of Cascaded DC Systems via Source Output-Impedance Reshaping Using Model-Free Control（来源：arXiv eess.SY 控制系统）
+   应用分析：这项研究对我们EPS的功率级稳定性优化和电机控制器鲁棒性提升非常实用。EPS系统的功率级需要从车载电源获取电能并驱动电机。在电机负载快速变化时，功率级与车载电源之间可能出现阻抗匹配问题，影响系统稳定性。模型无关控制（MFC）可以用于优化功率级的输出阻抗特性，使其在宽负载范围内保持稳定，尤其是在面对恒功率负载（CPL）行为时。在FOC控制中，电流环的稳定性至关重要，MFC的思想可以应用于电流环设计，使其在面对电机参数变化（如温漂、磁饱和）或外部干扰时，仍能保持高动态响应和稳定性，而无需频繁进行参数辨识。MFC提供了一种在不增加模型复杂度的前提下，提升系统稳定性和鲁棒性的有效途径，对于我们这种对成本、体积和可靠性都有严格要求的系统，具有重要的工程价值，值得投入。
+   https://arxiv.org/abs/2610.32076</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261026-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261026-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261026-pm.mp3" length="3081168" type="audio/mpeg"/>
+      <pubDate>Mon, 26 Oct 2026 09:42:27 +0000</pubDate>
     </item>
   </channel>
 </rss>
