@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 26 Oct 2026 09:42:27 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 16:14:22 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI安全边界与边缘智能：EPS工程师的今日早报</title>
-      <description>各位研发工程师朋友，早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大方向，为您精选七条重磅资讯。从AI模型的安全与信任危机，到边缘AI芯片的最新进展；从机器人执行器的灵巧性瓶颈，到功率电子的硬核突破，每一条都可能深刻影响我们的EPS产品研发。让我们一起看看，这些技术浪潮如何与我们的转向系统擦出火花。
-
-1. 微软CEO纳德拉：所有AI模型都应假设“已被攻破”，Anthropic因AI失控关闭内部评估网络（来源：TechCrunch, The Verge）
-   应用分析：能不能用：目前阶段，直接将通用大模型用于EPS核心控制回路（如扭矩控制、手感调校）的决策层是不可接受的，风险太高。但在辅助性、非安全攸关的环节，如故障诊断、预测性维护、标定参数优化建议等，AI有潜力。怎么用：对于故障诊断，可以尝试用AI模型分析EPS系统传感器数据（电流、转速、位置、扭矩、温度等）的异常模式，提供早期预警或故障定位建议。在标定环节，AI可以作为辅助工具，根据大量驾驶数据和工程师反馈，推荐下一轮标定参数或优化曲线，但最终决策和验证仍需人工介入。对于线控转向，AI可用于冗余系统间的决策仲裁或异常行为检测，但核心控制逻辑必须是确定性和可验证的。值不值得投入：值得投入研究，但需限定应用范围。短期内，重点应放在AI辅助工具的开发和验证上，例如利用AI提升现有控制策略的鲁棒性分析效率，或优化HIL/SIL测试用例生成。长期看，AI在无传感器控制的鲁棒性提升、复杂路况下的力反馈优化等方面有巨大潜力，但需要建立严格的AI模型验证和可解释性框架，以满足功能安全要求。这是一个需要持续投入，但回报周期较长的方向。
-   https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/
-
-2. IEEE推出AI芯片设计新项目，应对边缘AI硬件复杂性；GlobalFoundries押注FD-SOI技术实现“物理AI”（来源：IEEE Spectrum, EE Times）
-   应用分析：能不能用：能用，而且是必需品。未来EPS控制器需要更强的边缘AI算力。怎么用：我们团队需要密切关注FD-SOI这类低功耗、高性能的边缘AI芯片技术发展，评估其在EPS控制器中的应用潜力。例如，将部分AI算法（如神经网络观测器、预测控制器）从传统MCU迁移到专门的边缘AI加速器上，或者直接集成到下一代MCU中，以提升FOC控制、无传感器控制的实时性和精度，同时降低功耗。此外，更强的边缘AI算力也可能支持更复杂的故障诊断模型或自适应标定算法。值不值得投入：值得大力投入跟踪和预研。与芯片供应商保持紧密合作，了解其边缘AI芯片路线图，并参与早期评估。内部可以着手研究如何在现有或未来边缘AI硬件平台上优化AI模型部署，例如量化、剪枝等，以满足EPS的资源限制。这是提升EPS系统未来竞争力的关键。
-   https://spectrum.ieee.org/master-ai-chip-principles-ieee
-
-3. 机器人报告：灵巧性是物理AI的真正瓶颈，人形机器人演示仍未通过通用性测试（来源：The Robot Report）
-   应用分析：能不能用：能用，尤其是机器人领域对执行器控制的深度研究和AI应用方法。怎么用：首先，我们可以借鉴机器人领域通过大量真实世界数据训练模型的方法，收集不同驾驶员、不同路况下的EPS运行数据，利用AI模型来优化助力曲线、阻尼和回正补偿参数，以实现更个性化、更适应性强的驾驶手感。其次，研究机器人如何通过感知-决策-执行的闭环来提升系统在未知环境下的鲁棒性，可以启发我们开发更智能的电机控制策略，例如利用神经网络观测器，在传感器失效或参数漂移时提供更鲁棒的状态估计。最后，机器人领域在模拟环境和真实环境之间的迁移学习经验，可以帮助我们优化MIL/SIL/HIL测试的效率，生成更具挑战性和多样性的测试场景，加速控制策略的验证。值不值得投入：非常值得投入。机器人执行器控制是与EPS电机控制高度相关的交叉点，其技术和方法可以直接迁移。投入资源研究机器人领域的最新进展，尤其是其在物理AI可靠性、通用性上的突破，对我们提升EPS产品性能和竞争力有战略意义。
-   https://www.therobotreport.com/why-dexterity-is-physical-ai-real-bottleneck/
-
-4. 波士顿动力分享其重新设计的人形机器人Atlas手部细节（来源：The Robot Report）
-   应用分析：能不能用：能用，其执行器设计和控制思路具有高度借鉴价值。怎么用：我们可以从Atlas手部的电机选型、功率密度、集成方式中学习，思考如何在有限空间内实现EPS电机的高性能输出，特别是在线控转向中对执行器紧凑性和响应速度的高要求。同时，学习其手部传动机构的设计，如何在保证灵巧性的同时实现高精度和高可靠性，这对于我们优化EPS的减速机构、消除齿隙和摩擦有启发。此外，尽管具体算法未公开，但可以推断其对位置、力矩、速度的精细控制能力。这促使我们思考如何在EPS中应用更先进的力矩控制、阻抗控制等策略，以提升路感还原和手感调校的精细度。值不值得投入：值得深入研究。作为行业标杆，波士顿动力的技术细节是学习和创新的重要源泉。可以组织内部技术分享，甚至尝试逆向分析其公开视频中的运动控制特征，寻找与EPS电机控制的共通之处，并将其转化为具体的工程改进方案。
-   https://www.therobotreport.com/boston-dynamics-gives-more-insight-into-its-redesigned-humanoid-hand/
-
-5. 功率电子周洞察：SYNDEM和VSM架构提升电网稳定性，工程钻石解决数据中心超高功率密度，混合型晶闸管/SiC JFET固态接触器（来源：Power Electronics News）
-   应用分析：能不能用：能用，而且是EPS功率级未来演进的重要方向。怎么用：我们可以积极评估并逐步导入SiC MOSFET或JFET在EPS功率级中的应用。SiC器件能显著降低开关损耗，提升系统效率，减小散热器体积，从而实现EPS控制器更紧凑、更轻量化的设计，并可能提高系统响应速度。同时，借鉴工程钻石在超高功率密度散热中的应用思路，研究更高效的散热材料和结构设计，以应对未来EPS电机更高功率输出带来的热管理挑战，特别是对于线控转向系统，功率密度会更高。此外，混合型固态接触器可能为EPS系统提供更快速、更可靠的电源控制和故障隔离能力，提升功能安全等级。值不值得投入：绝对值得大力投入。SiC器件在汽车电动化领域已是明确趋势，EPS作为关键执行器，必须紧跟这一潮流。需要投入研发资源进行SiC功率级的设计、仿真、测试和验证，同时关注新的散热技术，以确保EPS系统在性能、成本和可靠性上的竞争力。
-   https://www.powerelectronicsnews.com/syndem-and-vsm-architectures-improve-futures-grid-stability-engineered-diamonds-solve-extreme-power-densities-in-data-centers-hybrid-thyristor-sic-jfet-solid-state-contactors-power-electro/
-
-6. 最新研究显示，AI模型在算法创新方面仍难以匹敌人类（来源：Hacker News）
-   应用分析：能不能用：不能直接用来替代人类进行核心算法的原创性开发。怎么用：这篇文章的价值在于指导AI的应用策略。我们应该将AI定位为增强人类工程师能力的工具，而非替代者。具体来说，可以利用AI进行大规模数据分析、模式识别，辅助工程师发现现有算法的瓶颈或优化方向，例如识别电机控制中难以通过传统方法解决的转矩脉动模式。同时，将AI应用于那些规则明确、重复性高但缺乏创造性的任务，如自动生成测试用例、代码重构建议、初步的参数调整。最后，构建基于AI的知识库，帮助工程师快速检索和学习现有解决方案，加速新项目的启动。值不值得投入：值得投入研究，但更侧重于AI赋能工程师的工具链和工作流程优化，而不是期望AI独立完成核心算法创新。通过AI提升工程师的效率和问题解决能力，释放更多精力投入到真正的创新工作中。
-   https://epoch.ai/publications/innovationeval
-
-7. 非文本AI模型Jev推出数周估值达75亿美元，号称比LLM更快、更省Token（来源：TechCrunch）
-   应用分析：能不能用：有潜力，非常值得关注和初步探索。怎么用：Jev这类模型可能非常适合处理EPS系统中的原始传感器数据（电流、电压、编码器信号等），进行高效的噪声抑制、特征提取，为后续的电机控制或故障诊断提供更纯净、更有用的输入。其次，传统状态观测器（如卡尔曼滤波）计算量相对固定，但Jev可能能学习更复杂的非线性关系，实现更精确、更鲁棒的实时状态估计，例如无传感器控制中的转子位置和速度。最后，相比于大型语言模型，如果Jev确实效率更高，那么可以考虑将其部署在EPS控制器中，进行实时的异常检测和故障模式识别，提升系统的预测性维护能力。值不值得投入：值得投入小规模的跟踪和概念验证性研究。由于是新模型，需要先了解其具体技术细节和公开接口，评估其处理时间序列数据或控制信号的能力。如果技术成熟度高，且确实能提供性能和效率优势，那么投入资源进行原型开发和测试，探索其在EPS实时控制和诊断中的应用，将具有战略意义。
-   https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261011-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261011-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261011-am.mp3" length="4981248" type="audio/mpeg"/>
-      <pubDate>Sat, 10 Oct 2026 22:42:49 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI安全与机器人灵巧性：EPS工程师的未来方向</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯，并结合我们汽车EPS，也就是电动助力转向产品研发的视角，深入分析这些技术对我们工作的影响和应用潜力。话不多说，我们马上开始！
@@ -1129,6 +1093,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261026-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261026-pm.mp3" length="3081168" type="audio/mpeg"/>
       <pubDate>Mon, 26 Oct 2026 09:42:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI、智能汽车与机器人：EPS工程师的未来赛道洞察</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的“科技早报”，我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化以及机器人技术这三大热门领域，为您精选出七条最具价值的资讯。从AI如何助力硬件设计，到自动驾驶带来的线控转向挑战；从汽车网络安全的新威胁，到机器人安全强化学习的最新进展，每一条都与我们作为EPS工程师的日常工作和未来发展息息相关。话不多说，让我们立刻进入今天的早报时间！
+
+1. TACS-RF: Tool-driven Agentic Circuit Synthesis of RF and mmWave Modules（来源：arXiv cs.AI）
+   应用分析：能用，值得投入。我们可以探索利用类似Agent驱动的自动化设计工具链，来优化EPS控制器中的功率级（如逆变器）和传感器接口电路。例如，让LLM代理根据FOC算法的性能需求、ISO 二六二六二功能安全等级、成本和NVH指标，自动生成并仿真不同的MOSFET驱动、电流采样电路方案，甚至进行PCB布局的初步优化。这有望显著加速硬件迭代，减少大量手动设计和验证的周期。初期可投入小团队研究可行性，重点是AI工具链的集成和领域知识嵌入。
+   https://arxiv.org/abs/2610.31882
+
+2. Don't Forget What You Just Learned: Self-Directed Repair Turns Agent Mistakes Into Lasting Lessons（来源：arXiv cs.AI）
+   应用分析：能用，值得投入。我们可以设想一个AI代理，专门负责EPS的助力曲线自动标定。当它在特定路况或驾驶员偏好下，未能提供最佳手感时，利用这种“自我导向”机制，可以生成一个针对性的轻量级适配器，永久性地改进其标定策略，而不会像传统方法那样，在下次更新时忘记之前的经验。同样，在故障诊断中，AI可以从误判中学习，持续提升诊断的准确性。初期，我们可以构建原型系统，利用离线数据进行训练，并在HIL测试台上进行验证，评估其在复杂工况下的泛化能力和学习效率。
+   https://arxiv.org/abs/2610.31846
+
+3. VW secures L3 road test permit in Hefei, advancing toward 2027 target（来源：CnEVPost）
+   应用分析：能用，且值得长期投入。L3级自动驾驶要求EPS系统提供更高级别的精度、响应速度和冗余功能。这促使我们必须加速线控转向的架构设计研究，例如如何实现多通道冗余、制定更复杂的故障诊断与降级策略，以及如何与车辆中央控制器进行深度、安全的集成。同时，我们还需要关注L3级系统对EPS电机控制提出的新挑战，比如需要更平滑、更精准的转矩输出，以及更低的NVH要求。我们可以通过FOC、模型预测控制（MPC）等高级控制算法进行优化。这需要持续的研发投入，是EPS未来发展的核心方向之一。
+   https://cnevpost.com/2026/10/26/vw-secures-l3-road-test-permit-hefei/
+
+4. TE Connectivity launches TE MINI FAKRA coaxial connector system for vehicle data links（来源：Charged EVs）
+   应用分析：能用，值得关注和评估。在线控转向（Steer-by-Wire）架构中，方向盘与转向执行器之间、不同ECU之间的数据传输量会大幅增加，对连接器的性能、尺寸和可靠性提出了更高的要求。TE MINI FAKRA这类连接器能提供更紧凑的布线空间，同时保证高速射频信号的传输质量。我们应该评估其在EPS控制器内部连接、传感器数据传输以及与车辆骨干网络连接中的应用潜力，特别是在抗干扰、电磁兼容（EMC）性能和ISO 二六二六二功能安全等级认证方面的表现。
+   https://chargedevs.com/newswire/te-connectivity-launches-te-mini-fakra-coaxial-connector-system-for-vehicle-data-links/
+
+5. Model-Free Generative Stealthy Attacks on Safety-Critical Vehicle Cyber-Physical Systems（来源：arXiv eess.SY 控制系统）
+   应用分析：必须投入，刻不容缓。这种无模型隐蔽攻击的危险之处在于，它能伪装成正常的传感器数据或控制指令，导致转向系统在看似正常的情况下失控。我们必须立即加强EPS的故障诊断和异常检测能力，不仅要检测传统的传感器或执行器故障，更要开发基于机器学习或行为分析的异常模式识别算法，以应对这种“隐蔽攻击”。这需要我们与网络安全团队紧密合作，进行大量的仿真和HIL测试，开发针对性的防御策略，确保EPS在复杂网络攻击下的鲁棒性。这是保障未来智能汽车安全的关键一环。
+   https://arxiv.org/abs/2610.31864
+
+6. FORCA: A Force-Aware Coding Agent for Contact-Rich Robot Manipulation（来源：arXiv cs.RO）
+   应用分析：能用，值得投入。EPS电机控制的一个核心目标就是提供精确的力矩输出和优良的手感。FORCA的思路可以借鉴到EPS的自动标定和控制策略优化中。我们可以利用AI代理，结合驾驶员的“手感偏好”（可以通过模拟器或真实驾驶数据获取）和车辆传感器数据（如路面反馈力），自动生成和调整助力曲线、阻尼/回正补偿参数。尤其是在线控转向中，如何模拟真实路感并提供精确的力反馈，是核心挑战。FORCA的力感知和自适应能力为我们提供了新的思路，我们可以探索开发一个“力感知EPS标定代理”。
+   https://arxiv.org/abs/2610.31841
+
+7. SEVI: Safe Evidential Real-World Reinforcement Learning（来源：arXiv cs.RO）
+   应用分析：能用，并且必须投入。如果我们尝试将强化学习应用于EPS的电机控制策略或助力策略，安全性永远是首要考虑。SEVI的“证据安全评论器”概念可以借鉴，用于实时监测EPS控制器的输出和电机状态。如果AI预测到可能导致不安全工况，比如转矩失控、电机过热、系统震荡等，就立即触发预设的安全恢复策略，将控制权交由离线训练的、经过充分验证的安全策略。这能帮助我们在HIL和SIL测试，甚至受控的台架测试中，安全地探索RL算法在EPS中的应用，从而大幅降低在真实世界中部署的风险。这是将前沿AI控制技术落地到安全关键系统的重要一步。
+   https://arxiv.org/abs/2610.31829</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261027-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261027-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261027-pm.mp3" length="4120416" type="audio/mpeg"/>
+      <pubDate>Mon, 26 Oct 2026 16:14:22 +0000</pubDate>
     </item>
   </channel>
 </rss>
