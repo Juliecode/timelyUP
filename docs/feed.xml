@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 26 Oct 2026 22:42:53 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 22:43:58 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI安全需“紧急制动”，线控转向再提速，机器人灵巧操控是瓶颈</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化以及机器人领域，为大家精选了七条重磅资讯，希望能为您的研发工作带来新的灵感和思考。
-
-1. Microsoft’s Satya Nadella says AI models need an ‘emergency brake’（来源：TechCrunch）
-   应用分析：如果我们要将AI引入EPS的助力策略、故障诊断或预测性维护中，例如使用强化学习控制器或神经网络观测器，那么必须设计一套可靠的“紧急制动”机制。这可能包括AI输出的置信度评估、基于规则的安全兜底逻辑，以及在AI模型失效或输出异常时能快速切换到传统控制或安全降级模式。这需要投入研究AI模型的可解释性、鲁棒性验证方法，并将其纳入ISO 26262的危害分析与风险评估(HARA)中。这是AI在车规级应用的前提，值得我们持续投入和深入研究。
-   https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/
-
-2. TechCrunch Mobility: A roadblock clears for self-driving trucks（来源：TechCrunch）
-   应用分析：这条消息提醒我们线控转向的研发必须加速，特别是在冗余架构设计（如双机或多机热备份）、传感器融合以及与整车自动驾驶系统的数据交互和决策接口方面。我们需要关注SbW系统的故障诊断与降级策略，确保在任何情况下都能保持转向能力。同时，自动驾驶对转向手感的要求可能从“驾驶员体验”转向更注重“系统响应性”，这会影响助力策略的调校逻辑。这是EPS的未来，值得我们大量投入进行前瞻性布局。
-   https://techcrunch.com/2026/10/11/techcrunch-mobility-a-roadblock-clears-for-self-driving-trucks/
-
-3. Why dexterity is physical AI’s real bottleneck（来源：The Robot Report）
-   应用分析：这篇文章印证了我们对电机控制策略性能与鲁棒性提升的关注是正确的。我们可以积极从机器人领域借鉴更先进的电机控制算法，例如针对非线性、摩擦、不确定性的自适应控制或模型预测控制。同时，在无传感器控制或冗余传感方案中，如何提升“感知”的灵巧性和可靠性也是关键。这值得持续投入，通过跨领域学习，有望为解决EPS电机控制难题带来新的突破口。
-   https://www.therobotreport.com/why-dexterity-is-physical-ai-real-bottleneck/
-
-4. Learning to use local AI is exciting, overwhelming, and frustrating（来源：The Verge）
-   应用分析：如果我们计划将AI模型（如用于故障诊断、参数辨识或自动标定的神经网络）部署到EPS的嵌入式控制器上，我们需要深入评估其在车规级MCU上的运行效率、内存占用和实时性。本地AI意味着数据隐私得到保障，这在汽车领域至关重要。我们可以从文中提到的“令人沮丧”的经验中吸取教训，例如选择轻量化、易于部署的AI模型，并提前考虑算力、功耗和散热。这是一个值得探索的方向，但需要务实的投入和充分的验证。
-   https://www.theverge.com/ai-artificial-intelligence/1008484/learning-local-ai-hermes-qwen-model-mac-studio-testing-diary-progress
-
-5. Talorys – A self-hosted personal AI agent on Cloudflare's free tier（来源：Hacker News）
-   应用分析：这给了我们启发：是否可以在EPS的开发、测试或售后服务工具链中，构建基于边缘计算的“自托管AI代理”？例如，在诊断仪上运行一个轻量级AI模型，根据实时数据进行初步故障判断或预测性维护建议，而无需依赖云端。这可以提升诊断效率和数据安全性。在EPS标定过程中，也可以探索本地AI辅助标定。这种低成本、本地化的部署方式值得小范围验证和概念验证，以探索其在工程工具链中的潜力。
-   https://github.com/rociiu/talorys
-
-6. Valen's Memory Safety: A New Kind of Borrow Checking（来源：Hacker News）
-   应用分析：尽管Valen的“借用检查”可能是一种特定于新语言或框架的机制，但其背后提升内存安全的理念对我们非常重要。在EPS控制器软件开发中，我们需要持续关注内存管理、指针使用和并发访问的安全问题。可以研究这种新机制的原理，看是否能将其思想或最佳实践融入到我们现有的嵌入式C语言开发规范、代码审查流程或静态分析工具中，以减少内存相关的缺陷。这值得我们在软件开发流程和工具链层面进行研究和评估，以提升软件质量和功能安全。
-   https://verdagon.dev/blog/valen-group-borrowing
-
-7. China proposes tighter vehicle design rules, reiterates concealed-handle ban and targets foldable screens（来源：CnEVPost）
-   应用分析：虽然EPS本身没有隐藏式门把手，但这条法规提示我们，在设计EPS系统与整车其他电子电气部件的交互时，要充分考虑法规要求和潜在的用户安全风险。例如，线控转向系统需要确保在极端情况下（如碰撞或断电）仍能提供基本的转向能力，并且其操作逻辑要符合直觉和安全规范。这促使我们在系统架构设计和功能安全分析时，更全面地考虑整车层面的法规符合性和用户体验影响。持续关注行业法规动态，并将其纳入EPS系统的需求分析和风险评估中，非常重要。
-   https://cnevpost.com/2026/10/10/china-proposes-tighter-vehicle-design-rules/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261012-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261012-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261012-pm.mp3" length="2299392" type="audio/mpeg"/>
-      <pubDate>Sun, 11 Oct 2026 16:19:44 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI与智能出行：从LLM认知鸿沟到线控转向新机遇</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人三大领域，为您精选了七条重磅资讯。从大型语言模型的认知差异，到自动驾驶卡车的技术突破，再到实用型机器人的设计理念，每一条都可能深刻影响我们的研发方向和技术选型。让我们一起洞察行业趋势，探索技术落地的新机遇。
@@ -1129,6 +1093,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261027-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261027-am.mp3" length="4049136" type="audio/mpeg"/>
       <pubDate>Mon, 26 Oct 2026 22:42:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI赋能汽车智驾与机器人：EPS研发新机遇</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是您的主播兼技术分析师。今天，我们为您精选了七条重磅资讯，涵盖了AI前沿、汽车智能化和机器人三大方向，希望能为您的EPS研发工作带来新启发。接下来，就让我们一起深入了解。
+
+1. End-to-End Differentiable Diffusion Conditioning for Physics-Informed Optimization（来源：arXiv cs.LG）
+   应用分析：能不能用：能用，且非常值得投入研究。怎么用：我们可以将EPS电机控制策略中的复杂参数，比如FOC控制器增益、弱磁控制曲线、转矩脉动补偿系数等，作为D2C的优化目标。利用仿真数据或少量台架测试数据构建代理模型，然后通过D2C进行端到端的梯度优化，以满足转矩密度、效率、NVH和手感调校的多目标需求。特别适用于在有限数据下，对难以通过传统方法精细调优的非线性、多变量耦合的控制参数进行优化，例如自动生成不同工况下的助力曲线，或在无传感器控制中优化观测器参数以提升鲁棒性。值不值得投入：非常值得。这解决了传统优化方法在复杂物理系统（如EPS电机控制）中迭代成本高、效率低的问题。通过引入物理信息和可微分特性，有望实现更高效、更精确的控制参数优化，直接提升EPS产品的性能和开发效率。可以考虑与高校或AI研究机构合作，探索D2C在具体EPS控制场景中的落地。
+   https://arxiv.org/abs/2610.31721
+
+2. Google’s Genie 4 world model adds audio, more realistic worlds, and real-time steering（来源：TechCrunch）
+   应用分析：能不能用：能用，且非常有潜力。怎么用：我们可以将Genie 4用于线控转向系统和自动驾驶系统的虚拟仿真与测试。利用其更真实的物理世界和实时转向能力，构建高保真度的整车动力学模型和路况环境，对EPS的线控转向控制算法进行MIL/SIL/HIL级别的验证。例如，模拟在极端路况、不同摩擦系数下的车辆响应，评估EPS助力策略和手感调校的效果，并测试线控转向系统的冗余和功能安全策略。其实时转向能力也能用于训练基于强化学习的控制策略，或生成用于自动驾驶决策的训练数据。值不值得投入：值得。高保真度仿真能大幅减少物理测试成本和周期，加速线控转向等前沿技术的研发。对我们正在做的线控转向演进方向，这是一个非常有力的工具，可以作为下一代仿真验证平台的关键组成部分。
+   https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/
+
+3. A Differentiable Chassis Safety Layer for Intelligent Vehicle Motion Control（来源：arXiv cs.RO）
+   应用分析：能不能用：能用，且是EPS走向智能化和线控化的核心技术之一。怎么用：在线控转向系统设计中，EPS作为底盘执行器，其输出转矩和转向角速度受到电机能力、轮胎附着力及车辆稳定性（如侧向力）的严格限制。我们可以将这个可微分底盘安全层集成到线控转向的整体控制架构中。具体来说，将EPS的电机转矩输出限制、转速限制，以及车辆的侧向加速度、横摆角速度等安全边界作为安全层约束。上层线控转向控制器生成的转向指令会通过此安全层进行优化，确保在满足驾驶员意图和自动驾驶任务的同时，不违反任何物理安全限制，并能通过梯度的反向传播来指导上层控制策略的学习和调整，实现性能和安全的协同优化。值不值得投入：极度值得。这是实现线控转向功能安全和高性能的关键路径。它提供了一种将功能安全要求直接融入控制设计的方法，避免了后置安全滤波器可能带来的性能折衷。对于我们正在推进的ISO 26262功能安全和线控转向架构设计，具有直接的指导意义和应用价值。
+   https://arxiv.org/abs/2610.33476
+
+4. SCET-CBF: Speed-Calibrated Soft Guidance for One-Step Dynamic Navigation（来源：arXiv cs.RO）
+   应用分析：能不能用：能用，且是提升EPS在ADAS/AD场景中安全性的重要方向。怎么用：在自动驾驶或高级辅助驾驶系统中，线控转向EPS接收来自上层规划系统的转向指令。SCET-CBF可以在上层路径规划和底层EPS控制之间，作为安全协调器。当车辆面临碰撞风险时，SCET-CBF可以根据车辆速度、转向能力和障碍物信息，动态调整转向和加减速指令，确保EPS执行的转向操作既能避免碰撞，又能维持车辆的稳定性。例如，在自动泊车或狭窄道路行驶时，该方法可以帮助EPS在保持舒适转向手感的同时，规避突然出现的障碍物，并在必要时进行柔性刹车辅助，提升整体系统的鲁棒性和安全性。值不值得投入：值得。对于线控转向系统的功能安全和鲁棒性，以及与ADAS/AD系统的协同工作，CBF及其改进型如SCET-CBF是非常重要的控制理论。它能提供可证明的安全保障，弥补传统规划在极端情况下的不足。可以深入研究其在EPS驱动的线控转向系统中的集成方式，尤其是在紧急避障场景下的性能表现。
+   https://arxiv.org/abs/2610.33471
+
+5. Proterial and FEV simulate an amorphous-alloy EV traction motor without heavy rare earths（来源：Charged EVs）
+   应用分析：能不能用：能用，且是EPS电机未来发展的重要方向。怎么用：我们可以将非晶合金铁芯和无重稀土磁体技术引入EPS电机的设计和选型中。通过仿真工具（如有限元分析）评估这种电机在EPS系统中的性能，包括转矩密度、效率、温升、NVH特性（如转矩脉动、电磁噪声）。这有助于我们在满足EPS性能要求（如助力输出、响应速度）的前提下，降低成本、减少对稀土资源的依赖，并改善电机运行的平顺性。这与我们关注的电机选型、转矩密度、效率、NVH、成本和可靠性高度契合。值不值得投入：值得。虽然目前是牵引电机领域的研究，但其材料和设计理念对EPS电机有很强的借鉴意义。通过早期仿真评估和材料研究，可以为下一代EPS电机产品储备技术，提升我们在电机控制策略（如转矩脉动抑制）和电机设计方面的竞争力。
+   https://chargedevs.com/newswire/proterial-and-fev-simulate-an-amorphous-alloy-ev-traction-motor-without-heavy-rare-earths/
+
+6. RAIWAY: A Large-Wheeled Bipedal Robot with Contact-Informed Blind Locomotion（来源：arXiv cs.RO）
+   应用分析：能不能用：能用，且是提升EPS无传感器控制和鲁棒性的重要思路。怎么用：我们可以将“接触信息感知型盲式运动控制”的思想迁移到EPS电机控制中。例如，在无传感器电机控制中，如何从电机电流、电压等本体传感器信息中，更准确地推断出转子位置、速度以及外部负载转矩。特别是在EPS故障诊断或降级模式下，当某些传感器失效时，这种“盲式”感知和控制能力可以帮助系统维持基本的助力功能，提升功能安全。此外，在手感调校中，如何通过电机自身的响应数据来推断路面反馈力，从而更精确地进行阻尼、回正和摩擦补偿，提升路感还原度。值不值得投入：值得。机器人执行器控制是我们的重点关注方向之一。RAIWAY的研究提供了一种新的视角，即如何在没有直接接触传感器的情况下，通过高级控制策略和本体感知来应对复杂环境。这对于EPS无传感器控制方案的研发，以及提升现有控制策略的鲁棒性和成本竞争力，具有潜在的突破性。
+   https://arxiv.org/abs/2610.33172
+
+7. MOTIO: Agentic Skill Engineering for Reality-Grounded Humanoid Loco-Manipulation（来源：arXiv cs.RO）
+   应用分析：能不能用：能用，且是提升EPS开发效率和智能化的前沿探索。怎么用：我们可以将MOTIO的核心思想应用于EPS的自动标定和复杂助力策略的生成。例如，通过收集人类驾驶员在不同路况下（如低速泊车、高速变道、颠簸路面）的转向操作视频和对应的EPS数据（转矩、角度、力矩传感器信号），利用类似MOTIO的智能体系统，学习并生成针对特定场景的助力曲线或阻尼回正参数。智能体可以在高保真度仿真环境中（如结合Genie 4）进行物理执行和反馈，迭代优化这些参数，甚至生成新的电机控制策略，以达到最佳的手感和性能。这能显著提高标定效率，并探索传统方法难以实现的精细化控制。值不值得投入：值得。这是一个前瞻性的研究方向，与我们“用AI/数据驱动方法改进控制、标定效率、故障诊断与预测性维护”以及“把前沿研究快速转成可落地EPS工程方案”的目标高度一致。虽然直接落地可能需要较长时间，但早期探索可以为未来EPS系统的智能化和自动化开发打下基础。可以考虑与机器人或AI控制领域的团队进行交叉合作。
+   https://arxiv.org/abs/2610.33446</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261028-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261028-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261028-am.mp3" length="1325376" type="audio/mpeg"/>
+      <pubDate>Tue, 27 Oct 2026 22:43:58 +0000</pubDate>
     </item>
   </channel>
 </rss>
