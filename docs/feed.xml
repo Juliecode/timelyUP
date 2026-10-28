@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 28 Oct 2026 16:11:27 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 22:43:39 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾与机器人融合：AI驱动下的转向与执行器新机遇</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦于人工智能、汽车智能化和机器人这三大前沿领域，为您精选了七条重磅资讯。从AI如何自我优化控制策略，到自动驾驶的安全挑战，再到电力电子器件的创新，以及汽车与机器人领域的人才融合，每一条都可能为您的EPS研发工作带来新的启发。让我们一起深入分析，看看这些前沿技术如何转化为我们手中的工程实践。
-
-1. EliteTable: Self-Improving Program Search for Executable Control Policies（来源：arXiv cs.AI）
-   应用分析：这项技术值得我们投入关注和研究。作为EPS研发工程师，我们面临电机控制策略性能与鲁棒性提升的挑战，例如FOC矢量控制的参数自适应、无传感器控制的观测器优化，以及转矩脉动和NVH抑制。EliteTable这种LLM引导的自改进程序搜索算法，可以帮助我们自动探索和生成创新的控制算法结构，或者优化现有控制器的参数。例如，我们可以定义EPS电机控制的目标函数（如转矩响应、效率、NVH表现），让AI自动生成并迭代优化控制代码或Simulink模型，从而显著提升开发效率，甚至发现人工难以发现的最优策略，减少大量耗时的人工调参和试错工作。
-   https://arxiv.org/abs/2610.12536
-
-2. EvoBelief: Falsifiable World Models for Self-Improving LLM Agents（来源：arXiv cs.AI）
-   应用分析：这项技术对提升EPS系统的鲁棒性和智能化诊断能力非常有价值，值得投入。在线控转向（Steer-by-Wire）的演进方向上，系统对环境感知和自适应能力要求更高。我们可以利用EvoBelief的理念，为EPS系统构建一个自进化的世界模型，用于故障诊断与预测性维护。例如，当EPS电机出现轻微异响、转矩输出异常等“意外结果”时，EvoBelief可以根据这些现象，自动形成关于电机轴承磨损、传感器漂移或控制参数失调的“可证伪假设”。然后，系统可以通过内部诊断程序或在特定驾驶工况下收集数据进行“受控实验”来验证这些假设，从而实时更新对EPS系统健康状态的“信念”，及时预警并采取降级措施，大幅提升系统的安全性和可靠性，并降低维护成本。
-   https://arxiv.org/abs/2610.12789
-
-3. Laplace Intelligence red-teams robots and self-driving cars before they hit the real world（来源：TechCrunch）
-   应用分析：这项技术对我们的EPS控制器验证流程至关重要，非常值得投入。在EPS控制器的软硬件开发中，MIL/SIL/HIL（模型在环、软件在环、硬件在环）测试是确保功能安全（ISO 26262）的关键环节。我们可以借鉴Laplace Intelligence的方法，引入AI代理和交互式仿真，在虚拟环境中对EPS系统进行“红队测试”。例如，利用AI代理生成各种极端或边界工况，如高频转向、突然的路面冲击、不同驾驶员手感偏好，甚至模拟电机参数随温度漂移、传感器信号干扰等情况，自动探索助力策略和手感调校中的潜在弱点。这能极大地提升测试覆盖率和效率，帮助我们发现传统测试方法难以触及的故障模式，确保EPS系统在复杂多变环境下的性能和鲁棒性。
-   https://techcrunch.com/2026/10/13/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world/
-
-4. The feds are looking into reports of Tesla’s robotaxis speeding through school zones（来源：The Verge）
-   应用分析：这项新闻对EPS研发，尤其是未来线控转向（Steer-by-Wire）系统的功能安全设计，具有重要的警示意义。虽然EPS目前主要提供助力，但线控转向将直接接管驾驶员的转向意图。特斯拉Robotaxi在学校区域超速的指控，凸显了自动驾驶系统在特定敏感区域（如学校、医院、行人密集区）的AI决策失误和安全风险。在设计线控转向系统时，我们必须将这种“AI决策与环境约束不符”的可能性纳入ISO 26262功能安全分析和风险评估。这意味着除了硬件冗余和故障安全机制，软件层面还需要考虑如何识别并强制执行特定区域的交通规则，如何进行更精细的路况感知和行为预测，以及在AI系统可能出现误判时，如何设计可靠的驾驶员接管策略和降级方案，以确保最高等级的安全性。
-   https://www.theverge.com/transportation/1010364/tesla-robotaxi-school-zonespeeding-investigation
-
-5. Toray tests a prototype film capacitor in an inverter at 150° C（来源：Charged EVs）
-   应用分析：这项技术对我们的EPS系统电机控制器设计具有直接且重要的应用价值，值得投入。EPS系统中的电机控制器，特别是功率级，是热量产生的主要来源。东丽公司开发的原型薄膜电容器，能够在150摄氏度高温下稳定工作，这意味着我们可以将其直接应用于EPS电机控制器中的直流母线滤波或谐振电路。更高的耐温能力将允许我们在更恶劣的环境温度下工作，或者在相同环境下，大幅降低对散热系统的要求。这可能实现更小、更轻的空冷设计，从而降低EPS系统的整体体积、重量和成本，同时改善NVH性能，因为更小的散热器通常意味着更少的振动和噪音。这对于提升EPS产品的竞争力至关重要。
-   https://chargedevs.com/newswire/toray-tests-a-prototype-film-capacitor-in-an-inverter-at-150-c/
-
-6. Navitas Completes Claros Acquisition for AI Power Delivery（来源：Power Electronics News）
-   应用分析：这项收购对我们关注功率器件和控制器硬件设计的EPS研发工程师来说，具有重要的启示和应用潜力，值得投入。GaN和SiC器件因其高开关频率、低损耗的特性，已成为我们电机选型和功率级设计的重点。Navitas收购Claros，特别是整合了pIVR、eIVR和PowerArray这类集成式电压调节器技术，预示着电源管理将向更高集成度、更高效率和更小体积的方向发展。这可能为EPS控制器中的MCU供电、驱动级设计带来更紧凑、更高效的解决方案。通过采用这些先进的电源传输技术，我们可以进一步降低控制器发热，提升整体效率，并为未来EPS系统集成更多AI计算能力（需要稳定高效的电源）提供更好的硬件基础，同时可能在成本和空间上获得优势。
-   https://www.powerelectronicsnews.com/navitas-completes-claros-acquisition-for-ai-power-delivery/
-
-7. Rivian’s startup Mind Robotics hires former Ford EV chief Doug Field（来源：TechCrunch）
-   应用分析：这项人事变动值得我们密切关注。Doug Field的背景非常丰富，他曾参与特斯拉Model 3的开发、苹果的秘密汽车项目，以及领导福特电动汽车部门。他在电动汽车、自动驾驶以及复杂系统架构和工程落地方面的经验，对于我们正在进行的EPS系统架构设计，特别是向线控转向（Steer-by-Wire）演进的方向，具有极高的参考价值。Mind Robotics作为Rivian旗下的机器人公司，其在机器人关节执行器、伺服电机控制方面的进展，与EPS电机控制高度相关。我们需要持续关注这家公司，看他们如何在机器人领域应用和发展这些技术，以及是否有可迁移到EPS电机控制策略、冗余与功能安全设计，甚至是新的电机选型方案上的前沿研究或工程实践。这有助于我们保持技术领先性，并快速将前沿研究转化为可落地的EPS工程方案。
-   https://techcrunch.com/2026/10/13/rivians-startup-mind-robotics-hires-former-ford-ev-chief-doug-field/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261014-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261014-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261014-am.mp3" length="3633984" type="audio/mpeg"/>
-      <pubDate>Tue, 13 Oct 2026 22:42:03 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 智驾未来：AI安全、EV功率电子与机器人执行器深度解析</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为大家精选了七条重磅资讯。从AI模型可能带来的安全隐患，到电动汽车功率电子的新进展，再到人形机器人运动控制的最新突破，每一条都可能深刻影响我们未来的研发方向和技术落地。话不多说，让我们立刻进入今天的早报时间。
@@ -1143,6 +1107,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261029-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261029-pm.mp3" length="4059504" type="audio/mpeg"/>
       <pubDate>Wed, 28 Oct 2026 16:11:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI赋能系统工程，智能汽车与机器人硬件控制前沿</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最值得关注的科技资讯。从AI如何提升系统工程质量，到智能汽车电机选型的新考量，再到机器人执行器控制的最新进展，每一条都可能为您的研发工作带来新的启发。让我们一起探索这些硬核技术如何赋能未来，以及它们与我们电动助力转向，也就是EPS系统研发工作的紧密联系。
+
+1. MARQ: A Modular, LLM-Agnostic Requirement Quality Assessor Infused with Systems Engineering Knowledge（来源：arXiv cs.AI）
+   应用分析：EPS作为汽车功能安全ASIL D级的关键部件，需求质量至关重要。我们可以将MARQ集成到我们的需求管理工具链中，用于对EPS系统、子系统及软件的需求规格说明书进行初步的自动化质量检查。例如，检查需求的完备性、一致性、可测试性、非歧义性等。特别是针对功能安全相关需求，可利用其注入的系统工程知识库，检查是否符合ISO 二六二六二的特定要求。投入价值极高，因为它能显著提升早期需求质量，减少后期设计、测试、验证阶段的返工，大幅缩短开发周期，降低整体项目风险和成本。
+   https://arxiv.org/abs/2610.36234
+
+2. Data-Driven Hamiltonian for Neural Optimal Control（来源：arXiv eess.SY 控制系统）
+   应用分析：该方法在EPS电机控制中有巨大潜力。我们可以将其应用于FOC矢量控制的电流环或转矩控制环。例如，利用车辆运行数据训练神经网络来估计哈密顿量，从而实现对电机转矩输出的更精确、更鲁棒的控制。尤其是在无传感器控制或部分传感器失效的降级模式下，这种能提供性能保证的控制器，可以帮助我们更好地处理参数不确定性，确保助力手感和回正性能的一致性与安全性。这值得深入研究和投入，因为它解决了数据驱动方法在安全关键系统（如EPS）中应用的最大障碍——缺乏性能保证。
+   https://arxiv.org/abs/2610.36378
+
+3. Google launches Gemini 4 Carbon with a ‘significant leap’ in cybersecurity（来源：The Verge）
+   应用分析：Gemini 四 Carbon对我们来说是间接有用，但值得关注。它的强大编码能力可以辅助我们进行嵌入式C代码的生成、优化和漏洞检测，提高EPS控制器软件代码质量和开发效率。考虑到汽车智能化对网络安全的更高要求，其在网络安全方面的“显著飞跃”可能意味着未来有更强大的工具可用于分析EPS控制器的固件漏洞、通信协议安全，甚至模拟网络攻击，以提升系统的抗攻击能力。在自动化测试方面，它也能帮助生成复杂的测试场景和测试脚本。直接投入训练或部署成本可能较高，但利用其API或通过集成到现有开发工具的方式，可以逐步探索其潜力。
+   https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier
+
+4. ORNL’s Motor Decide ranks motor technologies on critical material and supply chain factors（来源：Charged EVs）
+   应用分析：Motor Decide平台对我们非常有用。在EPS系统架构设计和电机选型阶段，我们可以利用它来评估不同电机技术在关键材料依赖、供应链风险和成本方面的表现。结合我们对转矩密度、效率、NVH等性能要求，可以更全面地进行权衡。例如，如果PMSM的稀土材料供应风险增加，平台可以帮助我们量化替代方案的潜在优势和劣势，从而在早期阶段做出更具战略性的决策，确保EPS产品的长期竞争力。这值得密切关注并探索合作或获取使用权限。
+   https://chargedevs.com/newswire/ornls-motor-decide-ranks-motor-technologies-on-critical-material-and-supply-chain-factors/
+
+5. Closed-Loop Aware Planning via Imitation-Free Speed Scoring for End-to-End Autonomous Driving（来源：arXiv cs.RO）
+   应用分析：CLAP-AD高度相关，值得我们借鉴。它的“速度评分”机制，可以为线控转向系统提供更精细、更安全的横向和纵向控制输入。我们可以研究如何将这种基于物理约束的速度评估方法融入到线控转向的决策层，以确保即使在自动驾驶系统给出模糊或不完整指令时，转向系统也能做出安全、合理的响应。此外，借鉴其多模态驾驶行为的理念，我们可以通过学习函数动态调整EPS的助力特性，实现更符合场景需求的个性化手感。CLAP-AD强调物理安全约束，与ISO 二六二六二的功能安全理念高度契合，可应用于线控转向的故障诊断与降级策略中。这项研究投入价值高，是AI控制和机器人规划引入汽车智能化，特别是线控转向的关键路径。
+   https://arxiv.org/abs/2610.36079
+
+6. Learning Multi-Phase Robot Loco-Manipulation via Phase-Conditioned Policy Optimization（来源：arXiv cs.RO）
+   应用分析：这项研究的核心思想对我们非常有用，可进行技术迁移。我们可以借鉴“阶段条件策略优化”的思想，训练一个统一的EPS控制器策略，使其能够根据车辆的不同运行模式或路况，自适应地调整助力曲线、阻尼和回正特性，提供更优异的手感和安全性。针对电机在不同工况下的参数变化和温漂问题，也可以利用这种分阶段优化的思想，让FOC等控制算法更好地自适应这些变化，提高转矩精度和NVH性能。在线控转向场景中，此研究的分层控制架构可以为转向执行器控制提供设计参考，确保底层电机控制的确定性和实时性，同时支持上层更灵活的策略调整。这项研究投入价值高，因为它直接触及了机器人执行器控制的核心，与EPS电机控制有深层技术同源性。
+   https://arxiv.org/abs/2610.36270
+
+7. Full-Stack Semiconductor Solutions for Embodied AI &amp; Robotics（来源：EE Times）
+   应用分析：这项研究对我们深度相关，可直接参考或选用其产品。NSING提出的分布式架构理念与我们向线控转向演进的方向不谋而合。我们可以借鉴其“AI主控与确定性实时关节、电机和传感器节点”相结合的模式，设计EPS或线控转向的分布式控制器硬件架构，将复杂的AI决策放在主控单元，而将高实时性、高确定性的电机控制放在专用的节点MCU上。其提及的安全IC对于我们实现ISO 二六二六二功能安全等级的EPS系统至关重要，我们可以考察其产品。此外，其高性能MCU和功率器件的性能指标，也是我们选型时的重要参考。投入价值极高，因为这直接面向底层控制和嵌入式硬件，与我们EPS产品研发的痛点和未来方向高度契合。
+   https://www.eetimes.com/full-stack-semiconductor-solutions-for-embodied-ai-robotics/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261029-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261029-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261029-am.mp3" length="4033008" type="audio/mpeg"/>
+      <pubDate>Wed, 28 Oct 2026 22:43:39 +0000</pubDate>
     </item>
   </channel>
 </rss>
