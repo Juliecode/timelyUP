@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 29 Oct 2026 22:43:55 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 16:02:04 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾浪潮下的EPS新机遇：AI自进化与力感知前沿</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大领域，为您精选出7条最值得关注的资讯。从AI代理的自我改进到汽车自动驾驶对转向系统的深远影响，再到机器人领域对执行器精细控制和力感知的探索，这些都与我们的EPS产品研发工作息息相关。让我们一起看看今天有哪些能为我们带来新思路和新机遇的重磅新闻。
-
-1. 警惕AI代理的“无声失败”：数据泄漏与不当验证（来源：arXiv cs.AI）
-   应用分析：在EPS的AI辅助标定或故障诊断模型开发中，我们可能会利用AI代理自动处理大量传感器数据和故障日志。这项研究提醒我们，即使AI代理给出了“看似正确”的结果，也必须深入检查其数据预处理、特征工程和模型验证过程。例如，在训练识别电机异常振动的模型时，要特别警惕训练数据中是否包含了与验证数据相似的工况，导致模型过拟合，或在数据划分时无意中引入了时间序列相关性导致的数据泄漏。这意味着我们需要为AI代理设置严格的数据质量和验证流程审计，并配备领域专家进行人工复核，尤其是在涉及ISO 26262功能安全要求的场景下。投入是值得的，但需要额外的工具和流程来保证AI模型的透明度和可解释性，而不是盲目信任AI的“自动化”能力。
-   https://arxiv.org/abs/2610.14115
-
-2. ClawLoop框架：无需外部教师的AI代理自改进之道（来源：arXiv cs.AI）
-   应用分析：在EPS的助力策略和手感调校中，我们常常需要针对不同车型、不同驾驶场景进行大量的参数标定。传统的标定过程耗时且依赖经验。如果能将ClawLoop这样的自改进代理应用于EPS的自动标定，例如让一个代理在虚拟仿真环境中，或者在受控的台架测试中，与一个模拟驾驶员交互，根据“驾驶员”的反馈，或预设的性能指标如回正力矩、阻尼感，自我调整助力曲线、阻尼补偿参数，那么将极大地提升效率。这个代理可以在没有人类专家持续介入的情况下，通过迭代试错和自我评估来收敛到最优的标定结果。这需要投入在构建高保真仿真环境和定义明确的奖励函数上，但长期来看，可以显著降低标定成本，并实现更精细化、个性化的手感调校。
-   https://arxiv.org/abs/2610.14118
-
-3. Meta发布开源AI模型Muse Spark Open：边缘计算新机遇（来源：TechCrunch）
-   应用分析：我们的EPS控制器通常基于高性能MCU，但计算资源仍有限。如果像Muse Spark Open这样的开源、轻量级AI模型能进一步优化，并移植到车规级芯片上，我们可以探索在EPS控制器中集成更高级的AI功能。例如，利用本地AI模型进行实时的路况感知与预测，基于车辆传感器数据，而非云端，从而动态调整助力曲线，提供更精细的路感还原；或者在车端进行电机参数的在线辨识与自适应控制，以应对温漂或老化带来的性能下降。这种本地化部署能确保控制决策的低延迟和高可靠性，对线控转向等对实时性要求极高的系统尤其重要。投入会涉及模型剪枝、量化、专用硬件加速等，但其带来的性能、安全和成本优势是值得深入研究和尝试的。
-   https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/
-
-4. 沃尔沃深化与英伟达合作，迈向L2++级脱手自动驾驶（来源：The Verge）
-   应用分析：随着L2++甚至更高级别自动驾驶的普及，EPS系统将不仅仅是提供助力，更是自动驾驶决策执行的关键执行器。对于线控转向（SbW）的演进方向，我们需要重点关注其与英伟达等自动驾驶平台的接口标准、通信协议和功能安全等级（ISO 26262 ASIL-D）。这意味着EPS系统需要具备更高的可靠性、更快的响应速度和更强的冗余设计，以应对主控系统失效或传感器故障。我们应该积极参与到与自动驾驶团队的早期架构设计中，确保EPS的控制算法能够无缝对接自动驾驶的需求，例如提供更平滑、精准的路径跟踪能力，以及在脱手/接管模式切换时的手感一致性。同时，需要预研多冗余电机、多冗余传感器以及智能故障诊断与降级策略，以满足严苛的功能安全要求。投入是巨大的，但这是EPS未来发展的必然趋势，必须提前布局。
-   https://www.theverge.com/transportation/1011653/volvo-nvidia-autonomous-driving-level-2-hands-free-urban
-
-5. Rivian汽车将引入AI代理，探索智能驾驶新体验（来源：TechCrunch）
-   应用分析：我们可以想象一个AI代理在Rivian的车辆中扮演“驾驶助手”的角色，它不仅能理解驾驶员的意图，还能学习驾驶员的驾驶习惯和偏好。对于EPS来说，这意味着AI代理可以根据驾驶员历史数据、当前路况和驾驶模式，动态调整EPS的助力特性和阻尼反馈，实现真正的个性化手感。例如，在运动模式下提供更沉稳的转向，而在城市拥堵路段提供更轻盈的助力。此外，AI代理还可以通过分析EPS系统的实时运行数据（电机电流、转矩、温度、位置等），进行异常检测和故障预测，提前发现潜在的电机磨损、传感器漂移等问题，并通过OTA更新或提醒用户进行检查，从而提升系统的可靠性和预测性维护能力。这种应用需要大量的车载数据收集、模型训练和持续迭代，但能显著提升用户体验和系统寿命。
-   https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/
-
-6. 人形机器人执行器仿真到现实：Contact-UAN弥合动力学鸿沟（来源：arXiv cs.RO）
-   应用分析：EPS电机控制策略的开发和验证高度依赖仿真，但电机参数、摩擦特性、NVH等在仿真中难以完全精确建模，导致“仿真到现实”的性能差异。Contact-UAN的残差建模思想可以被我们借鉴：在现有的EPS电机模型和FOC控制策略基础上，引入一个轻量级的AI残差模型。这个残差模型可以通过少量台架测试或整车路试数据进行训练，学习并补偿仿真模型与真实电机之间存在的非线性、时变或难以建模的误差（例如转矩脉动、温漂引起的参数变化）。通过这种方式，我们可以在不完全重构复杂物理模型的前提下，显著提升控制策略在真实硬件上的性能和鲁棒性。例如，用于实时补偿电机高频谐波转矩脉动，或者在无传感器控制中补偿磁链观测器的误差。这种方法值投入，因为它能用相对较少的数据和计算资源，有效解决困扰电机控制多年的“仿真到现实”难题，提升产品质量和开发效率。
-   https://arxiv.org/abs/2610.18991
-
-7. FACT模型：从人类力交互中学习机器人灵巧操作（来源：arXiv cs.RO）
-   应用分析：EPS的手感调校是一个高度依赖经验和主观判断的过程，需要工程师反复试驾和调整助力曲线、阻尼等参数。FACT模型从人类示范中学习力感知和操作的思路，可以迁移到EPS的“仿人手感”调校上。我们可以通过收集专业驾驶员在不同路况下（例如高速巡航、低速泊车、紧急避让）的转向力矩、转向角速度、手部肌肉活动等生理数据，以及车辆动态数据，构建一个“驾驶力交互”数据集。然后，利用类似FACT的多模态学习框架，训练一个模型来预测在特定驾驶场景和驾驶员意图下，EPS系统应该输出的助力力矩和阻尼特性，以模拟最符合人类直觉和舒适度的转向手感。这能将主观经验转化为可量化的数据驱动模型，显著提升调校效率和一致性。尤其是在线控转向中，完全由电机模拟路感，这种从人类力交互中学习的能力将是构建真实、自然手感的核心。投入在数据采集（高精度力传感器、生理传感器）、模型训练和验证上是必要的，这能彻底革新EPS手感调校的传统模式。
-   https://arxiv.org/abs/2610.19155</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261016-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261016-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261016-am.mp3" length="3312000" type="audio/mpeg"/>
-      <pubDate>Thu, 15 Oct 2026 22:42:57 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI赋能实时控制，线控转向驶向极限：今日研发早报</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热点方向，为您精选出七条最具信息量的资讯。从AI智能体如何实现实时决策，到自动驾驶车辆在极限工况下的安全恢复，再到机器人关节控制器的小型化突破，每一条都可能为您的研发工作带来新的灵感和思考。话不多说，让我们立刻进入今天的早报时间！
@@ -1143,6 +1107,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261030-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261030-am.mp3" length="5832432" type="audio/mpeg"/>
       <pubDate>Thu, 29 Oct 2026 22:43:55 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · AI赋能转向，宽禁带器件革新，机器人芯动向：今日研发早报</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是大家的老朋友，兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门方向，为您精选出七条最具价值的资讯。从AI如何深度参与车辆控制，到线控转向和高级自动驾驶的最新进展，再到宽禁带半导体在电动汽车中的应用，以及机器人关节执行器背后的芯片思考，每一条都与我们的研发工作息息相关。希望今天的早报能为您带来新的启发和思考！
+
+1. Post-training 4B model with RL to fly Tesla Roadster 21% better than GPT-6 Astra（来源：Hacker News）
+   应用分析：能不能用：非常能用，且值得深入研究。 怎么用：我们可以探索将强化学习（RL）应用于EPS的助力策略调校和手感优化。例如，通过在仿真环境或硬件在环（HIL）平台上进行训练，RL模型可以学习在不同路况、车速、驾驶员意图下的最佳助力曲线和阻尼回正特性，从而实现更个性化、更舒适或更运动的转向手感。此外，在无传感器控制中，RL也可能用于优化状态观测器参数或直接学习控制律，以提升系统的鲁棒性。 值不值得投入：绝对值得。这是AI赋能控制系统、解决传统控制方法在复杂性和自适应性方面挑战的重要方向。我们应投入资源进行算法研究和仿真平台搭建，并与线控转向团队紧密合作，将强化学习转化为EPS技术升级的重要突破口。
+   https://skypilot.ai/blog/flying-roadster-rl
+
+2. Rivian expands joint venture with VW to include AI assistant（来源：TechCrunch）
+   应用分析：能不能用：可以间接利用。 怎么用：虽然EPS本身不直接集成AI助手，但AI助手能够收集的用户偏好、驾驶习惯、路况信息等数据，可以作为EPS助力策略自适应调整的输入。例如，如果AI助手识别到驾驶员偏好运动模式，或者车辆经常在特定崎岖路段行驶，EPS可以据此调整助力曲线、阻尼和回正力矩，提供更匹配的转向手感。此外，AI助手在故障诊断和预测性维护方面的能力，也可以帮助EPS系统更早地发现潜在问题，例如通过分析转向相关的传感器数据进行异常检测。 值不值得投入：值得关注和有限投入。我们应与车身控制、人机交互（HMI）团队紧密协作，了解AI助手能提供的接口和数据，探索如何将这些信息转化为EPS的优化输入。这不是核心算法的投入，而是系统集成和数据利用的投入。
+   https://techcrunch.com/2026/10/29/rivian-expands-joint-venture-with-vw-to-include-ai-assistant/
+
+3. Waymo taps Toyota to supply robotaxis for Japan and the U.K.（来源：TechCrunch）
+   应用分析：能不能用：间接学习和借鉴。 怎么用：Waymo与丰田的合作，特别是选择bZ4X平台，意味着其在转向系统、制动系统等线控执行器的集成和功能安全设计上会有大量实践。我们应该密切关注这类L4自动驾驶车辆在线控转向架构、冗余设计（例如双通道或多通道EPS系统）、功能安全等级（ASIL-D）以及与上层自动驾驶决策层的接口协议等方面的公开信息或行业标准。这对于我们EPS向线控转向（Steer-by-Wire）演进，尤其是在冗余传感、故障诊断、降级运行策略上，提供了宝贵的工程实践案例。 值不值得投入：值得持续关注和学习。通过参加行业会议、阅读技术报告，甚至与相关供应商交流，来获取线控转向的最新进展和挑战。这对我们设计下一代EPS系统，特别是为L3/L4自动驾驶提供支持，至关重要。
+   https://techcrunch.com/2026/10/30/waymos-next-robotaxi-will-be-a-toyota-bz4x-destined-for-japan-and-the-uk/
+
+4. Infineon introduces a high-voltage BMS reference design built around the AURIX TC4x（来源：Charged EVs）
+   应用分析：能不能用：直接参考和借鉴。 怎么用：AURIX TC4x是我们EPS控制器MCU选型的重要参考。BMS在TC4x上运行计算密集型模型，验证了其在实时控制和复杂算法执行上的能力。我们可以研究该参考设计在硬件架构（如多核异构）、软件架构（如AUTOSAR）、功能安全设计（如冗余核、锁步机制）、以及对复杂模型（如电机参数辨识、温漂补偿、FOC高级算法）的支持情况。特别是其在ISO 26262标准下的安全机制实现，对于我们EPS控制器达到ASIL-D等级有直接的指导意义。 值不值得投入：值得高度投入。英飞凌是重要的芯片供应商，其参考设计是快速验证和迭代我们EPS控制器软硬件方案的宝贵资源。应积极获取相关文档和开发套件，评估TC4x平台在满足未来EPS对算力、实时性和功能安全要求方面的潜力。
+   https://chargedevs.com/newswire/infineon-introduces-a-high-voltage-bms-reference-design-built-around-the-aurix-tc4x/
+
+5. A closer look at GaN switches: benefits, limitations and gate-drive challenges（来源：Charged EVs）
+   应用分析：能不能用：非常能用，是未来功率级设计的方向。 怎么用：EPS电机控制器的功率级是核心部件。目前大多使用硅基MOSFET或IGBT，但GaN有望大幅提升效率、降低发热，从而减小散热器体积和重量，实现更高的功率密度。我们需要深入研究GaN器件的栅极驱动电路设计、寄生参数抑制、热管理以及电磁兼容性（EMI/EMC）问题。特别是在高频开关下，如何抑制转矩脉动、降低噪声、振动与声振粗糙度（NVH），以及如何确保在汽车严苛环境下的可靠性，是我们需要攻克的工程难题。 值不值得投入：绝对值得投入。作为EPS研发工程师，我们必须紧跟功率器件前沿技术。应组织团队进行GaN器件的评估测试、开发专用栅极驱动方案，并在实验室台架上验证其在EPS电机驱动中的性能。长期来看，GaN是实现更高性能、更紧凑EPS系统的关键技术之一。
+   https://chargedevs.com/features/gan-power-switches-benefits-gate-drive-design-tradeoffs/
+
+6. SemiQ Launches 750 V and 1200 V Gen4 SiC MOSFETs（来源：Power Electronics News）
+   应用分析：能不能用：能用，与GaN一样，是功率级升级的重要选项。 怎么用：对于EPS，特别是R-EPS（齿条式电动助力转向）或未来线控转向中可能用到的大功率电机，SiC MOSFET能提供更高的效率和更小的体积。我们需要评估这些新型SiC器件在不同电压等级和电流下的性能，与GaN进行对比，选择最适合EPS电机功率级的方案。重点关注其在高温、高频工作下的可靠性、热管理、短路保护以及与FOC（矢量控制）策略的适配性。低导通电阻和开关损耗将直接带来电机驱动效率的提升，减少温升，改善NVH。 值不值得投入：值得投入。SiC和GaN是未来功率电子的两大支柱。应与功率器件供应商紧密合作，获取最新的器件样品和技术支持，进行性能测试和系统集成验证。这对于我们提升EPS产品的竞争力，满足电动汽车对高效、高功率密度、高可靠性电机驱动的需求至关重要。
+   https://www.powerelectronicsnews.com/semiq-launches-750-v-and-1200-v-gen4-sic-mosfets/
+
+7. STMicroelectronics Weighs Developing More Powerful MCUs, MPUs for Humanoid Robots（来源：EE Times）
+   应用分析：能不能用：直接借鉴。 怎么用：人形机器人关节控制对MCU的要求非常高，包括多轴协同控制、高速脉宽调制（PWM）生成、传感器数据融合、实时路径规划和力矩控制等。这些需求与线控转向中多电机协同、高精度力矩控制、复杂故障诊断的需求不谋而合。我们可以关注ST未来推出的针对机器人执行器的新一代MCU/MPU，研究其架构（如专用数字信号处理器（DSP）核、AI加速器）、实时操作系统支持、功能安全特性以及开发工具链。这有助于我们提前规划EPS未来控制器的硬件平台，并探索将机器人领域的高级控制算法（如模型预测控制（MPC）、鲁棒控制）迁移到EPS电机控制中，以解决转矩脉动、NVH、温漂等问题。 值不值得投入：值得高度投入。机器人执行器控制是EPS电机控制最直接的交叉点。持续跟踪ST等芯片厂商在机器人领域的布局，并积极参与相关技术交流，可以帮助我们快速将前沿研究转化为EPS的工程方案。
+   https://www.eetimes.com/stmicroelectronics-weighs-developing-more-powerful-mcus-mpus-for-humanoid-robots/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261031-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261031-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261031-pm.mp3" length="3459456" type="audio/mpeg"/>
+      <pubDate>Fri, 30 Oct 2026 16:02:04 +0000</pubDate>
     </item>
   </channel>
 </rss>
