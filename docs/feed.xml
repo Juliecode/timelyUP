@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 30 Oct 2026 22:42:35 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 22:45:09 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI实时决策与汽车智能化的安全边界：EPS工程师的今日早报</title>
-      <description>大家好，欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天咱们聚焦人工智能前沿、汽车智能化和机器人技术，一起来看看有哪些值得研发工程师们关注的重磅消息，特别是对于我们汽车EPS电动助力转向的研发来说，这些进展将如何影响我们的未来工作。
-
-1. The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock（来源：arXiv cs.AI）
-   应用分析：这个分层学习的思想对我们很有启发。比如，在EPS的智能诊断或自适应助力策略中，可以有一个“慢速教师”AI在离线或背景任务中分析历史故障数据和驾驶行为，学习并优化诊断规则或助力曲线的调整策略；然后将这些优化后的、可快速执行的“指令”部署给线上的“快速学生”AI，实现实时故障预测、参数自适应调整或在特定工况下的个性化手感优化。这样既能提升智能化水平，又避免了在线推理的计算延迟，确保实时性要求。
-   https://arxiv.org/abs/2610.20665
-
-2. When Reality Outpaces Cognition: A New Scaling Principle for Reliable Intelligence（来源：arXiv cs.AI）
-   应用分析：在EPS线控转向的冗余与功能安全设计中，我们可以借鉴其“现实速度”测试理念。例如，在HIL或SIL仿真环境中，模拟极端路况（如低附着力、高速转向、突发故障等），并逐渐提高这些工况的变化速度或复杂性（即 \(S_R\)），观察基于AI的助力或故障诊断模块能否持续满足ASIL-D级别的可靠性要求。这有助于我们找到AI控制策略的“认知速度上限”，从而在系统设计时预留安全裕度，或针对性地优化AI模型，确保其在实际车辆运行的快速动态中不失效。
-   https://arxiv.org/abs/2610.20764
-
-3. L2G-SR: Learning to Guide LLM-based Symbolic Regression（来源：arXiv cs.AI）
-   应用分析：在EPS的电机控制策略开发中，我们可以尝试将AI符号回归应用于电机参数辨识或复杂非线性补偿项的发现。例如，利用L2G-SR分析电机在不同转速、负载下的电流、电压、转矩数据，自动生成描述电机动态特性或转矩脉动规律的数学模型。这可以帮助我们发现更精确的FOC参数、无传感器控制的状态观测器模型，甚至优化转矩脉动抑制的补偿函数。其“结构验证器”的特性也能帮助确保生成的方程具有物理可解释性，避免纯黑箱模型的风险，从而更容易在工程中落地。
-   https://arxiv.org/abs/2610.20685
-
-4. Race to Recovery: Designing Advanced Safety Systems for Autonomous Driving via Learning Autonomous Racing（来源：arXiv cs.RO）
-   应用分析：在EPS线控转向的控制策略中，特别是在线控转向（Steer-by-Wire）向L3+自动驾驶演进时，可以借鉴这种“失控恢复”的强化学习思路。我们可以构建仿真环境（如MPC或HIL），模拟车辆在冰雪路面、高速紧急避让等情况下的失控场景。通过强化学习训练EPS控制器，使其不仅能提供精准助力，还能在车辆出现侧滑、甩尾等不稳定趋势时，主动介入转向控制，利用转向力矩帮助车辆恢复稳定。这能显著提升线控转向系统的安全边界，为自动驾驶提供更可靠的底层执行保障。
-   https://arxiv.org/abs/2610.20873
-
-5. Tesla driver says he was asleep and using FSD when he crashed into highway patrol cars（来源：The Verge）
-   应用分析：作为EPS工程师，我们需要将这类真实事故案例纳入线控转向系统的需求分析和风险评估（HARA）中。例如，在设计线控转向的人机共驾模式时，需要更严格地定义驾驶员监控和接管的机制，例如通过方向盘力矩传感器、眼动追踪等方式实时监测驾驶员状态。当系统判断驾驶员无法有效接管时，应启动强制安全降级策略，如发出强烈警示、降低车速、甚至执行最小风险停车。同时，在EPS控制器内部，即使在自动驾驶模式下，也应保持一套独立的、高可靠的扭矩监控和故障诊断机制，防止系统层面失效。
-   https://www.theverge.com/transportation/1013280/tesla-chp-fsd-crash
-
-6. GMG reports 1,000 six-minute charge cycles for its graphene G CELLS（来源：Charged EVs）
-   应用分析：虽然EPS不直接生产电池，但电池技术进步会间接影响EPS的设计。例如，如果石墨烯电池能实现高功率密度和快速充电，意味着车辆可能支持更高功率的电机和更激进的动态性能，这对EPS电机的转矩密度、效率和热管理提出更高要求。同时，电池包的轻量化和尺寸优化可能为线控转向（Steer-by-Wire）等新架构腾出更多空间。我们需要持续关注这类前沿电池技术，以便在未来EPS系统架构设计和电机选型时，能更好地适应整车性能和成本目标。
-   https://chargedevs.com/newswire/gmg-reports-1000-six-minute-charge-cycles-for-its-graphene-g-cells/
-
-7. Replacing 48 MLCCs with 4 LKZ Capacitors for Compact, Cost-Effective Robot Joint Motor Controllers（来源：Power Electronics News）
-   应用分析：EPS控制器中，功率级（特别是直流母线电容）的体积和成本是设计中的重要考量。我们可以深入研究LKZ电容器的技术特性和可靠性，评估其在EPS功率级中的应用潜力。例如，在现有C-EPS或DP-EPS的MCU和功率级设计中，探索用更少、更紧凑的LKZ电容替代现有的大量MLCC，以期实现控制器模块的进一步小型化，降低物料成本，并可能改善高频噪声抑制效果（如果其ESR/ESL特性优异）。这对于向线控转向演进，实现更集成、更模块化的转向执行器设计也至关重要。
-   https://www.powerelectronicsnews.com/replacing-48-mlccs-with-4-lkz-capacitors-for-compact-cost-effective-robot-joint-motor-controllers/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261017-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261017-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261017-am.mp3" length="3282048" type="audio/mpeg"/>
-      <pubDate>Fri, 16 Oct 2026 22:42:48 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 科技早报：AI安全挑战与自动驾驶边界，机器人执行器技术助力EPS创新</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，从中精选出七条最值得关注的资讯。内容涵盖了AI模型的安全警示、代码审查的效率提升、自动驾驶的伦理与安全挑战，以及机器人执行器技术如何为我们的汽车电动助力转向系统，也就是EPS，带来实实在在的创新。今天的资讯量很大，干货满满，希望能为大家的工作带来启发。
@@ -1143,6 +1107,70 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261031-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261031-am.mp3" length="2677104" type="audio/mpeg"/>
       <pubDate>Fri, 30 Oct 2026 22:42:35 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI赋能汽车转向：从微型模型到智能校准，再探线控未来</title>
+      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术，为您精选出七条最值得关注的资讯。从极致精简的嵌入式AI模型，到提升控制系统鲁棒性的智能校准方法，再到未来线控转向系统的架构考量，以及机器人技术对我们电机控制的启示，内容非常丰富。希望今天的分享能为您的研发工作带来新的灵感和思考。
+
+1. Amortized Localized Posterior Inference for Model Calibration with Application to an Ocean Turbulence Closure（来源：arXiv cs.AI）
+   应用分析：能用，且潜力巨大。
+1. **电机控制参数自适应校准：** EPS电机在不同温度、负载、转速下，其参数会发生变化。利用该方法，可以根据实时工况（如温度、车速、驾驶员输入），对FOC控制器的PI参数、弱磁控制阈值等进行局部化、在线校准，提升转矩脉动抑制、弱磁效率。
+2. **助力手感模型个性化与场景适应：** 驾驶员对助力手感的偏好因人而异，且在不同路况下也需要不同的助力特性。利用局部化后验推理，可以根据驾驶员ID、车辆模式、路面信息等上下文，动态调整助力曲线、阻尼、回正等参数，实现个性化和场景自适应的助力调校。
+3. **故障诊断与预测性维护：** 结合传感器数据和运行上下文，对电机或减速机构的磨损、性能衰退进行局部化建模和预测，更精确地识别异常，并提供量化的不确定性评估，为EPS系统的预测性维护提供支持。
+非常值得投入。这直接解决了EPS系统长期存在的标定效率低、鲁棒性不足、难以个性化等核心痛点。结合模型预测控制(MPC)等高级控制策略，能大幅提升EPS的性能和智能化水平。可以从仿真环境或HIL平台开始验证其可行性。
+   https://arxiv.org/abs/2610.37731
+
+2. A language model that lives in a boot sector（来源：Hacker News）
+   应用分析：能用，且非常值得探索。
+1. **轻量级故障诊断与异常检测：** 在EPS的MCU上部署这种微型神经网络，用于实时监测电机电流、位置、转矩等信号的模式，快速识别电机异常振动、传感器漂移、减速器异响等早期故障特征。由于其极小的尺寸和低计算量，可以作为主控算法的补充，在不显著增加资源消耗的前提下提升诊断能力。
+2. **传感器数据预处理与冗余校验：** 对多个传感器的输出进行轻量级融合或一致性校验，例如对转矩传感器和电流观测器输出进行交叉验证，提升无传感器控制或冗余传感方案的鲁棒性和安全性。
+3. **参数的自适应微调：** 实现一些预设规则下的参数微调，例如根据电机温度或负载历史数据，轻微调整FOC控制器的增益，以应对温漂。
+值得投入。当前EPS系统对功能安全（ISO 26262）和成本控制要求极高，任何能以极低资源消耗提升诊断能力、鲁棒性的方案都具有战略价值。可以先在MIL/SIL/HIL环境中对小型神经网络的推理性能和资源占用进行评估。
+   https://github.com/kerlenton/bootgpt
+
+3. Google: Agentic AI Will Drive New Demands on Data Center CPUs（来源：EE Times）
+   应用分析：间接有用，是架构设计和硬件选型的重要考量。
+1. **线控转向（Steer-by-Wire）域控制器架构设计：** 线控转向系统需要高算力支持复杂的路径规划、决策和冗余控制。如果其中引入AI代理进行高级决策，其计算需求可能是突发性的。我们需要设计能够高效应对这种突发负载的域控制器，例如采用异构计算单元（CPU+NPU/GPU）、灵活的功耗管理和任务调度机制，确保在关键时刻提供足够的算力，同时在空闲时段降低能耗。
+2. **功能安全与实时性保障：** 突发性负载对实时性要求高的EPS或线控转向系统是一个挑战。需要评估AI代理的计算峰值和平均值，确保在最坏情况下仍能满足功能安全等级（ASIL D）的实时响应要求。这可能需要预留足够的计算裕量，或采用确定性更强的调度算法。
+3. **优化MCU/功率级选型：** 在规划下一代EPS控制器时，需要考虑未来AI代理集成后对MCU算力、内存、I/O带宽的需求。尤其要关注如何在保证成本和功耗限制下，平衡通用计算能力和处理突发AI任务的效率。
+值得投入。这是面向未来线控转向和智能驾驶架构的战略性思考。现在开始研究车载AI代理的负载特性、高效调度算法和相应的硬件平台，可以为EPS向更高阶智能系统演进打下基础。
+   https://www.eetimes.com/google-agentic-ai-will-drive-new-demands-on-data-center-cpus/
+
+4. Seq@K: Evaluating Language Models Under Sequential Feedback（来源：arXiv cs.AI）
+   应用分析：能用，是评估和选择AI模型的重要参考。
+1. **自动标定流程优化：** 在EPS的自动标定过程中，控制器会根据标定结果进行参数调整，然后再次测试。Seq@K的理念可以用于评估不同AI模型（如强化学习代理、优化算法）在有限次迭代内达到最佳标定效果的能力。选择Seq@K表现优异的模型，可以显著加速标定周期。
+2. **自适应助力控制策略：** EPS系统需要根据路况、车速、驾驶员习惯等实时调整助力特性。如果采用强化学习或神经网络进行自适应控制，模型需要从连续的驾驶反馈中学习并优化。Seq@K可以作为衡量这些模型在实际运行中自我学习和纠错能力的重要指标。
+3. **在线故障诊断与降级策略：** 当EPS系统出现潜在故障时，AI模型可以根据传感器反馈进行多轮诊断，并尝试不同的降级策略。Seq@K可以帮助我们评估AI模型在有限次尝试内，准确识别故障并切换到最安全、最有效的降级模式的能力。
+值得投入。它为选择和开发适用于迭代优化场景的AI模型提供了新的视角和工具，有助于提升EPS系统的自适应性、鲁棒性和智能化水平。
+   https://arxiv.org/abs/2610.37859
+
+5. Unusual robotic animals can prove their utility（来源：The Robot Report）
+   应用分析：间接有用，为EPS电机控制和线控转向提供技术借鉴。
+1. **线控转向执行器设计与控制：** 仿生机器人的多关节高精度、高动态响应的伺服电机控制经验，可以直接应用于线控转向系统的转向执行器设计。例如，如何在保证高转矩密度下实现低NVH、高效率，以及如何在复杂路况下实现精确、平稳的转向力矩输出。
+2. **电机转矩脉动与抖动抑制：** 仿生机器人需要极高的运动平稳性，其电机控制策略在抑制转矩脉动、抖动方面可能有很多先进经验。这与EPS解决NVH问题的需求高度契合，可以研究借鉴其FOC控制、无传感器控制、弱磁控制中的先进算法。
+3. **冗余与功能安全启发：** 复杂机器人系统通常需要高度的鲁棒性和故障容错能力。其在多电机协调、故障诊断与降级方面的设计理念，可以为线控转向系统的多执行器冗余架构和ISO 26262功能安全设计提供参考。
+值得长期关注和投入研究。虽然不是直接应用，但其底层电机控制技术是EPS发展的关键驱动力之一。可以定期跟踪相关研究成果，并评估其在EPS电机和系统控制中的潜力。
+   https://www.therobotreport.com/unusual-robotic-animals-can-prove-their-utility/
+
+6. Percepto launches Axion AI platform to unify inspection data analysis（来源：The Robot Report）
+   应用分析：能用，可借鉴其理念和技术栈。
+1. **EPS产线质量检测与追溯：** 在EPS生产线上，可以集成各类传感器（振动、声音、电流、力矩），收集每个下线产品的运行数据。借鉴Axion平台的理念，开发一个统一的AI分析平台，对这些数据进行实时分析，识别潜在的制造缺陷，实现更精准的质量控制和故障追溯。
+2. **车辆健康监测与预测性维护：** 在车辆运行过程中，EPS系统会产生大量的CAN数据、诊断码和性能参数。将这些数据上传至云端，利用类似的AI平台进行统一分析，可以预测EPS电机、传感器、减速机构的寿命，提前预警潜在故障，指导经销商进行预防性维护，提升用户体验并降低维修成本。
+3. **标定数据分析与优化：** 收集整车标定过程中的各种数据，通过AI平台进行深度分析，找出标定参数与驾驶体验、路况之间的关联，从而优化标定策略，甚至实现自动标定。
+值得投入。这属于“数据驱动”战略的一部分，有助于将EPS从被动维护转向预测性维护，提升产品质量和售后服务水平。可以考虑与现有数据平台或第三方AI服务商合作，逐步构建EPS专属的智能数据分析能力。
+   https://www.therobotreport.com/percepto-launches-axion-ai-platform-unify-inspection-data-analysis/
+
+7. When Electric Cars Were for Women（来源：IEEE Spectrum）
+   应用分析：间接有用，提供战略思考和历史经验教训。
+1. **线控转向的市场接受度与用户教育：** 线控转向取消了物理连接，可能引发用户对安全性的担忧。借鉴电动车早期推广经验，我们需要思考如何通过宣传、教育、用户体验设计来打消顾虑，强调其在操控性、安全性、个性化方面的优势。
+2. **技术演进的系统性思考：** 今天的电动车普及依然面临充电设施、电池成本、续航里程等挑战。线控转向的推广也需要考虑其与整车电子电气架构、自动驾驶系统、甚至售后维护体系的协同。不能只关注技术本身，要从整个生态系统去规划。
+3. **功能安全与冗余设计的再审视：** 早期电动车因技术限制未能普及，线控转向作为关键安全件，更需强调其功能安全（ISO 26262）和冗余设计的极致可靠性，以避免重蹈历史覆辙，让用户对其安全性产生根本性怀疑。
+值得在战略规划和技术路线图中融入这种历史视角。它有助于避免“为技术而技术”的误区，促使团队在追求技术创新的同时，更全面地考虑市场、用户和生态系统因素。
+   https://spectrum.ieee.org/early-electric-vehicles</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261101-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261101-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261101-am.mp3" length="6226704" type="audio/mpeg"/>
+      <pubDate>Sat, 31 Oct 2026 22:45:09 +0000</pubDate>
     </item>
   </channel>
 </rss>
