@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 31 Oct 2026 22:45:09 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 09:42:10 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 科技早报：AI安全挑战与自动驾驶边界，机器人执行器技术助力EPS创新</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，从中精选出七条最值得关注的资讯。内容涵盖了AI模型的安全警示、代码审查的效率提升、自动驾驶的伦理与安全挑战，以及机器人执行器技术如何为我们的汽车电动助力转向系统，也就是EPS，带来实实在在的创新。今天的资讯量很大，干货满满，希望能为大家的工作带来启发。
-
-1. OpenAI models hacked a crypto wallet and breached more websites（来源：Ars Technica）
-   应用分析：我们在EPS控制器中引入AI或数据驱动方法时，必须将AI模型本身的安全性和鲁棒性纳入功能安全设计。例如，用于故障诊断的神经网络模型，其输入数据必须经过严格验证，模型输出也需有明确的置信度评估和异常检测机制，防止被恶意输入或自身缺陷导致误判。同时，需要考虑模型训练数据源的可靠性，以及模型部署后的更新和验证机制，确保整个生命周期的安全性。这意味着在AI辅助控制或诊断的模块上，需要额外投入资源进行对抗性攻击测试和安全审计，确保其不会引入新的安全漏洞。
-   https://ars technica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/
-
-2. How the Claude Code team does code review（来源：Hacker News）
-   应用分析：我们在日常的嵌入式C代码和MATLAB/Simulink模型代码生成后的审查中，可以尝试引入类似Claude这样的AI工具。例如，让AI模型自动检查代码的风格规范、潜在的运行时错误、内存泄漏、并发问题，甚至根据功能安全标准（如ISO 26262）进行初步的静态分析。对于MATLAB/Simulink模型，AI可以辅助检查模型复杂性、可读性以及代码生成兼容性。虽然不能完全替代人工审查，但AI能作为第一道防线，过滤掉大量低级错误，让人工审查者专注于更复杂的逻辑和设计缺陷，从而提高整体的开发效率和软件质量。这值得投入小团队进行概念验证和工具链集成探索。
-   https://claude.dev/blog/solving-code-review-at-anthropic/
-
-3. DeepSeek-v4.1-Flash-1017（来源：Hacker News）
-   应用分析：DeepSeek V4.1 Flash 1017这类高性能大模型可以用于多个方面。首先，在嵌入式C代码开发中，可以利用它进行代码片段生成、重构建议、Bug定位辅助。其次，在MATLAB/Simulink模型化设计中，可以尝试让AI理解模型需求，辅助生成初始模型结构或子系统，甚至将自然语言描述的控制策略转化为伪代码或Simulink模块的初步设计。此外，它还能用于处理大量的技术文档，快速提取关键信息，或根据我们的需求生成定制化的报告。这些应用可以作为内部工具链的辅助，通过API接入，提升研发效率，值得进行小范围的试点和工具集成评估。
-   https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017
-
-4. Tesla driver says he was asleep and using FSD when he crashed into highway patrol cars（来源：The Verge）
-   应用分析：对于我们EPS工程师而言，这起事件是开发线控转向（Steer-by-Wire）系统时必须吸取的深刻教训。线控转向系统需要极致的冗余设计和故障诊断能力，确保单点失效不会导致系统失控。更重要的是，在人机共驾模式下，助力策略和手感调校不仅要提供舒适的驾驶体验，还要在系统需要驾驶员接管时，提供清晰、直观、不可忽视的反馈，确保驾驶员能及时、有效地介入。这要求我们在HMI（人机界面）和助力策略设计上投入更多精力，进行大量的场景分析和驾驶员行为研究，以满足ISO 26262等功能安全标准对ASIL-D级别的严苛要求。这方面是我们的核心工作，必须持续投入。
-   https://www.theverge.com/transportation/1013280/tesla-chp-fsd-crash
-
-5. Waymo’s robotaxis are headed to Canada（来源：TechCrunch）
-   应用分析：Waymo等自动驾驶公司的进展，为我们线控转向系统（Steer-by-Wire）的架构设计、冗余方案和功能安全验证提供了重要的参考方向。随着无人驾驶车辆的普及，EPS系统不再仅仅是助力转向，而是成为车辆运动控制的核心执行单元。我们需要关注这些自动驾驶平台对转向系统的具体要求，例如更快的响应速度、更高的精度、更强的冗余能力以及与车辆中央控制器的无缝集成。这促使我们必须加快线控转向的研发投入，特别是在高可靠性执行器、高精度位置/力矩传感器以及多通道冗余控制策略方面，以满足未来无人驾驶车辆的需求。
-   https://techcrunch.com/2026/10/16/waymos-robotaxis-are-headed-to-canada/
-
-6. Replacing 48 MLCCs with 4 LKZ Capacitors for Compact, Cost-Effective Robot Joint Motor Controllers（来源：Power Electronics News）
-   应用分析：这项技术对我们的EPS控制器硬件设计具有直接且重要的参考价值。当前，EPS控制器在尺寸、重量和成本上都面临巨大压力。如果能将MLCC替换为更少数量、更高效的LKZ电容，将直接减小功率级体积，降低物料成本，同时可能改善散热性能。这促使我们评估LKZ电容在车规级应用中的可行性，包括其可靠性、耐温性、ESR/ESL特性以及长期稳定性，并进行台架测试验证。如果验证通过，这将是EPS控制器硬件设计上一次非常有价值的迭代优化，值得投入资源进行深入研究和供应商合作。
-   https://www.powerelectronicsnews.com/replacing-48-mlccs-with-4-lkz-capacitors-for-compact-cost-effective-robot-joint-motor-controllers/
-
-7. An Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet（来源：TechCrunch）
-   应用分析：这提醒我们，EPS作为汽车转向执行器，其控制策略、电机选型和功能安全设计，与机器人关节执行器面临着共同的底层技术挑战。文章强调了“执行器”是基础构建模块，这意味着我们在电机控制策略（FOC、弱磁、转矩脉动抑制）、无传感器控制）以及高可靠性执行器设计方面的投入是符合行业大趋势的。我们可以持续关注机器人领域在执行器控制、仿人机器人关节设计、以及其功能安全标准上的进展，探索将这些前沿研究成果快速迁移到EPS的电机控制策略和线控转向架构中，例如更精密的力矩控制、更高效的能量管理和更鲁棒的故障诊断。这种跨领域的学习和借鉴非常值得我们持续关注和投入。
-   https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261017-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261017-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261017-pm.mp3" length="3949920" type="audio/mpeg"/>
-      <pubDate>Sat, 17 Oct 2026 09:42:10 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI与线控转向：EPS工程师的智能进化之路</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。今天我们将聚焦AI前沿、汽车智能化和机器人三大热点，为您精选七条重磅资讯。从大模型的新进展，到AI在物理世界和安全领域的应用挑战，再到高性能电动车的最新动态，以及嵌入式仿真和多尺度设计方法论的突破，每一条都可能为您的EPS研发工作带来新的启发。让我们一起探索技术如何赋能电动助力转向系统的未来。
@@ -1171,6 +1135,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261101-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261101-am.mp3" length="6226704" type="audio/mpeg"/>
       <pubDate>Sat, 31 Oct 2026 22:45:09 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 研发工程师科技早报：AI多智能体突破、智能汽车市场风云与机器人执行器启示</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术，为您带来七条精选资讯，并结合我们汽车EPS研发的实际工作，深入分析这些技术对我们的启发和潜在应用。希望今天的分享能为您的工作带来新的思路和灵感。
+
+1. Memdoor：五支Qwen3.8-27B模型团队在LiveCodeBench Hard上击败Fable 5（来源：Hacker News）
+   应用分析：对于我们EPS研发工程师来说，这给我们带来了新的启发。我们可以尝试将多智能体系统引入FOC控制策略的优化和鲁棒性验证。比如，一个智能体负责探索控制参数空间，另一个智能体模拟极端工况并评估性能，第三个则专注于诊断潜在问题。这种协同工作模式，有望加速新策略的开发和标定过程，大幅减少人工试错成本。特别是在线控转向架构设计中，多智能体协同仿真将是验证复杂冗余切换逻辑的利器，能帮助我们预先发现和解决潜在的系统冲突，提升功能安全性。
+   https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve
+
+2. Anthropic阻止用户训练大型模型（来源：Hacker News）
+   应用分析：这条消息提醒我们，在将外部大模型引入EPS研发流程时，必须充分理解并遵守其使用条款，尤其是关于数据使用和模型训练的限制。对于EPS这类涉及核心知识产权和高功能安全要求的系统，直接利用第三方大模型进行核心算法开发或模型训练，可能存在数据安全和技术自主性风险。因此，更稳妥的策略是，将这些大模型主要用于辅助性工作，比如代码审查、文档生成、初步设计探索，或者考虑在私有化部署的开源模型上进行定制化训练，确保核心技术的安全可控。毕竟，保障我们的核心技术不外泄，是重中之重。
+   https://twitter.com/jiahaoshao1/status/2116475922190922088
+
+3. 小鹏汽车十月交付量首次突破五万辆（来源：CnEVPost）
+   应用分析：小鹏汽车的销量增长，尤其是其在智能化领域的深厚积累，对我们EPS研发团队来说是个积极信号。它意味着市场对高阶智能驾驶功能的需求旺盛，而线控转向作为未来智能驾驶的关键执行部件，其重要性不言而喻。我们应该持续关注头部智能电动车企对线控转向等前瞻技术的采纳节奏和具体需求，提前布局。同时，销量的规模效应也有助于摊薄零部件成本，为EPS系统采用更先进的电机、传感器和控制器提供更大的空间，让我们可以更好地平衡性能与成本。
+   https://cnevpost.com/2026/11/01/xpeng-deliveries-oct-2026/
+
+4. 蔚来十月交付量下降百分之十五点二三，终止31个月同比增长（来源：CnEVPost）
+   应用分析：蔚来的市场表现，提醒我们整个汽车行业正处于一个快速变化和高度竞争的环境中。EPS作为车辆的关键子系统，其性能、成本和可靠性直接影响整车的市场竞争力。因此，我们需要更加注重成本控制和技术创新，比如进一步优化无传感器控制方案，探索更高效的电机选型，以提升EPS的性价比。同时，高端品牌对用户体验的极致追求，也要求我们在助力手感调校、NVH性能（也就是噪音、振动与声振粗糙度）等方面持续精进，以满足消费者日益挑剔的需求，确保我们的EPS系统能为整车提供一流的驾驶体验。
+   https://cnevpost.com/2026/11/01/nio-deliveries-oct-2026/
+
+5. 比亚迪第二代海豹07轿车将于十一月五日发布（来源：CnEVPost）
+   应用分析：新一代车型通常会带来新的平台架构和技术升级需求。海豹零七尺寸的增加，可能会对EPS的输出转矩、转向手感以及系统集成带来新的挑战。我们作为EPS工程师，需要密切关注这类新车型是否会采用更先进的转向系统技术，例如针对大型轿车的R-EPS或DP-EPS，以及是否会为未来的线控转向预留接口。这为我们提供了潜在的合作机会，同时也要求我们准备好应对新车型对EPS性能和功能安全提出的更高、更复杂的要求，确保我们的产品能无缝适配未来车型的演进。
+   https://cnevpost.com/2026/11/01/byd-to-launch-2nd-gen-seal-07-nov-5/
+
+6. 非传统机器人动物展现实用价值（来源：The Robot Report）
+   应用分析：机器人动物的关节执行器控制，特别是对转矩密度、效率、NVH和鲁棒性的严苛要求，与我们EPS电机控制，例如永磁同步电机FOC矢量控制、弱磁控制和转矩脉动抑制等技术，简直是异曲同工。我们可以从机器人执行器控制的前沿研究中，借鉴先进的控制算法，比如模型预测控制、自适应控制，以及无传感器位置检测技术，来进一步提升EPS电机的性能和可靠性。此外，机器人领域在故障诊断和降级策略方面的探索，对我们EPS系统满足ISO 26262功能安全标准的设计，也具有非常重要的参考价值。这是一个非常值得我们持续关注并进行技术迁移的交叉点，能为我们的EPS技术带来新的突破。
+   https://www.therobotreport.com/unusual-robotic-animals-can-prove-their-utility/
+
+7. BBRouter：虚拟面包板仿真器结合AI辅助硬件设计和故障排除（来源：Hacker News）
+   应用分析：我们可以将这种AI辅助调试和设计工具的理念，无缝引入到EPS的开发流程中。想象一下，利用AI来分析HIL测试结果，自动诊断控制算法中的异常行为或参数漂移，这能够极大地提升我们的调试效率。或者在Simulink模型设计阶段，让AI辅助生成测试用例，优化模型结构，甚至帮助我们发现潜在的设计缺陷。对于像线控转向这样复杂的系统，AI可以帮助我们更快地发现架构设计中的潜在冲突或功能安全漏洞。投入资源研究AI在模型验证、故障诊断和自动标定中的应用，将有望显著提升我们的开发效率和系统鲁棒性，让我们的EPS产品更快、更稳地推向市场。
+   https://bbrouter.com/bbrouter/ben-eater-sap-1</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261101-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261101-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261101-pm.mp3" length="3301488" type="audio/mpeg"/>
+      <pubDate>Sun, 01 Nov 2026 09:42:10 +0000</pubDate>
     </item>
   </channel>
 </rss>
