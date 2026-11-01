@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 01 Nov 2026 16:10:39 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 22:42:17 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 智驾AI动向：DeepSeek新模型、AI代码审查与VFD电机控制新思路</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门领域，为您精选了七条重磅资讯。从DeepSeek最新AI模型的发布，到AI代码审查的创新工具，再到高性能电动车的最新动态，以及电机控制效率的深层思考，希望能给您的研发工作带来新的启发。
-
-1. DeepSeek-v4.1-Flash-1017（来源：Hacker News）
-   应用分析：可以用于辅助代码生成、文档总结、需求分析，甚至初步的控制策略代码片段生成。例如，让它分析现有FOC控制器的C代码，提出优化建议，或者根据Simulink模型自动生成部分说明文档。作为工程师，利用这类模型提升日常研发效率，如快速原型验证、查找规范，是值得小范围投入尝试的。
-   https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017
-
-2. Show HN: Sphinx – A hook that quizzes you on your AI's code before shipping（来源：Hacker News）
-   应用分析：完全可以借鉴甚至直接引入。我们可以将AI生成的控制算法（例如，强化学习得到的策略代码）集成到EPS控制器中之前，使用类似Sphinx的机制来问答审查。例如，系统可以询问：“这段弱磁控制代码在何种工况下可能失效？”或者“这个转矩脉动抑制的阈值是如何确定的？”在ISO 26262功能安全体系下，AI生成代码的验证和理解是巨大挑战，这种工具能有效补充现有代码审查流程，非常值得投入。
-   https://sphinx-six-theta.vercel.app/
-
-3. ADI explains the race to make AI physical（来源：The Robot Report）
-   应用分析：这不是一个具体工具，而是战略方向指引。我们可以参考ADI白皮书中的观点，思考如何在EPS系统设计中更好地融合AI。例如，在电机控制策略中引入AI进行自适应参数辨识、故障诊断、或者优化NVH性能。将AI模型部署到MCU上，需要考虑算力、内存、实时性、以及模型的可解释性。这是未来EPS乃至线控转向演进的关键方向，必须投入研究。
-   https://www.therobotreport.com/adi-explains-the-race-to-make-ai-physical/
-
-4. Mercedes-AMG’s first ground-up SUV is a 1,150hp electric beast（来源：The Verge）
-   应用分析：这不是一个直接可用的技术，而是市场和技术趋势的信号。我们需要关注高性能电动车对EPS的性能要求：例如，更大的助力扭矩范围、更精准的路感反馈、更快的响应速度。对于线控转向，这种高性能车型会是率先应用和验证的平台，其冗余架构和功能安全设计对我们有重要参考价值。因此，必须持续关注，为未来的高性能、线控转向汽车做技术储备。
-   https://www.theverge.com/transportation/1013088/mercedes-amg-gt-suv-price-specs-performance
-
-5. VW updates ID. UNYX 06 and 07 in China with LiDAR, lower entry prices（来源：CnEVPost）
-   应用分析：LiDAR的普及意味着EPS系统需要更好地与ADAS/AD域控制器协同工作，接收更精细的路径规划指令，并提供更精准的转向执行。同时，成本的下降也促使我们思考如何在保证性能和安全的前提下，优化EPS系统的成本。我们必须投入，深入研究线控转向与L3/L4级自动驾驶的接口标准、冗余设计，以及故障诊断与降级策略，同时探索无传感器或冗余传感方案的创新，以平衡性能、安全与成本。
-   https://cnevpost.com/2026/10/17/vw-updates-id-unyx-06-07-china/
-
-6. This Hidden Device Could Free Up Gigawatts of Grid Power（来源：IEEE Spectrum）
-   应用分析：VFD的原理和FOC控制策略与EPS电机控制高度一致。我们可以借鉴工业VFD在效率优化、谐波抑制、以及鲁棒性方面的经验，将其应用于EPS电机的FOC控制策略优化。例如，研究更先进的无传感器控制算法、参数自适应算法，以应对电机参数变化和温漂，进一步提升EPS电机的效率和NVH性能。EPS电机效率直接影响整车能耗，因此非常值得投入研究。
-   https://spectrum.ieee.org/variable-frequency-drives
-
-7. Show HN: Esp32sim – Run ESP32 firmware in the browser（来源：Hacker News）
-   应用分析：虽然EPS的MCU通常是汽车级芯片，不能直接使用ESP32sim，但其“浏览器内仿真”的理念非常值得我们思考。我们可以探索开发或引入类似的Web-based仿真环境，用于EPS控制器的部分模块（如通信协议栈、非功能安全相关的诊断逻辑）的快速原型验证和单元测试。这能减少对昂贵HIL设备的依赖，尤其是在早期开发阶段。提升MIL/SIL的效率是我们一直追求的目标，因此值得投入研究和借鉴。
-   https://github.com/mikroverk/esp32sim</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261018-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261018-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261018-pm.mp3" length="2764944" type="audio/mpeg"/>
-      <pubDate>Sun, 18 Oct 2026 09:41:59 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · EPS工程师的科技早报：AI前沿、汽车智能化与机器人执行器深度解析</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人这三大热门领域，为大家精选了7条重磅资讯。其中不乏能直接启发我们EPS系统设计和控制策略优化的干货，还有一些关于未来技术走向和市场趋势的重要信号。话不多说，让我们马上进入今天的早报时间。
@@ -1171,6 +1135,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261102-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261102-pm.mp3" length="3217824" type="audio/mpeg"/>
       <pubDate>Sun, 01 Nov 2026 16:10:39 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI多智能体、自动驾驶新浪潮与机器人安全：研发工程师早报速递</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的老朋友，XXX。今天我们将聚焦AI前沿、汽车智能化和机器人技术，一起来看看有哪些重磅资讯值得我们关注和思考。从AI多智能体协作的突破，到自动驾驶的加速发展，再到机器人领域的安全与硬件挑战，每一条都可能为我们的研发工作带来新的启发。话不多说，我们马上开始！
+
+1. Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard（来源：Hacker News）
+   应用分析：这种多智能体协作模式可以直接用于改进EPS控制策略的开发流程。我们可以设想一个AI团队：一个模型负责生成FOC、MPC等控制算法的初始代码；另一个模型负责代码审查和优化，识别潜在的性能瓶颈或功能安全风险；第三个模型可以根据台架或整车测试数据进行参数自适应调整或标定建议；还有AI负责生成测试用例。这能显著提高效率和代码质量，减少人工错误。尤其是在线控转向这种高度复杂的系统中，对软件鲁棒性和功能安全的要求极高，AI辅助开发和验证能有效降低风险。非常值得投入，可以从辅助生成单元测试、辅助代码重构等小范围应用开始试点。
+   https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve
+
+2. Guarding the Gates of Knowledge（来源：IEEE Spectrum）
+   应用分析：必须用，而且要高度谨慎地用。在EPS开发中，AI可以在辅助设计、代码生成、数据分析、故障预测等环节发挥作用。但所有AI生成的控制参数、诊断逻辑、甚至仿真模型，都必须经过严格的人工审查、MIL/SIL/HIL仿真验证、台架测试及整车路试。例如，AI辅助生成的FOC弱磁控制参数，需要通过全工况下的电机效率、温升、转矩输出等测试来验证其物理合理性和系统性能。值得投入，但重点在于建立“AI辅助+人工验证”的流程。投入的重点应放在构建强大的验证工具链和专家系统，并将其集成到现有的模型化设计与代码生成、测试与标定流程中，确保每一步都有明确的验证路径和责任归属。
+   https://spectrum.ieee.org/ai-slop-trust-science
+
+3. TechCrunch Mobility: A new, bigger AV boom is here（来源：TechCrunch）
+   应用分析：这是我们团队未来几年的核心发展方向。我们需要提前布局线控转向系统架构，包括多重冗余设计、异构计算平台、高带宽通信协议（如以太网），以及与AV决策层的高效接口。在电机选型上，需要考虑更高的转矩密度和更低的NVH，以适应去除机械连接后的纯电控手感和静谧性要求。控制策略上，需要深入研究如何在无物理连接的情况下，通过FOC、MPC等先进算法精确模拟路感、提供可靠的故障降级方案。毫无疑问，这是战略性投入，不仅值得，而且是必须投入。我们应积极参与到线控转向的预研项目中，与自动驾驶团队紧密合作，共同定义下一代转向系统的需求和技术路线。
+   https://techcrunch.com/2026/11/01/techcrunch-mobility-a-new-bigger-av-boom-is-here/
+
+4. Xpeng monthly deliveries top 50,000 for first time in October（来源：CnEVPost）
+   应用分析：这不是直接的技术应用，而是市场趋势的信号。它告诉我们，智能电动车的普及速度正在加快，对EPS产品的功能集成度和性能要求会越来越高。我们需要密切关注小鹏这类头部车企对转向系统的新需求，例如与ADAS系统更深度的融合，更精准的线控转向执行能力，以及在不同驾驶模式下的手感差异化调校。值得投入关注和策略调整。这意味着我们的研发重心需要更多地向智能化、集成化方向倾斜，例如在助力策略调校时，要考虑与自动泊车、车道保持等ADAS功能的协同，确保转向系统在自动驾驶接管和驾驶员接管之间的平顺切换。
+   https://cnevpost.com/2026/11/01/xpeng-deliveries-oct-2026/
+
+5. 28 Zero-Day Findings in Less Than Two Days: What AI-Speed Discovery Means for Robotics（来源：The Robot Report）
+   应用分析：我们可以借鉴这种AI辅助发现漏洞的方法，将其引入到EPS控制器的软件安全测试和功能安全分析中。例如，利用AI生成对抗性测试用例，模拟各种异常输入或攻击模式，以发现FOC控制算法、无传感器观测器、故障诊断逻辑等潜在的鲁棒性问题或安全漏洞。这有助于提升我们系统的网络韧性。同时，在EPS系统架构设计阶段，就需要集成硬件安全模块（HSM），并设计安全的启动链和固件更新机制。非常值得投入。随着线控转向和自动驾驶的普及，EPS作为关键执行器，其网络安全风险不容忽视。投入AI辅助安全分析工具和方法，可以显著提升EPS产品的安全等级，满足未来汽车网络安全法规的要求。
+   https://www.therobotreport.com/28-zero-day-findings-in-less-than-two-days-what-ai-speed-discovery-means-for-robotics/
+
+6. Why physical AI is the next lucrative frontier（来源：The Robot Report）
+   应用分析：这篇文章是一个战略指引。它鼓励我们继续深化在AI控制领域的探索，例如将强化学习（RL）应用于助力策略的自适应调校，或使用神经网络观测器来提升无传感器控制的精度和鲁棒性。关键在于，这些AI方案必须在MIL/SIL/HIL以及台架测试中证明其性能优于传统方法，并且满足功能安全要求，才能真正进入量产。我们需要与学术界和AI公司合作，共同开发可落地的物理AI解决方案。值得长期战略投入。物理AI的商业化成功，将为EPS带来全新的增长点和技术突破。通过将AI应用于电机控制策略的优化、故障诊断与预测性维护，可以提升产品性能、降低成本并提高可靠性。
+   https://www.therobotreport.com/why-physical-ai-next-lucrative-frontier/
+
+7. Solving the Interconnect Challenge in Modern Robotics: How 3M Is Engineering for Motion, Density, and Uptime（来源：The Robot Report）
+   应用分析：我们应密切关注3M等公司在机器人互连件领域的技术进展。在EPS控制器硬件设计中，可以借鉴机器人领域的高密度、高可靠性连接方案，优化PCB布局，选择更先进的连接器和线束材料。例如，对于电机位置传感器的信号传输，需要确保极高的信号完整性，以避免噪声引入导致FOC控制精度下降。在空间受限的DP-EPS或R-EPS系统中，高密度互连件能有效减小控制器体积和重量。值得投入关注和适度评估。虽然互连件并非EPS的核心控制算法，但它是实现高性能、高可靠性控制器的基础。糟糕的互连件设计会直接导致NVH问题、EMC失效甚至功能安全风险。定期评估和引入先进的互连件技术，可以提高EPS产品的整体质量和可靠性。
+   https://www.therobotreport.com/solving-the-interconnect-challenge-in-modern-robotics-how-3m-is-engineering-for-motion-density-and-uptime/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261102-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261102-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261102-am.mp3" length="2613168" type="audio/mpeg"/>
+      <pubDate>Sun, 01 Nov 2026 22:42:17 +0000</pubDate>
     </item>
   </channel>
 </rss>
