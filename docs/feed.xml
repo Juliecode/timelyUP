@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 03 Nov 2026 16:30:06 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 22:42:42 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI与智能汽车机器人前沿：重塑转向与控制的未来</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门领域，精选七条重磅资讯，深入探讨它们对我们EPS研发工作的潜在影响和应用价值。从大语言模型赋能控制系统，到人形机器人执行器的设计哲学，再到自动驾驶的3D世界建模，每一条都可能为我们的技术突破带来新的灵感。话不多说，让我们立刻进入今天的早报时间。
-
-1. From Natural Language Intent to Executable Control: Hierarchical Feedback-Guided LLM Planning for Multi-component Cyber-Physical Systems（来源：arXiv cs.AI）
-   应用分析：作为EPS工程师，这项技术为我们提供了一个全新的思路，即如何用更直观的自然语言来定义和优化EPS的助力特性或故障诊断流程。例如，我们可以直接告诉AI：“我想要转向手感更稳定，减少高速时的抖动”，然后让LLM自动生成或优化控制策略、诊断脚本。这种方式能极大提升我们日常的标定效率和故障诊断的自动化程度，减少人工试错和经验依赖，非常值得我们投入研究资源进行概念验证和原型开发。
-   https://arxiv.org/abs/2610.22441
-
-2. When is a large language model a good calibration agent? Physics-labeled prompting for budgeted engineering simulator calibration（来源：arXiv cs.LG）
-   应用分析：这项成果直接命中了我们EPS系统开发中一个长期痛点：标定效率低下。我们可以利用LLM，结合电机控制模型（例如FOC参数、状态观测器增益）的物理意义和仿真结果的误差描述（比如“转矩纹波过大”或“低速抖动明显”），让LLM推荐参数调整的方向和幅度。这比纯粹依赖黑盒优化算法更具指导性和可解释性，有望显著缩短MIL、SIL、HIL等阶段的调参时间，降低开发成本。我们应该积极关注并尝试将这种“物理标签化提示”的方法引入到我们的基于模型的标定流程中。
-   https://arxiv.org/abs/2610.22379
-
-3. Timestral: Mistral's time-series foundation models（来源：Hacker News）
-   应用分析：在EPS系统中，我们处理大量电机电流、转速、位置、转向角、车速等时间序列数据。Timestral这类模型可以用于：第一，提升无传感器控制中转子位置观测器的精度和鲁棒性，尤其是在低速或动态变化工况下；第二，通过分析历史运行数据，预测电机或控制器关键部件的寿命和潜在故障，实现更精准的预测性维护；第三，辅助进行电机参数的在线辨识，以应对温漂或老化导致的性能下降。这是一个非常有前景的方向，我们团队可以考虑引入相关技术进行预研和概念验证，探索其在EPS数据处理和控制优化中的潜力。
-   https://mistral.ai/news/timestral/
-
-4. Online Constraint Optimization-Based Indirect-Adaptive Robust Control for Autonomous Vehicles with Unknown Friction（来源：arXiv eess.SY 控制系统）
-   应用分析：路面摩擦系数是我们EPS系统设计中一个重要的未知参数，它直接影响助力手感和车辆稳定性。这项技术为我们开发更智能、更鲁棒的助力策略和线控转向控制算法提供了重要启发。例如，通过实时估计路面摩擦系数，我们可以自适应地调整助力曲线、回正阻尼，甚至在极端情况下调整车辆的转向响应，以提升驾驶安全性和舒适性。这种将模型补偿与鲁棒反馈结合的思路，对于我们提升电机控制策略的性能和鲁棒性，尤其是处理参数不确定性方面，具有很高的借鉴价值，值得深入研究其在EPS领域的应用潜力。
-   https://arxiv.org/abs/2610.22675
-
-5. DriveWorld3D Evidence Constrained 3D World Modeling and Generative Simulation for Real-World Autonomous Driving（来源：arXiv cs.RO）
-   应用分析：尽管EPS系统主要关注车辆转向执行本身，但未来的线控转向（Steer-by-Wire）系统将深度集成到自动驾驶架构中。精确的3D世界模型和行为预测能力，将为线控转向提供更丰富、更可靠的环境感知信息，使得转向系统能够预判路况、障碍物和交通参与者行为，从而实现更平稳、更安全、更精准的转向决策和控制。例如，在自动泊车或自动变道等复杂场景中，转向系统可以基于高精地图和实时环境模型进行更精细的路径规划和执行。这是一个值得我们长期关注的趋势，能为线控转向的架构设计提供重要输入。
-   https://arxiv.org/abs/2610.22450
-
-6. Has GPT-6-Astra Achieved Embodied Intelligence?（来源：arXiv cs.RO）
-   应用分析：人形机器人的关节执行器控制与EPS电机控制在底层技术上有高度共通性，例如对高精度力矩控制、NVH抑制、效率和可靠性的要求。GPT-6-Astra展现的通用具身智能能力，意味着未来我们可能不需要为每种EPS产品或每种电机类型开发完全独立的控制逻辑。一个高度智能的通用AI模型，结合少量特定任务的上下文学习，或许就能实现复杂的电机控制、故障诊断和手感调校。这为我们提供了从底层硬件控制抽象出更通用、更智能的控制范式的可能性，尤其是在线控转向的复杂冗余和功能安全设计中，通用AI的决策能力可能扮演关键角色。虽然短期内难以直接落地，但其长期潜力巨大，值得我们持续关注和探索。
-   https://arxiv.org/abs/2610.22471
-
-7. The Robot I Didn’t Expect to Build（来源：IEEE Spectrum）
-   应用分析：Digit 5这类人形机器人的关节执行器，与我们EPS的电机控制有诸多共通之处，例如对高转矩密度、高效率、低NVH、高可靠性及精准控制的要求。尤其它强调的“重物搬运二十三千克”和“九十分钟运行、九分钟充电”的电池设计，对电机过载能力、散热、功率级设计以及能量管理提出了苛刻要求。我们可以从其电机选型、FOC等控制策略、故障诊断和功能安全设计中学习经验，反哺EPS的电机控制性能与鲁棒性提升，尤其是在向线控转向演进时，执行器的功能安全和冗余设计。这是一个可以直接借鉴技术思路的交叉点，值得我们深入分析其工程实现细节。
-   https://spectrum.ieee.org/agility-robotics-digit-5-redesign</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261020-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261020-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261020-am.mp3" length="3071376" type="audio/mpeg"/>
-      <pubDate>Mon, 19 Oct 2026 22:42:19 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 智驾新方向：从线控转向传感器到AI赋能控制</title>
       <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条最有价值的资讯。这些内容不仅洞察行业趋势，更将结合我们的EPS研发工作，为您带来实实在在的应用分析。准备好了吗？让我们一起开启今天的科技之旅！
@@ -1157,6 +1121,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261104-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261104-pm.mp3" length="3266352" type="audio/mpeg"/>
       <pubDate>Tue, 03 Nov 2026 16:30:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI赋能智驾与机器人：EPS未来技术前瞻</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。从AI如何助力工业缺陷检测和实时控制，到电动汽车高压电力电子的最新进展，再到人形机器人技术对我们转向系统的启发，内容丰富，干货满满，希望能为您的研发工作带来新的思考和灵感。
+
+1. AI to the Edge: Generative Intelligence for Robotics and Autonomous Systems（来源：EE Times）
+   应用分析：我会密切关注这类研讨会或研究报告，寻找生成式AI在电机控制策略（比如FOC参数自适应、无传感器观测器优化）和助力曲线自动调校中的具体应用案例。例如，能否用生成式模型学习复杂工况下的最优控制参数，或者生成针对特定驾驶手感的助力曲线。这值得投入研究，尤其是概念验证和初期仿真，看其能否解决现有模型预测控制或传统PI控制难以优化的非线性问题。
+   https://www.eetimes.com/ai-to-the-edge-generative-intelligence-for-robotics-and-autonomous-systems/
+
+2. Beyond CLIP: Calibrated (Few-Shot) Defect Detection With System One Decision Models（来源：arXiv cs.AI）
+   应用分析：可以考虑将这种少样本缺陷检测方法引入到EPS电机的生产线上，用于检测诸如绕组瑕疵、定子铁心损伤、转子不平衡等视觉或声学缺陷。通过收集少量典型缺陷图像作为参考，快速部署检测模型，减少人工检测的依赖。这值得投入进行可行性研究，尤其是在HIL或台架测试中，用于早期发现电机运行异常，提升产品可靠性。
+   https://arxiv.org/abs/2610.41199
+
+3. ART of PIV: Agentic Real-Time Particle Image Velocimetry for Active Flow Control（来源：arXiv cs.AI）
+   应用分析：我们可以探索将“Agentic”思想引入EPS的助力策略调校或电机控制参数自适应。例如，开发一个智能体，根据实时路况传感器数据和驾驶员手感反馈，动态调整助力曲线、回正阻尼或FOC控制参数，以达到最优的转向手感和NVH表现。这比传统的模型预测控制更灵活，值得在仿真和原型阶段进行探索性研究。
+   https://arxiv.org/abs/2610.41304
+
+4. Today’s webinar: Driving the future of next-generation high-voltage power electronics（来源：Charged EVs）
+   应用分析：我们需要密切关注这些高压电力电子技术的发展。在EPS控制器硬件设计中，考虑引入碳化硅/氮化镓场效应管以提升功率密度和效率，支持更高功率的电机，特别是在R-EPS或线控转向等对功率要求更高的场景。这涉及到成本、可靠性、封装和散热等工程挑战，但从长远来看，是值得投入研发的方向，应尽早进行技术预研和供应商评估。
+   https://chargedevs.com/whitepapers/webinar-driving-the-future-of-next-generation-high-voltage-power-electronics/
+
+5. Macronix Builds Hardware Security into NOR Flash Ahead of EU Cyber Resilience Act（来源：EE Times）
+   应用分析：在EPS控制器硬件设计中，选择具有内置硬件安全功能的存储器（例如NOR闪存）至关重要。这有助于保护固件完整性、身份验证和安全启动，防止恶意篡改或攻击。我们需要与MCU和存储器供应商合作，评估其安全功能是否符合ISO 26262和未来网络安全法规的要求。这是一个必须投入的方向，以确保EPS系统的整体安全性和可靠性。
+   https://www.eetimes.com/macronix-builds-hardware-security-into-nor-flash-ahead-of-eu-cyber-resilience-act/
+
+6. Churchill Capital XI shareholders approve $2.5B Agility Robotics humanoid SPAC（来源：The Robot Report）
+   应用分析：我们会密切关注Agility Robotics人形机器人的电机选型、控制算法（例如扭矩控制、柔顺控制）以及功能安全设计。这些技术经验可以直接启发我们在线控转向执行器、冗余设计和新型电机控制策略上的研究。例如，Digit的关节力矩控制精度和响应速度是EPS手感调校和路感还原的关键。值得投入资源分析其公开的技术资料，甚至考虑与相关研究机构合作，探索将机器人执行器控制的前沿技术应用于EPS系统。
+   https://www.therobotreport.com/agility-robotics-shareholders-approve-25b-humanoid-spac/
+
+7. Stringman, an $800 open-source room scale gripper robot（来源：Hacker News）
+   应用分析：虽然Stringman是抓取机器人，但其在低成本硬件选型（例如电机、减速器）和开源控制方案上的探索，可以为我们寻找EPS电机及控制器降本增效的思路。可以关注其驱动器、传感器和控制架构，看是否有可借鉴的模块或设计理念，用于EPS的辅助功能或非安全关键部分的成本优化。这是一个值得关注但不必立即投入大量资源的领域，更多是作为技术趋势的观察。
+   https://neufangled.com/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261104-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261104-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261104-am.mp3" length="3284352" type="audio/mpeg"/>
+      <pubDate>Tue, 03 Nov 2026 22:42:42 +0000</pubDate>
     </item>
   </channel>
 </rss>
