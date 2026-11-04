@@ -13,51 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 04 Nov 2026 16:32:28 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 22:43:14 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI赋能转向，智驾未来：EPS工程师的科技早报</title>
-      <description>早上好，各位研发工程师朋友们！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门领域，精选出七条对我们研发工作最有启发性的资讯。从如何用AI提升控制系统性能，到线控转向的关键技术突破，再到AI在智能制造和车载体验中的深度融合，每一条都可能点亮你工作中的新思路。准备好了吗？让我们一起开启今天的科技之旅！
-
-1. Neural Closed-Loop Identification of Nonlinear Systems with Stability and Generalization Guarantees（来源：arXiv eess.SY 控制系统）
-   应用分析：这项研究对我们EPS工程师来说，非常有价值。EPS系统本身就是非线性的，尤其在不同车速、摩擦系数或温度下，特性变化会很大。我们可以将EPS电机、减速器、转向齿条等组成的整个非线性动力学系统视为被控对象。利用现有的EPS控制器运行时产生的闭环数据，通过这个“内部控制器识别（ICI）”框架，辨识出更精确的非线性模型。这个高精度模型可以用来改进我们的控制策略，比如设计更先进的模型预测控制（MPC）或强化学习控制器，从而提升转矩脉动抑制、NVH性能和手感调校的精细度。同时，它也能作为“数字孪生”的基准，通过实时数据与模型预测的偏差来检测系统异常或部件老化，实现更智能的故障诊断。此外，高精度的非线性模型还有助于设计更鲁棒的状态观测器，为我们探索无传感器或冗余传感方案提供技术支撑，从而降低成本并提升安全性。所以，这是将AI和数据驱动方法引入我们核心控制算法的关键一步，非常值得投入。
-   https://arxiv.org/abs/2610.27970
-
-2. Expert-Guided Rubrics as Dense Reward Signals for Reinforcement Learning in Non-Verifiable Domains（来源：arXiv cs.LG）
-   应用分析：这项研究对我们解决EPS手感调校的痛点非常适用。手感调校是一个典型的非可验证领域，高度依赖经验丰富的工程师在路试中进行主观评价。我们可以将不同助力曲线、阻尼参数组合下的方向盘手感（比如轻重、回正性、阻力感、路感还原）由试车工程师进行分级评价，例如从一分到五分，将这些主观评价作为专家判断的“评分标准”。然后，通过这项研究的方法，将这些有限的专家判断转化为强化学习的密集奖励信号。这样，强化学习模型就可以更快地学习到最优的手感调校策略，从而大幅减少路试次数，提高调校效率。同时，结合多位专家的经验，我们还能训练出更具普适性和鲁棒性的调校模型，以适应不同车型和驾驶员偏好。这对于提升我们EPS产品的核心竞争力，形成技术壁垒，是非常值得投入的创新方向。
-   https://arxiv.org/abs/2610.26932
-
-3. Industrial Agentic AI: LLM-Driven New-Generation Agents for Smart Manufacturing（来源：arXiv cs.AI）
-   应用分析：这项研究提供了工业AI应用的宏观视角和系统架构指导，对我们很有启发。我们可以借鉴“工业智能体”的理念，开发一个基于LLM的智能研发助理。这个助理可以帮助我们处理复杂的系统架构设计文档，分析功能安全标准ISO 26262的合规性，甚至辅助嵌入式C代码的生成和审查。在自动化标定与测试方面，我们可以将LLM智能体与我们的MIL、SIL、HIL仿真环境结合，让智能体自主规划测试用例、分析仿真结果，并根据预设目标自动调整标定参数，从而大幅提升标定和验证效率。此外，借鉴其“闭环任务执行”机制，我们能构建一个智能体，持续监控EPS系统的运行数据，结合历史故障模式进行自主故障诊断，甚至预测潜在的硬件磨损或性能下降，提前发出维护警报。在EPS产品的制造和装配环节，LLM智能体也能优化机器人路径规划和质量检测流程。这些应用能帮助我们将AI从单一工具提升为具备自主规划和执行能力的“智能助手”，解决研发和生产中的复杂问题，是实现“AI驱动的工程方案”的重要一步，值得我们投入研究和实践。
-   https://arxiv.org/abs/2610.26941
-
-4. TDK’s dual-die HAR 3025 position sensor is designed for steer-by-wire and traction motors（来源：Charged EVs）
-   应用分析：TDK推出的这款双芯片HAR 3025电机位置传感器，对我们EPS工程师而言，是必须立即关注的关键技术。它专为线控转向和牵引电机这类安全关键型汽车应用设计，其双芯片冗余特性能够满足ASIL D级别功能安全要求，这将极大地简化我们线控转向系统中的安全设计。我们可以直接将HAR 3025用于线控转向的原型系统，作为转向执行电机的位置传感器进行验证。即使是现有的传统EPS系统，也可以考虑引入这类冗余传感器，以提升系统的安全等级和可靠性，特别是在支持高阶自动驾驶功能的EPS中。此外，尽管我们也在探索无传感器控制方案，但对于安全关键系统，物理冗余传感器仍然是不可或缺的，HAR 3025可以作为无传感器方案的独立备份或校验，确保在无传感器算法失效时仍能提供可靠的位置信息，保证降级运行的安全。TDK作为知名供应商，其产品特性也为我们电机选型时，综合考虑电机与传感器的匹配性提供了重要参考。这类安全级传感器是线控转向技术落地的关键硬件基础，也是提升我们现有EPS产品安全性和竞争力的重要方向，非常值得立即评估和投入。
-   https://chargedevs.com/newswire/tdks-dual-die-har-3025-position-sensor-is-designed-for-steer-by-wire-and-traction-motors/
-
-5. DexGraspFlow: Topology-Aware SE(3) Flow Matching for Cross-Embodiment Dexterous Grasp Generation（来源：arXiv cs.RO）
-   应用分析：DexGraspFlow虽然是针对机器人灵巧手的抓取生成，但其核心思想与我们EPS工程师的工作高度相关，尤其是在线控转向的演进方向上。它解决的是多关节、高自由度系统的高效建模和控制问题。未来线控转向系统可能涉及多个执行器，例如左右车轮独立的转向电机，或者多个冗余电机。DexGraspFlow中对“关节间协调”和“拓扑感知”的建模方法，可以启发我们设计线控转向系统中各电机如何协同工作，以保持转向手感和响应的一致性。此外，目前EPS的助力曲线多是依靠经验进行调校。借鉴其“生成姿态”的思路，我们或许可以尝试利用AI模型生成满足特定手感要求（如回正力矩、阻尼特性）的助力曲线，并通过逆动力学恢复所需的电机转矩指令，从而实现更智能的助力策略。最后，DexGraspFlow对“运动学拓扑”的显式建模，也能帮助我们思考如何在电机控制算法中更好地融入EPS系统的物理结构和约束，提升控制的鲁棒性。虽然不是直接的解决方案，但这项研究的核心思想与我们面临的多电机协调、复杂运动学控制问题高度相关，是值得持续关注和探索的前沿研究方向。
-   https://arxiv.org/abs/2610.26962
-
-6. Which Depth Estimator for Jetson AGX Orin? A 2026 Benchmark of Monocular and Stereo Methods（来源：arXiv cs.RO）
-   应用分析：这项2026年的深度估计算法基准测试，尽管直接面向机器人和车辆的感知，但对我们EPS工程师来说，其揭示的性能数据非常有参考价值。Jetson AGX Orin是车载计算平台常用的边缘设备，深度信息是自动驾驶和ADAS环境感知的关键。虽然EPS本身不直接进行深度估计，但作为线控转向的执行层，与感知层的紧密配合是未来的趋势。这份报告中的深度信息，可以用于线控转向系统更精确地感知路面状况，例如坑洼或颠簸，从而实现更智能的路感还原，即主动调节助力来模拟真实的驾驶感受，甚至支持主动避障功能。报告中不同深度估计方法在Orin平台上的速度和能耗数据，对于我们在选择车载感知计算平台时，如何在满足自动驾驶对深度信息的需求与EPS控制器的实时性、功耗、成本之间取得平衡，具有重要参考价值。了解不同深度估计方法的优劣，也有助于我们规划EPS与车载感知系统进行数据融合的策略，例如，在特定场景下优先使用高精度的立体视觉深度信息。所以，这项资讯值得我们持续关注。
-   https://arxiv.org/abs/2610.27199
-
-7. Google is bringing a more personal version of its Gemini AI assistant to your car（来源：TechCrunch）
-   应用分析：谷歌将Gemini AI助手的“个人智能”功能引入汽车，虽然主要面向用户体验和信息娱乐，但其背后蕴含的“情境感知”和“个性化”AI理念，对我们EPS工程师来说，可以为未来的EPS系统带来创新。直接用于EPS产品本身的可能性不大，但我们可以借鉴其思路。例如，未来的EPS系统可以根据驾驶员的驾驶习惯、行程安排（来自日历）、目的地（来自地图）甚至健康状态（通过可穿戴设备数据），智能推荐或自动切换助力模式。想象一下，在驾驶员疲劳时提供更轻的转向，或者在新手驾驶员模式下提供更稳定的手感。更进一步，我们还可以探索语音交互式的标定方式。例如，标定工程师可以直接通过语音告诉车载AI：“我觉得这个弯道的助力有点重，回正力再强一点”，然后AI结合历史数据和模型，自动调整参数并生成新的控制策略，这将大大提高标定效率。这种深度融入个人生活和情境感知的AI发展趋势，值得我们持续关注和思考，它能为未来EPS的智能交互和用户体验带来颠覆性的改变。
-   https://techcrunch.com/2026/10/20/google-is-bringing-a-more-personal-version-of-its-gemini-ai-assistant-to-your-car/
-
-8. BMW to make Neue Klasse inverter power modules in-house at its Austrian plant（来源：Charged EVs）
-   应用分析：宝马集团斥资1亿欧元自产其第六代电机的逆变器功率模块，这一举动对我们EPS工程师来说，是一个非常重要的行业趋势信号，值得我们高度关注和学习。逆变器是电机控制系统的核心，其性能直接影响电机的效率、功率密度、NVH和可靠性。宝马的自研行为表明，头部车企对核心动力总成部件的掌控力越来越强，也反映了对功率半导体技术和电机控制的极度重视。我们可以深入研究宝马的逆变器设计理念，例如他们如何平衡效率、成本和可靠性，这能为我们EPS控制器中的功率级选型和设计提供重要参考，特别是在SiC和GaN等新型功率器件的应用上。此外，自产逆变器能够更好地与自研电机和控制策略协同优化，实现更高的系统整体性能。这促使我们在EPS电机控制策略开发时，更紧密地考虑与功率级的集成优化，例如在弱磁控制、转矩脉动抑制等方面。这种垂直整合的趋势也提醒我们，在EPS产品的关键部件供应链上，需要更深入地评估供应商的技术能力和长期合作潜力，甚至考虑部分核心技术的自研。最后，逆变器开关频率和控制算法对电机NVH有显著影响，宝马的自研能使其在逆变器层面进行更精细的优化，以达到整车NVH目标，这为我们EPS的NVH控制提供了新的思考方向。总的来说，宝马的这一战略选择，代表了行业最高水平的技术趋势，对我们提升自身技术栈和产品竞争力至关重要，必须投入学习和研究。
-   https://chargedevs.com/newswire/bmw-to-make-neue-klasse-inverter-power-modules-in-house-at-its-austrian-plant/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261021-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261021-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261021-pm.mp3" length="5636592" type="audio/mpeg"/>
-      <pubDate>Wed, 21 Oct 2026 09:44:21 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI赋能汽车底盘，智驾与机器人并行</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人三大领域，为您精选了七条重磅资讯。特斯拉擎天柱机器人开始量产，通用汽车也宣布将在2028年推出全新中央计算平台，全面拥抱AI。同时，在AI与控制系统融合方面，非线性系统辨识、运行时安全监控以及强化学习的专家经验引入，都取得了突破性进展。这些都预示着我们的未来工作将与AI和智能系统更加紧密地结合。话不多说，让我们一起来看看今天的详细内容。
@@ -1157,6 +1117,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261105-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261105-pm.mp3" length="3109824" type="audio/mpeg"/>
       <pubDate>Wed, 04 Nov 2026 16:32:28 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 研发早报：小鹏AI感知超越GPT，英飞凌GaN芯片与STM32嵌入式AI助力汽车智驾</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯，希望能为您的日常研发工作带来新的灵感和思考。话不多说，我们马上开始今天的播报。
+
+1. Xpeng unveils GroundingPI pre-trained model, outperforming GPT-6 Astra in perception benchmarks（来源：CnEVPost）
+   应用分析：能用，且高度相关。小鹏的成果表明，针对特定领域（如汽车感知）训练的AI模型，即使参数量相对较小（约40亿），也能在专业任务上超越通用大模型。作为EPS研发工程师，其强大的感知能力可以帮助线控转向系统更好地理解路面状况、车辆姿态和驾驶员意图，例如，通过识别路面摩擦系数、障碍物类型，为EPS提供更精准的输入，优化助力曲线和阻尼控制，实现更细腻、更安全的路感反馈和手感调校。同时，结合车辆传感器数据，可用于高鲁棒性故障诊断，实现对EPS电机、传感器或机械结构潜在故障的早期预警和诊断，提升功能安全等级。这是非常值得投入的方向，可以考虑与AI团队合作，探索如何将高精度感知信息融入到EPS的控制环路中，通过强化学习或模型预测控制，利用感知信息优化助力输出，提升系统的性能和鲁棒性。
+   https://cnevpost.com/2026/11/04/xpeng-unveils-groundingpi-pre-trained-model/
+
+2. Kimi K3.1 Pro model weights are out（来源：Hacker News）
+   应用分析：能用。虽然是通用大模型，但其开源特性使其在内部工具和辅助开发方面有潜力。我们可以利用Kimi K3.1 Pro构建一个内部AI助手，用于检索和总结EPS相关的技术文档、历史项目数据、故障报告和行业标准（如ISO 26262），从而提高研发效率。此外，它还能辅助生成部分C语言嵌入式代码片段，或进行代码审查，识别潜在的逻辑错误、效率瓶颈或安全漏洞。在自动标定方面，Kimi可以辅助分析大量标定数据，识别参数间的关联性，甚至基于历史数据和专家经验，提供初步的标定参数建议，减少人工试错时间。这是值得投入的，可以小范围试点，评估其在文档处理和代码辅助上的实际效果，逐步推广。
+   https://huggingface.co/moonshotai/Kimi-K3.1-Pro
+
+3. Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 548GB/s（来源：Hacker News）
+   应用分析：直接用于EPS控制器可能性小（尺寸、功耗、车规），但其技术理念和性能指标可作为未来车载高性能计算平台选型和架构设计的参考。随着线控转向和高级自动驾驶的发展，车载计算平台需要集成更强大的AI推理能力。Cloud AI 100 Ultra的能效比和内存带宽，可以作为我们评估未来车载AI芯片（特别是用于感知、决策等复杂AI任务的芯片）的重要指标。我们可以关注其在散热、功耗管理方面的设计，为线控转向中央计算单元的硬件选型提供思路。此外，在研发阶段，可以使用类似高性能加速卡进行复杂的电机控制模型训练（如强化学习控制策略）或大规模的MIL/SIL/HIL仿真，加速算法开发和验证周期。间接值得投入，应持续关注高通及其他芯片厂商在车载AI计算平台上的发展，特别是其在边缘侧的AI芯片产品线。
+   https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra
+
+4. Infineon to set up high-volume 300 mm GaN power chip production in Austria（来源：Charged EVs）
+   应用分析：能用，且非常重要。GaN功率器件是EPS功率级演进的关键技术方向。GaN器件的高开关频率和低损耗特性，可以直接应用于EPS的电机驱动器功率级。这意味着我们可以设计出更小、更轻、散热要求更低的控制器，同时提升电机控制的整体效率，减少能量损耗和发热。这对于优化EPS的NVH性能和延长续航里程都有益处。此外，GaN支持更高的开关频率，这为电机控制策略（如FOC）提供了更大的设计自由度，可以实现更精细的电流控制，进一步抑制转矩脉动和纹波，提升手感平顺性。非常值得投入，应立即启动GaN器件在EPS控制器中的可行性研究，包括器件选型、驱动电路设计、热管理、功能安全评估等，并与供应商保持紧密合作。
+   https://chargedevs.com/newswire/infineon-to-set-up-high-volume-300-mm-gan-power-chip-production-in-austria/
+
+5. STMicroelectronics Expands STM32 Roadmap for Cloud AI and Physical AI（来源：EE Times）
+   应用分析：能用，且是核心硬件平台。STM32是我们EPS控制器MCU选型的重要考量。我们可以利用支持物理AI的STM32A系列MCU，在EPS控制器内部实现轻量级的AI算法。例如，部署基于神经网络的无传感器位置观测器，或用于转矩脉动抑制的AI模型，以及基于AI的故障诊断和预测性维护功能。这将提升EPS的智能化水平和鲁棒性。同时，需要深入研究STM32A系列如何满足ISO 26262功能安全标准，并探索如何在硬件层面（如AI加速模块）和软件层面（如AI算法的验证与确认）确保AI功能的安全性。非常值得投入。作为EPS控制器软硬件开发的核心，紧密关注并评估STM32的新产品，将其AI能力融入到EPS的控制和诊断中，是提升产品竞争力的关键。可以与ST合作，获取早期开发套件，进行概念验证和性能测试。
+   https://www.eetimes.com/stmicroelectronics-expands-stm32-roadmap-for-cloud-ai-and-physical-ai/
+
+6. Methods for Accelerating and Stabilizing Nonlinear Magnetic Equivalent-Circuit Analysis（来源：arXiv eess.SY 控制系统）
+   应用分析：能用。该研究成果直接关联到EPS电机的设计和优化流程。我们可以将这种加速和稳定的非线性MEC分析方法引入到EPS电机的设计流程中。特别是在PMSM电机的转矩密度、效率、NVH（转矩脉动、噪声）优化阶段，可以更快、更准确地评估不同电机结构和材料方案的性能，缩短设计周期。同时，精确的电机参数（如电感、磁链）对FOC和无传感器控制至关重要。利用改进的MEC分析，可以更准确地获取不同运行工况下的电机参数，为控制策略提供更可靠的模型输入，提升控制精度和鲁棒性。在电机局部磁饱和严重的工况下，准确的磁场分析还有助于评估电机发热情况，优化散热设计。非常值得投入。这是提升EPS电机性能和降低成本的底层技术，应研究该论文的方法，并与电机设计团队或仿真软件供应商合作，将其集成到现有的电机仿真与优化工具链中。
+   https://arxiv.org/abs/2406.08375
+
+7. LiberAI Unveils Liber-0, a World Action Model That Grounds Human Experience in Robot Action（来源：The Robot Report）
+   应用分析：能用，但需要概念迁移和深入研究。它提供了新的思路来设计更智能、更自适应的EPS控制系统。我们可以借鉴“世界行动模型”的理念，研究如何将驾驶员的驾驶经验（“人类经验”）和不同路况下的车辆动态（“世界”）映射到EPS的转向手感和助力策略（“机器人行动”）。目标是实现零样本或少样本的手感调校，让EPS能够根据驾驶员的偏好和实时路况，自适应地调整助力、阻尼和回正力矩，提供更个性化、更舒适安全的转向体验。此外，如果系统能够“理解”各种故障模式下的“行动”经验，那么在发生传感器故障或电机部分失效时，EPS可以依据预训练的经验模型，快速切换到最优的降级模式，甚至在一定程度上自适应补偿，维持基本转向功能，提升功能安全。非常值得投入。这是前沿研究，但其核心思想与线控转向和EPS高级控制的未来方向高度契合。应积极关注这类通用机器人控制模型，并探讨将其核心理念和技术路径（如大规模数据预训练、零样本泛化）迁移到EPS控制系统中的可能性，例如通过与高校或AI研究机构合作，进行前瞻性研究。
+   https://www.therobotreport.com/liberai-unveils-liber-0-a-world-action-model-that-grounds-human-experience-in-robot-action/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261105-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261105-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261105-am.mp3" length="3769776" type="audio/mpeg"/>
+      <pubDate>Wed, 04 Nov 2026 22:43:14 +0000</pubDate>
     </item>
   </channel>
 </rss>
