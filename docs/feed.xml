@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 05 Nov 2026 16:44:29 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 22:43:43 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 智驾浪潮下的EPS新机遇：AI、线控与高效控制的融合</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能前沿、汽车智能化和机器人这三大热门方向，精选出七条最值得我们关注的资讯。从特斯拉的无方向盘自动驾驶，到氮化镓在功率转换中的应用，再到学习型控制和AI驱动的机器人行为调优，这些前沿进展都与我们EPS系统未来的发展息息相关。话不多说，让我们立刻进入今天的早报时间。
-
-1. Industrial Agentic AI: LLM-Driven New-Generation Agents for Smart Manufacturing（来源：arXiv cs.AI）
-   应用分析：这项技术非常有潜力。在EPS产品的生产测试、产线故障诊断、以及自动化标定流程中，我们可以探索引入LLM驱动的工业智能体。例如，智能体可以分析大量的测试数据，识别异常模式，生成初步的诊断报告，甚至根据历史数据和规则库自主调整测试参数或提出优化建议。在复杂的整车标定场景中，智能体也能协助工程师理解不同参数间的耦合关系，优化标定路径。短期内，我们可以从辅助工具和决策支持系统开始，例如让LLM智能体处理故障报告、生成故障树。长期来看，完全自主的工业智能体有望革新产线管理和质量控制，值得我们中长期投入研究。
-   https://arxiv.org/abs/2610.26941
-
-2. Reinforcement learning for hardware acceleration and system-level optimization on FPGA and integrated-circuit platforms: A survey（来源：arXiv cs.LG）
-   应用分析：这项技术在EPS控制器硬件开发中可以应用，但需要我们与硬件设计团队紧密合作。在EPS控制器开发中，我们可以利用强化学习来优化MCU的资源分配，加速特定控制算法，比如FOC、状态观测器等在FPGA上的实现，或在ASIC设计中探索PPA的最优权衡。例如，强化学习可以自动探索不同的硬件架构参数，以在满足实时性和功能安全要求的前提下，最小化功耗和芯片面积。虽然这不是我们软件工程师的直接工作，但了解并推动这种跨领域合作至关重要。我们可以将EPS控制算法的特定需求反馈给硬件设计团队，鼓励他们探索强化学习等自动化优化工具，以提升未来EPS控制器的整体性能和竞争力。这值得我们投入。
-   https://arxiv.org/abs/2610.28699
-
-3. A Decade of Learning-Based Control: From Theoretic Foundations to Practical Deployment（来源：arXiv eess.SY 控制系统）
-   应用分析：这项技术对我们EPS工程师来说，非常能用，而且是我们目前最想解决的问题之一。例如，我们可以利用强化学习来优化助力曲线和手感调校，使其能自适应不同驾驶员的偏好和路况；或者用神经网络观测器来提升无传感器控制的鲁棒性和精度，应对参数温漂和制造差异。在故障诊断和预测性维护方面，学习型控制可以建立更精确的电机健康模型，提前预警潜在故障。这是我们必须投入，而且是重点投入的方向，因为它直接关系到EPS控制策略的性能、鲁棒性和智能化水平。我们可以从模型预测控制等现有技术与学习方法的结合入手，逐步引入更复杂的强化学习算法，并通过MIL、SIL、HIL平台进行充分验证，确保功能安全。
-   https://arxiv.org/abs/2610.29187
-
-4. Tesla says it will start selling Cybercabs by end of year（来源：TechCrunch）
-   应用分析：这当然不是我们直接“用”的技术，而是我们必须“为之准备”的技术。Cybercab的出现，验证了完全线控转向的可行性和市场需求。我们必须加速线控转向系统的架构设计、冗余方案、功能安全，特别是ISO 二六二六二 ASIL D级别研究和开发。尤其要关注其电机选型、控制策略，包括故障降级模式下的控制、手感模拟，以及与整车自动驾驶系统的接口。这是EPS技术演进的必然方向，我们必须全力投入，组建专门团队，与自动驾驶团队紧密合作，甚至考虑与芯片、传感器供应商共同开发下一代线控转向核心部件。
-   https://techcrunch.com/2026/10/21/tesla-says-it-will-start-selling-cybercabs-by-end-of-year/
-
-5. EPC GaN FETs Enable 4 kW High-Efficiency Converter（来源：Power Electronics News）
-   应用分析：这项技术非常能用，且有直接的应用价值。我们可以在EPS功率级设计中积极评估GaN FET的应用。当前EPS电机多采用永磁同步电机（PMSM），需要高效的逆变器。GaN FET可以显著提高逆变器的开关频率，从而减小无源元件的尺寸和重量，降低系统损耗。同时，高频开关对我们的FOC控制算法和电流采样精度也提出了更高要求，需要同步优化。GaN技术已经相对成熟，并开始在汽车领域渗透。我们应该立即投入研究和原型开发，采购相关的GaN FET和控制器评估板，进行台架测试，验证其在EPS电机驱动场景下的性能、效率、NVH和热管理表现。这对于提升EPS产品的竞争力、降低成本和体积具有重要意义。
-   https://www.powerelectronicsnews.com/epc-gan-fets-enable-4-kw-high-efficiency-converter/
-
-6. Learning-Enhanced Observer for Sensorless Task-Null-Space Compliant Control（来源：arXiv cs.RO）
-   应用分析：这项研究与我们的工作高度相关，可以进行迁移应用。EPS的无传感器控制是我们的长期目标。我们可以借鉴其神经网络补偿摩擦和未建模动态的思路，设计更精确的电机状态观测器，减少对物理参数模型的依赖，提高无传感器控制的鲁棒性。同时，“任务零空间分解”的思想可以用于在驾驶员操作，也就是人机交互时，分离驾驶员输入与系统内部补偿转矩，从而更精准地实现助力策略和手感调校，并提升无传感器控制的稳定性。无传感器或冗余传感方案是我们最想解决的问题之一，所以这值得我们重点投入。我们可以将论文中的概念与我们现有的FOC无传感器控制算法结合，在MATLAB/Simulink中进行仿真验证，并逐步在台架上进行实验。
-   https://arxiv.org/abs/2610.28769
-
-7. One Policy, Many Styles: Where to Aggregate Preferences for Steerable Humanoid Control?（来源：arXiv cs.RO）
-   应用分析：这项研究对我们来说，具有直接可用性，而且是一个重要的创新点。我们可以将“偏好条件强化学习”的思想引入EPS的助力策略调校。通过收集不同驾驶员对转向手感，比如轻重、阻尼、回正力等的偏好数据，训练一个强化学习策略，使其能够根据驾驶员的实时输入或预设模式，动态调整助力曲线、阻尼补偿等参数，实现个性化和自适应的手感。论文中提到的不同聚合级别对行为影响的分析，可以指导我们设计更精细的偏好整合机制，避免在调整手感时意外影响到其他转向性能。手感调校是EPS产品差异化的核心竞争力之一，传统调校耗时耗力，引入AI驱动的偏好学习和自适应控制，有望大幅提升调校效率，并提供更智能、个性化的驾驶体验。这非常值得我们投入。
-   https://arxiv.org/abs/2610.28925</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261022-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261022-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261022-pm.mp3" length="3019248" type="audio/mpeg"/>
-      <pubDate>Thu, 22 Oct 2026 09:43:11 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 智驾与机器人：AI如何重塑汽车转向和工业控制</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦人工智能、汽车智能化和机器人三大前沿领域，为您精选七条重磅资讯。从AI驱动的智能制造、硬件优化，到线控转向的核心技术突破，再到机器人领域的传感器与学习迁移，每一条都可能触及我们EPS工程师的未来工作方向。事不宜迟，让我们马上进入今天的早报时间。
@@ -1153,6 +1117,42 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261106-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261106-pm.mp3" length="2956608" type="audio/mpeg"/>
       <pubDate>Thu, 05 Nov 2026 16:44:29 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · AI与智能出行：从多代理安全到人形机器人上市</title>
+      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯，深度解析它们对我们EPS研发工作的启发和潜在应用。准备好了吗？让我们一起探索今天的科技脉搏！
+
+1. MA-SafeDiffuser: Safe Multi-Agent Planning with Diffusion Probabilistic Models（来源：arXiv cs.AI）
+   应用分析：这项技术在EPS系统向线控转向（Steer-by-Wire）演进时，尤其是在多冗余执行器或多轴控制场景下，具有潜在应用价值。例如，在冗余EPS系统中，可以将不同的EPS单元视为“代理”，MA-SafeDiffuser可以用于规划在故障情况下（如一个EPS单元失效或性能下降）其他单元如何安全地接管或协同工作，确保车辆的转向安全。考虑到ISO 26262功能安全对线控转向的严格要求，如果能将这类基于学习的在线安全规划机制引入，可以增强系统在动态、不确定环境下的实时安全决策能力。初期可以考虑在HIL仿真平台或数字孪生环境中，对线控转向的多冗余执行器协调控制进行概念验证和安全性能评估，探索如何将CBF等安全约束与现有控制策略结合。这有助于提升EPS系统的鲁棒性和应对复杂故障的能力，为未来L3+及以上自动驾驶的线控转向提供更强的安全保障，值得密切关注和初步投入。
+   https://arxiv.org/abs/2611.05524
+
+2. Learning Implicit Solves for Dynamic Simulations（来源：arXiv cs.LG）
+   应用分析：在EPS系统开发中，电机控制策略的性能评估、NVH分析、结构动力学仿真都依赖高保真动态仿真。INOS可以用于加速EPS电机本体、减速器、甚至整个转向系统的多物理场耦合仿真，例如评估不同控制参数对转矩脉动、振动噪声的影响，或者在不同工况下系统的动态响应。通过快速仿真，可以在设计早期发现问题，大幅减少物理样机测试次数。特别是对于模型预测控制（MPC）等需要实时求解优化问题的先进控制策略，快速、准确的仿真模型可以作为高效的预测器，大幅提升控制器的性能。我们团队可以尝试将现有EPS电机和转向系统的有限元模型或多体动力学模型，通过数据驱动的方式训练INOS，并集成到我们的MATLAB/Simulink仿真链路中，评估其加速效果和精度。这将显著缩短开发周期，提高迭代效率，解决电机控制策略性能提升中的仿真瓶颈，强烈建议投入。
+   https://arxiv.org/abs/2611.05439
+
+3. Power Corner: ESD Protection for 48-V Automotive and the 58-V Short-to-Battery Challenge（来源：Power Electronics News）
+   应用分析：EPS系统中的控制器硬件，尤其是MCU、功率级驱动芯片和各种传感器接口，都面临ESD和电源瞬态冲击的威胁。随着48V EPS的出现（尽管目前主流仍是12V），以及未来线控转向对电源冗余和鲁棒性的更高要求，理解并实施符合58V短路到电池等严苛标准的ESD保护方案至关重要。这包括选择合适的汽车级ESD保护器件、优化PCB布局布线、以及进行严格的EMC/EMI测试和故障诊断。在EPS控制器设计中，ESD保护是基础且关键的一环，直接影响系统的功能安全等级和可靠性。我们必须持续投入和深入研究，与供应商紧密合作，了解最新的48V汽车级ESD保护器件和防护策略，并在系统架构设计阶段就充分考虑极端工况下的防护。这不仅是满足法规要求，更是提升EPS产品可靠性和市场竞争力的核心要素。可以组织内部研讨，邀请Nexperia等供应商分享最新技术和最佳实践，并更新内部硬件设计规范。
+   https://www.powerelectronicsnews.com/power-corner-esd-protection-for-48-v-automotive-and-the-58-v-short-to-battery-challenge/
+
+4. Why Magnetic Sensor Selection Has Become a System Architecture Decision（来源：EE Times）
+   应用分析：EPS电机控制对位置和电流采样精度、带宽、噪声抑制、温漂、可靠性都有极高要求。在PMSM永磁同步电机控制中，高精度的磁编码器或旋转变压器用于位置检测，霍尔传感器或分流器用于电流检测。随着无传感器控制、冗余传感方案的探索，磁传感器在系统架构中的作用愈发关键。例如，如何选择兼顾成本和性能的磁传感器来支持无传感器控制中的状态观测器，或者在多传感冗余方案中，不同磁传感器的组合与数据融合策略。持续投入和深入研究是必然的。磁传感器的性能直接决定了电机控制策略的上限。我们需要关注新型磁传感器技术（如高精度TMR/GMR传感器），并深入理解其在不同工况（高温、振动、EMC干扰）下的表现。在推进无传感器控制和线控转向的冗余设计时，磁传感器选型不再是简单的器件采购，而是需要从系统层面进行综合考量，包括功能安全等级、成本目标、空间限制和环境适应性。可以建立内部的磁传感器评估体系，定期评估市场上的新产品，并与传感器供应商进行定制化开发合作，以满足EPS的特定需求。
+   https://www.eetimes.com/why-magnetic-sensor-selection-has-become-a-system-architecture-decision/
+
+5. Continuous-Discrete Dual-Domain Co-Design for Optimized Digital Control of Power Converters（来源：arXiv eess.SY 控制系统）
+   应用分析：EPS电机控制采用FOC矢量控制，涉及到PI控制器、状态观测器、弱磁控制等一系列连续域算法的离散化实现。传统的离散化方法（如欧拉、Tustin）可能导致离散系统性能与理论连续系统存在偏差，尤其在高频或带宽受限的工况下，会影响转矩脉动抑制、NVH性能。该双域协同设计方法可以用于优化EPS电机控制器的数字实现，例如在弱磁控制、转矩脉动抑制等对控制精度和动态响应要求极高的场景。通过这种方法，我们可以更精确地设计数字控制器参数，减少离散化误差，从而提升电机控制的性能、降低NVH。这是提升EPS电机控制性能的“内功”之一，目前团队在嵌入式C和MATLAB/Simulink模型化设计中，虽然也考虑离散化影响，但缺乏系统性的双域协同优化方法。这项研究提供了理论基础和具体方法论。我们可以尝试将EFDAM或ICASM集成到我们的MATLAB/Simulink模型化设计流程中，开发定制化的代码生成模块或标定工具，用于优化离散化参数和控制器参数。这将直接有助于解决转矩脉动、噪声、温漂等问题，提升EPS产品的核心竞争力，强烈建议投入。
+   https://arxiv.org/abs/2611.05910
+
+6. Ctrl-F: Force as an Interface for Humanoid Loco-Manipulation（来源：arXiv cs.RO）
+   应用分析：EPS的核心功能是提供精确的助力转矩，这本质上就是一种力（转矩）控制。人形机器人通过“力作为接口”来控制与环境的交互，这与EPS通过精确控制电机转矩来提供方向盘手感、路感还原、阻尼回正等功能异曲同工。我们可以借鉴Ctrl-F的分层架构和力规划理念，优化EPS的助力策略和手感调校。例如，在高动态、复杂路况下，如何通过更智能的“力规划器”来预测驾驶员意图和路面反馈，并转化为电机精确的转矩指令，从而提供更自然、更安全的转向手感。特别是在线控转向中，方向盘与车轮之间没有机械连接，力反馈的精确模拟和控制变得更加关键，Ctrl-F的理念可以提供有益的参考。机器人领域的力控技术一直走在前沿，与EPS的电机转矩控制有天然的相似性。通过研究Ctrl-F这类框架，我们可以学习到更先进的力控算法、传感器融合技术和动态模型，用于提升EPS的转矩精度、响应速度和手感一致性。可以组织团队研究机器人关节执行器的力控技术，并尝试将其中的核心算法（如力规划、运动-力协调控制）抽象出来，在EPS的台架测试或整车标定中进行概念性验证。这有助于我们突破当前EPS手感调校的经验瓶颈，向更智能、更数据驱动的方向发展，值得中长期投入和深入研究。
+   https://arxiv.org/abs/2611.05507
+
+7. Agility Robotics begins trading on Nasdaq（来源：The Robot Report）
+   应用分析：Agility Robotics上市本身不直接是技术，但其背后反映的人形机器人技术进步和市场前景，对我们EPS工程师有重要启示。人形机器人对关节执行器、伺服电机控制、动力学平衡、功能安全等方面的要求极高，这些技术与EPS的电机选型、控制策略（如FOC矢量控制、无传感器控制）、NVH抑制、以及ISO 26262功能安全设计高度相关。例如，人形机器人关节的高转矩密度、高效率、低NVH电机设计，以及多关节协调控制、故障诊断与降级策略，都可以为我们EPS系统向更紧凑、更高效、更安全的线控转向演进提供借鉴。值得持续关注。我们可以通过关注Agility Robotics等公司的技术路线图、招聘需求和产品发布，洞察电机、控制器、传感器和控制算法的最新趋势。这有助于我们提前布局关键技术，例如研究人形机器人使用的伺服电机技术，评估其在汽车领域（如线控转向执行器）的应用潜力。同时，人形机器人对功能安全和鲁棒性的要求，也将促使我们更深入地思考EPS系统在复杂环境下的安全设计。
+   https://www.therobotreport.com/agility-robotics-begins-trading-on-nasdaq/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261106-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261106-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261106-am.mp3" length="5127552" type="audio/mpeg"/>
+      <pubDate>Thu, 05 Nov 2026 22:43:43 +0000</pubDate>
     </item>
   </channel>
 </rss>
