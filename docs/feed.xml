@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 06 Nov 2026 16:10:43 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 22:40:57 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI加速工程研发，智能汽车与机器人控制前沿洞察</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三个热门方向，为您精选七条重磅资讯。从大语言模型如何赋能软件验证和科学发现，到自动驾驶和机器人控制的最新突破，这些进展都与我们工程师的日常工作息息相关。希望今天的分享能为您带来新的启发，助您在研发的道路上更进一步。
-
-1. LLMs are making formal software verification feasible at a much larger scale（来源：Hacker News）
-   应用分析：这项技术对我们汽车EPS产品研发工程师来说，具有极高的应用价值。我们可以在微控制器（MCU）固件开发中，利用大语言模型辅助生成控制算法（比如FOC矢量控制、状态观测器）的形式化规约，或者对C语言代码进行初步的形式化验证检查，发现潜在的安全漏洞和逻辑错误。尤其是在模型化设计与代码生成后，大语言模型可以作为额外的一层验证手段。投入产出比非常高，因为它能显著减少人工验证时间，提升软件的可靠性和功能安全等级，加速ISO 26262功能安全认证过程。对于线控转向这类高安全等级系统，这能提供更强的保障，是值得我们重点投入的方向。
-   https://news.ycombinator.com/item?id=50202217
-
-2. SpecEvo: Speculative Evolution with Large Language Models for Cost-Efficient Scientific Discovery（来源：arXiv cs.AI）
-   应用分析：SpecEvo框架对我们EPS工程师来说，有巨大的应用潜力。我们可以将它应用于EPS控制器的自动标定。例如，在FOC矢量控制中，利用它自动搜索最优的PI控制器参数、弱磁控制阈值等，以实现转矩脉动最小化、效率最大化和NVH噪声振动与声振粗糙度优化。轻量级模型可以进行快速小范围探索，而前沿模型则在遇到瓶颈时进行更深度的干预。这也能用于助力曲线的自动调校，根据我们预设的手感目标生成并优化助力参数。这项技术如果能有效降低标定周期和成本，将是EPS产品开发的重要突破，也能帮助我们解决电机控制策略的温漂和参数辨识难题，非常值得投入。
-   https://arxiv.org/abs/2610.28706
-
-3. DiffResearch: Accelerating Deep Research with Diffusion Language Models（来源：arXiv cs.AI）
-   应用分析：DiffResearch框架的加速能力对我们的研发工作非常有吸引力。我们可以在EPS新控制算法（比如无传感器控制、转矩脉动抑制）的早期研究阶段，利用扩散语言模型辅助进行文献综述、模型构建、初步算法设计和仿真代码生成。例如，在探索新的状态观测器时，dLLM可以快速生成不同观测器的数学模型和Simulink实现草图，并辅助分析其收敛性和鲁棒性。虽然直接应用于生产代码可能还有距离，但在研究和概念验证阶段，其带来的效率提升可以加速技术积累和方案筛选，有助于我们将机器人执行器控制等前沿研究快速迁移到EPS领域。这值得我们初步投入探索。
-   https://arxiv.org/abs/2610.28909
-
-4. Integrated Longitudinal and Lateral Control for High-Speed Platooning of Articulated Vehicles（来源：arXiv cs.RO）
-   应用分析：这项集成控制框架对我们EPS工程师来说，指明了未来EPS发展的方向。该研究的纵向PID框架和横向路径跟踪算法，可以直接作为线控转向（Steer-by-Wire）系统中的高级控制输入。我们EPS系统需要确保能精确执行这些指令，并提供足够的冗余和功能安全保障。例如，EPS的电机控制策略需要针对高频、小幅度转向调整进行优化，以减少抖动和噪声，提升乘坐舒适性。同时，EPS的故障诊断和降级策略也需充分考虑队列行驶这类复杂场景。线控转向是EPS的未来，而队列行驶是高级自动驾驶的核心场景之一，因此，理解并支持这种集成控制，是EPS向更高阶智能驾驶演进的关键，我们必须持续投入。
-   https://arxiv.org/abs/2610.30437
-
-5. TerraTransfer++: Demonstration-Free End-to-End Planner（来源：arXiv cs.RO）
-   应用分析：TerraTransfer++的自博弈训练理念对我们EPS和线控转向的控制策略开发非常有借鉴意义。我们可以在Simulink或CarSim等仿真环境中，利用强化学习进行无监督训练。例如，让EPS控制策略通过自博弈学习，优化助力手感、回正性能或故障降级策略，使其在各种复杂路况和车辆动态下都能表现出色。尤其是在线控转向的冗余设计中，我们可以模拟各种传感器或执行器故障，训练系统自主学习故障应对策略。这种数据生成和训练范式能显著降低对真实驾驶数据的依赖，加速线控转向等复杂系统的验证和迭代，提升系统的鲁棒性和安全性，非常值得关注和借鉴。
-   https://arxiv.org/abs/2610.30319
-
-6. MPBRS: Multi-Potential-Based Reward Shaping for Unified Reward Configuration in Humanoid Locomotion（来源：arXiv cs.RO）
-   应用分析：多势能奖励塑形（MPBRS）的思想对我们EPS电机控制的优化有很高的迁移价值。在设计FOC矢量控制器的参数自适应或无传感器控制器的状态观测器时，我们可以构建包含转矩精度、能耗、NVH、响应速度等多个目标函数的势能函数，通过MPBRS进行奖励塑形，指导强化学习代理快速找到最优控制策略。这有助于解决电机控制策略性能与鲁棒性提升中的多目标冲突问题，例如在确保低转矩脉动的同时，保持高效率和良好的NVH特性。机器人执行器控制是EPS电机控制的重要交叉点，MPBRS有望为EPS的复杂控制问题提供一套更高效、更通用的强化学习解决方案，非常值得深入研究和投入。
-   https://arxiv.org/abs/2610.30334
-
-7. PhysibleMDM: Enforcing Inference-Time Physical Feasibility Constraints on Motion Diffusion Models via Noise Optimization（来源：arXiv cs.RO）
-   应用分析：PhysibleMDM框架的核心思想对我们EPS控制器的设计有重要借鉴意义。在基于AI的EPS控制策略（如神经网络观测器、强化学习控制器）中，我们可以借鉴其思路，引入物理可行性约束。例如，在训练或推理阶段，通过优化输入噪声或中间参数，确保输出的电机转矩、电流、转速等参数始终在物理允许范围内，避免过载、过热或系统失稳。这对于线控转向系统的功能安全设计尤其重要，可以确保在各种输入指令下，转向系统都能保持物理上的安全性和稳定性。在AI控制系统日益复杂的今天，如何确保其输出符合物理世界规律是一个核心挑战。PhysibleMDM提供了一个优雅的解决方案，可以增强AI控制器的安全性和可靠性，减少潜在的故障风险，值得我们投入研究。
-   https://arxiv.org/abs/2610.30500</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261023-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261023-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261023-pm.mp3" length="3841776" type="audio/mpeg"/>
-      <pubDate>Fri, 23 Oct 2026 09:43:23 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI前沿、汽车智能化与机器人技术早报</title>
       <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门领域，为您精选七条最值得关注的资讯。从电机材料创新到功率器件升级，从功能安全验证到AI辅助控制，再到机器人运动的物理约束，今天的每一条都与我们车辆电动助力转向，也就是EPS系统的未来发展息息相关。话不多说，让我们马上进入今天的早报时间。
@@ -1146,6 +1110,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261107-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261107-pm.mp3" length="997344" type="audio/mpeg"/>
       <pubDate>Fri, 06 Nov 2026 16:10:43 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. Formalizing inverse problems in the age of AI: possibilities, pitfalls, and an invitation（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.06962
+
+2. KDASO: Knowledge-Data Dual-Driven Automated Skill Optimization for Liability Adjudication Tasks（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.06972
+
+3. BlockLock: Reproducible LLM Inference with Fixed Batch Geometry（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.06977
+
+4. Resource-Efficient Reinforcement Learning Post-Training through Elastic Expert Parallelism（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.06984
+
+5. The Two-Ledger Model: Transaction-Grain Cost Accounting for Multi-Agent AI Systems Across Clouds, Models, and Systems of Record（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.06989
+
+6. Autonomous AI Agents Systematically Diverge From Human Preferences in Proof Formalization（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.06995
+
+7. Trust Responsive Runtime Authorization for Agentic AI with Empirical Characterization of Policy Behavior and Parameter Sensitivity（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.06996</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261107-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261107-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261107-am.mp3" length="997344" type="audio/mpeg"/>
+      <pubDate>Fri, 06 Nov 2026 22:40:57 +0000</pubDate>
     </item>
   </channel>
 </rss>
