@@ -1,0 +1,109 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:02.828
+欢迎收听今天的科技研发早报。
+
+2
+00:00:02.828 --> 00:00:06.053
+以下是今天精选的几条前沿进展。
+
+3
+00:00:06.053 --> 00:00:09.236
+第1条，来自arXiv cs.AI。
+
+4
+00:00:09.236 --> 00:00:14.641
+Formalizing inverse problems in the age of AI: possibilities, pitfalls, and an invitation。
+
+5
+00:00:14.641 --> 00:00:26.875
+arXiv:2611.06962v1 Announce Type: new Abstract: Proof assistants such as Lean check mathematical proofs down to the axioms, and AI agents have recently made writing such proofs cheap.
+
+6
+00:00:26.875 --> 00:00:28.345
+We describe Auto。
+
+7
+00:00:28.345 --> 00:00:31.655
+第2条，来自arXiv cs.AI。
+
+8
+00:00:31.655 --> 00:00:37.187
+KDASO: Knowledge-Data Dual-Driven Automated Skill Optimization for Liability Adjudication Tasks。
+
+9
+00:00:37.187 --> 00:00:51.026
+arXiv:2611.06972v1 Announce Type: new Abstract: Liability adjudication tasks (e.g., legal charge determination) require analyzing event descriptions against domain-specific skills to determine whether。
+
+10
+00:00:51.026 --> 00:00:54.382
+第3条，来自arXiv cs.AI。
+
+11
+00:00:54.382 --> 00:00:58.364
+BlockLock: Reproducible LLM Inference with Fixed Batch Geometry。
+
+12
+00:00:58.364 --> 00:01:10.181
+arXiv:2611.06977v1 Announce Type: new Abstract: Reproducible LLM inference requires that a request produces the same output regardless of the other requests in the batch.
+
+13
+00:01:10.181 --> 00:01:12.750
+Existing solutions pay for th。
+
+14
+00:01:12.750 --> 00:01:16.119
+第4条，来自arXiv cs.AI。
+
+15
+00:01:16.119 --> 00:01:20.713
+Resource-Efficient Reinforcement Learning Post-Training through Elastic Expert Parallelism。
+
+16
+00:01:20.713 --> 00:01:33.549
+arXiv:2611.06984v1 Announce Type: new Abstract: Reinforcement learning post-training improves the capabilities of large language models, but generating training responses is a major computational bott。
+
+17
+00:01:33.549 --> 00:01:36.848
+第5条，来自arXiv cs.AI。
+
+18
+00:01:36.848 --> 00:01:43.746
+The Two-Ledger Model: Transaction-Grain Cost Accounting for Multi-Agent AI Systems Across Clouds, Models, and Systems of Record。
+
+19
+00:01:43.746 --> 00:01:57.716
+arXiv:2611.06989v1 Announce Type: new Abstract: Enterprises run business transactions through multi-agent AI systems spanning clouds, large language models (LLMs), orchestration harnesses, and systems。
+
+20
+00:01:57.716 --> 00:02:00.980
+第6条，来自arXiv cs.AI。
+
+21
+00:02:00.980 --> 00:02:06.304
+Autonomous AI Agents Systematically Diverge From Human Preferences in Proof Formalization。
+
+22
+00:02:06.460 --> 00:02:19.257
+arXiv:2611.06995v1 Announce Type: new Abstract: Artificial intelligence (AI) systems have ushered in a new age of proof abundance, but helping humans understand these proofs requires new attention to 。
+
+23
+00:02:19.257 --> 00:02:22.575
+第7条，来自arXiv cs.AI。
+
+24
+00:02:22.575 --> 00:02:29.716
+Trust Responsive Runtime Authorization for Agentic AI with Empirical Characterization of Policy Behavior and Parameter Sensitivity。
+
+25
+00:02:29.716 --> 00:02:41.892
+arXiv:2611.06996v1 Announce Type: new Abstract: The policy that converts runtime estimates of an autonomous agent's condition into operational authority is rarely specified or measured.
+
+26
+00:02:41.892 --> 00:02:43.351
+We empirically。
+
+27
+00:02:43.351 --> 00:02:46.163
+以上就是今天的内容，我们明天见。

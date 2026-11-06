@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自arXiv cs.AI。Formalizing inverse problems in the age of AI: possibilities, pitfalls, and an invitation。
+arXiv:2611.06962v1 Announce Type: new Abstract: Proof assistants such as Lean check mathematical proofs down to the axioms, and AI agents have recently made writing such proofs cheap. We describe Auto。
+第2条，来自arXiv cs.AI。KDASO: Knowledge-Data Dual-Driven Automated Skill Optimization for Liability Adjudication Tasks。
+arXiv:2611.06972v1 Announce Type: new Abstract: Liability adjudication tasks (e.g., legal charge determination) require analyzing event descriptions against domain-specific skills to determine whether。
+第3条，来自arXiv cs.AI。BlockLock: Reproducible LLM Inference with Fixed Batch Geometry。
+arXiv:2611.06977v1 Announce Type: new Abstract: Reproducible LLM inference requires that a request produces the same output regardless of the other requests in the batch. Existing solutions pay for th。
+第4条，来自arXiv cs.AI。Resource-Efficient Reinforcement Learning Post-Training through Elastic Expert Parallelism。
+arXiv:2611.06984v1 Announce Type: new Abstract: Reinforcement learning post-training improves the capabilities of large language models, but generating training responses is a major computational bott。
+第5条，来自arXiv cs.AI。The Two-Ledger Model: Transaction-Grain Cost Accounting for Multi-Agent AI Systems Across Clouds, Models, and Systems of Record。
+arXiv:2611.06989v1 Announce Type: new Abstract: Enterprises run business transactions through multi-agent AI systems spanning clouds, large language models (LLMs), orchestration harnesses, and systems。
+第6条，来自arXiv cs.AI。Autonomous AI Agents Systematically Diverge From Human Preferences in Proof Formalization。
+arXiv:2611.06995v1 Announce Type: new Abstract: Artificial intelligence (AI) systems have ushered in a new age of proof abundance, but helping humans understand these proofs requires new attention to 。
+第7条，来自arXiv cs.AI。Trust Responsive Runtime Authorization for Agentic AI with Empirical Characterization of Policy Behavior and Parameter Sensitivity。
+arXiv:2611.06996v1 Announce Type: new Abstract: The policy that converts runtime estimates of an autonomous agent's condition into operational authority is rarely specified or measured. We empirically。
+以上就是今天的内容，我们明天见。
