@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。Show HN: An offline desktop companion to help maintain a healthy blink rhythm。
+Profession like software engineer, mechanical / graphics designer takes a lot of strain on your eyes, observing minute details for hours and hours on screen can significantly reduce the blink rate whi。
+第2条，来自Hacker News。The end of Microsoft Research's AI Frontiers group。
+https://archive.is/AaY5O https://businessexaminer.ca/victoria-articles/item/microsoft... Comments URL: https://news.ycombinator.com/item?id=50406563 Points: 279 # Comments: 158。
+第3条，来自Hacker News。Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller。
+I built Coldframe, a honeypot that pretends to be a supermarket refrigeration controller. Inspired by the events on industrial fridge installations in the past weeks, I wanted to see what people would。
+第4条，来自Hacker News。MaxxBench – "Nice DeepSWE score. But is it true?"。
+Article URL: https://maxxbench.unlap.ai/research/why-maxxbench/ Comments URL: https://news.ycombinator.com/item?id=50406222 Points: 142 # Comments: 35。
+第5条，来自Hacker News。How Long Can Life Wait?。
+Article URL: https://mceglowski.substack.com/p/how-long-can-life-wait Comments URL: https://news.ycombinator.com/item?id=50405789 Points: 105 # Comments: 59。
+第6条，来自Hacker News。Every processor die anyone has photographed and given away。
+Article URL: https://sheets.works/data-viz/cpu-dies Comments URL: https://news.ycombinator.com/item?id=50405782 Points: 60 # Comments: 13。
+第7条，来自Hacker News。They don't make 'em like that any more: Borland Turbo Pascal 7。
+Article URL: https://kevinboone.me/tpwin.html Comments URL: https://news.ycombinator.com/item?id=50405678 Points: 178 # Comments: 96。
+以上就是今天的内容，我们明天见。
