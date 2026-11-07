@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。Every Mac comes with an (undocumented) family member classifier。
+Article URL: https://8rank.ai/game/apple-intelligence-personal-knowledge-graph Comments URL: https://news.ycombinator.com/item?id=50403097 Points: 347 # Comments: 200。
+第2条，来自Hacker News。A barbarian tribe's mythic origin story is true, ancient DNA reveals。
+Article URL: https://www.science.org/content/article/barbarian-tribe-s-mythic-origin-story-true-ancient-dna-reveals Comments URL: https://news.ycombinator.com/item?id=50401740 Points: 159 # Comments: 。
+第3条，来自Hacker News。A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost。
+Article URL: https://hightouch.com/blog/llm-judges-identity-resolution Comments URL: https://news.ycombinator.com/item?id=50397429 Points: 535 # Comments: 131。
+第4条，来自Hacker News。Firecracker VM Escape: PwnEscape Part 2。
+Article URL: https://pwn.ai/blog/firecracker-escape Comments URL: https://news.ycombinator.com/item?id=50397219 Points: 264 # Comments: 114。
+第5条，来自Hacker News。Restaurant Delivery Payment-Skimming Campaign。
+Article URL: https://www.infohawk.com/news/2026-11-05-scamwich-restaurant-skimming Comments URL: https://news.ycombinator.com/item?id=50397017 Points: 155 # Comments: 81。
+第6条，来自Hacker News。First steps in bare-metal programming using UEFI。
+Article URL: https://kevinboone.me/efitest_index.html Comments URL: https://news.ycombinator.com/item?id=50394855 Points: 237 # Comments: 48。
+第7条，来自Hacker News。Gemini Omni 1.2 Flash。
+Article URL: https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/ Comments URL: https://news.ycombinator.com/item?id=50392118 Points: 353 # Comments: 24。
+以上就是今天的内容，我们明天见。
