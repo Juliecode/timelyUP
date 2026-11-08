@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 07 Nov 2026 22:41:08 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 16:04:32 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · AI落地挑战与线控转向新机遇：面向EPS工程师的科技早报</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是大家的老朋友，兼职主播和技术分析师。今天的早报我们将聚焦AI前沿、汽车智能化和机器人技术这三大热点领域，为您精选七条重磅资讯，并结合我们汽车电动助力转向，也就是EPS的研发工作，深入分析这些技术对我们意味着什么，以及我们如何抓住其中的机遇。准备好了吗？让我们立即开始！
-
-1. No signs of AI payoff outside the tech sector（来源：Hacker News）
-   应用分析：这并非直接的技术应用，而是一个战略指导。它告诉我们，在EPS领域引入AI，不能期望短期内带来颠覆性的“通用”回报，而应从解决我们当前最想解决的具体问题入手，比如电机控制策略的性能与鲁棒性提升、自动标定效率、故障诊断与预测性维护等。投入应是目标导向的，例如，用强化学习优化FOC参数、用神经网络观测器提升无传感器控制的精度和鲁棒性。这些是具备明确业务价值和可验证效果的AI应用点，而非泛泛的“AI赋能”。要避免陷入“为AI而AI”的误区，确保每一分AI投入都能指向EPS产品的性能、安全或成本竞争力提升。
-   https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector
-
-2. OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”（来源：TechCrunch）
-   应用分析：这条新闻强调了数据来源和模型鲁棒性的重要性。对于EPS，我们不会直接将AI模型部署到实时互联网数据流中。但它提醒我们，用于训练EPS相关AI模型（如故障诊断、参数辨识、智能标定）的数据必须是高质量、经过严格筛选和验证的内部数据，并且需要有明确的数据治理和更新机制。我们应更多关注基于离线仿真数据、台架测试数据、整车路试数据等内部可控数据训练的AI模型。值得投入，但要高度重视数据质量和模型验证。我们需要建立一套完善的数据集管理和模型迭代流程，确保AI模型在汽车功能安全（ISO 26262）框架下的可信赖性。这意味着我们需要投入资源去构建高质量的EPS运行数据集，并开发针对性的模型验证和漂移检测工具，确保AI模型在实际运行中的性能和安全性。
-   https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/
-
-3. Eka Robotics raises $150M to scale its vision-force-action model for robots（来源：The Robot Report）
-   应用分析：这种VFA模型和强化学习在EPS中的应用潜力巨大。我们可以探索：1. 手感调校自动化：使用强化学习模型，通过模拟驾驶员的输入和路面反馈，自动学习并优化助力策略，以达到最佳手感，减少人工标定工作量。2. 路感还原与抖动抑制：利用类VFA模型感知路面状况（通过转矩传感器、车速、IMU等信息），结合力反馈，实时调整电机控制策略，更精准地还原路感，同时抑制路面不平带来的抖动和噪声。3. 线控转向（Steer-by-Wire）的触觉反馈：在SbW系统中，方向盘与车轮无机械连接，触觉反馈完全由电机模拟。VFA模型可以帮助我们构建更真实、更智能的触觉反馈模型，模拟不同路况和驾驶模式下的转向手感。这绝对值得大力投入。这是将前沿机器人执行器控制和AI控制方法转化为EPS工程方案的绝佳交叉点。可以从仿真环境入手，构建EPS电机和转向系统的物理模型，利用强化学习进行控制器设计和参数优化。长期来看，这可能成为我们实现更高级别EPS控制，甚至线控转向手感模拟的关键技术。
-   https://www.therobotreport.com/eka-robotics-raises-150m-scale-vision-force-action-model-robots/
-
-4. Generative Bionics to launch Physical AI Data Factory in Italy（来源：The Robot Report）
-   应用分析：我们可以借鉴“物理AI数据工厂”的理念，为EPS系统建立自己的“物理数据平台”。这包括：1. 数据采集与标注：投入资源优化EPS测试车辆和台架的数据采集系统，确保多传感器（转矩、电流、位置、车速、IMU等）数据的同步、高精度采集，并探索半自动化或AI辅助的数据标注工具，识别不同工况、驾驶行为和故障模式。2. 仿真数据生成：利用MATLAB/Simulink等工具，结合物理模型和随机扰动，生成大规模的仿真数据，用于AI模型的预训练和鲁棒性测试，弥补真实数据采集的成本和周期限制。3. 数据驱动的故障诊断：收集不同故障模式下的EPS电机运行数据，建立“故障数据工厂”，用于训练异常检测和故障分类的AI模型，提升故障诊断的准确性和预测性维护能力。非常值得投入。数据是AI的“燃料”，高质量的物理数据是提升EPS中AI应用效果的关键。建立起类似的数据平台和流程，不仅能加速AI在EPS中的落地，也能为线控转向等未来架构提供数据支撑。这是一个长期但高回报的战略性投入。
-   https://www.therobotreport.com/generative-bionics-to-launch-physical-ai-data-factory-in-italy/
-
-5. Intel gets waiver after worries fuzzy US ban on foreign-made robots may hit fabs（来源：Ars Technica）
-   应用分析：我们可以从两个方面进行应用分析：1. 技术借鉴：关注芯片制造厂中移动机器人（AGV/AMR）的电机控制方案、导航与定位技术、以及功能安全设计。这些技术，尤其是其对精度、实时性、鲁棒性的要求，与我们线控转向中的冗余控制、故障诊断、路径跟踪等有异曲同工之处。可以学习其在复杂环境下的高可靠运行机制。2. 供应链风险管理：鉴于新闻中提到的“外国制造的机器人车辆对美国芯片生产至关重要”，这提示我们对于EPS关键零部件（如MCU、功率器件等）的供应链，需要进行更深入的风险评估，考虑国产替代方案或多元化采购策略，以应对潜在的地缘政治和贸易限制风险。值得投入。在技术层面，借鉴工业机器人特别是移动机器人的控制经验，可以为我们线控转向的架构和控制策略提供新思路。在战略层面，关注供应链的动态，尤其是关键电子元器件的来源，是确保EPS产品持续生产和成本竞争力的必要工作。
-   https://arstechnica.com/ai/2026/10/intel-gets-waiver-after-worries-fuzzy-us-ban-on-foreign-made-robots-may-hit-fabs/
-
-6. China has about 15 million passenger cars with NOA as driver assistance adoption expands（来源：CnEVPost）
-   应用分析：这绝对是我们EPS产品未来发展的核心方向。我们可以从三方面入手：1. EPS与NOA的融合优化：NOA功能需要EPS系统提供精确、平稳的转向控制。我们需要深入研究NOA系统对转向力矩、转向角、响应速度等参数的要求，优化EPS助力策略，确保在自动驾驶模式下转向的平顺性、舒适性和安全性。这包括更精细的扭矩控制、更低的惯量和摩擦补偿，以及更快的响应速度。2. 功能安全与冗余设计：随着NOA的普及，EPS作为执行器在功能安全中的地位更加凸显。我们需要加强冗余传感方案、故障诊断与降级策略的研发，确保在L2+甚至未来线控转向系统中的高可用性和安全性（符合ISO 26262 ASIL D要求）。3. 线控转向的加速布局：1500万辆NOA汽车的普及，预示着市场对更高级自动驾驶的需求。线控转向是L3及以上自动驾驶的理想平台，我们应加速在SbW架构、冗余、功能安全以及相应电机控制策略上的投入。非常值得大力投入。
-   https://cnevpost.com/2026/10/24/china-15-million-cars-with-noa/
-
-7. Arm Comments on Jury Decision in Qualcomm Trial（来源：EE Times）
-   应用分析：值得投入。虽然短期内不会立即替换现有ARM或Cortex-R系列MCU，但RISC-V代表了未来处理器架构的一个重要方向。我们需要投入资源进行前瞻性研究和技术储备，评估其在EPS控制器中的应用潜力，尤其是结合AI和功能安全的需求。具体可以：1. 关注RISC-V在嵌入式AI领域的进展：持续关注RISC-V生态系统在汽车领域（特别是功能安全MCU）和嵌入式AI加速器方面的发展。RISC-V的开放性和可定制性可能允许我们针对EPS的特定AI控制算法（如神经网络观测器、强化学习控制器）设计更高效、更安全的硬件加速方案。2. 评估未来MCU选型：在未来的EPS控制器硬件平台规划中，可以将RISC-V架构的MCU纳入考虑范围，尤其是在需要定制化AI计算能力或对成本、功耗有极致要求的场景。3. 功能安全认证的挑战与机遇：RISC-V的开放性可能带来功能安全认证上的新挑战（例如，IP核的成熟度、工具链的认证），但也可能提供更大的灵活性，例如通过定制化设计实现硬件冗余和故障注入测试。
-   https://www.eetimes.com/arm-comments-on-jury-decision-in-qualcomm-trial/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261025-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261025-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261025-am.mp3" length="3062880" type="audio/mpeg"/>
-      <pubDate>Sat, 24 Oct 2026 22:42:43 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI与智能汽车：从万亿参数到线控转向的未来</title>
       <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将一起聚焦AI前沿、汽车智能化和机器人领域的最新动态。从AI模型规模的指数级增长，到脑机接口的突破性进展，再到智能驾驶的普及和机器人控制的创新，这些都与我们汽车EPS，也就是电动助力转向系统的未来息息相关。今天我们精选了七条重磅资讯，希望能给大家带来一些启发，让我们一起来看看。
@@ -1111,6 +1075,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261108-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261108-am.mp3" length="1064016" type="audio/mpeg"/>
       <pubDate>Sat, 07 Nov 2026 22:41:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. Apple CEO Presses Software Chief to Pursue More Ambitious AI Strategy（来源：Hacker News）
+   https://www.bloomberg.com/news/newsletters/2026-11-08/apple-explores-turning-siri-ai-into-chatgpt-dots-like-agent-ios-28-shake-up
+
+2. OpenAI raises $11B at a $1.25T valuation（来源：Hacker News）
+   https://247wallst.com/investing/2026/11/07/openai-just-raised-11-billion-at-a-1-25-trillion-valuation-below-the-1-4-trillion-it-first-sought/
+
+3. Consumer brain wave headsets threaten privacy（来源：Hacker News）
+   https://www.science.org/content/article/wearable-device-makers-are-harvesting-brain-data-train-ai-without-telling-users?referrer=https%3A%2F%2Fwww.google.com%2F
+
+4. GitHub New pull request overview page in public preview（来源：Hacker News）
+   https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview/
+
+5. Claude Code's "Don't Ask Again" exposes passwords in 1,122 public GitHub files（来源：Hacker News）
+   https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again
+
+6. Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller（来源：Hacker News）
+   https://github.com/hedgerow-dev/coldframe
+
+7. MaxxBench – "Nice DeepSWE score. But is it true?"（来源：Hacker News）
+   https://maxxbench.unlap.ai/research/why-maxxbench/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261109-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261109-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261109-pm.mp3" length="1341792" type="audio/mpeg"/>
+      <pubDate>Sun, 08 Nov 2026 16:04:32 +0000</pubDate>
     </item>
   </channel>
 </rss>

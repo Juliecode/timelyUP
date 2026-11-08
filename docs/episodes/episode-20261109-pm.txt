@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。Apple CEO Presses Software Chief to Pursue More Ambitious AI Strategy。
+Article URL: https://www.bloomberg.com/news/newsletters/2026-11-08/apple-explores-turning-siri-ai-into-chatgpt-dots-like-agent-ios-28-shake-up Comments URL: https://news.ycombinator.com/item?id=504140。
+第2条，来自Hacker News。OpenAI raises $11B at a $1.25T valuation。
+Article URL: https://247wallst.com/investing/2026/11/07/openai-just-raised-11-billion-at-a-1-25-trillion-valuation-below-the-1-4-trillion-it-first-sought/ Comments URL: https://news.ycombinator.com/it。
+第3条，来自Hacker News。Consumer brain wave headsets threaten privacy。
+Article URL: https://www.science.org/content/article/wearable-device-makers-are-harvesting-brain-data-train-ai-without-telling-users?referrer=https%3A%2F%2Fwww.google.com%2F Comments URL: https://news。
+第4条，来自Hacker News。GitHub New pull request overview page in public preview。
+Article URL: https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview/ Comments URL: https://news.ycombinator.com/item?id=50408931 Points: 166 # Comments: 113。
+第5条，来自Hacker News。Claude Code's "Don't Ask Again" exposes passwords in 1,122 public GitHub files。
+Article URL: https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again Comments URL: https://news.ycombinator.com/item?id=50407882 Points: 488 # Comments: 352。
+第6条，来自Hacker News。Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller。
+I built Coldframe, a honeypot that pretends to be a supermarket refrigeration controller. Inspired by the events on industrial fridge installations in the past weeks, I wanted to see what people would。
+第7条，来自Hacker News。MaxxBench – "Nice DeepSWE score. But is it true?"。
+Article URL: https://maxxbench.unlap.ai/research/why-maxxbench/ Comments URL: https://news.ycombinator.com/item?id=50406222 Points: 350 # Comments: 98。
+以上就是今天的内容，我们明天见。
