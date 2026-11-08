@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。The Web Is More Than Enough, by Paul Ford。
+Article URL: https://ftrain.com/aboard-the-web-is-more-than-enough Comments URL: https://news.ycombinator.com/item?id=50416456 Points: 23 # Comments: 10。
+第2条，来自Hacker News。How I Fight AI Brain Fry。
+Article URL: https://sergeykuhne.com/blog/fighting-ai-brain-fry Comments URL: https://news.ycombinator.com/item?id=50416363 Points: 106 # Comments: 90。
+第3条，来自Hacker News。Outlook.com Is Quietly Rejecting Email from Domains Without DMARC。
+Article URL: https://mailroute.net/blog/outlook-rejecting-email-without-dmarc Comments URL: https://news.ycombinator.com/item?id=50416158 Points: 143 # Comments: 116。
+第4条，来自Hacker News。Dux: Free, open-source Wayland desktop shell with file manager and theming。
+Article URL: https://duxlabs.dev/ Comments URL: https://news.ycombinator.com/item?id=50416053 Points: 117 # Comments: 40。
+第5条，来自Hacker News。Playing Zork 1 on a CP/M emulator on Linux (2021)。
+Article URL: https://kevinboone.me/cpmzork.html Comments URL: https://news.ycombinator.com/item?id=50415750 Points: 21 # Comments: 11。
+第6条，来自Hacker News。Goldman Sachs is pulling Claude Code from its bankers and traders。
+Article URL: https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers Comments URL: https://news.ycombinator.com/item?id=50415628 Points: 483 # Comments: 300。
+第7条，来自TechCrunch。Nvidia will investigate CEO Jensen Huang’s relationship with possible Chinese spy。
+In a memo to the company, Huang admitted that he had an affair.。
+以上就是今天的内容，我们明天见。
