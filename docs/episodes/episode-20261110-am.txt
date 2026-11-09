@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自arXiv cs.RO。Q-OIL: Optimistic Exploration in Learning from Human Interventions。
+arXiv:2611.08576v1 Announce Type: new Abstract: As robots are deployed in the real world, they will inevitably make mistakes. Human interventions provide valuable feedback for improving their behavior。
+第2条，来自arXiv cs.RO。Meituan-Robotics-0: A Vision-Language-Action Foundation Model for Desktop Manipulation。
+arXiv:2611.08577v1 Announce Type: new Abstract: We present Meituan-Robotics-0 (MR0), a vision-language-action foundation model and embodied-agent system for stationary-base desktop manipulation. MR0 c。
+第3条，来自arXiv cs.RO。CS-Pi: Constraint-Satisfying Flow Policy Sampling。
+arXiv:2611.08654v1 Announce Type: new Abstract: A flow-matching policy deployed in the field must often satisfy a constraint that was absent from its demonstrations, such as avoiding an obstacle it ha。
+第4条，来自arXiv cs.RO。ForPC: Force-Aware Whole-Body Control for Precise Humanoid Cart Pushing。
+arXiv:2611.08664v1 Announce Type: new Abstract: Humanoid robots are expected to take over strenuous material handling in manufacturing, logistics, and healthcare, where operating existing wheeled cart。
+第5条，来自arXiv cs.RO。National and State-Level Approaches to Automated Vehicle Certification: A Comparative Framework for State Operational Governance。
+arXiv:2611.08681v1 Announce Type: new Abstract: Automated vehicle (AV) deployment in the United States is expanding without a unified federal certification framework, leading to substantial variation 。
+第6条，来自arXiv cs.RO。VICTR: Value-Informed In-Context Learning for Vision-Language-Action Models。
+arXiv:2611.08698v1 Announce Type: new Abstract: Recent advances in robot foundation models have highlighted the potential of in-context learning (ICL) for adapting robot behavior from demonstrations w。
+第7条，来自arXiv cs.RO。It Takes Two to Tangram: Multi-Agent Object Centric Reinforcement Learning for Assembly。
+arXiv:2611.08814v1 Announce Type: new Abstract: Geometric assembly requires fine spatiotemporal coordination to place parts without causing collisions or deadlocks under tight clearances. To address t。
+以上就是今天的内容，我们明天见。

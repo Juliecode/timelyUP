@@ -1,0 +1,109 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:02.828
+欢迎收听今天的科技研发早报。
+
+2
+00:00:02.828 --> 00:00:06.053
+以下是今天精选的几条前沿进展。
+
+3
+00:00:06.053 --> 00:00:09.097
+第1条，来自arXiv cs.RO。
+
+4
+00:00:09.097 --> 00:00:12.812
+Q-OIL: Optimistic Exploration in Learning from Human Interventions。
+
+5
+00:00:12.812 --> 00:00:22.130
+arXiv:2611.08576v1 Announce Type: new Abstract: As robots are deployed in the real world, they will inevitably make mistakes.
+
+6
+00:00:22.130 --> 00:00:26.007
+Human interventions provide valuable feedback for improving their behavior。
+
+7
+00:00:26.007 --> 00:00:29.155
+第2条，来自arXiv cs.RO。
+
+8
+00:00:29.155 --> 00:00:34.120
+Meituan-Robotics-0: A Vision-Language-Action Foundation Model for Desktop Manipulation。
+
+9
+00:00:34.120 --> 00:00:47.847
+arXiv:2611.08577v1 Announce Type: new Abstract: We present Meituan-Robotics-0 (MR0), a vision-language-action foundation model and embodied-agent system for stationary-base desktop manipulation.
+
+10
+00:00:47.847 --> 00:00:49.236
+MR0 c。
+
+11
+00:00:49.236 --> 00:00:52.454
+第3条，来自arXiv cs.RO。
+
+12
+00:00:52.454 --> 00:00:55.868
+CS-Pi: Constraint-Satisfying Flow Policy Sampling。
+
+13
+00:00:55.868 --> 00:01:08.495
+arXiv:2611.08654v1 Announce Type: new Abstract: A flow-matching policy deployed in the field must often satisfy a constraint that was absent from its demonstrations, such as avoiding an obstacle it ha。
+
+14
+00:01:08.495 --> 00:01:11.736
+第4条，来自arXiv cs.RO。
+
+15
+00:01:11.736 --> 00:01:15.984
+ForPC: Force-Aware Whole-Body Control for Precise Humanoid Cart Pushing。
+
+16
+00:01:15.984 --> 00:01:28.965
+arXiv:2611.08664v1 Announce Type: new Abstract: Humanoid robots are expected to take over strenuous material handling in manufacturing, logistics, and healthcare, where operating existing wheeled cart。
+
+17
+00:01:28.965 --> 00:01:32.044
+第5条，来自arXiv cs.RO。
+
+18
+00:01:32.044 --> 00:01:38.305
+National and State-Level Approaches to Automated Vehicle Certification: A Comparative Framework for State Operational Governance。
+
+19
+00:01:38.305 --> 00:01:50.766
+arXiv:2611.08681v1 Announce Type: new Abstract: Automated vehicle (AV) deployment in the United States is expanding without a unified federal certification framework, leading to substantial variation 。
+
+20
+00:01:50.766 --> 00:01:53.926
+第6条，来自arXiv cs.RO。
+
+21
+00:01:53.926 --> 00:01:58.197
+VICTR: Value-Informed In-Context Learning for Vision-Language-Action Models。
+
+22
+00:01:58.324 --> 00:02:11.391
+arXiv:2611.08698v1 Announce Type: new Abstract: Recent advances in robot foundation models have highlighted the potential of in-context learning (ICL) for adapting robot behavior from demonstrations w。
+
+23
+00:02:11.391 --> 00:02:14.632
+第7条，来自arXiv cs.RO。
+
+24
+00:02:14.632 --> 00:02:18.914
+It Takes Two to Tangram: Multi-Agent Object Centric Reinforcement Learning for Assembly。
+
+25
+00:02:18.914 --> 00:02:31.125
+arXiv:2611.08814v1 Announce Type: new Abstract: Geometric assembly requires fine spatiotemporal coordination to place parts without causing collisions or deadlocks under tight clearances.
+
+26
+00:02:31.125 --> 00:02:32.572
+To address t。
+
+27
+00:02:32.572 --> 00:02:35.384
+以上就是今天的内容，我们明天见。
