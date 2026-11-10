@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。Apple has new Mac app coming to make running local AI models easy。
+Article URL: https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/ Comments URL: https://news.ycombinator.com/item?id=50446520 Points: 41 # Comments: 7。
+第2条，来自Hacker News。What objective is reasoning solving?。
+Article URL: https://alexwang.ai/posts/reasoning-as-pathfinding/ Comments URL: https://news.ycombinator.com/item?id=50445013 Points: 69 # Comments: 33。
+第3条，来自Hacker News。Synaptics patent claims stop work on DisplayLink drivers。
+Article URL: https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/ Comments URL: https://news.ycombinator.com/item?id=50443824 Points: 227 # Comments: 101。
+第4条，来自Hacker News。Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives。
+Browsers natively handle a lot of what used to take 50 lines of JS (or a dependency): `CSS.highlights` for text range highlighting without s everywhere, ` ` and showModal() give you backdrops and idea。
+第5条，来自Hacker News。An Open Field Guide to Inference Engineering。
+Article URL: https://docs.modelplane.ai/guides/inference-guide Comments URL: https://news.ycombinator.com/item?id=50443714 Points: 52 # Comments: 6。
+第6条，来自Hacker News。Smart home devices should work without the internet。
+Article URL: https://docodethatmatters.com/home-automation-overnight-success/ Comments URL: https://news.ycombinator.com/item?id=50441707 Points: 591 # Comments: 207。
+第7条，来自Hacker News。Show HN: Valencia, Spain in Sim City/Isometric View。
+Article URL: https://tinyvalencia.com/ Comments URL: https://news.ycombinator.com/item?id=50441518 Points: 166 # Comments: 41。
+以上就是今天的内容，我们明天见。

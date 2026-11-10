@@ -1,0 +1,97 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:02.828
+欢迎收听今天的科技研发早报。
+
+2
+00:00:02.828 --> 00:00:06.053
+以下是今天精选的几条前沿进展。
+
+3
+00:00:06.053 --> 00:00:08.322
+第1条，来自Hacker News。
+
+4
+00:00:08.322 --> 00:00:12.141
+Apple has new Mac app coming to make running local AI models easy。
+
+5
+00:00:12.141 --> 00:00:40.424
+Article URL: https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/ Comments URL: https://news.ycombinator.com/item?id=50446520 Points: 41 # Comments: 7。
+
+6
+00:00:40.424 --> 00:00:42.693
+第2条，来自Hacker News。
+
+7
+00:00:42.693 --> 00:00:44.822
+What objective is reasoning solving?
+
+8
+00:00:44.822 --> 00:01:04.783
+Article URL: https://alexwang.ai/posts/reasoning-as-pathfinding/ Comments URL: https://news.ycombinator.com/item?id=50445013 Points: 69 # Comments: 33。
+
+9
+00:01:04.783 --> 00:01:07.168
+第3条，来自Hacker News。
+
+10
+00:01:07.168 --> 00:01:10.594
+Synaptics patent claims stop work on DisplayLink drivers。
+
+11
+00:01:10.594 --> 00:01:34.663
+Article URL: https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/ Comments URL: https://news.ycombinator.com/item?id=50443824 Points: 227 # Comments: 101。
+
+12
+00:01:34.663 --> 00:01:37.071
+第4条，来自Hacker News。
+
+13
+00:01:37.071 --> 00:01:42.499
+Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives。
+
+14
+00:01:42.499 --> 00:01:52.337
+Browsers natively handle a lot of what used to take 50 lines of JS (or a dependency): `CSS.highlights` for text range highlighting without s everywhere, ` ` and showModal() give you backdrops and idea。
+
+15
+00:01:52.337 --> 00:01:54.687
+第5条，来自Hacker News。
+
+16
+00:01:54.687 --> 00:01:57.372
+An Open Field Guide to Inference Engineering。
+
+17
+00:01:57.372 --> 00:02:15.979
+Article URL: https://docs.modelplane.ai/guides/inference-guide Comments URL: https://news.ycombinator.com/item?id=50443714 Points: 52 # Comments: 6。
+
+18
+00:02:15.979 --> 00:02:18.294
+第6条，来自Hacker News。
+
+19
+00:02:18.294 --> 00:02:21.361
+Smart home devices should work without the internet。
+
+20
+00:02:21.361 --> 00:02:42.201
+Article URL: https://docodethatmatters.com/home-automation-overnight-success/ Comments URL: https://news.ycombinator.com/item?id=50441707 Points: 591 # Comments: 207。
+
+21
+00:02:42.201 --> 00:02:44.586
+第7条，来自Hacker News。
+
+22
+00:02:44.586 --> 00:02:48.613
+Show HN: Valencia, Spain in Sim City/Isometric View。
+
+23
+00:02:48.613 --> 00:03:05.600
+Article URL: https://tinyvalencia.com/ Comments URL: https://news.ycombinator.com/item?id=50441518 Points: 166 # Comments: 41。
+
+24
+00:03:05.600 --> 00:03:08.412
+以上就是今天的内容，我们明天见。
