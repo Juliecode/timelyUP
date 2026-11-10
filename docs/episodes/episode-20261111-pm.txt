@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。Gemini 4 Carbon is now available。
+Article URL: https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/ Comments URL: https://news.ycombinator.com/item?id=50442303 Points: 55 # Comments: 2。
+第2条，来自Hacker News。.NET 11。
+Article URL: https://devblogs.microsoft.com/dotnet/announcing-dotnet-11/ Comments URL: https://news.ycombinator.com/item?id=50442225 Points: 23 # Comments: 2。
+第3条，来自Hacker News。Smart home devices should work without the internet。
+Article URL: https://docodethatmatters.com/home-automation-overnight-success/ Comments URL: https://news.ycombinator.com/item?id=50441707 Points: 17 # Comments: 7。
+第4条，来自Hacker News。Show HN: Valencia, Spain in Sim City/Isometric View。
+Article URL: https://tinyvalencia.com/ Comments URL: https://news.ycombinator.com/item?id=50441518 Points: 6 # Comments: 1。
+第5条，来自Hacker News。Fireworks AI security breach impacts Notion and their customers。
+Article URL: https://www.notion.com/help/security-incident-involving-a-third-party-ai-vendor Comments URL: https://news.ycombinator.com/item?id=50437106 Points: 134 # Comments: 45。
+第6条，来自IEEE Spectrum。Catch Electronics Shock and Drop Failures Before Hardware Is Built。
+Learn how guided virtual shock and drop analysis helps engineering teams identify reliability risks before physical testing, reduce qualification iterations, optimize packaging designs, and accelerate。
+第7条，来自IEEE Spectrum。AI Agents Are Testing the Limits of Zero-Trust Security。
+This article is brought to you by Queen’s University Belfast . Several teams around the globe are leveraging AI by creating a task force of agents managed by an orchestrator and creating applications 。
+以上就是今天的内容，我们明天见。
