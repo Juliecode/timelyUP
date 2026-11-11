@@ -1,0 +1,121 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:02.828
+欢迎收听今天的科技研发早报。
+
+2
+00:00:02.828 --> 00:00:06.053
+以下是今天精选的几条前沿进展。
+
+3
+00:00:06.053 --> 00:00:09.236
+第1条，来自arXiv cs.AI。
+
+4
+00:00:09.236 --> 00:00:13.206
+Auditable Human-Agent Teams for Autonomous X-ray Experimentation。
+
+5
+00:00:13.206 --> 00:00:25.035
+arXiv:2611.12933v1 Announce Type: new Abstract: Closed-loop autonomous experimentation can accelerate scientific discovery, but implementation effort limits accessibility.
+
+6
+00:00:25.035 --> 00:00:27.500
+Agentic systems may lower th。
+
+7
+00:00:27.500 --> 00:00:30.810
+第2条，来自arXiv cs.AI。
+
+8
+00:00:30.810 --> 00:00:35.972
+EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery。
+
+9
+00:00:35.972 --> 00:00:48.981
+arXiv:2611.12934v1 Announce Type: new Abstract: While multimodal agents now carry out complex data analysis with tools, their ability to turn decades of satellite imagery into reliable land-change ana。
+
+10
+00:00:48.981 --> 00:00:52.338
+第3条，来自arXiv cs.AI。
+
+11
+00:00:52.338 --> 00:00:57.280
+Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring。
+
+12
+00:00:57.280 --> 00:01:07.477
+arXiv:2611.12935v1 Announce Type: new Abstract: Topic monitoring is the task of labelling the topic of each token in a model's response during generation.
+
+13
+00:01:07.477 --> 00:01:10.324
+Activation-based monitors that run at generat。
+
+14
+00:01:10.324 --> 00:01:13.692
+第4条，来自arXiv cs.AI。
+
+15
+00:01:13.692 --> 00:01:18.553
+LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding。
+
+16
+00:01:18.553 --> 00:01:27.407
+arXiv:2611.12936v1 Announce Type: new Abstract: Intelligent landslide detection is essential for disaster prevention.
+
+17
+00:01:27.407 --> 00:01:32.963
+However, existing models primarily focus on isolated visual tasks, require extensi。
+
+18
+00:01:32.963 --> 00:01:36.262
+第5条，来自arXiv cs.AI。
+
+19
+00:01:36.262 --> 00:01:39.398
+Tracing Psychometric Inference in Large Language Models。
+
+20
+00:01:39.398 --> 00:01:51.539
+arXiv:2611.12937v1 Announce Type: new Abstract: Do large language models represent psychological constructs internally, or do they only generate outputs that resemble psychometric structure?
+
+21
+00:01:51.539 --> 00:01:52.963
+We addres。
+
+22
+00:01:52.963 --> 00:01:56.227
+第6条，来自arXiv cs.AI。
+
+23
+00:01:56.227 --> 00:01:59.965
+Graph Visualizations in Prompts for Knowledge Graph Question Answering。
+
+24
+00:02:00.100 --> 00:02:11.358
+arXiv:2611.12938v1 Announce Type: new Abstract: We study when and how multimodal input improves knowledge graph question answering (KGQA) in large vision--language models.
+
+25
+00:02:11.358 --> 00:02:13.600
+Using a controlled evaluatio。
+
+26
+00:02:13.600 --> 00:02:16.968
+第7条，来自arXiv cs.AI。
+
+27
+00:02:16.968 --> 00:02:20.775
+Reinforcement Learning based control of Cancer Chemotherapy treatments。
+
+28
+00:02:20.775 --> 00:02:29.699
+arXiv:2611.12940v1 Announce Type: new Abstract: Reinforcement Learning has achieved tremendous success in recent years.
+
+29
+00:02:29.699 --> 00:02:34.468
+Extending its scope from the traditional complex games such as Atari, Go, Pokema。
+
+30
+00:02:34.468 --> 00:02:37.280
+以上就是今天的内容，我们明天见。
