@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 11 Nov 2026 16:30:56 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 22:41:03 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI赋能系统工程，无稀土电机与线控转向安全前瞻</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们从海量信息中为您精选了七条重磅资讯，涵盖了人工智能前沿、汽车智能化和机器人三大领域，希望能为您的研发工作带来一些新的视角和启发。让我们马上进入今天的早报时间！
-
-1. LLM赋能需求评审：MARQ提升系统工程需求质量（来源：arXiv cs.AI）
-   应用分析：这个技术对我们来说非常实用且值得投入。我们可以将类似MARQ的工具集成到EPS的需求管理流程中，作为需求文档（比如SRD、SSD）的初步智能审查员。它能快速识别出需求描述中的模糊不清、逻辑矛盾或缺乏可测试性的问题，尤其是在早期阶段就能捕捉到这些“隐患”，这对于满足ISO 26262功能安全标准至关重要。我们可以考虑与相关AI公司合作，定制开发或引入现有解决方案，以提升我们需求分析师的工作效率，并降低因需求缺陷导致的后期返工成本。
-   https://arxiv.org/abs/2610.36234
-
-2. 物理信息神经网络（PINNs）：高效求解半导体漂移-扩散方程（来源：arXiv cs.LG）
-   应用分析：PINNs在我们的工作中具有巨大的应用潜力，值得投入预研。首先，可以利用PINNs建立更精确的EPS电机热模型，实时预测电机温度，优化弱磁控制和过载保护策略，解决温漂问题。其次，在电机控制策略中，可以利用PINNs构建更鲁棒的无传感器状态观测器，通过嵌入电机物理特性来估计转子位置和速度，提升低速和高速下的控制精度。此外，PINNs在参数辨识方面也有优势，能帮助我们更准确地获取电机参数，提升FOC控制的性能和鲁棒性。初期可以投入小团队进行技术预研，探索其在特定子问题上的可行性。
-   https://arxiv.org/abs/2610.33133
-
-3. 谷歌Genie 4世界模型：高保真模拟环境助力自动驾驶与机器人（来源：TechCrunch）
-   应用分析：Genie 4这类高保真世界模型对我们线控转向的研发具有决定性意义，非常值得关注和投入。我们可以将其作为线控转向系统硬件在环（HIL）或软件在环（SIL）测试的虚拟环境。想象一下，在一个高度逼真的数字孪生世界中，我们可以大规模测试线控转向的助力手感、冗余安全机制在各种复杂场景（如极端天气、突发障碍物）下的表现。此外，它还能助力我们通过强化学习等AI方法，在虚拟环境中自动探索和优化EPS的助力曲线、阻尼/回正补偿等参数，加速手感调校过程，减少对实车测试的依赖，提高开发效率和安全性。
-   https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/
-
-4. 无稀土非晶合金电机：EV牵引电机的新方向（来源：Charged EVs）
-   应用分析：这个研究直接关系到我们EPS电机的核心技术路线，非常值得投入。我们需要深入研究非晶合金和无重稀土磁体在EPS电机上的应用潜力，包括材料成本、加工工艺难度、以及对电机整体性能（尤其是效率提升和温升控制）的影响。在电机设计阶段，可以利用仿真工具对采用这些新材料的EPS电机进行电磁、热和结构分析，优化电机拓扑结构和控制策略，以充分发挥新材料的优势。同时，还需要关注非晶合金对电机NVH特性的影响，并开发相应的转矩脉动抑制策略。这是应对稀土资源挑战，提升产品竞争力的关键一步。
-   https://chargedevs.com/newswire/proterial-and-fev-simulate-an-amorphous-alloy-ev-traction-motor-without-heavy-rare-earths/
-
-5. 功率转换器直接介质冷却：提升功率密度与可靠性（来源：Power Electronics News）
-   应用分析：这项技术对我们下一代EPS控制器功率级设计具有重要参考价值，值得投入预研。我们可以评估在DP-EPS或R-EPS等对功率密度和体积要求更高的EPS系统中引入直接介质冷却的可行性。这需要我们重新考量功率模块的封装设计、冷却液循环路径，并深入研究冷却液与SiC/GaN等功率器件材料的兼容性。当然，介质冷却引入了新的潜在故障模式，比如冷却液泄漏或绝缘失效，这些都需要在ISO 26262功能安全设计中进行充分的FMEA分析和验证。这将是提升我们控制器性能和竞争力的关键技术方向。
-   https://www.powerelectronicsnews.com/direct-dielectric-cooling-for-power-converters/
-
-6. 机器人安全新挑战：当输入数据“撒谎”时（来源：IEEE Spectrum）
-   应用分析：这篇文章直接点中了我们EPS系统功能安全和网络安全的痛点，非常值得我们高度重视并立即行动。我们需要强化EPS系统中的冗余传感器设计，并开发更高级的数据融合和异常检测算法，以实时识别并隔离异常或被篡改的输入数据。在网络安全方面，必须对EPS控制器及其通信接口进行多层级加固，例如采用加密通信、安全启动、入侵检测等技术，以满足ISO 21434标准，防止恶意攻击者篡改传感器信息或控制指令。特别是在线控转向（Steer-by-Wire）的架构设计中，数据信任机制和多层验证将是确保转向指令准确性和安全性的核心，以应对任何形式的输入欺骗风险。这不仅是技术挑战，更是法规合规和用户生命安全的保障。
-   https://spectrum.ieee.org/ai-robot-safety-cybersecurity-vicone
-
-7. 多阶段机器人控制：PPO优化复杂动作序列（来源：arXiv cs.RO）
-   应用分析：这项研究为我们提升EPS电机控制策略的鲁棒性和自适应性提供了宝贵的思路，值得投入研究。我们可以借鉴“多阶段任务”和“相控策略优化”的思想，将EPS系统在不同驾驶场景（如低速大转向角泊车、高速微转向调整、自动回正过程）下的运行模式视为机器人的不同“阶段”。然后，尝试设计一个统一的、能根据当前驾驶状态（即“相位”）自适应调整的助力控制策略，而不是简单地在多个独立策略间切换。这有助于实现更流畅、更智能的转向手感。此外，这种方法也能启发我们开发更强大的故障容错控制，在电机发生部分故障时，快速自适应到降级模式，并优化剩余健康部分的控制。这将是我们将机器人前沿控制技术引入EPS，解决复杂自适应控制问题的有效途径。
-   https://arxiv.org/abs/2610.36270</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261028-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261028-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261028-pm.mp3" length="4522896" type="audio/mpeg"/>
-      <pubDate>Wed, 28 Oct 2026 09:43:27 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 智驾未来：AI赋能转向，机器人与电驱新突破</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们将一起探索AI前沿、汽车智能化和机器人领域的最新进展。我们的信息源涵盖了arXiv、IEEE Spectrum、Charged EVs和EE Times等，为大家精选了七条最值得关注的资讯。从AI智能体的自学习能力，到数据驱动的最优控制，再到稀土自由电机和机器人安全，每一条都可能为我们汽车EPS系统的未来发展带来新的灵感和突破。准备好了吗？让我们开始今天的科技之旅！
@@ -1062,6 +1026,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261112-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261112-pm.mp3" length="944064" type="audio/mpeg"/>
       <pubDate>Wed, 11 Nov 2026 16:30:56 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. Auditable Human-Agent Teams for Autonomous X-ray Experimentation（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.12933
+
+2. EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.12934
+
+3. Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.12935
+
+4. LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.12936
+
+5. Tracing Psychometric Inference in Large Language Models（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.12937
+
+6. Graph Visualizations in Prompts for Knowledge Graph Question Answering（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.12938
+
+7. Reinforcement Learning based control of Cancer Chemotherapy treatments（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.12940</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261112-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261112-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261112-am.mp3" length="944064" type="audio/mpeg"/>
+      <pubDate>Wed, 11 Nov 2026 22:41:03 +0000</pubDate>
     </item>
   </channel>
 </rss>

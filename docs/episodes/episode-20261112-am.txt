@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自arXiv cs.AI。Auditable Human-Agent Teams for Autonomous X-ray Experimentation。
+arXiv:2611.12933v1 Announce Type: new Abstract: Closed-loop autonomous experimentation can accelerate scientific discovery, but implementation effort limits accessibility. Agentic systems may lower th。
+第2条，来自arXiv cs.AI。EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery。
+arXiv:2611.12934v1 Announce Type: new Abstract: While multimodal agents now carry out complex data analysis with tools, their ability to turn decades of satellite imagery into reliable land-change ana。
+第3条，来自arXiv cs.AI。Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring。
+arXiv:2611.12935v1 Announce Type: new Abstract: Topic monitoring is the task of labelling the topic of each token in a model's response during generation. Activation-based monitors that run at generat。
+第4条，来自arXiv cs.AI。LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding。
+arXiv:2611.12936v1 Announce Type: new Abstract: Intelligent landslide detection is essential for disaster prevention. However, existing models primarily focus on isolated visual tasks, require extensi。
+第5条，来自arXiv cs.AI。Tracing Psychometric Inference in Large Language Models。
+arXiv:2611.12937v1 Announce Type: new Abstract: Do large language models represent psychological constructs internally, or do they only generate outputs that resemble psychometric structure? We addres。
+第6条，来自arXiv cs.AI。Graph Visualizations in Prompts for Knowledge Graph Question Answering。
+arXiv:2611.12938v1 Announce Type: new Abstract: We study when and how multimodal input improves knowledge graph question answering (KGQA) in large vision--language models. Using a controlled evaluatio。
+第7条，来自arXiv cs.AI。Reinforcement Learning based control of Cancer Chemotherapy treatments。
+arXiv:2611.12940v1 Announce Type: new Abstract: Reinforcement Learning has achieved tremendous success in recent years. Extending its scope from the traditional complex games such as Atari, Go, Pokema。
+以上就是今天的内容，我们明天见。
