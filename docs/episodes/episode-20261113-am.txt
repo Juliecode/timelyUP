@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。Chinese frontier AI models carry the fingerprint of export-controlled GPUs。
+Article URL: https://unemploymentlabs.com/checkpoint-forensics Comments URL: https://news.ycombinator.com/item?id=50474883 Points: 29 # Comments: 2。
+第2条，来自Hacker News。Foundation Models framework。
+Article URL: https://developer.apple.com/foundation-models-framework/ Comments URL: https://news.ycombinator.com/item?id=50474361 Points: 45 # Comments: 7。
+第3条，来自Hacker News。AI is turning Apple's app review process into a nightmare for synth developers。
+Article URL: https://synthanatomy.com/2026/11/ai-is-turning-apples-app-review-process-into-a-nightmare-for-developers.html Comments URL: https://news.ycombinator.com/item?id=50474311 Points: 14 # Comm。
+第4条，来自Hacker News。Distributed Ray Tracer。
+Hey HN, I'm Julius, I'm a backend engineer at Hatchet and created this demo to show off some of Hatchet's new features, primarily durable streams and serverless endpoints. Those, however, are just bac。
+第5条，来自Hacker News。Show HN: AgentRun – open-source, Self-improving Managed Agents。
+We (GREP.AI, YC F26) are open-sourcing AgentRun and turning it into a full managed agents platform. Read more about it in this post: https://agentrun.ai/blog/introducing-agentrun-run-smarter-ag... . I。
+第6条，来自Hacker News。Gemini 4 Hydrogen。
+Article URL: https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/ Comments URL: https://news.ycombinator.com/item?id=50471431 Points: 396 # Comments: 。
+第7条，来自Hacker News。Show HN: Kapso – Iterative learning from enterprise data。
+Hey HN! We're Alireza and Majid building Leeroo ( https://leeroo.com/ ). Previously we’ve built AI systems for products with millions of users, including at LinkedIn and Meta. We’re now focusing on bu。
+以上就是今天的内容，我们明天见。
