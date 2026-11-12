@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。Show HN: A self-hosted PHP platform combining CMS, e-commerce and more, built-in。
+We used WordPress ourselves but struggled with ongoing maintenance. So we built an internal alternative CMS that met our needs. After two years of development, we decided to make it open source. You c。
+第2条，来自Hacker News。I'm making LLMs work on small and old devices。
+Article URL: https://github.com/hyperionaidev/smolmaxxing/ Comments URL: https://news.ycombinator.com/item?id=50468888 Points: 34 # Comments: 10。
+第3条，来自Hacker News。Researchers discover rare star system that emits radio signals every 8 minutes。
+Article URL: https://www.curtin.edu.au/news/media-release/researchers-discover-rare-star-system-that-emits-radio-signals-every-eight-minutes/ Comments URL: https://news.ycombinator.com/item?id=5046545。
+第4条，来自Hacker News。93% of paint splatters are valid Perl programs (2019)。
+Article URL: https://www.mcmillen.dev/sigbovik/ Comments URL: https://news.ycombinator.com/item?id=50459745 Points: 537 # Comments: 69。
+第5条，来自Hacker News。Pulling the Lever in a Subway Problem。
+Article URL: https://www.jefftk.com/p/pulling-the-lever-in-a-subway-problem Comments URL: https://news.ycombinator.com/item?id=50457344 Points: 9 # Comments: 6。
+第6条，来自TechCrunch。Phota Labs uses AI to turn everyday photos into professional-looking shots。
+Rather than giving consumers yet another photo-editing tool, Phota Labs aims to use advances in AI to automate the editing process so it’s easier for anyone to turn everyday moments into better photos。
+第7条，来自TechCrunch。Jensen Huang agrees to testify before Congress。
+Huang, who was ousted as CEO following reports of an alleged affair with a woman suspected of spying for China, agreed to testify Wednesday after several senior lawmakers threatened to subpoena him.。
+以上就是今天的内容，我们明天见。
