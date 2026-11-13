@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。Live airband on all frequencies from KORS. Victoria, CA also ground stopped。
+Article URL: https://orcasairband.com/ Comments URL: https://news.ycombinator.com/item?id=50490593 Points: 14 # Comments: 0。
+第2条，来自Hacker News。All US airports are currently ground stopped。
+Article URL: https://twitter.com/flightradar24/status/2121347654714077605 Comments URL: https://news.ycombinator.com/item?id=50489652 Points: 83 # Comments: 21。
+第3条，来自Hacker News。Autonomous (YC F25) is hiring MTS to build AI agents that manage your wealth。
+Article URL: https://atg.science/careers Comments URL: https://news.ycombinator.com/item?id=50489589 Points: 0 # Comments: 0。
+第4条，来自Hacker News。No AI Slop: A Manifesto。
+Article URL: https://www.slopmanifesto.com/ Comments URL: https://news.ycombinator.com/item?id=50488769 Points: 133 # Comments: 76。
+第5条，来自Hacker News。Technology as a Search Problem。
+Article URL: https://www.construction-physics.com/p/technology-as-a-search-problem Comments URL: https://news.ycombinator.com/item?id=50488490 Points: 17 # Comments: 2。
+第6条，来自Hacker News。Perplexity Decider v1.3: Training, eval, and use cases。
+Article URL: https://www.perplexity.ai/hub/blog/perplexity-decider Comments URL: https://news.ycombinator.com/item?id=50488464 Points: 70 # Comments: 13。
+第7条，来自Hacker News。Show HN: Isometric SF – A pixel-art map of the SF Bay Area。
+Technical Write-up: https://www.justinchavez.com/blog/isometric-sf-how/ Hi HN! Showcasing this fun project. I took 1300 square miles of the SF Bay Area from Google Photorealistic 3D Tiles and transfor。
+以上就是今天的内容，我们明天见。

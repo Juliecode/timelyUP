@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 13 Nov 2026 16:42:15 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 22:41:51 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 智驾、机器人与AI前沿：EPS工程师的今日早报速览</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三个热点领域，精选了七条重磅资讯，希望能为您的日常研发工作带来新的启发。今天的头条包括AI赋能固件仿真、英飞凌对未来汽车的洞察、氮化镓功率器件的最新进展，以及机器人产业的战略动向。话不多说，让我们马上进入今天的早报时间。
-
-1. Simantic推出固件仿真平台，让AI智能体无需物理硬件即可测试固件（来源：Hacker News）
-   应用分析：非常能用，且正是我们急需的方向。目前我们固件开发后，需要经过MIL、SIL、HIL以及台架、整车测试，周期漫长。如果Simantic这类平台能提供高保真的EPS控制器固件仿真环境，我们可以让AI生成或优化FOC、无传感器控制、故障诊断等算法代码，并在纯软件环境中快速进行大量测试迭代，比如不同工况、参数扰动下的性能和鲁棒性验证。这值得高度关注和初期投入研究，有望将我们的控制算法开发与验证周期从数周乃至数月缩短到数天甚至数小时。尤其是在线控转向这种新架构探索阶段，快速验证不同的冗余设计和控制逻辑至关重要。我们可以尝试将现有模型化设计的MATLAB/Simulink代码生成流程与此类平台结合，探索AI辅助代码生成、自动测试用例生成及缺陷定位。
-   https://news.ycombinator.com/item?id=50291116
-
-2. 英飞凌OktoberTech大会：聚焦边缘AI、软件定义汽车与800伏高压系统（来源：EE Times）
-   应用分析：这些都是我们必须考虑和积极拥抱的方向，绝对值得投入。我们需要组建专门的预研团队，与英飞凌等供应商保持紧密沟通，共同探索技术落地。在边缘AI方面，可以探索将轻量级神经网络模型部署到EPS控制器MCU上，用于实时监测电机状态、预测性维护，或者对传统FOC控制参数进行在线自适应调整，以应对温漂、老化等问题，提升NVH性能。对于软件定义汽车，这要求我们的EPS控制器软件架构更加模块化、接口标准化，支持OTA更新，并能与其他车辆域控制器高效协同。这意味着需要投入更多资源在中间件、通信协议以及ISO 26262功能安全等级的软件架构设计上。而800 VDC趋势则要求我们评估现有EPS电机和功率器件在800伏系统下的兼容性，并开始研究适用于高压平台的氮化镓/碳化硅功率模块、高压绝缘技术以及相应的电流/电压采样方案。这对于未来的线控转向架构尤其关键，因为线控转向对功率密度和效率要求更高。
-   https://www.eetimes.com/infineons-oktobertech-edge-ai-sdvs-and-the-road-to-800-vdc/
-
-3. 深入探讨氮化镓开关：电动汽车功率电子的优势、局限性与栅极驱动挑战（来源：Charged EVs）
-   应用分析：非常能用，是我们现有硅基功率器件的潜在升级方向，值得投入。我们可以开始评估氮化镓器件在EPS电机驱动中的应用，特别是对于高压（如800伏）和高频开关需求的应用。这将涉及到重新设计功率级拓扑、栅极驱动电路、PCB布局（以最小化寄生参数）以及散热方案。通过氮化镓的高效率特性，可以减小散热器尺寸，从而实现控制器的小型化和轻量化，这对于EPS在有限空间内的安装非常有利。同时，更高的效率意味着更低的能耗，对续航也有积极贡献。虽然目前成本可能较高，但其在性能上的优势（尤其是效率和功率密度）对EPS的竞争力至关重要。我们需要进行氮化镓基EPS功率级的原型开发和测试，解决栅极驱动、EMC和可靠性挑战，为未来产品升级做技术储备。
-   https://chargedevs.com/features/gan-power-switches-benefits-gate-drive-design-tradeoffs/
-
-4. 英飞凌与英伟达合作，推进800 VDC AI数据中心GaN功率技术（来源：Power Electronics News）
-   应用分析：间接但重要，值得持续关注和跟踪。数据中心对800伏直流和氮化镓的需求，会推动相关器件、封装和系统方案的成熟与成本下降。我们可以关注英飞凌和英伟达在800伏直流氮化镓电源转换器设计中的散热、EMC、可靠性以及控制策略等方面的经验，这些经验很可能迁移到汽车800伏EPS或线控转向的功率级设计中。例如，如何在高开关频率下处理寄生参数、如何优化磁性元件设计以减小体积等。同时，随着氮化镓在数据中心等大批量应用中成熟，其制造成本有望进一步降低，这会加速氮化镓在汽车领域的普及。我们无需直接投入研发，但应定期收集相关技术报告和产品进展，作为我们EPS未来技术路线图的参考，特别是与英飞凌等供应商沟通时，可以询问其在800伏氮化镓产品路线图上是否有针对汽车应用的规划。
-   https://www.powerelectronicsnews.com/infineon-advances-gan-power-for-800-vdc-ai-data-centers/
-
-5. 白宫：进口机器人构成国家安全威胁，或引发贸易谈判和关税（来源：The Robot Report）
-   应用分析：这不是技术应用，而是战略风险评估，值得在战略层面和供应链管理层面投入。我们迫切需要评估EPS电机、控制器核心芯片（MCU、功率器件）、传感器等关键部件的供应链风险，特别是来自受影响区域的供应商。考虑增加备选供应商，或推动本土化采购策略。如果机器人相关技术被视为国家安全问题，我们更需要加强在电机控制算法、线控转向架构、ISO 26262功能安全软件等核心技术上的自主研发能力，减少对外部高科技部件的依赖。这要求我们加强与采购、法务部门的沟通，定期进行供应链风险评估，并加速关键技术的国产化替代或多元化供应布局。
-   https://www.therobotreport.com/white-house-makes-section-232-determination-regarding-foreign-made-robots/
-
-6. 意法半导体考虑为人形机器人开发更强大的MCU和MPU（来源：EE Times）
-   应用分析：非常能用，可以作为未来EPS控制器（尤其是线控转向）MCU选型的重要参考，值得投入关注和早期评估。我们可以密切关注意法半导体为人形机器人设计的MCU/MPU产品线。这些芯片很可能具备更强的浮点运算能力、更多的实时I/O、更快的通信接口以及更完善的ISO 26262功能安全模块，这些都是线控转向系统所必需的。我们可以预先评估这些芯片的架构、性能和开发工具链。同时，我们可以研究人形机器人关节控制中使用的先进算法和硬件架构，例如如何实现高带宽的力矩控制、如何处理多传感器融合、如何实现高精度的位置、速度、力矩闭环控制，并将这些经验迁移到EPS的电机控制策略和手感调校中，以提升性能和鲁棒性。与意法半导体等供应商建立联系，了解其针对机器人和汽车融合应用的芯片路线图，并在我们的下一代EPS平台（特别是线控转向）规划中，考虑引入这些高性能的MCU/MPU。
-   https://www.eetimes.com/stmicroelectronics-weighs-developing-more-powerful-mcus-mpus-for-humanoid-robots/
-
-7. 在AI时代，系统思维至关重要（来源：IEEE Spectrum）
-   应用分析：这是指导我们如何有效利用AI的思路，值得投入，但需以系统思维为指导。我们可以利用AI工具（例如基于强化学习或遗传算法的优化器）辅助EPS的助力曲线调校、电机控制参数优化。AI可以在仿真环境中快速探索大量参数组合，找到最优解，并评估其鲁棒性。结合Simantic等仿真平台，我们可以让AI自动生成测试用例、执行仿真测试、分析结果并识别潜在缺陷，这将大大加速MIL/SIL阶段的验证效率。此外，利用AI模型分析EPS运行数据，进行异常检测和故障预测，也能提升系统的可靠性和安全性。我们需要培养团队的AI应用能力，同时强化对EPS系统本身的深刻理解和ISO 26262功能安全责任。从小的试点项目开始，逐步将AI引入到特定环节，积累经验并评估投入产出比。例如，可以先尝试用AI优化FOC控制器的PI参数，或用于台架测试数据的自动分析。
-   https://spectrum.ieee.org/systems-thinking-vital-in-ai</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261030-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261030-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261030-am.mp3" length="5832432" type="audio/mpeg"/>
-      <pubDate>Thu, 29 Oct 2026 22:43:55 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · AI赋能转向，宽禁带器件革新，机器人芯动向：今日研发早报</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是大家的老朋友，兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门方向，为您精选出七条最具价值的资讯。从AI如何深度参与车辆控制，到线控转向和高级自动驾驶的最新进展，再到宽禁带半导体在电动汽车中的应用，以及机器人关节执行器背后的芯片思考，每一条都与我们的研发工作息息相关。希望今天的早报能为您带来新的启发和思考！
@@ -1020,6 +984,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261114-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261114-pm.mp3" length="1314000" type="audio/mpeg"/>
       <pubDate>Fri, 13 Nov 2026 16:42:15 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. Live airband on all frequencies from KORS. Victoria, CA also ground stopped（来源：Hacker News）
+   https://orcasairband.com/
+
+2. All US airports are currently ground stopped（来源：Hacker News）
+   https://twitter.com/flightradar24/status/2121347654714077605
+
+3. Autonomous (YC F25) is hiring MTS to build AI agents that manage your wealth（来源：Hacker News）
+   https://atg.science/careers
+
+4. No AI Slop: A Manifesto（来源：Hacker News）
+   https://www.slopmanifesto.com/
+
+5. Technology as a Search Problem（来源：Hacker News）
+   https://www.construction-physics.com/p/technology-as-a-search-problem
+
+6. Perplexity Decider v1.3: Training, eval, and use cases（来源：Hacker News）
+   https://www.perplexity.ai/hub/blog/perplexity-decider
+
+7. Show HN: Isometric SF – A pixel-art map of the SF Bay Area（来源：Hacker News）
+   https://isometricsf.com/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261114-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261114-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261114-am.mp3" length="1126944" type="audio/mpeg"/>
+      <pubDate>Fri, 13 Nov 2026 22:41:51 +0000</pubDate>
     </item>
   </channel>
 </rss>
