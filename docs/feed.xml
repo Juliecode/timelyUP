@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 12 Nov 2026 22:41:25 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 16:42:15 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI赋能固件仿真，GaN重塑电驱，ST关注人形机器人MCU，EPS工程师今日必读</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报，我是你们的主播兼技术分析师。今天是十月二十九日，星期四。今天我们将一同聚焦AI前沿、汽车智能化和机器人这三大领域，为您精选了七条重磅资讯。这些消息不仅关乎技术边界的拓展，更与我们日常的研发工作息息相关，特别是对于像我一样从事汽车电动助力转向，也就是EPS系统开发的工程师来说，今天的每一条都可能带来新的启发和思考。好，话不多说，我们马上进入今天的头条资讯。
-
-1. Simantic推出固件模拟平台，使AI代理和工程师无需物理硬件即可测试和验证固件。（来源：Hacker News）
-   应用分析：能不能用：能，而且非常需要。我们EPS开发中，电机控制策略的固件验证、功能安全测试需要大量HIL/SIL仿真，但仍需物理样机进行最终验证。如果AI能生成部分控制逻辑或参数，如何快速测试是关键。怎么用：可考虑将Simantic这类平台集成到我们的MBD（模型化设计）和自动化测试流程中。AI代理可以基于Simulink模型生成C代码或参数，然后直接在Simantic的固件仿真环境中进行初步的单元测试、集成测试，甚至功能安全逻辑的验证，而无需烧录MCU或搭建硬件台架。这能极大地缩短开发周期，特别是在迭代优化电机FOC控制、无传感器算法等复杂策略时。值不值得投入：非常值得关注和投入。它直接解决了我们“将前沿研究（机器人执行器控制、电机控制、AI控制）快速转成可落地的EPS工程方案”中的验证效率瓶颈。初期可以作为试点项目，评估其与我们现有工具链（MATLAB/Simulink、嵌入式C）的兼容性及实际效果。
-   https://news.ycombinator.com/item?id=50291116
-
-2. Mistral AI公司将其最新大型模型Mistral Large 4（代号Le Chonk）开源。（来源：Hacker News）
-   应用分析：能不能用：能，但需要一定的工程转化。直接用于EPS控制可能需要大量的微调和专业知识，但可以用于辅助开发。怎么用：可以利用其代码生成能力，辅助生成一些非核心的C语言代码片段、测试脚本或文档。也可以搭建内部知识库，用Mistral Large 4进行自然语言查询，帮助工程师快速检索EPS系统架构、功能安全标准（ISO 26262）或电机控制理论等信息，甚至辅助处理需求文档和生成技术报告初稿。值不值得投入：值得适度投入。作为开源模型，其部署成本相对较低，主要投入在于GPU资源和工程师的集成工作。虽然短期内不会直接改变EPS的控制核心，但可以作为提升研发效率的强大辅助工具，尤其是在代码质量提升和知识管理方面。
-   https://mistral.ai/news/mistral-large-4-oss/
-
-3. 一篇深度文章探讨了氮化镓（GaN）功率开关的优势、局限性及其栅极驱动挑战，涉及电动汽车电力电子。（来源：Charged EVs）
-   应用分析：能不能用：能，而且是未来EPS电机控制器的重要发展方向。怎么用：在下一代EPS控制器功率级设计中，积极评估并引入GaN器件。重点关注其在PMSM永磁同步电机驱动中的表现，尤其是在高频开关下对电机NVH和效率的影响。同时，深入研究GaN器件的栅极驱动电路设计和PCB布局，这是发挥其性能并确保可靠性的关键，需要克服寄生参数、EMI等挑战。高功率密度也带来新的热管理挑战，需要结合仿真和实验进行优化。值不值得投入：非常值得投入。高功率密度和高效率是EPS系统持续追求的目标，尤其是在向线控转向演进时，更紧凑、更高效的执行器是关键。现在开始研究和储备GaN技术，是保持技术领先性的必要步骤。
-   https://chargedevs.com/features/gan-power-switches-benefits-gate-drive-design-tradeoffs/
-
-4. 理想汽车发布二零二六款i6，搭载自研Mach M100驾驶辅助芯片和96千瓦时电池。（来源：CnEVPost）
-   应用分析：能不能用：间接影响。虽然不是直接的EPS技术，但这种“自研芯片”趋势对我们思考EPS的系统架构和未来演进有重要启发。怎么用：关注主机厂自研芯片的发展路线，预测未来中央计算平台或区域控制器对EPS功能集成度的要求。例如，如果驾驶辅助芯片处理更多车辆运动控制，EPS可能需要提供更底层的执行接口，或与中央域控制器进行更紧密的协同。自研芯片的引入可能改变整车功能安全的边界和冗余方案，我们需要提前分析，确保EPS在新的电子电气架构下仍能满足ISO 26262要求。值不值得投入：值得持续关注。这反映了汽车产业深层变革，影响我们EPS产品的未来形态和市场竞争力。需要投入资源进行行业趋势分析和技术路线预判。
-   https://cnevpost.com/2026/10/28/li-auto-l_aunches-2026-i6/
-
-5. 意法半导体（STMicroelectronics）正在评估为人形机器人开发更强大的微控制器（MCU）和微处理器（MPU）的可能性。（来源：EE Times）
-   应用分析：能不能用：能，而且是潜在的关键硬件升级方向。怎么用：密切关注ST等主流供应商在机器人领域推出的高性能MCU/MPU产品。这些芯片可能在实时处理能力、集成AI加速器、功能安全IP等方面有独到之处，非常适合线控转向（Steer-by-Wire）或下一代EPS的电机控制单元。我们可以借鉴机器人领域对复杂运动控制和传感器融合的需求，探索将更先进的控制算法（如模型预测控制、强化学习控制）移植到这些新一代MCU/MPU上，以提升EPS的性能和鲁棒性。值不值得投入：非常值得投入。这是“机器人/人形机器人的关节执行器、伺服电机控制”与EPS技术栈交叉点的直接体现。及时了解并评估这些芯片，能为我们未来的EPS产品提供更强的算力基础和功能扩展潜力。
-   https://www.eetimes.com/stmicroelectronics-weighs-developing-more-powerful-mcus-mpus-for-humanoid-robots/
-
-6. 新加坡半导体公司NSING Technologies提供面向具身AI和机器人的全栈半导体解决方案，包括高性能MCU、安全IC、无线连接和BMS IC，支持分布式机器人架构。（来源：EE Times）
-   应用分析：能不能用：能，而且是未来EPS系统架构的理想参考和潜在供应商。怎么用：借鉴其分布式机器人架构理念，重新思考线控转向的电子电气架构。将AI主控部分用于高层决策和复杂助力策略，而将高性能MCU用于底层电机控制和实时传感器数据处理，确保确定性和功能安全。其“安全IC”和分布式节点设计对EPS的ISO 26262功能安全和冗余方案提供了新的思路。可以研究如何将这些安全机制集成到我们的EPS控制器中，尤其是在无传感器或冗余传感方案上。值不值得投入：非常值得投入。这直接触及我们“线控转向的架构、冗余与功能安全设计”和“把前沿研究（机器人执行器控制、电机控制、AI控制）快速转成可落地的EPS工程方案”的核心问题。需要深入研究其技术细节，并评估潜在的合作或集成机会。
-   https://www.eetimes.com/full-stack-semiconductor-solutions-for-embodied-ai-robotics/
-
-7. WorldOracle项目测试“世界模型”在预测真实世界机器人执行方面的可靠性，发现模型预测与实际操作可能存在差异。（来源：The Robot Report）
-   应用分析：能不能用：能，但需要谨慎和充分验证。怎么用：在我们尝试用强化学习或神经网络观测器改进EPS电机控制时，必须充分考虑“世界模型”的局限性。在仿真环境（MIL/SIL/HIL）中，需要设计严苛的边界条件和扰动测试，以验证AI控制策略在各种实际工况下的鲁棒性。发现模型与真实世界的偏差后，需要通过持续的数据收集和模型迭代来缩小差距。可以考虑采用混合控制策略，即AI用于高层决策和优化，而底层仍由经过充分验证的传统控制算法（如FOC、PI控制器）保证基本性能和功能安全。值不值得投入：值得投入研究，但要保持务实和谨慎。AI在控制系统中的应用前景广阔，但其可靠性是工程落地的最大挑战。该研究提醒我们，在将AI引入EPS控制时，必须投入大量资源进行验证和风险评估，不能盲目依赖。
-   https://www.therobotreport.com/worldoracle-tests-whether-world-models-can-reliably-predict-real-world-executions/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261030-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261030-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261030-pm.mp3" length="3334176" type="audio/mpeg"/>
-      <pubDate>Thu, 29 Oct 2026 16:17:35 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 智驾、机器人与AI前沿：EPS工程师的今日早报速览</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三个热点领域，精选了七条重磅资讯，希望能为您的日常研发工作带来新的启发。今天的头条包括AI赋能固件仿真、英飞凌对未来汽车的洞察、氮化镓功率器件的最新进展，以及机器人产业的战略动向。话不多说，让我们马上进入今天的早报时间。
@@ -1027,6 +991,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261113-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261113-am.mp3" length="1176912" type="audio/mpeg"/>
       <pubDate>Thu, 12 Nov 2026 22:41:25 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. Brazil's Caixa insurer breach exposes names and tax IDs of all 7.6M customers（来源：Hacker News）
+   https://filemanager-cdn.mziq.com/published/3972906b-e50b-4f74-ab74-4d0d32125d11/9567a559-d20a-486e-a7ae-5c6bbc030c5e
+
+2. Why is Google cutting off Search from AI-free schools? Here are some theories（来源：Hacker News）
+   https://text.npr.org/nx-s1-6029408
+
+3. Jonathan Blow – If AI Solved Coding, Why Is My Software Still the Same? [video]（来源：Hacker News）
+   https://www.youtube.com/watch?v=IRK8h67ol7Q
+
+4. EU Digital Identity Wallet rollout: every EU state on one board（来源：Hacker News）
+   https://myid.ie/business/eu-digital-wallet-tracker/
+
+5. U.S. October PPI Rises 6.5% YoY, Highest in Nearly Four Years（来源：Hacker News）
+   https://news.ycombinator.com/item?id=50484421
+
+6. AI Is Destroying the Trust Between Writers and Readers（来源：Hacker News）
+   https://www.theatlantic.com/books/2026/11/ai-literary-scams-amazon/689391/
+
+7. Elevated errors on claude.ai, Claude Code, and platform.claude.com（来源：Hacker News）
+   https://status.claude.com/incidents/nn11wk485zfn</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261114-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261114-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261114-pm.mp3" length="1314000" type="audio/mpeg"/>
+      <pubDate>Fri, 13 Nov 2026 16:42:15 +0000</pubDate>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。Brazil's Caixa insurer breach exposes names and tax IDs of all 7.6M customers。
+Article URL: https://filemanager-cdn.mziq.com/published/3972906b-e50b-4f74-ab74-4d0d32125d11/9567a559-d20a-486e-a7ae-5c6bbc030c5e Comments URL: https://news.ycombinator.com/item?id=50485295 Points: 50。
+第2条，来自Hacker News。Why is Google cutting off Search from AI-free schools? Here are some theories。
+Article URL: https://text.npr.org/nx-s1-6029408 Comments URL: https://news.ycombinator.com/item?id=50484960 Points: 22 # Comments: 14。
+第3条，来自Hacker News。Jonathan Blow – If AI Solved Coding, Why Is My Software Still the Same? [video]。
+Article URL: https://www.youtube.com/watch?v=IRK8h67ol7Q Comments URL: https://news.ycombinator.com/item?id=50484658 Points: 45 # Comments: 18。
+第4条，来自Hacker News。EU Digital Identity Wallet rollout: every EU state on one board。
+Article URL: https://myid.ie/business/eu-digital-wallet-tracker/ Comments URL: https://news.ycombinator.com/item?id=50484496 Points: 42 # Comments: 5。
+第5条，来自Hacker News。U.S. October PPI Rises 6.5% YoY, Highest in Nearly Four Years。
+U.S. producer prices rose 6.5% YoY in October, the highest since November 2022, below expectations of 6.6% and up from 6.3% previously. PPI increased 0.3% MoM, below the expected 0.4%, while September。
+第6条，来自Hacker News。AI Is Destroying the Trust Between Writers and Readers。
+Article URL: https://www.theatlantic.com/books/2026/11/ai-literary-scams-amazon/689391/ Comments URL: https://news.ycombinator.com/item?id=50481870 Points: 153 # Comments: 59。
+第7条，来自Hacker News。Elevated errors on claude.ai, Claude Code, and platform.claude.com。
+Article URL: https://status.claude.com/incidents/nn11wk485zfn Comments URL: https://news.ycombinator.com/item?id=50481187 Points: 416 # Comments: 340。
+以上就是今天的内容，我们明天见。
