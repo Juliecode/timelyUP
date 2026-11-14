@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自arXiv cs.AI。Zugwise: Domain-Aware Game Reconstruction for Digitizing Handwritten Chess Scoresheets。
+arXiv:2611.14544v1 Announce Type: new Abstract: Digitizing handwritten chess scoresheets has been studied as a handwriting-recognition problem: read the move in each box and check that it is legal. Th。
+第2条，来自arXiv cs.AI。Cleaning an Agent's History Hurts When the World Still Holds the Error。
+arXiv:2611.14654v1 Announce Type: new Abstract: Tool-using language-model agents accumulate histories of their own mistakes, and a system that compacts, repairs or hands off such a history decides wha。
+第3条，来自arXiv cs.AI。Together Compiler: Continual Compilation for AI Inference。
+arXiv:2611.14681v1 Announce Type: new Abstract: Today's AI workloads are rapidly changing: new models are released more often, model architectures are increasingly diverse, and traffic distributions c。
+第4条，来自arXiv cs.AI。When Should Semantic Priors Enter Partially-Identified Causal Discovery?。
+arXiv:2611.14736v1 Announce Type: new Abstract: Observational causal discovery often leaves causal di- rections unresolved or unstable. Large language mod- els (LLMs) can provide semantic information 。
+第5条，来自arXiv cs.AI。SynthCorp: A Platform for Creating Benchmarks for Data Agents。
+arXiv:2611.14765v1 Announce Type: new Abstract: Current benchmarks for LLM-driven data agents saturate quickly and cannot target specific capabilities. We present SynthCorp, a platform that creates cu。
+第6条，来自arXiv cs.AI。Rational Use of Time for Social Coordination in Humans and AI。
+arXiv:2611.14766v1 Announce Type: new Abstract: All social interactions are situated in time. Previous studies have shown that humans are able to use implicit temporal cues, such as the duration of a 。
+第7条，来自arXiv cs.AI。Leaderboard Hacking: Preference-Based Model Evaluations are Vulnerable to Manipulation。
+arXiv:2611.14769v1 Announce Type: new Abstract: Arena-style rankings of language models are a widely used evaluation framework in online leaderboards, research papers, and model evaluation in producti。
+以上就是今天的内容，我们明天见。

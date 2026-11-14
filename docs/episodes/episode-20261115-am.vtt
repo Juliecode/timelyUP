@@ -1,0 +1,113 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:02.828
+欢迎收听今天的科技研发早报。
+
+2
+00:00:02.828 --> 00:00:06.053
+以下是今天精选的几条前沿进展。
+
+3
+00:00:06.053 --> 00:00:09.236
+第1条，来自arXiv cs.AI。
+
+4
+00:00:09.236 --> 00:00:13.993
+Zugwise: Domain-Aware Game Reconstruction for Digitizing Handwritten Chess Scoresheets。
+
+5
+00:00:13.993 --> 00:00:26.192
+arXiv:2611.14544v1 Announce Type: new Abstract: Digitizing handwritten chess scoresheets has been studied as a handwriting-recognition problem: read the move in each box and check that it is legal.
+
+6
+00:00:26.192 --> 00:00:27.245
+Th。
+
+7
+00:00:27.245 --> 00:00:30.556
+第2条，来自arXiv cs.AI。
+
+8
+00:00:30.556 --> 00:00:34.132
+Cleaning an Agent's History Hurts When the World Still Holds the Error。
+
+9
+00:00:34.132 --> 00:00:47.130
+arXiv:2611.14654v1 Announce Type: new Abstract: Tool-using language-model agents accumulate histories of their own mistakes, and a system that compacts, repairs or hands off such a history decides wha。
+
+10
+00:00:47.130 --> 00:00:50.486
+第3条，来自arXiv cs.AI。
+
+11
+00:00:50.486 --> 00:00:54.213
+Together Compiler: Continual Compilation for AI Inference。
+
+12
+00:00:54.213 --> 00:01:07.998
+arXiv:2611.14681v1 Announce Type: new Abstract: Today's AI workloads are rapidly changing: new models are released more often, model architectures are increasingly diverse, and traffic distributions c。
+
+13
+00:01:07.998 --> 00:01:11.366
+第4条，来自arXiv cs.AI。
+
+14
+00:01:11.366 --> 00:01:15.069
+When Should Semantic Priors Enter Partially-Identified Causal Discovery?
+
+15
+00:01:15.069 --> 00:01:25.220
+arXiv:2611.14736v1 Announce Type: new Abstract: Observational causal discovery often leaves causal di- rections unresolved or unstable.
+
+16
+00:01:25.220 --> 00:01:29.062
+Large language mod- els (LLMs) can provide semantic information 。
+
+17
+00:01:29.062 --> 00:01:32.361
+第5条，来自arXiv cs.AI。
+
+18
+00:01:32.361 --> 00:01:35.891
+SynthCorp: A Platform for Creating Benchmarks for Data Agents。
+
+19
+00:01:35.891 --> 00:01:46.887
+arXiv:2611.14765v1 Announce Type: new Abstract: Current benchmarks for LLM-driven data agents saturate quickly and cannot target specific capabilities.
+
+20
+00:01:46.887 --> 00:01:50.104
+We present SynthCorp, a platform that creates cu。
+
+21
+00:01:50.104 --> 00:01:53.368
+第6条，来自arXiv cs.AI。
+
+22
+00:01:53.368 --> 00:01:57.141
+Rational Use of Time for Social Coordination in Humans and AI。
+
+23
+00:01:57.141 --> 00:02:05.266
+arXiv:2611.14766v1 Announce Type: new Abstract: All social interactions are situated in time.
+
+24
+00:02:05.266 --> 00:02:10.764
+Previous studies have shown that humans are able to use implicit temporal cues, such as the duration of a 。
+
+25
+00:02:10.900 --> 00:02:14.264
+第7条，来自arXiv cs.AI。
+
+26
+00:02:14.264 --> 00:02:18.694
+Leaderboard Hacking: Preference-Based Model Evaluations are Vulnerable to Manipulation。
+
+27
+00:02:18.694 --> 00:02:32.034
+arXiv:2611.14769v1 Announce Type: new Abstract: Arena-style rankings of language models are a widely used evaluation framework in online leaderboards, research papers, and model evaluation in producti。
+
+28
+00:02:32.034 --> 00:02:34.847
+以上就是今天的内容，我们明天见。
