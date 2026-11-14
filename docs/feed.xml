@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 13 Nov 2026 22:41:51 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 16:35:39 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI赋能转向，宽禁带器件革新，机器人芯动向：今日研发早报</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是大家的老朋友，兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人这三大热门方向，为您精选出七条最具价值的资讯。从AI如何深度参与车辆控制，到线控转向和高级自动驾驶的最新进展，再到宽禁带半导体在电动汽车中的应用，以及机器人关节执行器背后的芯片思考，每一条都与我们的研发工作息息相关。希望今天的早报能为您带来新的启发和思考！
-
-1. Post-training 4B model with RL to fly Tesla Roadster 21% better than GPT-6 Astra（来源：Hacker News）
-   应用分析：能不能用：非常能用，且值得深入研究。 怎么用：我们可以探索将强化学习（RL）应用于EPS的助力策略调校和手感优化。例如，通过在仿真环境或硬件在环（HIL）平台上进行训练，RL模型可以学习在不同路况、车速、驾驶员意图下的最佳助力曲线和阻尼回正特性，从而实现更个性化、更舒适或更运动的转向手感。此外，在无传感器控制中，RL也可能用于优化状态观测器参数或直接学习控制律，以提升系统的鲁棒性。 值不值得投入：绝对值得。这是AI赋能控制系统、解决传统控制方法在复杂性和自适应性方面挑战的重要方向。我们应投入资源进行算法研究和仿真平台搭建，并与线控转向团队紧密合作，将强化学习转化为EPS技术升级的重要突破口。
-   https://skypilot.ai/blog/flying-roadster-rl
-
-2. Rivian expands joint venture with VW to include AI assistant（来源：TechCrunch）
-   应用分析：能不能用：可以间接利用。 怎么用：虽然EPS本身不直接集成AI助手，但AI助手能够收集的用户偏好、驾驶习惯、路况信息等数据，可以作为EPS助力策略自适应调整的输入。例如，如果AI助手识别到驾驶员偏好运动模式，或者车辆经常在特定崎岖路段行驶，EPS可以据此调整助力曲线、阻尼和回正力矩，提供更匹配的转向手感。此外，AI助手在故障诊断和预测性维护方面的能力，也可以帮助EPS系统更早地发现潜在问题，例如通过分析转向相关的传感器数据进行异常检测。 值不值得投入：值得关注和有限投入。我们应与车身控制、人机交互（HMI）团队紧密协作，了解AI助手能提供的接口和数据，探索如何将这些信息转化为EPS的优化输入。这不是核心算法的投入，而是系统集成和数据利用的投入。
-   https://techcrunch.com/2026/10/29/rivian-expands-joint-venture-with-vw-to-include-ai-assistant/
-
-3. Waymo taps Toyota to supply robotaxis for Japan and the U.K.（来源：TechCrunch）
-   应用分析：能不能用：间接学习和借鉴。 怎么用：Waymo与丰田的合作，特别是选择bZ4X平台，意味着其在转向系统、制动系统等线控执行器的集成和功能安全设计上会有大量实践。我们应该密切关注这类L4自动驾驶车辆在线控转向架构、冗余设计（例如双通道或多通道EPS系统）、功能安全等级（ASIL-D）以及与上层自动驾驶决策层的接口协议等方面的公开信息或行业标准。这对于我们EPS向线控转向（Steer-by-Wire）演进，尤其是在冗余传感、故障诊断、降级运行策略上，提供了宝贵的工程实践案例。 值不值得投入：值得持续关注和学习。通过参加行业会议、阅读技术报告，甚至与相关供应商交流，来获取线控转向的最新进展和挑战。这对我们设计下一代EPS系统，特别是为L3/L4自动驾驶提供支持，至关重要。
-   https://techcrunch.com/2026/10/30/waymos-next-robotaxi-will-be-a-toyota-bz4x-destined-for-japan-and-the-uk/
-
-4. Infineon introduces a high-voltage BMS reference design built around the AURIX TC4x（来源：Charged EVs）
-   应用分析：能不能用：直接参考和借鉴。 怎么用：AURIX TC4x是我们EPS控制器MCU选型的重要参考。BMS在TC4x上运行计算密集型模型，验证了其在实时控制和复杂算法执行上的能力。我们可以研究该参考设计在硬件架构（如多核异构）、软件架构（如AUTOSAR）、功能安全设计（如冗余核、锁步机制）、以及对复杂模型（如电机参数辨识、温漂补偿、FOC高级算法）的支持情况。特别是其在ISO 26262标准下的安全机制实现，对于我们EPS控制器达到ASIL-D等级有直接的指导意义。 值不值得投入：值得高度投入。英飞凌是重要的芯片供应商，其参考设计是快速验证和迭代我们EPS控制器软硬件方案的宝贵资源。应积极获取相关文档和开发套件，评估TC4x平台在满足未来EPS对算力、实时性和功能安全要求方面的潜力。
-   https://chargedevs.com/newswire/infineon-introduces-a-high-voltage-bms-reference-design-built-around-the-aurix-tc4x/
-
-5. A closer look at GaN switches: benefits, limitations and gate-drive challenges（来源：Charged EVs）
-   应用分析：能不能用：非常能用，是未来功率级设计的方向。 怎么用：EPS电机控制器的功率级是核心部件。目前大多使用硅基MOSFET或IGBT，但GaN有望大幅提升效率、降低发热，从而减小散热器体积和重量，实现更高的功率密度。我们需要深入研究GaN器件的栅极驱动电路设计、寄生参数抑制、热管理以及电磁兼容性（EMI/EMC）问题。特别是在高频开关下，如何抑制转矩脉动、降低噪声、振动与声振粗糙度（NVH），以及如何确保在汽车严苛环境下的可靠性，是我们需要攻克的工程难题。 值不值得投入：绝对值得投入。作为EPS研发工程师，我们必须紧跟功率器件前沿技术。应组织团队进行GaN器件的评估测试、开发专用栅极驱动方案，并在实验室台架上验证其在EPS电机驱动中的性能。长期来看，GaN是实现更高性能、更紧凑EPS系统的关键技术之一。
-   https://chargedevs.com/features/gan-power-switches-benefits-gate-drive-design-tradeoffs/
-
-6. SemiQ Launches 750 V and 1200 V Gen4 SiC MOSFETs（来源：Power Electronics News）
-   应用分析：能不能用：能用，与GaN一样，是功率级升级的重要选项。 怎么用：对于EPS，特别是R-EPS（齿条式电动助力转向）或未来线控转向中可能用到的大功率电机，SiC MOSFET能提供更高的效率和更小的体积。我们需要评估这些新型SiC器件在不同电压等级和电流下的性能，与GaN进行对比，选择最适合EPS电机功率级的方案。重点关注其在高温、高频工作下的可靠性、热管理、短路保护以及与FOC（矢量控制）策略的适配性。低导通电阻和开关损耗将直接带来电机驱动效率的提升，减少温升，改善NVH。 值不值得投入：值得投入。SiC和GaN是未来功率电子的两大支柱。应与功率器件供应商紧密合作，获取最新的器件样品和技术支持，进行性能测试和系统集成验证。这对于我们提升EPS产品的竞争力，满足电动汽车对高效、高功率密度、高可靠性电机驱动的需求至关重要。
-   https://www.powerelectronicsnews.com/semiq-launches-750-v-and-1200-v-gen4-sic-mosfets/
-
-7. STMicroelectronics Weighs Developing More Powerful MCUs, MPUs for Humanoid Robots（来源：EE Times）
-   应用分析：能不能用：直接借鉴。 怎么用：人形机器人关节控制对MCU的要求非常高，包括多轴协同控制、高速脉宽调制（PWM）生成、传感器数据融合、实时路径规划和力矩控制等。这些需求与线控转向中多电机协同、高精度力矩控制、复杂故障诊断的需求不谋而合。我们可以关注ST未来推出的针对机器人执行器的新一代MCU/MPU，研究其架构（如专用数字信号处理器（DSP）核、AI加速器）、实时操作系统支持、功能安全特性以及开发工具链。这有助于我们提前规划EPS未来控制器的硬件平台，并探索将机器人领域的高级控制算法（如模型预测控制（MPC）、鲁棒控制）迁移到EPS电机控制中，以解决转矩脉动、NVH、温漂等问题。 值不值得投入：值得高度投入。机器人执行器控制是EPS电机控制最直接的交叉点。持续跟踪ST等芯片厂商在机器人领域的布局，并积极参与相关技术交流，可以帮助我们快速将前沿研究转化为EPS的工程方案。
-   https://www.eetimes.com/stmicroelectronics-weighs-developing-more-powerful-mcus-mpus-for-humanoid-robots/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261031-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261031-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261031-pm.mp3" length="3459456" type="audio/mpeg"/>
-      <pubDate>Fri, 30 Oct 2026 16:02:04 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 智驾浪潮与机器人崛起：EPS工程师的今日早报</title>
       <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人三大热门领域，精选了七条重磅资讯。从AI核函数的优化，到Waymo与丰田联手打造的自动驾驶出租车，再到人形机器人融资动态和英飞凌在汽车电子领域的最新布局，每一条都与我们的工作息息相关。接下来，就让我们一起深入分析，看看这些技术浪潮将如何影响我们的EPS产品研发，以及我们应该如何抓住机遇，迎接挑战。
@@ -1013,6 +977,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261114-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261114-am.mp3" length="1126944" type="audio/mpeg"/>
       <pubDate>Fri, 13 Nov 2026 22:41:51 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. Zugwise: Domain-Aware Game Reconstruction for Digitizing Handwritten Chess Scoresheets（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.14544
+
+2. Cleaning an Agent's History Hurts When the World Still Holds the Error（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.14654
+
+3. Together Compiler: Continual Compilation for AI Inference（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.14681
+
+4. When Should Semantic Priors Enter Partially-Identified Causal Discovery?（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.14736
+
+5. SynthCorp: A Platform for Creating Benchmarks for Data Agents（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.14765
+
+6. Rational Use of Time for Social Coordination in Humans and AI（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.14766
+
+7. Leaderboard Hacking: Preference-Based Model Evaluations are Vulnerable to Manipulation（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.14769</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261115-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261115-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261115-pm.mp3" length="929376" type="audio/mpeg"/>
+      <pubDate>Sat, 14 Nov 2026 16:35:39 +0000</pubDate>
     </item>
   </channel>
 </rss>
