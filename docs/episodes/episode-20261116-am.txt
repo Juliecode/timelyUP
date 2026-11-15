@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。Boeing-Lockheed rocket fails mid-flight, destroys payload of Amazon satellites。
+Article URL: https://www.reuters.com/business/aerospace-defense/us-rocket-fails-after-launch-payload-amazon-internet-satellites-destroyed-2026-11-15/ Comments URL: https://news.ycombinator.com/item?id。
+第2条，来自Hacker News。Vulcan rocket fails during return-to-flight launch, 40 Amazon satellites lost。
+Article URL: https://www.space.com/space-exploration/launches-spacecraft/ula-vulcan-centaur-return-to-flight-amazon-leo-internet-satellite-launch Comments URL: https://news.ycombinator.com/item?id=505。
+第3条，来自Hacker News。WebGL Flight Simulator with seed generated terrain。
+Article URL: https://baron.by.dai.studio/ Comments URL: https://news.ycombinator.com/item?id=50510296 Points: 26 # Comments: 7。
+第4条，来自Hacker News。A short explainer on how El Niño works [video]。
+Article URL: https://www.youtube.com/watch?v=7_JF3etiAv8 Comments URL: https://news.ycombinator.com/item?id=50509308 Points: 123 # Comments: 39。
+第5条，来自Hacker News。'Birdbrain' Is a Misnomer. Crows Make Decisions Faster Than We Can。
+Article URL: https://www.nytimes.com/2026/11/15/science/birdbrain-crows-birds-research-decision.html Comments URL: https://news.ycombinator.com/item?id=50509023 Points: 111 # Comments: 85。
+第6条，来自Hacker News。Emacs Is My Browser。
+Article URL: https://joshblais.com/blog/emacs-as-my-browser/ Comments URL: https://news.ycombinator.com/item?id=50507553 Points: 157 # Comments: 80。
+第7条，来自Hacker News。All AI-generated code should be Open Source。
+Article URL: https://jakub.jankiewicz.org/blog/ai-code-open-source/ Comments URL: https://news.ycombinator.com/item?id=50507303 Points: 1002 # Comments: 555。
+以上就是今天的内容，我们明天见。
