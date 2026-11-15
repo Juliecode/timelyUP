@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。Emacs Is My Browser。
+Article URL: https://joshblais.com/blog/emacs-as-my-browser/ Comments URL: https://news.ycombinator.com/item?id=50507553 Points: 10 # Comments: 1。
+第2条，来自Hacker News。All AI-generated code should be Open Source。
+Article URL: https://jakub.jankiewicz.org/blog/ai-code-open-source/ Comments URL: https://news.ycombinator.com/item?id=50507303 Points: 188 # Comments: 128。
+第3条，来自Hacker News。Understanding Positional Embeddings in Modern LLMs。
+Article URL: https://magazine.sebastianraschka.com/p/understanding-positional-embeddings Comments URL: https://news.ycombinator.com/item?id=50506376 Points: 86 # Comments: 1。
+第4条，来自Hacker News。Disk encryption on NetBSD – achieving secrecy。
+Article URL: https://netbsd.org/~nia/disk-encrypt/ Comments URL: https://news.ycombinator.com/item?id=50504277 Points: 75 # Comments: 15。
+第5条，来自Hacker News。Court denies motion to dismiss DRAM price fixing case。
+Article URL: https://litnews.ai/articles/garciaguirre-samsung-sk-hynix-micron-dram-conspiracy-suit-survives-dismissal Comments URL: https://news.ycombinator.com/item?id=50502988 Points: 360 # Comments。
+第6条，来自Hacker News。How did Woz write the Apple 1 BASIC before building the computer?。
+Article URL: https://retrocomputing.stackexchange.com/questions/17957 Comments URL: https://news.ycombinator.com/item?id=50501594 Points: 271 # Comments: 142。
+第7条，来自Hacker News。Lovable apps expose passport details and more than 200K private messages。
+Article URL: https://www.crissyfield.de/research/lovable-en/ Comments URL: https://news.ycombinator.com/item?id=50499017 Points: 937 # Comments: 358。
+以上就是今天的内容，我们明天见。
