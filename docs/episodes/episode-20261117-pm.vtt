@@ -1,0 +1,117 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:02.828
+欢迎收听今天的科技研发早报。
+
+2
+00:00:02.828 --> 00:00:06.053
+以下是今天精选的几条前沿进展。
+
+3
+00:00:06.053 --> 00:00:09.236
+第1条，来自arXiv cs.AI。
+
+4
+00:00:09.236 --> 00:00:11.308
+When Should LLM Agents Forget?
+
+5
+00:00:11.308 --> 00:00:14.444
+Memory Filtering Under Query-Critical Resolver Errors。
+
+6
+00:00:14.444 --> 00:00:23.623
+arXiv:2611.17338v1 Announce Type: new Abstract: LLM memory systems often delete facts classified as stale.
+
+7
+00:00:23.623 --> 00:00:28.519
+We show that this hard-filtering step can reduce downstream accuracy when resolver errors del。
+
+8
+00:00:28.519 --> 00:00:31.829
+第2条，来自arXiv cs.AI。
+
+9
+00:00:31.829 --> 00:00:33.194
+Does the Ranking Hold?
+
+10
+00:00:33.194 --> 00:00:38.866
+A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs。
+
+11
+00:00:38.866 --> 00:00:52.982
+arXiv:2611.17339v1 Announce Type: new Abstract: Hallucination detection for large language models is dominated by methods evaluated on 7B-70B research models with abundant sampling budgets and exact-m。
+
+12
+00:00:52.982 --> 00:00:56.338
+第3条，来自arXiv cs.AI。
+
+13
+00:00:56.338 --> 00:01:00.586
+LoRAWeaver: Directional Adapter Routing in LoRA Representation Space。
+
+14
+00:01:00.586 --> 00:01:09.220
+arXiv:2611.17340v1 Announce Type: new Abstract: Large language models are expensive to update through full retraining.
+
+15
+00:01:09.220 --> 00:01:13.804
+Parameter-efficient fine-tuning reduces the cost of adaptation, but repeated adap。
+
+16
+00:01:13.804 --> 00:01:17.172
+第4条，来自arXiv cs.AI。
+
+17
+00:01:17.172 --> 00:01:22.091
+Tabular Population Priors as Structured Retrieval for EHR Medication Set Prediction。
+
+18
+00:01:22.091 --> 00:01:35.131
+arXiv:2611.17341v1 Announce Type: new Abstract: Medication prediction from electronic health records is a fixed vocabulary structured prediction problem, yet recent clinical RAG systems often treat it。
+
+19
+00:01:35.131 --> 00:01:38.429
+第5条，来自arXiv cs.AI。
+
+20
+00:01:38.429 --> 00:01:41.300
+An Operationalization of Opaque Serial Depth。
+
+21
+00:01:41.300 --> 00:01:54.054
+arXiv:2611.17495v1 Announce Type: new Abstract: Chain-of-thought (CoT) is currently a valuable tool for overseeing AI models, but some architectural shifts could significantly reduce CoT monitorabilit。
+
+22
+00:01:54.054 --> 00:01:57.318
+第6条，来自arXiv cs.AI。
+
+23
+00:01:57.318 --> 00:02:01.334
+Advancing Quantization for R&R Models with Microscaling Formats。
+
+24
+00:02:01.468 --> 00:02:15.750
+arXiv:2611.17501v1 Announce Type: new Abstract: Recommendation and Ranking (R&amp;R) models, particularly in digital advertising, require massive inference throughput but exhibit extreme sensitivity t。
+
+25
+00:02:15.750 --> 00:02:19.118
+第7条，来自arXiv cs.AI。
+
+26
+00:02:19.118 --> 00:02:25.774
+A Push Down the Mountain: Framing Effects and Internal State Interventions on Collusive Behavior in a Long-Horizon LLM Agent。
+
+27
+00:02:25.774 --> 00:02:35.091
+arXiv:2611.17515v1 Announce Type: new Abstract: Can sustained gain-loss (valence) framing sway an LLM agent toward market manipulation?
+
+28
+00:02:35.091 --> 00:02:38.910
+We place Gemma 3 12B into the seat of a defendant in the London 。
+
+29
+00:02:38.910 --> 00:02:41.723
+以上就是今天的内容，我们明天见。

@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 15 Nov 2026 22:41:18 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 18:50:21 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI助力代码安全，机器人连接器揭示EPS硬件新挑战，智能电动车市场持续升温</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的中文科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人技术，为您精选了七条重磅资讯。从AI如何助力代码安全，到机器人硬件挑战对我们汽车EPS系统的启示，再到智能电动车市场的最新动态，今天的内容干货满满，希望能为您一天的研发工作带来新的灵感。
-
-1. Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard（来源：Hacker News）
-   应用分析：这种多模型协作的AI能力，可以尝试应用于EPS控制软件的自动代码生成和优化。例如，针对FOC矢量控制或无传感器控制策略，AI可以根据需求自动生成不同场景下的控制逻辑代码，或者辅助进行模型预测控制（MPC）的参数寻优和代码实现。在功能安全方面，AI团队甚至可以协助生成符合ISO 26262标准的冗余代码或测试用例，提高开发效率和代码质量。初期值得投入在辅助工具链的集成上，例如将这类AI模型作为MATLAB/Simulink代码生成后的自动审查工具，或者在HIL/SIL测试中自动生成边界条件和异常测试用例。长期来看，投资研究如何将AI团队用于线控转向（Steer-by-Wire）这种复杂、多冗余系统的高层架构设计和底层控制逻辑协同，具有战略意义。
-   https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve
-
-2. AI agent swarms in Minecraft fail to build civilization, drown in bureaucracy（来源：Hacker News）
-   应用分析：这项研究提醒我们，在设计线控转向（Steer-by-Wire）等分布式、多冗余的EPS系统时，要特别注意智能体（ECU、传感器、执行器）之间的通信协议、决策优先级和故障处理机制，避免出现“内耗”或决策停滞。例如，在冗余控制器切换、故障降级模式选择时，如何确保快速、一致的决策，避免多个智能体因信息不对称或规则冲突而陷入“死锁”状态。虽然不是直接的技术应用，但它提供了宝贵的系统设计和鲁棒性考量。我们应该将这类研究结果纳入到系统架构设计和功能安全分析的风险评估中，尤其是在多核MCU或多ECU协同控制场景下，预判并规避潜在的协调失败风险，所以值得投入关注和研究。
-   https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-agent-swarms-unleashed-in-minecraft-to-build-a-thriving-civilization-50-agent-teams-fail-after-falling-into-paralyzing-bureaucracy
-
-3. Why physical AI is the next lucrative frontier（来源：The Robot Report）
-   应用分析：“物理AI”的理念可以直接指导EPS的研发方向。例如，将强化学习（RL）应用于助力策略的自动调校，让AI在模拟环境中学习并优化手感，减少人工标定时间；利用神经网络观测器提升无传感器控制的精度和鲁棒性，特别是在电机参数温漂或负载变化时；或者利用AI进行预测性维护，通过分析电机电流、位置、温度等数据，预测潜在故障并提前预警。这正是我们团队目前最想解决的问题之一：将前沿研究（机器人执行器控制、AI控制）快速转成可落地的EPS工程方案。所以，非常值得投入。我们需要积极探索AI在电机控制策略优化、无传感器方案、自动标定和故障诊断中的应用，将其从理论概念推进到MIL/SIL/HIL测试，最终到实车验证。
-   https://www.therobotreport.com/why-physical-ai-next-lucrative-frontier/
-
-4. Solving the Interconnect Challenge in Modern Robotics: How 3M Is Engineering for Motion, Density, and Uptime（来源：The Robot Report）
-   应用分析：这篇报道提醒我们，在EPS控制器软硬件设计中，不能忽视连接器选型和布局的重要性。对于DP-EPS或R-EPS这类功率更大的系统，以及未来的线控转向系统，我们需要关注高电流密度、低接触电阻、高插拔次数和抗振动性能的连接器。3M的技术方向，如针对运动的柔性连接、高密度封装、以及提升正常运行时间的设计，可以直接作为我们选型和与供应商沟通的技术参考。连接器是硬件可靠性的基石，所以值得关注和投入。我们应在EPS系统架构设计阶段就充分考虑连接器的性能指标，并与供应商紧密合作，甚至考虑定制化开发。特别是在线控转向这种对安全性要求极高的场景，连接器的故障可能导致系统失效，因此对其设计和验证的投入是必需的。
-   https://www.therobotreport.com/solving-the-interconnect-challenge-in-modern-robotics-how-3m-is-engineering-for-motion-density-and-uptime/
-
-5. 28 Zero-Day Findings in Less Than Two Days: What AI-Speed Discovery Means for Robotics（来源：The Robot Report）
-   应用分析：我们可以将类似的AI辅助分析工具引入到EPS控制器的软件开发和测试流程中。例如，在代码静态分析、单元测试、集成测试阶段，利用AI对代码库进行安全审计，快速识别潜在的零日漏洞或功能安全隐患。这对于确保FOC控制算法、无传感器控制模块以及故障诊断与降级策略的鲁棒性和安全性至关重要。功能安全和信息安全是EPS产品的生命线，借助AI工具可以大大提升发现潜在风险的速度和覆盖率，从而降低开发成本和后期召回风险。所以，非常值得投入。初期可以采购或集成现有的AI安全分析工具，长期则可以研究如何定制化AI模型，使其更专注于嵌入式C代码和AUTOSAR架构下的安全漏洞检测。
-   https://www.therobotreport.com/28-zero-day-findings-in-less-than-two-days-what-ai-speed-discovery-means-for-robotics/
-
-6. Leaking Secrets from Air-Gap Computers by Spelling Radio Signals from RAM (2024)（来源：Hacker News）
-   应用分析：这项研究对EPS控制器的硬件设计和EMC测试提出了更高的要求。我们不仅要关注传统的传导和辐射骚扰，还要思考是否有微弱的电磁信号可能携带敏感信息。例如，在MCU、内存（RAM）和功率级设计时，需要考虑更严格的屏蔽和去耦措施，并加强对关键信号线的隔离。在线控转向这种高安全性要求的系统中，防止任何形式的敏感数据泄露（如转向指令、车辆状态等）都至关重要。虽然这种攻击手段可能较为复杂，但对于安全关键的EPS和线控转向系统，任何潜在的漏洞都值得研究和防范。所以，值得关注和在EMC/硬件安全设计中进行评估。可以在设计评审和EMC测试规范中增加对这类侧信道风险的评估项，并与芯片供应商和硬件安全专家探讨防护方案。
-   https://arxiv.org/abs/2409.02292
-
-7. Xpeng monthly deliveries top 50,000 for first time in October（来源：CnEVPost）
-   应用分析：这一市场信号强化了我们对EPS技术持续投入的必要性。我们需要加快研发支持L3+级别自动驾驶的EPS系统，例如提升电机控制的精度和响应速度，以适应更精细的转向控制需求；开发更鲁棒的助力策略，以应对不同驾驶模式和路况下的智能驾驶场景。同时，也要积极探索线控转向的架构设计和关键技术，为小鹏这类车企提供更先进的解决方案。市场需求是研发投入的根本动力，小鹏的成绩证明了智能化方向的正确性，也意味着我们EPS产品需要不断创新，以满足主机厂日益增长的需求。所以，这项投入非常值得，应将资源倾斜到与智能驾驶、线控转向高度相关的EPS前沿技术研发上，确保在市场竞争中保持领先。
-   https://cnevpost.com/2026/11/01/xpeng-deliveries-oct-2026/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261102-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261102-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261102-pm.mp3" length="3217824" type="audio/mpeg"/>
-      <pubDate>Sun, 01 Nov 2026 16:10:39 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI多智能体、自动驾驶新浪潮与机器人安全：研发工程师早报速递</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的老朋友，XXX。今天我们将聚焦AI前沿、汽车智能化和机器人技术，一起来看看有哪些重磅资讯值得我们关注和思考。从AI多智能体协作的突破，到自动驾驶的加速发展，再到机器人领域的安全与硬件挑战，每一条都可能为我们的研发工作带来新的启发。话不多说，我们马上开始！
@@ -957,6 +921,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261116-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261116-am.mp3" length="1263168" type="audio/mpeg"/>
       <pubDate>Sun, 15 Nov 2026 22:41:18 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.17338
+
+2. Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.17339
+
+3. LoRAWeaver: Directional Adapter Routing in LoRA Representation Space（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.17340
+
+4. Tabular Population Priors as Structured Retrieval for EHR Medication Set Prediction（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.17341
+
+5. An Operationalization of Opaque Serial Depth（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.17495
+
+6. Advancing Quantization for R&amp;R Models with Microscaling Formats（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.17501
+
+7. A Push Down the Mountain: Framing Effects and Internal State Interventions on Collusive Behavior in a Long-Horizon LLM Agent（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.17515</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261117-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261117-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261117-pm.mp3" length="970560" type="audio/mpeg"/>
+      <pubDate>Mon, 16 Nov 2026 18:50:21 +0000</pubDate>
     </item>
   </channel>
 </rss>
