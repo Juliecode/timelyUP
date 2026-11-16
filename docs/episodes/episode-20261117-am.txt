@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自arXiv cs.AI。When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors。
+arXiv:2611.17338v1 Announce Type: new Abstract: LLM memory systems often delete facts classified as stale. We show that this hard-filtering step can reduce downstream accuracy when resolver errors del。
+第2条，来自arXiv cs.AI。Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs。
+arXiv:2611.17339v1 Announce Type: new Abstract: Hallucination detection for large language models is dominated by methods evaluated on 7B-70B research models with abundant sampling budgets and exact-m。
+第3条，来自arXiv cs.AI。LoRAWeaver: Directional Adapter Routing in LoRA Representation Space。
+arXiv:2611.17340v1 Announce Type: new Abstract: Large language models are expensive to update through full retraining. Parameter-efficient fine-tuning reduces the cost of adaptation, but repeated adap。
+第4条，来自arXiv cs.AI。Tabular Population Priors as Structured Retrieval for EHR Medication Set Prediction。
+arXiv:2611.17341v1 Announce Type: new Abstract: Medication prediction from electronic health records is a fixed vocabulary structured prediction problem, yet recent clinical RAG systems often treat it。
+第5条，来自arXiv cs.AI。An Operationalization of Opaque Serial Depth。
+arXiv:2611.17495v1 Announce Type: new Abstract: Chain-of-thought (CoT) is currently a valuable tool for overseeing AI models, but some architectural shifts could significantly reduce CoT monitorabilit。
+第6条，来自arXiv cs.AI。Advancing Quantization for R&R Models with Microscaling Formats。
+arXiv:2611.17501v1 Announce Type: new Abstract: Recommendation and Ranking (R&amp;R) models, particularly in digital advertising, require massive inference throughput but exhibit extreme sensitivity t。
+第7条，来自arXiv cs.AI。A Push Down the Mountain: Framing Effects and Internal State Interventions on Collusive Behavior in a Long-Horizon LLM Agent。
+arXiv:2611.17515v1 Announce Type: new Abstract: Can sustained gain-loss (valence) framing sway an LLM agent toward market manipulation? We place Gemma 3 12B into the seat of a defendant in the London 。
+以上就是今天的内容，我们明天见。
