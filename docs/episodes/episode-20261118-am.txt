@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。Human.md。
+Article URL: https://www.human-md.ai/ Comments URL: https://news.ycombinator.com/item?id=50537962 Points: 43 # Comments: 32。
+第2条，来自Hacker News。Launch HN: StarSling (YC P25) – Self-improving CI for agent-volume repos。
+We’re Yonas and Daniel and we’re building StarSling ( https://starsling.dev ), fast GitHub Actions runners with AI agents that ship PRs to continuously improve your tests and workflows. Every CI job g。
+第3条，来自Hacker News。Advancing computer-use agents for healthcare teams。
+Article URL: https://openai.com/index/advancing-computer-use-for-healthcare-teams/ Comments URL: https://news.ycombinator.com/item?id=50535898 Points: 27 # Comments: 19。
+第4条，来自Hacker News。MAI Code 2 and Code 2 Flash。
+Article URL: https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/ Comments URL: https://news.ycombinator.com/item?id=50535885 Points: 224 # Comments: 106。
+第5条，来自Hacker News。Not Everything Needs an LLM。
+Article URL: https://newsletter.posthog.com/p/decision-models Comments URL: https://news.ycombinator.com/item?id=50535740 Points: 42 # Comments: 7。
+第6条，来自Hacker News。Apple Services Down。
+Article URL: https://developer.apple.com/system-status/ Comments URL: https://news.ycombinator.com/item?id=50535238 Points: 558 # Comments: 306。
+第7条，来自Hacker News。GPT‑6.2 Astra and Sol。
+Article URL: https://openai.com/index/introducing-gpt-6-2-astra-sol/ Comments URL: https://news.ycombinator.com/item?id=50535230 Points: 942 # Comments: 588。
+以上就是今天的内容，我们明天见。
