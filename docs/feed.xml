@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 16 Nov 2026 22:41:08 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 17:49:21 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI与智能汽车：从仿真到现实，安全与效率并重</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选出七条重磅资讯。今天的亮点包括AI模型在仿真到现实适应中的挑战、自适应学习网络的突破、自动驾驶AI的可解释性、电动汽车800伏架构的功率器件进展、AI控制的安全过滤机制，以及嵌入式系统中的内存安全和边缘AI部署策略。这些都与我们的EPS系统研发息息相关，希望能给大家带来启发。
-
-1. Frozen in Time: How a Physics Foundation Model Forgets Under Sim-to-Real Adaptation（来源：arXiv cs.LG）
-   应用分析：这项研究结果是重要的警示。在将AI控制策略（例如强化学习辅助的助力曲线、神经网络状态观测器）从MIL/SIL/HIL仿真环境部署到台架或整车时，我们必须高度关注“仿真到现实”适应过程中的模型性能退化。这意味着需要投入更多资源开发防止灾难性遗忘的技术，例如增量学习、持续学习策略，或者设计对新数据适应性更强的元学习（Meta-Learning）基础模型。考虑到功能安全ISO 26262对系统鲁棒性和预测性有极高要求，任何性能的意外大幅下降都是致命的。因此，投入研究和验证抗遗忘机制，是确保AI控制方案在EPS中安全落地的关键，绝对值得投入。
-   https://arxiv.org/abs/2610.40857
-
-2. AutoHebb: Self-Modifying Neural Networks that Zero-Shot Infer and Continually Learn（来源：arXiv cs.LG）
-   应用分析：这项研究为EPS未来自适应控制策略提供了理论方向，但距离工程落地还有距离。我们可以探索将AutoHebb这类自修改神经网络的理念，集成到EPS的助力曲线自适应调整、路感还原或故障诊断模型中。例如，利用其零样本推理能力，让EPS在面对新的轮胎类型或悬架配置时，能初步提供合理的手感，再通过持续学习在实际驾驶中不断优化。在无传感器控制中，也可考虑利用其持续学习能力来动态调整电机参数观测器，以应对温漂和老化。这项技术值得我们长期关注和前期探索性投入，如果能实现高效的板载持续学习，将大幅简化标定工作，提升用户体验和系统可靠性，是线控转向和L3+自动驾驶对EPS要求的重要技术储备。
-   https://arxiv.org/abs/2610.40757
-
-3. Mechanistic Interpretability for End-to-End Self-Driving（来源：arXiv cs.RO）
-   应用分析：这项技术可用于分析EPS控制器中潜在的AI辅助决策模块，例如自适应助力策略或智能故障诊断，以提高其透明度和可信度。在开发基于神经网络的助力策略或故障诊断模型时，我们可以借鉴这种机制可解释性方法。例如，通过稀疏自编码器分析神经网络在不同驾驶模式下，对转向角、车速、路面摩擦系数等输入特征的响应权重，从而验证模型行为是否符合预期，并找出潜在的非预期行为。这对于满足ISO 26262对“AI透明度”和“可验证性”的要求至关重要，尤其是在线控转向这种完全由电信号控制的系统中。因此，非常值得投入，因为功能安全是EPS和线控转向的生命线。
-   https://arxiv.org/abs/2610.41185
-
-4. Wolfspeed to supply silicon carbide devices for BorgWarner’s 800 V inverter platform（来源：Charged EVs）
-   应用分析：这是业界明确的趋势，我们需要积极跟进和应用。EPS系统作为电动汽车的重要执行器，也应考虑向800伏架构演进。SiC器件在EPS功率级中的应用，可以减小控制器体积、降低损耗、提高效率。这对于提升EPS的转矩密度、降低NVH（通过更快的开关频率）以及改善系统整体热管理都非常有益。我们需要评估SiC MOSFET或IGBT在EPS电机控制中的性能优势和成本效益，并着手进行相关功率级硬件设计和控制策略的适配。这是电动汽车和线控转向技术发展的大方向，能够提升EPS产品的竞争力，必须投入。
-   https://chargedevs.com/newswire/wolfspeed-to-supply-silicon-carbide-devices-for-borgwarners-800-v-inverter-platform/
-
-5. Confidence-Modulated Safety Filtering for End-to-End Policies（来源：arXiv cs.RO）
-   应用分析：这种安全过滤机制非常适合EPS和线控转向系统，尤其是当引入AI控制模块时。我们可以将此概念应用于EPS的L3+自动驾驶接管、故障降级或助力曲线自适应等场景。例如，当基于AI的助力策略对当前路况（如突然湿滑）的置信度较低时，安全滤波器可以介入，切换到更保守的预设助力曲线或限制转向输入，确保车辆安全。这对于线控转向的冗余与功能安全设计，以及避免“AI黑箱”带来的安全风险，提供了实用的工程方案。这项技术极其值得投入，因为它是AI在安全关键系统落地的关键技术之一，直接关系到产品的功能安全和市场接受度。
-   https://arxiv.org/abs/2610.40922
-
-6. Veloxity: Towards Memory-Safe UAV Embedded Firmware using the Rust Programming Language（来源：arXiv cs.RO）
-   应用分析：Rust语言的内存安全特性，对于EPS控制器软件开发具有重要借鉴意义，尤其是在功能安全等级要求高的模块。我们可以考虑在EPS控制器的新模块开发中，或在对现有C/C++代码进行重构时，引入Rust语言进行试点。例如，在通信协议栈、故障诊断逻辑或部分非实时但对内存安全要求高的模块中尝试使用Rust。这有助于减少因内存错误导致的系统崩溃或安全漏洞，提升软件的可靠性和可维护性，从而更好地满足ISO 26262的要求。虽然短期内替换现有C/C++代码库成本高昂，但Rust在安全性和可靠性方面的优势，对于未来线控转向等更复杂的安全关键系统来说，是重要的技术储备，值得中长期投入。可以从非核心、但对稳定性有要求的模块开始小范围尝试。
-   https://arxiv.org/abs/2610.41053
-
-7. TinyAstral: Transferring Self-Evolving Harnesses to Tiny Generalist Manipulation Agents（来源：arXiv cs.RO）
-   应用分析：这项技术对于在EPS的嵌入式MCU上运行复杂的AI模型（如用于自动标定、预测性维护或高级电机控制）具有直接应用价值。我们可以借鉴TinyAstral的蒸馏方法，将离线训练的复杂AI模型（例如，在PC上训练的用于预测电机参数漂移的神经网络）压缩并部署到EPS的MCU上。特别是“自我改进的配套工具集”概念，可以指导我们设计更智能、更鲁棒的边缘AI推理框架，包括故障恢复和结果校正机制。这有助于在保持高性能的同时，降低对MCU算力、存储和功耗的要求，从而提升EPS系统的智能化水平和成本竞争力。因此，值得投入，在边缘侧部署高效、鲁棒的AI是EPS系统未来发展的重要方向。
-   https://arxiv.org/abs/2610.41216</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261103-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261103-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261103-pm.mp3" length="3961296" type="audio/mpeg"/>
-      <pubDate>Mon, 02 Nov 2026 18:48:07 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI与智能汽车：从仿真到实车的安全落地与电机控制前沿</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人技术这三大热门领域，精选七条重磅资讯，一起探讨它们如何影响我们的研发工作，特别是对于电动助力转向EPS系统的演进，又有哪些值得我们关注和投入的方向。准备好了吗？让我们立即开始！
@@ -943,6 +907,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261117-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261117-am.mp3" length="970560" type="audio/mpeg"/>
       <pubDate>Mon, 16 Nov 2026 22:41:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. Optimizely hack infected CNN, Fox News, BBC, Salesforce sites with malware（来源：Hacker News）
+   https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/
+
+2. Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium（来源：Hacker News）
+   https://github.com/RunanywhereAI/trnrt
+
+3. What is the best harness for each model?（来源：Hacker News）
+   https://runta.com/blog/introducing-frontierharness-eval-v1-1/
+
+4. New Evidence Shows School Phone Bans Are Gradually Improving Test Scores（来源：Hacker News）
+   https://www.nytimes.com/2026/11/17/upshot/school-phone-bans-study-scores.html
+
+5. How the Claude Code team thinks about verification（来源：Hacker News）
+   https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/
+
+6. Chemistry is Actually Geometry（来源：Hacker News）
+   https://chillphysicsenjoyer.substack.com/p/chemistry-is-actually-geometry
+
+7. AI Is Giving Optical Computing Another Shot（来源：IEEE Spectrum）
+   https://spectrum.ieee.org/optical-computing-ai</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261118-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261118-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261118-pm.mp3" length="1174896" type="audio/mpeg"/>
+      <pubDate>Tue, 17 Nov 2026 17:49:21 +0000</pubDate>
     </item>
   </channel>
 </rss>

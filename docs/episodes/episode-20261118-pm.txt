@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。Optimizely hack infected CNN, Fox News, BBC, Salesforce sites with malware。
+Article URL: https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/ Comments URL: https://news.ycombinator.com/item?id=505。
+第2条，来自Hacker News。Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium。
+Hi HN, Sanchit here from RunAnywhere (YC W26). We just open-sourced TrnRT: Trainium RunTime, our inference engine for AWS Trainium. We started 3 weeks back, and currently we’re able to serve and run G。
+第3条，来自Hacker News。What is the best harness for each model?。
+Article URL: https://runta.com/blog/introducing-frontierharness-eval-v1-1/ Comments URL: https://news.ycombinator.com/item?id=50532191 Points: 158 # Comments: 68。
+第4条，来自Hacker News。New Evidence Shows School Phone Bans Are Gradually Improving Test Scores。
+Article URL: https://www.nytimes.com/2026/11/17/upshot/school-phone-bans-study-scores.html Comments URL: https://news.ycombinator.com/item?id=50530163 Points: 814 # Comments: 427。
+第5条，来自Hacker News。How the Claude Code team thinks about verification。
+Article URL: https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/ Comments URL: https://news.ycombinator.com/item?id=50529612 Points: 164 # Comments: 149。
+第6条，来自Hacker News。Chemistry is Actually Geometry。
+Article URL: https://chillphysicsenjoyer.substack.com/p/chemistry-is-actually-geometry Comments URL: https://news.ycombinator.com/item?id=50522643 Points: 310 # Comments: 130。
+第7条，来自IEEE Spectrum。AI Is Giving Optical Computing Another Shot。
+The idea of computing with light has been around for over 70 years, but until recently it’s remained largely in the realm of research. Over the past few years, though, optical computing has emerged as。
+以上就是今天的内容，我们明天见。

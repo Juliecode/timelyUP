@@ -1,0 +1,109 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:02.828
+欢迎收听今天的科技研发早报。
+
+2
+00:00:02.828 --> 00:00:06.053
+以下是今天精选的几条前沿进展。
+
+3
+00:00:06.053 --> 00:00:08.322
+第1条，来自Hacker News。
+
+4
+00:00:08.322 --> 00:00:14.005
+Optimizely hack infected CNN, Fox News, BBC, Salesforce sites with malware。
+
+5
+00:00:14.005 --> 00:00:40.956
+Article URL: https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/ Comments URL: https://news.ycombinator.com/item?id=505。
+
+6
+00:00:40.956 --> 00:00:43.225
+第2条，来自Hacker News。
+
+7
+00:00:43.225 --> 00:00:48.711
+Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium。
+
+8
+00:00:48.711 --> 00:00:52.889
+Hi HN, Sanchit here from RunAnywhere (YC W26).
+
+9
+00:00:52.889 --> 00:00:58.700
+We just open-sourced TrnRT: Trainium RunTime, our inference engine for AWS Trainium.
+
+10
+00:00:58.700 --> 00:01:02.635
+We started 3 weeks back, and currently we’re able to serve and run G。
+
+11
+00:01:02.635 --> 00:01:05.019
+第3条，来自Hacker News。
+
+12
+00:01:05.019 --> 00:01:07.345
+What is the best harness for each model?
+
+13
+00:01:07.345 --> 00:01:28.985
+Article URL: https://runta.com/blog/introducing-frontierharness-eval-v1-1/ Comments URL: https://news.ycombinator.com/item?id=50532191 Points: 158 # Comments: 68。
+
+14
+00:01:28.985 --> 00:01:31.392
+第4条，来自Hacker News。
+
+15
+00:01:31.392 --> 00:01:35.362
+New Evidence Shows School Phone Bans Are Gradually Improving Test Scores。
+
+16
+00:01:35.362 --> 00:02:01.168
+Article URL: https://www.nytimes.com/2026/11/17/upshot/school-phone-bans-study-scores.html Comments URL: https://news.ycombinator.com/item?id=50530163 Points: 814 # Comments: 427。
+
+17
+00:02:01.168 --> 00:02:03.518
+第5条，来自Hacker News。
+
+18
+00:02:03.518 --> 00:02:06.307
+How the Claude Code team thinks about verification。
+
+19
+00:02:06.307 --> 00:02:29.972
+Article URL: https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/ Comments URL: https://news.ycombinator.com/item?id=50529612 Points: 164 # Comments: 149。
+
+20
+00:02:29.972 --> 00:02:32.287
+第6条，来自Hacker News。
+
+21
+00:02:32.287 --> 00:02:34.578
+Chemistry is Actually Geometry。
+
+22
+00:02:34.578 --> 00:02:55.836
+Article URL: https://chillphysicsenjoyer.substack.com/p/chemistry-is-actually-geometry Comments URL: https://news.ycombinator.com/item?id=50522643 Points: 310 # Comments: 130。
+
+23
+00:02:55.836 --> 00:02:58.799
+第7条，来自IEEE Spectrum。
+
+24
+00:02:58.799 --> 00:03:01.831
+AI Is Giving Optical Computing Another Shot。
+
+25
+00:03:01.948 --> 00:03:08.750
+The idea of computing with light has been around for over 70 years, but until recently it’s remained largely in the realm of research.
+
+26
+00:03:08.750 --> 00:03:12.948
+Over the past few years, though, optical computing has emerged as。
+
+27
+00:03:12.948 --> 00:03:15.760
+以上就是今天的内容，我们明天见。
