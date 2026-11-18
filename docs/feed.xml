@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 17 Nov 2026 22:41:11 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 17:29:26 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI赋能汽车与机器人：从实时控制到制造质检的深度融合</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选了七条重磅资讯。从AI如何优化实时控制系统，到制造业的智能质检，再到电动汽车核心部件的功率电子新趋势，以及机器人产业的最新动态，内容丰富，干货满满。希望今天的分享能为您的研发工作带来新的启发！
-
-1. ART of PIV: Agentic Real-Time Particle Image Velocimetry for Active Flow Control（来源：arXiv cs.AI）
-   应用分析：这项技术对我们EPS产品的研发极具参考价值，值得投入研究。我们可以借鉴AI Agent的思路，开发智能化的电机控制策略。比如，让AI Agent实时监测EPS系统的运行状态（转矩、转速、温度、电流等），并根据当前工况（如低温启动、高速转向、路面颠簸等），动态调整FOC矢量控制的PI参数、弱磁控制阈值，甚至自动优化转矩脉动抑制的补偿系数。这能大幅减少我们工程师在不同车型、不同路况下进行手动标定的工作量，并使EPS系统在各种复杂环境下都能提供最佳手感和助力性能，同时提升系统的鲁棒性，减少因环境变化导致的NVH问题。
-   https://arxiv.org/abs/2610.41304
-
-2. Beyond CLIP: Calibrated (Few-Shot) Defect Detection With System One Decision Models（来源：arXiv cs.AI）
-   应用分析：这项技术完全能用于我们的EPS产品制造流程，且非常值得投入。在EPS电机或控制器生产过程中，例如漆包线绝缘破损、焊点虚焊、壳体划痕、连接器插针弯曲等，这些缺陷往往发生频率低，难以收集大量样本。利用这种只需2个参考图像的少样本学习方法，我们可以快速开发并部署视觉检测系统，对关键部件进行实时在线检测，大幅提高缺陷检出率，减少人工目检的漏检风险，从而提升产品质量可靠性，降低废品率和售后成本。这比投入大量资源去收集缺陷样本要高效得多。
-   https://arxiv.org/abs/2610.41199
-
-3. AI to the Edge: Generative Intelligence for Robotics and Autonomous Systems（来源：EE Times）
-   应用分析：这项技术对我们EPS向更高级别智能化演进非常重要，值得长期投入和布局。我们可以在EPS域控制器或更高集成度的中央计算平台上探索边缘生成式AI的应用：1. **智能助力曲线生成**：根据驾驶员的驾驶风格、当前车速、路面摩擦系数等实时信息，生成个性化、更舒适或更运动的转向助力曲线，提升驾驶体验。2. **故障模式生成与降级控制**：利用生成式AI分析历史故障数据，预测潜在故障，并实时生成最优的故障降级运行策略，确保系统功能安全。3. **自动标定与优化**：生成式AI可以辅助甚至部分替代人工标定，根据海量驾驶数据自动优化助力策略参数，提高标定效率和精度。这对于线控转向系统的复杂控制和冗余设计尤其有价值。
-   https://www.eetimes.com/ai-to-the-edge-generative-intelligence-for-robotics-and-autonomous-systems/
-
-4. Today’s webinar: Driving the future of next-generation high-voltage power electronics（来源：Charged EVs）
-   应用分析：这是我们EPS产品必须持续关注和深入投入的方向。随着整车平台向800伏高压演进，我们的EPS系统也需要适应这一趋势。我们需要积极研究SiC/GaN MOSFET在EPS电机驱动器功率级中的应用，包括：1. **器件选型与驱动电路设计**：评估不同SiC/GaN器件的性能，设计高效可靠的门驱动电路。2. **热管理优化**：SiC/GaN器件虽然效率高，但高功率密度也带来了新的热管理挑战。3. **功能安全与故障诊断**：确保在高压环境下，功率级满足ISO 26262功能安全要求。通过采用这些先进器件，我们可以显著减小EPS控制器的体积和重量，提高系统效率，降低能耗，并为线控转向（Steer-by-Wire）等未来架构提供更强大的功率支持。
-   https://chargedevs.com/whitepapers/webinar-driving-the-future-of-next-generation-high-voltage-power-electronics/
-
-5. Macronix Builds Hardware Security into NOR Flash Ahead of EU Cyber Resilience Act（来源：EE Times）
-   应用分析：这项技术对我们EPS产品的安全性至关重要，必须高度关注并考虑引入。EPS作为汽车的关键安全部件，其控制器的固件和标定参数的完整性和防篡改能力是功能安全的核心要求之一。如果能采用旺宏这种内置硬件安全模块的NOR Flash，我们可以：1. **确保安全启动**：防止未经授权的固件加载。2. **保护固件完整性**：检测并阻止恶意篡改或降级攻击。3. **安全存储关键参数**：防止助力曲线、诊断阈值等重要参数被非法修改。这不仅能有效应对欧盟CRA等未来法规挑战，更能提升EPS系统在网联环境下的防攻击能力，满足ISO 26262对软件完整性和数据安全的严苛要求，从而增强产品的市场竞争力。
-   https://www.eetimes.com/macronix-builds-hardware-security-into-nor-flash-ahead-of-eu-cyber-resilience-act/
-
-6. Churchill Capital XI shareholders approve $2.5B Agility Robotics humanoid SPAC（来源：The Robot Report）
-   应用分析：Agility Robotics的发展值得我们持续关注。人形机器人的关节执行器，要求极高的转矩密度、响应速度、控制精度、NVH性能、以及成本和可靠性，这些都是我们EPS电机控制面临的共性挑战。我们可以从Agility Robotics的技术突破中汲取灵感：1. **电机选型**：了解他们如何平衡永磁同步电机（PMSM）的转矩密度、效率和成本。2. **控制策略**：研究他们如何实现高精度的FOC矢量控制、无传感器控制、转矩脉动抑制以及力矩/位置混合控制。3. **材料与结构**：学习他们如何通过轻量化设计和新材料提升执行器性能。这些经验可以直接迁移到我们EPS电机的选型、控制算法优化，以及未来线控转向执行器的设计中，特别是在提升EPS的手感和动态响应、降低系统抖动和噪声方面。
-   https://www.therobotreport.com/agility-robotics-shareholders-approve-25b-humanoid-spac/
-
-7. New ISO interoperability standard covers collaboration among mobile robots from multiple vendors（来源：The Robot Report）
-   应用分析：虽然EPS本身不是移动机器人，但作为未来自动驾驶汽车的关键执行部件，这项标准对我们有间接但重要的指导意义，需要我们长期关注。自动驾驶汽车本质上可以看作是一种高度复杂的移动机器人。理解并遵循这类互操作性标准，有助于我们确保EPS系统在未来与整车域控制器、其他传感器、执行器，甚至外部智能基础设施（如智能交通系统、充电桩、车队管理平台）进行无缝通信和协同工作。特别是对于线控转向系统，其与整车控制架构的深度融合，以及未来可能与外部机器人平台进行交互的需求，都要求我们提前规划其通信接口和数据协议，以符合行业互操作性趋势，确保系统兼容性和扩展性。
-   https://www.therobotreport.com/new-iso-interoperability-standard-covers-collaboration-among-mobile-robots-from-multiple-vendors/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261104-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261104-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261104-pm.mp3" length="3266352" type="audio/mpeg"/>
-      <pubDate>Tue, 03 Nov 2026 16:30:06 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI赋能智驾与机器人：EPS未来技术前瞻</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯。从AI如何助力工业缺陷检测和实时控制，到电动汽车高压电力电子的最新进展，再到人形机器人技术对我们转向系统的启发，内容丰富，干货满满，希望能为您的研发工作带来新的思考和灵感。
@@ -929,6 +893,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261118-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261118-am.mp3" length="1093248" type="audio/mpeg"/>
       <pubDate>Tue, 17 Nov 2026 22:41:11 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. NEBench R1: a Reasoning Benchmark for Evaluating Nuclear Domain Competence in Large Language Models（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21682
+
+2. Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21799
+
+3. How Much of SAR Vehicle Recognition Is the Vehicle? Background Shortcuts, Angle Gaps and Partial Libraries on MSTAR and ATRNet-STAR（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21827
+
+4. Auditors Struggle to Catch Sabotage In End-to-End Transcripts of AI Safety Research（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21832
+
+5. Language Models Can Rewrite Their Own Weights（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21885
+
+6. DNeo: Your Parallel Draft Model Needs Better Target Feature Encoding（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21925
+
+7. SLED: Sensor SLicing from Edge to Datacenter（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21937</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261119-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261119-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261119-pm.mp3" length="956304" type="audio/mpeg"/>
+      <pubDate>Wed, 18 Nov 2026 17:29:26 +0000</pubDate>
     </item>
   </channel>
 </rss>
