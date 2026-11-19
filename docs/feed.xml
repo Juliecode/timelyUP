@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 19 Nov 2026 17:35:08 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 22:40:51 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 研发早报：小鹏AI感知超越GPT，英飞凌GaN芯片与STM32嵌入式AI助力汽车智驾</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯，希望能为您的日常研发工作带来新的灵感和思考。话不多说，我们马上开始今天的播报。
-
-1. Xpeng unveils GroundingPI pre-trained model, outperforming GPT-6 Astra in perception benchmarks（来源：CnEVPost）
-   应用分析：能用，且高度相关。小鹏的成果表明，针对特定领域（如汽车感知）训练的AI模型，即使参数量相对较小（约40亿），也能在专业任务上超越通用大模型。作为EPS研发工程师，其强大的感知能力可以帮助线控转向系统更好地理解路面状况、车辆姿态和驾驶员意图，例如，通过识别路面摩擦系数、障碍物类型，为EPS提供更精准的输入，优化助力曲线和阻尼控制，实现更细腻、更安全的路感反馈和手感调校。同时，结合车辆传感器数据，可用于高鲁棒性故障诊断，实现对EPS电机、传感器或机械结构潜在故障的早期预警和诊断，提升功能安全等级。这是非常值得投入的方向，可以考虑与AI团队合作，探索如何将高精度感知信息融入到EPS的控制环路中，通过强化学习或模型预测控制，利用感知信息优化助力输出，提升系统的性能和鲁棒性。
-   https://cnevpost.com/2026/11/04/xpeng-unveils-groundingpi-pre-trained-model/
-
-2. Kimi K3.1 Pro model weights are out（来源：Hacker News）
-   应用分析：能用。虽然是通用大模型，但其开源特性使其在内部工具和辅助开发方面有潜力。我们可以利用Kimi K3.1 Pro构建一个内部AI助手，用于检索和总结EPS相关的技术文档、历史项目数据、故障报告和行业标准（如ISO 26262），从而提高研发效率。此外，它还能辅助生成部分C语言嵌入式代码片段，或进行代码审查，识别潜在的逻辑错误、效率瓶颈或安全漏洞。在自动标定方面，Kimi可以辅助分析大量标定数据，识别参数间的关联性，甚至基于历史数据和专家经验，提供初步的标定参数建议，减少人工试错时间。这是值得投入的，可以小范围试点，评估其在文档处理和代码辅助上的实际效果，逐步推广。
-   https://huggingface.co/moonshotai/Kimi-K3.1-Pro
-
-3. Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 548GB/s（来源：Hacker News）
-   应用分析：直接用于EPS控制器可能性小（尺寸、功耗、车规），但其技术理念和性能指标可作为未来车载高性能计算平台选型和架构设计的参考。随着线控转向和高级自动驾驶的发展，车载计算平台需要集成更强大的AI推理能力。Cloud AI 100 Ultra的能效比和内存带宽，可以作为我们评估未来车载AI芯片（特别是用于感知、决策等复杂AI任务的芯片）的重要指标。我们可以关注其在散热、功耗管理方面的设计，为线控转向中央计算单元的硬件选型提供思路。此外，在研发阶段，可以使用类似高性能加速卡进行复杂的电机控制模型训练（如强化学习控制策略）或大规模的MIL/SIL/HIL仿真，加速算法开发和验证周期。间接值得投入，应持续关注高通及其他芯片厂商在车载AI计算平台上的发展，特别是其在边缘侧的AI芯片产品线。
-   https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra
-
-4. Infineon to set up high-volume 300 mm GaN power chip production in Austria（来源：Charged EVs）
-   应用分析：能用，且非常重要。GaN功率器件是EPS功率级演进的关键技术方向。GaN器件的高开关频率和低损耗特性，可以直接应用于EPS的电机驱动器功率级。这意味着我们可以设计出更小、更轻、散热要求更低的控制器，同时提升电机控制的整体效率，减少能量损耗和发热。这对于优化EPS的NVH性能和延长续航里程都有益处。此外，GaN支持更高的开关频率，这为电机控制策略（如FOC）提供了更大的设计自由度，可以实现更精细的电流控制，进一步抑制转矩脉动和纹波，提升手感平顺性。非常值得投入，应立即启动GaN器件在EPS控制器中的可行性研究，包括器件选型、驱动电路设计、热管理、功能安全评估等，并与供应商保持紧密合作。
-   https://chargedevs.com/newswire/infineon-to-set-up-high-volume-300-mm-gan-power-chip-production-in-austria/
-
-5. STMicroelectronics Expands STM32 Roadmap for Cloud AI and Physical AI（来源：EE Times）
-   应用分析：能用，且是核心硬件平台。STM32是我们EPS控制器MCU选型的重要考量。我们可以利用支持物理AI的STM32A系列MCU，在EPS控制器内部实现轻量级的AI算法。例如，部署基于神经网络的无传感器位置观测器，或用于转矩脉动抑制的AI模型，以及基于AI的故障诊断和预测性维护功能。这将提升EPS的智能化水平和鲁棒性。同时，需要深入研究STM32A系列如何满足ISO 26262功能安全标准，并探索如何在硬件层面（如AI加速模块）和软件层面（如AI算法的验证与确认）确保AI功能的安全性。非常值得投入。作为EPS控制器软硬件开发的核心，紧密关注并评估STM32的新产品，将其AI能力融入到EPS的控制和诊断中，是提升产品竞争力的关键。可以与ST合作，获取早期开发套件，进行概念验证和性能测试。
-   https://www.eetimes.com/stmicroelectronics-expands-stm32-roadmap-for-cloud-ai-and-physical-ai/
-
-6. Methods for Accelerating and Stabilizing Nonlinear Magnetic Equivalent-Circuit Analysis（来源：arXiv eess.SY 控制系统）
-   应用分析：能用。该研究成果直接关联到EPS电机的设计和优化流程。我们可以将这种加速和稳定的非线性MEC分析方法引入到EPS电机的设计流程中。特别是在PMSM电机的转矩密度、效率、NVH（转矩脉动、噪声）优化阶段，可以更快、更准确地评估不同电机结构和材料方案的性能，缩短设计周期。同时，精确的电机参数（如电感、磁链）对FOC和无传感器控制至关重要。利用改进的MEC分析，可以更准确地获取不同运行工况下的电机参数，为控制策略提供更可靠的模型输入，提升控制精度和鲁棒性。在电机局部磁饱和严重的工况下，准确的磁场分析还有助于评估电机发热情况，优化散热设计。非常值得投入。这是提升EPS电机性能和降低成本的底层技术，应研究该论文的方法，并与电机设计团队或仿真软件供应商合作，将其集成到现有的电机仿真与优化工具链中。
-   https://arxiv.org/abs/2406.08375
-
-7. LiberAI Unveils Liber-0, a World Action Model That Grounds Human Experience in Robot Action（来源：The Robot Report）
-   应用分析：能用，但需要概念迁移和深入研究。它提供了新的思路来设计更智能、更自适应的EPS控制系统。我们可以借鉴“世界行动模型”的理念，研究如何将驾驶员的驾驶经验（“人类经验”）和不同路况下的车辆动态（“世界”）映射到EPS的转向手感和助力策略（“机器人行动”）。目标是实现零样本或少样本的手感调校，让EPS能够根据驾驶员的偏好和实时路况，自适应地调整助力、阻尼和回正力矩，提供更个性化、更舒适安全的转向体验。此外，如果系统能够“理解”各种故障模式下的“行动”经验，那么在发生传感器故障或电机部分失效时，EPS可以依据预训练的经验模型，快速切换到最优的降级模式，甚至在一定程度上自适应补偿，维持基本转向功能，提升功能安全。非常值得投入。这是前沿研究，但其核心思想与线控转向和EPS高级控制的未来方向高度契合。应积极关注这类通用机器人控制模型，并探讨将其核心理念和技术路径（如大规模数据预训练、零样本泛化）迁移到EPS控制系统中的可能性，例如通过与高校或AI研究机构合作，进行前瞻性研究。
-   https://www.therobotreport.com/liberai-unveils-liber-0-a-world-action-model-that-grounds-human-experience-in-robot-action/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261105-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261105-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261105-am.mp3" length="3769776" type="audio/mpeg"/>
-      <pubDate>Wed, 04 Nov 2026 22:43:14 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 科技早报：AI代理安全、车载AI部署、GaN功率芯片与机器人力控前沿</title>
       <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化以及机器人三大领域，为您精选七条重磅资讯。这些消息不仅关乎技术突破，更与我们汽车电动助力转向，也就是EPS系统的未来发展息息相关。话不多说，让我们立刻进入今天的早报时间！
@@ -908,6 +872,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261120-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261120-pm.mp3" length="957456" type="audio/mpeg"/>
       <pubDate>Thu, 19 Nov 2026 17:35:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. NEBench R1: a Reasoning Benchmark for Evaluating Nuclear Domain Competence in Large Language Models（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21682
+
+2. Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21799
+
+3. How Much of SAR Vehicle Recognition Is the Vehicle? Background Shortcuts, Angle Gaps and Partial Libraries on MSTAR and ATRNet-STAR（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21827
+
+4. Auditors Struggle to Catch Sabotage In End-to-End Transcripts of AI Safety Research（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21832
+
+5. Language Models Can Rewrite Their Own Weights（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21885
+
+6. DNeo: Your Parallel Draft Model Needs Better Target Feature Encoding（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21925
+
+7. SLED: Sensor SLicing from Edge to Datacenter（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21937</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261120-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261120-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261120-am.mp3" length="957456" type="audio/mpeg"/>
+      <pubDate>Thu, 19 Nov 2026 22:40:51 +0000</pubDate>
     </item>
   </channel>
 </rss>

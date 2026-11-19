@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自arXiv cs.AI。NEBench R1: a Reasoning Benchmark for Evaluating Nuclear Domain Competence in Large Language Models。
+arXiv:2611.21682v1 Announce Type: new Abstract: Large language models (LLMs) are increasingly being explored for knowledge-intensive and safety-critical applications in nuclear engineering. However, e。
+第2条，来自arXiv cs.AI。Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability。
+arXiv:2611.21799v1 Announce Type: new Abstract: Chain-of-thought (CoT) monitoring is a promising tool for detecting hidden goals, off-task behavior, and other failures in AI agents. One risk is that m。
+第3条，来自arXiv cs.AI。How Much of SAR Vehicle Recognition Is the Vehicle? Background Shortcuts, Angle Gaps and Partial Libraries on MSTAR and ATRNet-STAR。
+arXiv:2611.21827v1 Announce Type: new Abstract: Deep networks score near 99% on the MSTAR vehicle benchmark, and the newer ATRNet-STAR benchmark was built to be harder. We ask how much of these scores。
+第4条，来自arXiv cs.AI。Auditors Struggle to Catch Sabotage In End-to-End Transcripts of AI Safety Research。
+arXiv:2611.21832v1 Announce Type: new Abstract: As AI systems are increasingly used to automate AI R&amp;D, misaligned systems could sabotage research intended to improve model safety and alignment. T。
+第5条，来自arXiv cs.AI。Language Models Can Rewrite Their Own Weights。
+arXiv:2611.21885v2 Announce Type: new Abstract: A language model is trained once and frozen. Making it better takes another training run, or a prompt, a harness or extra computation at inference that 。
+第6条，来自arXiv cs.AI。DNeo: Your Parallel Draft Model Needs Better Target Feature Encoding。
+arXiv:2611.21925v1 Announce Type: new Abstract: Speculative-diffusion decoding uses a small parallel drafter model to generate b draft tokens in one forward pass, which then undergo parallel verificat。
+第7条，来自arXiv cs.AI。SLED: Sensor SLicing from Edge to Datacenter。
+arXiv:2611.21937v1 Announce Type: new Abstract: Modern sensing systems generate large volumes of heterogeneous data streams from multiple sensor modalities, increasing reliance on datacenters for comp。
+以上就是今天的内容，我们明天见。
