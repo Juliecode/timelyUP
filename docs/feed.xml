@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 Nov 2026 22:40:57 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 17:35:08 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · AI赋能汽车与机器人：从感知到芯片的硬核突破</title>
-      <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们聚焦AI前沿、汽车智能化和机器人三大领域，为您精选了七条最值得关注的重磅资讯。从车企的AI感知模型突破，到机器人零样本操作，再到功率半导体和控制器芯片的最新进展，每一条都可能深刻影响我们的未来工作。话不多说，让我们马上进入今天的早报时间。
-
-1. Xpeng unveils GroundingPI pre-trained model, outperforming GPT-6 Astra in perception benchmarks（来源：CnEVPost）
-   应用分析：对我们EPS工程师来说，这项感知技术的突破至关重要。高精度、高鲁棒性的环境感知能力是线控转向（Steer-by-Wire）系统实现高级辅助驾驶和自动驾驶的基础。我们可以关注GroundingPI这类模型在边缘计算平台上的部署能力，以及如何将高置信度的感知信息安全、高效地传递给EPS控制器，从而为自动泊车、车道保持或紧急避障等场景提供更平稳、精确的转向控制。这值得我们投入研究，探索与感知团队合作，将高级感知信息转化为EPS控制策略的优化输入，同时评估其对功能安全ISO 26262的影响。
-   https://cnevpost.com/2026/11/04/xpeng-unveils-groundingpi-pre-trained-model/
-
-2. Nio to hold Nio IN 2026 tech day on November 25 in Guangzhou with focus on AI（来源：CnEVPost）
-   应用分析：蔚来在辅助驾驶方面的AI进展，特别是AI赋能的控制和决策，会直接影响EPS的工作模式和需求。例如，AI优化的辅助驾驶可能会有更精细的车道保持、更自然的变道策略，这就要求EPS能够提供更精准、更平顺的转向力矩输出。对于线控转向而言，AI的介入甚至可能重塑助力策略的生成方式，从传统的查表法演变为数据驱动、甚至强化学习优化的自适应助力曲线。这值得我们密切关注和预研，尝试利用AI方法优化EPS的助力曲线和手感调校，同时探索AI在故障诊断和预测性维护方面的应用，提升系统鲁棒性。
-   https://cnevpost.com/2026/11/04/nio-to-hold-nio-in-2026-tech-day-nov-25-guangzhou/
-
-3. LiberAI Unveils Liber-0, a World Action Model That Grounds Human Experience in Robot Action（来源：The Robot Report）
-   应用分析：这项技术与我们的EPS电机控制高度相关，因为机器人关节执行器控制与EPS电机控制是同源技术。Liber-0的核心思想——如何将高层级的“意图”或“经验”转化为底层执行器的精确、鲁棒控制——与线控转向面临的挑战不谋而合。我们可以研究Liber-0如何从人类经验中提取“行动基元”或“控制策略”，并将其迁移到EPS的电机控制上，例如，利用类似方法训练模型，结合驾驶员的“转向意图”与车辆的“路感反馈”，生成更自然、更精准的助力特性。这是极度值得我们投入，为解决电机控制策略的性能与鲁棒性问题提供了全新思路。
-   https://www.therobotreport.com/liberai-unveils-liber-0-a-world-action-model-that-grounds-human-experience-in-robot-action/
-
-4. Infineon to set up high-volume 300 mm GaN power chip production in Austria（来源：Charged EVs）
-   应用分析：GaN功率半导体的高效率和高开关频率特性，可以直接提升EPS系统的整体效率，降低发热，从而减小散热器体积和系统重量，优化功率级的封装和成本。我们团队在电机选型和控制器硬件设计中，应积极关注GaN功率器件的成熟度、可靠性（尤其是在汽车环境下的ISO 26262功能安全要求）和成本。这值得我们投入，与供应商保持紧密沟通，了解GaN器件的最新进展和车规级认证情况，并开始预研基于GaN器件的功率级方案，为未来EPS产品的升级换代做好技术储备。
-   https://chargedevs.com/newswire/infineon-to-set-up-high-volume-300-mm-gan-power-chip-production-in-austria/
-
-5. Today’s webinar: Driving the future of next-generation high-voltage power electronics（来源：Charged EVs）
-   应用分析：随着整车高压架构向八百伏以上演进，EPS系统也需要考虑如何适应这种变化。SiC/GaN MOSFETs的应用将使得EPS功率级更加紧凑高效。更重要的是，“X合一”的集成趋势意味着EPS控制器可能不再是一个独立的模块，而是与其他动力域、底盘域控制器进行深度集成，共享功率转换资源。这要求我们在EPS系统架构设计时，要考虑与其他域的协同，以及如何实现功能安全和EMC兼容。这值得我们投入，积极研究八百伏以上架构下EPS功率级和控制器的兼容性设计，评估SiC/GaN在实际应用中的性能边界和成本效益，并探索EPS与多功能功率模块的集成方案。
-   https://chargedevs.com/whitepapers/webinar-driving-the-future-of-next-generation-high-voltage-power-electronics/
-
-6. Methods for Accelerating and Stabilizing Nonlinear Magnetic Equivalent-Circuit Analysis（来源：arXiv eess.SY 控制系统）
-   应用分析：在EPS电机控制中，精确的电机模型是FOC矢量控制、无传感器控制、弱磁控制以及转矩脉动抑制的基础。该论文提出的优化方法能让我们在电机设计阶段更快、更准确地得到电机参数，特别是在磁饱和区域的参数，这对于开发更鲁棒的弱磁控制和转矩脉动抑制策略非常关键。我们可以将这些方法集成到MATLAB/Simulink的模型化设计流程中，用于更精确地生成电机参数模型，并在MIL/SIL/HIL环境中进行验证。这值得我们投入，能够直接优化我们的电机控制策略，解决转矩脉动、温漂和参数辨识等难题。
-   https://arxiv.org/abs/2406.08375
-
-7. STMicroelectronics Expands STM32 Roadmap for Cloud AI and Physical AI（来源：EE Times）
-   应用分析：汽车级STM32A的出现，为我们EPS控制器MCU选型提供了更多可能性。我们可以在满足ISO 26262功能安全要求的前提下，选择具备更强AI算力的MCU，直接在EPS控制器上实现一些边缘AI功能。例如，利用神经网络观测器提升无传感器控制的精度和鲁棒性；通过AI模型实时调整助力曲线，实现自动标定与自适应控制；或分析电机数据进行故障诊断与预测性维护。这值得我们投入，密切关注STM32A系列的具体性能、功能安全认证和开发工具链，并着手进行AI算法在嵌入式平台上的部署和优化预研，快速将前沿AI研究转化为可落地的EPS工程方案。
-   https://www.eetimes.com/stmicroelectronics-expands-stm32-roadmap-for-cloud-ai-and-physical-ai/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261105-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261105-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261105-pm.mp3" length="3109824" type="audio/mpeg"/>
-      <pubDate>Wed, 04 Nov 2026 16:32:28 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 研发早报：小鹏AI感知超越GPT，英飞凌GaN芯片与STM32嵌入式AI助力汽车智驾</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯，希望能为您的日常研发工作带来新的灵感和思考。话不多说，我们马上开始今天的播报。
@@ -915,6 +879,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261119-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261119-am.mp3" length="956304" type="audio/mpeg"/>
       <pubDate>Wed, 18 Nov 2026 22:40:57 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. NEBench R1: a Reasoning Benchmark for Evaluating Nuclear Domain Competence in Large Language Models（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21682
+
+2. Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21799
+
+3. How Much of SAR Vehicle Recognition Is the Vehicle? Background Shortcuts, Angle Gaps and Partial Libraries on MSTAR and ATRNet-STAR（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21827
+
+4. Auditors Struggle to Catch Sabotage In End-to-End Transcripts of AI Safety Research（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21832
+
+5. Language Models Can Rewrite Their Own Weights（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21885
+
+6. DNeo: Your Parallel Draft Model Needs Better Target Feature Encoding（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21925
+
+7. SLED: Sensor SLicing from Edge to Datacenter（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.21937</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261120-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261120-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261120-pm.mp3" length="957456" type="audio/mpeg"/>
+      <pubDate>Thu, 19 Nov 2026 17:35:08 +0000</pubDate>
     </item>
   </channel>
 </rss>
