@@ -1,0 +1,109 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:02.828
+欢迎收听今天的科技研发早报。
+
+2
+00:00:02.828 --> 00:00:06.053
+以下是今天精选的几条前沿进展。
+
+3
+00:00:06.053 --> 00:00:09.236
+第1条，来自arXiv cs.AI。
+
+4
+00:00:09.236 --> 00:00:13.113
+Human-AI Mutualism Is Unstable under Capability Asymmetry。
+
+5
+00:00:13.113 --> 00:00:26.037
+arXiv:2611.23322v1 Announce Type: new Abstract: One hope for a good human future alongside advanced AI rests on enduring mutualism: humans and AI will need each other, so the relationship will stay go。
+
+6
+00:00:26.037 --> 00:00:29.348
+第2条，来自arXiv cs.AI。
+
+7
+00:00:29.348 --> 00:00:32.369
+Training Language Models for Introspective Oversight。
+
+8
+00:00:32.369 --> 00:00:44.973
+arXiv:2611.23365v1 Announce Type: new Abstract: Language models increasingly exhibit behaviors that are difficult to detect in transcripts, such as reward hacking, deception, and sycophancy.
+
+9
+00:00:44.973 --> 00:00:46.396
+Asking th。
+
+10
+00:00:46.396 --> 00:00:49.753
+第3条，来自arXiv cs.AI。
+
+11
+00:00:49.753 --> 00:00:53.595
+Where the Tokens Go: Heat, Entropy and Error in Agentic Coding。
+
+12
+00:00:53.595 --> 00:01:04.186
+arXiv:2611.23375v1 Announce Type: new Abstract: Coding agents are billed by the token, yet software engineering says nothing about what a token actually buys.
+
+13
+00:01:04.186 --> 00:01:07.079
+Here we introduce a theory of software th。
+
+14
+00:01:07.079 --> 00:01:10.447
+第4条，来自arXiv cs.AI。
+
+15
+00:01:10.447 --> 00:01:15.042
+HardwareDx: A Foundational Graph Model System for Datacenter Machine Repairs。
+
+16
+00:01:15.042 --> 00:01:26.362
+arXiv:2611.23398v1 Announce Type: new Abstract: The rapid scale-up of AI infrastructure has made datacenter reliability a cornerstone of the cloud business economy.
+
+17
+00:01:26.362 --> 00:01:28.862
+Since hardware failures in hyper-sc。
+
+18
+00:01:28.862 --> 00:01:32.160
+第5条，来自arXiv cs.AI。
+
+19
+00:01:32.160 --> 00:01:37.901
+RFBench: A Simulator-Grounded Multimodal Benchmark for Passive RF Layout Design and Understanding。
+
+20
+00:01:37.901 --> 00:01:50.593
+arXiv:2611.23410v1 Announce Type: new Abstract: While multimodal language models can interpret diagrams and generate structured outputs, their capacity to connect passive radio-frequency (RF) design i。
+
+21
+00:01:50.593 --> 00:01:53.764
+第6条，来自arXiv cs.AI。
+
+22
+00:01:53.764 --> 00:01:58.312
+Why Sub-4-Bit Vision CNNs Collapse and Where Mixed-Precision Recovery Stops。
+
+23
+00:01:58.312 --> 00:02:11.032
+arXiv:2611.23445v2 Announce Type: new Abstract: Deep vision models operating in resource-constrained environments depend heavily on low-bit quantization, yet compressing weights below 4 bits frequentl。
+
+24
+00:02:11.164 --> 00:02:14.528
+第7条，来自arXiv cs.AI。
+
+25
+00:02:14.528 --> 00:02:19.930
+LusoClin: A Synthetic Clinical Note Dataset for Medical Information Retrieval in European Portuguese。
+
+26
+00:02:19.930 --> 00:02:32.638
+arXiv:2611.23454v1 Announce Type: new Abstract: Access to large-scale clinical text collections is crucial for advancing medical information retrieval research, including clinical note search, patient。
+
+27
+00:02:32.638 --> 00:02:35.451
+以上就是今天的内容，我们明天见。

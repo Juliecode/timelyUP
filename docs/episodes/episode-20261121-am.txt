@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自arXiv cs.AI。Human-AI Mutualism Is Unstable under Capability Asymmetry。
+arXiv:2611.23322v1 Announce Type: new Abstract: One hope for a good human future alongside advanced AI rests on enduring mutualism: humans and AI will need each other, so the relationship will stay go。
+第2条，来自arXiv cs.AI。Training Language Models for Introspective Oversight。
+arXiv:2611.23365v1 Announce Type: new Abstract: Language models increasingly exhibit behaviors that are difficult to detect in transcripts, such as reward hacking, deception, and sycophancy. Asking th。
+第3条，来自arXiv cs.AI。Where the Tokens Go: Heat, Entropy and Error in Agentic Coding。
+arXiv:2611.23375v1 Announce Type: new Abstract: Coding agents are billed by the token, yet software engineering says nothing about what a token actually buys. Here we introduce a theory of software th。
+第4条，来自arXiv cs.AI。HardwareDx: A Foundational Graph Model System for Datacenter Machine Repairs。
+arXiv:2611.23398v1 Announce Type: new Abstract: The rapid scale-up of AI infrastructure has made datacenter reliability a cornerstone of the cloud business economy. Since hardware failures in hyper-sc。
+第5条，来自arXiv cs.AI。RFBench: A Simulator-Grounded Multimodal Benchmark for Passive RF Layout Design and Understanding。
+arXiv:2611.23410v1 Announce Type: new Abstract: While multimodal language models can interpret diagrams and generate structured outputs, their capacity to connect passive radio-frequency (RF) design i。
+第6条，来自arXiv cs.AI。Why Sub-4-Bit Vision CNNs Collapse and Where Mixed-Precision Recovery Stops。
+arXiv:2611.23445v2 Announce Type: new Abstract: Deep vision models operating in resource-constrained environments depend heavily on low-bit quantization, yet compressing weights below 4 bits frequentl。
+第7条，来自arXiv cs.AI。LusoClin: A Synthetic Clinical Note Dataset for Medical Information Retrieval in European Portuguese。
+arXiv:2611.23454v1 Announce Type: new Abstract: Access to large-scale clinical text collections is crucial for advancing medical information retrieval research, including clinical note search, patient。
+以上就是今天的内容，我们明天见。
