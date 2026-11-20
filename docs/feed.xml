@@ -13,47 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 19 Nov 2026 22:40:51 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 17:10:47 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 科技早报：AI代理安全、车载AI部署、GaN功率芯片与机器人力控前沿</title>
-      <description>各位研发工程师朋友，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化以及机器人三大领域，为您精选七条重磅资讯。这些消息不仅关乎技术突破，更与我们汽车电动助力转向，也就是EPS系统的未来发展息息相关。话不多说，让我们立刻进入今天的早报时间！
-
-1. Agent Harness Awareness: Turning Verified Telemetry into Operational Control for Tool-Using Agents（来源：arXiv cs.AI）
-   应用分析：这对我作为EPS工程师来说意义重大。在自动驾驶和线控转向等安全关键系统中的AI应用，这项研究成功将AI策略失误率降低了百分之九十六点九。我们可以借鉴这种“宿主系统提供验证状态快照”的思路。比如，在EPS的AI辅助标定或故障诊断代理中，让底层功能安全模块提供电机温度、传感器状态等“经验证的健康快照”，AI代理基于这些快照决策。这能有效提升AI决策在安全关键场景下的可靠性。投入是值得的，初期可在HIL或台架测试中验证概念。
-   https://arxiv.org/abs/2611.05391
-
-2. A Feasibility Condition for Confidence-Gated Tiered LLM Inference（来源：arXiv cs.AI）
-   应用分析：这对我作为EPS工程师来说，对未来车载AI部署有指导意义。线控转向系统可能集成复杂AI模型，用于手感调校或路况自适应。对实时性不高、计算量大的任务可卸载到云端，实时、低延迟任务在车载边缘完成。研究的“置信度信号”可智能判断任务分配，平衡性能与资源。虽然目前EPS AI复杂度不高，但线控转向演进会引入更多AI，理解这种分层推理经济性，可帮助我们预规划车载AI计算架构，优化硬件选型和成本，值得关注。
-   https://arxiv.org/abs/2611.05394
-
-3. STMicroelectronics Expands STM32 Roadmap for Cloud AI and Physical AI（来源：EE Times）
-   应用分析：这对我作为EPS工程师来说是直接且重要的消息。STM32A作为车规级MCU，是EPS控制器下一代硬件平台的重要候选，需评估其ISO 26262功能安全支持、内置AI加速模块性能，以及对FOC等复杂电机控制算法的计算能力。STM32G5系列在功率级控制、高频采样和实时性方面的优势，有助于优化电机控制策略，实现更精细的转矩脉动抑制或高效弱磁控制。这是硬件平台演进的直接方向，必须立即跟进评估，包括样品测试、性能对比。
-   https://www.eetimes.com/stmicroelectronics-expands-stm32-roadmap-for-cloud-ai-and-physical-ai/
-
-4. Data-Driven Stochastic LQR Control with Probabilistic Guarantees and Uncertainty Refinement（来源：arXiv eess.SY 控制系统）
-   应用分析：这对我作为EPS工程师来说，是提升电机控制鲁棒性和性能的潜在方向。EPS系统面临电机参数温漂、路况变化、传感器噪声等不确定性，传统LQR依赖精确模型。数据驱动方法能更好适应这些不确定性，提供“概率性稳定性保证”对安全关键EPS系统至关重要。我们可以探索将其应用于EPS电机控制，通过采集数据实时或离线优化LQR控制器参数，应对电机参数变化或外部负载扰动，实现更智能、鲁棒的控制。这属于“用AI/数据驱动方法改进控制”前沿，值得投入研究，初期可在MIL/SIL仿真验证。
-   https://arxiv.org/abs/2611.05533
-
-5. Infineon to set up high-volume 300 mm GaN power chip production in Austria（来源：Charged EVs）
-   应用分析：这对我作为EPS工程师来说，GaN功率器件以高开关频率、低损耗和更小尺寸，正成为电动汽车电机驱动关键技术。英飞凌的大规模投资预示GaN在汽车应用中的成熟度和普及度将大幅提升，直接影响EPS控制器功率级设计。GaN可用于EPS电机驱动逆变器，实现更高开关频率，减小电感体积，降低重量和成本。高效率还能减少热损耗，简化散热。需关注其车规级认证、可靠性、封装。尤其线控转向对功率密度和效率要求更高，GaN将提供关键支持。这是功率级硬件演进方向，必须持续关注。
-   https://chargedevs.com/newswire/infineon-to-set-up-high-volume-300-mm-gan-power-chip-production-in-austria/
-
-6. Baidu unveils Apollo World model to let AI teach AI to drive（来源：CnEVPost）
-   应用分析：这对我作为EPS工程师来说，对线控转向的架构和功能安全验证有启发。自动驾驶的开发验证对数据和场景需求巨大。“AI教AI驾驶”模式通过大规模模拟生成多样化、极端场景，能极大加速自动驾驶决策和控制算法训练验证，对线控转向等关键执行系统的功能开发和安全验证有直接推动作用。我们可以借鉴此思路提升线控转向鲁棒性和功能安全性。构建模拟故障模式和驾驶员风格的“世界模型”，让EPS控制算法在复杂场景中自我学习优化，发现潜在故障，优化降级策略，自动生成测试用例。对改进MIL/SIL/HIL测试框架、提升功能安全验证效率有重要参考价值。
-   https://cnevpost.com/2026/11/05/baidu-apollo-world-model-ai-teach-ai-to-drive/
-
-7. Ctrl-F: Force as an Interface for Humanoid Loco-Manipulation（来源：arXiv cs.RO）
-   应用分析：这对我作为EPS工程师来说，是EPS手感调校和未来线控转向力反馈控制的关键借鉴。人形机器人关节执行器控制与EPS电机控制高度相关，尤其在力控制和触觉反馈方面。研究强调“力”作为核心控制接口的重要性，这与EPS在手感调校、路感还原及线控转向中对力反馈的精确控制需求高度契合。我们可以将“力”作为更核心的控制变量。在手感调校时，精细化设计和控制方向盘的“力学表现”。线控转向中，精确力控制策略是实现真实路感和个性化手感的基石。可探索基于“力命令”的电机控制策略。这与我们关注的机器人执行器控制高度相关，值得投入研究。
-   https://arxiv.org/abs/2611.05507</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261106-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261106-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261106-pm.mp3" length="2956608" type="audio/mpeg"/>
-      <pubDate>Thu, 05 Nov 2026 16:44:29 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · AI与智能出行：从多代理安全到人形机器人上市</title>
       <description>各位研发工程师朋友们，大家早上好！欢迎收听今天的科技早报。我是你们的主播兼技术分析师。今天，我们将聚焦AI前沿、汽车智能化和机器人三大领域，为您精选七条重磅资讯，深度解析它们对我们EPS研发工作的启发和潜在应用。准备好了吗？让我们一起探索今天的科技脉搏！
@@ -901,6 +865,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261120-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261120-am.mp3" length="957456" type="audio/mpeg"/>
       <pubDate>Thu, 19 Nov 2026 22:40:51 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. Human-AI Mutualism Is Unstable under Capability Asymmetry（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.23322
+
+2. Training Language Models for Introspective Oversight（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.23365
+
+3. Where the Tokens Go: Heat, Entropy and Error in Agentic Coding（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.23375
+
+4. HardwareDx: A Foundational Graph Model System for Datacenter Machine Repairs（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.23398
+
+5. RFBench: A Simulator-Grounded Multimodal Benchmark for Passive RF Layout Design and Understanding（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.23410
+
+6. Why Sub-4-Bit Vision CNNs Collapse and Where Mixed-Precision Recovery Stops（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.23445
+
+7. LusoClin: A Synthetic Clinical Note Dataset for Medical Information Retrieval in European Portuguese（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.23454</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261121-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261121-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261121-pm.mp3" length="932976" type="audio/mpeg"/>
+      <pubDate>Fri, 20 Nov 2026 17:10:47 +0000</pubDate>
     </item>
   </channel>
 </rss>
