@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。RCE in Gnupg。
+Article URL: https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html Comments URL: https://news.ycombinator.com/item?id=50587208 Points: 137 # Comments: 47。
+第2条，来自Hacker News。Surprisingly Adorable Insect Portraits。
+Article URL: https://amateurphotographer.com/latest/these-astonishing-insect-portraits-reveal-a-hidden-world-you-never-knew-existed/ Comments URL: https://news.ycombinator.com/item?id=50586648 Points:。
+第3条，来自Hacker News。ClawDOS – An AI coding agent for DOS。
+Article URL: http://ricapar.net/ClawDOS/ Comments URL: https://news.ycombinator.com/item?id=50586292 Points: 125 # Comments: 39。
+第4条，来自Hacker News。Clojure will affect the way you think about programming (2017)。
+Article URL: https://eli.thegreenplace.net/2017/clojure-the-perfect-language-to-expand-your-brain/ Comments URL: https://news.ycombinator.com/item?id=50585376 Points: 152 # Comments: 64。
+第5条，来自Hacker News。Ask HN: I have been unemployed for 2y. 15 years of experience, US. What to do?。
+I'm Senior software engineer in the US (DMV area), with 15y of experience. Worked for Fortune 50+ company and bunch of mid-size companies. Been unemployed for 2y and can't find a job, within those 2 y。
+第6条，来自Hacker News。NINLIVE: The Nine Inch Nails live archive。
+Article URL: https://ninlive.com/ Comments URL: https://news.ycombinator.com/item?id=50583274 Points: 312 # Comments: 81。
+第7条，来自Hacker News。Inkling 2 Mini。
+Article URL: https://thinkingmachines.ai/news/inkling-2-mini/ Comments URL: https://news.ycombinator.com/item?id=50581260 Points: 1177 # Comments: 226。
+以上就是今天的内容，我们明天见。

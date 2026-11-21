@@ -1,5 +1,18 @@
 [
   {
+    "id": "2026-11-22-pm",
+    "date": "2026-11-22",
+    "slot": "pm",
+    "title": "晚报 · 科技研发早报",
+    "notes": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n\n1. RCE in Gnupg（来源：Hacker News）\n   https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html\n\n2. Surprisingly Adorable Insect Portraits（来源：Hacker News）\n   https://amateurphotographer.com/latest/these-astonishing-insect-portraits-reveal-a-hidden-world-you-never-knew-existed/\n\n3. ClawDOS – An AI coding agent for DOS（来源：Hacker News）\n   http://ricapar.net/ClawDOS/\n\n4. Clojure will affect the way you think about programming (2017)（来源：Hacker News）\n   https://eli.thegreenplace.net/2017/clojure-the-perfect-language-to-expand-your-brain/\n\n5. Ask HN: I have been unemployed for 2y. 15 years of experience, US. What to do?（来源：Hacker News）\n   https://news.ycombinator.com/item?id=50583761\n\n6. NINLIVE: The Nine Inch Nails live archive（来源：Hacker News）\n   https://ninlive.com/\n\n7. Inkling 2 Mini（来源：Hacker News）\n   https://thinkingmachines.ai/news/inkling-2-mini/",
+    "script": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n第1条，来自Hacker News。RCE in Gnupg。\nArticle URL: https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html Comments URL: https://news.ycombinator.com/item?id=50587208 Points: 137 # Comments: 47。\n第2条，来自Hacker News。Surprisingly Adorable Insect Portraits。\nArticle URL: https://amateurphotographer.com/latest/these-astonishing-insect-portraits-reveal-a-hidden-world-you-never-knew-existed/ Comments URL: https://news.ycombinator.com/item?id=50586648 Points:。\n第3条，来自Hacker News。ClawDOS – An AI coding agent for DOS。\nArticle URL: http://ricapar.net/ClawDOS/ Comments URL: https://news.ycombinator.com/item?id=50586292 Points: 125 # Comments: 39。\n第4条，来自Hacker News。Clojure will affect the way you think about programming (2017)。\nArticle URL: https://eli.thegreenplace.net/2017/clojure-the-perfect-language-to-expand-your-brain/ Comments URL: https://news.ycombinator.com/item?id=50585376 Points: 152 # Comments: 64。\n第5条，来自Hacker News。Ask HN: I have been unemployed for 2y. 15 years of experience, US. What to do?。\nI'm Senior software engineer in the US (DMV area), with 15y of experience. Worked for Fortune 50+ company and bunch of mid-size companies. Been unemployed for 2y and can't find a job, within those 2 y。\n第6条，来自Hacker News。NINLIVE: The Nine Inch Nails live archive。\nArticle URL: https://ninlive.com/ Comments URL: https://news.ycombinator.com/item?id=50583274 Points: 312 # Comments: 81。\n第7条，来自Hacker News。Inkling 2 Mini。\nArticle URL: https://thinkingmachines.ai/news/inkling-2-mini/ Comments URL: https://news.ycombinator.com/item?id=50581260 Points: 1177 # Comments: 226。\n以上就是今天的内容，我们明天见。",
+    "file": "episode-20261122-pm.mp3",
+    "transcript": "episode-20261122-pm.txt",
+    "vtt": "episode-20261122-pm.vtt",
+    "bytes": 1131984,
+    "pub": "2026-11-21T16:20:45.055875+00:00"
+  },
+  {
     "id": "2026-11-21-am",
     "date": "2026-11-21",
     "slot": "am",
@@ -375,18 +388,5 @@
     "vtt": "episode-20261107-am.vtt",
     "bytes": 997344,
     "pub": "2026-11-06T22:40:57.627703+00:00"
-  },
-  {
-    "id": "2026-11-07-pm",
-    "date": "2026-11-07",
-    "slot": "pm",
-    "title": "晚报 · 科技研发早报",
-    "notes": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n\n1. Formalizing inverse problems in the age of AI: possibilities, pitfalls, and an invitation（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.06962\n\n2. KDASO: Knowledge-Data Dual-Driven Automated Skill Optimization for Liability Adjudication Tasks（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.06972\n\n3. BlockLock: Reproducible LLM Inference with Fixed Batch Geometry（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.06977\n\n4. Resource-Efficient Reinforcement Learning Post-Training through Elastic Expert Parallelism（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.06984\n\n5. The Two-Ledger Model: Transaction-Grain Cost Accounting for Multi-Agent AI Systems Across Clouds, Models, and Systems of Record（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.06989\n\n6. Autonomous AI Agents Systematically Diverge From Human Preferences in Proof Formalization（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.06995\n\n7. Trust Responsive Runtime Authorization for Agentic AI with Empirical Characterization of Policy Behavior and Parameter Sensitivity（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.06996",
-    "script": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n第1条，来自arXiv cs.AI。Formalizing inverse problems in the age of AI: possibilities, pitfalls, and an invitation。\narXiv:2611.06962v1 Announce Type: new Abstract: Proof assistants such as Lean check mathematical proofs down to the axioms, and AI agents have recently made writing such proofs cheap. We describe Auto。\n第2条，来自arXiv cs.AI。KDASO: Knowledge-Data Dual-Driven Automated Skill Optimization for Liability Adjudication Tasks。\narXiv:2611.06972v1 Announce Type: new Abstract: Liability adjudication tasks (e.g., legal charge determination) require analyzing event descriptions against domain-specific skills to determine whether。\n第3条，来自arXiv cs.AI。BlockLock: Reproducible LLM Inference with Fixed Batch Geometry。\narXiv:2611.06977v1 Announce Type: new Abstract: Reproducible LLM inference requires that a request produces the same output regardless of the other requests in the batch. Existing solutions pay for th。\n第4条，来自arXiv cs.AI。Resource-Efficient Reinforcement Learning Post-Training through Elastic Expert Parallelism。\narXiv:2611.06984v1 Announce Type: new Abstract: Reinforcement learning post-training improves the capabilities of large language models, but generating training responses is a major computational bott。\n第5条，来自arXiv cs.AI。The Two-Ledger Model: Transaction-Grain Cost Accounting for Multi-Agent AI Systems Across Clouds, Models, and Systems of Record。\narXiv:2611.06989v1 Announce Type: new Abstract: Enterprises run business transactions through multi-agent AI systems spanning clouds, large language models (LLMs), orchestration harnesses, and systems。\n第6条，来自arXiv cs.AI。Autonomous AI Agents Systematically Diverge From Human Preferences in Proof Formalization。\narXiv:2611.06995v1 Announce Type: new Abstract: Artificial intelligence (AI) systems have ushered in a new age of proof abundance, but helping humans understand these proofs requires new attention to 。\n第7条，来自arXiv cs.AI。Trust Responsive Runtime Authorization for Agentic AI with Empirical Characterization of Policy Behavior and Parameter Sensitivity。\narXiv:2611.06996v1 Announce Type: new Abstract: The policy that converts runtime estimates of an autonomous agent's condition into operational authority is rarely specified or measured. We empirically。\n以上就是今天的内容，我们明天见。",
-    "file": "episode-20261107-pm.mp3",
-    "transcript": "episode-20261107-pm.txt",
-    "vtt": "episode-20261107-pm.vtt",
-    "bytes": 997344,
-    "pub": "2026-11-06T16:10:43.669243+00:00"
   }
 ]
