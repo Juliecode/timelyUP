@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。Tasklet (YC P26) Is Hiring Product and Agent Infra Engineers。
+Article URL: https://tasklet.ai/careers Comments URL: https://news.ycombinator.com/item?id=50593679 Points: 0 # Comments: 0。
+第2条，来自Hacker News。Upload2Shell (CVE-2026-125396)。
+Article URL: https://pwn.ai/upload2shell Comments URL: https://news.ycombinator.com/item?id=50592097 Points: 56 # Comments: 14。
+第3条，来自Hacker News。RCE in Gnupg。
+Article URL: https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html Comments URL: https://news.ycombinator.com/item?id=50587208 Points: 210 # Comments: 86。
+第4条，来自Hacker News。Ask HN: I have been unemployed for 2y. 15 years of experience, US. What to do?。
+I'm Senior software engineer in the US (DMV area), with 15y of experience. Worked for Fortune 50+ company and bunch of mid-size companies. Been unemployed for 2y and can't find a job, within those 2 y。
+第5条，来自Hacker News。Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades'。
+Article URL: https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib Comments URL: https://news.ycombinator.com/item?id=50582069 Points: 324 # Comments: 102。
+第6条，来自Hacker News。Inkling 2 Mini。
+Article URL: https://thinkingmachines.ai/news/inkling-2-mini/ Comments URL: https://news.ycombinator.com/item?id=50581260 Points: 1342 # Comments: 276。
+第7条，来自Hacker News。Hurried Announcement: Alessandro Masullo GRH。
+Related: Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf] - https://news.ycombinator.com/item?id=50574968 Comments URL: https://news.ycombinator.com/item?id=50579568 Points: 2371。
+以上就是今天的内容，我们明天见。

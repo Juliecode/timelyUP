@@ -13,40 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 21 Nov 2026 16:20:45 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 22:41:03 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 科技研发早报</title>
-      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
-
-1. Formalizing inverse problems in the age of AI: possibilities, pitfalls, and an invitation（来源：arXiv cs.AI）
-   https://arxiv.org/abs/2611.06962
-
-2. KDASO: Knowledge-Data Dual-Driven Automated Skill Optimization for Liability Adjudication Tasks（来源：arXiv cs.AI）
-   https://arxiv.org/abs/2611.06972
-
-3. BlockLock: Reproducible LLM Inference with Fixed Batch Geometry（来源：arXiv cs.AI）
-   https://arxiv.org/abs/2611.06977
-
-4. Resource-Efficient Reinforcement Learning Post-Training through Elastic Expert Parallelism（来源：arXiv cs.AI）
-   https://arxiv.org/abs/2611.06984
-
-5. The Two-Ledger Model: Transaction-Grain Cost Accounting for Multi-Agent AI Systems Across Clouds, Models, and Systems of Record（来源：arXiv cs.AI）
-   https://arxiv.org/abs/2611.06989
-
-6. Autonomous AI Agents Systematically Diverge From Human Preferences in Proof Formalization（来源：arXiv cs.AI）
-   https://arxiv.org/abs/2611.06995
-
-7. Trust Responsive Runtime Authorization for Agentic AI with Empirical Characterization of Policy Behavior and Parameter Sensitivity（来源：arXiv cs.AI）
-   https://arxiv.org/abs/2611.06996</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261107-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261107-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261107-am.mp3" length="997344" type="audio/mpeg"/>
-      <pubDate>Fri, 06 Nov 2026 22:40:57 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 科技研发早报</title>
       <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
@@ -887,6 +858,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261122-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261122-pm.mp3" length="1131984" type="audio/mpeg"/>
       <pubDate>Sat, 21 Nov 2026 16:20:45 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. Tasklet (YC P26) Is Hiring Product and Agent Infra Engineers（来源：Hacker News）
+   https://tasklet.ai/careers
+
+2. Upload2Shell (CVE-2026-125396)（来源：Hacker News）
+   https://pwn.ai/upload2shell
+
+3. RCE in Gnupg（来源：Hacker News）
+   https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html
+
+4. Ask HN: I have been unemployed for 2y. 15 years of experience, US. What to do?（来源：Hacker News）
+   https://news.ycombinator.com/item?id=50583761
+
+5. Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades'（来源：Hacker News）
+   https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib
+
+6. Inkling 2 Mini（来源：Hacker News）
+   https://thinkingmachines.ai/news/inkling-2-mini/
+
+7. Hurried Announcement: Alessandro Masullo GRH（来源：Hacker News）
+   https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261122-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261122-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261122-am.mp3" length="1160784" type="audio/mpeg"/>
+      <pubDate>Sat, 21 Nov 2026 22:41:03 +0000</pubDate>
     </item>
   </channel>
 </rss>
