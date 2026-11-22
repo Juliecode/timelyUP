@@ -13,40 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 21 Nov 2026 22:41:03 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 16:35:10 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 科技研发早报</title>
-      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
-
-1. Every Mac comes with an (undocumented) family member classifier（来源：Hacker News）
-   https://8rank.ai/game/apple-intelligence-personal-knowledge-graph
-
-2. A barbarian tribe's mythic origin story is true, ancient DNA reveals（来源：Hacker News）
-   https://www.science.org/content/article/barbarian-tribe-s-mythic-origin-story-true-ancient-dna-reveals
-
-3. A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost（来源：Hacker News）
-   https://hightouch.com/blog/llm-judges-identity-resolution
-
-4. Firecracker VM Escape: PwnEscape Part 2（来源：Hacker News）
-   https://pwn.ai/blog/firecracker-escape
-
-5. Restaurant Delivery Payment-Skimming Campaign（来源：Hacker News）
-   https://www.infohawk.com/news/2026-11-05-scamwich-restaurant-skimming
-
-6. First steps in bare-metal programming using UEFI（来源：Hacker News）
-   https://kevinboone.me/efitest_index.html
-
-7. Gemini Omni 1.2 Flash（来源：Hacker News）
-   https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261108-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261108-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261108-pm.mp3" length="1240992" type="audio/mpeg"/>
-      <pubDate>Sat, 07 Nov 2026 16:24:24 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 科技研发早报</title>
       <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
@@ -887,6 +858,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261122-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261122-am.mp3" length="1160784" type="audio/mpeg"/>
       <pubDate>Sat, 21 Nov 2026 22:41:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. Show HN: I built a game where you are an LLM's subagent（来源：Hacker News）
+   https://github.com/gulivan/worker755
+
+2. Muru – AI-assisted Rust server for Python apps by mod_WSGI's creator（来源：Hacker News）
+   https://simonwillison.net/2026/Nov/21/muru/
+
+3. 87% of the Anthropic power will come from gas and 11% from coal in 2028（来源：Hacker News）
+   https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/
+
+4. Data Processing Incidents on Inference Providers（来源：Hacker News）
+   https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/
+
+5. The Mythology of Conscious AI（来源：Hacker News）
+   https://www.noemamag.com/the-mythology-of-conscious-ai/
+
+6. Pandex – Official European Law for AI Agents, over MCP（来源：Hacker News）
+   https://www.pandex.io
+
+7. Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance（来源：TechCrunch）
+   https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261123-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261123-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261123-pm.mp3" length="1136304" type="audio/mpeg"/>
+      <pubDate>Sun, 22 Nov 2026 16:35:10 +0000</pubDate>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。Show HN: I built a game where you are an LLM's subagent。
+Article URL: https://github.com/gulivan/worker755 Comments URL: https://news.ycombinator.com/item?id=50599762 Points: 88 # Comments: 19。
+第2条，来自Hacker News。Muru – AI-assisted Rust server for Python apps by mod_WSGI's creator。
+Article URL: https://simonwillison.net/2026/Nov/21/muru/ Comments URL: https://news.ycombinator.com/item?id=50597959 Points: 43 # Comments: 8。
+第3条，来自Hacker News。87% of the Anthropic power will come from gas and 11% from coal in 2028。
+Article URL: https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/ Comments URL: https://news.ycombinator.com/item?id=50597612 Points: 437 # Comments: 52。
+第4条，来自Hacker News。Data Processing Incidents on Inference Providers。
+Article URL: https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/ Comments URL: https://news.ycombinator.com/item?id=50595554 Points: 239 # Comments: 84。
+第5条，来自Hacker News。The Mythology of Conscious AI。
+Article URL: https://www.noemamag.com/the-mythology-of-conscious-ai/ Comments URL: https://news.ycombinator.com/item?id=50595537 Points: 122 # Comments: 318。
+第6条，来自Hacker News。Pandex – Official European Law for AI Agents, over MCP。
+Article URL: https://www.pandex.io Comments URL: https://news.ycombinator.com/item?id=50593481 Points: 124 # Comments: 29。
+第7条，来自TechCrunch。Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance。
+Signal is limiting users' ability to take screenshots in both its Android and iOS apps.。
+以上就是今天的内容，我们明天见。
