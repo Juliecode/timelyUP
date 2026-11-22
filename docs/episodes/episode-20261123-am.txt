@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth。
+Article URL: https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth Comments URL: https://news.ycombinator.com/item?id=50603845 Points: 58 # Comments: 10。
+第2条，来自Hacker News。Harvard CS 2881R AI Safety。
+Article URL: https://boazbk.github.io/mltheoryseminar/ Comments URL: https://news.ycombinator.com/item?id=50602153 Points: 18 # Comments: 1。
+第3条，来自Hacker News。Perplexity and Intelligence。
+Article URL: https://openai.com/index/perplexity-and-intelligence/ Comments URL: https://news.ycombinator.com/item?id=50601525 Points: 412 # Comments: 278。
+第4条，来自Hacker News。C++26 is done (again): November 2026 ISO C++ meeting trip report。
+Article URL: https://herbsutter.com/2026/11/21/c26-is-done-again-trip-report-november-2026-iso-c-standards-meeting-buzios-brazil/ Comments URL: https://news.ycombinator.com/item?id=50600838 Points: 48。
+第5条，来自Hacker News。Show HN: I built a game where you are an LLM's subagent。
+Article URL: https://github.com/gulivan/worker755 Comments URL: https://news.ycombinator.com/item?id=50599762 Points: 250 # Comments: 58。
+第6条，来自Hacker News。87% of the Anthropic power will come from gas and 11% from coal in 2028。
+Article URL: https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/ Comments URL: https://news.ycombinator.com/item?id=50597612 Points: 813 # Comments: 83。
+第7条，来自TechCrunch。‘You Can See Everything’ has made more than $100M worldwide。
+The new Elizabeth Holmes documentary is just beginning to roll out internationally.。
+以上就是今天的内容，我们明天见。

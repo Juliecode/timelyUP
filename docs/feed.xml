@@ -13,40 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 22 Nov 2026 16:35:10 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 22:41:08 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 科技研发早报</title>
-      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
-
-1. Show HN: An offline desktop companion to help maintain a healthy blink rhythm（来源：Hacker News）
-   https://eyesrhythm.com/
-
-2. The end of Microsoft Research's AI Frontiers group（来源：Hacker News）
-   https://hunch.net/?p=13764006
-
-3. Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller（来源：Hacker News）
-   https://github.com/hedgerow-dev/coldframe
-
-4. MaxxBench – "Nice DeepSWE score. But is it true?"（来源：Hacker News）
-   https://maxxbench.unlap.ai/research/why-maxxbench/
-
-5. How Long Can Life Wait?（来源：Hacker News）
-   https://mceglowski.substack.com/p/how-long-can-life-wait
-
-6. Every processor die anyone has photographed and given away（来源：Hacker News）
-   https://sheets.works/data-viz/cpu-dies
-
-7. They don't make 'em like that any more: Borland Turbo Pascal 7（来源：Hacker News）
-   https://kevinboone.me/tpwin.html</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261108-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261108-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261108-am.mp3" length="1064016" type="audio/mpeg"/>
-      <pubDate>Sat, 07 Nov 2026 22:41:08 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 科技研发早报</title>
       <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
@@ -887,6 +858,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261123-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261123-pm.mp3" length="1136304" type="audio/mpeg"/>
       <pubDate>Sun, 22 Nov 2026 16:35:10 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth（来源：Hacker News）
+   https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth
+
+2. Harvard CS 2881R AI Safety（来源：Hacker News）
+   https://boazbk.github.io/mltheoryseminar/
+
+3. Perplexity and Intelligence（来源：Hacker News）
+   https://openai.com/index/perplexity-and-intelligence/
+
+4. C++26 is done (again): November 2026 ISO C++ meeting trip report（来源：Hacker News）
+   https://herbsutter.com/2026/11/21/c26-is-done-again-trip-report-november-2026-iso-c-standards-meeting-buzios-brazil/
+
+5. Show HN: I built a game where you are an LLM's subagent（来源：Hacker News）
+   https://github.com/gulivan/worker755
+
+6. 87% of the Anthropic power will come from gas and 11% from coal in 2028（来源：Hacker News）
+   https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/
+
+7. ‘You Can See Everything’ has made more than $100M worldwide（来源：TechCrunch）
+   https://techcrunch.com/2026/11/22/you-can-see-everything-has-made-more-than-100m-worldwide/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261123-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261123-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261123-am.mp3" length="1191024" type="audio/mpeg"/>
+      <pubDate>Sun, 22 Nov 2026 22:41:08 +0000</pubDate>
     </item>
   </channel>
 </rss>
