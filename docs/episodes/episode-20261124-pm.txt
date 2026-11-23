@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自arXiv cs.AI。Adding One More Agent: How AI Team Size and Formation Shape Productivity and Diversity in Human-AI Brainstorming Teams。
+arXiv:2611.26663v1 Announce Type: new Abstract: Generative AI has improved individual productivity, but whether adding a plurality of AI partners helps or hurts remains open. We crossed AI partnership。
+第2条，来自arXiv cs.AI。Coherence by Construction: Synthesizing CTI Knowledge Graphs and the Formal Limits of Coherence Validation。
+arXiv:2611.26717v1 Announce Type: new Abstract: Synthesizing relational training data such as knowledge graphs with a large language model typically emits structured objects one at a time, which keeps。
+第3条，来自arXiv cs.AI。TOUMAII: A 4.5M-Pair Tool-Calling Preference Dataset and Its Source-Agnostic Generator。
+arXiv:2611.26722v1 Announce Type: new Abstract: To autonomously execute multi-step tasks, enterprise agents must reliably interact with tools, call APIs, or query databases, making tool-calling a fund。
+第4条，来自arXiv cs.AI。ChatAtom: A Multi-Agent LLM System for Molecular Dynamics Simulation and Visualization。
+arXiv:2611.26782v1 Announce Type: new Abstract: Molecular dynamics (MD) simulation resolves atomic-scale motion and predicts the structural, mechanical, and dynamic properties of materials, making it 。
+第5条，来自arXiv cs.AI。Beyond Final Answers: Interpretable Tumor Immune Microenvironment Reasoning from H&E and mIF。
+arXiv:2611.26794v1 Announce Type: new Abstract: Readouts of the tumor immune microenvironment (TIME), such as CD8+ T-cell density, intra-epithelial infiltration and the Ki67 index, combine tissue arch。
+第6条，来自arXiv cs.AI。Memorization and Generalization in Generative Models: A Perspective From Energy-based Modeling and Associative Memory。
+arXiv:2611.26797v1 Announce Type: new Abstract: Generative models now write working code, produce realistic images, and hold long conversations, yet the mechanisms behind their intelligence still evad。
+第7条，来自arXiv cs.AI。Beyond Demographic Discrimination: Benchmarking Normative-Descriptive Calibration in LLMs。
+arXiv:2611.26870v1 Announce Type: new Abstract: Large language models (LLMs) are increasingly deployed in socially consequential settings, where they must distinguish between normative reasoning (what。
+以上就是今天的内容，我们明天见。

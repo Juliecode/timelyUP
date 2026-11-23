@@ -13,40 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 22 Nov 2026 22:41:08 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 20:29:34 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 科技研发早报</title>
-      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
-
-1. Apple CEO Presses Software Chief to Pursue More Ambitious AI Strategy（来源：Hacker News）
-   https://www.bloomberg.com/news/newsletters/2026-11-08/apple-explores-turning-siri-ai-into-chatgpt-dots-like-agent-ios-28-shake-up
-
-2. OpenAI raises $11B at a $1.25T valuation（来源：Hacker News）
-   https://247wallst.com/investing/2026/11/07/openai-just-raised-11-billion-at-a-1-25-trillion-valuation-below-the-1-4-trillion-it-first-sought/
-
-3. Consumer brain wave headsets threaten privacy（来源：Hacker News）
-   https://www.science.org/content/article/wearable-device-makers-are-harvesting-brain-data-train-ai-without-telling-users?referrer=https%3A%2F%2Fwww.google.com%2F
-
-4. GitHub New pull request overview page in public preview（来源：Hacker News）
-   https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview/
-
-5. Claude Code's "Don't Ask Again" exposes passwords in 1,122 public GitHub files（来源：Hacker News）
-   https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again
-
-6. Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller（来源：Hacker News）
-   https://github.com/hedgerow-dev/coldframe
-
-7. MaxxBench – "Nice DeepSWE score. But is it true?"（来源：Hacker News）
-   https://maxxbench.unlap.ai/research/why-maxxbench/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261109-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261109-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261109-pm.mp3" length="1341792" type="audio/mpeg"/>
-      <pubDate>Sun, 08 Nov 2026 16:04:32 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 科技研发早报</title>
       <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
@@ -887,6 +858,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261123-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261123-am.mp3" length="1191024" type="audio/mpeg"/>
       <pubDate>Sun, 22 Nov 2026 22:41:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. Adding One More Agent: How AI Team Size and Formation Shape Productivity and Diversity in Human-AI Brainstorming Teams（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.26663
+
+2. Coherence by Construction: Synthesizing CTI Knowledge Graphs and the Formal Limits of Coherence Validation（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.26717
+
+3. TOUMAII: A 4.5M-Pair Tool-Calling Preference Dataset and Its Source-Agnostic Generator（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.26722
+
+4. ChatAtom: A Multi-Agent LLM System for Molecular Dynamics Simulation and Visualization（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.26782
+
+5. Beyond Final Answers: Interpretable Tumor Immune Microenvironment Reasoning from H&amp;E and mIF（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.26794
+
+6. Memorization and Generalization in Generative Models: A Perspective From Energy-based Modeling and Associative Memory（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.26797
+
+7. Beyond Demographic Discrimination: Benchmarking Normative-Descriptive Calibration in LLMs（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.26870</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261124-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261124-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261124-pm.mp3" length="1006416" type="audio/mpeg"/>
+      <pubDate>Mon, 23 Nov 2026 20:29:34 +0000</pubDate>
     </item>
   </channel>
 </rss>
