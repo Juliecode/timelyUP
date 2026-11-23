@@ -1,5 +1,18 @@
 [
   {
+    "id": "2026-11-24-am",
+    "date": "2026-11-24",
+    "slot": "am",
+    "title": "晨报 · 科技研发早报",
+    "notes": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n\n1. Adding One More Agent: How AI Team Size and Formation Shape Productivity and Diversity in Human-AI Brainstorming Teams（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.26663\n\n2. Coherence by Construction: Synthesizing CTI Knowledge Graphs and the Formal Limits of Coherence Validation（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.26717\n\n3. TOUMAII: A 4.5M-Pair Tool-Calling Preference Dataset and Its Source-Agnostic Generator（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.26722\n\n4. ChatAtom: A Multi-Agent LLM System for Molecular Dynamics Simulation and Visualization（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.26782\n\n5. Beyond Final Answers: Interpretable Tumor Immune Microenvironment Reasoning from H&E and mIF（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.26794\n\n6. Memorization and Generalization in Generative Models: A Perspective From Energy-based Modeling and Associative Memory（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.26797\n\n7. Beyond Demographic Discrimination: Benchmarking Normative-Descriptive Calibration in LLMs（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.26870",
+    "script": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n第1条，来自arXiv cs.AI。Adding One More Agent: How AI Team Size and Formation Shape Productivity and Diversity in Human-AI Brainstorming Teams。\narXiv:2611.26663v1 Announce Type: new Abstract: Generative AI has improved individual productivity, but whether adding a plurality of AI partners helps or hurts remains open. We crossed AI partnership。\n第2条，来自arXiv cs.AI。Coherence by Construction: Synthesizing CTI Knowledge Graphs and the Formal Limits of Coherence Validation。\narXiv:2611.26717v1 Announce Type: new Abstract: Synthesizing relational training data such as knowledge graphs with a large language model typically emits structured objects one at a time, which keeps。\n第3条，来自arXiv cs.AI。TOUMAII: A 4.5M-Pair Tool-Calling Preference Dataset and Its Source-Agnostic Generator。\narXiv:2611.26722v1 Announce Type: new Abstract: To autonomously execute multi-step tasks, enterprise agents must reliably interact with tools, call APIs, or query databases, making tool-calling a fund。\n第4条，来自arXiv cs.AI。ChatAtom: A Multi-Agent LLM System for Molecular Dynamics Simulation and Visualization。\narXiv:2611.26782v1 Announce Type: new Abstract: Molecular dynamics (MD) simulation resolves atomic-scale motion and predicts the structural, mechanical, and dynamic properties of materials, making it 。\n第5条，来自arXiv cs.AI。Beyond Final Answers: Interpretable Tumor Immune Microenvironment Reasoning from H&E and mIF。\narXiv:2611.26794v1 Announce Type: new Abstract: Readouts of the tumor immune microenvironment (TIME), such as CD8+ T-cell density, intra-epithelial infiltration and the Ki67 index, combine tissue arch。\n第6条，来自arXiv cs.AI。Memorization and Generalization in Generative Models: A Perspective From Energy-based Modeling and Associative Memory。\narXiv:2611.26797v1 Announce Type: new Abstract: Generative models now write working code, produce realistic images, and hold long conversations, yet the mechanisms behind their intelligence still evad。\n第7条，来自arXiv cs.AI。Beyond Demographic Discrimination: Benchmarking Normative-Descriptive Calibration in LLMs。\narXiv:2611.26870v1 Announce Type: new Abstract: Large language models (LLMs) are increasingly deployed in socially consequential settings, where they must distinguish between normative reasoning (what。\n以上就是今天的内容，我们明天见。",
+    "file": "episode-20261124-am.mp3",
+    "transcript": "episode-20261124-am.txt",
+    "vtt": "episode-20261124-am.vtt",
+    "bytes": 1006416,
+    "pub": "2026-11-23T22:41:18.190247+00:00"
+  },
+  {
     "id": "2026-11-24-pm",
     "date": "2026-11-24",
     "slot": "pm",
@@ -375,18 +388,5 @@
     "vtt": "episode-20261110-pm.vtt",
     "bytes": 932544,
     "pub": "2026-11-09T19:03:56.072580+00:00"
-  },
-  {
-    "id": "2026-11-09-am",
-    "date": "2026-11-09",
-    "slot": "am",
-    "title": "晨报 · 科技研发早报",
-    "notes": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n\n1. The Web Is More Than Enough, by Paul Ford（来源：Hacker News）\n   https://ftrain.com/aboard-the-web-is-more-than-enough\n\n2. How I Fight AI Brain Fry（来源：Hacker News）\n   https://sergeykuhne.com/blog/fighting-ai-brain-fry\n\n3. Outlook.com Is Quietly Rejecting Email from Domains Without DMARC（来源：Hacker News）\n   https://mailroute.net/blog/outlook-rejecting-email-without-dmarc\n\n4. Dux: Free, open-source Wayland desktop shell with file manager and theming（来源：Hacker News）\n   https://duxlabs.dev/\n\n5. Playing Zork 1 on a CP/M emulator on Linux (2021)（来源：Hacker News）\n   https://kevinboone.me/cpmzork.html\n\n6. Goldman Sachs is pulling Claude Code from its bankers and traders（来源：Hacker News）\n   https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers\n\n7. Nvidia will investigate CEO Jensen Huang’s relationship with possible Chinese spy（来源：TechCrunch）\n   https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/",
-    "script": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n第1条，来自Hacker News。The Web Is More Than Enough, by Paul Ford。\nArticle URL: https://ftrain.com/aboard-the-web-is-more-than-enough Comments URL: https://news.ycombinator.com/item?id=50416456 Points: 23 # Comments: 10。\n第2条，来自Hacker News。How I Fight AI Brain Fry。\nArticle URL: https://sergeykuhne.com/blog/fighting-ai-brain-fry Comments URL: https://news.ycombinator.com/item?id=50416363 Points: 106 # Comments: 90。\n第3条，来自Hacker News。Outlook.com Is Quietly Rejecting Email from Domains Without DMARC。\nArticle URL: https://mailroute.net/blog/outlook-rejecting-email-without-dmarc Comments URL: https://news.ycombinator.com/item?id=50416158 Points: 143 # Comments: 116。\n第4条，来自Hacker News。Dux: Free, open-source Wayland desktop shell with file manager and theming。\nArticle URL: https://duxlabs.dev/ Comments URL: https://news.ycombinator.com/item?id=50416053 Points: 117 # Comments: 40。\n第5条，来自Hacker News。Playing Zork 1 on a CP/M emulator on Linux (2021)。\nArticle URL: https://kevinboone.me/cpmzork.html Comments URL: https://news.ycombinator.com/item?id=50415750 Points: 21 # Comments: 11。\n第6条，来自Hacker News。Goldman Sachs is pulling Claude Code from its bankers and traders。\nArticle URL: https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers Comments URL: https://news.ycombinator.com/item?id=50415628 Points: 483 # Comments: 300。\n第7条，来自TechCrunch。Nvidia will investigate CEO Jensen Huang’s relationship with possible Chinese spy。\nIn a memo to the company, Huang admitted that he had an affair.。\n以上就是今天的内容，我们明天见。",
-    "file": "episode-20261109-am.mp3",
-    "transcript": "episode-20261109-am.txt",
-    "vtt": "episode-20261109-am.vtt",
-    "bytes": 1046304,
-    "pub": "2026-11-08T22:41:51.460462+00:00"
   }
 ]

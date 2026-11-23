@@ -1,0 +1,101 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:02.828
+欢迎收听今天的科技研发早报。
+
+2
+00:00:02.828 --> 00:00:06.053
+以下是今天精选的几条前沿进展。
+
+3
+00:00:06.053 --> 00:00:09.236
+第1条，来自arXiv cs.AI。
+
+4
+00:00:09.236 --> 00:00:15.845
+Adding One More Agent: How AI Team Size and Formation Shape Productivity and Diversity in Human-AI Brainstorming Teams。
+
+5
+00:00:15.845 --> 00:00:28.125
+arXiv:2611.26663v1 Announce Type: new Abstract: Generative AI has improved individual productivity, but whether adding a plurality of AI partners helps or hurts remains open.
+
+6
+00:00:28.125 --> 00:00:30.081
+We crossed AI partnership。
+
+7
+00:00:30.081 --> 00:00:33.391
+第2条，来自arXiv cs.AI。
+
+8
+00:00:33.391 --> 00:00:39.120
+Coherence by Construction: Synthesizing CTI Knowledge Graphs and the Formal Limits of Coherence Validation。
+
+9
+00:00:39.120 --> 00:00:51.944
+arXiv:2611.26717v1 Announce Type: new Abstract: Synthesizing relational training data such as knowledge graphs with a large language model typically emits structured objects one at a time, which keeps。
+
+10
+00:00:51.944 --> 00:00:55.301
+第3条，来自arXiv cs.AI。
+
+11
+00:00:55.301 --> 00:01:00.405
+TOUMAII: A 4.5M-Pair Tool-Calling Preference Dataset and Its Source-Agnostic Generator。
+
+12
+00:01:00.405 --> 00:01:14.602
+arXiv:2611.26722v1 Announce Type: new Abstract: To autonomously execute multi-step tasks, enterprise agents must reliably interact with tools, call APIs, or query databases, making tool-calling a fund。
+
+13
+00:01:14.602 --> 00:01:17.970
+第4条，来自arXiv cs.AI。
+
+14
+00:01:17.970 --> 00:01:23.144
+ChatAtom: A Multi-Agent LLM System for Molecular Dynamics Simulation and Visualization。
+
+15
+00:01:23.144 --> 00:01:36.473
+arXiv:2611.26782v1 Announce Type: new Abstract: Molecular dynamics (MD) simulation resolves atomic-scale motion and predicts the structural, mechanical, and dynamic properties of materials, making it 。
+
+16
+00:01:36.473 --> 00:01:39.772
+第5条，来自arXiv cs.AI。
+
+17
+00:01:39.772 --> 00:01:45.628
+Beyond Final Answers: Interpretable Tumor Immune Microenvironment Reasoning from H&E and mIF。
+
+18
+00:01:45.628 --> 00:02:00.763
+arXiv:2611.26794v1 Announce Type: new Abstract: Readouts of the tumor immune microenvironment (TIME), such as CD8+ T-cell density, intra-epithelial infiltration and the Ki67 index, combine tissue arch。
+
+19
+00:02:00.763 --> 00:02:04.027
+第6条，来自arXiv cs.AI。
+
+20
+00:02:04.027 --> 00:02:10.069
+Memorization and Generalization in Generative Models: A Perspective From Energy-based Modeling and Associative Memory。
+
+21
+00:02:10.204 --> 00:02:23.811
+arXiv:2611.26797v1 Announce Type: new Abstract: Generative models now write working code, produce realistic images, and hold long conversations, yet the mechanisms behind their intelligence still evad。
+
+22
+00:02:23.811 --> 00:02:27.129
+第7条，来自arXiv cs.AI。
+
+23
+00:02:27.129 --> 00:02:32.396
+Beyond Demographic Discrimination: Benchmarking Normative-Descriptive Calibration in LLMs。
+
+24
+00:02:32.396 --> 00:02:44.873
+arXiv:2611.26870v1 Announce Type: new Abstract: Large language models (LLMs) are increasingly deployed in socially consequential settings, where they must distinguish between normative reasoning (what。
+
+25
+00:02:44.873 --> 00:02:47.685
+以上就是今天的内容，我们明天见。
