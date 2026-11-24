@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。GPT-6 models demonstrate intrinsic protein-design capabilities。
+Article URL: https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/ Comments URL: https://news.ycombinator.com/item?id=50634658 Points: 55 # Comments: 6。
+第2条，来自Hacker News。Launch HN: Versine (YC F26) – MCP to send and receive money。
+Hey HN, we’re Harshith, Param, and Vishnu and we're building Versine ( https://versine.com ). Versine lets you send and request money just by talking or texting with your AI (think Venmo with an MCP).。
+第3条，来自Hacker News。Ternary Bonsai 2.5 27B。
+Article URL: https://prismml.com/news/bonsai-2-5-27b Comments URL: https://news.ycombinator.com/item?id=50633922 Points: 205 # Comments: 62。
+第4条，来自Hacker News。Weave (YC W25) is hiring ML, AI, product, & design engineers。
+Article URL: https://jobs.ashbyhq.com/weave-os Comments URL: https://news.ycombinator.com/item?id=50631041 Points: 0 # Comments: 0。
+第5条，来自Hacker News。Active intrusion campaign against Check Point security management servers。
+Article URL: https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign Comments URL: https://news.ycombinator.com/item?id=50630594 Points: 236 # Comments: 96。
+第6条，来自Hacker News。Show HN: Mason – A lightweight Postgres read-replica, built on columnar storage。
+Hi HN! TLDR: we’ve built an open-source drop-in replacement for a postgres read-replica, powered by duckdb’s columnar compute engine. It’s very fast. And it looks like postgres. So, this started out a。
+第7条，来自Hacker News。The KL Divergence Is Never Negative, Except in PyTorch。
+Article URL: https://arxiv.org/abs/2611.30835 Comments URL: https://news.ycombinator.com/item?id=50629962 Points: 75 # Comments: 30。
+以上就是今天的内容，我们明天见。

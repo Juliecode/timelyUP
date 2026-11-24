@@ -1,0 +1,113 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:02.828
+欢迎收听今天的科技研发早报。
+
+2
+00:00:02.828 --> 00:00:06.053
+以下是今天精选的几条前沿进展。
+
+3
+00:00:06.053 --> 00:00:08.322
+第1条，来自Hacker News。
+
+4
+00:00:08.322 --> 00:00:12.523
+GPT-6 models demonstrate intrinsic protein-design capabilities。
+
+5
+00:00:12.523 --> 00:00:37.461
+Article URL: https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/ Comments URL: https://news.ycombinator.com/item?id=50634658 Points: 55 # Comments: 6。
+
+6
+00:00:37.461 --> 00:00:39.730
+第2条，来自Hacker News。
+
+7
+00:00:39.730 --> 00:00:44.683
+Launch HN: Versine (YC F26) – MCP to send and receive money。
+
+8
+00:00:44.683 --> 00:00:52.322
+Hey HN, we’re Harshith, Param, and Vishnu and we're building Versine ( https://versine.com ).
+
+9
+00:00:52.322 --> 00:00:58.271
+Versine lets you send and request money just by talking or texting with your AI (think Venmo with an MCP).
+
+10
+00:00:58.271 --> 00:01:00.656
+第3条，来自Hacker News。
+
+11
+00:01:00.656 --> 00:01:03.341
+Ternary Bonsai 2.5 27B。
+
+12
+00:01:03.341 --> 00:01:23.290
+Article URL: https://prismml.com/news/bonsai-2-5-27b Comments URL: https://news.ycombinator.com/item?id=50633922 Points: 205 # Comments: 62。
+
+13
+00:01:23.290 --> 00:01:25.698
+第4条，来自Hacker News。
+
+14
+00:01:25.698 --> 00:01:31.681
+Weave (YC W25) is hiring ML, AI, product, & design engineers。
+
+15
+00:01:31.681 --> 00:01:49.038
+Article URL: https://jobs.ashbyhq.com/weave-os Comments URL: https://news.ycombinator.com/item?id=50631041 Points: 0 # Comments: 0。
+
+16
+00:01:49.038 --> 00:01:51.388
+第5条，来自Hacker News。
+
+17
+00:01:51.388 --> 00:01:55.277
+Active intrusion campaign against Check Point security management servers。
+
+18
+00:01:55.277 --> 00:02:19.046
+Article URL: https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign Comments URL: https://news.ycombinator.com/item?id=50630594 Points: 236 # Comments: 96。
+
+19
+00:02:19.046 --> 00:02:21.361
+第6条，来自Hacker News。
+
+20
+00:02:21.361 --> 00:02:26.083
+Show HN: Mason – A lightweight Postgres read-replica, built on columnar storage。
+
+21
+00:02:26.083 --> 00:02:27.310
+Hi HN!
+
+22
+00:02:27.310 --> 00:02:33.861
+TLDR: we’ve built an open-source drop-in replacement for a postgres read-replica, powered by duckdb’s columnar compute engine.
+
+23
+00:02:33.861 --> 00:02:37.032
+It’s very fast.And it looks like postgres.
+
+24
+00:02:37.032 --> 00:02:39.046
+So, this started out a。
+
+25
+00:02:39.046 --> 00:02:41.430
+第7条，来自Hacker News。
+
+26
+00:02:41.430 --> 00:02:45.076
+The KL Divergence Is Never Negative, Except in PyTorch。
+
+27
+00:02:45.076 --> 00:03:03.972
+Article URL: https://arxiv.org/abs/2611.30835 Comments URL: https://news.ycombinator.com/item?id=50629962 Points: 75 # Comments: 30。
+
+28
+00:03:03.972 --> 00:03:06.785
+以上就是今天的内容，我们明天见。

@@ -1,5 +1,18 @@
 [
   {
+    "id": "2026-11-25-am",
+    "date": "2026-11-25",
+    "slot": "am",
+    "title": "晨报 · 科技研发早报",
+    "notes": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n\n1. GPT-6 models demonstrate intrinsic protein-design capabilities（来源：Hacker News）\n   https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/\n\n2. Launch HN: Versine (YC F26) – MCP to send and receive money（来源：Hacker News）\n   https://news.ycombinator.com/item?id=50634426\n\n3. Ternary Bonsai 2.5 27B（来源：Hacker News）\n   https://prismml.com/news/bonsai-2-5-27b\n\n4. Weave (YC W25) is hiring ML, AI, product, & design engineers（来源：Hacker News）\n   https://jobs.ashbyhq.com/weave-os\n\n5. Active intrusion campaign against Check Point security management servers（来源：Hacker News）\n   https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign\n\n6. Show HN: Mason – A lightweight Postgres read-replica, built on columnar storage（来源：Hacker News）\n   https://masondata.ai/\n\n7. The KL Divergence Is Never Negative, Except in PyTorch（来源：Hacker News）\n   https://arxiv.org/abs/2611.30835",
+    "script": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n第1条，来自Hacker News。GPT-6 models demonstrate intrinsic protein-design capabilities。\nArticle URL: https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/ Comments URL: https://news.ycombinator.com/item?id=50634658 Points: 55 # Comments: 6。\n第2条，来自Hacker News。Launch HN: Versine (YC F26) – MCP to send and receive money。\nHey HN, we’re Harshith, Param, and Vishnu and we're building Versine ( https://versine.com ). Versine lets you send and request money just by talking or texting with your AI (think Venmo with an MCP).。\n第3条，来自Hacker News。Ternary Bonsai 2.5 27B。\nArticle URL: https://prismml.com/news/bonsai-2-5-27b Comments URL: https://news.ycombinator.com/item?id=50633922 Points: 205 # Comments: 62。\n第4条，来自Hacker News。Weave (YC W25) is hiring ML, AI, product, & design engineers。\nArticle URL: https://jobs.ashbyhq.com/weave-os Comments URL: https://news.ycombinator.com/item?id=50631041 Points: 0 # Comments: 0。\n第5条，来自Hacker News。Active intrusion campaign against Check Point security management servers。\nArticle URL: https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign Comments URL: https://news.ycombinator.com/item?id=50630594 Points: 236 # Comments: 96。\n第6条，来自Hacker News。Show HN: Mason – A lightweight Postgres read-replica, built on columnar storage。\nHi HN! TLDR: we’ve built an open-source drop-in replacement for a postgres read-replica, powered by duckdb’s columnar compute engine. It’s very fast. And it looks like postgres. So, this started out a。\n第7条，来自Hacker News。The KL Divergence Is Never Negative, Except in PyTorch。\nArticle URL: https://arxiv.org/abs/2611.30835 Comments URL: https://news.ycombinator.com/item?id=50629962 Points: 75 # Comments: 30。\n以上就是今天的内容，我们明天见。",
+    "file": "episode-20261125-am.mp3",
+    "transcript": "episode-20261125-am.txt",
+    "vtt": "episode-20261125-am.vtt",
+    "bytes": 1120896,
+    "pub": "2026-11-24T22:41:57.404522+00:00"
+  },
+  {
     "id": "2026-11-25-pm",
     "date": "2026-11-25",
     "slot": "pm",
@@ -375,18 +388,5 @@
     "vtt": "episode-20261111-pm.vtt",
     "bytes": 1060704,
     "pub": "2026-11-10T16:34:50.555411+00:00"
-  },
-  {
-    "id": "2026-11-10-am",
-    "date": "2026-11-10",
-    "slot": "am",
-    "title": "晨报 · 科技研发早报",
-    "notes": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n\n1. Q-OIL: Optimistic Exploration in Learning from Human Interventions（来源：arXiv cs.RO）\n   https://arxiv.org/abs/2611.08576\n\n2. Meituan-Robotics-0: A Vision-Language-Action Foundation Model for Desktop Manipulation（来源：arXiv cs.RO）\n   https://arxiv.org/abs/2611.08577\n\n3. CS-Pi: Constraint-Satisfying Flow Policy Sampling（来源：arXiv cs.RO）\n   https://arxiv.org/abs/2611.08654\n\n4. ForPC: Force-Aware Whole-Body Control for Precise Humanoid Cart Pushing（来源：arXiv cs.RO）\n   https://arxiv.org/abs/2611.08664\n\n5. National and State-Level Approaches to Automated Vehicle Certification: A Comparative Framework for State Operational Governance（来源：arXiv cs.RO）\n   https://arxiv.org/abs/2611.08681\n\n6. VICTR: Value-Informed In-Context Learning for Vision-Language-Action Models（来源：arXiv cs.RO）\n   https://arxiv.org/abs/2611.08698\n\n7. It Takes Two to Tangram: Multi-Agent Object Centric Reinforcement Learning for Assembly（来源：arXiv cs.RO）\n   https://arxiv.org/abs/2611.08814",
-    "script": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n第1条，来自arXiv cs.RO。Q-OIL: Optimistic Exploration in Learning from Human Interventions。\narXiv:2611.08576v1 Announce Type: new Abstract: As robots are deployed in the real world, they will inevitably make mistakes. Human interventions provide valuable feedback for improving their behavior。\n第2条，来自arXiv cs.RO。Meituan-Robotics-0: A Vision-Language-Action Foundation Model for Desktop Manipulation。\narXiv:2611.08577v1 Announce Type: new Abstract: We present Meituan-Robotics-0 (MR0), a vision-language-action foundation model and embodied-agent system for stationary-base desktop manipulation. MR0 c。\n第3条，来自arXiv cs.RO。CS-Pi: Constraint-Satisfying Flow Policy Sampling。\narXiv:2611.08654v1 Announce Type: new Abstract: A flow-matching policy deployed in the field must often satisfy a constraint that was absent from its demonstrations, such as avoiding an obstacle it ha。\n第4条，来自arXiv cs.RO。ForPC: Force-Aware Whole-Body Control for Precise Humanoid Cart Pushing。\narXiv:2611.08664v1 Announce Type: new Abstract: Humanoid robots are expected to take over strenuous material handling in manufacturing, logistics, and healthcare, where operating existing wheeled cart。\n第5条，来自arXiv cs.RO。National and State-Level Approaches to Automated Vehicle Certification: A Comparative Framework for State Operational Governance。\narXiv:2611.08681v1 Announce Type: new Abstract: Automated vehicle (AV) deployment in the United States is expanding without a unified federal certification framework, leading to substantial variation 。\n第6条，来自arXiv cs.RO。VICTR: Value-Informed In-Context Learning for Vision-Language-Action Models。\narXiv:2611.08698v1 Announce Type: new Abstract: Recent advances in robot foundation models have highlighted the potential of in-context learning (ICL) for adapting robot behavior from demonstrations w。\n第7条，来自arXiv cs.RO。It Takes Two to Tangram: Multi-Agent Object Centric Reinforcement Learning for Assembly。\narXiv:2611.08814v1 Announce Type: new Abstract: Geometric assembly requires fine spatiotemporal coordination to place parts without causing collisions or deadlocks under tight clearances. To address t。\n以上就是今天的内容，我们明天见。",
-    "file": "episode-20261110-am.mp3",
-    "transcript": "episode-20261110-am.txt",
-    "vtt": "episode-20261110-am.vtt",
-    "bytes": 932544,
-    "pub": "2026-11-09T22:40:53.443853+00:00"
   }
 ]
