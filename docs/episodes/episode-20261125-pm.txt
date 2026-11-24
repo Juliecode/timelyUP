@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。Compiling Web Applications into Verified Operations for AI Agents。
+Article URL: https://protocolis.co/paper/ Comments URL: https://news.ycombinator.com/item?id=50632998 Points: 4 # Comments: 0。
+第2条，来自Hacker News。OpenAI reveals they solved VP ≠ VNP before Anthropic。
+Article URL: https://github.com/openai/math/tree/main/preprints/VP-and-VNP-are-different-November-23-2026 Comments URL: https://news.ycombinator.com/item?id=50632756 Points: 45 # Comments: 31。
+第3条，来自Hacker News。Weave (YC W25) is hiring ML, AI, product, & design engineers。
+Article URL: https://jobs.ashbyhq.com/weave-os Comments URL: https://news.ycombinator.com/item?id=50631041 Points: 0 # Comments: 0。
+第4条，来自Hacker News。Ask HN: Anthropic is accusing my company of distilling. How can I prove I'm not?。
+Basically the title. Anthropic is accusing me and my company of using their API for distillation. We are not. We do not train our own models. Our only usage which I think could get us flagged is autom。
+第5条，来自Hacker News。Active Intrusion Campaign Against Check Point Security Management Servers。
+Article URL: https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign Comments URL: https://news.ycombinator.com/item?id=50630594 Points: 193 # Comments: 64。
+第6条，来自Hacker News。Show HN: Mason – a lightweight Postgres read-replica, built on columnar storage。
+Hi HN! TLDR: we’ve built an open-source drop-in replacement for a postgres read-replica, powered by duckdb’s columnar compute engine. It’s very fast. And it looks like postgres. So, this started out a。
+第7条，来自Hacker News。The KL Divergence Is Never Negative, Except in PyTorch。
+Article URL: https://arxiv.org/abs/2611.30835 Comments URL: https://news.ycombinator.com/item?id=50629962 Points: 55 # Comments: 18。
+以上就是今天的内容，我们明天见。

@@ -1,0 +1,125 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:02.828
+欢迎收听今天的科技研发早报。
+
+2
+00:00:02.828 --> 00:00:06.053
+以下是今天精选的几条前沿进展。
+
+3
+00:00:06.053 --> 00:00:08.322
+第1条，来自Hacker News。
+
+4
+00:00:08.322 --> 00:00:12.523
+Compiling Web Applications into Verified Operations for AI Agents。
+
+5
+00:00:12.523 --> 00:00:29.452
+Article URL: https://protocolis.co/paper/ Comments URL: https://news.ycombinator.com/item?id=50632998 Points: 4 # Comments: 0。
+
+6
+00:00:29.452 --> 00:00:31.720
+第2条，来自Hacker News。
+
+7
+00:00:31.720 --> 00:00:36.072
+OpenAI reveals they solved VP ≠ VNP before Anthropic。
+
+8
+00:00:36.072 --> 00:01:03.321
+Article URL: https://github.com/openai/math/tree/main/preprints/VP-and-VNP-are-different-November-23-2026 Comments URL: https://news.ycombinator.com/item?id=50632756 Points: 45 # Comments: 31。
+
+9
+00:01:03.321 --> 00:01:05.705
+第3条，来自Hacker News。
+
+10
+00:01:05.705 --> 00:01:11.689
+Weave (YC W25) is hiring ML, AI, product, & design engineers。
+
+11
+00:01:11.689 --> 00:01:29.046
+Article URL: https://jobs.ashbyhq.com/weave-os Comments URL: https://news.ycombinator.com/item?id=50631041 Points: 0 # Comments: 0。
+
+12
+00:01:29.046 --> 00:01:31.453
+第4条，来自Hacker News。
+
+13
+00:01:31.453 --> 00:01:35.215
+Ask HN: Anthropic is accusing my company of distilling.
+
+14
+00:01:35.215 --> 00:01:36.789
+How can I prove I'm not?
+
+15
+00:01:36.789 --> 00:01:38.340
+Basically the title.
+
+16
+00:01:38.340 --> 00:01:42.738
+Anthropic is accusing me and my company of using their API for distillation.
+
+17
+00:01:42.738 --> 00:01:45.909
+We are not.We do not train our own models.
+
+18
+00:01:45.909 --> 00:01:49.162
+Our only usage which I think could get us flagged is autom。
+
+19
+00:01:49.162 --> 00:01:51.511
+第5条，来自Hacker News。
+
+20
+00:01:51.511 --> 00:01:55.400
+Active Intrusion Campaign Against Check Point Security Management Servers。
+
+21
+00:01:55.400 --> 00:02:19.100
+Article URL: https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign Comments URL: https://news.ycombinator.com/item?id=50630594 Points: 193 # Comments: 64。
+
+22
+00:02:19.100 --> 00:02:21.414
+第6条，来自Hacker News。
+
+23
+00:02:21.414 --> 00:02:26.160
+Show HN: Mason – a lightweight Postgres read-replica, built on columnar storage。
+
+24
+00:02:26.160 --> 00:02:27.387
+Hi HN!
+
+25
+00:02:27.387 --> 00:02:33.937
+TLDR: we’ve built an open-source drop-in replacement for a postgres read-replica, powered by duckdb’s columnar compute engine.
+
+26
+00:02:33.937 --> 00:02:37.109
+It’s very fast.And it looks like postgres.
+
+27
+00:02:37.109 --> 00:02:39.123
+So, this started out a。
+
+28
+00:02:39.123 --> 00:02:41.507
+第7条，来自Hacker News。
+
+29
+00:02:41.507 --> 00:02:45.153
+The KL Divergence Is Never Negative, Except in PyTorch。
+
+30
+00:02:45.268 --> 00:03:03.972
+Article URL: https://arxiv.org/abs/2611.30835 Comments URL: https://news.ycombinator.com/item?id=50629962 Points: 55 # Comments: 18。
+
+31
+00:03:03.972 --> 00:03:06.784
+以上就是今天的内容，我们明天见。

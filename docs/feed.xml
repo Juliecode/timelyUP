@@ -13,40 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 23 Nov 2026 22:41:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 19:40:46 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 科技研发早报</title>
-      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
-
-1. Q-OIL: Optimistic Exploration in Learning from Human Interventions（来源：arXiv cs.RO）
-   https://arxiv.org/abs/2611.08576
-
-2. Meituan-Robotics-0: A Vision-Language-Action Foundation Model for Desktop Manipulation（来源：arXiv cs.RO）
-   https://arxiv.org/abs/2611.08577
-
-3. CS-Pi: Constraint-Satisfying Flow Policy Sampling（来源：arXiv cs.RO）
-   https://arxiv.org/abs/2611.08654
-
-4. ForPC: Force-Aware Whole-Body Control for Precise Humanoid Cart Pushing（来源：arXiv cs.RO）
-   https://arxiv.org/abs/2611.08664
-
-5. National and State-Level Approaches to Automated Vehicle Certification: A Comparative Framework for State Operational Governance（来源：arXiv cs.RO）
-   https://arxiv.org/abs/2611.08681
-
-6. VICTR: Value-Informed In-Context Learning for Vision-Language-Action Models（来源：arXiv cs.RO）
-   https://arxiv.org/abs/2611.08698
-
-7. It Takes Two to Tangram: Multi-Agent Object Centric Reinforcement Learning for Assembly（来源：arXiv cs.RO）
-   https://arxiv.org/abs/2611.08814</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261110-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261110-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261110-pm.mp3" length="932544" type="audio/mpeg"/>
-      <pubDate>Mon, 09 Nov 2026 19:03:56 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 科技研发早报</title>
       <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
@@ -887,6 +858,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261124-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261124-am.mp3" length="1006416" type="audio/mpeg"/>
       <pubDate>Mon, 23 Nov 2026 22:41:18 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. Compiling Web Applications into Verified Operations for AI Agents（来源：Hacker News）
+   https://protocolis.co/paper/
+
+2. OpenAI reveals they solved VP ≠ VNP before Anthropic（来源：Hacker News）
+   https://github.com/openai/math/tree/main/preprints/VP-and-VNP-are-different-November-23-2026
+
+3. Weave (YC W25) is hiring ML, AI, product, &amp; design engineers（来源：Hacker News）
+   https://jobs.ashbyhq.com/weave-os
+
+4. Ask HN: Anthropic is accusing my company of distilling. How can I prove I'm not?（来源：Hacker News）
+   https://news.ycombinator.com/item?id=50630809
+
+5. Active Intrusion Campaign Against Check Point Security Management Servers（来源：Hacker News）
+   https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign
+
+6. Show HN: Mason – a lightweight Postgres read-replica, built on columnar storage（来源：Hacker News）
+   https://masondata.ai/
+
+7. The KL Divergence Is Never Negative, Except in PyTorch（来源：Hacker News）
+   https://arxiv.org/abs/2611.30835</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261125-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261125-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261125-pm.mp3" length="1120896" type="audio/mpeg"/>
+      <pubDate>Tue, 24 Nov 2026 19:40:46 +0000</pubDate>
     </item>
   </channel>
 </rss>
