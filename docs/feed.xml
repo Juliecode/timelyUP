@@ -13,40 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 25 Nov 2026 18:48:49 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 22:41:45 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 科技研发早报</title>
-      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
-
-1. Apple has new Mac app coming to make running local AI models easy（来源：Hacker News）
-   https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/
-
-2. What objective is reasoning solving?（来源：Hacker News）
-   https://alexwang.ai/posts/reasoning-as-pathfinding/
-
-3. Synaptics patent claims stop work on DisplayLink drivers（来源：Hacker News）
-   https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/
-
-4. Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives（来源：Hacker News）
-   https://github.com/GoogleChrome/modern-web-guidance
-
-5. An Open Field Guide to Inference Engineering（来源：Hacker News）
-   https://docs.modelplane.ai/guides/inference-guide
-
-6. Smart home devices should work without the internet（来源：Hacker News）
-   https://docodethatmatters.com/home-automation-overnight-success/
-
-7. Show HN: Valencia, Spain in Sim City/Isometric View（来源：Hacker News）
-   https://tinyvalencia.com/</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261111-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261111-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261111-am.mp3" length="1130400" type="audio/mpeg"/>
-      <pubDate>Tue, 10 Nov 2026 22:41:10 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 科技研发早报</title>
       <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
@@ -887,6 +858,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261126-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261126-pm.mp3" length="1273104" type="audio/mpeg"/>
       <pubDate>Wed, 25 Nov 2026 18:48:49 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. The New York Times tells photographers not to use the latest Photoshop（来源：Hacker News）
+   https://www.dpreview.com/news/new-york-times-adobe-photoshop-2027-restriction-ai/
+
+2. Britain's ghost stations（来源：Hacker News）
+   https://spectator.com/article/britains-ghost-stations-are-fascinating/
+
+3. The polynomial Hirsch conjecture is false [pdf]（来源：Hacker News）
+   https://github.com/openai/math/blob/main/preprints/Superpolynomial-graph-diameter-of-simple-polytopes-November-24-2026/paper.pdf
+
+4. Rumors swirling that labs might have cracked Factoring in P（来源：Hacker News）
+   https://www.reddit.com/r/singularity/comments/1y59ef1/rumor_that_openai_or_anthropic_found_a_way_to/
+
+5. Windows Loudness Equalization, reverse-engineered and ported to PipeWire（来源：Hacker News）
+   https://github.com/xoxorwr/pw-loudness-eq
+
+6. Mitsubishi Electric Research Lab CEO on How He Reached the C-Suite（来源：IEEE Spectrum）
+   https://spectrum.ieee.org/mitsubishi-electric-research-lab-ceo
+
+7. FCC approves SpaceX plan to put AI data centers in space（来源：TechCrunch）
+   https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261126-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261126-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261126-am.mp3" length="1161504" type="audio/mpeg"/>
+      <pubDate>Wed, 25 Nov 2026 22:41:45 +0000</pubDate>
     </item>
   </channel>
 </rss>

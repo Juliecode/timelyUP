@@ -1,5 +1,18 @@
 [
   {
+    "id": "2026-11-26-am",
+    "date": "2026-11-26",
+    "slot": "am",
+    "title": "晨报 · 科技研发早报",
+    "notes": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n\n1. The New York Times tells photographers not to use the latest Photoshop（来源：Hacker News）\n   https://www.dpreview.com/news/new-york-times-adobe-photoshop-2027-restriction-ai/\n\n2. Britain's ghost stations（来源：Hacker News）\n   https://spectator.com/article/britains-ghost-stations-are-fascinating/\n\n3. The polynomial Hirsch conjecture is false [pdf]（来源：Hacker News）\n   https://github.com/openai/math/blob/main/preprints/Superpolynomial-graph-diameter-of-simple-polytopes-November-24-2026/paper.pdf\n\n4. Rumors swirling that labs might have cracked Factoring in P（来源：Hacker News）\n   https://www.reddit.com/r/singularity/comments/1y59ef1/rumor_that_openai_or_anthropic_found_a_way_to/\n\n5. Windows Loudness Equalization, reverse-engineered and ported to PipeWire（来源：Hacker News）\n   https://github.com/xoxorwr/pw-loudness-eq\n\n6. Mitsubishi Electric Research Lab CEO on How He Reached the C-Suite（来源：IEEE Spectrum）\n   https://spectrum.ieee.org/mitsubishi-electric-research-lab-ceo\n\n7. FCC approves SpaceX plan to put AI data centers in space（来源：TechCrunch）\n   https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/",
+    "script": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n第1条，来自Hacker News。The New York Times tells photographers not to use the latest Photoshop。\nArticle URL: https://www.dpreview.com/news/new-york-times-adobe-photoshop-2027-restriction-ai/ Comments URL: https://news.ycombinator.com/item?id=50647673 Points: 34 # Comments: 18。\n第2条，来自Hacker News。Britain's ghost stations。\nhttps://archive.ph/pfVdX Comments URL: https://news.ycombinator.com/item?id=50645074 Points: 73 # Comments: 16。\n第3条，来自Hacker News。The polynomial Hirsch conjecture is false [pdf]。\nArticle URL: https://github.com/openai/math/blob/main/preprints/Superpolynomial-graph-diameter-of-simple-polytopes-November-24-2026/paper.pdf Comments URL: https://news.ycombinator.com/item?id=5064498。\n第4条，来自Hacker News。Rumors swirling that labs might have cracked Factoring in P。\nArticle URL: https://www.reddit.com/r/singularity/comments/1y59ef1/rumor_that_openai_or_anthropic_found_a_way_to/ Comments URL: https://news.ycombinator.com/item?id=50643065 Points: 435 # Comments: 30。\n第5条，来自Hacker News。Windows Loudness Equalization, reverse-engineered and ported to PipeWire。\nArticle URL: https://github.com/xoxorwr/pw-loudness-eq Comments URL: https://news.ycombinator.com/item?id=50641171 Points: 299 # Comments: 168。\n第6条，来自IEEE Spectrum。Mitsubishi Electric Research Lab CEO on How He Reached the C-Suite。\nThe trajectory from researcher to top executive at a leading R&amp;D organization doesn’t happen overnight. It took Anthony Vetro nearly 30 years to climb the corporate ladder at Mitsubishi Electric R。\n第7条，来自TechCrunch。FCC approves SpaceX plan to put AI data centers in space。\nThe FCC dismissed some of the key concerns raised by opponents, including potential threats to scientific research, because the agency determined they fell outside its regulatory authority.。\n以上就是今天的内容，我们明天见。",
+    "file": "episode-20261126-am.mp3",
+    "transcript": "episode-20261126-am.txt",
+    "vtt": "episode-20261126-am.vtt",
+    "bytes": 1161504,
+    "pub": "2026-11-25T22:41:45.534199+00:00"
+  },
+  {
     "id": "2026-11-26-pm",
     "date": "2026-11-26",
     "slot": "pm",
@@ -375,18 +388,5 @@
     "vtt": "episode-20261112-pm.vtt",
     "bytes": 944064,
     "pub": "2026-11-11T16:30:56.496632+00:00"
-  },
-  {
-    "id": "2026-11-11-am",
-    "date": "2026-11-11",
-    "slot": "am",
-    "title": "晨报 · 科技研发早报",
-    "notes": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n\n1. Apple has new Mac app coming to make running local AI models easy（来源：Hacker News）\n   https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/\n\n2. What objective is reasoning solving?（来源：Hacker News）\n   https://alexwang.ai/posts/reasoning-as-pathfinding/\n\n3. Synaptics patent claims stop work on DisplayLink drivers（来源：Hacker News）\n   https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/\n\n4. Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives（来源：Hacker News）\n   https://github.com/GoogleChrome/modern-web-guidance\n\n5. An Open Field Guide to Inference Engineering（来源：Hacker News）\n   https://docs.modelplane.ai/guides/inference-guide\n\n6. Smart home devices should work without the internet（来源：Hacker News）\n   https://docodethatmatters.com/home-automation-overnight-success/\n\n7. Show HN: Valencia, Spain in Sim City/Isometric View（来源：Hacker News）\n   https://tinyvalencia.com/",
-    "script": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n第1条，来自Hacker News。Apple has new Mac app coming to make running local AI models easy。\nArticle URL: https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/ Comments URL: https://news.ycombinator.com/item?id=50446520 Points: 41 # Comments: 7。\n第2条，来自Hacker News。What objective is reasoning solving?。\nArticle URL: https://alexwang.ai/posts/reasoning-as-pathfinding/ Comments URL: https://news.ycombinator.com/item?id=50445013 Points: 69 # Comments: 33。\n第3条，来自Hacker News。Synaptics patent claims stop work on DisplayLink drivers。\nArticle URL: https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/ Comments URL: https://news.ycombinator.com/item?id=50443824 Points: 227 # Comments: 101。\n第4条，来自Hacker News。Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives。\nBrowsers natively handle a lot of what used to take 50 lines of JS (or a dependency): `CSS.highlights` for text range highlighting without s everywhere, ` ` and showModal() give you backdrops and idea。\n第5条，来自Hacker News。An Open Field Guide to Inference Engineering。\nArticle URL: https://docs.modelplane.ai/guides/inference-guide Comments URL: https://news.ycombinator.com/item?id=50443714 Points: 52 # Comments: 6。\n第6条，来自Hacker News。Smart home devices should work without the internet。\nArticle URL: https://docodethatmatters.com/home-automation-overnight-success/ Comments URL: https://news.ycombinator.com/item?id=50441707 Points: 591 # Comments: 207。\n第7条，来自Hacker News。Show HN: Valencia, Spain in Sim City/Isometric View。\nArticle URL: https://tinyvalencia.com/ Comments URL: https://news.ycombinator.com/item?id=50441518 Points: 166 # Comments: 41。\n以上就是今天的内容，我们明天见。",
-    "file": "episode-20261111-am.mp3",
-    "transcript": "episode-20261111-am.txt",
-    "vtt": "episode-20261111-am.vtt",
-    "bytes": 1130400,
-    "pub": "2026-11-10T22:41:10.612188+00:00"
   }
 ]

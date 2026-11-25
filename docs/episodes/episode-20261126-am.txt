@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。The New York Times tells photographers not to use the latest Photoshop。
+Article URL: https://www.dpreview.com/news/new-york-times-adobe-photoshop-2027-restriction-ai/ Comments URL: https://news.ycombinator.com/item?id=50647673 Points: 34 # Comments: 18。
+第2条，来自Hacker News。Britain's ghost stations。
+https://archive.ph/pfVdX Comments URL: https://news.ycombinator.com/item?id=50645074 Points: 73 # Comments: 16。
+第3条，来自Hacker News。The polynomial Hirsch conjecture is false [pdf]。
+Article URL: https://github.com/openai/math/blob/main/preprints/Superpolynomial-graph-diameter-of-simple-polytopes-November-24-2026/paper.pdf Comments URL: https://news.ycombinator.com/item?id=5064498。
+第4条，来自Hacker News。Rumors swirling that labs might have cracked Factoring in P。
+Article URL: https://www.reddit.com/r/singularity/comments/1y59ef1/rumor_that_openai_or_anthropic_found_a_way_to/ Comments URL: https://news.ycombinator.com/item?id=50643065 Points: 435 # Comments: 30。
+第5条，来自Hacker News。Windows Loudness Equalization, reverse-engineered and ported to PipeWire。
+Article URL: https://github.com/xoxorwr/pw-loudness-eq Comments URL: https://news.ycombinator.com/item?id=50641171 Points: 299 # Comments: 168。
+第6条，来自IEEE Spectrum。Mitsubishi Electric Research Lab CEO on How He Reached the C-Suite。
+The trajectory from researcher to top executive at a leading R&amp;D organization doesn’t happen overnight. It took Anthony Vetro nearly 30 years to climb the corporate ladder at Mitsubishi Electric R。
+第7条，来自TechCrunch。FCC approves SpaceX plan to put AI data centers in space。
+The FCC dismissed some of the key concerns raised by opponents, including potential threats to scientific research, because the agency determined they fell outside its regulatory authority.。
+以上就是今天的内容，我们明天见。
