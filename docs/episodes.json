@@ -1,5 +1,18 @@
 [
   {
+    "id": "2026-11-26-pm",
+    "date": "2026-11-26",
+    "slot": "pm",
+    "title": "晚报 · 科技研发早报",
+    "notes": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n\n1. Britain's ghost stations（来源：Hacker News）\n   https://spectator.com/article/britains-ghost-stations-are-fascinating/\n\n2. Rumors swirling that labs might have cracked Factoring in P（来源：Hacker News）\n   https://www.reddit.com/r/singularity/comments/1y59ef1/rumor_that_openai_or_anthropic_found_a_way_to/\n\n3. Windows Loudness Equalization, reverse-engineered and ported to PipeWire（来源：Hacker News）\n   https://github.com/xoxorwr/pw-loudness-eq\n\n4. Show HN: Old Nvidia and ATI tech demos, running again in the browser（来源：Hacker News）\n   https://gpu-demo-gallery.pages.dev/\n\n5. Taking over US Treasury subdomains for $3 each（来源：Hacker News）\n   https://www.intruder.io/research/taking-over-us-treasury-subdomains-for-3-each\n\n6. Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native（来源：Hacker News）\n   https://rida.dev/blog/bypassing-ios-safari-60-fps-limit\n\n7. The matrix multiplication exponent is nine fourths [pdf]（来源：Hacker News）\n   https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf",
+    "script": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n第1条，来自Hacker News。Britain's ghost stations。\nhttps://archive.ph/pfVdX Comments URL: https://news.ycombinator.com/item?id=50645074 Points: 7 # Comments: 0。\n第2条，来自Hacker News。Rumors swirling that labs might have cracked Factoring in P。\nArticle URL: https://www.reddit.com/r/singularity/comments/1y59ef1/rumor_that_openai_or_anthropic_found_a_way_to/ Comments URL: https://news.ycombinator.com/item?id=50643065 Points: 260 # Comments: 19。\n第3条，来自Hacker News。Windows Loudness Equalization, reverse-engineered and ported to PipeWire。\nArticle URL: https://github.com/xoxorwr/pw-loudness-eq Comments URL: https://news.ycombinator.com/item?id=50641171 Points: 254 # Comments: 147。\n第4条，来自Hacker News。Show HN: Old Nvidia and ATI tech demos, running again in the browser。\nArticle URL: https://gpu-demo-gallery.pages.dev/ Comments URL: https://news.ycombinator.com/item?id=50638503 Points: 290 # Comments: 64。\n第5条，来自Hacker News。Taking over US Treasury subdomains for $3 each。\nArticle URL: https://www.intruder.io/research/taking-over-us-treasury-subdomains-for-3-each Comments URL: https://news.ycombinator.com/item?id=50638478 Points: 204 # Comments: 43。\n第6条，来自Hacker News。Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native。\nArticle URL: https://rida.dev/blog/bypassing-ios-safari-60-fps-limit Comments URL: https://news.ycombinator.com/item?id=50637890 Points: 391 # Comments: 131。\n第7条，来自Hacker News。The matrix multiplication exponent is nine fourths [pdf]。\nArticle URL: https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf Comments URL: https://news.ycombinator.com/item?id=5063722。\n以上就是今天的内容，我们明天见。",
+    "file": "episode-20261126-pm.mp3",
+    "transcript": "episode-20261126-pm.txt",
+    "vtt": "episode-20261126-pm.vtt",
+    "bytes": 1273104,
+    "pub": "2026-11-25T18:48:49.611401+00:00"
+  },
+  {
     "id": "2026-11-25-am",
     "date": "2026-11-25",
     "slot": "am",
@@ -375,18 +388,5 @@
     "vtt": "episode-20261111-am.vtt",
     "bytes": 1130400,
     "pub": "2026-11-10T22:41:10.612188+00:00"
-  },
-  {
-    "id": "2026-11-11-pm",
-    "date": "2026-11-11",
-    "slot": "pm",
-    "title": "晚报 · 科技研发早报",
-    "notes": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n\n1. Gemini 4 Carbon is now available（来源：Hacker News）\n   https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/\n\n2. .NET 11（来源：Hacker News）\n   https://devblogs.microsoft.com/dotnet/announcing-dotnet-11/\n\n3. Smart home devices should work without the internet（来源：Hacker News）\n   https://docodethatmatters.com/home-automation-overnight-success/\n\n4. Show HN: Valencia, Spain in Sim City/Isometric View（来源：Hacker News）\n   https://tinyvalencia.com/\n\n5. Fireworks AI security breach impacts Notion and their customers（来源：Hacker News）\n   https://www.notion.com/help/security-incident-involving-a-third-party-ai-vendor\n\n6. Catch Electronics Shock and Drop Failures Before Hardware Is Built（来源：IEEE Spectrum）\n   https://content.knowledgehub.wiley.com/shifting-reliability-left-guided-virtual-validation-for-electronics-shock-and-drop-testing/\n\n7. AI Agents Are Testing the Limits of Zero-Trust Security（来源：IEEE Spectrum）\n   https://spectrum.ieee.org/zero-trust-agentic-ai-architecture",
-    "script": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n第1条，来自Hacker News。Gemini 4 Carbon is now available。\nArticle URL: https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/ Comments URL: https://news.ycombinator.com/item?id=50442303 Points: 55 # Comments: 2。\n第2条，来自Hacker News。.NET 11。\nArticle URL: https://devblogs.microsoft.com/dotnet/announcing-dotnet-11/ Comments URL: https://news.ycombinator.com/item?id=50442225 Points: 23 # Comments: 2。\n第3条，来自Hacker News。Smart home devices should work without the internet。\nArticle URL: https://docodethatmatters.com/home-automation-overnight-success/ Comments URL: https://news.ycombinator.com/item?id=50441707 Points: 17 # Comments: 7。\n第4条，来自Hacker News。Show HN: Valencia, Spain in Sim City/Isometric View。\nArticle URL: https://tinyvalencia.com/ Comments URL: https://news.ycombinator.com/item?id=50441518 Points: 6 # Comments: 1。\n第5条，来自Hacker News。Fireworks AI security breach impacts Notion and their customers。\nArticle URL: https://www.notion.com/help/security-incident-involving-a-third-party-ai-vendor Comments URL: https://news.ycombinator.com/item?id=50437106 Points: 134 # Comments: 45。\n第6条，来自IEEE Spectrum。Catch Electronics Shock and Drop Failures Before Hardware Is Built。\nLearn how guided virtual shock and drop analysis helps engineering teams identify reliability risks before physical testing, reduce qualification iterations, optimize packaging designs, and accelerate。\n第7条，来自IEEE Spectrum。AI Agents Are Testing the Limits of Zero-Trust Security。\nThis article is brought to you by Queen’s University Belfast . Several teams around the globe are leveraging AI by creating a task force of agents managed by an orchestrator and creating applications 。\n以上就是今天的内容，我们明天见。",
-    "file": "episode-20261111-pm.mp3",
-    "transcript": "episode-20261111-pm.txt",
-    "vtt": "episode-20261111-pm.vtt",
-    "bytes": 1060704,
-    "pub": "2026-11-10T16:34:50.555411+00:00"
   }
 ]

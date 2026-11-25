@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。Britain's ghost stations。
+https://archive.ph/pfVdX Comments URL: https://news.ycombinator.com/item?id=50645074 Points: 7 # Comments: 0。
+第2条，来自Hacker News。Rumors swirling that labs might have cracked Factoring in P。
+Article URL: https://www.reddit.com/r/singularity/comments/1y59ef1/rumor_that_openai_or_anthropic_found_a_way_to/ Comments URL: https://news.ycombinator.com/item?id=50643065 Points: 260 # Comments: 19。
+第3条，来自Hacker News。Windows Loudness Equalization, reverse-engineered and ported to PipeWire。
+Article URL: https://github.com/xoxorwr/pw-loudness-eq Comments URL: https://news.ycombinator.com/item?id=50641171 Points: 254 # Comments: 147。
+第4条，来自Hacker News。Show HN: Old Nvidia and ATI tech demos, running again in the browser。
+Article URL: https://gpu-demo-gallery.pages.dev/ Comments URL: https://news.ycombinator.com/item?id=50638503 Points: 290 # Comments: 64。
+第5条，来自Hacker News。Taking over US Treasury subdomains for $3 each。
+Article URL: https://www.intruder.io/research/taking-over-us-treasury-subdomains-for-3-each Comments URL: https://news.ycombinator.com/item?id=50638478 Points: 204 # Comments: 43。
+第6条，来自Hacker News。Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native。
+Article URL: https://rida.dev/blog/bypassing-ios-safari-60-fps-limit Comments URL: https://news.ycombinator.com/item?id=50637890 Points: 391 # Comments: 131。
+第7条，来自Hacker News。The matrix multiplication exponent is nine fourths [pdf]。
+Article URL: https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf Comments URL: https://news.ycombinator.com/item?id=5063722。
+以上就是今天的内容，我们明天见。

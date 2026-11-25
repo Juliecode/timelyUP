@@ -13,40 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 24 Nov 2026 22:41:57 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 18:48:49 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晚报 · 科技研发早报</title>
-      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
-
-1. Gemini 4 Carbon is now available（来源：Hacker News）
-   https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/
-
-2. .NET 11（来源：Hacker News）
-   https://devblogs.microsoft.com/dotnet/announcing-dotnet-11/
-
-3. Smart home devices should work without the internet（来源：Hacker News）
-   https://docodethatmatters.com/home-automation-overnight-success/
-
-4. Show HN: Valencia, Spain in Sim City/Isometric View（来源：Hacker News）
-   https://tinyvalencia.com/
-
-5. Fireworks AI security breach impacts Notion and their customers（来源：Hacker News）
-   https://www.notion.com/help/security-incident-involving-a-third-party-ai-vendor
-
-6. Catch Electronics Shock and Drop Failures Before Hardware Is Built（来源：IEEE Spectrum）
-   https://content.knowledgehub.wiley.com/shifting-reliability-left-guided-virtual-validation-for-electronics-shock-and-drop-testing/
-
-7. AI Agents Are Testing the Limits of Zero-Trust Security（来源：IEEE Spectrum）
-   https://spectrum.ieee.org/zero-trust-agentic-ai-architecture</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261111-pm.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261111-pm.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261111-pm.mp3" length="1060704" type="audio/mpeg"/>
-      <pubDate>Tue, 10 Nov 2026 16:34:50 +0000</pubDate>
-    </item>
     <item>
       <title>晨报 · 科技研发早报</title>
       <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
@@ -887,6 +858,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261125-am.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261125-am.mp3" length="1120896" type="audio/mpeg"/>
       <pubDate>Tue, 24 Nov 2026 22:41:57 +0000</pubDate>
+    </item>
+    <item>
+      <title>晚报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. Britain's ghost stations（来源：Hacker News）
+   https://spectator.com/article/britains-ghost-stations-are-fascinating/
+
+2. Rumors swirling that labs might have cracked Factoring in P（来源：Hacker News）
+   https://www.reddit.com/r/singularity/comments/1y59ef1/rumor_that_openai_or_anthropic_found_a_way_to/
+
+3. Windows Loudness Equalization, reverse-engineered and ported to PipeWire（来源：Hacker News）
+   https://github.com/xoxorwr/pw-loudness-eq
+
+4. Show HN: Old Nvidia and ATI tech demos, running again in the browser（来源：Hacker News）
+   https://gpu-demo-gallery.pages.dev/
+
+5. Taking over US Treasury subdomains for $3 each（来源：Hacker News）
+   https://www.intruder.io/research/taking-over-us-treasury-subdomains-for-3-each
+
+6. Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native（来源：Hacker News）
+   https://rida.dev/blog/bypassing-ios-safari-60-fps-limit
+
+7. The matrix multiplication exponent is nine fourths [pdf]（来源：Hacker News）
+   https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261126-pm.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261126-pm.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261126-pm.mp3" length="1273104" type="audio/mpeg"/>
+      <pubDate>Wed, 25 Nov 2026 18:48:49 +0000</pubDate>
     </item>
   </channel>
 </rss>
