@@ -1,5 +1,18 @@
 [
   {
+    "id": "2026-11-27-pm",
+    "date": "2026-11-27",
+    "slot": "pm",
+    "title": "晚报 · 科技研发早报",
+    "notes": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n\n1. Irreducible Governance Structure for Autonomous Agent Systems: Fair Allocation, Strategy-Proofness, and Multi-Scale Composition（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.31284\n\n2. MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.31301\n\n3. Conservative Overlap Fuzzy Rough Sets for Incomplete Data（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.31329\n\n4. Beyond Static Charts: Benchmarking Interactive Chart-to-Code Generation for MLLMs（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.31345\n\n5. What People Choose Not to Say: A Multimodal Benchmark for Fine-Grained Information Manipulation in Conversations（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.31346\n\n6. Antares-Smaug: Adversarial Names, Tokens and Attack Rewrites: Sanitisers Miss Unseen Generalisations（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.31347\n\n7. ContextLure: Exploiting Benign Conversation History for Indirect Prompt Injection（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.31424",
+    "script": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n第1条，来自arXiv cs.AI。Irreducible Governance Structure for Autonomous Agent Systems: Fair Allocation, Strategy-Proofness, and Multi-Scale Composition。\narXiv:2611.31284v1 Announce Type: new Abstract: Autonomous agent governance is commonly framed as a problem of enforcing correct execution. However, in multi-agent systems, an equally fundamental ques。\n第2条，来自arXiv cs.AI。MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake。\narXiv:2611.31301v2 Announce Type: new Abstract: Audio-video (AV) deepfakes can fake the face, the voice, or both. Most benchmarks only ask whether a clip is real or fake, so they cannot show whether a。\n第3条，来自arXiv cs.AI。Conservative Overlap Fuzzy Rough Sets for Incomplete Data。\narXiv:2611.31329v1 Announce Type: new Abstract: Attribute reduction in incomplete information systems is difficult because missing values break the equivalence-class structure of rough set theory. We 。\n第4条，来自arXiv cs.AI。Beyond Static Charts: Benchmarking Interactive Chart-to-Code Generation for MLLMs。\narXiv:2611.31345v1 Announce Type: new Abstract: In recent years, multimodal large language models (MLLMs) have achieved significant progress in chart-to-code generation. However, existing benchmarks m。\n第5条，来自arXiv cs.AI。What People Choose Not to Say: A Multimodal Benchmark for Fine-Grained Information Manipulation in Conversations。\narXiv:2611.31346v1 Announce Type: new Abstract: Recent advances in MLLMs have improved social understanding, enabling models to recognize emotions and distinguish truthful from deceptive behaviors. Ho。\n第6条，来自arXiv cs.AI。Antares-Smaug: Adversarial Names, Tokens and Attack Rewrites: Sanitisers Miss Unseen Generalisations。\narXiv:2611.31347v1 Announce Type: new Abstract: Laya is an open decision model: given a text, a question and K named options with descriptions, it returns one probability per option in a single pass, 。\n第7条，来自arXiv cs.AI。ContextLure: Exploiting Benign Conversation History for Indirect Prompt Injection。\narXiv:2611.31424v1 Announce Type: new Abstract: As LLMs become more capable, agents can perform more complex tasks with tools and maintain longer interactions with users. These benign conversations co。\n以上就是今天的内容，我们明天见。",
+    "file": "episode-20261127-pm.mp3",
+    "transcript": "episode-20261127-pm.txt",
+    "vtt": "episode-20261127-pm.vtt",
+    "bytes": 984672,
+    "pub": "2026-11-26T18:35:48.276157+00:00"
+  },
+  {
     "id": "2026-11-26-am",
     "date": "2026-11-26",
     "slot": "am",
@@ -375,18 +388,5 @@
     "vtt": "episode-20261112-am.vtt",
     "bytes": 944064,
     "pub": "2026-11-11T22:41:03.718883+00:00"
-  },
-  {
-    "id": "2026-11-12-pm",
-    "date": "2026-11-12",
-    "slot": "pm",
-    "title": "晚报 · 科技研发早报",
-    "notes": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n\n1. Auditable Human-Agent Teams for Autonomous X-ray Experimentation（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.12933\n\n2. EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.12934\n\n3. Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.12935\n\n4. LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.12936\n\n5. Tracing Psychometric Inference in Large Language Models（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.12937\n\n6. Graph Visualizations in Prompts for Knowledge Graph Question Answering（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.12938\n\n7. Reinforcement Learning based control of Cancer Chemotherapy treatments（来源：arXiv cs.AI）\n   https://arxiv.org/abs/2611.12940",
-    "script": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n第1条，来自arXiv cs.AI。Auditable Human-Agent Teams for Autonomous X-ray Experimentation。\narXiv:2611.12933v1 Announce Type: new Abstract: Closed-loop autonomous experimentation can accelerate scientific discovery, but implementation effort limits accessibility. Agentic systems may lower th。\n第2条，来自arXiv cs.AI。EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery。\narXiv:2611.12934v1 Announce Type: new Abstract: While multimodal agents now carry out complex data analysis with tools, their ability to turn decades of satellite imagery into reliable land-change ana。\n第3条，来自arXiv cs.AI。Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring。\narXiv:2611.12935v1 Announce Type: new Abstract: Topic monitoring is the task of labelling the topic of each token in a model's response during generation. Activation-based monitors that run at generat。\n第4条，来自arXiv cs.AI。LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding。\narXiv:2611.12936v1 Announce Type: new Abstract: Intelligent landslide detection is essential for disaster prevention. However, existing models primarily focus on isolated visual tasks, require extensi。\n第5条，来自arXiv cs.AI。Tracing Psychometric Inference in Large Language Models。\narXiv:2611.12937v1 Announce Type: new Abstract: Do large language models represent psychological constructs internally, or do they only generate outputs that resemble psychometric structure? We addres。\n第6条，来自arXiv cs.AI。Graph Visualizations in Prompts for Knowledge Graph Question Answering。\narXiv:2611.12938v1 Announce Type: new Abstract: We study when and how multimodal input improves knowledge graph question answering (KGQA) in large vision--language models. Using a controlled evaluatio。\n第7条，来自arXiv cs.AI。Reinforcement Learning based control of Cancer Chemotherapy treatments。\narXiv:2611.12940v1 Announce Type: new Abstract: Reinforcement Learning has achieved tremendous success in recent years. Extending its scope from the traditional complex games such as Atari, Go, Pokema。\n以上就是今天的内容，我们明天见。",
-    "file": "episode-20261112-pm.mp3",
-    "transcript": "episode-20261112-pm.txt",
-    "vtt": "episode-20261112-pm.vtt",
-    "bytes": 944064,
-    "pub": "2026-11-11T16:30:56.496632+00:00"
   }
 ]

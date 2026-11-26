@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自arXiv cs.AI。Irreducible Governance Structure for Autonomous Agent Systems: Fair Allocation, Strategy-Proofness, and Multi-Scale Composition。
+arXiv:2611.31284v1 Announce Type: new Abstract: Autonomous agent governance is commonly framed as a problem of enforcing correct execution. However, in multi-agent systems, an equally fundamental ques。
+第2条，来自arXiv cs.AI。MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake。
+arXiv:2611.31301v2 Announce Type: new Abstract: Audio-video (AV) deepfakes can fake the face, the voice, or both. Most benchmarks only ask whether a clip is real or fake, so they cannot show whether a。
+第3条，来自arXiv cs.AI。Conservative Overlap Fuzzy Rough Sets for Incomplete Data。
+arXiv:2611.31329v1 Announce Type: new Abstract: Attribute reduction in incomplete information systems is difficult because missing values break the equivalence-class structure of rough set theory. We 。
+第4条，来自arXiv cs.AI。Beyond Static Charts: Benchmarking Interactive Chart-to-Code Generation for MLLMs。
+arXiv:2611.31345v1 Announce Type: new Abstract: In recent years, multimodal large language models (MLLMs) have achieved significant progress in chart-to-code generation. However, existing benchmarks m。
+第5条，来自arXiv cs.AI。What People Choose Not to Say: A Multimodal Benchmark for Fine-Grained Information Manipulation in Conversations。
+arXiv:2611.31346v1 Announce Type: new Abstract: Recent advances in MLLMs have improved social understanding, enabling models to recognize emotions and distinguish truthful from deceptive behaviors. Ho。
+第6条，来自arXiv cs.AI。Antares-Smaug: Adversarial Names, Tokens and Attack Rewrites: Sanitisers Miss Unseen Generalisations。
+arXiv:2611.31347v1 Announce Type: new Abstract: Laya is an open decision model: given a text, a question and K named options with descriptions, it returns one probability per option in a single pass, 。
+第7条，来自arXiv cs.AI。ContextLure: Exploiting Benign Conversation History for Indirect Prompt Injection。
+arXiv:2611.31424v1 Announce Type: new Abstract: As LLMs become more capable, agents can perform more complex tasks with tools and maintain longer interactions with users. These benign conversations co。
+以上就是今天的内容，我们明天见。

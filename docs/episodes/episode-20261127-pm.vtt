@@ -1,0 +1,121 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:02.828
+欢迎收听今天的科技研发早报。
+
+2
+00:00:02.828 --> 00:00:06.053
+以下是今天精选的几条前沿进展。
+
+3
+00:00:06.053 --> 00:00:09.236
+第1条，来自arXiv cs.AI。
+
+4
+00:00:09.236 --> 00:00:16.285
+Irreducible Governance Structure for Autonomous Agent Systems: Fair Allocation, Strategy-Proofness, and Multi-Scale Composition。
+
+5
+00:00:16.285 --> 00:00:26.042
+arXiv:2611.31284v1 Announce Type: new Abstract: Autonomous agent governance is commonly framed as a problem of enforcing correct execution.
+
+6
+00:00:26.042 --> 00:00:30.104
+However, in multi-agent systems, an equally fundamental ques。
+
+7
+00:00:30.104 --> 00:00:33.414
+第2条，来自arXiv cs.AI。
+
+8
+00:00:33.414 --> 00:00:37.292
+MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake。
+
+9
+00:00:37.292 --> 00:00:46.667
+arXiv:2611.31301v2 Announce Type: new Abstract: Audio-video (AV) deepfakes can fake the face, the voice, or both.
+
+10
+00:00:46.667 --> 00:00:51.782
+Most benchmarks only ask whether a clip is real or fake, so they cannot show whether a。
+
+11
+00:00:51.782 --> 00:00:55.139
+第3条，来自arXiv cs.AI。
+
+12
+00:00:55.139 --> 00:00:58.738
+Conservative Overlap Fuzzy Rough Sets for Incomplete Data。
+
+13
+00:00:58.738 --> 00:01:10.995
+arXiv:2611.31329v1 Announce Type: new Abstract: Attribute reduction in incomplete information systems is difficult because missing values break the equivalence-class structure of rough set theory.
+
+14
+00:01:10.995 --> 00:01:11.968
+We 。
+
+15
+00:01:11.968 --> 00:01:15.336
+第4条，来自arXiv cs.AI。
+
+16
+00:01:15.336 --> 00:01:20.093
+Beyond Static Charts: Benchmarking Interactive Chart-to-Code Generation for MLLMs。
+
+17
+00:01:20.093 --> 00:01:31.354
+arXiv:2611.31345v1 Announce Type: new Abstract: In recent years, multimodal large language models (MLLMs) have achieved significant progress in chart-to-code generation.
+
+18
+00:01:31.354 --> 00:01:33.900
+However, existing benchmarks m。
+
+19
+00:01:33.900 --> 00:01:37.199
+第5条，来自arXiv cs.AI。
+
+20
+00:01:37.199 --> 00:01:42.708
+What People Choose Not to Say: A Multimodal Benchmark for Fine-Grained Information Manipulation in Conversations。
+
+21
+00:01:42.708 --> 00:01:55.539
+arXiv:2611.31346v1 Announce Type: new Abstract: Recent advances in MLLMs have improved social understanding, enabling models to recognize emotions and distinguish truthful from deceptive behaviors.
+
+22
+00:01:55.539 --> 00:01:56.314
+Ho。
+
+23
+00:01:56.314 --> 00:01:59.578
+第6条，来自arXiv cs.AI。
+
+24
+00:01:59.578 --> 00:02:05.643
+Antares-Smaug: Adversarial Names, Tokens and Attack Rewrites: Sanitisers Miss Unseen Generalisations。
+
+25
+00:02:05.788 --> 00:02:19.815
+arXiv:2611.31347v1 Announce Type: new Abstract: Laya is an open decision model: given a text, a question and K named options with descriptions, it returns one probability per option in a single pass, 。
+
+26
+00:02:19.815 --> 00:02:23.090
+第7条，来自arXiv cs.AI。
+
+27
+00:02:23.090 --> 00:02:27.650
+ContextLure: Exploiting Benign Conversation History for Indirect Prompt Injection。
+
+28
+00:02:27.650 --> 00:02:39.086
+arXiv:2611.31424v1 Announce Type: new Abstract: As LLMs become more capable, agents can perform more complex tasks with tools and maintain longer interactions with users.
+
+29
+00:02:39.086 --> 00:02:41.250
+These benign conversations co。
+
+30
+00:02:41.250 --> 00:02:44.063
+以上就是今天的内容，我们明天见。
