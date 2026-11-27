@@ -13,40 +13,11 @@
       <link>https://Juliecode.github.io/timelyUP/feed.xml</link>
     </image>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 27 Nov 2026 18:24:03 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 22:40:50 +0000</lastBuildDate>
     <itunes:author>TimelyUP</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://Juliecode.github.io/timelyUP/cover.png"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>晨报 · 科技研发早报</title>
-      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
-
-1. Chinese frontier AI models carry the fingerprint of export-controlled GPUs（来源：Hacker News）
-   https://unemploymentlabs.com/checkpoint-forensics
-
-2. Foundation Models framework（来源：Hacker News）
-   https://developer.apple.com/foundation-models-framework/
-
-3. AI is turning Apple's app review process into a nightmare for synth developers（来源：Hacker News）
-   https://synthanatomy.com/2026/11/ai-is-turning-apples-app-review-process-into-a-nightmare-for-developers.html
-
-4. Distributed Ray Tracer（来源：Hacker News）
-   https://ray.hatchet.run
-
-5. Show HN: AgentRun – open-source, Self-improving Managed Agents（来源：Hacker News）
-   https://github.com/Parcha-ai/agentrun/blob/main/README.md
-
-6. Gemini 4 Hydrogen（来源：Hacker News）
-   https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/
-
-7. Show HN: Kapso – Iterative learning from enterprise data（来源：Hacker News）
-   https://news.ycombinator.com/item?id=50471281</description>
-      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261113-am.mp3</guid>
-      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261113-am.vtt" type="text/vtt"/>
-      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261113-am.mp3" length="1176912" type="audio/mpeg"/>
-      <pubDate>Thu, 12 Nov 2026 22:41:25 +0000</pubDate>
-    </item>
     <item>
       <title>晚报 · 科技研发早报</title>
       <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
@@ -887,6 +858,35 @@
       <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261128-pm.vtt" type="text/vtt"/>
       <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261128-pm.mp3" length="946800" type="audio/mpeg"/>
       <pubDate>Fri, 27 Nov 2026 18:24:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>晨报 · 科技研发早报</title>
+      <description>欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+
+1. Context Scaling: A New Frontier of AI Scaling（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.33160
+
+2. Constraint-Aware Test-Time Scoring for LLM and VLM Candidate Selection（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.33161
+
+3. AutoformBench: A Lean Formalization Benchmark for Advanced Mathematics（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.33165
+
+4. General-Purpose Decision Models for AI Configuration Tuning（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.33190
+
+5. What, Who, and When: Structured Harm Assessment for Mental Health Safety via Short Reasoning（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.33263
+
+6. Certify What You Plant: Shortcut-Free Proof Depth in Logical Reasoning Data（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.33303
+
+7. The Platonic Representation Hypothesis in Jacobian-Space: Language and Vision Models Agree Approximately Up to a Rotation（来源：arXiv cs.AI）
+   https://arxiv.org/abs/2611.33304</description>
+      <guid isPermaLink="false">https://Juliecode.github.io/timelyUP/episodes/episode-20261128-am.mp3</guid>
+      <podcast:transcript url="https://Juliecode.github.io/timelyUP/episodes/episode-20261128-am.vtt" type="text/vtt"/>
+      <enclosure url="https://Juliecode.github.io/timelyUP/episodes/episode-20261128-am.mp3" length="946800" type="audio/mpeg"/>
+      <pubDate>Fri, 27 Nov 2026 22:40:50 +0000</pubDate>
     </item>
   </channel>
 </rss>
