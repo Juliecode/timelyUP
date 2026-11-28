@@ -1,0 +1,16 @@
+欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。
+第1条，来自Hacker News。Physics Breakthrough Simulator。
+Article URL: https://pages.ethanmdavidson.com/ai-physics-breakthrough Comments URL: https://news.ycombinator.com/item?id=50678273 Points: 72 # Comments: 12。
+第2条，来自Hacker News。Google will soon share Android developers' addresses publicly。
+Article URL: https://www.engadget.com/2329389/google-will-soon-share-android-developers-addresses-publicly/ Comments URL: https://news.ycombinator.com/item?id=50678026 Points: 40 # Comments: 13。
+第3条，来自Hacker News。Why stop at Emacs? Native apps you or an AI reprogram in Clojure while they run。
+Article URL: https://github.com/RiccardoSottini/AffrescoUI Comments URL: https://news.ycombinator.com/item?id=50677861 Points: 39 # Comments: 37。
+第4条，来自Hacker News。Show HN: Luciole Mono – terminal font designed for legibility。
+TLDR : Atkinson Hyperlegible Mono alternative Luciole Mono is a vibe-clauded derivative of Luciole.Luciole was designed for visually impaired readers by Laurent Bourcellier and Jonathan Perez, at the 。
+第5条，来自Hacker News。GGUF LLM Models with Hidden Malware on Hugging Face Reached 2400 Victims。
+Article URL: https://malspark.com/blog/malicious-gguf-models-hugging-face/ Comments URL: https://news.ycombinator.com/item?id=50676752 Points: 130 # Comments: 40。
+第6条，来自Hacker News。Unkernel: Real Linux kernel, compiled to WebAssembly。
+Article URL: https://unkernel.dev Comments URL: https://news.ycombinator.com/item?id=50674218 Points: 490 # Comments: 132。
+第7条，来自Hacker News。Google's DeepCrossAttention achieves comparable model quality up to 3x faster。
+Article URL: https://research.google/blog/supercharging-transformer-residual-connections/ Comments URL: https://news.ycombinator.com/item?id=50672565 Points: 525 # Comments: 183。
+以上就是今天的内容，我们明天见。

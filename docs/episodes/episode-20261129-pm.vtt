@@ -1,0 +1,101 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:02.828
+欢迎收听今天的科技研发早报。
+
+2
+00:00:02.828 --> 00:00:06.053
+以下是今天精选的几条前沿进展。
+
+3
+00:00:06.053 --> 00:00:08.322
+第1条，来自Hacker News。
+
+4
+00:00:08.322 --> 00:00:10.243
+Physics Breakthrough Simulator。
+
+5
+00:00:10.243 --> 00:00:29.811
+Article URL: https://pages.ethanmdavidson.com/ai-physics-breakthrough Comments URL: https://news.ycombinator.com/item?id=50678273 Points: 72 # Comments: 12。
+
+6
+00:00:29.811 --> 00:00:32.079
+第2条，来自Hacker News。
+
+7
+00:00:32.079 --> 00:00:35.598
+Google will soon share Android developers' addresses publicly。
+
+8
+00:00:35.598 --> 00:01:01.191
+Article URL: https://www.engadget.com/2329389/google-will-soon-share-android-developers-addresses-publicly/ Comments URL: https://news.ycombinator.com/item?id=50678026 Points: 40 # Comments: 13。
+
+9
+00:01:01.191 --> 00:01:03.575
+第3条，来自Hacker News。
+
+10
+00:01:03.575 --> 00:01:05.103
+Why stop at Emacs?
+
+11
+00:01:05.103 --> 00:01:08.714
+Native apps you or an AI reprogram in Clojure while they run。
+
+12
+00:01:08.714 --> 00:01:27.645
+Article URL: https://github.com/RiccardoSottini/AffrescoUI Comments URL: https://news.ycombinator.com/item?id=50677861 Points: 39 # Comments: 37。
+
+13
+00:01:27.645 --> 00:01:30.053
+第4条，来自Hacker News。
+
+14
+00:01:30.053 --> 00:01:34.046
+Show HN: Luciole Mono – terminal font designed for legibility。
+
+15
+00:01:34.046 --> 00:01:44.879
+TLDR : Atkinson Hyperlegible Mono alternative Luciole Mono is a vibe-clauded derivative of Luciole.Luciole was designed for visually impaired readers by Laurent Bourcellier and Jonathan Perez, at the 。
+
+16
+00:01:44.879 --> 00:01:47.229
+第5条，来自Hacker News。
+
+17
+00:01:47.229 --> 00:01:51.986
+GGUF LLM Models with Hidden Malware on Hugging Face Reached 2400 Victims。
+
+18
+00:01:51.986 --> 00:02:14.424
+Article URL: https://malspark.com/blog/malicious-gguf-models-hugging-face/ Comments URL: https://news.ycombinator.com/item?id=50676752 Points: 130 # Comments: 40。
+
+19
+00:02:14.424 --> 00:02:16.738
+第6条，来自Hacker News。
+
+20
+00:02:16.738 --> 00:02:20.118
+Unkernel: Real Linux kernel, compiled to WebAssembly。
+
+21
+00:02:20.118 --> 00:02:36.873
+Article URL: https://unkernel.dev Comments URL: https://news.ycombinator.com/item?id=50674218 Points: 490 # Comments: 132。
+
+22
+00:02:36.873 --> 00:02:39.257
+第7条，来自Hacker News。
+
+23
+00:02:39.257 --> 00:02:43.956
+Google's DeepCrossAttention achieves comparable model quality up to 3x faster。
+
+24
+00:02:43.956 --> 00:03:05.596
+Article URL: https://research.google/blog/supercharging-transformer-residual-connections/ Comments URL: https://news.ycombinator.com/item?id=50672565 Points: 525 # Comments: 183。
+
+25
+00:03:05.596 --> 00:03:08.408
+以上就是今天的内容，我们明天见。

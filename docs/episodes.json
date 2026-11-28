@@ -1,5 +1,18 @@
 [
   {
+    "id": "2026-11-29-pm",
+    "date": "2026-11-29",
+    "slot": "pm",
+    "title": "晚报 · 科技研发早报",
+    "notes": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n\n1. Physics Breakthrough Simulator（来源：Hacker News）\n   https://pages.ethanmdavidson.com/ai-physics-breakthrough\n\n2. Google will soon share Android developers' addresses publicly（来源：Hacker News）\n   https://www.engadget.com/2329389/google-will-soon-share-android-developers-addresses-publicly/\n\n3. Why stop at Emacs? Native apps you or an AI reprogram in Clojure while they run（来源：Hacker News）\n   https://github.com/RiccardoSottini/AffrescoUI\n\n4. Show HN: Luciole Mono – terminal font designed for legibility（来源：Hacker News）\n   https://scriptor-pro.github.io/luciole-mono/\n\n5. GGUF LLM Models with Hidden Malware on Hugging Face Reached 2400 Victims（来源：Hacker News）\n   https://malspark.com/blog/malicious-gguf-models-hugging-face/\n\n6. Unkernel: Real Linux kernel, compiled to WebAssembly（来源：Hacker News）\n   https://unkernel.dev\n\n7. Google's DeepCrossAttention achieves comparable model quality up to 3x faster（来源：Hacker News）\n   https://research.google/blog/supercharging-transformer-residual-connections/",
+    "script": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n第1条，来自Hacker News。Physics Breakthrough Simulator。\nArticle URL: https://pages.ethanmdavidson.com/ai-physics-breakthrough Comments URL: https://news.ycombinator.com/item?id=50678273 Points: 72 # Comments: 12。\n第2条，来自Hacker News。Google will soon share Android developers' addresses publicly。\nArticle URL: https://www.engadget.com/2329389/google-will-soon-share-android-developers-addresses-publicly/ Comments URL: https://news.ycombinator.com/item?id=50678026 Points: 40 # Comments: 13。\n第3条，来自Hacker News。Why stop at Emacs? Native apps you or an AI reprogram in Clojure while they run。\nArticle URL: https://github.com/RiccardoSottini/AffrescoUI Comments URL: https://news.ycombinator.com/item?id=50677861 Points: 39 # Comments: 37。\n第4条，来自Hacker News。Show HN: Luciole Mono – terminal font designed for legibility。\nTLDR : Atkinson Hyperlegible Mono alternative Luciole Mono is a vibe-clauded derivative of Luciole.Luciole was designed for visually impaired readers by Laurent Bourcellier and Jonathan Perez, at the 。\n第5条，来自Hacker News。GGUF LLM Models with Hidden Malware on Hugging Face Reached 2400 Victims。\nArticle URL: https://malspark.com/blog/malicious-gguf-models-hugging-face/ Comments URL: https://news.ycombinator.com/item?id=50676752 Points: 130 # Comments: 40。\n第6条，来自Hacker News。Unkernel: Real Linux kernel, compiled to WebAssembly。\nArticle URL: https://unkernel.dev Comments URL: https://news.ycombinator.com/item?id=50674218 Points: 490 # Comments: 132。\n第7条，来自Hacker News。Google's DeepCrossAttention achieves comparable model quality up to 3x faster。\nArticle URL: https://research.google/blog/supercharging-transformer-residual-connections/ Comments URL: https://news.ycombinator.com/item?id=50672565 Points: 525 # Comments: 183。\n以上就是今天的内容，我们明天见。",
+    "file": "episode-20261129-pm.mp3",
+    "transcript": "episode-20261129-pm.txt",
+    "vtt": "episode-20261129-pm.vtt",
+    "bytes": 1130544,
+    "pub": "2026-11-28T17:07:52.055867+00:00"
+  },
+  {
     "id": "2026-11-28-am",
     "date": "2026-11-28",
     "slot": "am",
@@ -375,18 +388,5 @@
     "vtt": "episode-20261114-am.vtt",
     "bytes": 1126944,
     "pub": "2026-11-13T22:41:51.053373+00:00"
-  },
-  {
-    "id": "2026-11-14-pm",
-    "date": "2026-11-14",
-    "slot": "pm",
-    "title": "晚报 · 科技研发早报",
-    "notes": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n\n1. Brazil's Caixa insurer breach exposes names and tax IDs of all 7.6M customers（来源：Hacker News）\n   https://filemanager-cdn.mziq.com/published/3972906b-e50b-4f74-ab74-4d0d32125d11/9567a559-d20a-486e-a7ae-5c6bbc030c5e\n\n2. Why is Google cutting off Search from AI-free schools? Here are some theories（来源：Hacker News）\n   https://text.npr.org/nx-s1-6029408\n\n3. Jonathan Blow – If AI Solved Coding, Why Is My Software Still the Same? [video]（来源：Hacker News）\n   https://www.youtube.com/watch?v=IRK8h67ol7Q\n\n4. EU Digital Identity Wallet rollout: every EU state on one board（来源：Hacker News）\n   https://myid.ie/business/eu-digital-wallet-tracker/\n\n5. U.S. October PPI Rises 6.5% YoY, Highest in Nearly Four Years（来源：Hacker News）\n   https://news.ycombinator.com/item?id=50484421\n\n6. AI Is Destroying the Trust Between Writers and Readers（来源：Hacker News）\n   https://www.theatlantic.com/books/2026/11/ai-literary-scams-amazon/689391/\n\n7. Elevated errors on claude.ai, Claude Code, and platform.claude.com（来源：Hacker News）\n   https://status.claude.com/incidents/nn11wk485zfn",
-    "script": "欢迎收听今天的科技研发早报。以下是今天精选的几条前沿进展。\n第1条，来自Hacker News。Brazil's Caixa insurer breach exposes names and tax IDs of all 7.6M customers。\nArticle URL: https://filemanager-cdn.mziq.com/published/3972906b-e50b-4f74-ab74-4d0d32125d11/9567a559-d20a-486e-a7ae-5c6bbc030c5e Comments URL: https://news.ycombinator.com/item?id=50485295 Points: 50。\n第2条，来自Hacker News。Why is Google cutting off Search from AI-free schools? Here are some theories。\nArticle URL: https://text.npr.org/nx-s1-6029408 Comments URL: https://news.ycombinator.com/item?id=50484960 Points: 22 # Comments: 14。\n第3条，来自Hacker News。Jonathan Blow – If AI Solved Coding, Why Is My Software Still the Same? [video]。\nArticle URL: https://www.youtube.com/watch?v=IRK8h67ol7Q Comments URL: https://news.ycombinator.com/item?id=50484658 Points: 45 # Comments: 18。\n第4条，来自Hacker News。EU Digital Identity Wallet rollout: every EU state on one board。\nArticle URL: https://myid.ie/business/eu-digital-wallet-tracker/ Comments URL: https://news.ycombinator.com/item?id=50484496 Points: 42 # Comments: 5。\n第5条，来自Hacker News。U.S. October PPI Rises 6.5% YoY, Highest in Nearly Four Years。\nU.S. producer prices rose 6.5% YoY in October, the highest since November 2022, below expectations of 6.6% and up from 6.3% previously. PPI increased 0.3% MoM, below the expected 0.4%, while September。\n第6条，来自Hacker News。AI Is Destroying the Trust Between Writers and Readers。\nArticle URL: https://www.theatlantic.com/books/2026/11/ai-literary-scams-amazon/689391/ Comments URL: https://news.ycombinator.com/item?id=50481870 Points: 153 # Comments: 59。\n第7条，来自Hacker News。Elevated errors on claude.ai, Claude Code, and platform.claude.com。\nArticle URL: https://status.claude.com/incidents/nn11wk485zfn Comments URL: https://news.ycombinator.com/item?id=50481187 Points: 416 # Comments: 340。\n以上就是今天的内容，我们明天见。",
-    "file": "episode-20261114-pm.mp3",
-    "transcript": "episode-20261114-pm.txt",
-    "vtt": "episode-20261114-pm.vtt",
-    "bytes": 1314000,
-    "pub": "2026-11-13T16:42:15.086233+00:00"
   }
 ]
